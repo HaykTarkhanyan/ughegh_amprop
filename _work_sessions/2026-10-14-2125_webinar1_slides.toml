@@ -1,0 +1,43 @@
+title = "Webinar 1 slides (intro + ch1 + ch2, Armenian): art pipeline, preamble, first full draft"
+date = "2026-10-14"
+time = "21:25"
+areas = ["02_idiot_brain/slides/", "DECISIONS.md", "_learnings/", "CONVENTIONS.md", "DEFERRED_TODO.md", ".gitignore"]
+
+done = [
+  "Interviewed Hayk: ~90 min talk, alcohol section kept as in the book, speaker notes in a separate file, title slide = banner v2 (DECISIONS.md #7)",
+  "Read intro, ch1 and ch2 in full; checked the numbers used beyond the book on the web (Loftus & Palmer 1974, Sharpless & Barber 2011, HM's dates, Murre 2021 failed replication of the divers study, Burnett's bio from the PDF)",
+  "slides/common/build_art.py: 144 Twemoji + 9 mascot moods (same body as banner/mascot.svg) + the v2 banner, printed to vector PDFs with headless Edge; art_index.tex for \\emoji / \\mascot",
+  "slides/common/preamble.tex rewritten in the banner look (old metropolis draft kept in prototypes/); \\tracinglostchars=3 so a missing glyph is a build error (DECISIONS.md #6)",
+  "Translated and restyled the 9 chapter 1 figures from the paused agent; moved ch01/figures and ch01/images to webinar01/",
+  "Wrote webinar01: 80 frames in 5 part files (opening, intro, Part 1 mind controls, Part 2 memory, wrap-up) with polls, chat prompts, a DRM false-memory test and science-update boxes",
+  "Wrote webinar01/NOTES.md: Armenian speaker notes per frame, timing table, frames to drop first, and every place the slides differ from the book",
+  "One-pass draft build works (224 pages) and was opened for Hayk; the full 3-pass build was not run after the last fixes",
+  "Bookkeeping: .gitignore (logs/, *.log, build/, .env), prototypes/README.md, 4 learnings, CONVENTIONS.md, DEFERRED_TODO.md",
+]
+
+pending = [
+  "Polish pass: ~20 frames overflow the bottom edge, some figures are cramped; review the last overlay of each frame on contact sheets",
+  "Full latexmk build and check of the absolute-position frames",
+  "Student-review subagent: ask Hayk first",
+  "Hayk to add a self-introduction and webinar 2's date/chapters (frame 79)",
+]
+
+next = [
+  "Fix overflows frame by frame, using one lualatex pass or \\includeonlyframes per check (a full pass takes 1.5-3 min)",
+  "Then full build, then offer the student review",
+]
+
+files = [
+  "02_idiot_brain/slides/common/build_art.py",
+  "02_idiot_brain/slides/common/preamble.tex",
+  "02_idiot_brain/slides/common/art/ (emoji.pdf, mascot.pdf, title_banner.pdf, art_index.tex, mascot_*.svg, twemoji/ cache)",
+  "02_idiot_brain/slides/webinar01/webinar01.tex, parts/*.tex, figures/*.tex, images/, NOTES.md",
+  "02_idiot_brain/slides/prototypes/ (README.md, style_test.tex, preamble_metropolis_draft.tex)",
+  "DECISIONS.md (#6, #7)",
+  "_learnings/2026-10-14-2240..2243_*.md",
+  "CONVENTIONS.md, DEFERRED_TODO.md, .gitignore",
+]
+
+commits = ["see git log: 'Idiot Brain: chapter texts, webinar 1 banner and first slide draft'"]
+
+notes = "Builds are slow here (~20 s preamble per pass; one full pass 1.5-3 min; RAM was down to 1.4 GB free and one pass died on token memory, rerun worked). Rebuild art: uv run 02_idiot_brain/slides/common/build_art.py (Edge start-ups take 20-80 s each). Draft deck: lualatex -output-directory=build webinar01.tex from slides/webinar01."

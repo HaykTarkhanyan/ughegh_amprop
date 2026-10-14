@@ -1,0 +1,39 @@
+% Schematic 24-hour body clock: melatonin (low all day, rises after dark,
+% peaks around 3 a.m.) and core body temperature (peaks late afternoon,
+% lowest around 4-5 a.m.). Shapes follow the textbook curves; the y axis is
+% deliberately unitless ("schematic").
+\begin{tikzpicture}
+  \begin{axis}[
+      width=13.6cm, height=5.4cm,
+      xmin=6, xmax=30, ymin=0, ymax=1.12,
+      xtick={6,9,12,15,18,21,24,27,30},
+      xticklabels={06:00, 09:00, 12:00, 15:00, 18:00, 21:00, 00:00, 03:00, 06:00},
+      ytick=\empty, axis y line=none, axis x line*=bottom,
+      tick label style={font=\small, text=plum}, axis line style={plum},
+      clip=false,
+    ]
+    % night shading
+    \fill[lavender!60] (axis cs:22,0) rectangle (axis cs:30,1.12);
+    \node[font=\blackfont\small, text=lavenderdark] at (axis cs:26,1.05) {\emoji{moon}\ գիշեր};
+    \node[font=\blackfont\small, text=peachdark] at (axis cs:13,1.05) {\emoji{sun}\ ցերեկային լույս};
+
+    % melatonin
+    \addplot[name path=mel, domain=6:30, samples=160, line width=2.2pt, amBlue]
+      {0.04 + 0.86*exp(-((x-27)^2)/(2*2.3^2))};
+    \path[name path=base] (axis cs:6,0) -- (axis cs:30,0);
+    \addplot[amBlue!15] fill between[of=mel and base];
+
+    % body temperature
+    \addplot[domain=6:30, samples=160, line width=2.2pt, amRed, dashed]
+      {0.55 + 0.27*cos(15*(x-17))};
+
+    % labels
+    \node[anchor=west, font=\small, text=amBlue, align=left]
+      at (axis cs:6.3,0.2) {\textbf{Մելատոնին} («քնի հորմոն»)՝\\ ցածր է, քանի դեռ լույս է ընկնում աչքերիդ};
+    \node[anchor=south, font=\small, text=amRed]
+      at (axis cs:17,0.84) {\textbf{Մարմնի ջերմաստիճան} (36-37 °C)};
+    \draw[-{Stealth}, amRed, line width=1pt] (axis cs:29,0.62) node[anchor=south, font=\small, text=amRed, align=center] {ամենացուրտը՝\\ վերմակի ժամը} -- (axis cs:29,0.31);
+    \draw[plum!60, line width=1pt, densely dotted] (axis cs:23,0) -- (axis cs:23,0.95)
+      node[anchor=south, font=\small, text=plum] {քուն};
+  \end{axis}
+\end{tikzpicture}

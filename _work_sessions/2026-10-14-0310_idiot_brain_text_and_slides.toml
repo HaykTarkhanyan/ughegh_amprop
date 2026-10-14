@@ -1,0 +1,36 @@
+title = "The Idiot Brain: chapter texts extracted, slide agents started then paused"
+date = "2026-10-14"
+time = "03:10"
+areas = ["02_idiot_brain/", "02_idiot_brain/slides/"]
+
+done = [
+  "Copied the PDF from Downloads into 02_idiot_brain/",
+  "Extracted text into one Markdown file per chapter (00_introduction .. 09_afterword), using PDF bookmark page ranges",
+  "Footnote markers converted to [^n] with definitions under '## Notes'; 274 notes, 9 markers missing in the PDF itself (listed in DECISIONS.md #1)",
+  "Verified: letter-word count vs raw PDF text differs by exactly +7 (8 added 'Chapter' words, 1 rejoined hyphenated word)",
+  "Wrote DECISIONS.md (#1 text format, #2 slides setup)",
+  "Started a design agent (slides/DESIGN.md) and a chapter 1 deck agent (slides/ch01/), then paused both on Hayk's request",
+]
+
+pending = [
+  "slides/DESIGN.md not written yet (design agent stopped before writing files)",
+  "Chapter 1 deck only partly done: only figures/body_clock.tex and figures/brainwaves.tex exist; no preamble, no ch01.tex, no NOTES.md",
+  "Open questions for Hayk: webinar language (English draft vs Armenian), session length, one chapter per session?",
+]
+
+next = [
+  "Relaunch the design agent and the ch01 deck agent with the same briefs; tell the deck agent to keep the two existing figures",
+  "After both finish: review DESIGN.md and the compiled ch01.pdf, then report",
+]
+
+files = [
+  "02_idiot_brain/pdfcoffee.com_the-idiot-brain-pdf-free.pdf",
+  "02_idiot_brain/00_introduction.md .. 09_afterword.md",
+  "02_idiot_brain/slides/ch01/figures/body_clock.tex",
+  "02_idiot_brain/slides/ch01/figures/brainwaves.tex",
+  "DECISIONS.md",
+]
+
+commits = []
+
+notes = "Nothing committed. The splitting script lived in the session scratchpad and is not in the repo; the chapter files are final, so it is only needed for another book."

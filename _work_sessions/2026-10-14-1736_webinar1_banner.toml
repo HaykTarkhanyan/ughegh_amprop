@@ -1,0 +1,42 @@
+title = "Webinar 1 banner (Brain.exe concept) built in code"
+date = "2026-10-14"
+time = "17:36"
+areas = ["02_idiot_brain/banner/", "DECISIONS.md"]
+
+done = [
+  "Decided: webinar language is Armenian; webinar 1 = intro + chapters 1-2 (DECISIONS.md #3)",
+  "Interviewed Hayk on the banner: Brain.exe concept, cute mascot, warm pastel, title 'Ապուշ ուղեղը'",
+  "Drew an original brain mascot (banner/mascot.svg), reusable in the slides",
+  "build_banner.py: SVG + PNG in 1920x1080 (post / YouTube) and 1600x640 (Discord event cover), ~9 s via headless Edge",
+  "Fonts from fonter.am: My Bubble Font (title) + Mardoto (all other text); Twemoji 15.1.0 emoji",
+  "Compared 17 Armenian title fonts, then full banners in Bubble / Glazz / Amar; Hayk kept Bubble",
+  "Filled in the event line: Friday 23 October, 18:30, Zoom",
+  "Wrote the Armenian announcement text for the post (banner/post_text.md); every hook is taken from intro / ch1 / ch2",
+  "Feedback: pink puffy title may invite unfortunate associations. Kept v1 in out/v1_bubble/, added v2 (Glazz, plum + mint shadow) in out/v2_glazz/ (DECISIONS.md #5)",
+]
+
+pending = [
+  "Slides for webinar 1: continued in _work_sessions/2026-10-14-2125_webinar1_slides.toml (done inline, no agents; DESIGN.md was not needed, the design lives in DECISIONS.md #6 and slides/common/preamble.tex)",
+  "logs/ is now gitignored (.gitignore added in the slides session); committed together with the slides draft",
+]
+
+next = [
+  "Relaunch slide work for intro + ch1 + ch2 in Armenian, reusing mascot.svg and the banner palette (plum #4A2340, pink #F7A8C4, cream #FFF6EC, mint, peach, lavender)",
+  "Ask Hayk before launching agents (one design + one deck drafter was the earlier plan)",
+]
+
+files = [
+  "02_idiot_brain/banner/build_banner.py",
+  "02_idiot_brain/banner/mascot.svg",
+  "02_idiot_brain/banner/post_text.md",
+  "02_idiot_brain/banner/assets/fonts/ (MyBubbleFont-Regular, Mardoto Regular/Medium/Bold/Black)",
+  "02_idiot_brain/banner/assets/emoji/ (15 Twemoji SVGs)",
+  "02_idiot_brain/banner/out/v1_bubble/banner_{1920x1080,1600x640}.{svg,png}",
+  "02_idiot_brain/banner/out/v2_glazz/banner_{1920x1080,1600x640}.{svg,png}",
+  "02_idiot_brain/banner/assets/fonts/GlazzArm-Regular.ttf",
+  "DECISIONS.md (#3, #4, #5)",
+]
+
+commits = []
+
+notes = "Rebuild: uv run 02_idiot_brain/banner/build_banner.py (both versions, ~18 s). Edit wording in TEXT at the top of the script. The script fails loudly if a font lacks a glyph (My Bubble Font has Armenian letters only). Edge renders need no install; profile dir is reused in %TEMP%."

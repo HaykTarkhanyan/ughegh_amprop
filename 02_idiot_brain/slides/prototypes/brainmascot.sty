@@ -1,0 +1,251 @@
+% brainmascot.sty - an original cartoon brain mascot drawn in TikZ.
+% Prototype for the "Idiot Brain" webinar decks. Not derived from any existing character.
+%
+% Usage:
+%   \brainmascot                         % default: happy, scale 1, with band-aid
+%   \brainmascot[mood=scared, scale=.5]
+%   \brainmascot[mood=smug, shades, scale=.4]
+%   \brainmascot[mood=thinking, bulb]
+%   \brainmascot[mood=sleepy, body=brainpink!70!blue!30]
+%
+% Moods: happy, scared, sleepy, dizzy, confused, smug, sad, thinking, love, angry, laughing
+% Props (flags): shades, bulb, nobandaid
+% At scale=1 the mascot is about 4.6cm wide and 4.4cm tall.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{brainmascot}[2026/10/14 v0.1 cartoon brain mascot]
+\RequirePackage{tikz}
+\usetikzlibrary{calc}
+
+% ---- colours -------------------------------------------------------------
+\providecolor{brainpink}{HTML}{F4A7B9}
+\providecolor{braingyri}{HTML}{D2738C}
+\providecolor{brainink}{HTML}{2B2340}
+\providecolor{bandaid}{HTML}{EFC48F}
+\providecolor{bandpad}{HTML}{F8E3C4}
+\providecolor{amred}{HTML}{D90012}
+\providecolor{amblue}{HTML}{0033A0}
+\providecolor{amorange}{HTML}{F2A800}
+
+% ---- keys ----------------------------------------------------------------
+\newif\ifmascot@shades
+\newif\ifmascot@bulb
+\newif\ifmascot@bandaid
+\pgfkeys{/mascot/.cd,
+  scale/.store in=\mascot@scale,
+  mood/.store in=\mascot@mood,
+  body/.store in=\mascot@body,
+  shades/.code=\mascot@shadestrue,
+  bulb/.code=\mascot@bulbtrue,
+  nobandaid/.code=\mascot@bandaidfalse,
+  none/.code={},
+}
+\newcommand\mascot@defaults{%
+  \pgfkeys{/mascot/.cd, scale=1, mood=happy, body=brainpink}%
+  \mascot@shadesfalse\mascot@bulbfalse\mascot@bandaidtrue}
+
+% line width that shrinks with the mascot
+\tikzset{mlw/.style={line width=\mascot@scale*#1}}
+
+% ---- body ----------------------------------------------------------------
+% Bumpy outline: 16 lobes around an ellipse, flatter (smaller bumps) at the bottom.
+\newcommand\mascot@body@path{%
+  ({2*cos(0)},{1.55*sin(0)})
+  \foreach \i in {0,...,15}{
+    \pgfextra{%
+      \pgfmathsetmacro\a{\i*22.5}%
+      \pgfmathsetmacro\b{(\i+1)*22.5}%
+      \pgfmathsetmacro\bulge{(\a>=180 && \a<337.5) ? 1.06 : 1.22}%
+    }
+    .. controls ({2*\bulge*cos(\a+6)},{1.55*\bulge*sin(\a+6)})
+            and ({2*\bulge*cos(\b-6)},{1.55*\bulge*sin(\b-6)}) ..
+    ({2*cos(\b)},{1.55*sin(\b)})
+  } -- cycle}
+
+\newcommand\mascot@drawbody{%
+  % legs
+  \draw[brainink, mlw=2.4pt, line cap=round] (-0.55,-1.45) -- (-0.62,-2.05);
+  \draw[brainink, mlw=2.4pt, line cap=round] ( 0.55,-1.45) -- ( 0.62,-2.05);
+  \fill[brainink] (-0.78,-2.08) ellipse (0.24 and 0.11);
+  \fill[brainink] ( 0.78,-2.08) ellipse (0.24 and 0.11);
+  % body
+  \filldraw[fill=\mascot@body, draw=brainink, mlw=1.6pt, line join=round]
+    \mascot@body@path;
+  % central fissure
+  \draw[braingyri, mlw=1.6pt, line cap=round]
+    (0,1.78) .. controls (0.14,1.5) and (-0.14,1.25) .. (0,0.92);
+  % gyri, left hemisphere
+  \begin{scope}[braingyri, mlw=1.4pt, line cap=round]
+    \draw (-1.62,0.95) .. controls (-1.35,1.25) and (-1.05,0.72) .. (-0.62,1.12);
+    \draw (-1.15,1.52) .. controls (-0.95,1.32) and (-0.7,1.62) .. (-0.42,1.45);
+    \draw (-2.02,0.35) .. controls (-1.75,0.6) and (-1.55,0.2) .. (-1.28,0.48);
+    \draw (-1.95,-0.45) .. controls (-1.7,-0.25) and (-1.62,-0.62) .. (-1.38,-0.42);
+  % gyri, right hemisphere (deliberately not a mirror image)
+    \draw ( 1.66,0.88) .. controls ( 1.4,1.2) and ( 1.12,0.66) .. ( 0.66,1.05);
+    \draw ( 1.05,1.55) .. controls ( 0.88,1.3) and ( 0.62,1.6) .. ( 0.38,1.42);
+    \draw ( 2.0,0.28) .. controls ( 1.78,0.58) and ( 1.52,0.18) .. ( 1.3,0.45);
+    \draw ( 1.92,-0.5) .. controls ( 1.72,-0.28) and ( 1.6,-0.66) .. ( 1.36,-0.46);
+  \end{scope}
+  % cheeks
+  \fill[amred, opacity=0.18] (-1.08,-0.6) ellipse (0.24 and 0.13);
+  \fill[amred, opacity=0.18] ( 1.08,-0.6) ellipse (0.24 and 0.13);
+}
+
+\newcommand\mascot@drawbandaid{%
+  \begin{scope}[shift={(-1.05,1.2)}, rotate=32]
+    \filldraw[fill=bandaid, draw=brainink, mlw=1.1pt,
+              rounded corners=\mascot@scale*2.2mm] (-0.52,-0.17) rectangle (0.52,0.17);
+    \fill[bandpad] (-0.17,-0.13) rectangle (0.17,0.13);
+    \foreach \x in {-0.36,-0.27,0.27,0.36}
+      \foreach \y in {-0.05,0.05} \fill[brainink!45] (\x,\y) circle (0.018);
+  \end{scope}}
+
+% ---- face parts ------------------------------------------------------------
+% \mascot@eye{x}{y}{rx}{ry}{pupil dx}{pupil dy}{pupil r}
+\newcommand\mascot@eye[7]{%
+  \filldraw[fill=white, draw=brainink, mlw=1.3pt] (#1,#2) ellipse (#3 and #4);
+  \fill[brainink] ($(#1,#2)+(#5,#6)$) circle (#7);
+  \fill[white] ($(#1,#2)+(#5,#6)+(0.06,0.06)$) circle (#7*0.33);}
+\newcommand\mascot@openeyes[3]{% pupil dx, dy, r
+  \mascot@eye{-0.55}{-0.05}{0.36}{0.44}{#1}{#2}{#3}%
+  \mascot@eye{ 0.55}{-0.05}{0.36}{0.44}{#1}{#2}{#3}}
+\newcommand\mascot@brow[4]{\draw[brainink, mlw=2pt, line cap=round] (#1,#2) -- (#3,#4);}
+
+% ---- moods -----------------------------------------------------------------
+\newcommand\mascot@face@happy{%
+  \mascot@openeyes{0.03}{0.02}{0.17}%
+  \filldraw[fill=amred!75!black, draw=brainink, mlw=1.3pt, line join=round]
+    (-0.32,-0.75) .. controls (-0.2,-1.1) and (0.2,-1.1) .. (0.32,-0.75) -- cycle;}
+
+\newcommand\mascot@face@scared{%
+  \mascot@eye{-0.55}{-0.02}{0.4}{0.5}{0}{0}{0.08}%
+  \mascot@eye{ 0.55}{-0.02}{0.4}{0.5}{0}{0}{0.08}%
+  \mascot@brow{-0.9}{0.58}{-0.3}{0.74}\mascot@brow{0.9}{0.58}{0.3}{0.74}%
+  \filldraw[fill=amred!60!black, draw=brainink, mlw=1.3pt] (0,-0.92) ellipse (0.15 and 0.21);
+  % sweat drops
+  \foreach \p/\s in {{(1.75,0.55)}/1, {(-1.85,0.15)}/0.8}{
+    \begin{scope}[shift={\p}, scale=\s]
+      \filldraw[fill=amblue!35, draw=amblue, mlw=1pt]
+        (0,0.22) .. controls (0.05,0.08) and (0.13,0) .. (0.13,-0.06)
+        arc[start angle=0, end angle=-180, radius=0.13]
+        .. controls (-0.13,0) and (-0.05,0.08) .. (0,0.22);
+    \end{scope}}
+  % shake lines
+  \foreach \s in {-1,1}{
+    \draw[brainink, mlw=1.3pt, line cap=round] (\s*2.42,0.45) -- (\s*2.6,0.55);
+    \draw[brainink, mlw=1.3pt, line cap=round] (\s*2.45,0.05) -- (\s*2.68,0.05);
+    \draw[brainink, mlw=1.3pt, line cap=round] (\s*2.42,-0.35) -- (\s*2.6,-0.45);}}
+
+\newcommand\mascot@face@sleepy{%
+  \draw[brainink, mlw=2pt, line cap=round] (-0.85,-0.02) .. controls (-0.7,-0.24) and (-0.4,-0.24) .. (-0.25,-0.02);
+  \draw[brainink, mlw=2pt, line cap=round] ( 0.25,-0.02) .. controls ( 0.4,-0.24) and ( 0.7,-0.24) .. ( 0.85,-0.02);
+  \filldraw[fill=amred!60!black, draw=brainink, mlw=1.2pt] (0.05,-0.85) ellipse (0.1 and 0.08);
+  \node[amblue, font=\bfseries\sffamily, scale=\mascot@scale*1.2] at (1.75,1.75) {z};
+  \node[amblue, font=\bfseries\sffamily, scale=\mascot@scale*1.7] at (2.15,2.15) {z};
+  \node[amblue, font=\bfseries\sffamily, scale=\mascot@scale*2.3] at (2.65,2.65) {Z};}
+
+\newcommand\mascot@spiral[2]{%
+  \filldraw[fill=white, draw=brainink, mlw=1.3pt] (#1,#2) ellipse (0.36 and 0.44);
+  \draw[brainink, mlw=1.2pt, shift={(#1,#2)}]
+    plot[domain=0:15.7, samples=70, smooth] ({0.019*\x*cos(\x r)},{0.024*\x*sin(\x r)});}
+\newcommand\mascot@face@dizzy{%
+  \mascot@spiral{-0.55}{-0.05}\mascot@spiral{0.55}{-0.05}%
+  \draw[brainink, mlw=1.6pt, line cap=round]
+    (-0.36,-0.86) .. controls (-0.24,-0.74) and (-0.12,-0.98) .. (0,-0.86)
+    .. controls (0.12,-0.74) and (0.24,-0.98) .. (0.36,-0.86);}
+
+\newcommand\mascot@face@confused{%
+  \mascot@eye{-0.55}{-0.02}{0.4}{0.48}{-0.12}{0.16}{0.16}%
+  \mascot@eye{ 0.55}{-0.08}{0.3}{0.36}{0.1}{-0.12}{0.13}%
+  \mascot@brow{-0.92}{0.62}{-0.3}{0.7}%
+  \draw[brainink, mlw=1.6pt, line cap=round]
+    (-0.3,-0.86) .. controls (-0.15,-0.7) and (-0.05,-1.0) .. (0.1,-0.86)
+    .. controls (0.2,-0.76) and (0.25,-0.82) .. (0.32,-0.9);
+  \node[amorange, font=\bfseries\sffamily, scale=\mascot@scale*3.2] at (2.25,1.75) {?};}
+
+\newcommand\mascot@face@smug{%
+  % half-closed eyes: draw eye, then cover the top half with an eyelid
+  \foreach \x in {-0.55,0.55}{
+    \filldraw[fill=white, draw=brainink, mlw=1.3pt] (\x,-0.05) ellipse (0.36 and 0.44);
+    \fill[brainink] (\x+0.12,-0.2) circle (0.15);
+    \filldraw[fill=\mascot@body, draw=brainink, mlw=1.3pt]
+      (\x-0.36,-0.05) arc[start angle=180, end angle=0, x radius=0.36, y radius=0.44] -- cycle;}
+  \mascot@brow{0.25}{0.62}{0.85}{0.78}%
+  \draw[brainink, mlw=1.8pt, line cap=round]
+    (-0.28,-0.88) .. controls (0.0,-0.98) and (0.2,-0.9) .. (0.38,-0.68);}
+
+\newcommand\mascot@face@sad{%
+  \mascot@openeyes{0}{-0.14}{0.16}%
+  \mascot@brow{-0.88}{0.48}{-0.32}{0.66}\mascot@brow{0.88}{0.48}{0.32}{0.66}%
+  \draw[brainink, mlw=1.8pt, line cap=round]
+    (-0.3,-0.98) .. controls (-0.15,-0.78) and (0.15,-0.78) .. (0.3,-0.98);}
+
+\newcommand\mascot@face@thinking{%
+  \mascot@openeyes{0.1}{0.17}{0.16}%
+  \mascot@brow{0.3}{0.66}{0.82}{0.74}%
+  \draw[brainink, mlw=1.8pt, line cap=round] (-0.1,-0.88) -- (0.28,-0.82);}
+
+\newcommand\mascot@heart[3]{% x y size
+  \fill[amred, shift={(#1,#2)}, scale=#3]
+    (0,-0.12) .. controls (-0.3,0.08) and (-0.17,0.3) .. (0,0.14)
+    .. controls (0.17,0.3) and (0.3,0.08) .. (0,-0.12);}
+\newcommand\mascot@face@love{%
+  \foreach \x in {-0.55,0.55}{
+    \filldraw[fill=white, draw=brainink, mlw=1.3pt] (\x,-0.05) ellipse (0.36 and 0.44);
+    \mascot@heart{\x}{-0.06}{1.15}}
+  \filldraw[fill=amred!75!black, draw=brainink, mlw=1.3pt, line join=round]
+    (-0.28,-0.78) .. controls (-0.18,-1.05) and (0.18,-1.05) .. (0.28,-0.78) -- cycle;
+  \mascot@heart{1.9}{1.55}{1.5}\mascot@heart{2.3}{1.95}{1.0}}
+
+\newcommand\mascot@face@angry{%
+  \mascot@openeyes{0}{-0.06}{0.17}%
+  \mascot@brow{-0.92}{0.62}{-0.3}{0.4}\mascot@brow{0.92}{0.62}{0.3}{0.4}%
+  \filldraw[fill=white, draw=brainink, mlw=1.4pt, rounded corners=\mascot@scale*1mm]
+    (-0.34,-1.0) rectangle (0.34,-0.74);
+  \foreach \x in {-0.17,0,0.17} \draw[brainink, mlw=0.9pt] (\x,-1.0) -- (\x,-0.74);
+  \draw[brainink, mlw=0.9pt] (-0.34,-0.87) -- (0.34,-0.87);
+  % steam
+  \foreach \s in {-1,1}
+    \draw[brainink!50, mlw=1.6pt, line cap=round]
+      (\s*1.55,1.6) .. controls (\s*1.75,1.8) and (\s*1.45,2.0) .. (\s*1.7,2.25);}
+
+\newcommand\mascot@face@laughing{%
+  \draw[brainink, mlw=2pt, line cap=round] (-0.85,-0.12) .. controls (-0.7,0.14) and (-0.4,0.14) .. (-0.25,-0.12);
+  \draw[brainink, mlw=2pt, line cap=round] ( 0.25,-0.12) .. controls ( 0.4,0.14) and ( 0.7,0.14) .. ( 0.85,-0.12);
+  \filldraw[fill=amred!75!black, draw=brainink, mlw=1.3pt, line join=round]
+    (-0.42,-0.6) .. controls (-0.3,-1.2) and (0.3,-1.2) .. (0.42,-0.6) -- cycle;
+  \fill[amred!45] (0,-0.93) ellipse (0.17 and 0.08);
+  \node[amorange, font=\bfseries\sffamily, scale=\mascot@scale*1.4, rotate=20] at (2.15,1.4) {ha};
+  \node[amorange, font=\bfseries\sffamily, scale=\mascot@scale*1.8, rotate=20] at (2.4,2.0) {HA};}
+
+% ---- props -----------------------------------------------------------------
+\newcommand\mascot@drawshades{%
+  \fill[brainink] (-0.95,0.15) -- (-0.15,0.15) -- (-0.22,-0.28) .. controls (-0.4,-0.38) and (-0.75,-0.38) .. (-0.88,-0.25) -- cycle;
+  \fill[brainink] ( 0.95,0.15) -- ( 0.15,0.15) -- ( 0.22,-0.28) .. controls ( 0.4,-0.38) and ( 0.75,-0.38) .. ( 0.88,-0.25) -- cycle;
+  \draw[brainink, mlw=2pt] (-0.15,0.1) -- (0.15,0.1);
+  \draw[white, mlw=1.5pt, line cap=round] (-0.75,0.04) -- (-0.6,-0.12);
+  \draw[white, mlw=1.5pt, line cap=round] ( 0.35,0.04) -- ( 0.5,-0.12);}
+
+\newcommand\mascot@drawbulb{%
+  \begin{scope}[shift={(1.95,2.05)}]
+    \filldraw[fill=amorange!70!white, draw=brainink, mlw=1.3pt] (0,0.1) circle (0.38);
+    \filldraw[fill=brainink!30, draw=brainink, mlw=1.1pt] (-0.17,-0.4) rectangle (0.17,-0.2);
+    \foreach \a in {20,60,100,140,180}
+      \draw[amorange, mlw=1.6pt, line cap=round] ({0.55*cos(\a)},{0.1+0.55*sin(\a)}) -- ({0.75*cos(\a)},{0.1+0.75*sin(\a)});
+  \end{scope}}
+
+% ---- public commands --------------------------------------------------------
+\newcommand\mascot@drawall{%
+  \mascot@drawbody
+  \ifmascot@bandaid\mascot@drawbandaid\fi
+  \csname mascot@face@\mascot@mood\endcsname
+  \ifmascot@shades\mascot@drawshades\fi
+  \ifmascot@bulb\mascot@drawbulb\fi}
+
+\newcommand\brainmascot[1][]{%
+  \begingroup
+  \mascot@defaults\pgfkeys{/mascot/.cd,#1}%
+  \begin{tikzpicture}[scale=\mascot@scale, baseline=(current bounding box.center)]
+    \mascot@drawall
+  \end{tikzpicture}%
+  \endgroup}
+\endinput

@@ -1,0 +1,75 @@
+% Throwaway: checks the preamble's building blocks. Not part of the deck.
+\documentclass[aspectratio=169,11pt]{beamer}
+\input{../common/preamble.tex}
+\title[Վեբինար \#1]{Ապուշ ուղեղը}
+\begin{document}
+
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \node at (current page.center) {\includegraphics[width=\paperwidth]{title_banner.pdf}};
+  \end{tikzpicture}
+\end{frame}
+
+\partopener{Մաս 1}{Մարմնի կառավարում}{Ինչպես է ուղեղը ղեկավարում մարմինը (ու սովորաբար խառնում ամեն ինչ)}{panic}{mint}
+
+\topicopener{rollercoaster}{Ծովախտ}{Կանգնեցրե՛ք գիրքը, ես իջնում եմ}{Ինչու է ճանապարհին սիրտդ խառնում}{sick}
+
+\begin{frame}{Ինչու՞ է մեքենայում սիրտդ խառնում}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{itemize}
+        \item Աչքերն ասում են՝ \emph{կանգնած ենք} \emoji{eye}
+        \item Ներքին ականջն ասում է՝ \alert{շարժվում ենք} \emoji{ear}
+        \item Հին ուղեղը եզրակացնում է՝ թույն է \emoji{skull}
+          \begin{itemize}\item ենթակետ՝ փոքր տառով\end{itemize}
+      \end{itemize}
+      \begin{tryit}
+        Ձեռքդ տար մեջքիդ հետևը։ Չես տեսնում, բայց գիտես, թե որտեղ է։
+      \end{tryit}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \begin{poll}
+        \emoji{hand} Բարձրացրու ձեռքդ, եթե քեզ մեքենայում երբևէ վատ է եղել։
+      \end{poll}
+      \vspace{3mm}
+      \begin{scienceupdate}
+        2021-ի կրկնված փորձը նույն արդյունքը չտվեց։
+      \end{scienceupdate}
+    \end{column}
+  \end{columns}
+  \source{Burnett 2016, գլուխ 1}
+\end{frame}
+
+\begin{frame}{Pop-up, chips, quote, bubble}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{popup}{ուղեղ.exe}
+        {\blackfont\large Այս ֆայլն արդեն գոյություն ունի}\par\smallskip
+        Դեմքը ճանաչում ես, անունը՝ ոչ։
+      \end{popup}
+      \vspace{4mm}
+      \chip{doughnut}{ախորժակ}\ \chip[mint]{sleeping}{քուն}\ \chip[lavender]{thought}{հիշողություն}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{bookquote}
+        Ուղեղը նման է մուտանտ ընկույզի։
+      \end{bookquote}
+      \vspace{3mm}
+      \begin{chatbox}Ո՞ր ուտելիքը չես կարողանում ուտել։\end{chatbox}
+      \begin{tikzpicture}
+        \node[say, callout absolute pointer={(-1,-0.6)}] at (1,0) {Թույն է։ Դատարկե՛լ ստամոքսը։};
+        \node at (-1.4,-1) {\mascot[1.4cm]{happy}};
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Առասպել, թե՞ փաստ}
+  \mythorfact{Սթրեսը կարող է բարելավել արդյունքը}{ՓԱՍՏ}{mintdark}{Վերջնաժամկետները (դեդլայնները) շատերին ավելի արդյունավետ են դարձնում։}
+\end{frame}
+
+\begin{frame}
+  \bigquestion{Ինչու՞ աղանդերի համար միշտ տեղ կա}{նույնիսկ երբ արդեն կուշտ ես}
+\end{frame}
+
+\end{document}

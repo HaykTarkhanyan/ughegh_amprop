@@ -1,0 +1,491 @@
+% =====================================================================
+%  The Idiot Brain - shared Beamer preamble for all chapter decks
+% ---------------------------------------------------------------------
+%  Usage (in slides/chNN/chNN.tex):
+%      \documentclass[aspectratio=169,12pt]{beamer}
+%      \input{../common/preamble.tex}
+%  Build with LuaLaTeX:  latexmk -lualatex chNN.tex
+%
+%  ALL styling lives here (colours, fonts, theme tweaks, mascot,
+%  reusable boxes). Chapter files should only contain content, so the
+%  whole series can be restyled from this one file.
+% =====================================================================
+
+% ---------------------------------------------------------------------
+% Theme
+% metropolis is in TeX Live but no longer maintained; "moloch" (also in
+% TeX Live 2025) is its maintained fork and should be a drop-in swap if
+% metropolis ever breaks:  \usetheme{moloch}
+% ---------------------------------------------------------------------
+\usetheme[
+  progressbar=frametitle,
+  numbering=counter,
+  sectionpage=none,      % we draw our own section openers (\sectionopener)
+  block=fill
+]{metropolis}
+
+% ---------------------------------------------------------------------
+% Fonts (LuaLaTeX + fontspec)
+% Segoe UI is the body font: clean on screen and it ships with Windows
+% WITH Armenian glyphs (checked with fontTools, U+0531-U+0587 present in
+% regular/bold/italic/semibold). So the deck can be translated to
+% Armenian later without touching fonts. Fira Sans (metropolis' default)
+% and DejaVu/Noto are NOT installed on this machine.
+% Ink Free (handwritten look, also has Armenian) is used for the mascot's
+% speech bubbles and playful labels.
+% If you build on a non-Windows machine: swap Segoe UI for
+% "Noto Sans" + "Noto Sans Armenian" (luaotfload fallback) or DejaVu Sans.
+% ---------------------------------------------------------------------
+\usepackage{fontspec}
+\setsansfont{Segoe UI}[
+  BoldFont       = {Segoe UI Bold},
+  ItalicFont     = {Segoe UI Italic},
+  BoldItalicFont = {Segoe UI Bold Italic}
+]
+\setmainfont{Segoe UI}[
+  BoldFont       = {Segoe UI Bold},
+  ItalicFont     = {Segoe UI Italic},
+  BoldItalicFont = {Segoe UI Bold Italic}
+]
+\setmonofont{Consolas}
+% \newfontfamily does not turn on TeX ligatures by default, so `` '' would
+% print literally without Ligatures=TeX.
+\newfontfamily\handfont{Ink Free}[Ligatures=TeX, BoldFont={Ink Free}]
+\newfontfamily\semiboldfont{Segoe UI Semibold}[Ligatures=TeX]
+
+% No hyphenation on slides: split words are hard to read on a shared screen.
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+% ---------------------------------------------------------------------
+% Packages
+% ---------------------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[most]{tcolorbox}
+
+% ---------------------------------------------------------------------
+% Icons (Font Awesome 5 Free Solid)
+% The fontawesome5 PACKAGE fails under LuaLaTeX on this minimal TeX Live
+% (it needs luatexbase.sty, which is not installed). So we load the OTF
+% that ships with it directly and define the icons we use by code point.
+% Names match the fontawesome5 package, so switching back is a one-liner.
+% Code points were read from the font's cmap with fontTools.
+% To add one: find the glyph name on fontawesome.com/v5 and its code point.
+% ---------------------------------------------------------------------
+\newfontfamily\FAsolid{FontAwesome5Free-Solid-900}[Extension=.otf,
+  BoldFont=FontAwesome5Free-Solid-900]
+\newcommand{\faicon}[1]{{\FAsolid\symbol{"#1}}}
+\newcommand{\faBrain}{\faicon{F5DC}}
+\newcommand{\faCarSide}{\faicon{F5E4}}
+\newcommand{\faCar}{\faicon{F1B9}}
+\newcommand{\faBus}{\faicon{F207}}
+\newcommand{\faShip}{\faicon{F21A}}
+\newcommand{\faPlane}{\faicon{F072}}
+\newcommand{\faVrCardboard}{\faicon{F729}}
+\newcommand{\faHamburger}{\faicon{F805}}
+\newcommand{\faIceCream}{\faicon{F810}}
+\newcommand{\faCookieBite}{\faicon{F564}}
+\newcommand{\faUtensils}{\faicon{F2E7}}
+\newcommand{\faPizzaSlice}{\faicon{F818}}
+\newcommand{\faAppleAlt}{\faicon{F5D1}}
+\newcommand{\faCarrot}{\faicon{F787}}
+\newcommand{\faCandyCane}{\faicon{F786}}
+\newcommand{\faBed}{\faicon{F236}}
+\newcommand{\faMoon}{\faicon{F186}}
+\newcommand{\faSun}{\faicon{F185}}
+\newcommand{\faRunning}{\faicon{F70C}}
+\newcommand{\faWalking}{\faicon{F554}}
+\newcommand{\faEye}{\faicon{F06E}}
+\newcommand{\faEyeSlash}{\faicon{F070}}
+\newcommand{\faBolt}{\faicon{F0E7}}
+\newcommand{\faHeartbeat}{\faicon{F21E}}
+\newcommand{\faHeart}{\faicon{F004}}
+\newcommand{\faLungs}{\faicon{F604}}
+\newcommand{\faTint}{\faicon{F043}}
+\newcommand{\faHeadphones}{\faicon{F025}}
+\newcommand{\faDeaf}{\faicon{F2A4}}
+\newcommand{\faClock}{\faicon{F017}}
+\newcommand{\faHourglassHalf}{\faicon{F252}}
+\newcommand{\faCommentDots}{\faicon{F4AD}}
+\newcommand{\faPoll}{\faicon{F681}}
+\newcommand{\faFlask}{\faicon{F0C3}}
+\newcommand{\faQuestionCircle}{\faicon{F059}}
+\newcommand{\faSyncAlt}{\faicon{F2F1}}
+\newcommand{\faGhost}{\faicon{F6E2}}
+\newcommand{\faSkull}{\faicon{F54C}}
+\newcommand{\faCat}{\faicon{F6BE}}
+\newcommand{\faSmile}{\faicon{F118}}
+\newcommand{\faLaugh}{\faicon{F599}}
+\newcommand{\faDizzy}{\faicon{F567}}
+\newcommand{\faTired}{\faicon{F5C8}}
+\newcommand{\faSurprise}{\faicon{F5C2}}
+\newcommand{\faGrimace}{\faicon{F57F}}
+\newcommand{\faFrown}{\faicon{F119}}
+\newcommand{\faSadTear}{\faicon{F5B4}}
+\newcommand{\faAngry}{\faicon{F556}}
+\newcommand{\faTaxi}{\faicon{F1BA}}
+\newcommand{\faSubway}{\faicon{F239}}
+\newcommand{\faBell}{\faicon{F0F3}}
+\newcommand{\faSearch}{\faicon{F002}}
+\newcommand{\faChild}{\faicon{F1AE}}
+\newcommand{\faBaby}{\faicon{F77C}}
+\newcommand{\faUser}{\faicon{F007}}
+\newcommand{\faBook}{\faicon{F02D}}
+\newcommand{\faMobileAlt}{\faicon{F3CD}}
+\newcommand{\faCouch}{\faicon{F4B8}}
+\newcommand{\faExclamationTriangle}{\faicon{F071}}
+\newcommand{\faCheck}{\faicon{F00C}}
+\newcommand{\faTimes}{\faicon{F00D}}
+\newcommand{\faHome}{\faicon{F015}}
+\newcommand{\faUserSecret}{\faicon{F21B}}
+\newcommand{\faDoorOpen}{\faicon{F52B}}
+\newcommand{\faLightbulb}{\faicon{F0EB}}
+\newcommand{\faFish}{\faicon{F578}}
+\newcommand{\faWater}{\faicon{F773}}
+\newcommand{\faTree}{\faicon{F1BB}}
+\newcommand{\faHandPaper}{\faicon{F256}}
+\newcommand{\faCalendarAlt}{\faicon{F073}}
+\newcommand{\faMicroscope}{\faicon{F610}}
+\newcommand{\faDna}{\faicon{F471}}
+\newcommand{\faArrowRight}{\faicon{F061}}
+\newcommand{\faRedo}{\faicon{F01E}}
+\newcommand{\faFire}{\faicon{F06D}}
+\newcommand{\faWind}{\faicon{F72E}}
+\newcommand{\faGlasses}{\faicon{F530}}
+\newcommand{\faTheaterMasks}{\faicon{F630}}
+\newcommand{\faAward}{\faicon{F559}}
+\newcommand{\faBullseye}{\faicon{F140}}
+\newcommand{\faGrinTongue}{\faicon{F589}}
+\newcommand{\faMehRollingEyes}{\faicon{F5A5}}
+\usepackage{tikz}
+\usetikzlibrary{
+  arrows.meta, positioning, calc, shapes.geometric, shapes.callouts,
+  shapes.symbols, shapes.misc, decorations.pathmorphing,
+  decorations.pathreplacing, backgrounds, fit, shadows.blur
+}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+
+% ---------------------------------------------------------------------
+% Colours
+% Armenian flag colours are the accent palette (also used for any chart
+% with 3+ colours): red #D90012, blue #0033A0, orange #F2A800.
+% ---------------------------------------------------------------------
+\definecolor{amRed}{HTML}{D90012}
+\definecolor{amBlue}{HTML}{0033A0}
+\definecolor{amOrange}{HTML}{F2A800}
+\definecolor{ink}{HTML}{1B1B2F}       % near-black navy for text
+\definecolor{paper}{HTML}{FFFBF2}     % warm off-white background
+\definecolor{mist}{HTML}{ECEFF6}      % light grey-blue panels
+\definecolor{night}{HTML}{18224F}     % sleep section
+\definecolor{softgray}{HTML}{8A8FA3}
+\definecolor{brainpink}{HTML}{F7B5C8} % mascot body
+\definecolor{brainline}{HTML}{B03A62} % mascot outline
+\definecolor{sickgreen}{HTML}{BFE0A8}
+\definecolor{sickline}{HTML}{5E8C46}
+
+% Beamer colour slots
+\setbeamercolor{normal text}{fg=ink, bg=paper}
+\setbeamercolor{background canvas}{bg=paper}
+\setbeamercolor{alerted text}{fg=amRed}
+\setbeamercolor{example text}{fg=amBlue}
+\setbeamercolor{frametitle}{fg=white, bg=ink}
+\setbeamercolor{progress bar}{fg=amOrange, bg=amOrange!25}
+\setbeamercolor{title separator}{fg=amOrange}
+\setbeamercolor{progress bar in head/foot}{fg=amOrange, bg=amOrange!25}
+\setbeamercolor{progress bar in section page}{fg=amOrange, bg=amOrange!25}
+\setbeamercolor{page number in head/foot}{fg=softgray}
+\setbeamercolor{block title}{fg=white, bg=amBlue}
+\setbeamercolor{block body}{fg=ink, bg=mist}
+\setbeamercolor{itemize item}{fg=amOrange}
+\setbeamercolor{itemize subitem}{fg=amOrange}
+
+% Font sizes / weights
+\setbeamerfont{frametitle}{size=\Large}
+\setbeamerfont{title}{size=\huge, series=\bfseries}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{page number in head/foot}{size=\scriptsize}
+\setbeamerfont{alerted text}{series=\bfseries}
+\setbeamertemplate{itemize item}{\raisebox{0.1ex}{\scriptsize$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\raisebox{0.1ex}{\tiny$\bullet$}}
+\setbeamertemplate{navigation symbols}{}
+
+% Per-section accent: changes the frame-title bar from this point on.
+% \sectioncolors{<bar colour>}{<bar text colour>}
+\newcommand{\sectioncolors}[2]{%
+  \setbeamercolor{frametitle}{fg=#2, bg=#1}%
+  \colorlet{sectionaccent}{#1}%
+}
+\colorlet{sectionaccent}{ink}
+
+% Handy inline helpers
+\newcommand{\hl}[1]{\textcolor{amRed}{\textbf{#1}}}       % red highlight
+\newcommand{\hlb}[1]{\textcolor{amBlue}{\textbf{#1}}}     % blue highlight
+\newcommand{\hlo}[1]{\textcolor{amOrange!85!black}{\textbf{#1}}} % orange
+\newcommand{\hand}[1]{{\handfont #1}}                      % handwritten
+\newcommand{\muted}[1]{\textcolor{softgray}{#1}}
+
+% =====================================================================
+% Mascot: "Noggin", an original cartoon brain (own design: puffy pink
+% cloud-outline brain, big eyes, little brainstem "neck").
+%   \noggin[<scale>]{<mood>}     inline tikzpicture
+%   \pic[scale=..] {noggin=<mood>};   inside another tikzpicture
+% moods: happy, panic, sleepy, confused, sick, hungry, smug
+% =====================================================================
+\makeatletter
+\newcommand{\noggin@body}[2]{% #1 fill, #2 line
+  % brainstem / neck (drawn first so the body overlaps it)
+  \filldraw[fill=#1!80!brainline, draw=#2, line width=0.9pt, rounded corners=2pt]
+    (-0.17,-0.55) -- (-0.13,-1.12) -- (0.13,-1.12) -- (0.17,-0.55) -- cycle;
+  % cerebellum bump
+  \filldraw[fill=#1!85!brainline, draw=#2, line width=0.9pt]
+    (0.62,-0.55) ellipse (0.36 and 0.24);
+  % puffy cloud-like outline
+  \filldraw[fill=#1, draw=#2, line width=1.1pt]
+    plot[domain=0:360, samples=180, smooth cycle, variable=\t]
+      ({(1.18+0.09*abs(sin(6*\t)))*cos(\t)}, {0.1+(0.86+0.08*abs(sin(6*\t)))*sin(\t)});
+  % hemisphere split and a few gyri squiggles
+  \draw[#2, line width=0.8pt, line cap=round]
+    (0,0.98) .. controls (0.12,0.8) and (-0.12,0.68) .. (0.02,0.52);
+  \draw[#2, line width=0.7pt, line cap=round]
+    (-0.85,0.45) .. controls (-0.75,0.7) and (-0.55,0.72) .. (-0.45,0.55)
+                 .. controls (-0.38,0.42) and (-0.25,0.5) .. (-0.25,0.68);
+  \draw[#2, line width=0.7pt, line cap=round]
+    (0.3,0.72) .. controls (0.4,0.55) and (0.55,0.55) .. (0.6,0.7)
+               .. controls (0.65,0.82) and (0.8,0.75) .. (0.88,0.55);
+  \draw[#2, line width=0.7pt, line cap=round]
+    (-1.0,0.0) .. controls (-0.9,0.15) and (-0.78,0.12) .. (-0.78,-0.05);
+  \draw[#2, line width=0.7pt, line cap=round]
+    (1.0,0.05) .. controls (0.92,0.2) and (0.8,0.18) .. (0.82,0.0);
+}
+\newcommand{\noggin@eyes}[3]{% #1 white radius, #2 pupil radius, #3 pupil shift (x,y)
+  \foreach \ex in {-0.36,0.36}{
+    \filldraw[fill=white, draw=ink, line width=0.8pt] (\ex,0.02) circle (#1);
+    \fill[ink] ($(\ex,0.02)+(#3)$) circle (#2);
+    \fill[white] ($(\ex,0.02)+(#3)+(0.035,0.04)$) circle (0.025);
+  }
+}
+\newcommand{\noggin@cheeks}{%
+  \fill[amRed!35, opacity=0.6] (-0.72,-0.25) ellipse (0.13 and 0.07);
+  \fill[amRed!35, opacity=0.6] (0.72,-0.25) ellipse (0.13 and 0.07);
+}
+% --- faces --------------------------------------------------------------
+\def\noggin@face@happy{%
+  \noggin@body{brainpink}{brainline}\noggin@cheeks
+  \noggin@eyes{0.2}{0.09}{0,-0.02}
+  \draw[ink, line width=1pt, line cap=round] (-0.2,-0.32) .. controls (-0.1,-0.45) and (0.1,-0.45) .. (0.2,-0.32);
+}
+\def\noggin@face@panic{%
+  \noggin@body{brainpink}{brainline}
+  \noggin@eyes{0.25}{0.05}{0,0}
+  \filldraw[fill=ink, draw=ink] (0,-0.42) ellipse (0.12 and 0.15);
+  \fill[amBlue!60] (-1.05,0.55) .. controls (-1.15,0.4) and (-1.1,0.3) .. (-1.0,0.3)
+                   .. controls (-0.9,0.3) and (-0.9,0.42) .. (-1.05,0.55);
+  \fill[amBlue!60] (1.12,0.65) .. controls (1.02,0.5) and (1.07,0.4) .. (1.17,0.4)
+                   .. controls (1.27,0.4) and (1.27,0.52) .. (1.12,0.65);
+  \draw[amRed, line width=1.2pt, line cap=round] (-0.95,1.0) -- (-1.15,1.2);
+  \draw[amRed, line width=1.2pt, line cap=round] (0,1.12) -- (0,1.38);
+  \draw[amRed, line width=1.2pt, line cap=round] (0.95,1.0) -- (1.15,1.2);
+}
+\def\noggin@face@sleepy{%
+  \noggin@body{brainpink}{brainline}\noggin@cheeks
+  \foreach \ex in {-0.36,0.36}{
+    \draw[ink, line width=1pt, line cap=round] (\ex-0.17,0.04) .. controls (\ex-0.08,-0.06) and (\ex+0.08,-0.06) .. (\ex+0.17,0.04);
+  }
+  \draw[ink, line width=0.9pt] (0.02,-0.38) circle (0.06);
+  \node[font=\handfont\bfseries, text=amBlue, scale=0.9] at (1.15,1.0) {z};
+  \node[font=\handfont\bfseries, text=amBlue, scale=1.3] at (1.45,1.3) {Z};
+}
+\def\noggin@face@confused{%
+  \noggin@body{brainpink}{brainline}
+  \noggin@eyes{0.2}{0.08}{0.06,0.07}
+  \draw[ink, line width=1pt, line cap=round] (0.18,0.34) -- (0.52,0.42);
+  \draw[ink, line width=1pt, line cap=round] (-0.52,0.28) -- (-0.2,0.28);
+  \draw[ink, line width=1pt, line cap=round] (-0.2,-0.38) .. controls (-0.1,-0.3) and (-0.05,-0.46) .. (0.05,-0.38) .. controls (0.12,-0.31) and (0.17,-0.42) .. (0.22,-0.38);
+  \node[font=\bfseries, text=amOrange!90!black, scale=1.8] at (1.2,1.05) {?};
+}
+\def\noggin@face@sick{%
+  \noggin@body{sickgreen}{sickline}
+  \foreach \ex in {-0.36,0.36}{
+    \filldraw[fill=white, draw=ink, line width=0.8pt] (\ex,0.02) circle (0.2);
+    \draw[ink, line width=0.8pt] plot[domain=0:900, samples=60, variable=\t]
+      ({\ex+0.0002*\t*cos(\t)}, {0.02+0.0002*\t*sin(\t)});
+  }
+  \draw[ink, line width=1pt, line cap=round] (-0.24,-0.4) -- (-0.12,-0.33) -- (0,-0.4) -- (0.12,-0.33) -- (0.24,-0.4);
+}
+\def\noggin@face@hungry{%
+  \noggin@body{brainpink}{brainline}\noggin@cheeks
+  \noggin@eyes{0.22}{0.1}{0,0.04}
+  \filldraw[fill=ink, draw=ink, line width=0.8pt] (-0.22,-0.3) .. controls (-0.15,-0.58) and (0.15,-0.58) .. (0.22,-0.3) -- cycle;
+  \fill[amRed!60] (0.02,-0.47) ellipse (0.09 and 0.06);
+  \fill[amBlue!45] (0.2,-0.48) .. controls (0.16,-0.6) and (0.18,-0.66) .. (0.23,-0.66)
+                   .. controls (0.28,-0.66) and (0.3,-0.6) .. (0.2,-0.48);
+}
+\def\noggin@face@smug{%
+  \noggin@body{brainpink}{brainline}\noggin@cheeks
+  \noggin@eyes{0.2}{0.09}{0.05,-0.05}
+  \foreach \ex in {-0.36,0.36}{
+    \fill[brainpink] (\ex-0.21,0.02) rectangle (\ex+0.21,0.24);
+    \draw[ink, line width=1pt] (\ex-0.2,0.04) -- (\ex+0.2,0.04);
+  }
+  \draw[ink, line width=1pt, line cap=round] (-0.18,-0.36) .. controls (0,-0.4) and (0.15,-0.38) .. (0.25,-0.26);
+}
+\tikzset{
+  pics/noggin/.style={code={\csname noggin@face@#1\endcsname}},
+}
+\makeatother
+\newcommand{\noggin}[2][1]{%
+  \begin{tikzpicture}[scale=#1, baseline=(current bounding box.center)]
+    \pic {noggin=#2};
+  \end{tikzpicture}%
+}
+
+% TikZ + beamer overlays: \node[visible on=<2->] ... keeps the element in
+% the layout (so nothing jumps) but hides it until slide 2.
+\tikzset{
+  invisible/.style={opacity=0, text opacity=0},
+  visible on/.style={alt={#1{}{invisible}}},
+  alt/.code args={<#1>#2#3}{\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}},
+}
+
+% Speech bubble for the mascot (handwritten font).
+% \saybubble[<width>]{<text>}  -- use inside a tikzpicture via a node
+\tikzset{
+  say/.style={
+    rectangle callout, draw=ink, line width=0.8pt, fill=white,
+    rounded corners=4pt, inner sep=5pt, align=center,
+    font=\handfont\normalsize, text=ink
+  },
+  think/.style={
+    cloud callout, cloud puffs=12, draw=ink, line width=0.8pt, fill=white,
+    inner sep=2pt, align=center, font=\handfont\normalsize, text=ink
+  },
+}
+
+% =====================================================================
+% Reusable boxes and frame building blocks
+% =====================================================================
+\tcbset{
+  idiotbase/.style={
+    enhanced, arc=3mm, boxrule=0pt, left=3mm, right=3mm, top=1.5mm,
+    bottom=2mm, fonttitle=\bfseries\large, coltitle=white,
+    attach boxed title to top left={xshift=4mm, yshift*=-2.5mm},
+    boxed title style={arc=2mm, boxrule=0pt},
+  }
+}
+
+% "Try it now" - a quick self-experiment students can do on the spot
+\newtcolorbox{tryit}[1][]{idiotbase,
+  colback=amOrange!12, colframe=amOrange, colbacktitle=amOrange!90!black,
+  title={\faFlask\ \ Try it now}, borderline west={1.2mm}{0pt}{amOrange}, #1}
+
+% "Poll" - for the webinar poll tool or a show of hands
+\newtcolorbox{poll}[1][]{idiotbase,
+  colback=amBlue!8, colframe=amBlue, colbacktitle=amBlue,
+  title={\faPoll\ \ Poll}, borderline west={1.2mm}{0pt}{amBlue}, #1}
+
+% "Chat" - students type into the chat
+\newtcolorbox{chatbox}[1][]{idiotbase,
+  colback=amBlue!8, colframe=amBlue, colbacktitle=amBlue,
+  title={\faCommentDots\ \ Type in the chat}, borderline west={1.2mm}{0pt}{amBlue}, #1}
+
+% "Science update" - where research moved on since the book (2016)
+\newtcolorbox{scienceupdate}[1][]{idiotbase,
+  colback=mist, colframe=ink, colbacktitle=ink, fonttitle=\bfseries\small,
+  fontupper=\small, title={\faSyncAlt\ \ Science update}, #1}
+
+% Plain rounded card
+\newtcolorbox{card}[1][]{enhanced, arc=3mm, boxrule=0.8pt, colback=white,
+  colframe=ink!25, left=3mm, right=3mm, top=2mm, bottom=2mm, #1}
+
+% Myth-or-fact block (use inside a frame; the verdict appears on slide 2)
+%   \mythorfact[<stamp colour>]{<statement>}{<verdict word>}{<explanation>}
+\newcommand{\mythorfact}[4][amRed]{%
+  \begin{center}
+  \begin{tikzpicture}
+    \node[draw=ink!30, line width=0.8pt, fill=white, rounded corners=4mm,
+          inner xsep=8mm, inner ysep=6mm, text width=10.5cm, align=center,
+          font=\Large\semiboldfont] (mf) {``#2''};
+    \node[fill=ink, text=white, rounded corners=2mm, font=\bfseries\normalsize,
+          inner sep=4pt, anchor=west] at ([xshift=6mm]mf.north west)
+          {\faQuestionCircle\ \ MYTH or FACT?};
+    \onslide<2->{
+      \node[draw=#1, text=#1, line width=2.2pt, rounded corners=2mm, rotate=-12,
+            font=\bfseries\LARGE, inner sep=5pt, fill=white, fill opacity=0.92,
+            text opacity=1] at ([xshift=-6mm, yshift=1mm]mf.south east) {#3};
+    }
+  \end{tikzpicture}
+  \end{center}
+  \vspace{2mm}
+  \onslide<2->{#4}%
+}
+
+% Big question: huge centred question with the confused mascot
+%   \bigquestion{<question>}{<small line underneath>}
+\newcommand{\bigquestion}[2]{%
+  \vfill
+  \begin{center}
+  \begin{tikzpicture}
+    \node[text width=10cm, align=center, font=\huge\bfseries, text=ink] (q) {#1};
+    \node[below=4mm of q, text width=10cm, align=center, font=\large, text=softgray] {#2};
+    \pic[scale=0.75] at ([xshift=-1.3cm, yshift=-0.3cm]q.west) {noggin=confused};
+  \end{tikzpicture}
+  \end{center}
+  \vfill
+}
+
+% Title frame shared by all chapters. Set \title, \subtitle, \author,
+% \date as usual, plus \chaptertagline{...}; then call \idiottitleframe{<mood>}.
+\makeatletter
+\newcommand{\chaptertagline}[1]{\def\idiot@tagline{#1}}
+\def\idiot@tagline{}
+\newcommand{\idiottitleframe}[1]{%
+  \begin{frame}[plain]
+    \begin{tikzpicture}[remember picture, overlay]
+      \fill[paper] (current page.north west) rectangle (current page.south east);
+      \fill[ink] (current page.north west) rectangle ([yshift=-1.2cm]current page.north east);
+      \fill[amRed]    ([yshift=-1.2cm]current page.north west) rectangle ([yshift=-1.32cm, xshift=5.333cm]current page.north west);
+      \fill[amBlue]   ([yshift=-1.2cm, xshift=5.333cm]current page.north west) rectangle ([yshift=-1.32cm, xshift=10.667cm]current page.north west);
+      \fill[amOrange] ([yshift=-1.2cm, xshift=10.667cm]current page.north west) rectangle ([yshift=-1.32cm]current page.north east);
+      \node[anchor=west, text=white, font=\large\bfseries]
+        at ([xshift=8mm, yshift=-6mm]current page.north west) {\faBrain\ \ Book club for curious brains};
+      \node[anchor=north west, text=ink, font=\fontsize{34}{38}\selectfont\bfseries]
+        (t) at ([xshift=8mm, yshift=-2.1cm]current page.north west) {\inserttitle};
+      \node[anchor=north west, text=amBlue, font=\LARGE\semiboldfont]
+        (s) at ([yshift=-1mm]t.south west) {\insertsubtitle};
+      \node[anchor=north west, text=ink, font=\large, text width=8.6cm]
+        (g) at ([yshift=-3mm]s.south west) {\idiot@tagline};
+      \node[anchor=south west, text=softgray, font=\normalsize, text width=9cm]
+        at ([xshift=8mm, yshift=7mm]current page.south west) {\insertauthor\\ \insertdate};
+      \fill[amOrange!18] ([xshift=-3.4cm, yshift=-0.6cm]current page.east) circle (2.6cm);
+      \pic[scale=1.45] at ([xshift=-3.4cm, yshift=-0.4cm]current page.east) {noggin=#1};
+    \end{tikzpicture}
+  \end{frame}
+}
+\makeatother
+
+% Section opener frame (creates the \section entry too).
+%   \sectionopener{<number>}{<short name>}{<book's section title>}%
+%                 {<what it is about>}{<fa icon>}{<colour>}{<mascot mood>}
+\newcommand{\sectionopener}[7]{%
+  \section{#2}%
+  \begin{frame}[plain]
+    \begin{tikzpicture}[remember picture, overlay]
+      \fill[#6] (current page.north west) rectangle (current page.south east);
+      \fill[white, opacity=0.08] ([xshift=-2cm,yshift=1cm]current page.north east) circle (5.5cm);
+      \fill[white, opacity=0.06] ([xshift=1cm,yshift=-1cm]current page.south west) circle (3.5cm);
+      \node[anchor=north west, text=white, font=\bfseries\Large, opacity=0.85]
+        at ([xshift=9mm, yshift=-9mm]current page.north west) {Part #1 of 4};
+      \node[anchor=west, text=white, font=\fontsize{30}{34}\selectfont\bfseries, text width=10cm]
+        (st) at ([xshift=9mm, yshift=4mm]current page.west) {#3};
+      \node[anchor=north west, text=white, font=\Large, text width=10cm, opacity=0.9]
+        at ([yshift=-3mm]st.south west) {#4};
+      \node[text=white, opacity=0.18, font=\fontsize{110}{110}\selectfont]
+        at ([xshift=-3.2cm, yshift=0.6cm]current page.east) {#5};
+      \pic[scale=0.9] at ([xshift=-3.0cm, yshift=-2.6cm]current page.east) {noggin=#7};
+    \end{tikzpicture}
+  \end{frame}
+}

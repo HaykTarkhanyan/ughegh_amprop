@@ -1,0 +1,39 @@
+% Cartoon EEG traces per stage. Shapes are drawn from simple sine mixes to
+% show the idea (frequency/size), not real recordings.
+% N1 is labelled theta (current scoring rules); the book says alpha, see NOTES.md.
+\begin{tikzpicture}[
+    stage/.style={anchor=east, font=\blackfont\small, text=#1, align=right},
+    what/.style={anchor=west, font=\small, text=plum, align=left, text width=3.9cm},
+    wave/.style={line width=1.1pt, #1},
+  ]
+  \def\W{7.2}  % trace length (cm)
+  \def\row{1.0}
+
+  \node[stage=plum] at (-0.2,0) {Արթուն, հանգիստ};
+  \draw[wave=plum] plot[domain=0:\W, samples=320, variable=\x] ({\x}, {0.17*sin(\x*360*2.3)});
+  \node[what] at (\W+0.2,0) {ալֆա՝ հանգիստ, կանոնավոր ալիքներ};
+
+  \node[stage=plum] at (-0.2,-\row) {N1՝ նիրհ};
+  \draw[wave=plum] plot[domain=0:\W, samples=320, variable=\x]
+    ({\x}, {-\row + 0.22*sin(\x*360*1.15) + 0.05*sin(\x*360*3.3)});
+  \node[what] at (\W+0.2,-\row) {թետա՝ մի քիչ ավելի դանդաղ};
+
+  \node[stage=plum] at (-0.2,-2*\row) {N2՝ թեթև քուն};
+  \draw[wave=plum] plot[domain=0:\W, samples=400, variable=\x]
+    ({\x}, {-2*\row + 0.17*sin(\x*360*1.0)
+            + 0.24*exp(-((\x-2.6)^2)/0.12)*sin(\x*360*5.5)
+            - 0.48*exp(-((\x-5.6)^2)/0.03) + 0.3*exp(-((\x-5.9)^2)/0.04)});
+  \node[what] at (\W+0.2,-2*\row) {«իլիկներ» ու K-համալիրներ};
+  \draw[amOrange!85!black, line width=0.8pt, -{Stealth}] (2.6,-2*\row+0.55)
+    node[above, font=\scriptsize, text=amOrange!80!black] {իլիկ} -- (2.6,-2*\row+0.3);
+
+  \node[stage=amBlue] at (-0.2,-3*\row) {N3՝ խորը քուն};
+  \draw[wave=amBlue] plot[domain=0:\W, samples=320, variable=\x]
+    ({\x}, {-3*\row + 0.4*sin(\x*360*0.5) + 0.05*sin(\x*360*2.6)});
+  \node[what] at (\W+0.2,-3*\row) {դելտա՝ մեծ, դանդաղ ալիքներ։ Ամենադժվարն է արթնացնել};
+
+  \node[stage=amRed] at (-0.2,-4*\row) {REM՝ երազներ};
+  \draw[wave=amRed] plot[domain=0:\W, samples=400, variable=\x]
+    ({\x}, {-4*\row + 0.12*sin(\x*360*2.7) + 0.08*sin(\x*360*5.1+40) + 0.06*sin(\x*360*1.3+10)});
+  \node[what] at (\W+0.2,-4*\row) {արագ ու խառը՝ \textbf{կարծես արթուն լինես}};
+\end{tikzpicture}

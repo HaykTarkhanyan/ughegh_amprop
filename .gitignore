@@ -1,0 +1,10 @@
+# script logs (logs/<script>.log) and any other log files
+logs/
+*.log
+# LaTeX build output (aux files, draft PDFs); decks build into <deck>/build/
+build/
+# secrets, if an API key is ever used
+.env
+__pycache__/
+# Git Bash crash dumps
+*.stackdump

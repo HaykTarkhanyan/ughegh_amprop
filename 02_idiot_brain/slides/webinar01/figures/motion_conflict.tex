@@ -1,0 +1,54 @@
+% Motion sickness as a sensory conflict: eyes vs inner ear -> confused
+% old brain -> "poison!" -> vomit. Reveals in 5 steps (use inside a frame).
+\begin{tikzpicture}[
+    msg/.style={draw=#1, line width=1pt, fill=#1!8!cardwhite, rounded corners=3mm,
+                text width=4.1cm, align=left, inner sep=5pt, font=\small},
+    lbl/.style={fill=#1, text=white, font=\blackfont\small, rounded corners=1.5mm, inner sep=3pt},
+    sig/.style={-{Stealth[length=3mm]}, line width=1.6pt, #1},
+  ]
+  \path[use as bounding box] (-7.2,-2.9) rectangle (7.2,3.0);
+
+  % --- the car with a reader inside --------------------------------------
+  \begin{scope}[shift={(-4.6,-1.25)}]
+    \draw[plum!50, line width=1pt] (-2.4,-0.95) -- (2.6,-0.95);              % road
+    \foreach \y in {0.15,-0.2,-0.55}{\draw[plum!40, line width=1pt, line cap=round] (-2.55,\y) -- (-2.05,\y);}
+    \filldraw[fill=lavender, draw=plum, line width=1pt, rounded corners=3mm]
+      (-1.9,-0.6) -- (-1.9,0.15) -- (-1.15,0.3) -- (-0.7,1.05) -- (0.95,1.05) -- (1.5,0.3)
+      -- (2.2,0.2) -- (2.2,-0.6) -- cycle;
+    \filldraw[fill=cardwhite, draw=plum, line width=0.8pt, rounded corners=1.5mm]
+      (-0.95,0.32) -- (-0.6,0.9) -- (0.85,0.9) -- (1.25,0.32) -- cycle;
+    \fill[plum] (0.05,0.62) circle (0.17);                                    % head
+    \filldraw[fill=amOrange, draw=plum, line width=0.6pt, rotate around={-25:(0.45,0.5)}]
+      (0.35,0.38) rectangle (0.6,0.66);                                       % book
+    \foreach \x in {-1.15,1.45}{
+      \filldraw[fill=plum, draw=plum] (\x,-0.6) circle (0.36);
+      \fill[cardwhite] (\x,-0.6) circle (0.13);
+    }
+    \node[font=\mediumfont\small, text=plum] at (0.15,-1.3) {կարդում ես հետևի նստարանին};
+  \end{scope}
+
+  % --- eyes ----------------------------------------------------------------
+  \node[msg=amBlue, visible on=<2->] (eye) at (-4.6,1.9)
+    {«Գիրքն անշարժ է, նստարանն անշարժ է։ \textbf{Մենք չենք շարժվում}»};
+  \node[lbl=amBlue, visible on=<2->, anchor=south west] at ([xshift=3mm, yshift=-1mm]eye.north west)
+    {\emoji[1em]{eye}\ աչքեր};
+
+  % --- inner ear -----------------------------------------------------------
+  \node[msg=amOrange, visible on=<3->] (ear) at (0,1.9)
+    {«Արագացում, արգելակ, շրջադարձ։ \textbf{Մենք արագ շարժվում ենք}»};
+  \node[lbl=amOrange!85!black, visible on=<3->, anchor=south west] at ([xshift=3mm, yshift=-1mm]ear.north west)
+    {\emoji[1em]{ear}\ ներքին ականջ};
+
+  % --- the brain gets both -------------------------------------------------
+  \pic[scale=0.8, visible on=<4->] at (4.6,0.0) {noggin=confused};
+  \draw[sig=amBlue, visible on=<4->] (eye.south east) to[out=-20, in=170] (3.4,0.2);
+  \draw[sig=amOrange!85!black, visible on=<4->] (ear.south east) to[out=-30, in=120] (3.85,1.0);
+  \node[say, visible on=<4->, callout absolute pointer={(4.9,1.1)}, text width=3.1cm, font=\handfont\normalsize]
+    at (5.6,2.4) {Սրանք իրար չեն համընկնում։ Ներսում ինչ-որ բան լուրջ խառնվել է...};
+
+  % --- conclusion ----------------------------------------------------------
+  \node[visible on=<5->, draw=pinkdark, line width=1.5pt, fill=blush!20!cardwhite, rounded corners=3mm,
+        text width=4.6cm, align=center, inner sep=6pt, font=\small] (poison) at (4.6,-2.15)
+    {{\blackfont\color{pinkdark} Հին ուղեղ՝ «Սա ԹՈՒՅՆ է»}\\ \emoji{vomit}\ Արտակարգ պլան՝ դատարկել ստամոքսը};
+  \draw[sig=pinkdark, visible on=<5->] (4.6,-1.15) -- (poison.north);
+\end{tikzpicture}

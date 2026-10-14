@@ -1,0 +1,25 @@
+% mascot_sheet.tex - model sheet for the original brain mascot (all moods + props).
+% Build (~10 s):  latexmk -lualatex -outdir=build mascot_sheet.tex
+% standalone.cls needs luatex85.sty (missing in this TeX Live install) and preview.sty
+% misbehaves with nested tikzpictures, so this is a plain article on a custom page size.
+\documentclass{article}
+\usepackage[paperwidth=26cm, paperheight=21cm, margin=4mm]{geometry}
+\usepackage{brainmascot}
+\pagestyle{empty}
+\usepackage{fontspec}
+\setmainfont{NotoSans}[Path=fonts/, Extension=.ttf,
+  UprightFont=*-Regular, BoldFont=*-Bold, ItalicFont=*-Italic]
+\begin{document}
+\centering
+\begin{tikzpicture}
+  \foreach \mood/\extra [count=\i from 0] in {
+      happy/{none}, scared/{none}, sleepy/{none}, dizzy/{body=brainpink!55!green!35},
+      confused/{none}, smug/{none}, sad/{none}, thinking/{bulb},
+      love/{none}, angry/{body=brainpink!70!amred}, laughing/{none}, smug/{shades}}{
+    \pgfmathtruncatemacro\col{mod(\i,4)}
+    \pgfmathtruncatemacro\row{div(\i,4)}
+    \node at (\col*6.2, -\row*6.4) {\expandafter\brainmascot\expandafter[\extra, mood=\mood, scale=0.9]};
+    \node[font=\large\bfseries, text=brainink] at (\col*6.2, -\row*6.4-2.9) {\mood\ \texttt{\detokenize\expandafter{\extra}}};
+  }
+\end{tikzpicture}
+\end{document}

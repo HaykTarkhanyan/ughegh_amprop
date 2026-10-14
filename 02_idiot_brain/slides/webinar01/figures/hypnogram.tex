@@ -1,0 +1,43 @@
+% A typical night (hypnogram): ~90-minute cycles, deep sleep (N3) mostly in
+% the first half, REM periods getting longer towards morning. Illustrative
+% data for a healthy young sleeper, not one real recording.
+\begin{tikzpicture}
+  \begin{axis}[
+      width=13.8cm, height=5.3cm,
+      xmin=0, xmax=8, ymin=-0.4, ymax=4.4,
+      xtick={0,1,...,8},
+      xticklabels={23:00, 00:00, 01:00, 02:00, 03:00, 04:00, 05:00, 06:00, 07:00},
+      ytick={0,1,2,3,4},
+      yticklabels={\textbf{Խորը (N3)}, N2, N1, \textcolor{amRed}{\textbf{REM}}, Արթուն},
+      tick label style={font=\small, text=plum}, axis line style={plum},
+      axis x line*=bottom, axis y line*=left,
+      ymajorgrids, grid style={plum!10},
+      clip=false,
+    ]
+    \fill[amBlue!10] (axis cs:0,-0.4) rectangle (axis cs:8,0.4);
+    \fill[amRed!8]   (axis cs:0,2.6) rectangle (axis cs:8,3.4);
+
+    \addplot[const plot, line width=1.6pt, plum] coordinates {
+      (0,4) (0.12,2) (0.25,1) (0.45,0) (1.05,1) (1.25,3) (1.4,1) (1.6,0)
+      (2.3,1) (2.75,3) (3.05,1) (3.3,0) (3.6,1) (4.2,3) (4.6,2) (4.65,4)
+      (4.72,1) (5.45,3) (6.0,1) (6.6,3) (7.3,2) (7.4,1) (7.6,3) (7.95,4) (8,4)};
+
+    % REM periods in red on top
+    \foreach \a/\b in {1.25/1.4, 2.75/3.05, 4.2/4.6, 5.45/6.0, 6.6/7.3, 7.6/7.95}{
+      \edef\temp{\noexpand\draw[amRed, line width=4pt] (axis cs:\a,3) -- (axis cs:\b,3);}
+      \temp
+    }
+
+    % one cycle brace
+    \draw[decorate, decoration={brace, amplitude=5pt, mirror}, line width=1pt, plum!70]
+      (axis cs:0.05,-0.5) -- (axis cs:1.42,-0.5)
+      node[midway, below=5pt, font=\small, fill=cream, inner sep=1pt, text=plum] {1 ցիկլ՝ մոտ 90 րոպե};
+
+    \node[visible on=<2->, font=\blackfont\small, text=amBlue, align=center, fill=cream, inner sep=2pt]
+      (deep) at (axis cs:3.9,0.95) {խորը քունը՝ գիշերվա սկզբում};
+    \draw[visible on=<2->, -{Stealth}, amBlue, line width=1pt] (deep.west) to[out=180, in=60] (axis cs:2.0,0.12);
+    \node[visible on=<3->, font=\blackfont\small, text=amRed, align=center, fill=cream, inner sep=2pt]
+      (rem) at (axis cs:4.6,4.25) {REM-ը (երազները) երկարում է դեպի առավոտ};
+    \draw[visible on=<3->, -{Stealth}, amRed, line width=1pt] (rem.east) to[out=0, in=110] (axis cs:6.9,3.22);
+  \end{axis}
+\end{tikzpicture}

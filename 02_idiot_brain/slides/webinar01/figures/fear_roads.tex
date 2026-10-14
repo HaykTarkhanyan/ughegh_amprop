@@ -1,0 +1,36 @@
+% Fear pathways: senses -> thalamus ("main station") -> amygdala (fast,
+% rough alarm) -> hypothalamus ("taxi rank") -> body; and the slow, careful
+% route through the cortex that only later says "it was a balloon".
+\begin{tikzpicture}[
+    part/.style={draw=#1, line width=1.2pt, fill=#1!10!cardwhite, rounded corners=3mm,
+                 align=center, inner sep=5pt, text width=2.6cm, font=\small, text=plum},
+    road/.style={-{Stealth[length=3.2mm]}, line width=2pt, #1},
+  ]
+  \path[use as bounding box] (-7.2,-2.75) rectangle (7.2,2.75);
+
+  \node[part=plum] (sense) at (-5.85,0)
+    {\bigemoji[0.7cm]{eye}\,\bigemoji[0.7cm]{ear}\\[2pt] \textbf{Զգայարաններ}\\ «ԲՈՒ՛Մ»};
+  \node[part=plum] (thal) at (-2.6,0)
+    {\bigemoji[0.7cm]{station}\\[2pt] \textbf{Թալամուս}\\ գլխավոր կայարանը};
+  \draw[road=plum] (sense) -- (thal);
+
+  % fast road
+  \node[part=amRed, visible on=<2->] (amy) at (0.9,1.55)
+    {\bigemoji[0.7cm]{bell}\\[2pt] \textbf{Նշաձև մարմին}\\ ահազանգը};
+  \node[part=amRed, visible on=<2->] (hypo) at (4.3,1.55)
+    {\bigemoji[0.7cm]{taxi}\\[2pt] \textbf{Հիպոթալամուս}\\ տաքսիների կանգառը};
+  \node[part=amRed, visible on=<2->, text width=1.75cm] (body) at (6.3,-0.45)
+    {\bigemoji[0.7cm]{anatomicalheart}\\[2pt] \textbf{Մարմին}\\ մարտական\\ վիճակ};
+  \draw[road=amRed, visible on=<2->] (thal.north east) to[out=40, in=180]
+    node[pos=0.45, above left=-1pt, font=\blackfont\small, text=amRed] {ԱՐԱԳ ճամփա} (amy.west);
+  \draw[road=amRed, visible on=<2->] (amy) -- (hypo);
+  \draw[road=amRed, visible on=<2->] (hypo.south east) to[out=-30, in=90] (body.north);
+
+  % slow road
+  \node[part=amBlue, visible on=<3->] (cortex) at (0.9,-1.65)
+    {\bigemoji[0.7cm]{detective}\\[2pt] \textbf{Կեղև}\\ խուզարկուն};
+  \draw[road={amBlue, dashed}, visible on=<3->] (thal.south east) to[out=-40, in=180]
+    node[pos=0.45, below left=-1pt, font=\blackfont\small, text=amBlue] {դանդաղ ճամփա} (cortex.west);
+  \node[say, visible on=<3->, callout absolute pointer={(cortex.east)}, text width=2.6cm, font=\handfont\normalsize]
+    at (3.75,-1.85) {Փուչիկ էր ընդամենը։ Հանգստացե՛ք... ուշ է՞};
+\end{tikzpicture}

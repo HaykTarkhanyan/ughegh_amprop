@@ -1,0 +1,52 @@
+% Same door, same dressing gown: lights off (panel 1) vs lights on (panel 2,
+% revealed on slide 2).
+\begin{tikzpicture}[
+    paneltitle/.style={font=\blackfont\normalsize, text=#1, anchor=north west},
+  ]
+  % robe outline as a reusable path (hood, shoulders, sleeves, body)
+  \def\robe{
+    (-0.5,0.95) .. controls (-0.62,1.85) and (0.62,1.85) .. (0.5,0.95)
+    -- (1.0,0.7) -- (1.25,-0.75) -- (0.9,-0.8) -- (0.78,0.15)
+    -- (0.98,-2.25) -- (-0.98,-2.25) -- (-0.78,0.15)
+    -- (-0.9,-0.8) -- (-1.25,-0.75) -- (-1.0,0.7) -- cycle}
+
+  % ================= panel 1: lights off ===============================
+  \begin{scope}[shift={(-3.6,0)}]
+    \fill[night, rounded corners=4mm] (-3.3,-2.7) rectangle (3.3,2.9);
+    \fill[night!70!black] (-1.7,-2.7) rectangle (1.7,2.1);                % door
+    \draw[night!40, line width=0.6pt] (-1.4,0.4) rectangle (1.4,1.85) (-1.4,-2.45) rectangle (1.4,0.1);
+    \fill[night!40] (1.35,-0.1) circle (0.09);                               % knob
+    \fill[black!85] (0,1.8) circle (0.08);                                   % hook
+    \fill[black, opacity=0.95] \robe;
+    \fill[black] (0,1.12) ellipse (0.3 and 0.36);
+    \fill[amRed!80!amOrange] (-0.11,1.15) ellipse (0.07 and 0.04) (0.11,1.15) ellipse (0.07 and 0.04);
+    \draw[black, line width=3pt, line cap=round] (0.95,-0.45) -- (1.65,1.05);  % "axe" (the belt end)
+    \fill[black] (1.42,0.7) -- (2.05,1.25) .. controls (2.1,0.9) and (2.0,0.65) .. (1.82,0.32) -- cycle;
+    \node[paneltitle=white] at (-3.15,2.8) {\emoji{moon}\ Գիշերվա 2-ը, լույսն անջատված};
+    \pic[scale=0.5] at (-2.4,-1.95) {noggin=scared};
+    \node[say, callout absolute pointer={(-2.35,-1.35)}, font=\handfont\small, inner sep=3pt]
+      at (-2.2,-0.3) {ԿԱՑՆՈՎ\\ ՄԱՐԴԱՍՊԱՆ};
+  \end{scope}
+
+  % ================= panel 2: lights on ================================
+  \begin{scope}[shift={(3.6,0)}, visible on=<2->]
+    \fill[butter!60!cream, rounded corners=4mm] (-3.3,-2.7) rectangle (3.3,2.9);
+    \fill[peach] (-1.7,-2.7) rectangle (1.7,2.1);
+    \draw[peachdark!60, line width=0.6pt] (-1.4,0.4) rectangle (1.4,1.85) (-1.4,-2.45) rectangle (1.4,0.1);
+    \fill[peachdark] (1.35,-0.1) circle (0.09);
+    \fill[plum!70] (0,1.8) circle (0.08);
+    \filldraw[fill=lavender, draw=lavenderdark, line width=1pt] \robe;
+    \fill[lavender!70!white] (0,1.12) ellipse (0.3 and 0.36);
+    \draw[lavenderdark, line width=3pt, line cap=round] (-0.8,-0.35) -- (0.8,-0.35);
+    \draw[lavenderdark, line width=3pt, line cap=round] (0.3,-0.35) -- (0.45,-1.25);
+    \draw[lavenderdark, line width=3pt, line cap=round] (0.45,-0.35) -- (0.95,-1.05);
+    \foreach \p in {(-0.4,0.3),(0.3,0.6),(-0.5,-1.5),(0.5,-1.8),(0.0,-0.9),(-0.15,0.7)}
+      \fill[white, opacity=0.6] \p circle (0.05);
+    \node[paneltitle=plum] at (-3.15,2.8) {\emoji{bulb}\ Լույսը վառեցինք};
+    \pic[scale=0.5] at (-2.4,-1.95) {noggin=smug};
+    \node[say, callout absolute pointer={(-2.35,-1.35)}, font=\handfont\small, inner sep=3pt]
+      at (-2.2,-0.3) {...Ես գիտեի։};
+    \node[font=\blackfont\small, text=lavenderdark, fill=cardwhite, rounded corners=2pt, inner sep=3pt]
+      at (1.55,-2.4) {\emoji{check}\ ընդամենը խալաթ է};
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,296 @@
+% =====================================================================
+%  The Idiot Brain webinars - shared Beamer preamble (the banner look)
+% ---------------------------------------------------------------------
+%  Usage (in slides/webinarNN/webinarNN.tex):
+%      \documentclass[aspectratio=169,11pt]{beamer}
+%      \input{../common/preamble.tex}
+%  Build from the deck folder:  latexmk -lualatex -outdir=build webinarNN.tex
+%  Art (emoji, mascot moods, title banner) comes from common/build_art.py.
+%
+%  All styling lives here, so decks only hold content. Palette and fonts
+%  are the banner's (banner/build_banner.py): plum text on cream, pastel
+%  accents, Mardoto for text, Glazz for big titles, Twemoji icons and
+%  the pink brain mascot (DECISIONS.md #4-#6).
+% =====================================================================
+
+% ---------------------------------------------------------------------
+% Fonts (LuaLaTeX + fontspec), shared with the banner
+% ---------------------------------------------------------------------
+\usepackage{fontspec}
+\tracinglostchars=3 % a glyph missing from a font stops the build instead of printing nothing
+\defaultfontfeatures{Ligatures=TeX}
+\def\idiotfontdir{../../banner/assets/fonts/}
+\setsansfont{Mardoto}[Path=\idiotfontdir, Extension=.ttf, UprightFont=*-Regular, BoldFont=*-Bold]
+\setmainfont{Mardoto}[Path=\idiotfontdir, Extension=.ttf, UprightFont=*-Regular, BoldFont=*-Bold]
+\newfontfamily\mediumfont{Mardoto-Medium}[Path=\idiotfontdir, Extension=.ttf]
+\newfontfamily\blackfont{Mardoto-Black}[Path=\idiotfontdir, Extension=.ttf]
+\newfontfamily\titlefont{GlazzArm-Regular}[Path=\idiotfontdir, Extension=.ttf] % Armenian letters only
+\newfontfamily\handfont{Ink Free} % Windows font with Armenian; speech bubbles only
+% Mardoto has no italic: emphasis is medium weight in the accent colour instead.
+\renewcommand{\emph}[1]{{\mediumfont\color{plum}#1}}
+% No hyphenation: split words are hard to read on a shared screen.
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+% ---------------------------------------------------------------------
+% Packages
+% ---------------------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, calc, shapes.geometric, shapes.callouts, shapes.misc,
+  decorations.pathmorphing, decorations.pathreplacing, backgrounds, fit, patterns.meta}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+\graphicspath{{../common/art/}{images/}}
+
+% ---------------------------------------------------------------------
+% Colours: the banner palette. Charts with 3+ series use the Armenian
+% flag colours (amRed / amBlue / amOrange).
+% ---------------------------------------------------------------------
+\definecolor{plum}{HTML}{4A2340}
+\definecolor{brainpink}{HTML}{F7A8C4}
+\definecolor{fold}{HTML}{E57FA6}
+\definecolor{cream}{HTML}{FFF6EC}
+\definecolor{cardwhite}{HTML}{FFFDF9}
+\definecolor{peach}{HTML}{FFD9C2}
+\definecolor{lavender}{HTML}{D9C8F5}
+\definecolor{mint}{HTML}{B5E8D5}
+\definecolor{butter}{HTML}{FFE8A3}
+\definecolor{blush}{HTML}{FF8FA8}
+\definecolor{amRed}{HTML}{D90012}
+\definecolor{amBlue}{HTML}{0033A0}
+\definecolor{amOrange}{HTML}{F2A800}
+% darker partners for text on cream
+\colorlet{mintdark}{mint!45!black!80!green}
+\definecolor{mintdark}{HTML}{2E7D62}
+\definecolor{lavenderdark}{HTML}{5B3FA0}
+\definecolor{peachdark}{HTML}{B5532A}
+\definecolor{pinkdark}{HTML}{C2185B}
+% names used by the figure files
+\colorlet{ink}{plum}
+\colorlet{paper}{cream}
+\colorlet{mist}{lavender!40!cream}
+\definecolor{night}{HTML}{2B2150}
+\colorlet{softgray}{plum!60!cream}
+% accent of the current part; \partaccent{<colour>} switches it
+\colorlet{accent}{butter}
+\newcommand{\partaccent}[1]{\colorlet{accent}{#1}}
+
+% ---------------------------------------------------------------------
+% Art: \emoji, \mascot (pages of common/art/*.pdf, see build_art.py)
+% ---------------------------------------------------------------------
+\makeatletter
+\newcommand{\artpage}[3]{\expandafter\def\csname idiot@art@#1@#2\endcsname{#3}}
+\input{../common/art/art_index.tex}
+\newcommand{\idiot@art}[3]{% kind, name, size options
+  \ifcsname idiot@art@#1@#2\endcsname
+    \includegraphics[#3, page=\csname idiot@art@#1@#2\endcsname]{#1.pdf}%
+  \else
+    \PackageError{idiot}{Unknown #1 '#2'; add it to build_art.py and rebuild the art}{}%
+  \fi}
+% \emoji[<height>]{name}: inline icon, sits on the text baseline like a letter
+\newcommand{\emoji}[2][1.15em]{\raisebox{-0.2em}{\idiot@art{emoji}{#2}{height=#1}}}
+% \bigemoji[<height>]{name}: no baseline shift, for TikZ nodes and big pictures
+\newcommand{\bigemoji}[2][1.5cm]{\idiot@art{emoji}{#2}{height=#1}}
+% \mascot[<width>]{mood}: panic, happy, scared, sleepy, sick, confused, smug, hungry, thinking
+\newcommand{\mascot}[2][2.6cm]{\idiot@art{mascot}{#2}{width=#1}}
+\makeatother
+% the older figure files place the mascot with \pic{noggin=<mood>}
+\tikzset{pics/noggin/.style={code={\node[inner sep=0, transform shape] {\mascot[2.7cm]{#1}};}}}
+
+% ---------------------------------------------------------------------
+% Beamer look
+% ---------------------------------------------------------------------
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=plum, bg=cream}
+\setbeamercolor{structure}{fg=plum}
+\setbeamercolor{alerted text}{fg=pinkdark}
+\setbeamerfont{alerted text}{series=\bfseries}
+\setbeamercolor{frametitle}{fg=plum}
+\setbeamersize{text margin left=9mm, text margin right=9mm}
+\setbeamertemplate{frame begin}{\raggedright} % justified Armenian leaves big gaps
+
+% cream paper with the banner's faint dot grid
+\setbeamertemplate{background}{%
+  \begin{tikzpicture}
+    \fill[cream] (0,0) rectangle (\paperwidth,\paperheight);
+    \fill[pattern={Dots[distance=4.4mm, radius=0.28mm]}, pattern color=plum!9!cream]
+      (0,0) rectangle (\paperwidth,\paperheight);
+  \end{tikzpicture}}
+
+% topic pill, top right of every frame: set by \topic (emoji + short name)
+\def\idiottopicemoji{}
+\def\idiottopicname{}
+\newcommand{\idiotpill}[3][cardwhite]{% fill, emoji, text
+  \tikz[baseline=(p.base)]{\node[fill=#1, draw=plum, line width=0.7pt, rounded corners=2.6mm,
+      inner xsep=2.2mm, inner ysep=1.1mm, font=\mediumfont\footnotesize, text=plum] (p)
+      {\ifx\relax#2\relax\else\emoji[1.05em]{#2}\hspace{1.2mm}\fi#3};
+    \begin{scope}[on background layer]
+      \fill[plum, rounded corners=2.6mm] ([xshift=0.7mm, yshift=-0.7mm]p.south west) rectangle ([xshift=0.7mm, yshift=-0.7mm]p.north east);
+    \end{scope}}}
+% \chip{emoji}{text}: inline sticker label, same as the banner's topic chips
+\newcommand{\chip}[3][cardwhite]{\idiotpill[#1]{#2}{#3}}
+
+\setbeamertemplate{frametitle}{%
+  \vskip 3.5mm
+  \begin{minipage}[t]{0.66\paperwidth}
+    \raggedright{\blackfont\fontsize{17.5}{20.5}\selectfont\insertframetitle}\par
+    \vskip 1.3mm
+    \tikz\fill[accent, rounded corners=0.6mm] (0,0) rectangle (1.5cm,1.1mm);
+  \end{minipage}%
+  \hfill
+  \ifx\idiottopicname\empty\else
+    \raisebox{-1mm}{\idiotpill{\idiottopicemoji}{\idiottopicname}}%
+  \fi
+  \vskip 1mm}
+
+\setbeamertemplate{footline}{%
+  \hbox to \paperwidth{\hskip 9mm
+    {\mediumfont\fontsize{7}{8}\selectfont\color{plum!55!cream}Ապուշ ուղեղը · \insertshorttitle}\hfill
+    {\blackfont\fontsize{8}{9}\selectfont\color{plum!70!cream}\insertframenumber}\hskip 9mm}
+  \vskip 3mm}
+
+\setbeamertemplate{itemize item}{\tikz[baseline=-0.65ex]\draw[plum, fill=accent, line width=0.6pt] (0,0) circle (0.95mm);}
+\setbeamertemplate{itemize subitem}{\tikz[baseline=-0.65ex]\fill[plum!70] (0,0) circle (0.6mm);}
+\setbeamertemplate{enumerate item}{\tikz[baseline=(n.base)]\node[fill=accent, draw=plum, line width=0.6pt,
+  circle, inner sep=0.5mm, minimum size=4.2mm, font=\blackfont\scriptsize] (n) {\insertenumlabel};}
+\setlength{\leftmargini}{5mm}
+\setbeamertemplate{itemize/enumerate body begin}{\setlength{\itemsep}{1.6mm}}
+\setbeamertemplate{itemize/enumerate subbody begin}{\setlength{\itemsep}{0.6mm}\small}
+
+% ---------------------------------------------------------------------
+% Structure: parts (full-colour openers) and topics (book sections)
+% ---------------------------------------------------------------------
+% \topic{<emoji>}{<short name>}: starts a book section; the pill shows on every following frame
+\newcommand{\topic}[2]{\subsection{#2}\gdef\idiottopicemoji{#1}\gdef\idiottopicname{#2}}
+\newcommand{\notopic}{\gdef\idiottopicemoji{}\gdef\idiottopicname{}}
+
+% \partopener{<label>}{<title>}{<subtitle>}{<mood>}{<colour>}
+\newcommand{\partopener}[5]{%
+  \section{#2}\notopic\partaccent{#5}%
+  \begin{frame}[plain]
+    \begin{tikzpicture}[remember picture, overlay]
+      \fill[#5] (current page.south west) rectangle (current page.north east);
+      \fill[pattern={Dots[distance=4.4mm, radius=0.28mm]}, pattern color=plum!12!#5]
+        (current page.south west) rectangle (current page.north east);
+      \fill[cardwhite, opacity=0.45] ([xshift=-3.3cm, yshift=-0.2cm]current page.east) circle (3.1cm);
+      \node[anchor=north west, inner sep=0] at ([xshift=10mm, yshift=-12mm]current page.north west)
+        {\idiotpill{}{#1}};
+      \node[anchor=west, text=plum, align=left, text width=9.2cm, inner sep=0]
+        (t) at ([xshift=10mm, yshift=5mm]current page.west)
+        {\titlefont\fontsize{38}{40}\selectfont #2};
+      \node[anchor=north west, text=plum, text width=9.2cm, inner sep=0, align=left]
+        at ([yshift=-5mm]t.south west) {\mediumfont\large #3};
+      \node at ([xshift=-3.3cm, yshift=-0.2cm]current page.east) {\mascot[4.6cm]{#4}};
+    \end{tikzpicture}
+  \end{frame}}
+
+% \topicopener{<emoji>}{<short name>}{<book's section title>}{<what it is about>}{<mood>}
+\newcommand{\topicopener}[5]{%
+  \topic{#1}{#2}%
+  \begin{frame}[plain]
+    \begin{tikzpicture}[remember picture, overlay]
+      \fill[accent!55!cream] (current page.south west) rectangle (current page.north east);
+      \fill[pattern={Dots[distance=4.4mm, radius=0.28mm]}, pattern color=plum!10!accent!55!cream]
+        (current page.south west) rectangle (current page.north east);
+      \node[anchor=north west, inner sep=0] at ([xshift=10mm, yshift=-12mm]current page.north west)
+        {\idiotpill{#1}{#2}};
+      \node[anchor=west, text=plum, text width=9.6cm, align=left, inner sep=0]
+        (t) at ([xshift=10mm, yshift=6mm]current page.west)
+        {\blackfont\fontsize{24}{28}\selectfont «#3»};
+      \node[anchor=north west, text=plum, text width=9.6cm, align=left, inner sep=0]
+        at ([yshift=-4mm]t.south west) {\mediumfont\large #4};
+      \node at ([xshift=-3.0cm, yshift=-0.4cm]current page.east) {\mascot[4.2cm]{#5}};
+      \node[rotate=-12] at ([xshift=-1.4cm, yshift=2.3cm]current page.east) {\bigemoji[1.5cm]{#1}};
+    \end{tikzpicture}
+  \end{frame}}
+
+% ---------------------------------------------------------------------
+% Boxes (sticker style: plum outline + hard plum shadow, like the banner)
+% ---------------------------------------------------------------------
+\tcbset{
+  sticker/.style={enhanced, arc=3mm, boxrule=0.9pt, colframe=plum, colback=cardwhite, halign=left,
+    left=3mm, right=3mm, top=2mm, bottom=2mm, fontupper=\normalsize, coltext=plum,
+    shadow={1.1mm}{-1.1mm}{0mm}{fill=plum}},
+  tagged/.style={sticker, colback=#1!45!cream, colbacktitle=#1, coltitle=plum,
+    fonttitle=\blackfont\footnotesize, top=3mm,
+    attach boxed title to top left={xshift=4mm, yshift*=-2.4mm},
+    boxed title style={arc=2.2mm, boxrule=0.9pt, colframe=plum, left=1.5mm, right=1.5mm, top=0.6mm, bottom=0.6mm}},
+}
+\newtcolorbox{card}[1][]{sticker, #1}
+\newtcolorbox{tryit}[1][]{tagged=mint, title={\emoji[1em]{testtube}\ Փորձիր հիմա}, #1}
+\newtcolorbox{poll}[1][]{tagged=butter, title={\emoji[1em]{hand}\ Հարցում}, #1}
+\newtcolorbox{chatbox}[1][]{tagged=lavender, title={\emoji[1em]{speech}\ Գրիր չաթում}, #1}
+\newtcolorbox{scienceupdate}[1][]{tagged=peach, fontupper=\small, title={\emoji[1em]{microscope}\ Գիտությունն այսօր}, #1}
+\newtcolorbox{bookquote}[1][]{sticker, colback=cardwhite, fontupper=\mediumfont, left=4mm,
+  borderline west={1.4mm}{0pt}{accent},
+  before upper={{\blackfont\footnotesize\emoji[1em]{book}\ Բըրնեթը գրում է}\par\smallskip}, #1}
+
+% Brain.exe-style popup window: \begin{popup}{<window title>} ... \end{popup}
+\newcommand{\winbuttons}{%
+  \tikz[baseline=-0.6ex, line width=0.6pt]{
+    \foreach \i/\f in {0/cardwhite, 1/cardwhite, 2/blush}{
+      \filldraw[fill=\f, draw=plum, rounded corners=0.6mm] (\i*4.3mm,-1.6mm) rectangle ++(3.3mm,3.3mm);}
+    \draw[plum] (0.8mm,-0.8mm) -- (2.5mm,-0.8mm);
+    \draw[plum] (5.1mm,-0.8mm) rectangle (6.8mm,0.9mm);
+    \draw[plum] (9.4mm,-0.9mm) -- (11.1mm,0.8mm) (9.4mm,0.8mm) -- (11.1mm,-0.9mm);}}
+\newtcolorbox{popup}[2][]{sticker, colback=cardwhite, colbacktitle=brainpink, coltitle=plum,
+  fonttitle=\blackfont\small, title={\emoji[1.1em]{warning}\hspace{1.5mm}#2\hfill\winbuttons},
+  titlerule=0.9pt, toptitle=0.8mm, bottomtitle=0.8mm, #1}
+
+% Myth or fact: \mythorfact{<statement>}{<verdict>}{<colour>}{<explanation>}; verdict shows on slide 2
+\newcommand{\mythorfact}[4]{%
+  \begin{center}
+  \begin{tikzpicture}
+    \node[draw=plum, line width=0.9pt, fill=cardwhite, rounded corners=4mm, inner xsep=8mm, inner ysep=6mm,
+          text width=10cm, align=center, font=\blackfont\Large, text=plum] (mf) {«#1»};
+    \begin{scope}[on background layer]
+      \fill[plum, rounded corners=4mm] ([xshift=1.2mm, yshift=-1.2mm]mf.south west) rectangle ([xshift=1.2mm, yshift=-1.2mm]mf.north east);
+    \end{scope}
+    \node[anchor=west] at ([xshift=6mm]mf.north west) {\idiotpill[butter]{question}{Առասպել, թե՞ փաստ}};
+    \onslide<2->{\node[draw=#3, text=#3, line width=2pt, rounded corners=2mm, rotate=-10, font=\blackfont\LARGE,
+      inner sep=4pt, fill=cardwhite] at ([xshift=-8mm, yshift=1mm]mf.south east) {#2};}
+  \end{tikzpicture}
+  \end{center}
+  \onslide<2->{#4}}
+
+% Big question with the confused mascot: \bigquestion{<question>}{<small line>}
+\newcommand{\bigquestion}[2]{%
+  \vfill
+  \begin{center}
+  \begin{tikzpicture}
+    \node[text width=9.6cm, align=center, font=\blackfont\fontsize{24}{29}\selectfont, text=plum] (q) {#1};
+    \node[below=4mm of q, text width=9.6cm, align=center, font=\mediumfont\large, text=softgray] {#2};
+    \node[anchor=east] at ([xshift=-2mm]q.west) {\mascot[2.6cm]{confused}};
+  \end{tikzpicture}
+  \end{center}
+  \vfill}
+
+% Small source line at the bottom of a frame: \source{Loftus & Palmer, 1974}
+\newcommand{\source}[1]{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=south east, font=\fontsize{6.5}{7.5}\selectfont, text=plum!60!cream, inner sep=0]
+      at ([xshift=-17mm, yshift=3.4mm]current page.south east) {Աղբյուր՝ #1};
+  \end{tikzpicture}}
+
+% Speech bubbles (handwritten) and the overlay helper for TikZ:
+% \node[visible on=<2->] ... keeps the layout but hides the node until slide 2.
+\tikzset{
+  say/.style={rectangle callout, draw=plum, line width=0.8pt, fill=cardwhite, rounded corners=3pt,
+    inner sep=4pt, align=center, font=\handfont\normalsize, text=plum},
+  think/.style={cloud callout, cloud puffs=12, draw=plum, line width=0.8pt, fill=cardwhite,
+    inner sep=2pt, align=center, font=\handfont\normalsize, text=plum},
+  % boxes for diagrams drawn directly in a frame: a style with #1 cannot be defined inside a frame body
+  flow/.style={draw=plum, line width=0.8pt, fill=cardwhite, rounded corners=2mm, align=center,
+    font=\small, text=plum, inner sep=4pt, text width=#1},
+  flow/.default=3cm,
+  chatmsg/.style={draw=plum, line width=0.8pt, rounded corners=3mm, inner sep=6pt, text width=#1,
+    align=left, font=\small, text=plum},
+  chatmsg/.default=7cm,
+  invisible/.style={opacity=0, text opacity=0},
+  visible on/.style={alt={#1{}{invisible}}},
+  alt/.code args={<#1>#2#3}{\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}},
+}

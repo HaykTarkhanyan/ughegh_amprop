@@ -1,0 +1,49 @@
+% Hunger tug-of-war: ghrelin (stomach, "EAT!") vs leptin (fat cells,
+% "ENOUGH!"), with the brain as a referee that stops listening (slide 2).
+\begin{tikzpicture}[
+    tag/.style={font=\blackfont\Large, text=#1},
+    sub/.style={font=\small, text=plum, align=center, text width=3.3cm},
+  ]
+  \path[use as bounding box] (-7.1,-2.6) rectangle (7.1,2.9);
+
+  % rope
+  \draw[peachdark, line width=2.2pt, decorate,
+        decoration={coil, aspect=0.35, segment length=2.4mm, amplitude=1.3mm}]
+    (-4.6,-0.35) -- (4.6,-0.35);
+  \fill[pinkdark] (0,-0.35) -- (0.12,-1.05) -- (-0.12,-1.05) -- cycle;      % flag
+  \draw[plum!40, dashed, line width=0.8pt] (0,-1.3) -- (0,0.6);
+
+  % --- left: the stomach (ghrelin) -------------------------------------
+  \begin{scope}[shift={(-5.6,-0.35)}]
+    \filldraw[fill=peach, draw=plum, line width=1pt]
+      (-0.2,1.0) .. controls (0.9,1.2) and (1.1,0.2) .. (0.8,-0.4)
+      .. controls (0.5,-1.1) and (-0.6,-1.2) .. (-0.95,-0.5)
+      .. controls (-1.15,-0.1) and (-0.75,0.2) .. (-0.45,0.25)
+      .. controls (-0.25,0.3) and (-0.45,0.85) .. (-0.2,1.0) -- cycle;
+    \filldraw[fill=white, draw=plum] (0.05,0.2) circle (0.14) (0.45,0.2) circle (0.14);
+    \fill[plum] (0.08,0.18) circle (0.06) (0.48,0.18) circle (0.06);
+    \filldraw[fill=plum] (0.12,-0.25) .. controls (0.2,-0.5) and (0.45,-0.5) .. (0.5,-0.22) -- cycle;
+    \draw[plum, line width=1.6pt, line cap=round] (0.75,0.0) -- (1.15,0.0);  % arm on rope
+    \node[tag=peachdark] at (0,1.55) {Գրելին};
+    \node[sub] at (0,-1.6) {արտադրում է \textbf{դատարկ ստամոքսը}};
+    \node[say, callout absolute pointer={(0.3,0.75)}, font=\handfont\Large] at (1.3,2.15) {ԿԵ՛Ր};
+  \end{scope}
+
+  % --- right: the fat cell (leptin) -------------------------------------
+  \begin{scope}[shift={(5.6,-0.35)}]
+    \filldraw[fill=butter, draw=plum, line width=1pt] (0,0) circle (0.95);
+    \filldraw[fill=amOrange!55, draw=plum!60] (0.35,0.45) circle (0.22);    % nucleus
+    \filldraw[fill=white, draw=plum] (-0.45,0.1) circle (0.14) (-0.05,0.1) circle (0.14);
+    \fill[plum] (-0.48,0.08) circle (0.06) (-0.08,0.08) circle (0.06);
+    \draw[plum, line width=1pt, line cap=round] (-0.45,-0.35) -- (-0.05,-0.35);
+    \draw[plum, line width=1.6pt, line cap=round] (-0.95,0.0) -- (-1.15,0.0);
+    \node[tag=lavenderdark] at (0,1.55) {Լեպտին};
+    \node[sub] at (0,-1.6) {արտադրում են \textbf{ճարպային բջիջները}};
+    \node[say, callout absolute pointer={(-0.3,0.85)}, font=\handfont\Large] at (-1.6,2.15) {ԲԱՎԱԿԱ՛Ն Է};
+  \end{scope}
+
+  % --- the referee ------------------------------------------------------
+  \pic[scale=0.7, visible on=<2->] at (0,1.25) {noggin=smug};
+  \node[say, visible on=<2->, callout absolute pointer={(0.4,0.5)}, text width=4.2cm, font=\handfont\normalsize]
+    at (2.7,-1.8) {Ամեն օր նույն ազդանշանները... Վաղուց չեմ լսում։ Ի դեպ, էն տո՞րթ է};
+\end{tikzpicture}
