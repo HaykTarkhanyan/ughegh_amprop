@@ -1,0 +1,8 @@
+% Fovea demo: fixate the dot and try to read the words without moving the eyes.
+\begin{tikzpicture}
+  \path[use as bounding box] (-7.0,-0.75) rectangle (7.0,0.75);
+  \fill[amRed] (0,0) circle (0.12);
+  \draw[amRed, line width=0.8pt] (0,0) circle (0.25);
+  \foreach \x/\w in {-6.1/վարդ, -3.9/կոնֆետ, -1.7/ականջ, 1.7/գրիչ, 3.9/աղավնի, 6.1/հացիկ}{
+    \node[font=\mediumfont\large, text=plum] at (\x,0) {\w};}
+\end{tikzpicture}

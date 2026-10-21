@@ -1,0 +1,26 @@
+% Maslow's hierarchy of needs as the usual stepped pyramid (book: "Believe in yourself ...").
+% Maslow himself never drew it as a pyramid (see the scienceupdate two frames later). One level per click.
+\begin{tikzpicture}[
+    lvl/.style={font=\blackfont\footnotesize, text=plum, align=center},
+    ex/.style={anchor=west, font=\footnotesize, text=plum, align=left},
+  ]
+  \def\lvlh{0.84}
+  \foreach \i/\c/\name/\e/\examples in {
+      0/mint/{Ֆիզիոլոգիական}/burger/{սնունդ, ջուր, օդ},
+      1/butter/{Անվտանգություն}/house/{կացարան, անվտանգություն, փող},
+      2/peach/{Պատկանելություն}/hug/{հավանություն, աջակցություն, սեր},
+      3/lavender/{Հարգանք}/medal/{ուրիշների ու սեփական հարգանքը},
+      4/brainpink/{Ինքնաիրացում}/palette/{դառնալ այն, ինչ կարող ես}}{
+    \pgfmathsetmacro{\ya}{\i*\lvlh}
+    \pgfmathsetmacro{\yb}{(\i+1)*\lvlh}
+    \pgfmathsetmacro{\wa}{4.4-\ya*0.68}
+    \pgfmathsetmacro{\wb}{4.4-\yb*0.68}
+    \pgfmathsetmacro{\ym}{(\ya+\yb)/2}
+    \pgfmathsetmacro{\wm}{(\wa+\wb)/2}
+    \pgfmathtruncatemacro{\lvlstep}{\i+1}
+    \begin{scope}[visible on=<\lvlstep->]
+      \filldraw[fill=\c, draw=plum, line width=0.9pt] (-\wa,\ya) -- (\wa,\ya) -- (\wb,\yb) -- (-\wb,\yb) -- cycle;
+      \node[lvl] at (0,\ym) {\emoji[1.1em]{\e}\ \name};
+      \node[ex] at (\wm+0.25,\ym) {\examples};
+    \end{scope}}
+\end{tikzpicture}

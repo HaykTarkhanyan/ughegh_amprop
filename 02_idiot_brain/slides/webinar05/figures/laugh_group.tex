@@ -1,0 +1,22 @@
+% Provine (the book's source): you are about 30 times as likely to laugh with others as alone.
+% Alone = 1 as the baseline. xtick listed explicitly (see _learnings pgfplots note).
+\begin{tikzpicture}
+  \begin{axis}[
+      width=5.6cm, height=5.0cm,
+      ybar, bar width=1.1cm, bar shift=0pt,
+      ymin=0, ymax=36,
+      symbolic x coords={alone, group},
+      xtick={alone, group},
+      xticklabels={{Մենակ}, {Ուրիշների հետ}},
+      xticklabel style={align=center, font=\small, text width=2.2cm},
+      ytick=\empty, axis line style={plum},
+      axis x line*=bottom, axis y line=none,
+      nodes near coords={\pgfmathprintnumber{\pgfplotspointmeta}$\times$},
+      nodes near coords style={font=\blackfont\normalsize, text=plum},
+      tick label style={text=plum},
+      enlarge x limits=0.45,
+    ]
+    \addplot[fill=amBlue, draw=none] coordinates {(alone,1)};
+    \addplot[fill=amOrange, draw=none] coordinates {(group,30)};
+  \end{axis}
+\end{tikzpicture}

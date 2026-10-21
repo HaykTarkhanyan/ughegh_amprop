@@ -1,0 +1,18 @@
+% The reward pathway on the medial brain drawing (front = left; images/brain_medial.png, P. J. Lynch, CC BY 2.5).
+% Positions are approximate fractions of the image (0,0 = bottom left). Slide 2 adds the link to the frontal cortex.
+\begin{tikzpicture}
+  \node[anchor=south west, inner sep=0] (b) at (0,0) {\includegraphics[width=5cm]{brain_medial.png}};
+  \begin{scope}[x={(b.south east)}, y={(b.north west)}]
+    \node[braindot=amRed] (vta) at (0.49,0.37) {};
+    \node[braindot=amRed] (nac) at (0.35,0.47) {};
+    \draw[arr=amRed, line width=1.6pt, shorten >=1mm, shorten <=1mm] (vta) to[bend left=20] (nac);
+    \node[brainlbl=brainpink!40!cardwhite, anchor=north west] (vl) at (0.47,-0.03) {VTA, դոֆամինի «աղբյուր»};
+    \draw[plum, line width=0.6pt] (vta) -- (vl.north west);
+    \node[brainlbl=brainpink!40!cardwhite, anchor=north east] (nl) at (0.38,-0.03) {nucleus accumbens};
+    \draw[plum, line width=0.6pt] (nac) -- (nl.north east);
+    \node[braindot=amBlue, visible on=<2->] (pfc) at (0.12,0.58) {};
+    \draw[arr=amBlue, line width=1.4pt, dashed, shorten >=1mm, shorten <=1mm, visible on=<2->] (nac) to[bend left=25] (pfc);
+    \node[brainlbl=lavender!50!cardwhite, anchor=south west, visible on=<2->] (pl) at (0.0,1.02) {նախաճակատային կեղև («արգելակ»)};
+    \draw[plum, line width=0.6pt, visible on=<2->] (pfc) -- (pl.south west -| pfc);
+  \end{scope}
+\end{tikzpicture}

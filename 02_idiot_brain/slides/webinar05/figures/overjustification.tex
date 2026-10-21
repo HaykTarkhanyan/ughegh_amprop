@@ -1,0 +1,24 @@
+% Overjustification effect, Lepper, Greene & Nisbett, JPSP 1973 (the book's source): 51 preschoolers drew with
+% felt-tip markers; 1-2 weeks later, % of free-play time spent drawing: expected award 8.59, unexpected award 18.09,
+% no award 16.73. The book gives no numbers. xtick listed explicitly (see _learnings pgfplots note).
+\begin{tikzpicture}
+  \begin{axis}[
+      width=7.4cm, height=5.0cm,
+      ybar, bar width=1.0cm, bar shift=0pt,
+      ymin=0, ymax=22,
+      symbolic x coords={exp, unexp, none},
+      xtick={exp, unexp, none},
+      xticklabels={{Պարգև\\ խոստացել էին}, {Անսպասելի\\ պարգև}, {Առանց\\ պարգևի}},
+      xticklabel style={align=center, font=\footnotesize, text width=2.2cm},
+      ytick={0,5,10,15,20}, yticklabel={\pgfmathprintnumber{\tick}\%},
+      tick label style={font=\small, text=plum}, axis line style={plum},
+      axis x line*=bottom, axis y line*=left, ymajorgrids, grid style={plum!10},
+      nodes near coords={\pgfmathprintnumber[fixed, precision=1]{\pgfplotspointmeta}\%},
+      nodes near coords style={font=\blackfont\small, text=plum},
+      enlarge x limits=0.25,
+    ]
+    \addplot[fill=amRed, draw=none] coordinates {(exp,8.59)};
+    \addplot[fill=amBlue, draw=none] coordinates {(unexp,18.09)};
+    \addplot[fill=amBlue, draw=none] coordinates {(none,16.73)};
+  \end{axis}
+\end{tikzpicture}

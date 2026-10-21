@@ -1,0 +1,21 @@
+% Receptive fields along the retina: in the periphery many photoreceptors share one ganglion cell
+% (a big field, like a golf umbrella), in the centre one or two do (small, sharp fields). Reveals 1-2.
+\begin{tikzpicture}[x=1cm, y=1cm]
+  \path[use as bounding box] (-6.5,-1.75) rectangle (6.5,0.95);
+  % photoreceptors
+  \foreach \i in {-24,...,24}{\fill[plum] (\i*0.25,0) circle (0.06);}
+  % fields: start/end x of each group
+  \foreach \a/\b/\c in {-6.0/-4.5/lavender, -4.25/-2.75/lavender, -2.5/-1.5/lavender!60!brainpink,
+      -1.25/-0.75/brainpink, -0.5/-0.25/brainpink, 0/0/pinkdark!60, 0.25/0.5/brainpink, 0.75/1.25/brainpink,
+      1.5/2.5/lavender!60!brainpink, 2.75/4.25/lavender, 4.5/6.0/lavender}{
+    \draw[\c, line width=1.2pt, rounded corners=1.5mm] (\a-0.12,-0.17) rectangle (\b+0.12,0.17);
+    \draw[plum!60, line width=0.6pt] ({(\a+\b)/2},-0.17) -- ({(\a+\b)/2},-0.75);
+    \filldraw[fill=\c, draw=plum, line width=0.6pt] ({(\a+\b)/2},-0.85) circle (0.1);}
+  \node[font=\scriptsize, text=plum, anchor=west] at (-6.5,-1.2) {ամեն շրջանակը մեկ «աշտարակ» է (ganglion cell)};
+  % labels
+  \node[font=\blackfont\scriptsize, text=plum] at (-4.6,0.6) {ծայրամաս՝ մեծ դաշտեր};
+  \node[font=\blackfont\scriptsize, text=pinkdark] at (0,0.6) {կենտրոն՝ փոքր դաշտեր};
+  \node[font=\blackfont\scriptsize, text=plum] at (4.6,0.6) {ծայրամաս՝ մեծ դաշտեր};
+  \node[visible on=<2->, font=\scriptsize, text=plum, align=center] at (4.2,-1.4)
+    {\emoji{star}\ մեծ դաշտ = անձրևանոց. գիտես, որ կաթիլ ընկավ,\\ բայց չգիտես՝ ճիշտ որտեղ};
+\end{tikzpicture}

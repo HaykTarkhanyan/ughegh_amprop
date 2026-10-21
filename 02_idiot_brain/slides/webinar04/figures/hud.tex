@@ -1,0 +1,49 @@
+% A cluttered heads-up display over a runway: the plane standing on the runway is easy to miss.
+% Slide 2 circles it (use inside a frame).
+\begin{tikzpicture}[hud/.style={text=mintdark, font=\blackfont\scriptsize, inner sep=1pt}]
+  \path[use as bounding box] (-4.0,-2.1) rectangle (4.0,2.1);
+  \begin{scope}
+    \clip[rounded corners=4mm] (-3.9,-2.0) rectangle (3.9,2.0);
+    \shade[top color=lavender!70!cardwhite, bottom color=cardwhite] (-3.9,0.1) rectangle (3.9,2.0);
+    \fill[mint!45!cardwhite] (-3.9,-2.0) rectangle (3.9,0.1);
+    % runway in perspective
+    \fill[plum!35!cardwhite] (-1.7,-2.0) -- (1.7,-2.0) -- (0.22,0.1) -- (-0.22,0.1) -- cycle;
+    \foreach \a/\b in {-1.9/-1.5, -1.1/-0.8, -0.5/-0.3, -0.12/0.0}{\fill[cardwhite] (-0.03,\a) rectangle (0.03,\b);}
+    % a small plane standing on the runway
+    \begin{scope}[shift={(0.18,-0.55)}, scale=0.32]
+      \fill[plum] (-0.9,0) -- (0.9,0) -- (0.9,0.18) -- (-0.9,0.18) -- cycle;
+      \fill[plum] (-0.15,0.05) -- (0.15,0.05) -- (0.6,-0.4) -- (0.35,-0.4) -- cycle;
+      \fill[plum] (-0.15,0.05) -- (0.15,0.05) -- (-0.6,-0.4) -- (-0.35,-0.4) -- cycle;
+      \fill[plum] (0.7,0.18) -- (0.9,0.18) -- (0.9,0.6) -- cycle;
+    \end{scope}
+    % HUD symbology
+    \foreach \y/\n in {1.15/10, 0.65/5, -0.55/-5, -1.05/-10}{
+      \draw[mintdark, line width=1pt] (-1.5,\y) -- (-0.55,\y) (0.55,\y) -- (1.5,\y);
+      \node[hud, anchor=east] at (-1.55,\y) {\n};
+      \node[hud, anchor=west] at (1.55,\y) {\n};}
+    \draw[mintdark, line width=1.2pt] (-1.9,0.1) -- (-0.4,0.1) (0.4,0.1) -- (1.9,0.1);
+    \draw[mintdark, line width=1.2pt] (0,-0.35) circle (0.17) (-0.45,-0.35) -- (-0.17,-0.35) (0.17,-0.35) -- (0.45,-0.35) (0,-0.18) -- (0,-0.02);
+    \draw[mintdark, line width=1pt] (-3.55,-0.25) rectangle (-2.65,0.25);
+    \node[hud, font=\blackfont\small] at (-3.1,0) {142};
+    \draw[mintdark, line width=1pt] (2.55,-0.25) rectangle (3.6,0.25);
+    \node[hud, font=\blackfont\small] at (3.07,0) {1200};
+    \foreach \x/\h in {-1.6/33, -0.8/34, 0/35, 0.8/36, 1.6/01}{
+      \draw[mintdark, line width=0.8pt] (\x,1.42) -- (\x,1.55);
+      \node[hud, anchor=south] at (\x,1.55) {\h};}
+    \node[hud, anchor=west] at (-3.75,1.6) {G 1.0};
+    \node[hud, anchor=west] at (-3.75,1.3) {M 0.21};
+    \node[hud, anchor=west] at (-3.75,-0.85) {ILS 110.3};
+    \node[hud, anchor=west] at (-3.75,-1.15) {GS 3.0};
+    \node[hud, anchor=west] at (-3.75,-1.45) {FLAPS 30};
+    \node[hud, anchor=east] at (3.75,1.6) {WIND 270/12};
+    \node[hud, anchor=east] at (3.75,-0.85) {BARO 1013};
+    \node[hud, anchor=east] at (3.75,-1.15) {RA 210};
+    \node[hud, anchor=east] at (3.75,-1.45) {V/S -700};
+    \node[hud] at (0,-1.75) {GEAR DOWN};
+  \end{scope}
+  \draw[plum, line width=1.2pt, rounded corners=4mm] (-3.9,-2.0) rectangle (3.9,2.0);
+  \begin{scope}[visible on=<2->]
+    \draw[amRed, line width=2pt] (0.18,-0.6) circle (0.42);
+    \node[wpill=amRed] at (1.65,-1.0) {ինքնաթիռ թռիչքուղու վրա};
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+% The Big Five as five scales between two extremes (book: "Nothing personal"). Rows appear on clicks 1-5.
+% Each row: letter, Armenian + English name, a bar with the low extreme under its left end and the high one under its right end.
+\begin{tikzpicture}[
+    letter/.style={circle, draw=plum, line width=0.8pt, minimum size=0.72cm, font=\blackfont\large, text=plum, inner sep=0},
+    tname/.style={anchor=west, font=\blackfont\small, text=plum, align=left},
+    lowlbl/.style={anchor=north west, font=\footnotesize, text=plum, inner sep=1pt},
+    highlbl/.style={anchor=north east, font=\footnotesize, text=plum, inner sep=1pt},
+  ]
+  \foreach \i/\L/\c/\name/\eng/\lo/\hi in {
+      1/O/mint/Բացություն/Openness/{սովորական, ծանոթ}/{նոր փորձառություններ},
+      2/C/butter/Բարեխղճություն/Conscientiousness/{ինքնաբուխ, անկազմակերպ}/{պլան, կարգ},
+      3/E/peach/Էքստրավերսիա/Extraversion/{ինտրովերտ, հանգիստ}/{էքստրավերտ, շփվող},
+      4/A/lavender/Բարեհամբույրություն/Agreeableness/{նախ՝ իր ուզածը}/{ներդաշնակություն},
+      5/N/brainpink/Նևրոտիզմ/Neuroticism/{հանգիստ, կայուն}/{անհանգիստ, լարված}}{
+    \begin{scope}[yshift={-(\i-3)*1.0cm}, visible on=<\i->]
+      \node[letter, fill=\c] at (-6.9,0) {\L};
+      \node[tname] at (-6.4,0) {\name\\ {\mediumfont\scriptsize \eng}};
+      \shade[left color=\c!20!cardwhite, right color=\c, rounded corners=1.5mm] (-2.3,0.06) rectangle (5.4,0.34);
+      \draw[plum, line width=0.7pt, rounded corners=1.5mm] (-2.3,0.06) rectangle (5.4,0.34);
+      \node[lowlbl] at (-2.3,0.0) {\lo};
+      \node[highlbl] at (5.4,0.0) {\hi};
+    \end{scope}}
+\end{tikzpicture}

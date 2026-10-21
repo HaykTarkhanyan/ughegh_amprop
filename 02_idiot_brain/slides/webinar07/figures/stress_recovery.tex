@@ -1,0 +1,21 @@
+% Schematic, not data: after one stressful event the body is back to normal in ~20-60 min (book: Ulrich et al., 1991);
+% with chronic stressors new spikes arrive before it recovers, so "stressed" becomes the new normal. Slide 2 adds the red curve.
+\begin{tikzpicture}
+  \begin{axis}[
+      width=7.4cm, height=4.6cm,
+      xmin=0, xmax=4, ymin=0, ymax=2.2,
+      xtick={0,1,2,3,4}, ytick=\empty,
+      xlabel={ժամեր}, ylabel={սթրեսի հորմոններ},
+      label style={font=\scriptsize, text=plum}, tick label style={font=\scriptsize, text=plum},
+      axis line style={plum}, axis x line*=bottom, axis y line*=left, clip=false,
+    ]
+    \draw[plum!40, dashed, line width=0.8pt] (axis cs:0,0.25) -- (axis cs:4,0.25);
+    \node[anchor=north, font=\scriptsize, text=plum!70!cream, inner sep=1pt] at (axis cs:1.0,0.22) {նորմա};
+    \addplot[amBlue, line width=1.6pt, domain=0:4, samples=120] {0.25 + (x>0.3)*0.9*exp(-(x-0.3)/0.22)};
+    \node[anchor=south west, align=left, font=\blackfont\scriptsize, text=amBlue, inner sep=1pt] at (axis cs:0.4,1.2) {մեկ դեպք.\\ 20-60 րոպեում անցնում է};
+    \addplot[amRed, line width=1.6pt, domain=0:4, samples=200, visible on=<2->]
+      {0.25 + (x>1.5)*0.55*exp(-(x-1.5)/0.7) + (x>2.0)*0.55*exp(-(x-2.0)/0.7) + (x>2.5)*0.55*exp(-(x-2.5)/0.7)
+             + (x>3.0)*0.55*exp(-(x-3.0)/0.7) + (x>3.5)*0.55*exp(-(x-3.5)/0.7)};
+    \node[anchor=north east, align=right, font=\blackfont\scriptsize, text=amRed, inner sep=1pt, visible on=<2->] at (axis cs:4,2.2) {քրոնիկ սթրես.\\ չի հասցնում իջնել};
+  \end{axis}
+\end{tikzpicture}

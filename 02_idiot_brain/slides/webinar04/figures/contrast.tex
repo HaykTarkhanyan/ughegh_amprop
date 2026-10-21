@@ -1,0 +1,9 @@
+% Simultaneous contrast: one uniform grey bar on a dark-to-light background looks lighter on the left
+% and darker on the right. Slide 2 swaps the background for a plain one (use inside a frame).
+\begin{tikzpicture}
+  \path[use as bounding box] (-5.0,-1.5) rectangle (5.0,1.5);
+  \shade[left color=black!92, right color=white] (-5.0,-1.4) rectangle (5.0,1.4);
+  \fill[cardwhite, visible on=<2->] (-5.0,-1.4) rectangle (5.0,1.4);
+  \draw[plum, line width=0.8pt] (-5.0,-1.4) rectangle (5.0,1.4);
+  \fill[black!50] (-4.3,-0.28) rectangle (4.3,0.28);
+\end{tikzpicture}

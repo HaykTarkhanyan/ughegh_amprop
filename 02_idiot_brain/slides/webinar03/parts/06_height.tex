@@ -1,0 +1,339 @@
+% ===== Section 5: "You're pretty smart for a small person" (~16 min) =====
+\topicopener{giraffe}{Հասակ ու գեներ}{Փոքր մարդու համար բավական խելացի ես}{Հասակ, խելք ու ժառանգականություն}{happy}
+
+% Myth or fact: tall people are smarter
+\begin{frame}{Առասպել, թե՞ փաստ \#2}
+  \mythorfact{Բարձրահասակներն ավելի խելացի են}{ՓԱՍՏ}{mintdark}{%
+    \begin{card}[colback=mint!35!cardwhite]
+      Բըրնեթ. «Դա ճիշտ է»։ Բայց \textbf{բացարձակ չէ}. բասկետբոլիստներն ավելի խելացի չեն ժոկեյներից, Հսկա Անդրեն խելացի չէր Այնշտայնից, իսկ Հագրիդը չէր կարող խորամանկել Մարի Կյուրիին։
+    \end{card}}
+\end{frame}
+
+% How much smarter: correlation 0.2, 3-4 IQ points
+\begin{frame}{Որքա՞ն ավելի խելացի}
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      \centering
+      \input{figures/height_scatter.tex}\par
+      {\scriptsize\color{plum!70!cream} մոդելավորված տվյալներ, կոռելյացիան՝ 0.2\par}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \begin{itemize}
+        \item Հասակի ու IQ-ի \textbf{կոռելյացիան} (correlation) մոտ \textbf{0.2} է
+        \item<2-> Վերցրու պատահական մեկ բարձրահասակի ու մեկ ցածրահասակի. ով կլինի խելացի, \textbf{անհայտ է}
+        \item<3-> Իսկ 10 000-ը 10 000-ի դեմ՝ բարձրահասակների միջին IQ-ն մի փոքր բարձր է, \textbf{3-4 միավորով}
+        \item<4-> Արդյունքը կրկնվում է շատ հետազոտություններում
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \source{Taki et al., NeuroImage, 2012}
+\end{frame}
+
+% What a correlation of 0.2 means (correction to the book)
+\begin{frame}{Ի՞նչ է նշանակում 0.2}
+  Կոռելյացիան ցույց է տալիս, թե որքան են երկու բան \textbf{միասին} փոխվում. 0՝ ոչ մի կապ, 1՝ կատարյալ կապ։\par\medskip
+  \begin{columns}[c]
+    \begin{column}{0.52\textwidth}
+      \onslide<2->{%
+      \begin{scienceupdate}
+        Գրքում՝ «0.2 նշանակում է, որ կապը կա \textbf{5 մարդուց 1-ի} մոտ»։ Այդպես չէ. կոռելյացիան ամբողջ խմբի մասին է, ոչ առանձին մարդկանց։\par\smallskip
+        Կոպիտ ասած՝ հասակը «բացատրում» է IQ-ի տարբերությունների ընդամենը \textbf{մոտ 4\%-ը} (0.2 $\times$ 0.2 = 0.04)։
+      \end{scienceupdate}}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \centering
+      \onslide<3->{%
+      \begin{tikzpicture}
+        \fill[amOrange] (0,0) rectangle (0.24,0.9);
+        \fill[amBlue!25!cream] (0.24,0) rectangle (6,0.9);
+        \draw[plum, line width=0.9pt] (0,0) rectangle (6,0.9);
+        \node[anchor=south west, font=\blackfont\small, text=amOrange!80!black] at (0,0.95) {4\%՝ հասակ};
+        \node[font=\blackfont\small, text=plum] at (3.2,0.45) {96\%՝ մնացած ամեն ինչ};
+      \end{tikzpicture}\par\medskip
+      {\small IQ-ի տարբերությունները մարդկանց միջև\par}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Meme: Roll Safe, correlation is not causation
+\begin{frame}{Կատարյալ պլան \#2}
+  \centering
+  \begin{meme}[10.6cm]{roll_safe.jpg}
+    \memecap[text width=8cm, font=\blackfont\normalsize]{0.5}{0.88}{Բարձրահասակներն ավելի խելացի են}
+    \memecap[text width=8cm, font=\blackfont\normalsize]{0.5}{0.1}{Ուրեմն քննությանը կգնամ բարձր կրունկներով}
+  \end{meme}
+\end{frame}
+
+% Heritability: definition with the book's examples
+\begin{frame}{Ժառանգելիություն (heritability)}
+  \begin{card}[colback=butter!45!cream]
+    Ամենահավանական բացատրությունը \textbf{գենետիկ} է։ Ժառանգելիությունը ցույց է տալիս, թե խմբում հատկանիշի \textbf{տարբերությունների} որ մասն է գեներից. 1.0՝ բոլորը, 0.0՝ ոչ մեկը։
+  \end{card}
+  \vspace{1mm}
+  \centering
+  \input{figures/heritability_scale.tex}
+\end{frame}
+
+% IQ heritability, children vs adults (+ science update)
+\begin{frame}{Ինչու են երեխաների ու մեծերի թվերը տարբեր}
+  \begin{columns}[T]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \item Թոմաս Բուշարի ակնարկով՝ մեծերի մոտ \textbf{0.85}, երեխաների մոտ \textbf{0.45}
+        \item<2-> Գեներն ավելի ուժե՞ղ են մեծերի մոտ։ Ոչ. խոսքը խմբի \textbf{տարբերությունների} մասին է
+        \item<3-> Երեխայի ուղեղը դեռ զարգանում է, ու միջավայրը շատ բան է փոխում։ Մեծերը մոտավորապես նույն կրթությունն են ստացել, ու տարբերությունները մնում են գեներին
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \onslide<4->{%
+      \begin{scienceupdate}
+        Նոր տվյալներ. 9 տարեկանում մոտ \textbf{0.4}, 17-ում՝ \textbf{0.66}, ավելի ուշ՝ մինչև \textbf{0.8}։ Պատկերը նույնն է, իսկ 0.85-ը վերին սահմանին է։
+      \end{scienceupdate}}
+    \end{column}
+  \end{columns}
+  \source{Bouchard, 1997; Haworth et al., Mol. Psychiatry, 2010; Plomin \& Deary, Mol. Psychiatry, 2015}
+\end{frame}
+
+% No gene for intelligence (+ GWAS update)
+\begin{frame}{Խելքի գեն չկա}
+  \begin{columns}[T]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \item Ոմանք հույս ունեն, որ կա «խելքի գեն», որը միացնես, ու կխելոքանաս
+        \item<2-> Բայց խելքը շատ պրոցեսների գումար է, ու դրանք կառավարում են \textbf{շատ գեներ}
+      \end{itemize}
+      \vspace{1mm}
+      \onslide<3->{%
+      \begin{bookquote}
+        Հարցնել, թե որ գենն է պատասխանատու խելքի համար, նույնն է, թե հարցնես՝ դաշնամուրի որ ստեղնն է պատասխանատու սիմֆոնիայի համար։ \emoji{musical}
+      \end{bookquote}}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \centering
+      \bigemoji[1.1cm]{dna}\par\medskip
+      \onslide<4->{%
+      \begin{scienceupdate}
+        2018. Մոտ 270 000 մարդու գենոմի վերլուծությունը գտավ \textbf{205} գենոմային գոտի, որոնք կապված են խելքի հետ։ Ամեն մեկի ազդեցությունը \textbf{շատ փոքր} է։
+      \end{scienceupdate}}
+    \end{column}
+  \end{columns}
+  \source{Savage et al., Nature Genetics, 2018}
+\end{frame}
+
+% Four explanations for the height-IQ link
+\begin{frame}{Ինչու՞ են բարձրահասակները խելացի. 4 վարկած}
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \begin{card}[colback=lavender!35!cardwhite]
+        \emoji[1.3em]{dna}\ {\blackfont 1. Ընդհանուր գեներ}\par\smallskip
+        Մեկ գենը կարող է ազդել և՛ հասակի, և՛ խելքի վրա։ Սա կոչվում է \textbf{պլեյոտրոպիա} (pleiotropy)
+      \end{card}
+      \onslide<3->{%
+      \begin{card}[colback=mint!35!cardwhite]
+        \emoji[1.3em]{apple}\ {\blackfont 3. Սնունդ ու առողջություն}\par\smallskip
+        Լավ սնունդն ու առողջ մանկությունը մեծացնում են և՛ հասակը, և՛ ուղեղը
+      \end{card}}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \onslide<2->{%
+      \begin{card}[colback=brainpink!25!cardwhite]
+        \emoji[1.3em]{heart}\ {\blackfont 2. Սեռական ընտրություն}\par\smallskip
+        Բարձրահասակ ու խելացի տղամարդիկ իբր ավելի գրավիչ են ու ավելի շատ սերունդ են թողել
+      \end{card}}
+      \onslide<4->{%
+      \begin{card}[colback=butter!45!cream]
+        \emoji[1.3em]{brain}\ {\blackfont 4. Ուղեղի չափ}\par\smallskip
+        Բարձրահասակների ուղեղն ավելի մեծ է, իսկ ուղեղի չափն ու խելքը թույլ կապ ունեն
+      \end{card}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Sexual selection and its problems
+\begin{frame}{Սեռական ընտրության վարկածի խնդիրները}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \begin{itemize}
+        \item Վարկածը շատ \textbf{տղամարդակենտրոն} է. իբր մի երկու հատկանիշ ունեցիր, ու կանայք ինքնաբերաբար կգան
+        \item<2-> Բարձրահասակ տղամարդիկ ունենում են նաև բարձրահասակ \textbf{աղջիկներ}, իսկ շատ տղամարդիկ վախենում են բարձրահասակ ու խելացի կանանցից
+        \item<3-> Վստահությունը գրավիչ է, իսկ խելացիները հաճախ ավելի քիչ վստահ են։ Ու «nerd», «geek» բառերը երկար ժամանակ վիրավորանք էին
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.38\textwidth}
+      \centering
+      \bigemoji[1.2cm]{giraffe}\ \bigemoji[1.2cm]{nerd}\par\medskip
+      \begin{bookquote}
+        ...ինչպես ցեցերը դեպի նիհարավուն, սրամիտ կրակը։
+      \end{bookquote}
+      {\scriptsize Բըրնեթ. «Այդպես են ասում իմ բարձրահասակ ու խելացի ընկերուհիները։ Իսկ իմ բոլոր ընկերուհիները խելացի են»։\par}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Nutrition, health and brain size
+\begin{frame}{Սնունդ, առողջություն, ուղեղի չափ}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{card}[colback=mint!35!cardwhite]
+        \emoji[1.3em]{apple}\ Լավ սնունդն ու առողջությունը կարող են մեծացնել և՛ հասակը, և՛ խելքը։ Բայց շատերը բարեկեցիկ կյանքով էլ մնում են ցածրահասակ։ Կամ ապուշ։ Կամ երկուսը։
+      \end{card}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \onslide<2->{%
+      \begin{card}[colback=butter!45!cream]
+        \emoji[1.3em]{brain}\ Ավելի խելացիների մոտ նախաճակատային կեղևն ու հիպոկամպը ավելի մեծ են։ Մեծ ուղեղը \textbf{հնարավորություն} է, ոչ թե երաշխիք։
+      \end{card}}
+    \end{column}
+  \end{columns}
+  \onslide<3->{%
+  \begin{bookquote}
+    Թանկ սպորտային կոշիկը քեզ ավելի արագ չի դարձնում, բայց կարող է դրդել, որ դառնաս։ Նույնը կարելի է ասել գեների մասին։
+  \end{bookquote}}
+\end{frame}
+
+% Intelligence and culture: fish and water
+\begin{frame}{Ձուկն ու ջուրը}
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      Խելքի վրա ազդում են...\par\medskip
+      \chip{dna}{գեներ}\ \chip{family}{դաստիարակություն}\par\smallskip
+      \chip{graduation}{կրթության որակ}\ \chip{earth}{մշակույթ}\par\smallskip
+      \chip{speech}{կարծրատիպեր}\ \chip{stethoscope}{առողջություն}\par\smallskip
+      \chip{palette}{հետաքրքրություններ}\ \chip{hospital}{խանգարումներ}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \centering
+      \bigemoji[1.3cm]{fish}\ \bigemoji[1.3cm]{wave}\par\medskip
+      \onslide<2->{%
+      \begin{bookquote}
+        Մարդու խելքը մշակույթից չես առանձնացնի, ինչպես ձկան զարգացումը՝ ջրից։ Իսկ եթե առանձնացնես, ձկան զարգացումը շատ «կարճ» կլինի։
+      \end{bookquote}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% The Kpelle and "the way a fool would do it"
+\begin{frame}{Կպելլեները և «հիմարի պես»}
+  \begin{columns}[c]
+    \begin{column}{0.58\textwidth}
+      \begin{enumerate}
+        \item<1-> Մայքլ Քոուլի խումբը գնաց Լիբերիա՝ \textbf{կպելլե} ժողովրդի մոտ, որ արևմտյան կրթության հետ գրեթե շփում չուներ
+        \item<2-> Խնդիր. առարկաները խմբավորել։ Կպելլեները «ձախողում» էին, նույնիսկ հուշումներով
+        \item<3-> Հետազոտողները սկսեցին մտածել, թե նրանք պակաս խելացի են
+        \item<4-> Հուսահատված հետազոտողը խնդրեց անել այնպես, \textbf{ինչպես հիմարը կաներ}։ Ու նրանք անմիջապես տվեցին «ճիշտ» պատասխանները
+      \end{enumerate}
+    \end{column}
+    \begin{column}{0.36\textwidth}
+      \centering
+      \bigemoji[1.3cm]{earth}\par\medskip
+      \onslide<4->{\mascot[2.2cm]{smug}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Two ways to sort
+\begin{frame}{Ո՞վ է իրականում «հիմարը»}
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \begin{card}[colback=lavender!35!cardwhite]
+        {\blackfont Հետազոտողների «խելացի» ձևը}\par
+        ըստ \textbf{դասակարգի}\par\medskip
+        \emoji{axe}\emoji{knife}\ գործիքներ\par\smallskip
+        \emoji{sheep}\emoji{fish}\ կենդանիներ\par\smallskip
+        \emoji{wood}\ փայտից իրեր
+      \end{card}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \onslide<2->{%
+      \begin{card}[colback=mint!35!cardwhite]
+        {\blackfont Կպելլեների ձևը}\par
+        ըստ \textbf{գործառույթի}\par\medskip
+        \emoji{potato}\emoji{fish}\ ինչ կարող եմ ուտել\par\smallskip
+        \emoji{jeans}\ ինչ կարող եմ հագնել\par\smallskip
+        \emoji{axe}\ ինչով կարող եմ փորել, կտրել
+      \end{card}}
+    \end{column}
+  \end{columns}
+  \vspace{2mm}
+  \onslide<3->{%
+  \begin{card}[colback=butter!45!cream]
+    Հողից ապրողի համար վերացական դասակարգերը անիմաստ են. դա \textbf{հիմարի} գործ է։ Խելքը, որ չափում ենք, կախված է մշակույթից ու մեր նախապաշարմունքներից։
+  \end{card}}
+\end{frame}
+
+% The Pygmalion effect (+ science update)
+\begin{frame}{Պիգմալիոնի էֆեկտը}
+  \begin{columns}[T]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \item 1965, Ռոզենթալ և Ջեյկոբսոն. ուսուցիչներին ասացին, որ որոշ աշակերտներ \textbf{շնորհալի} են։ Իրականում սովորական էին
+        \item<2-> Ու այդ աշակերտներն իսկապես ավելի լավ արդյունքներ ցույց տվեցին
+        \item<3-> Ուսանողները, որոնց ասում էին՝ խելքը \textbf{ֆիքսված} է, ավելի վատ էին գրում, իսկ «փոփոխական է» լսածները՝ ավելի լավ
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \onslide<4->{%
+      \begin{scienceupdate}
+        Էֆեկտներն իրական են, բայց \textbf{ավելի փոքր}, քան սկզբում էր թվում։ «Խելքը զարգանում է» մտածելակերպի ծրագրերը միջինում շատ փոքր ազդեցություն ունեն, մի փոքր ավելի մեծ՝ դժվարացող ուսանողների մոտ։
+      \end{scienceupdate}}
+    \end{column}
+  \end{columns}
+  \source{Jussim \& Harber, Pers. Soc. Psychol. Rev., 2005; Sisk et al., Psychol. Sci., 2018}
+\end{frame}
+
+% Burnett apologises
+\begin{frame}{Ներողություն, իմ մեղքն է}
+  \begin{columns}[c]
+    \begin{column}{0.56\textwidth}
+      Գուցե դրա համար էլ են բարձրահասակներն ավելի խելացի. եթե շուտ ես մեծանում, քեզ \textbf{ավելի մեծ} են համարում, հետդ ավելի լուրջ են խոսում, ու զարգացող ուղեղդ «հասնում է» այդ սպասումներին։\par\medskip
+      \onslide<2->{Ամեն դեպքում, \textbf{ինքդ քեզ հավատալը} կարևոր է։\par}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \centering
+      \onslide<3->{%
+      \mascot[1.5cm]{sad}\par\smallskip
+      \begin{bookquote}
+        Ամեն անգամ, երբ գրել եմ, թե խելքը «ֆիքսված» է, խանգարել եմ ձեր զարգացմանը։ Ներողություն, իմ մեղքն է։
+      \end{bookquote}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% The Flynn effect (+ science update)
+\begin{frame}{Ֆլինի էֆեկտը}
+  \begin{columns}[T]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \item IQ թեստերի արդյունքները աշխարհով մեկ \textbf{աճում են} ամեն սերնդի հետ՝ և՛ հեղուկ, և՛ բյուրեղացած
+        \item<2-> Ինչու՞։ Գուցե ավելի լավ կրթություն, բժշկություն, տեղեկության ու տեխնոլոգիաների հասանելիություն...
+        \item<3-> ...կամ քնած մուտանտային ունակություններ, որոնք մեզ հանճարների հասարակություն կդարձնեն։ Դրա ապացույց չկա, բայց լավ ֆիլմ կստացվեր \emoji{film}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \onslide<4->{%
+      \begin{scienceupdate}
+        1990-ականներից Նորվեգիայում, Դանիայում ու Ֆինլանդիայում աճը կանգնեց ու նույնիսկ \textbf{նվազեց}։ Նորվեգացի եղբայրների տվյալները ցույց տվեցին, որ պատճառը \textbf{միջավայրն} է, ոչ թե գեները։
+      \end{scienceupdate}}
+    \end{column}
+  \end{columns}
+  \source{Bratsberg \& Rogeberg, PNAS, 2018}
+\end{frame}
+
+% The chapter's conclusion
+\begin{frame}{Եվ ի վերջո...}
+  \begin{columns}[c]
+    \begin{column}{0.52\textwidth}
+      Խելքը դժվար է սահմանել ու չափել, բայց այն \textbf{կա}, ու կարելի է ուսումնասիրել։\par\medskip
+      \onslide<2->{Մեկ ընդհանուր ունակություն է՝ կազմված մի քանիսից։ Ու կարևորը, հավանաբար, ուղեղի մասերի \textbf{կապերն} են։\par\medskip}
+      \onslide<3->{Գեներն ու դաստիարակությունը շատ բան են որոշում... բայց եթե պատրաստ ես աշխատել, խելքը կարելի է բարձրացնել։ \textbf{Գուցե}։\par}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \centering
+      \onslide<4->{%
+      \mascot[1.4cm]{happy}\par\smallskip
+      \begin{bookquote}
+        Խելքն ուսումնասիրելը նման է առանց ձևանմուշի սվիտեր գործելուն՝ բրդի փոխարեն շաքարավատով։ Զարմանալի է, որ փորձում ենք։
+      \end{bookquote}}
+    \end{column}
+  \end{columns}
+\end{frame}

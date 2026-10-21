@@ -1,0 +1,10 @@
+% A Posner cueing trial: look at the cross; an arrow cue points left; the target appears on the right
+% (a wrong cue), so attention has to move. Slides: 1 = boxes, 2 = cue, 3 = target (use inside a frame).
+\begin{tikzpicture}[scale=0.8]
+  \path[use as bounding box] (-4.1,-1.3) rectangle (4.1,1.3);
+  \filldraw[fill=cardwhite, draw=plum, line width=1pt, rounded corners=1mm] (-3.9,-0.9) rectangle (-2.1,0.9);
+  \filldraw[fill=cardwhite, draw=plum, line width=1pt, rounded corners=1mm] (2.1,-0.9) rectangle (3.9,0.9);
+  \draw[plum, line width=1.5pt] (-0.25,0) -- (0.25,0) (0,-0.25) -- (0,0.25);
+  \draw[amBlue, line width=3pt, -{Stealth[length=4mm]}, visible on=<2->] (0.9,0.6) -- (-0.9,0.6);
+  \node[visible on=<3->] at (3.0,0) {\bigemoji[1.1cm]{star}};
+\end{tikzpicture}

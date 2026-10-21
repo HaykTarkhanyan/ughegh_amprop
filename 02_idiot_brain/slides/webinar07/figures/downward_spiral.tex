@@ -1,0 +1,12 @@
+% Burnett's "downward spiral": problems pile up one after another. Steps reveal on slides 1-5.
+\begin{tikzpicture}[st/.style={flow=5.6cm, align=left, inner sep=3.5pt, font=\small}]
+  \node[st, fill=butter!55!cardwhite] (a) at (0,2.0) {\emoji{boss}\ Կորցնում ես աշխատանքդ};
+  \node[st, fill=peach!50!cardwhite, visible on=<2->] (b) at (0.6,1.0) {\emoji{brokenheart}\ Զուգընկերդ հեռանում է};
+  \node[st, fill=peach!70!cardwhite, visible on=<3->] (c) at (1.2,0) {\emoji{candle}\ Հարազատդ մահանում է};
+  \node[st, fill=brainpink!45!cardwhite, visible on=<4->] (d) at (1.8,-1.0) {\emoji{warning}\ Թաղումից գալիս թալանում են};
+  \node[st, fill=brainpink!70!cardwhite, visible on=<5->] (e) at (2.4,-2.0) {\emoji{wine}\ Մեկուսացում, ալկոհոլ...};
+  \draw[arr, visible on=<2->] ([xshift=3mm]a.south west) |- (b.west);
+  \draw[arr, visible on=<3->] ([xshift=3mm]b.south west) |- (c.west);
+  \draw[arr, visible on=<4->] ([xshift=3mm]c.south west) |- (d.west);
+  \draw[arr, visible on=<5->] ([xshift=3mm]d.south west) |- (e.west);
+\end{tikzpicture}

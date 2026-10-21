@@ -1,0 +1,15 @@
+% Spearman's g: one general factor behind performance on very different tests.
+\begin{tikzpicture}[
+    gtest/.style={draw=plum, line width=0.8pt, fill=cardwhite, rounded corners=2mm, align=center,
+      font=\small, text=plum, inner sep=3pt, text width=3.0cm},
+    garrow/.style={-{Stealth[length=2.4mm]}, plum, line width=1.1pt},
+  ]
+  \node[circle, draw=plum, line width=1.2pt, fill=butter, minimum size=1.5cm, font=\blackfont\fontsize{26}{28}\selectfont, text=plum] (g) at (0,0) {g};
+  \node[gtest] (t1) at (-3.1,1.15) {\emoji{books}\ բառապաշար};
+  \node[gtest] (t2) at (0,1.85) {\emoji{abacus}\ թվաբանություն};
+  \node[gtest] (t3) at (3.1,1.15) {\emoji{puzzle}\ տրամաբանական խնդիրներ};
+  \node[gtest] (t4) at (-3.1,-1.15) {\emoji{thought}\ հիշողություն};
+  \node[gtest] (t5) at (0,-1.85) {\emoji{hourglass}\ արագություն};
+  \node[gtest] (t6) at (3.1,-1.15) {\emoji{chess}\ տարածական պատկերացում};
+  \foreach \t in {t1,t2,t3,t4,t5,t6}{\draw[garrow] (g) -- (\t);}
+\end{tikzpicture}

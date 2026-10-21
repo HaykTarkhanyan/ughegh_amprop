@@ -1,0 +1,12 @@
+% Two-point discrimination: the smallest gap at which two touches feel like two (normal clinical ranges,
+% Bickley & Szilagyi, Bates' Guide, 2007). Range bars on a 0-40 mm axis (use inside a frame).
+\begin{tikzpicture}[x=0.1cm, y=1cm]
+  \draw[plum, line width=0.8pt] (0,-0.35) -- (41,-0.35);
+  \foreach \m in {0,10,20,30,40}{
+    \draw[plum, line width=0.8pt] (\m,-0.35) -- (\m,-0.47);
+    \node[font=\scriptsize, text=plum, below] at (\m,-0.45) {\m};}
+  \foreach \y/\t/\a/\b in {2.4/շուրթեր/2/4, 1.65/մատի ծայր/2/8, 0.9/ափ/8/12, 0.15/{մեջք, սրունք}/30/40}{
+    \node[font=\small, text=plum, anchor=east] at (-0.8,\y) {\t};
+    \fill[amBlue, rounded corners=1mm] (\a,\y-0.2) rectangle (\b,\y+0.2);
+    \node[font=\blackfont\scriptsize, text=plum, anchor=west] at (\b+0.6,\y) {\a-\b};}
+\end{tikzpicture}

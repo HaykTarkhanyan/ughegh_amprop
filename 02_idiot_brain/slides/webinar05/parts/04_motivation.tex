@@ -1,0 +1,384 @@
+% ===== Section 3: "Believe in yourself ...", motivation (~18 min) =====
+\topicopener{rocket}{Մոտիվացիա}{Հավատա՛ քեզ, ու կկարողանաս ամեն ինչ... ողջամիտ սահմաններում}{Ինչպես են տարբեր մարդիկ գտնում ու օգտագործում մոտիվացիան}{smug}
+
+% Motivational posters
+\begin{frame}{Մոտիվացիոն պաստառներ}
+  \centering
+  \begin{tikzpicture}
+    \foreach \x/\e/\q/\ca/\cb in {-3.4/sunrise/{Որքան դժվար է ճանապարհը, այնքան լավ է հասնելը}/peach/lavender,
+                                  3.4/mountain/{Ջանքը միայն հիմքն է այն տան, որը դու ես}/mint/butter}{
+      \fill[plum, rounded corners=1mm] (\x-2.35,-1.45) rectangle (\x+2.55,1.75);
+      \shade[top color=\ca, bottom color=\cb, rounded corners=1mm] (\x-2.45,-1.35) rectangle (\x+2.45,1.85);
+      \draw[plum, line width=0.9pt, rounded corners=1mm] (\x-2.45,-1.35) rectangle (\x+2.45,1.85);
+      \node at (\x,1.05) {\bigemoji[1.0cm]{\e}};
+      \node[text width=4.2cm, align=center, font=\mediumfont\normalsize, text=plum] at (\x,-0.45) {«\q»};}
+  \end{tikzpicture}\par\medskip
+  \raggedright
+  \begin{itemize}
+    \item<2-> Մարզասրահում, սրճարանում կամ աշխատավայրի ճաշարանում դրանցից մի քանիսը միշտ կտեսնես
+    \item<3-> Զայրույթը կարճ ռեակցիա էր։ Հիմա խոսում ենք \textbf{երկարաժամկետ} մոտիվացիայի մասին, որը ավելի շուտ «մղում» է (drive)
+  \end{itemize}
+\end{frame}
+
+% What motivation is; procrastination
+\begin{frame}{Ի՞նչ է մոտիվացիան}
+  \begin{columns}[c]
+    \begin{column}{0.52\textwidth}
+      \begin{card}[colback=mint!35!cardwhite]
+        {\blackfont Մոտիվացիա}\par\smallskip
+        Այն «էներգիան», որը պետք է հետաքրքրությունը պահելու ու նախագծի, նպատակի կամ արդյունքի ուղղությամբ աշխատելու համար։
+      \end{card}
+      \onslide<2->{%
+      \begin{card}[colback=brainpink!25!cardwhite]
+        {\blackfont Հետաձգում} (procrastination)\par\smallskip
+        Մոտիվացիա՝ անելու \textbf{ոչ այն}, ինչ պետք է։ Քանի՜ ռեֆերատ է զոհվել դրան։
+      \end{card}}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \centering
+      \onslide<3->{%
+      \bigemoji[1.3cm]{plug}\par\medskip
+      \begin{bookquote}
+        Գիտեմ՝ ինչի մասին եմ խոսում. այս գիրքը ավարտելու համար ստիպված էի \textbf{անջատել Wi-Fi-ը}։
+      \end{bookquote}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Freud's pleasure principle
+\begin{frame}{Ֆրեյդի հաճույքի սկզբունքը}
+  \begin{columns}[c]
+    \begin{column}{0.52\textwidth}
+      \begin{itemize}
+        \item Վաղ տեսություններից մեկը Զիգմունդ Ֆրեյդինն է. \textbf{հաճույքի սկզբունքը} (pleasure principle)
+        \item Կենդանի էակները ձգտում են այն բանին, ինչ \textbf{հաճույք} է տալիս, ու խուսափում են \textbf{ցավից} ու անհարմարությունից
+        \item<2-> Որ այդպես լինում է, դժվար է ժխտել։ Կենդանիների ուսուցման փորձերը դա ցույց են տվել
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \onslide<3->{%
+      \begin{bookquote}
+        Ֆրեյդը հիմնեց մի ամբողջ ոլորտ, բայց դա չի նշանակում, որ նրա տեսություններն ինքնաբերաբար ճիշտ են։ Ռայթ եղբայրներն էլ ինքնաթիռ հորինեցին, բայց նրանց ինքնաթիռներով Հարավային Ամերիկա չենք թռչում։
+      \end{bookquote}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Operant conditioning
+\begin{frame}{Առնետը, կոճակը ու պարգևը}
+  \centering
+  \begin{tikzpicture}
+    \node[strip=3.5cm] (a) at (-4.6,0) {\emoji[1.5em]{rat}\\ Առնետը տուփում կոճակ է գտնում ու հետաքրքրությունից սեղմում};
+    \node[strip=3.5cm, visible on=<2->] (b) at (0,0) {\emoji[1.5em]{cheese}\\ Սեղմելուց հետո համեղ բան է ընկնում};
+    \node[strip=3.5cm, fill=mint!40!cardwhite, visible on=<3->] (c) at (4.6,0) {\emoji[1.5em]{rocket}\\ Հիմա առնետը կոճակը սեղմում է \textbf{անընդհատ}};
+    \draw[arr, visible on=<2->] (a) -- (b);
+    \draw[arr, visible on=<3->] (b) -- (c);
+  \end{tikzpicture}\par\medskip
+  \raggedright
+  \begin{itemize}
+    \item<4-> \textbf{Օպերանտ պայմանավորում} (operant conditioning). պարգևը ուժեղացնում (կամ պատիժը թուլացնում) է իր հետ կապված վարքը
+    \item<5-> Երեխային խաղալիք ես խոստանում սենյակը հավաքելու համար, ու նա ավելի պատրաստակամ է նորից հավաքել։ Մեծերի հետ էլ է աշխատում, պարզապես պարգևն է ուրիշը
+  \end{itemize}
+\end{frame}
+
+% But people do unpleasant things
+\begin{frame}{Բայց մարդիկ այդքան պարզ չեն}
+  \relax{\small Մենք անընդհատ անում ենք բաներ, որոնք ոչ մի անմիջական հաճույք չեն տալիս}\par\smallskip
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \begin{card}[colback=peach!35!cardwhite]
+        \emoji[1.3em]{weightlifter}\ {\blackfont Մարզասրահ}. տանջալի ջանք, իսկ էյֆորիան միշտ չէ, որ գալիս է։ Բըրնեթը դեռ ոչ մի հաճելի փռշտոց էլ չի ստացել այնտեղից
+      \end{card}
+      \onslide<2->{%
+      \begin{card}[colback=mint!35!cardwhite]
+        \emoji[1.3em]{gift}\ {\blackfont Բարեգործություն}. սեփական փողը տալիս ես անծանոթների, որոնց երբեք չես տեսնի
+      \end{card}}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \onslide<3->{%
+      \begin{card}[colback=lavender!35!cardwhite]
+        \emoji[1.3em]{boss}\ {\blackfont Քծնանք}. շողոքորթում ես տհաճ ղեկավարին՝ առաջխաղացման աղոտ հույսով
+      \end{card}}
+      \onslide<4->{%
+      \begin{card}[colback=butter!45!cardwhite]
+        \emoji[1.3em]{books}\ {\blackfont Գրքեր}. կարդում ես գիրք, որ դուր չի գալիս, որովհետև ուզում ես ինչ-որ բան սովորել
+      \end{card}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Maslow
+\begin{frame}{Մասլոուի պահանջմունքների բուրգը}
+  \centering
+  {\small 1943. Աբրահամ Մասլոու. հաճույքի փոխարեն՝ \textbf{պահանջմունքներ} (hierarchy of needs)}\par\smallskip
+  \input{figures/maslow.tex}\par\smallskip
+  \onslide<6->{{\small Գաղափարը. նախ ներքևի աստիճանը, հետո հաջորդը, ու այդպես մինչև գագաթ}\par}
+\end{frame}
+
+% Self-actualisation + Success Kid
+\begin{frame}{Գագաթը. ինքնաիրացում}
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      {\small Ինքնաիրացում (self-actualisation). ձգտում՝ դառնալու այն ամենը, ինչ կարող ես}\par\medskip
+      \onslide<2->{%
+      \begin{bookquote}
+        Կարծում ես՝ կարող ես աշխարհի լավագույն նկարիչը լինել։ Ուրեմն մոտիվացված կլինես։ Թեև արվեստը սուբյեկտիվ է, ու գուցե \textbf{արդեն} լավագույնն ես։ Եթե այո, շնորհավորում եմ։
+      \end{bookquote}}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \centering
+      \onslide<3->{%
+      \begin{meme}[5.4cm]{success_kid.jpg}
+        \memecap[text width=4.6cm]{0.5}{0.9}{Արվեստը սուբյեկտիվ է}
+        \memecap[text width=4.6cm]{0.5}{0.1}{Ուրեմն ես արդեն աշխարհի լավագույն նկարիչն եմ}
+      \end{meme}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Not so neat + Maslow update
+\begin{frame}{Ուղեղը այդքան կոկիկ չէ}
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \begin{itemize}
+        \item Մարդիկ վերջին փողը տալիս են անծանոթներին կամ վտանգում իրենց՝ կենդանուն փրկելու համար, թեև կենդանին ոչ հարգանք կտա, ոչ պարգև
+        \item<2-> Եթե իշամեղու չէ. սա կխայթի ու չարախնդորեն կծիծաղի \emoji{imp}
+        \item<3-> Սեքսը Մասլոուի մոտ ներքևում է, բայց առանց դրա կարելի է ապրել։ Իսկ ինչո՞ւ ենք ուզում. հաճույք, մտերմություն, հարգա՞նք։ Սեքսը \textbf{ամբողջ բուրգով մեկ} է
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \onslide<4->{%
+      \begin{scienceupdate}
+        Մասլոուն ինքը \textbf{բուրգ չի նկարել}. այն հայտնվեց 1960-ին՝ կառավարման դասընթացներում։ Իսկ 1943-ին նա գրել էր, որ հերթականությունը «այդքան էլ \textbf{կոշտ} չէ»։
+      \end{scienceupdate}}
+    \end{column}
+  \end{columns}
+  \onslide<4->{\source{Maslow, Psychol. Rev., 1943; Bridgman et al., AMLE, 2019}}
+\end{frame}
+
+% Intrinsic vs extrinsic
+\begin{frame}{Ներքին և արտաքին մոտիվացիա}
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \begin{card}[colback=peach!35!cardwhite]
+        {\blackfont Արտաքին} (extrinsic)\par
+        \emoji[1.3em]{dollar}\ Վճարում են, որ օգնես տուն տեղափոխվել։ Ձանձրալի է, բայց վճարում են\par
+        \onslide<2->{\emoji[1.3em]{cowboy}\ Բոլորը դեղին կովբոյական գլխարկ են կրում, ու դու էլ ես գնում}
+      \end{card}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \onslide<3->{%
+      \begin{card}[colback=mint!35!cardwhite]
+        {\blackfont Ներքին} (intrinsic)\par
+        \emoji[1.3em]{stethoscope}\ Ինքդ ես որոշել, որ հիվանդներին օգնելն ազնիվ է, ու գնում ես բժշկական\par
+        \onslide<4->{Իսկ եթե գնում ես փողի համար, դա ավելի շատ \textbf{արտաքին} է}
+      \end{card}}
+    \end{column}
+  \end{columns}
+  \onslide<5->{%
+  \begin{chatbox}
+    Ինչու՞ ես այսօր այստեղ։ \textbf{Ն}՝ հետաքրքիր է, \textbf{Ա}՝ պետք է, \textbf{ՆԱ}՝ երկուսն էլ
+  \end{chatbox}}
+\end{frame}
+
+% Self-determination theory
+\begin{frame}{Ինչն է մեզ շարժում ներսից}
+  \relax{\small Դեսի ու Ռայանի \textbf{ինքնորոշման տեսությունը} (self-determination theory)}\par\smallskip
+  \begin{columns}[T]
+    \begin{column}{0.31\textwidth}
+      \begin{card}[colback=mint!35!cardwhite]
+        \emoji[1.4em]{key}\ {\blackfont Ինքնավարություն}\par {\scriptsize autonomy}\par\smallskip
+        Ինքդ ես որոշում ու վերահսկում
+      \end{card}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{card}[colback=butter!45!cardwhite]
+        \emoji[1.4em]{trophy}\ {\blackfont Կարողունակություն}\par {\scriptsize competence}\par\smallskip
+        Լավ ես անում այն, ինչ անում ես
+      \end{card}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{card}[colback=lavender!35!cardwhite]
+        \emoji[1.4em]{people}\ {\blackfont Կապվածություն}\par {\scriptsize relatedness}\par\smallskip
+        Կապ ուրիշների հետ, պատկանելություն*
+      \end{card}
+    \end{column}
+  \end{columns}
+  \onslide<2->{%
+  \begin{card}[colback=brainpink!25!cardwhite]
+    \emoji[1.3em]{eyes}\ Ուսիդ վրայից ամեն քայլդ ուղղող \textbf{միկրոմենեջերը} խլում է երեքն էլ
+  \end{card}}
+  {\scriptsize * Գրքում՝ «ճանաչում ստանալ արածիդ համար». հեղինակների սահմանումը \textbf{կապն ու պատկանելությունն} է}
+\end{frame}
+
+% Overjustification
+\begin{frame}{Պարգևը, որ սպանում է հետաքրքրությունը}
+  \begin{columns}[c]
+    \begin{column}{0.46\textwidth}
+      \begin{itemize}
+        \item 1973. երեխաները ֆլոմաստերներով նկարում էին։ Ոմանց նախապես \textbf{պարգև էին խոստացել}
+        \item<2-> 1-2 շաբաթ անց ավելի շատ նկարում էին \textbf{առանց խոստման} խմբերը
+      \end{itemize}
+      \onslide<3->{%
+      \begin{card}[colback=butter!45!cream]
+        \textbf{Գերարդարացման էֆեկտ} (overjustification). խոստացված պարգևը կարող է սպանել ներքին հետաքրքրությունը
+      \end{card}}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \centering
+      \onslide<2->{%
+      \input{figures/overjustification.tex}\par
+      {\scriptsize Ազատ ժամանակի քանի տոկոսն էին նկարում}}
+    \end{column}
+  \end{columns}
+  \onslide<2->{\source{Lepper, Greene \& Nisbett, JPSP, 1973}}
+\end{frame}
+
+% The business world loves it
+\begin{frame}{Բիզնեսը շատ ոգևորվեց}
+  \begin{columns}[c]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \item Եզրակացությունը թվում է ակնհայտ. վարձատրությունը կարող է \textbf{նվազեցնել} մոտիվացիան, իսկ ինքնավարությունը՝ մեծացնել
+        \item<2-> Բիզնեսը խանդավառված էր. գիտական հիմնավորում, որ աշխատակցին ավելի լավ է ազատություն տալ, քան \textbf{փող}
+        \item<3-> Որոշ հետազոտողներ համաձայն են, բայց հակառակ տվյալներն էլ շատ են
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \centering
+      \onslide<4->{%
+      \bigemoji[1.0cm]{moneybag}\par\smallskip
+      \begin{bookquote}
+        Եթե վճարելը սպանում է մոտիվացիան, միլիոններ ստացող տնօրենները ոչինչ չեն անում։ Ոչ ոք դա չի ասում։ Իսկ միլիարդատերերը կարող են մոտիվացված փաստաբաններ վարձել։
+      \end{bookquote}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Self-discrepancy theory
+\begin{frame}{Իդեալական «ես»-ը և «պետք է» «ես»-ը}
+  \relax{\small Էդվարդ Թորի Հիգինսի տեսությունը (self-discrepancy theory), 1987}\par\smallskip
+  \begin{columns}[T]
+    \begin{column}{0.31\textwidth}
+      \begin{card}
+        \emoji[1.4em]{computer}\ {\blackfont Իրական «ես»}\par\smallskip
+        Թիկնեղ ծրագրավորող Շոտլանդիայի Ինվերնես քաղաքից
+      \end{card}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \onslide<2->{%
+      \begin{card}[colback=mint!35!cardwhite]
+        \emoji[1.4em]{basketball}\ {\blackfont Իդեալական «ես»}\par\smallskip
+        Արևայրուք վոլեյբոլիստ Կարիբյան կղզում։ \textbf{Ձգում է} դեպի նպատակը
+      \end{card}}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \onslide<3->{%
+      \begin{card}[colback=peach!35!cardwhite]
+        \emoji[1.4em]{salad}\ {\blackfont «Պետք է» «ես»}\par\smallskip
+        Յուղոտ չի ուտում, փող չի վատնում, վոլեյբոլ է սովորում ու հետևում Բարբադոսի տների գներին։ \textbf{Հեռու է պահում} սխալներից
+      \end{card}}
+    \end{column}
+  \end{columns}
+  \vspace{1mm}
+  \onslide<4->{\centering Պիցցա՞։ Դա այն չէ, ինչ «պետք է» անես։ Վերադարձիր աղցաններին \emoji{pizza}\,$\rightarrow$\,\emoji{salad}\par}
+\end{frame}
+
+% Locus of control and learned helplessness
+\begin{frame}{Ով է ղեկին}
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item \textbf{Վերահսկման կենտրոն} (locus of control). որքանով ես զգում, որ դու ես կառավարում իրադարձությունները
+        \item Մեկի կարծիքով մոլորակն իր շուրջն է պտտվում, մյուսը միշտ հանգամանքների ողորմածությանն է
+        \item<2-> Մասամբ մշակույթից է. արևմտյան մարդը, որին ասել են «կարող ես ունենալ ամեն ինչ», ավելի շատ վերահսկում է զգում, քան տոտալիտար ռեժիմում ապրողը
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \centering
+      \onslide<3->{%
+      {\blackfont\small Սովորած անօգնականություն} {\scriptsize (learned helplessness)}\par\smallskip
+      \begin{tikzpicture}[font=\footnotesize]
+        \node[strip=2.7cm, minimum height=0.9cm] (a) at (0,1.35) {«Ոչինչ չեմ կարող փոխել»};
+        \node[strip=2.7cm, minimum height=0.9cm] (b) at (1.8,0) {Չեմ էլ փորձում};
+        \node[strip=2.7cm, minimum height=0.9cm] (c) at (0,-1.35) {Ամեն ինչ ավելի է վատանում};
+        \node[strip=2.7cm, minimum height=0.9cm] (d) at (-1.8,0) {Ավելի քիչ լավատեսություն};
+        \draw[arr] (a) -| (b);
+        \draw[arr] (b) |- (c);
+        \draw[arr] (c) -| (d);
+        \draw[arr] (d) |- (a);
+      \end{tikzpicture}\par\smallskip
+      {\small Ծանոթ է բոլորին, ով երբևէ \textbf{ծանր բաժանում} է ապրել}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Where motivation lives
+\begin{frame}{Որտե՞ղ է մոտիվացիան ուղեղում}
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      {\small Հստակ հայտնի չէ, բայց մասնակցում են}\par\smallskip
+      \begin{itemize}
+        \item միջին ուղեղի \textbf{պարգևի ուղին} (reward pathway)
+        \item \textbf{նշաձև մարմինը}. մոտիվացիան զգացմունքային է
+        \item \textbf{ճակատային կեղևն} ու այլ «ղեկավար» մասեր. մոտիվացիայի մեծ մասը պլանավորում ու պարգևի սպասում է
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \onslide<2->{%
+      {\small Որոշ գիտնականներ կարծում են, որ կա \textbf{երկու} համակարգ}\par\smallskip
+      \begin{card}[colback=lavender!35!cardwhite]
+        \emoji[1.3em]{target}\ {\blackfont Բարդ, մտավոր}\par
+        կյանքի նպատակներ ու երազանքներ
+      \end{card}}
+      \onslide<3->{%
+      \begin{card}[colback=peach!35!cardwhite]
+        \emoji[1.3em]{runner}\ {\blackfont Պարզ, ռեակտիվ}\par
+        «Սարսափելի բան, փախի՛ր»։ Կամ՝ «Տե՛ս, տորթ։ Կե՛ր» \emoji{cake}
+      \end{card}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Zeigarnik effect
+\begin{frame}{Զեյգարնիկի էֆեկտը}
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \begin{itemize}
+        \item 1920-ականներ. \textbf{Բլյումա Զեյգարնիկը} նկատեց, որ մատուցողները հիշում են միայն \textbf{չավարտված} պատվերները
+        \item<2-> Լաբորատորիայում ընդհատված առաջադրանքներն ավելի լավ էին հիշվում, ու մարդիկ ուզում էին դրանք ավարտել
+        \item<3-> Դրա համար են սերիալները կտրվում ամենահետաքրքիր տեղում
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \onslide<4->{%
+      \begin{scienceupdate}
+        2025-ի մետավերլուծությունը \textbf{չգտավ}, որ անավարտը ավելի լավ է հիշվում։ Բայց մարդիկ իսկապես հակված են \textbf{վերադառնալու} ընդհատված գործին։
+      \end{scienceupdate}}
+    \end{column}
+  \end{columns}
+  \onslide<4->{\source{Ghibellini \& Meier, Humanit. Soc. Sci. Commun., 2025}}
+\end{frame}
+
+% Our own cliffhanger
+\begin{frame}{Եկեք ստուգենք}
+  \begin{columns}[c]
+    \begin{column}{0.58\textwidth}
+      \begin{card}[colback=butter!45!cream]
+        \centering
+        {\blackfont\large Ի՞նչ ասաց մեծ ծխնելույզը\\ փոքր ծխնելույզին}\par\smallskip
+        \onslide<2->{{\small Պատասխանը՝ մի փոքր ուշ։ Մինչ այդ փորձիր \textbf{չմտածել} դրա մասին}}
+      \end{card}
+      \vspace{1mm}
+      \onslide<3->{%
+      \begin{bookquote}
+        Մոտիվացնելու երկրորդ լավագույն ձևը գործն անավարտ թողնելն է։ Կա ավելի արդյունավետ ձև, բայց դրա մասին՝ իմ հաջորդ գրքում։
+      \end{bookquote}}
+    \end{column}
+    \begin{column}{0.36\textwidth}
+      \centering
+      \mascot[2.6cm]{thinking}\par
+      \bigemoji[0.9cm]{hourglass}
+    \end{column}
+  \end{columns}
+\end{frame}

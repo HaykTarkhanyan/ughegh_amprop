@@ -1,0 +1,11 @@
+% Schematic tolerance staircase: the dose needed for the same effect keeps growing, until it would kill a first-timer.
+% Not data: columns of pill icons, revealed on slides 1-4; the red line comes on slide 5.
+\begin{tikzpicture}
+  \foreach \c/\n/\s/\t in {0/1/1/սկիզբ, 1/2/2/հետո, 2/4/3/ավելի ուշ, 3/6/4/շատ ավելի ուշ}{
+    \foreach \k in {1,...,\n}{\node[visible on=<\s->] at (\c*1.55,\k*0.52-0.2) {\bigemoji[0.46cm]{pill}};}
+    \node[font=\scriptsize, text=plum, align=center, text width=1.45cm, visible on=<\s->] at (\c*1.55,-0.35) {\t};
+  }
+  \draw[plum, line width=0.8pt] (-0.7,-0.08) -- (5.4,-0.08);
+  \draw[amRed, dashed, line width=1.4pt, visible on=<5->] (-0.7,2.75) -- (5.4,2.75);
+  \node[anchor=south west, font=\blackfont\scriptsize, text=amRed, visible on=<5->, inner sep=1pt] at (-0.7,2.8) {նորեկին կսպաներ};
+\end{tikzpicture}

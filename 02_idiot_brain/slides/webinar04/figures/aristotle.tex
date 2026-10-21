@@ -1,0 +1,18 @@
+% Aristotle's illusion: with crossed fingers, one small ball touches the two "outer" sides of the
+% fingertips, and the brain reports two balls. The thought bubble appears on slide 2 (use inside a frame).
+\begin{tikzpicture}[scale=0.82]
+  \path[use as bounding box] (-2.0,-2.3) rectangle (3.6,2.5);
+  % palm
+  \filldraw[fill=peach!70!cardwhite, draw=plum, line width=0.9pt, rounded corners=4mm] (-1.05,-2.25) rectangle (1.05,-1.05);
+  % index finger (under), then middle finger (over), crossed
+  \draw[plum, line width=0.56cm, line cap=round] (-0.42,-1.15) -- (0.5,1.05);
+  \draw[peach!70!cardwhite, line width=0.42cm, line cap=round] (-0.42,-1.15) -- (0.5,1.05);
+  \draw[plum, line width=0.56cm, line cap=round] (0.42,-1.15) -- (-0.5,1.05);
+  \draw[peach!70!cardwhite, line width=0.42cm, line cap=round] (0.42,-1.15) -- (-0.5,1.05);
+  % the ball between the crossed tips
+  \shade[ball color=amBlue!70] (0,1.62) circle (0.3);
+  \node[font=\blackfont\small, text=plum, anchor=east] at (-0.6,1.75) {1 գնդիկ};
+  % what the brain reports
+  \node[think, visible on=<2->, callout absolute pointer={(0.7,1.75)}, minimum width=2.4cm, minimum height=1.6cm]
+    at (2.45,1.55) {\tikz{\shade[ball color=amBlue!70] (0,0) circle (0.2); \shade[ball color=amBlue!70] (0.55,0) circle (0.2);}\\[1mm] 2 գնդիկ};
+\end{tikzpicture}

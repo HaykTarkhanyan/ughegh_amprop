@@ -1,0 +1,21 @@
+% Burnett's analogy for factor analysis: buckets across town show WHERE most rain falls, not WHY it rains.
+% The "why?" cloud shows on click 2.
+\begin{tikzpicture}[lbl/.style={font=\small, text=plum, align=center}]
+  \foreach \x/\lev/\drops/\name in {-3.3/0.25/3/Ա, -1.1/0.95/8/Բ, 1.1/0.5/5/Գ, 3.3/0.3/3/Դ}{
+    \node at (\x,3.05) {\bigemoji[0.8cm]{raincloud}};
+    \foreach \k in {1,...,\drops}{
+      \pgfmathsetmacro{\dx}{-0.42+0.84*(\k-0.5)/\drops}
+      \draw[amBlue!70, line width=0.9pt] ({\x+\dx},{2.45-0.08*mod(\k,2)}) -- ++(-0.06,-0.3);
+      \draw[amBlue!70, line width=0.9pt] ({\x+\dx+0.05},{1.75-0.1*mod(\k,3)}) -- ++(-0.06,-0.3);}
+    \begin{scope}
+      \clip (\x-0.42,0) -- (\x+0.42,0) -- (\x+0.55,1.15) -- (\x-0.55,1.15) -- cycle;
+      \fill[amBlue!45] (\x-0.6,0) rectangle (\x+0.6,\lev);
+    \end{scope}
+    \draw[plum, line width=0.9pt, line join=round] (\x-0.55,1.15) -- (\x-0.42,0) -- (\x+0.42,0) -- (\x+0.55,1.15);
+    \draw[plum, line width=0.7pt] (\x-0.5,1.15) arc (180:0:0.5 and 0.35);
+    \node[lbl, font=\blackfont\small] at (\x,-0.35) {\name};
+  }
+  \node at (-0.25,0.4) {\bigemoji[0.45cm]{trophy}};
+  \node[pbox=lavender, text width=4.8cm, visible on=<2->] at (0,-1.35)
+    {\emoji{question}\ \textbf{Ինչու} է անձրև գալիս\\ ու ինչպես են ամպերը գոյանում};
+\end{tikzpicture}

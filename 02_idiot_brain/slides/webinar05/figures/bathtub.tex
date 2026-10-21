@@ -1,0 +1,21 @@
+% Burnett's image for the orbitofrontal cortex: the overflow outlet on a bath with a leaky tap.
+% It does not fix the leak (the anger), it stops the bath from flooding (behaviour). Labels on click 2.
+\begin{tikzpicture}[lbl/.style={font=\small, text=plum, align=left}]
+  % water
+  \fill[amBlue!30] (-2.05,-0.95) -- (2.05,-0.95) -- (2.05,0.75) -- (-2.05,0.75) -- cycle;
+  \draw[amBlue!60, line width=0.8pt, decorate, decoration={snake, amplitude=0.4mm, segment length=4mm}] (-2.05,0.75) -- (2.05,0.75);
+  % tub
+  \draw[plum, line width=1.4pt, rounded corners=4mm] (-2.2,1.2) -- (-2.2,-1.1) -- (2.2,-1.1) -- (2.2,1.2);
+  \draw[plum, line width=1.4pt] (-2.45,1.2) -- (2.45,1.2);
+  \draw[plum, line width=1.2pt] (-1.6,-1.1) -- (-1.75,-1.5) (1.6,-1.1) -- (1.75,-1.5);
+  % tap with drops
+  \draw[plum, line width=1.4pt, rounded corners=1mm] (-2.45,2.3) -- (-1.4,2.3) -- (-1.4,1.95);
+  \fill[plum] (-1.6,2.3) rectangle (-1.2,2.45);
+  \foreach \y in {1.75,1.45}{\fill[amBlue] (-1.4,\y) circle (0.06);}
+  % overflow outlet
+  \filldraw[fill=cardwhite, draw=plum, line width=1pt] (2.2,0.8) circle (0.13);
+  \draw[-{Stealth[length=2mm]}, amBlue, line width=1pt] (2.35,0.8) .. controls (2.8,0.8) and (2.9,0.4) .. (2.9,0.0);
+  % labels
+  \node[lbl, anchor=south west, visible on=<2->] at (-2.45,2.5) {\textbf{զայրույթը} կաթում է};
+  \node[lbl, anchor=west, visible on=<2->] at (2.95,0.3) {\textbf{ակնակապային}\\ \textbf{ճակատային}\\ \textbf{կեղև}. ավելորդը\\ դուրս է թողնում};
+\end{tikzpicture}

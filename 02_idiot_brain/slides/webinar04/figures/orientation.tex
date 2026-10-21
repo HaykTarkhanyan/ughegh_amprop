@@ -1,0 +1,17 @@
+% Orientation selectivity in the primary visual cortex (Hubel & Wiesel): one neuron fires a lot for a
+% bar at its preferred angle (here vertical) and little for others. Panels appear on slides 1-4.
+\begin{tikzpicture}[scale=0.78]
+  \path[use as bounding box] (-1.1,-2.15) rectangle (10.3,1.1);
+  \foreach \i/\a/\n/\s in {0/90/14/1, 1/45/4/2, 2/0/1/3, 3/135/4/4}{
+    \begin{scope}[xshift=\i*3.05cm, visible on=<\s->]
+      % receptive field with a bar
+      \filldraw[fill=cardwhite, draw=plum, line width=0.8pt] (0.9,0.1) circle (0.95);
+      \fill[amOrange, rotate around={\a:(0.9,0.1)}] (0.25,0.0) rectangle (1.55,0.2);
+      % spike train
+      \draw[plum!40, line width=0.6pt] (-0.1,-1.45) -- (1.9,-1.45);
+      \pgfmathsetmacro{\spikestep}{1.9/(\n+1)}
+      \foreach \k in {1,...,\n}{\draw[amRed, line width=1.2pt] ({-0.1+\k*\spikestep},-1.45) -- ({-0.1+\k*\spikestep},-0.95);}
+      \node[font=\blackfont\scriptsize, text=plum] at (0.9,-1.85) {\n\ ազդանշան};
+    \end{scope}}
+  \node[font=\scriptsize, text=plum, anchor=east, align=right] at (-0.2,-1.2) {նեյրոնը};
+\end{tikzpicture}

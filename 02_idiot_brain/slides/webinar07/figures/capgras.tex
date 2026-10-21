@@ -1,0 +1,14 @@
+% Capgras delusion as the book explains it: the expected feelings are missing, so the brain resolves the mismatch
+% with "an identical impostor". Steps reveal on slides 1-5.
+\begin{tikzpicture}[st/.style={flow=2.45cm, font=\small, inner sep=3pt, minimum height=1.55cm}]
+  \node[st, fill=butter!50!cardwhite] (a) at (0,0) {\emoji{eyes}\\ «Սա իմ կինն է»};
+  \node[st, fill=lavender!40!cardwhite, visible on=<2->] (b) at (2.85,0) {\emoji{heart}\\ պիտի սեր, ջերմություն զգամ};
+  \node[st, fill=peach!45!cardwhite, visible on=<3->] (c) at (5.7,0) {\emoji{neutral}\\ ոչինչ չեմ զգում};
+  \node[st, fill=brainpink!35!cardwhite, visible on=<4->] (d) at (8.55,0) {\emoji{question}\\ ինչո՞ւ};
+  \node[st, fill=amRed!20!cardwhite, visible on=<5->] (e) at (11.4,0) {\emoji{detective}\\ «Նա խաբեբա է՝ նույն տեսքով»};
+  \draw[arr, visible on=<2->] (a) -- (b);
+  \draw[arr, visible on=<3->] (b) -- (c);
+  \draw[arr, visible on=<4->] (c) -- (d);
+  \draw[arr, visible on=<5->] (d) -- (e);
+  \node[font=\scriptsize, text=plum!75!cream, align=center, visible on=<3->] at (5.7,-1.15) {ճակատային բլթի վնաս};
+\end{tikzpicture}

@@ -1,0 +1,42 @@
+title = "Webinar 1 deck: overflow fixes, bachelor-level tone, memes, appendix"
+date = "2026-10-19"
+time = "22:05"
+areas = ["02_idiot_brain/slides/", "DECISIONS.md", "CONVENTIONS.md"]
+
+done = [
+  "Interviewed Hayk: let the deck grow (~100-105 min), 3-5 memes, no additions beyond the book yet, keep 'դու' (DECISIONS.md #8)",
+  "Preamble: smaller one-line frame titles, topic pill moved to the footline, box text \\small, narrower margins; meme environment (\\begin{meme} + \\memecap); array package for ragged table columns",
+  "Split ~20 overflowing frames, reworked cramped figures (tug of war, body clock, hypnogram, fear roads, sitcom tree, battle stations, hippocampus pipeline, memory types)",
+  "Fixed two pgfplots 'xtick=data / ytick=data with one \\addplot per bar' bugs that dropped axis labels (sleep paralysis chart, Loftus chart)",
+  "Bachelor tone: English/scientific terms in brackets, more of Burnett's own jokes (fish and Gary, Dolly Parton, Timmy, honey badgers, Care Bears, cheddar robbery, snooker cue...), sleep chart highlights 18-25 (7-9 h)",
+  "Five memes with Armenian captions: Is this a pigeon, Distracted boyfriend, This is fine, Woman yelling at cat, Drake (slides/webinar01/memes/)",
+  "Appendix after Questions: corrections to the book (2 frames), what we added beyond the book, sources for ch1 and ch2",
+  "NOTES.md rewritten for the new 107-frame numbering (102 presented + 5 appendix)",
+  "Part test builds: 0 overfull vboxes, 0 missing glyphs; every frame checked on contact sheets of its last overlay",
+  "Full latexmk build: 107 frames, 281 pages, 0 overfull vboxes, 0 missing glyphs (680 s, 3 passes); one build was killed by Claude Code for low RAM (1.7 GB of 15.6 GB free) and rerun on Hayk's request; frame 93 needed two more single passes (~3 min each)",
+]
+
+pending = [
+  "Student-review subagent: ask Hayk first",
+  "Hayk to add a self-introduction and webinar 2's date/chapters (frame 101)",
+  "Nothing committed in this session yet",
+]
+
+next = [
+  "Rehearse against the NOTES.md timing table; skip the listed frames if it runs long",
+  "Commit when Hayk asks",
+]
+
+files = [
+  "02_idiot_brain/slides/common/preamble.tex",
+  "02_idiot_brain/slides/webinar01/parts/*.tex (05_appendix.tex new)",
+  "02_idiot_brain/slides/webinar01/figures/*.tex",
+  "02_idiot_brain/slides/webinar01/memes/*.jpg",
+  "02_idiot_brain/slides/webinar01/NOTES.md",
+  "DECISIONS.md (#8), CONVENTIONS.md",
+  "_learnings/2026-10-19-2300_pgfplots_tick_data_drops_labels.md",
+]
+
+commits = []
+
+notes = "Part test builds (2 lualatex passes each) took ~5-6 min per half; check fixes with build/w012.tex (opening, intro, Part 1) and build/w345.tex (Part 2, wrap-up, appendix), both gitignored. Overfull \\vbox in the log does not catch TikZ drawn past the frame edge, so the contact sheets are still needed."

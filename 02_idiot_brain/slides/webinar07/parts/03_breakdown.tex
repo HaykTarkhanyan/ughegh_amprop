@@ -1,0 +1,334 @@
+% ===== Nervous breakdowns: "Emergency shutdown" (~16 min), then the break =====
+\partaccent{peach}
+\topicopener{battery}{Սթրես}{Վթարային անջատում}{Նյարդային պոռթկումներ, և ինչպես են դրանք առաջանում}{panic}
+
+\begin{frame}{Մարմինը սահմաններ ունի}
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      \begin{popup}{խորհուրդներ.txt}
+        \small
+        \begin{itemize}\setlength{\itemsep}{0.3mm}
+          \item Առանց վերարկուի դուրս ես եկել՝ կմրսես
+          \item Արագ սնունդը կփչացնի սիրտդ
+          \item Ծխելը քայքայում է թոքերը
+          \item Ծանրությունը բարձրացրու ծնկներով
+          \item Մատներդ մի ճտտացրու, արթրիտ կունենաս
+        \end{itemize}
+      \end{popup}
+      {\scriptsize\color{plum!70!cream} Բըրնեթ. «Սրանց ճշգրտությունը շատ տարբեր է»}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \onslide<2->{%
+      \begin{card}[colback=lavender!35!cardwhite]
+        Բայց գաղափարը ճիշտ է. մեր արարքներն ազդում են առողջության վրա։ Իսկ ի՞նչն է նույնից պաշտպանում ուղեղին։ \textbf{Ոչինչ}։
+      \end{card}}
+      \onslide<3->{%
+      \begin{card}[colback=brainpink!30!cardwhite]
+        \centering Այսօր ուղեղի ամենամեծ վտանգը՝ հին ու բարի \textbf{սթրեսն} է
+      \end{card}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Սթրեսի առանցքը}
+  \begin{columns}[c]
+    \begin{column}{0.4\textwidth}
+      \centering
+      \begin{tikzpicture}[ax/.style={flow=3.6cm, font=\small}]
+        \node[ax, fill=lavender!40!cardwhite] (h) at (0,2.1) {\emoji{brain}\ \textbf{Հիպոթալամուս}};
+        \node[ax, fill=lavender!40!cardwhite] (p) at (0,1.05) {\textbf{Հիպոֆիզ} (pituitary)};
+        \node[ax, fill=peach!45!cardwhite] (a) at (0,0) {\textbf{Մակերիկամներ} (adrenal)};
+        \node[ax, fill=brainpink!40!cardwhite, visible on=<2->] (c) at (0,-1.15) {\emoji{fire}\ ադրենալին ու \textbf{կորտիզոլ}};
+        \draw[arr] (h) -- (p); \draw[arr] (p) -- (a);
+        \draw[arr, visible on=<2->] (a) -- (c);
+      \end{tikzpicture}\par\smallskip
+      {\scriptsize HPA առանցք (hypothalamic-pituitary-adrenal)}
+    \end{column}
+    \begin{column}{0.56\textwidth}
+      \begin{itemize}
+        \item Սթրեսը միացնում է «կռվիր կամ փախիր» ռեակցիան (հիշո՞ւմ ես առաջին վեբինարից)
+        \item<2-> Կորտիզոլը՝ «սթրեսի հորմոնը», ազդում է ամբողջ մարմնի ու ուղեղի վրա
+        \item<3-> Երկար սթրեսից մարդը դառնում է լարված, դյուրագրգիռ, հյուծված, չի կարողանում պարզ մտածել
+        \item<4-> Ասում ենք՝ «պոռթկման եզրին է»
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{«Նյարդային պոռթկում»}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{card}[colback=butter!45!cream]
+        {\blackfont Պաշտոնական տերմին չէ}\par\smallskip
+        Նյարդերը բառացիորեն չեն «պոռթկում»։ Մարդն այլևս չի դիմանում սթրեսին ու կարծես «կոտրվում» է. փակվում է, քաշվում է, չի կարողանում նորմալ գործել
+      \end{card}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \onslide<2->{%
+      {\blackfont\small Ամեն մեկի մոտ՝ տարբեր}\par\smallskip
+      \chip[lavender]{pensive}{խոր դեպրեսիա}\par\smallskip
+      \chip[peach]{fearful}{խուճապի նոպաներ}\par\smallskip
+      \chip[brainpink]{speakinghead}{երբեմն՝ հալյուցինացիաներ}}
+    \end{column}
+  \end{columns}
+  \vspace{3mm}
+  \onslide<3->{%
+  \begin{card}[colback=mint!30!cardwhite]
+    \emoji{bandage}\ Ոմանք պոռթկումը համարում են ուղեղի \textbf{պաշտպանական մեխանիզմ}. ինչպես ֆիզիոթերապիան. տհաճ է ու հյուծող, բայց ավելի լավ է, քան չանելը
+  \end{card}}
+\end{frame}
+
+\begin{frame}{Սթրեսը վերահսկողության կորուստ է}
+  \begin{columns}[c]
+    \begin{column}{0.46\textwidth}
+      \begin{itemize}
+        \item Սթրես առաջացնողը (stressor) \textbf{նվազեցնում է վերահսկողությունը}
+        \item Երբ թվում է, թե վերահսկում ենք իրավիճակը, ապահով ենք զգում
+        \item Ու կարևոր չէ, թե իրականում որքան վերահսկողություն ունենք
+      \end{itemize}
+      \onslide<2->{\centering\bigemoji[1cm]{earth}\ \bigemoji[1cm]{coffee}\par}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \onslide<2->{%
+      \begin{bookquote}
+        Տեխնիկապես ամեն մարդ ածխածնի անիմաստ պարկ է, որ կառչել է միջուկային կրակի շուրջ անտարբեր դատարկության մեջ սլացող քարից։ Բայց եթե կարող ես սուրճիդ մեջ սոյայի կաթ պահանջել ու ստանալ, դա \textbf{շոշափելի վերահսկողություն} է։
+      \end{bookquote}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Երբ ոչինչ չես կարող անել}
+  \begin{columns}[c]
+    \begin{column}{0.4\textwidth}
+      \centering
+      \begin{meme}[4.35cm]{panik_kalm_panik.png}
+        \memecap[text width=1.8cm, font=\blackfont\scriptsize]{0.245}{0.83}{Անձրև է գալիս}
+        \memecap[text width=1.8cm, font=\blackfont\scriptsize]{0.245}{0.495}{Անձրևանոց ունեմ}
+        \memecap[text width=1.8cm, font=\blackfont\scriptsize]{0.245}{0.165}{Անձրևանոցը տանն է, բանալիներն էլ}
+      \end{meme}
+    \end{column}
+    \begin{column}{0.56\textwidth}
+      \begin{itemize}
+        \item Սթրեսն ավելի մեծ է, երբ \textbf{ընտրություն չկա}
+        \item Գլխացավի կամ մրսածության համար դեղ կա
+        \item Իսկ քրոնիկ հիվանդությունը մշտական, անխուսափելի տհաճություն է, ու դա շատ սթրեսային է
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Հոգնածություն ու անկանխատեսելիություն}
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \begin{card}[colback=peach!35!cardwhite]
+        \emoji[1.3em]{batterylow}\ {\blackfont Հոգնեցնում է}\par\smallskip
+        Քնել ես մնացել ու վազում ես գնացքի հետևից։ Սթրեսը էներգիա է ծախսում, իսկ հոգնածությունը նոր սթրես է
+      \end{card}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \onslide<2->{%
+      \begin{card}[colback=lavender!40!cardwhite]
+        \emoji[1.3em]{dice}\ {\blackfont Անկանխատեսելի է}\par\smallskip
+        Էպիլեպսիայի նոպան կարող է գալ ցանկացած պահի։ Կամ զուգընկեր, որ կարող է պայթել սուրճի բանկան սխալ դարակում դնելու համար
+      \end{card}}
+    \end{column}
+  \end{columns}
+  \vspace{1mm}
+  \onslide<3->{%
+  \begin{card}[colback=mint!30!cardwhite]
+    \emoji{couch}\ Սովորաբար հաղթահարում ենք. պարասիմպաթիկ համակարգը («բազմոցի տղան» առաջին վեբինարից) հանգստացնում է մեզ
+  \end{card}}
+\end{frame}
+
+\begin{frame}{Հոլմս-Ռահեի սթրեսի սանդղակը}
+  \begin{columns}[c]
+    \begin{column}{0.36\textwidth}
+      {\small 1967. ամեն իրադարձություն ստացավ «կյանքի փոփոխության միավորներ» (LCU)}\par\medskip
+      \begin{poll}
+        Ո՞րն է ավելի սթրեսային. \textbf{ամուսնալուծությո՞ւնը}, թե՞ \textbf{բանտը}։
+      \end{poll}
+      \onslide<3->{{\small Բըրնեթ. «Մի տեսակ ռոմանտիկ է» \emoji{heart}}}
+    \end{column}
+    \begin{column}{0.62\textwidth}
+      \centering
+      \onslide<2->{%
+      \input{figures/holmes_rahe.tex}\par
+      {\scriptsize\color{amOrange!80!black}\textbf{նարնջագույնը}}{\scriptsize\ նույն սանդղակից է, գրքում չկա}}
+    \end{column}
+  \end{columns}
+  \only<2->{\source{Holmes \& Rahe, J. Psychosom. Res., 1967}}
+\end{frame}
+
+\begin{frame}{Սուր սթրես}
+  \begin{columns}[c]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \item Վթար, բռնություն, մեծ ողբերգություն. մեկ դեպք, որից սթրեսը դառնում է \textbf{անտանելի}
+        \item<2-> Սթրեսի հորմոնները կարճ ժամանակով \textbf{ուժեղացնում են հիշողությունը}. «ֆլեշ» հիշողություններ (flashbulb memories)
+        \item<3-> Օգտակար է. վտանգը հիշում ես, որ էլ չկրկնես։ Բայց ծայրահեղ դեպքում հիշողությունն այնքան վառ է, որ մարդն այն \textbf{նորից ու նորից} է ապրում
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \onslide<3->{%
+      \begin{card}[colback=butter!45!cream]
+        \emoji[1.3em]{sun}\ Ինչպես շատ պայծառ լույսը, որ «այրվում» է աչքիդ մեջ։ Միայն թե չի անցնում
+      \end{card}}
+      \onslide<4->{%
+      \begin{bookquote}
+        Ուղեղի համակարգը, որ պետք է կանխի տրավմայի կրկնությունը, ինքն է այն կրկնում։
+      \end{bookquote}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Անջատվել ամեն ինչից}
+  \begin{columns}[c]
+    \begin{column}{0.48\textwidth}
+      \begin{popup}{ուղեղ.exe}
+        {\blackfont Կյանքը չափազանց սթրեսային է}\par\smallskip
+        Անցնում եմ \textbf{սպասման ռեժիմի}... \emoji{zzz}
+      \end{popup}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{itemize}
+        \item Մշտական վառ հիշողություններից մարդը կարող է «բթանալ» (numbing) կամ կտրվել իրականությունից (dissociation)
+        \item<2-> Կարճ ժամանակով օգնում է, բայց երկար ժամանակով վնասում է մտածողությանն ու վարքին
+        \item<3-> Ամենահայտնի հետևանքը՝ \textbf{հետտրավմատիկ սթրեսային խանգարումը} (PTSD)
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Քրոնիկ սթրես}
+  \begin{columns}[c]
+    \begin{column}{0.4\textwidth}
+      \begin{itemize}
+        \item Խնամել հիվանդ հարազատին, բռնակալ պետ, անվերջ դեդլայններ, պարտքեր
+        \item<2-> Պարասիմպաթիկ համակարգը \textbf{հյուծվում} է, ու սթրեսը դառնում է «նորմա»
+        \item<3-> Մարդը մշտապես լարված է, ցրված, ցնցվում է ամեն ձայնից
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.58\textwidth}
+      \centering
+      \input{figures/stress_recovery.tex}\par
+      {\scriptsize սխեմատիկ}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Մի քիչ սթրեսն օգնում է}
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      \centering
+      \input{figures/yerkes_dodson.tex}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \begin{poll}
+        Ձեռք բարձրացրու, եթե դեդլայնից առաջ ավելի լավ ես աշխատում։
+      \end{poll}
+      \begin{itemize}
+        \item<2-> \textbf{Յերկս-Դոդսոնի օրենքը} (1908). մինչև որոշ կետ սթրեսն օգնում է, հետո՝ խանգարում
+        \item<3-> Ինչպես աղը. քիչը համեղացնում է, շատը՝ փչացնում \emoji{salt}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Յերկս-Դոդսոնը՝ գործատուի աչքերով}
+  \centering
+  \begin{meme}[4.6cm]{boardroom.jpg}
+    \memecap[text width=3.0cm, font=\blackfont\scriptsize]{0.6}{0.945}{Ինչպե՞ս բարձրացնենք արդյունավետությունը}
+    \memecap[text width=1.15cm, font=\blackfont\scriptsize]{0.15}{0.6}{Ավելի շատ դեդլայն}
+    \memecap[text width=1.15cm, font=\blackfont\scriptsize]{0.41}{0.585}{Ավելի շատ ճնշում}
+    \memecap[text width=1.75cm, font=\blackfont\scriptsize]{0.76}{0.56}{Շատ սթրեսն իջեցնում է արդյունքը}
+  \end{meme}
+\end{frame}
+
+\begin{frame}{Սթրեսի ցիկլ}
+  \centering
+  \input{figures/stress_cycle.tex}\par\medskip
+  \onslide<6->{\small Արտաքին «թեթևացումը» հաճախ նոր սթրես է բերում։\par}
+\end{frame}
+
+\begin{frame}{Ապահովիչը թռավ}
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Ցիկլից դուրս գալու ձևեր կան. ծանրաբեռնվածությունը փոխել, առողջ ապրելակերպ, թերապիա
+        \item<2-> Բայց հաճախ դա չի լինում, սթրեսը կուտակվում է, ու մի պահ \textbf{շեմն անցնում է}
+        \item<3-> Ուղեղն ասես հանձնվում է ու «անջատում է ամեն ինչ»
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \onslide<3->{%
+      \begin{popup}{ուղեղ.exe}
+        \centering\bigemoji[1cm]{plug}\ \bigemoji[1cm]{lightning}\par\smallskip
+        {\blackfont Վթարային անջատում}\par
+        {\small Ինչպես ապահովիչը, որ անջատում է հոսանքը, նախքան ամբողջ համակարգը կայրվի}
+      \end{popup}}
+      \onslide<4->{\small Ոմանց կարծիքով՝ պոռթկումը կանխում է \textbf{երկարատև} վնասը։}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Ո՞ւմ մոտ է շեմն ավելի ցածր}
+  \begin{columns}[c]
+    \begin{column}{0.44\textwidth}
+      \centering
+      \input{figures/diathesis.tex}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      {\blackfont\small Դիաթեզ-սթրես մոդել} {\small (diathesis՝ խոցելիություն)}\par\smallskip
+      \begin{itemize}
+        \item<2-> Որքան մեծ է խոցելիությունը, այնքան \textbf{քիչ} սթրես է պետք
+        \item<3-> Ավելի խոցելի են դժվար կյանքով ապրողները, անհանգստության հակված մարդիկ
+        \item<4-> Նույնիսկ շատ ինքնավստահները. վերահսկողության կորուստը քանդում է նրանց ինքնապատկերը
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Ինչ է լինում պոռթկման ժամանակ ու հետո}
+  \begin{columns}[c]
+    \begin{column}{0.56\textwidth}
+      \begin{itemize}
+        \item Եթե արդեն կա հակում դեպրեսիայի կամ անհանգստության, սթրեսը կարող է այն «արթնացնել»
+        \item<2-> Կորտիզոլը գրգռում է \textbf{դոֆամինի} համակարգը, որը կապված է փսիխոզի հետ
+        \item<3-> Սովորաբար պոռթկումը \textbf{կարճատև} է. բժշկի օգնությամբ կամ հարկադիր դադարից հետո մարդիկ վերադառնում են կյանքին
+        \item<4-> Բայց ոմանց մոտ սթրեսի նկատմամբ զգայունությունը \textbf{մնում է}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.38\textwidth}
+      \begin{card}[colback=peach!35!cardwhite]
+        \emoji[1.3em]{books}\ Գիրքն ընկավ ոտքիդ մատին. ցավում է։ Իսկ եթե մատն արդեն \textbf{կոտրված} էր, շատ ավելի է ցավում
+      \end{card}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Շնորհակալ լինե՞լ ուղեղին}
+  \begin{columns}[c]
+    \begin{column}{0.6\textwidth}
+      \begin{bookquote}
+        Ուղեղին շնորհակալ լինել, որ պոռթկմամբ սահմանափակում է սթրեսի վնասը, նույնն է, թե շնորհակալություն հայտնես մեկին, որ օգնեց տանդ հրդեհը մարել, երբ հենց ինքն էր տապակը միացրած թողել։
+      \end{bookquote}
+      \vspace{2mm}
+      {\small Ուղեղի սթրեսը հաղթահարելու ձևերը ստեղծվել են ուրիշ աշխարհի համար ու ժամանակակից կյանքին միշտ չէ, որ համապատասխանում են։}
+    \end{column}
+    \begin{column}{0.34\textwidth}
+      \centering\mascot[2.8cm]{smug}\par
+      \bigemoji[1cm]{fire}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------- break
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[butter!60!cream] (current page.south west) rectangle (current page.north east);
+    \node at ([yshift=8mm]current page.center) {\mascot[4cm]{sleepy}};
+    \node[anchor=north, font=\titlefont\fontsize{30}{32}\selectfont, text=plum] at ([yshift=-17mm]current page.center) {Ընդմիջում};
+    \node[anchor=north, font=\mediumfont\large, text=plum] at ([yshift=-31mm]current page.center)
+      {5 րոպե \emoji{coffee}\quad Պլանային անջատում, ոչ թե վթարային};
+  \end{tikzpicture}
+\end{frame}

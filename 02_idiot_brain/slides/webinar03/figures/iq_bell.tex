@@ -1,0 +1,45 @@
+% IQ is a normal distribution with mean 100 and SD 15 (Wechsler scales). Band names are the book's
+% classification; the shares are computed from the normal curve (not in the book):
+% <70 2.3%, 70-79 6.8%, 80-89 16.1%, 90-109 49.5%, 110-119 16.1%, 120-129 6.8%, 130+ 2.3%.
+% No \foreach inside the axis: pgfplots draws nodes after the loop, so loop variables would be lost.
+\begin{tikzpicture}
+  \begin{axis}[
+      width=13.2cm, height=4.0cm,
+      xmin=45, xmax=155, ymin=0, ymax=0.031,
+      axis x line*=bottom, axis y line=none, axis line style={plum},
+      xtick={70,80,90,100,110,120,130}, tick label style={font=\small, text=plum},
+      clip=false,
+      declare function={g(\x)=exp(-((\x-100)^2)/450)/(15*sqrt(2*pi));},
+    ]
+    \addplot[draw=none, fill=amRed!70!cream, domain=45:70, samples=40] {g(x)} \closedcycle;
+    \addplot[draw=none, fill=amRed!35!cream, domain=70:80, samples=20] {g(x)} \closedcycle;
+    \addplot[draw=none, fill=amOrange!55!cream, domain=80:90, samples=20] {g(x)} \closedcycle;
+    \addplot[draw=none, fill=amBlue!35!cream, domain=90:110, samples=40] {g(x)} \closedcycle;
+    \addplot[draw=none, fill=amOrange!55!cream, domain=110:120, samples=20] {g(x)} \closedcycle;
+    \addplot[draw=none, fill=amRed!35!cream, domain=120:130, samples=20] {g(x)} \closedcycle;
+    \addplot[draw=none, fill=amRed!70!cream, domain=130:155, samples=40] {g(x)} \closedcycle;
+    \addplot[plum, line width=1.2pt, domain=45:155, samples=160] {g(x)};
+    \draw[plum!50, line width=0.5pt] (axis cs:70,0) -- (axis cs:70,0.0036);
+    \draw[plum!50, line width=0.5pt] (axis cs:80,0) -- (axis cs:80,0.0109);
+    \draw[plum!50, line width=0.5pt] (axis cs:90,0) -- (axis cs:90,0.0213);
+    \draw[plum!50, line width=0.5pt] (axis cs:110,0) -- (axis cs:110,0.0213);
+    \draw[plum!50, line width=0.5pt] (axis cs:120,0) -- (axis cs:120,0.0109);
+    \draw[plum!50, line width=0.5pt] (axis cs:130,0) -- (axis cs:130,0.0036);
+    % shares, on or above each band
+    \node[font=\blackfont\large, text=plum] at (axis cs:100,0.012) {49.5\%};
+    \node[font=\blackfont\footnotesize, text=plum] at (axis cs:85,0.0062) {16.1\%};
+    \node[font=\blackfont\footnotesize, text=plum] at (axis cs:115,0.0062) {16.1\%};
+    \node[font=\blackfont\footnotesize, text=plum] at (axis cs:75,0.0098) {6.8\%};
+    \node[font=\blackfont\footnotesize, text=plum] at (axis cs:125,0.0098) {6.8\%};
+    \node[font=\blackfont\footnotesize, text=plum] at (axis cs:61,0.0045) {2.3\%};
+    \node[font=\blackfont\footnotesize, text=plum] at (axis cs:139,0.0045) {2.3\%};
+    % the book's names for the bands, under the tick labels
+    \node[anchor=north, font=\scriptsize, text=plum!85!cream, align=center] at (axis cs:58,-0.0042) {չափազանց\\ ցածր};
+    \node[anchor=north, font=\scriptsize, text=plum!85!cream, align=center, yshift=-6.5mm] at (axis cs:75,-0.0042) {սահմանային};
+    \node[anchor=north, font=\scriptsize, text=plum!85!cream, align=center] at (axis cs:85,-0.0042) {միջինից\\ ցածր};
+    \node[anchor=north, font=\scriptsize\bfseries, text=plum, align=center] at (axis cs:100,-0.0042) {միջին};
+    \node[anchor=north, font=\scriptsize, text=plum!85!cream, align=center] at (axis cs:115,-0.0042) {միջինից\\ բարձր};
+    \node[anchor=north, font=\scriptsize, text=plum!85!cream, align=center, yshift=-6.5mm] at (axis cs:125,-0.0042) {բարձր};
+    \node[anchor=north, font=\scriptsize, text=plum!85!cream, align=center] at (axis cs:142,-0.0042) {շատ\\ բարձր};
+  \end{axis}
+\end{tikzpicture}

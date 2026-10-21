@@ -1,0 +1,22 @@
+% Cherry's dichotic listening: a different stream of words in each ear; repeat the left one.
+% What people remember from the right ear appears on slide 2 (use inside a frame).
+\begin{tikzpicture}
+  \path[use as bounding box] (-6.4,-1.65) rectangle (6.4,1.8);
+  \node at (0,0.05) {\mascot[2.3cm]{thinking}};
+  % headphones
+  \draw[plum, line width=2.2pt] (-1.15,0.15) .. controls (-1.1,1.75) and (1.1,1.75) .. (1.15,0.15);
+  \filldraw[fill=amBlue, draw=plum, line width=1pt, rounded corners=1.5mm] (-1.42,-0.45) rectangle (-0.98,0.4);
+  \filldraw[fill=plum!45!cream, draw=plum, line width=1pt, rounded corners=1.5mm] (0.98,-0.45) rectangle (1.42,0.4);
+  % left ear: the stream to repeat
+  \node[chatmsg=3.7cm, fill=amBlue!12!cardwhite, align=center] (L) at (-4.2,0.55) {«խնձոր... սեղան... ամպ... գետ...»};
+  \node[wpill=amBlue] at (-4.2,1.5) {ձախ ականջ. կրկնիր բարձրաձայն};
+  \draw[warr=amBlue] (L.east) -- (-1.5,0.1);
+  % right ear: the ignored stream
+  \node[chatmsg=3.7cm, fill=cardwhite, align=center, text=plum!60!cream] (R) at (4.2,0.55) {«շուն... լամպ... կոշիկ... ձյուն...»};
+  \node[wpill=plum!60] at (4.2,1.5) {աջ ականջ. անտեսիր};
+  \draw[warr=plum!50] (R.west) -- (1.5,0.1);
+  % what is left of the ignored stream
+  \node[visible on=<2->, draw=pinkdark, line width=1.2pt, fill=blush!15!cardwhite, rounded corners=2.5mm,
+        text width=4.0cm, align=center, font=\small, text=plum, inner sep=4pt] at (4.2,-0.95)
+    {Աջից հիշում են միայն՝ \textbf{տղամարդ էր, թե կին}։ Նույնիսկ \textbf{լեզուն} չէին նկատում};
+\end{tikzpicture}

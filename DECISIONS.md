@@ -2,9 +2,25 @@
 
 Newest at the top.
 
+## 9. Chapters 3-8 become webinars 2-7, one chapter each, built by six parallel agents
+
+- **Date / status:** 2026-10-21, active (revises #3: webinar 1 stays intro + chapters 1-2; from webinar 2 on it is one chapter per webinar); revisited 2026-10-21: the queue now allows two builds at once, after one LuaLaTeX build of webinar 1 measured a peak of only 179 MB RAM, so CPU (4 cores), not RAM, is the limit
+- **Decision:** Each remaining chapter gets its own ~95 min deck (85-100 presented frames + appendix) in `slides/webinar02/` (ch3) to `slides/webinar07/` (ch8 + afterword), written at the same time by six Opus agents against one spec (`slides/DECK_BRIEF.md`). Shared files are frozen while they work. All LuaLaTeX builds go through `slides/common/build_deck.py`, which queues them behind one machine-wide lock. Webinar 2 on uses a TikZ title slide in the banner's layout (`\webinartitle`) instead of a banner image. Chapter 8 sticks to the book: no extra help-line slide.
+- **Why:** Hayk's answers on 2026-10-21: "~95 min, 1 per webinar", "All six now", "Opus 5.5", "No, book only". Builds are queued because only 1.7 GB of 15.6 GB RAM was free at launch, a background LuaLaTeX build was already killed for low RAM on 2026-10-19, and one pass of a ~100-frame deck takes ~3 min on one core. The lock test: a second build waited 55 s for the first, then built. The title macro exists because webinar 1's title slide is its banner, which carries webinar 1's number and date; dates for 2-7 are not set.
+- **Alternatives rejected:** ~50 min decks, two chapters per webinar (my recommendation; Hayk chose depth, so webinar 1's "next time" frame now says chapter 3 only); a two-deck pilot before the other four (Hayk chose speed, accepting that a systematic flaw can reach all six); Sonnet agents (cheaper, but weaker Armenian expected); a help-line slide in chapter 8 (Hayk: book only); a git worktree per agent (not needed: each agent writes only its own folder); a per-webinar banner from `build_banner.py` (needs dates nobody has yet).
+- **What would change this:** the first finished decks share a flaw (fix the brief, redo only what is affected); a chapter cannot fill ~85 frames without padding (let that deck be shorter); builds still get killed (close apps first, or build decks one after another); Hayk sets dates and wants banners per webinar (extend `build_banner.py` and swap the title frames).
+
+## 8. Webinar 1 deck retargeted to bachelor students: longer, a few memes, an appendix
+
+- **Date / status:** 2026-10-19, active (revises #7 for audience and length)
+- **Decision:** Aim the deck at bachelor students instead of high schoolers; let it grow to ~102 presented frames (~100-105 min) instead of ~80, add five meme templates with Armenian captions, add English/scientific terms in brackets, and put four appendix frames (corrections to the book, what we added, sources) after "Questions".
+- **Why:** Hayk's answers on 2026-10-19: "let it grow", "a few memes (3-5)", keep "դու", and no additions beyond the book for now. The extra frames mostly come from splitting the ~20 frames whose content was cut off at the bottom (the first draft's main defect), plus more of Burnett's own jokes. The frame title was made smaller and the topic pill moved to the footline, which freed ~1 cm per frame; the two test builds report 0 overfull vboxes. The appendix collects every correction and outside number already listed in NOTES.md, so students can check sources.
+- **Alternatives rejected:** keeping ~80 frames by cutting school-ish slides (Hayk chose to let it grow); trimming to ~65 frames; own art only, no memes; extra material beyond the book (Mandela effect quiz, group-project poll, VR sickness, doorway effect: Hayk said not yet); switching to "դուք".
+- **What would change this:** the rehearsal runs well over 105 min (NOTES.md lists 11 frames to skip first), the memes fall flat, or Hayk wants the extra studies after all.
+
 ## 7. Webinar 1 deck: 90 min, all 9 book sections, alcohol kept, notes in a separate file
 
-- **Date / status:** 2026-10-14, active
+- **Date / status:** 2026-10-14, revisited 2026-10-19 (audience and length, see #8)
 - **Decision:** `slides/webinar01/` covers the introduction and every section of chapters 1-2 in ~80 frames (14 of them openers or plain frames) with a 5 min break; the alcohol section is presented as in the book; Armenian speaker notes live in `slides/webinar01/NOTES.md`, keyed by frame number and title.
 - **Why:** Hayk's answers in the interview: ~90 min talk, keep the alcohol section as the book has it, notes as a separate file, title slide matching banner v2. Interactive moments (Zoom hand raises, chat prompts, a DRM false-memory word test shown at the start of Part 2 and revealed ~20 min later) keep a high-school audience involved over 90 min. Numbers not in the book were checked before use (Loftus & Palmer 1974, Sharpless & Barber 2011, Patient HM's dates, the 2021 failed replication of the divers study, Cassiopea jellyfish sleep 2017); every place the slides differ from the book is listed at the end of NOTES.md.
 - **Alternatives rejected:** 60 min / ~35 slides (Hayk chose 90); reframing or skipping the alcohol section (Hayk chose to keep it); Beamer `\note` pages (need pdfpc or a second screen while sharing Zoom).

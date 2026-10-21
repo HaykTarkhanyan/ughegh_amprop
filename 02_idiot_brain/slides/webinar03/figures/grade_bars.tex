@@ -1,0 +1,25 @@
+% The book's headmaster example for factor analysis: middling marks overall, but split by subject
+% maths did well and history badly. Made-up numbers (labelled as such on the slide).
+% Horizontal bars so the subject names fit; ytick lists every coord (ytick=data would only take the first plot's).
+\begin{tikzpicture}
+  \begin{axis}[
+      width=6.4cm, height=4.2cm,
+      xbar, bar width=0.5cm, bar shift=0pt,
+      xmin=0, xmax=100,
+      symbolic y coords={hist, lit, phys, math},
+      ytick={hist, lit, phys, math},
+      yticklabels={Պատմություն, Գրականություն, Ֆիզիկա, Մաթեմատիկա},
+      yticklabel style={font=\small, text=plum},
+      xtick=\empty, axis x line=none,
+      axis y line*=left, axis line style={plum},
+      nodes near coords, nodes near coords style={font=\blackfont\small, text=plum},
+      enlarge y limits=0.18, clip=false,
+    ]
+    \addplot[fill=amBlue, draw=none] coordinates {(81,math)};
+    \addplot[fill=amBlue, draw=none] coordinates {(74,phys)};
+    \addplot[fill=amBlue, draw=none] coordinates {(60,lit)};
+    \addplot[fill=amRed, draw=none] coordinates {(33,hist)};
+    \draw[plum, dashed, line width=0.8pt] ([yshift=-0.45cm]axis cs:62,hist) -- ([yshift=0.4cm]axis cs:62,math)
+      node[anchor=south, font=\scriptsize, text=plum, inner sep=1pt] {միջինը՝ 62};
+  \end{axis}
+\end{tikzpicture}

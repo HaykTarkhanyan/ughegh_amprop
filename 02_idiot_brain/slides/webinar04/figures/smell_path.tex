@@ -1,0 +1,15 @@
+% The smell pathway as in the book: molecules -> olfactory neurons in the upper nose -> olfactory bulb
+% -> olfactory nucleus and piriform cortex. Reveals in 4 steps (use inside a frame).
+\begin{tikzpicture}[st/.style={draw=plum, line width=0.8pt, rounded corners=2.5mm, align=center, font=\small,
+    text=plum, inner sep=4pt, text width=2.75cm, minimum height=2.3cm}]
+  \node[st, fill=brainpink!35!cardwhite] (a) at (0,0) {\bigemoji[0.75cm]{rose}\\[1mm] Մոլեկուլներ օդում};
+  \node[st, fill=peach!45!cardwhite, visible on=<2->] (b) at (3.5,0)
+    {\bigemoji[0.75cm]{nose}\\[1mm] \textbf{Հոտառական նեյրոններ}\\ քթի վերին մասում};
+  \node[st, fill=lavender!45!cardwhite, visible on=<3->] (c) at (7.0,0)
+    {\bigemoji[0.75cm]{brain}\\[1mm] \textbf{Հոտառական սոխուկ}\\ հավաքում ու դասավորում է};
+  \node[st, fill=mint!45!cardwhite, visible on=<4->] (d) at (10.5,0)
+    {\bigemoji[0.75cm]{sparkles}\\[1mm] \textbf{Կեղև}\\ (piriform cortex)\\ «Հոտ եմ զգում»};
+  \draw[warr, visible on=<2->] (a) -- (b);
+  \draw[warr, visible on=<3->] (b) -- (c);
+  \draw[warr, visible on=<4->] (c) -- (d);
+\end{tikzpicture}

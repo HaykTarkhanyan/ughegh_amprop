@@ -1,0 +1,31 @@
+% Change-blindness demo (flicker): scene with a chimney on slides 1, 5 and 8, without it on 3 and 7,
+% a blank screen on 2, 4 and 6; slide 8 circles the change. Use inside a frame with 8 slides.
+\begin{tikzpicture}[scale=0.9]
+  \path[use as bounding box] (-5.2,-2.15) rectangle (5.2,2.15);
+  \begin{scope}
+    \clip[rounded corners=3mm] (-5.1,-2.1) rectangle (5.1,2.1);
+    \fill[lavender!40!cardwhite] (-5.1,-2.1) rectangle (5.1,2.1);
+    \fill[mint!60!cardwhite] (-5.1,-2.1) rectangle (5.1,-0.9);
+    % sun and cloud
+    \fill[amOrange!75] (3.9,1.45) circle (0.4);
+    \fill[cardwhite] (-3.2,1.45) ellipse (0.75 and 0.3) (-2.7,1.6) ellipse (0.5 and 0.3);
+    % house
+    \only<1,2,4,5,6,8>{\filldraw[fill=peachdark!75, draw=plum, line width=0.8pt] (0.95,0.95) rectangle (1.3,1.65);}
+    \filldraw[fill=peach, draw=plum, line width=0.8pt] (-0.4,-1.0) rectangle (1.9,0.55);
+    \filldraw[fill=plum!70, draw=plum, line width=0.8pt] (-0.6,0.55) -- (0.75,1.55) -- (2.1,0.55) -- cycle;
+    \filldraw[fill=butter, draw=plum, line width=0.7pt] (-0.1,-0.35) rectangle (0.45,0.2);
+    \filldraw[fill=peachdark, draw=plum, line width=0.7pt] (0.95,-1.0) rectangle (1.45,-0.05);
+    % tree, fence, car
+    \fill[peachdark] (-2.75,-1.0) rectangle (-2.5,-0.2);
+    \fill[mintdark] (-2.62,0.15) circle (0.62);
+    \foreach \x in {-4.8,-4.4,...,-3.2}{\filldraw[fill=cardwhite, draw=plum, line width=0.5pt] (\x,-1.0) rectangle ++(0.18,0.6);}
+    \draw[plum, line width=0.6pt] (-4.85,-0.65) -- (-3.0,-0.65);
+    \node at (3.5,-1.15) {\bigemoji[0.9cm]{car}};
+  \end{scope}
+  \draw[plum, line width=0.9pt, rounded corners=3mm] (-5.1,-2.1) rectangle (5.1,2.1);
+  % blank flashes
+  \only<2,4,6>{\fill[cream] (-5.2,-2.15) rectangle (5.2,2.15);}
+  % the answer
+  \only<8>{\draw[amRed, line width=2pt] (1.12,1.3) circle (0.55);
+    \node[wpill=amRed] at (2.6,1.75) {ծխնելույզը};}
+\end{tikzpicture}

@@ -1,0 +1,368 @@
+% ===== Section 4: "People power" (social brain, conformity, bystanders, groupthink, mobs) (~18 min) =====
+\partaccent{lavender}
+\topicopener{people}{Խմբի ուժը}{Մարդկանց ուժը}{Ինչ է անում ուղեղը, երբ խմբի մաս ես}{happy}
+
+% What is a friend?
+\begin{frame}{Ի՞նչ է ընկերը}
+  \begin{columns}[c]
+    \begin{column}{0.48\textwidth}
+      \begin{itemize}
+        \item Հարց, որ բարձրաձայն տալիս բավական \textbf{ողորմելի} ես երևում
+        \item Ընկերը մեկն է, ում հետ անձնական կապ ունես, որը ոչ ընտանեկան է, ոչ ռոմանտիկ
+        \item<3-> Այսքան կապ պահելու համար հզոր ուղեղ է պետք։ Ըստ որոշ գիտնականների՝ դա \textbf{պատահական չէ}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \onslide<2->{%
+      \chip{boss}{աշխատանքի ընկերներ}\par\smallskip
+      \chip{student}{դպրոցի ընկերներ} \chip{hourglass}{հին ընկերներ}\par\smallskip
+      \chip{wavehand}{ծանոթներ} \chip{computer}{առցանց ընկերներ}\par\medskip
+      \begin{card}[colback=lavender!40!cardwhite]
+        \emoji{neutral}\ Ու ընկերներ, որոնց \textbf{չես սիրում}, բայց այնքան վաղուց ես ճանաչում, որ էլ չես ազատվի
+      \end{card}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Social brain hypothesis: sheep, wolves, humans
+\begin{frame}{Սոցիալական ուղեղի վարկած (social brain hypothesis)}
+  \centering
+  \begin{tikzpicture}
+    \foreach \i/\e/\n/\t/\g/\s/\f in {
+        0/sheep/{Ոչխարներ}/{Մեծ հոտ, բայց կյանքը՝ խոտ ուտել ու փախչել։ Խելք պետք չէ}/{}/1/20,
+        1/dog/{Գայլեր}/{Որսում են ոհմակով, համաձայնեցված։ Ավելի խելացի են, քան իրենց զոհերը}/{խաչ ու զրո}/2/40,
+        2/people/{Մարդիկ}/{Մեկը որսում է, մյուսը խնամում է երեխաներին, երրորդը գործիք է սարքում}/{\emoji{chess}\ շախմատի մրցաշար}/3/60}{
+      \begin{scope}[visible on=<\s->]
+        \node at (0,\i*1.45) {\bigemoji[1.1cm]{\e}};
+        \node[personnode, fill=lavender!\f!cardwhite, text width=6.3cm, anchor=west, align=left]
+          at (0.9,\i*1.45) {\textbf{\n}. \t};
+        \node[font=\blackfont\small, text=lavenderdark, anchor=west] at (8.4,\i*1.45) {\g};
+      \end{scope}}
+    \draw[-{Stealth[length=3mm]}, plum, line width=1.4pt, visible on=<3->] (-1,-0.5) -- (-1,3.4)
+      node[midway, rotate=90, above, font=\small, text=plum] {ուղեղի ուժը};
+  \end{tikzpicture}\par\vspace{3mm}
+  \onslide<4->{{\small Բարդ համայնքի բոլոր հարաբերությունները կառավարելու համար հզոր ուղեղ է պետք։ Այսինքն՝ մեծ ուղեղը մարդկային \textbf{ընկերասիրության} արդյունք է (Դանբար)։}\par}
+\end{frame}
+
+% Is it proven? Friendship, models, and a 2017 challenge
+\begin{frame}{Ապացուցվա՞ծ է}
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \begin{itemize}
+        \item Համայնքում հոգ ենք տանում նաև \textbf{ոչ ազգականների} մասին. դրանից էլ ընկերությունը (իսկ շունը ցույց է տալիս, որ նույն տեսակն էլ պարտադիր չէ) \emoji{dog}
+        \item Օքսֆորդ, 2013. համակարգչային մոդելներ, որ սոցիալական կապերը ավելի շատ հաշվարկ են պահանջում։ Բայց \textbf{ինչպե՞ս մոդելավորես ընկերությունը}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \onslide<2->{%
+      \begin{scienceupdate}
+        2017-ին 140-ից ավելի պրիմատ տեսակների վերլուծությունը ցույց տվեց, որ ուղեղի չափը ավելի լավ է կանխատեսում \textbf{սննդակարգը} (մրգակերներն ավելի մեծ ուղեղ ունեն), քան խմբի չափը։ Բանավեճը շարունակվում է։
+      \end{scienceupdate}}
+    \end{column}
+  \end{columns}
+  \source{DeCasien, Williams \& Higham, Nat. Ecol. Evol., 2017}
+\end{frame}
+
+% Peer pressure: normative social influence
+\begin{frame}{Կեղծ համաձայնություն}
+  \begin{columns}[c]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \item Ասում ես, որ սիրում ես խումբը, որը ատում ես, որովհետև «կուլ» ընկերները սիրում են
+        \item \textbf{Նորմատիվ սոցիալական ազդեցություն} (normative social influence). ուղեղը կարծիք է կազմում ու \textbf{հրաժարվում} է դրանից, եթե խումբը համաձայն չէ
+        \item<2-> Ուղեղը հաճախ «սիրված լինելը» դասում է «ճիշտ լինելուց» վեր
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \onslide<3->{%
+      \begin{poll}
+        \emoji{film}\,\emoji{musical}\par\smallskip
+        Բարձրացրու ձեռքդ, եթե ձևացրել ես, թե երգը կամ ֆիլմը քեզ դուր է գալիս, որովհետև \textbf{ընկերներիդ} դուր էր գալիս։
+      \end{poll}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Asch-style mini experiment in the chat
+\begin{frame}{Փոքրիկ փորձ}
+  \begin{columns}[c]
+    \begin{column}{0.48\textwidth}
+      \centering
+      {\blackfont Ո՞ր գիծն է X-ի երկարությամբ}\par\medskip
+      \begin{tikzpicture}
+        \filldraw[fill=cardwhite, draw=plum, line width=0.8pt, rounded corners=2mm] (0,0) rectangle (1.6,3.6);
+        \draw[plum, line width=2.4pt] (0.8,0.65) -- (0.8,3.05);
+        \node[font=\blackfont, text=plum] at (0.8,0.3) {X};
+        \filldraw[fill=cardwhite, draw=plum, line width=0.8pt, rounded corners=2mm] (2,0) rectangle (5.8,3.6);
+        \foreach \x/\l/\t in {2.7/1.9/Ա, 3.9/2.4/Բ, 5.1/3.0/Գ}{
+          \draw[plum, line width=2.4pt] (\x,0.65) -- (\x,0.65+\l);
+          \node[font=\blackfont, text=plum] at (\x,0.3) {\t};}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{tikzpicture}
+        \foreach \i/\n/\a/\s in {0/Անի/Ա/2, 1/Դավիթ/Ա/3, 2/Մարիամ/{Ա, միանշանակ}/4, 3/Արամ/Ա/5, 4/Լիլիթ/{Իհարկե Ա}/6}{
+          \node[chatmsg=4.6cm, fill=lavender!35!cardwhite, anchor=north west, visible on=<\s->] at (0,-\i*0.72)
+            {\textbf{\n}. \a};}
+      \end{tikzpicture}\par\medskip
+      \onslide<7->{%
+      \begin{chatbox}
+        Իսկ դու՞։ Գրիր չաթում՝ \textbf{Ա}, \textbf{Բ}, թե \textbf{Գ}
+      \end{chatbox}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Asch: the reveal
+\begin{frame}{Աշի փորձը (1951)}
+  \begin{columns}[c]
+    \begin{column}{0.6\textwidth}
+      \begin{itemize}
+        \item Սողոմոն Աշը մարդկանց փոքր խմբերով տալիս էր նման \textbf{պարզ} հարցեր
+        \item Խմբում միայն \textbf{մեկն} էր իրական մասնակից։ Մնացածը դերասաններ էին՝ պատվիրված միաձայն սխալ պատասխանելու
+        \item Իրական մասնակիցը պատասխանում էր \textbf{վերջում}, երբ բոլորն արդեն ասել էին
+        \item<2-> Ինչու՞ էր սխալ պատասխանում։ «Չէի ուզում խառնաշփոթ սարքել»։ Անծանոթների հավանությունն ավելի կարևոր էր, քան \textbf{սեփական աչքերը}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.36\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \node (m) at (0,0) {\mascot[2.4cm]{confused}};
+        \node[say, callout absolute pointer={(m.north)}, font=\handfont\large] at (0.2,2.1) {Ա... երևի...};
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Asch: the real numbers (correction)
+\begin{frame}{Քանի՞ տոկոսն է տեղի տալիս}
+  \begin{columns}[c]
+    \begin{column}{0.52\textwidth}
+      \begin{tikzpicture}[x=0.052cm]
+        \foreach \y/\v/\l/\t/\c/\s in {0/37/37\%/{սխալ պատասխաններ «խմբով» հարցերում}/amRed/1,
+                                        1/75/75\%/{գոնե մեկ անգամ տեղի տվածներ}/amOrange/2,
+                                        2/25/25\%/{երբեք տեղի չտվածներ}/amBlue/3,
+                                        3/1/$<$1\%/{սխալներ, երբ խումբ չկա}/plum!45!cream/4}{
+          \begin{scope}[visible on=<\s->]
+            \node[anchor=south west, font=\small, text=plum, inner sep=1pt] at (0,-\y*1.05+0.32) {\t};
+            \fill[\c, rounded corners=1pt] (0,-\y*1.05-0.12) rectangle (\v,-\y*1.05+0.28);
+            \node[anchor=west, font=\blackfont\small, text=plum] at (\v,-\y*1.05+0.08) {\l};
+          \end{scope}}
+      \end{tikzpicture}\par\medskip
+      \onslide<6->{{\small Մենք անդեմ ռոբոտներ չենք. միշտ կա մեկը, որ ասում է այն, ինչին բոլորը դեմ են։ Հեռուստաշոուներում դրանով միլիոններ են վաստակում։}\par}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \onslide<5->{%
+      \begin{scienceupdate}
+        Գրքում՝ «75\% դեպքերում սխալ էին պատասխանում»։ Իրականում 75\%-ը սխալվել է \textbf{գոնե մեկ անգամ}, իսկ սխալ պատասխանները մոտ \textbf{37\%} էին։ Ու Աշը հարցնում էր ոչ թե «որն է ամենաերկարը», այլ «որն է \textbf{նույն} երկարությամբ»։
+      \end{scienceupdate}}
+    \end{column}
+  \end{columns}
+  \source{Asch, Psychol. Monogr., 1956}
+\end{frame}
+
+% Informational social influence
+\begin{frame}{Երբ չգիտես՝ նայում ես ուրիշներին}
+  \begin{columns}[c]
+    \begin{column}{0.58\textwidth}
+      \begin{itemize}
+        \item Եթե բոլոր ընկերներդ պնդեն, որ 2 + 2 = 7, \textbf{չես համաձայնի}. ճշմարտությունն ակնհայտ է
+        \item<2-> Իսկ \textbf{անորոշ} իրավիճակում ուղեղը ուրիշներին օգտագործում է որպես տեղեկության աղբյուր. \textbf{տեղեկատվական սոցիալական ազդեցություն}
+        \item<3-> Դրա համար են այդքան համոզիչ «ընկերոջս մոր զարմուհին ասաց» տիպի պատմությունները։ Այսպես են ապրում այլընտրանքային բժշկությունն ու դավադրության տեսությունները
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.38\textwidth}
+      \centering
+      {\blackfont\fontsize{30}{32}\selectfont 2 + 2 = 7}\ \bigemoji[1cm]{cross}\par\bigskip
+      \onslide<3->{\bigemoji[1.3cm]{speakinghead}\ \bigemoji[1.1cm]{pill}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Imitation, mirror neurons, the mammoth
+\begin{frame}{Սովորում ենք՝ ընդօրինակելով}
+  \begin{columns}[T]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \item Երեխաները սովորում են \textbf{ընդօրինակելով}
+        \item \textbf{Հայելային նեյրոններ} (mirror neurons). ակտիվանում են և՛ երբ գործողություն ես անում, և՛ երբ տեսնում ես, թե ինչպես է ուրիշն անում
+        \item Բըրնեթն ինքն է զգուշացնում. դրանք \textbf{վիճելի} թեմա են, մի ընդունիր որպես փաստ
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \onslide<2->{%
+      \begin{card}[colback=lavender!40!cardwhite]
+        \emoji{loudspeaker}\ Ուժեղ ձայն։ Գուցե կատաղած \textbf{մամո՞նտ} է։ Ամբողջ ցեղը ճչալով փախչում է. ուրեմն գիտեն, ու դու էլ ես փախչում։\par\smallskip
+        Ցեղակիցներդ Google-ից շատ ավելի վաղուց կան։
+      \end{card}}
+      \onslide<3->{{\small Բայց երբեմն ուրիշներին նայելը \textbf{մութ} հետևանքներ է ունենում...}\par}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Kitty Genovese and the bystander effect
+\begin{frame}{Քիթի Ջենովեզե, 1964}
+  \begin{columns}[T]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \item Նյու Յորքում դաժանաբար սպանեցին Քիթի Ջենովեզեին։ Թերթերը գրեցին, որ \textbf{38 մարդ} տեսել է, բայց ոչինչ չի արել
+        \item<2-> Դարլին ու Լատանեն սկսեցին ուսումնասիրել դա. \textbf{դիտորդի էֆեկտ} (bystander effect)։ Երբ շուրջը ուրիշներ կան, ավելի քիչ ենք միջամտում
+        \item<3-> Պատճառը միշտ չէ, որ եսասիրությունն է. երբ չգիտենք՝ ինչ անել, նայում ենք ուրիշներին
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \onslide<4->{%
+      \begin{card}[colback=lavender!40!cardwhite]
+        \emoji{newspaper}\ Գրքի ծանոթագրությունն էլ է ասում. պատմությունը մեծապես \textbf{չափազանցված} էր։ 2016-ին New York Times-ն ինքը գրեց, որ վկաների թիվն ու տեսածը «կոպտորեն ուռճացրել» էր։ Բայց էֆեկտը իրական է։
+      \end{card}}
+    \end{column}
+  \end{columns}
+  \source{Manning, Levine \& Collins, Am. Psychol., 2007; The New York Times, 2016}
+\end{frame}
+
+% Darley & Latane numbers and the CCTV update
+\begin{frame}{Դիտորդի էֆեկտը թվերով}
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[
+            ybar, width=6.4cm, height=4.6cm, bar width=0.9cm,
+            ymin=0, ymax=100, enlarge x limits=0.3,
+            symbolic x coords={alone, one, four},
+            xtick={alone, one, four}, % not xtick=data: three \addplot
+            xticklabels={մենակ, +1 մարդ, +4 մարդ},
+            xticklabel style={align=center, font=\small, text=plum},
+            axis line style={plum}, axis x line*=bottom, axis y line=none,
+            nodes near coords={\pgfmathprintnumber{\pgfplotspointmeta}\%},
+            nodes near coords style={font=\blackfont\small, text=plum},
+            clip=false,
+          ]
+          \addplot[fill=amRed, draw=none] coordinates {(alone,85)};
+          \addplot[fill=amBlue, draw=none] coordinates {(one,62)};
+          \addplot[fill=amOrange, draw=none] coordinates {(four,31)};
+        \end{axis}
+      \end{tikzpicture}\par
+      {\scriptsize Դարլի ու Լատանե, 1968. ինտերկոմով լսում են «ցնցումների նոպա»։ Քանի՞սն են օգնություն կանչել, մինչև նոպան ավարտվի}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \onslide<2->{%
+      \begin{scienceupdate}
+        Իսկ իրական փողոցներում. 3 երկրի տեսախցիկների 219 տեսագրությունում կոնֆլիկտների \textbf{91\%}-ում գոնե մեկ անցորդ միջամտել է։ Ու որքան շատ դիտորդ, այնքան \textbf{ավելի հավանական} էր, որ ինչ-որ մեկը կօգնի։
+      \end{scienceupdate}}
+    \end{column}
+  \end{columns}
+  \source{Darley \& Latané, J. Pers. Soc. Psychol., 1968; Philpot et al., Am. Psychol., 2020}
+\end{frame}
+
+% Groupthink
+\begin{frame}{Խմբային մտածողություն (groupthink)}
+  \begin{columns}[c]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \item Խմբում բոլորն ուզում են \textbf{ներդաշնակություն}. վիճող խումբն անօգուտ է ու տհաճ
+        \item<2-> Երբ այդ ցանկությունը շատ ուժեղ է, մարդիկ համաձայնում են բաների, որոնք մենակ կհամարեին \textbf{անխոհեմ}
+        \item<3-> Երբ խմբի խաղաղությունն ավելի կարևոր է, քան տրամաբանական որոշումը, դա \textbf{խմբային մտածողություն} է
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \foreach \x in {0,1.1,2.2}{\node at (\x,0) {\bigemoji[0.9cm]{slightsmile}};
+          \node[font=\blackfont\small, text=mintdark] at (\x,-0.75) {Այո};}
+        \node at (3.3,0) {\bigemoji[0.9cm]{neutral}};
+        \node[font=\blackfont\small, text=mintdark] at (3.3,-0.75) {Այո...};
+        \node[draw=plum, dashed, line width=0.7pt, fill=cardwhite, rounded corners=2mm, font=\handfont\small,
+              text=plum, align=center, visible on=<2->] at (2.6,1.4) {(մտքում) Վատ գաղափար է,\\ բայց չասեմ};
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Group polarisation: the book's escalating dialogue
+\begin{frame}{Խմբային բևեռացում}
+  \begin{columns}[T]
+    \begin{column}{0.44\textwidth}
+      \begin{itemize}
+        \item 30 անծանոթի հարցնես կանեփի օրինականացման մասին. կարծիքները \textbf{տարբեր} կլինեն
+        \item Միասին նրանց համաձայնությունը պետք է «միջինը» լինի
+        \item<2-> Բայց խումբը հաճախ ընդունում է \textbf{ավելի ծայրահեղ} կարծիք, քան անդամները մենակ. բոլորն ուզում են խմբին տպավորել ու գերազանցել իրար
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \begin{tikzpicture}
+        \foreach \i/\e/\t/\s/\f in {0/neutral/{Ուրեմն չօրինականացնել։ Պահելը՝ ձերբակալում}/3/20,
+                                 1/angry/{Ձերբակալո՞ւմ։ Ո՛չ, տասը տարի բանտ}/4/35,
+                                 2/rage/{Տասը տարի՞։ Ցմահ}/5/50,
+                                 3/exploding/{Ցմա՞հ։ Հիպի՛։ Մահապատիժ, նվազագույնը}/6/65}{
+          \node[visible on=<\s->] at (0,-\i*1.3) {\bigemoji[0.75cm]{\e}};
+          \node[chatmsg=5.9cm, fill=lavender!\f!cardwhite, anchor=west, visible on=<\s->]
+            at (0.55,-\i*1.3) {\t};}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Polarisation in power
+\begin{frame}{Իսկ որոշումները կայացնում են...}
+  \begin{columns}[c]
+    \begin{column}{0.56\textwidth}
+      \begin{itemize}
+        \item Բևեռացումը կարելի է կանխել՝ թույլ տալով \textbf{քննադատություն} ու դրսի կարծիքներ
+        \item Բայց ներդաշնակության ցանկությունը հաճախ \textbf{դուրս է մղում} այլախոհներին
+        \item<2-> Կառավարություններ, բանակներ, կորպորացիաների խորհուրդներ. ի՞նչն է նրանց պաշտպանում բևեռացումից
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \centering
+      \bigemoji[1.1cm]{ballot}\ \bigemoji[1.1cm]{boss}\par\medskip
+      \onslide<3->{%
+      \begin{bookquote}
+        Ոչինչ։ \textbf{Բացարձակապես ոչինչ}։
+      \end{bookquote}}
+      \onslide<4->{{\small \emoji{tv}\ Monty Python-ի «Չորս յորքշիրցիները» խմբային բևեռացման հիանալի (թեև պատահական) օրինակ է}\par}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Emotional contagion and deindividuation
+\begin{frame}{Ամբոխը}
+  \begin{columns}[T]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \item Մտնում ես սենյակ, որտեղ զույգը նոր է վիճել, ու «օդը լարված է»։ Տելեպատիա չէ. ուղեղը որսում է շատ նշաններ
+        \item Ուրիշների զգացմունքները փոխում են մերը. դահլիճում ավելի հեշտ ենք ծիծաղում
+        \item<2-> Իսկ ամբոխում կարող է լինել \textbf{ապաանհատականացում} (deindividuation)՝ «ամբոխի մտածելակերպ»
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \onslide<2->{%
+      \begin{card}[colback=lavender!40!cardwhite]
+        {\blackfont Պայմանները}\par\smallskip
+        \emoji{people}\ խիտ ու \textbf{անանուն} խումբ\par\smallskip
+        \emoji{fire}\ ուժեղ զգացմունքներ\par\smallskip
+        \emoji{eyes}\ ուշադրությունը դրսում, ոչ թե սեփական արարքների վրա
+      \end{card}}
+      \onslide<3->{{\small Կորչում են ինքնազսպումն ու դատվելու վախը։}\par}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Mobs: hard to study; what we know today
+\begin{frame}{Ամբոխը լաբորատորիայում}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{bookquote}
+        Լաբորատորիայում կատաղած ամբոխ հազվադեպ ես տեսնում, եթե միայն նրանք չեն իմացել, թե ինչպես ես գերեզմաններ քանդում ու փորձում մեռելներին հարություն տալ։
+      \end{bookquote}
+      \centering\bigemoji[1.1cm]{candle}\ \bigemoji[1.1cm]{skull}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \onslide<2->{%
+      \begin{scienceupdate}
+        60 հետազոտության վերլուծությունը (1998) ցույց տվեց, որ ամբոխում մարդիկ \textbf{չեն կորցնում} իրենց ինքնությունը, այլ ավելի խիստ են հետևում \textbf{տվյալ խմբի նորմերին}։ Իսկ նորմը կարող է լինել նաև խաղաղ ու օգնող։
+      \end{scienceupdate}}
+    \end{column}
+  \end{columns}
+  \source{Postmes \& Spears, Psychol. Bull., 1998}
+\end{frame}

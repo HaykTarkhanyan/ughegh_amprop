@@ -1,0 +1,15 @@
+% Burnett's parent-and-bins version of how attention shifts to something important: the posterior
+% parietal cortex disengages, the superior colliculus moves, the pulvinar re-engages. Steps on slides 1-3.
+\begin{tikzpicture}[
+    stage/.style={draw=plum, line width=0.9pt, rounded corners=3mm, text width=3.6cm, align=center,
+      font=\small, text=plum, inner sep=3.5pt, minimum height=2.7cm},
+  ]
+  \node[stage, fill=lavender!40!cardwhite] (a) at (0,0)
+    {\bigemoji[0.7cm]{tv}\\[1mm] \textbf{Անջատել}\\ {\scriptsize հետին գագաթային կեղև}\\[1mm] Ծնողն անջատում է հեռուստացույցը};
+  \node[stage, fill=mint!40!cardwhite, visible on=<2->] (b) at (4.6,0)
+    {\bigemoji[0.7cm]{walking}\\[1mm] \textbf{Տեղափոխել}\\ {\scriptsize վերին թմբիկներ (superior colliculus)}\\[1mm] Երեխային տանում է խոհանոց};
+  \node[stage, fill=peach!45!cardwhite, visible on=<3->] (c) at (9.2,0)
+    {\bigemoji[0.7cm]{wastebasket}\\[1mm] \textbf{Նորից միացնել}\\ {\scriptsize թալամուսի բարձիկ (pulvinar)}\\[1mm] Աղբի տոպրակը տալիս է ձեռքը ու հրում դեպի դուռը};
+  \draw[warr, visible on=<2->] (a) -- (b);
+  \draw[warr, visible on=<3->] (b) -- (c);
+\end{tikzpicture}

@@ -1,0 +1,22 @@
+% Burnett's comparison: if the retina were a widescreen TV, the fovea would be a thumbprint in the
+% middle. Everything outside it is blurry outlines. The thumbprint appears on slide 2.
+\begin{tikzpicture}
+  \path[use as bounding box] (-3.6,-2.35) rectangle (3.6,2.2);
+  % the TV
+  \filldraw[fill=plum, draw=plum, rounded corners=2mm] (-3.45,-1.85) rectangle (3.45,2.05);
+  \fill[night!80!lavender] (-3.25,-1.65) rectangle (3.25,1.85);
+  \draw[plum, line width=2pt] (-0.6,-1.85) -- (-0.9,-2.3) (0.6,-1.85) -- (0.9,-2.3);
+  % blurry outlines of a scene
+  \fill[mint, opacity=0.25] (-3.25,-1.65) rectangle (3.25,-0.6);
+  \fill[butter, opacity=0.3] (2.2,1.2) circle (0.5);
+  \fill[peach, opacity=0.25] (-2.4,-0.7) rectangle (-1.4,0.5);
+  \fill[lavender, opacity=0.25] (1.0,-0.7) rectangle (2.3,0.9);
+  \fill[brainpink, opacity=0.25] (-2.0,0.95) ellipse (0.6 and 0.25);
+  % the thumbprint: the only sharp part
+  \begin{scope}[visible on=<2->]
+    \fill[cardwhite] (0,0.1) ellipse (0.3 and 0.38);
+    \foreach \r in {0.06,0.12,0.18,0.24}{\draw[plum, line width=0.45pt] (0,0.1) ellipse ({\r} and {\r*1.3});}
+    \draw[amOrange, line width=1.2pt] (0,0.1) ellipse (0.36 and 0.45);
+    \draw[amOrange, line width=0.8pt] (0.36,0.25) -- (1.6,1.35) node[anchor=south, font=\blackfont\scriptsize, text=butter, fill=plum, inner sep=2pt] {ֆովեա};
+  \end{scope}
+\end{tikzpicture}

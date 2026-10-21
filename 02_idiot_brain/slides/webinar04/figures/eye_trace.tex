@@ -1,0 +1,22 @@
+% Eye position over time: looking across a room = jumps (saccades), following a moving finger = smooth
+% (pursuit). The second panel appears on slide 2 (use inside a frame).
+\begin{tikzpicture}[
+    ax/.style={-{Stealth[length=2mm]}, plum, line width=0.8pt},
+    axl/.style={font=\scriptsize, text=plum},
+  ]
+  % saccades
+  \draw[ax] (0,0) -- (4.4,0) node[axl, below left] {ժամանակ};
+  \draw[ax] (0,0) -- (0,2.3) node[axl, above right, align=left] {աչքի դիրքը};
+  \draw[amRed, line width=1.6pt, line join=round]
+    (0.1,0.2) -- (0.8,0.2) -- (0.86,0.75) -- (1.6,0.75) -- (1.66,1.15) -- (2.4,1.15) -- (2.46,1.7) -- (3.3,1.7) -- (3.36,2.0) -- (4.1,2.0);
+  \node[font=\blackfont\small, text=plum] at (2.1,-0.5) {նայում ես սենյակով մեկ};
+  \node[font=\scriptsize, text=amRed] at (2.1,-0.9) {ցատկեր (saccades)};
+  % smooth pursuit
+  \begin{scope}[xshift=5.6cm, visible on=<2->]
+    \draw[ax] (0,0) -- (4.4,0) node[axl, below left] {ժամանակ};
+    \draw[ax] (0,0) -- (0,2.3);
+    \draw[amBlue, line width=1.6pt] (0.1,0.2) .. controls (1.5,0.5) and (2.8,1.6) .. (4.1,2.0);
+    \node[font=\blackfont\small, text=plum] at (2.1,-0.5) {հետևում ես մատիդ};
+    \node[font=\scriptsize, text=amBlue] at (2.1,-0.9) {սահուն հետևում (pursuit)};
+  \end{scope}
+\end{tikzpicture}

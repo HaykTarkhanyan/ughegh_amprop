@@ -1,0 +1,25 @@
+% A pattern-completion item in the style of the book's "spatial awareness with pattern completion tests":
+% rows = shape, columns = count. Answer: Գ (three triangles), revealed on overlay 2.
+\tikzset{
+  pics/pzcirc/.style={code={\filldraw[fill=amBlue!55!cream, draw=plum, line width=0.6pt] (0,0) circle (0.12);}},
+  pics/pzsq/.style={code={\filldraw[fill=amOrange!70!cream, draw=plum, line width=0.6pt] (-0.11,-0.11) rectangle (0.11,0.11);}},
+  pics/pztri/.style={code={\filldraw[fill=amRed!55!cream, draw=plum, line width=0.6pt] (-0.13,-0.1) -- (0.13,-0.1) -- (0,0.14) -- cycle;}},
+}
+\begin{tikzpicture}
+  % the 3x3 grid
+  \foreach \r in {0,1,2}{\foreach \c in {0,1,2}{\node[ptile] at (\c*1.3,-\r*1.3) {};}}
+  \foreach \r/\s in {0/pzcirc, 1/pzsq}{
+    \foreach \c in {0,1,2}{\foreach \k in {0,...,\c}{\pic at ({\c*1.3+(\k-\c/2)*0.32},-\r*1.3) {\s};}}}
+  \foreach \c in {0,1}{\foreach \k in {0,...,\c}{\pic at ({\c*1.3+(\k-\c/2)*0.32},-2.6) {pztri};}}
+  \node[ptile, fill=butter!70!cream, font=\blackfont\LARGE, text=plum] at (2.6,-2.6) {?};
+  % the four options
+  \node[font=\blackfont\small, text=plum] at (5.55,0.75) {Ընտրիր մեկը};
+  \foreach \i/\x/\y in {0/4.9/0, 1/6.2/0, 2/4.9/-1.75, 3/6.2/-1.75}{\node[ptile] (o\i) at (\x,\y) {};}
+  \foreach \k in {0,1,2}{\pic at ({4.9+(\k-1)*0.32},0) {pzsq};}
+  \foreach \k in {0,1}{\pic at ({6.2+(\k-0.5)*0.32},0) {pztri};}
+  \foreach \k in {0,1,2}{\pic at ({4.9+(\k-1)*0.32},-1.75) {pztri};}
+  \foreach \k in {0,1,2}{\pic at ({6.2+(\k-1)*0.32},-1.75) {pzcirc};}
+  \foreach \i/\t in {0/Ա, 1/Բ, 2/Գ, 3/Դ}{\node[font=\blackfont\normalsize, text=plum, below=0.5mm of o\i] {\t};}
+  % answer
+  \draw[mintdark, line width=2pt, rounded corners=2mm, visible on=<2->] (4.25,-1.1) rectangle (5.55,-2.75);
+\end{tikzpicture}

@@ -1,0 +1,30 @@
+% The cochlea unrolled: a frequency map. High pitches peak near the start (base), low pitches near the
+% end (apex). Tick positions are schematic (roughly logarithmic), the 20-20,000 Hz range is from the book.
+% Reveals: 2 = high-pitch wave, 3 = low-pitch wave (use inside a frame).
+\begin{tikzpicture}[x=1cm, y=1cm]
+  \path[use as bounding box] (-0.6,-1.6) rectangle (11.4,1.6);
+  % the unrolled tube
+  \shade[left color=amRed!55!cardwhite, right color=amBlue!45!cardwhite, rounded corners=3mm]
+    (0,-0.45) -- (10.6,-0.25) -- (10.6,0.25) -- (0,0.45) -- cycle;
+  \draw[plum, line width=1pt, rounded corners=3mm] (0,-0.45) -- (10.6,-0.25) -- (10.6,0.25) -- (0,0.45) -- cycle;
+  \foreach \f/\x in {20\,000/0.35, 2000/3.6, 200/6.95, 20/10.25}{
+    \draw[plum, line width=0.8pt] (\x,-0.5) -- (\x,-0.68);
+    \node[font=\blackfont\scriptsize, text=plum, below] at (\x,-0.66) {\f\ Հց};}
+  \node[font=\scriptsize, text=plum, anchor=north west] at (-0.1,-1.15) {\textbf{սկիզբ}};
+  \node[font=\scriptsize, text=plum, anchor=north east] at (10.7,-1.15) {\textbf{վերջ}};
+  \node[font=\scriptsize, text=plum!75!cream] at (5.3,-1.45) {մարդը լսում է մոտ 20-ից 20\,000 Հց};
+  % high pitch: peaks near the start
+  \begin{scope}[visible on=<2->]
+    \draw[amRed, line width=1.2pt, domain=0.15:4.0, samples=220, variable=\t]
+      plot (\t, {0.32*exp(-((\t-1.1)^2)/0.6)*sin(\t*1600)});
+    \node[anchor=south west, font=\footnotesize, text=plum, align=left] at (0.0,0.62)
+      {\emoji{balloon}\ \textbf{բարձր ձայներ}\\ «հելիում շնչած հուզված փոքրիկ»};
+  \end{scope}
+  % low pitch: peaks near the end
+  \begin{scope}[visible on=<3->]
+    \draw[amBlue, line width=1.2pt, domain=5.5:10.5, samples=160, variable=\t]
+      plot (\t, {0.26*exp(-((\t-9.0)^2)/1.4)*sin(\t*260)});
+    \node[anchor=south east, font=\footnotesize, text=plum, align=right] at (10.7,0.62)
+      {\textbf{ցածր ձայներ} \emoji{musical}\\ «Բարրի Ուայթ երգող կետ»};
+  \end{scope}
+\end{tikzpicture}

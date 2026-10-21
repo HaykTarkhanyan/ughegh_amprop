@@ -1,0 +1,38 @@
+% Cross-section of the eye (light comes from the left): pupil, lens, retina, fovea, optic nerve.
+% The fovea is highlighted on slide 2 (use inside a frame).
+\begin{tikzpicture}[
+    tagl/.style={font=\scriptsize, text=plum, align=center, inner sep=1.5pt},
+  ]
+  \path[use as bounding box] (-4.2,-2.25) rectangle (3.6,2.2);
+  % optic nerve (behind the eyeball)
+  \filldraw[fill=butter!80!cardwhite, draw=plum, line width=0.9pt]
+    (1.35,-0.45) .. controls (2.2,-0.5) and (2.8,-0.75) .. (3.6,-0.95) -- (3.6,-0.25)
+    .. controls (2.8,-0.05) and (2.2,0.05) .. (1.45,0.0) -- cycle;
+  % eyeball and cornea
+  \filldraw[fill=cardwhite, draw=plum, line width=1.1pt] (0,0) circle (1.6);
+  \draw[plum, line width=1.1pt, fill=lavender!30!cardwhite] (-1.38,0.8) .. controls (-1.95,0.45) and (-1.95,-0.45) .. (-1.38,-0.8);
+  % retina lining the back
+  \draw[brainpink!90!plum, line width=3.2pt] (115:1.47) arc (115:-115:1.47);
+  % iris with the pupil gap, lens
+  \draw[amBlue!70, line width=3pt] (-1.42,0.78) -- (-1.42,0.28) (-1.42,-0.28) -- (-1.42,-0.78);
+  \filldraw[fill=lavender!60!cardwhite, draw=plum, line width=0.8pt] (-1.05,0) ellipse (0.2 and 0.58);
+  % light from an object, focused on the fovea
+  \node at (-3.75,0.95) {\bigemoji[0.7cm]{tree}};
+  \draw[amOrange, line width=0.9pt] (-3.45,0.95) -- (-1.05,0.45) -- (1.47,0.0);
+  \draw[amOrange, line width=0.9pt] (-3.45,0.95) -- (-1.05,-0.4) -- (1.47,0.0);
+  % fovea
+  \fill[amRed] (1.47,0.0) circle (0.09);
+  \begin{scope}[visible on=<2->]
+    \draw[amRed, line width=1.4pt] (1.47,0) circle (0.24);
+  \end{scope}
+  % labels
+  \node[tagl, anchor=south] at (-1.42,1.0) {բիբ};
+  \draw[plum!70, line width=0.5pt] (-1.42,1.02) -- (-1.42,0.4);
+  \node[tagl, anchor=north] at (-1.05,-0.95) {ոսպնյակ};
+  \draw[plum!70, line width=0.5pt] (-1.05,-0.95) -- (-1.05,-0.6);
+  \node[tagl, anchor=south west] at (0.75,1.6) {\textbf{ցանցաթաղանթ} (retina)};
+  \draw[plum!70, line width=0.5pt] (0.95,1.62) -- (0.78,1.25);
+  \node[tagl, anchor=west, font=\blackfont\scriptsize, text=amRed] at (1.95,0.55) {ֆովեա (fovea)};
+  \draw[amRed, line width=0.6pt] (1.97,0.55) -- (1.6,0.12);
+  \node[tagl, anchor=north] at (2.75,-1.05) {տեսողական նյարդ};
+\end{tikzpicture}

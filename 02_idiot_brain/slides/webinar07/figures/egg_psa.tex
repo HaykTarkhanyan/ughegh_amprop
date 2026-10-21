@@ -1,0 +1,24 @@
+% The 1987 US public-service ad, redrawn: egg = brain, frying pan = drugs, fried egg = brain on drugs.
+% Panels reveal on slides 1-3.
+\begin{tikzpicture}[pcap/.style={font=\blackfont\small, text=plum, align=center, text width=3.8cm}]
+  % 1. the egg
+  \filldraw[fill=cardwhite, draw=plum, line width=1.2pt]
+    (0,-0.75) .. controls (0.85,-0.75) and (0.8,0.55) .. (0,0.85) .. controls (-0.8,0.55) and (-0.85,-0.75) .. (0,-0.75);
+  \node[pcap] at (0,-1.45) {«Սա քո ուղեղն է»};
+  % 2. the pan
+  \begin{scope}[shift={(4.3,0)}, visible on=<2->]
+    \fill[plum!85!black] (0.85,-0.1) rectangle (2.0,0.1);
+    \filldraw[fill=plum!75!cardwhite, draw=plum, line width=1.2pt] (0,0) circle (0.95);
+    \fill[plum!55!cardwhite] (0,0) circle (0.78);
+    \node[pcap] at (0.4,-1.45) {«Սա թմրանյութն է»};
+  \end{scope}
+  % 3. the fried egg
+  \begin{scope}[shift={(9.0,0)}, visible on=<3->]
+    \fill[plum!85!black] (0.85,-0.1) rectangle (2.0,0.1);
+    \filldraw[fill=plum!75!cardwhite, draw=plum, line width=1.2pt] (0,0) circle (0.95);
+    \filldraw[fill=cardwhite, draw=plum!50, line width=0.6pt]
+      plot[smooth cycle, tension=0.8] coordinates {(-0.62,0.05) (-0.35,0.55) (0.2,0.62) (0.6,0.3) (0.58,-0.3) (0.15,-0.62) (-0.4,-0.5)};
+    \filldraw[fill=amOrange, draw=amOrange!80!black, line width=0.6pt] (-0.02,0.02) circle (0.24);
+    \node[pcap] at (0.4,-1.45) {«Սա քո ուղեղն է\\ թմրանյութերից»};
+  \end{scope}
+\end{tikzpicture}

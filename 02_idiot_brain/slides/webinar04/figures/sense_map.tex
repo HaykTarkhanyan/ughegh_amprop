@@ -1,0 +1,30 @@
+% Where the senses arrive in the cortex: smell (olfactory bulb), hearing (auditory cortex, temporal lobe),
+% touch (somatosensory cortex, parietal lobe), vision (visual cortex, occipital lobe). Reveals 1-4.
+\begin{tikzpicture}[
+    tag/.style={draw=plum, line width=0.7pt, fill=cardwhite, rounded corners=2mm, inner sep=2.2pt,
+      font=\scriptsize, text=plum, align=center},
+    pin/.style={plum, line width=0.8pt},
+  ]
+  \path[use as bounding box] (-4.3,-2.45) rectangle (4.3,2.45);
+  \begin{scope}[scale=0.74, yshift=0.15cm]
+    \brainlobes{lavender!55!cream}{mint!55!cream}{peach!60!cream}{butter!70!cream}
+    % smell: olfactory bulb under the frontal lobe
+    \filldraw[fill=pinkdark, draw=plum, line width=0.6pt, rotate around={-8:(-2.45,-0.78)}] (-2.45,-0.78) ellipse (0.5 and 0.13);
+    % hearing: auditory cortex on the upper temporal lobe
+    \fill[amOrange, opacity=0.75, visible on=<2->] (0.35,-0.2) ellipse (0.75 and 0.24);
+    % touch: somatosensory strip behind the central sulcus
+    \draw[amBlue, opacity=0.55, line width=5pt, line cap=round, visible on=<3->]
+      plot[smooth] coordinates {(0.55,2.55) (0.33,1.85) (0.2,1.15) (-0.12,0.4)};
+    % vision: visual cortex at the back
+    \fill[amRed, opacity=0.6, visible on=<4->] (3.0,-0.15) ellipse (0.32 and 0.6);
+    % labels
+    \node[tag] (ts) at (-4.0,-2.6) {\emoji[1em]{nose}\ հոտառական\\ սոխուկ};
+    \draw[pin] (ts.north) -- (-2.6,-0.85);
+    \node[tag, visible on=<2->] (th) at (0.2,-2.75) {\emoji[1em]{ear}\ լսողական կեղև\\ (քունքային բիլթ)};
+    \draw[pin, visible on=<2->] (th.north) -- (0.35,-0.3);
+    \node[tag, visible on=<3->] (tt) at (-2.6,2.95) {\emoji[1em]{hand}\ զգացողական կեղև\\ (գագաթային բիլթ)};
+    \draw[pin, visible on=<3->] (tt.east) -- (0.45,2.3);
+    \node[tag, visible on=<4->] (tv) at (4.2,-2.6) {\emoji[1em]{eye}\ տեսողական կեղև\\ (ծոծրակային բիլթ)};
+    \draw[pin, visible on=<4->] (tv.north) -- (3.05,-0.65);
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,363 @@
+% ===== Section 5: "I'm not mean, but my brain is" (obedience, groups, empathy, just world) (~18 min) =====
+\partaccent{peach}
+\topicopener{imp}{Ինչու ենք դաժան}{Ես չար չեմ, ուղեղս է չար}{Ուղեղի այն հատկությունները, որոնք մեզ ստիպում են վատ վարվել ուրիշների հետ}{angry}
+
+% People are terrible to each other
+\begin{frame}{Մարդիկ սարսափելի են վարվում իրար հետ}
+  \begin{columns}[c]
+    \begin{column}{0.54\textwidth}
+      \begin{itemize}
+        \item Ուղեղը կարծես ստեղծված է շփման համար։ Աշխարհը պետք է լիներ ձեռք ձեռքի տված մարդկանց երգ \textbf{ծիածանի ու պաղպաղակի} մասին
+        \item<2-> Բայց բռնություն, գողություն, շահագործում, խոշտանգում, սպանություն \textbf{հազվադեպ չեն}
+        \item<2-> Նույնիսկ ցեղասպանությունն այնքան ծանոթ է, որ առանձին բառ ունի
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \onslide<3->{%
+      \begin{card}[colback=peach!35!cardwhite]
+        {\blackfont Էդմունդ Բըրկ}\par
+        «Չարի հաղթանակի համար բավական է, որ լավ մարդիկ \textbf{ոչինչ չանեն}»
+      \end{card}}
+      \onslide<4->{%
+      \begin{bookquote}
+        Բայց չարի համար ավելի հեշտ է, եթե լավ մարդիկ էլ \textbf{օգնեն}։
+      \end{bookquote}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% "Only following orders"
+\begin{frame}{«Ես միայն հրաման էի կատարում»}
+  \begin{columns}[c]
+    \begin{column}{0.46\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{nuremberg.jpg}\par
+      {\scriptsize Նյուրնբերգյան դատավարություն, 1945-1946}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Նյուրնբերգում Հոլոքոստի համար պատասխանատուների ամենատարածված պաշտպանությունը
+        \item Թույլ արդարացում, չէ՞։ Նորմալ մարդը նման բան չէր անի
+      \end{itemize}
+      \onslide<2->{%
+      \begin{chatbox}
+        Գուշակիր. քանի՞ տոկոսը կտա 450 վոլտ «հարված» անծանոթին, եթե գիտնականն ասի։ Գրիր թիվը։
+      \end{chatbox}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Milgram's set-up
+\begin{frame}{Միլգրամի փորձը}
+  \centering
+  \begin{tikzpicture}
+    \node[personnode, fill=peach!35!cardwhite, text width=2.6cm] (e) at (-3.9,0) {\bigemoji[0.9cm]{scientist}\\ \textbf{Փորձարար}\\ սպիտակ խալաթով};
+    \node[personnode, fill=butter!45!cardwhite, text width=2.6cm] (t) at (0.6,0) {\bigemoji[0.9cm]{student}\\ \textbf{«Ուսուցիչ»}\\ իրական մասնակից};
+    \draw[plum, dashed, line width=1.2pt] (3.2,-1.3) -- (3.2,1.4);
+    \node[font=\scriptsize, text=plum!70!cream, anchor=south] at (3.2,1.4) {պատ};
+    \node[personnode, fill=lavender!40!cardwhite, text width=2.6cm, visible on=<2->] (l) at (6.2,0) {\bigemoji[0.9cm]{masks}\\ \textbf{«Աշակերտ»}\\ դերասան};
+    \draw[-{Stealth[length=2.6mm]}, plum, line width=1.1pt] (e) -- node[above, font=\small, text=plum] {«Շարունակեք»} (t);
+    \draw[-{Stealth[length=2.6mm]}, amRed, line width=1.6pt, visible on=<2->] (t) -- node[below=1mm, font=\blackfont\small, text=amRed, text width=1.9cm, align=center, fill=cream, inner sep=1.5pt] {\emoji{lightning}\ սխալ $\rightarrow$ հարված} (l);
+    \begin{scope}[visible on=<3->]
+      \foreach \k/\c in {0/mint, 1/butter, 2/peach, 3/blush, 4/amRed}{
+        \fill[\c] (-1.6+\k*1.4,-2.0) rectangle ++(1.4,0.42);}
+      \draw[plum, line width=0.8pt] (-1.6,-2.0) rectangle ++(7,0.42);
+      \node[font=\blackfont\scriptsize, text=plum, anchor=east] at (-1.65,-1.79) {15 Վ};
+      \node[font=\blackfont\scriptsize, text=plum, anchor=west] at (5.45,-1.79) {450 Վ};
+    \end{scope}
+  \end{tikzpicture}\par\vspace{2mm}
+  \raggedright
+  \onslide<4->{\small Ամեն սխալի համար հարվածն \textbf{ավելի ուժեղ} է։ Բայց հոսանք \textbf{չկար}. դերասանը միտումնավոր սխալվում էր ու ավելի ու ավելի ցավագին ձայներ հանում։\par}
+\end{frame}
+
+% The result
+\begin{frame}{Արդյունքը}
+  \begin{columns}[c]
+    \begin{column}{0.36\textwidth}
+      \centering
+      {\blackfont\fontsize{58}{60}\selectfont\color{amRed} 65\%}\par\smallskip
+      {\small գնաց մինչև վերջ՝ 450 Վ (1963)}
+    \end{column}
+    \begin{column}{0.6\textwidth}
+      \begin{itemize}
+        \item Մասնակիցները հուզվում էին, առարկում, խնդրում դադարեցնել։ Փորձարարը. «Փորձը կարևոր է, պետք է շարունակել»
+        \item<2-> Նրանք բանտերից հավաքված դաժան մարդիկ չէին, այլ \textbf{սովորական} քաղաքացիներ
+      \end{itemize}
+      \onslide<3->{%
+      \begin{bookquote}
+        Գուցե առարկում էին, բայց անում էին։ Իսկ հարվածն ստացողի համար հենց \textbf{դա} է կարևոր։
+      \end{bookquote}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Variants and today's view
+\begin{frame}{Ինչն է փոխում հնազանդությունը}
+  \begin{columns}[c]
+    \begin{column}{0.54\textwidth}
+      \begin{tikzpicture}[x=0.06cm]
+        \foreach \y/\v/\l/\t/\c/\s in {0/65/65\%/{առաջին տարբերակը, Յեյլ}/amRed/1,
+                                        1/47.5/{47,5\%}/{սովորական գրասենյակ, ոչ Յեյլ}/amBlue/2,
+                                        2/22.5/{22,5\%}/{փորձարարը՝ հեռախոսով}/amBlue/2,
+                                        3/10/10\%/{երկու «մասնակից» հրաժարվում են}/amBlue/2,
+                                        4/43.6/{43,6\%}/{21 տարբերակի միջինը}/amOrange/3}{
+          \begin{scope}[visible on=<\s->]
+            \node[anchor=south west, font=\small, text=plum, inner sep=1pt] at (0,-\y*0.95+0.3) {\t};
+            \fill[\c, rounded corners=1pt] (0,-\y*0.95-0.1) rectangle (\v,-\y*0.95+0.27);
+            \node[anchor=west, font=\blackfont\small, text=plum] at (\v,-\y*0.95+0.08) {\l};
+          \end{scope}}
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \onslide<2->{{\small Ապստամբել պատրաստ ենք, բայց \textbf{ոչ առաջինը}։ Սպիտակ խալաթն ու լուրջ գրասենյակը ուժեղացնում են հնազանդությունը։}\par\medskip}
+      \onslide<3->{%
+      \begin{scienceupdate}
+        65\%-ը առաջին տարբերակից է։ 21 տարբերակում (740 մարդ) միջինը \textbf{43,6\%} է։ Ու հարց կա, թե քանիսն էին իսկապես հավատում հարվածներին։
+      \end{scienceupdate}}
+    \end{column}
+  \end{columns}
+  \source{Milgram, 1974; Haslam et al., PLoS ONE, 2014; Perry, 2012}
+\end{frame}
+
+% Why we obey
+\begin{frame}{Ինչու ենք հնազանդվում}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \begin{itemize}
+        \item Հնազանդվում ենք \textbf{օրինական} իշխանությանը, որը պատասխանատու է հետևանքների համար։ Հեռավոր ու արդեն չլսված «պետը» թույլ է
+        \item<2-> Միլգրամ. \textbf{ինքնավար} վիճակ (ինքս եմ որոշում) ու \textbf{գործակալային} վիճակ (agentic state, որոշում է ուրիշը)։ Սկաներներում դեռ չի գտնվել
+        \item<3-> Էվոլյուցիա. ամեն անգամ «ով է գլխավորը» վիճելը անարդյունավետ է։ Իսկ խարիզմատիկ առաջնորդները դա \textbf{օգտագործում են}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \onslide<4->{%
+      \begin{card}[colback=peach!35!cardwhite]
+        \emoji{judge}\ {\blackfont Էթիկա}\par\smallskip
+        Ի՞նչ իրավունք ունեն գիտնականները մարդկանց համոզել, որ նրանք մեկին խոշտանգում են։ Դա կարող է \textbf{ծանր հետք} թողնել։
+      \end{card}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Group membership and the self
+\begin{frame}{Խումբը՝ «ես»-ի մաս}
+  \begin{columns}[c]
+    \begin{column}{0.58\textwidth}
+      \begin{itemize}
+        \item Խմբի մասին մտածելիս ակտիվանում է \textbf{«սոցիալական ուղեղ»} կոչվող ցանցը {\small (չշփոթել նույնանուն \textbf{վարկածի} հետ. գիտնականները շփոթեցնելու առիթ բաց չեն թողնում)}
+        \item<2-> Խմբային տեղեկություն մշակող շրջանները \textbf{համընկնում են} «ես»-ը մշակողների հետ
+        \item<3-> Ինքնության մեծ մասը գալիս է մեր խմբերից։ Խմբին սպառնալիքը՝ սպառնալիք \textbf{ինձ}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.38\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \fill[peach!45!cardwhite] (0,0) circle (1.25);
+        \fill[lavender!55!cardwhite] (1.4,0) circle (1.25);
+        \begin{scope}[visible on=<2->]
+          \clip (0,0) circle (1.25);
+          \fill[blush!70!cardwhite] (1.4,0) circle (1.25);
+        \end{scope}
+        \draw[plum, line width=0.9pt] (0,0) circle (1.25) (1.4,0) circle (1.25);
+        \node[font=\blackfont, text=plum] at (-0.6,0) {Ես};
+        \node[font=\blackfont\small, text=plum] at (2.05,0) {Խումբ};
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Us and them
+\begin{frame}{Մենք ու նրանք}
+  \relax{\large Իսկ խմբերին ամենաշատը սպառնում են... \textbf{ուրիշ խմբերը}}\par\medskip
+  \begin{columns}[T]
+    \begin{column}{0.31\textwidth}
+      \begin{card}[colback=peach!35!cardwhite]
+        \centering\bigemoji[0.75cm]{trophy}\par\smallskip
+        \raggedright Ֆուտբոլային երկրպագուների կռիվները գրեթե \textbf{խաղի շարունակություն} են
+      \end{card}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \onslide<2->{%
+      \begin{card}[colback=butter!45!cream]
+        \centering\bigemoji[0.75cm]{ballot}\par\smallskip
+        \raggedright Ընտրություններում հակառակորդին հարվածելը ավելի կարևոր է, քան \textbf{ծրագիր} բացատրելը
+      \end{card}}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \onslide<3->{%
+      \begin{card}[colback=lavender!40!cardwhite]
+        \centering\bigemoji[0.75cm]{computer}\par\smallskip
+        \raggedright Գրիր, որ «Աստղային պատերազմների» նախապատմությունն այդքան էլ վատը չէր։ Մինչև թեյնիկը եռա, փոստդ \textbf{ատելությամբ} կլցվի
+      \end{card}}
+    \end{column}
+  \end{columns}
+  \vspace{0.5mm}
+  \onslide<3->{\centering\small Բըրնեթը միջազգային կայքի համար բլոգ է գրում. «Վստահեք ինձ այս հարցում»։\par}
+\end{frame}
+
+% Stanford prison experiment: the story as the book tells it
+\begin{frame}{Ստենֆորդի բանտային փորձը (1971)}
+  \begin{columns}[c]
+    \begin{column}{0.62\textwidth}
+      \begin{itemize}
+        \item Ֆիլիպ Զիմբարդոյի թիմը համալսարանի նկուղում բանտ կառուցեց։ Ուսանողներին բաժանեցին «բանտարկյալների» ու «պահակների»
+        \item<2-> Պահակները դարձան \textbf{դաժան}. կոպիտ, ագրեսիվ, նվաստացնող։ Բանտարկյալները ապստամբեցին, պահակները ներխուժեցին ու մերկացրին նրանց
+        \item<3-> Բանտարկյալների մոտ՝ ընկճվածություն, հեկեկոց, նույնիսկ հոգեծին ցան
+        \item<4-> Նախատեսված էր 2 շաբաթ, դադարեցրին \textbf{6 օր} անց
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.34\textwidth}
+      \centering
+      \bigemoji[1.2cm]{police}\ \bigemoji[1.2cm]{lock}\par\medskip
+      \onslide<4->{%
+      \begin{card}[colback=peach!35!cardwhite]
+        Բըրնեթ. նրանք իրական պահակներ ու բանտարկյալներ չէին, այլ հեղինակավոր համալսարանի \textbf{ուսանողներ}
+      \end{card}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Myth or fact: what the SPE proved
+\begin{frame}{Առասպել, թե՞ փաստ}
+  \mythorfact{Դերը մարդուն դաժանացնում է}{ԿԱՍԿԱԾԵԼԻ Է}{pinkdark}{%
+    \begin{scienceupdate}
+      Ստենֆորդի պահակներին \textbf{հրահանգել էին} ստեղծել վախի մթնոլորտ (արխիվներ, 2019)։ BBC-ի նման փորձում (2002) պահակները դաժան \textbf{չդարձան}։
+    \end{scienceupdate}}
+  \source{Le Texier, Am. Psychol., 2019; Reicher \& Haslam, Br. J. Soc. Psychol., 2006}
+\end{frame}
+
+% Pecking order
+\begin{frame}{Կտցահարման կարգ}
+  \begin{columns}[c]
+    \begin{column}{0.58\textwidth}
+      \begin{itemize}
+        \item Դպրոցից ծանոթ է. ինչ-որ մեկը տարօրինակ սանրվածք է անում, «խախտում» է խմբի միօրինակությունը ու \textbf{անվերջ ծաղրվում է}
+        \item<2-> Ուզում ենք ոչ միայն խմբում լինել, այլ \textbf{բարձր դիրք} ունենալ։ Նույնիսկ հավերն ունեն հիերարխիա (pecking order)
+        \item<3-> Ուղեղի մի քանի շրջաններ (գագաթային ու նախաճակատային կեղևում) հետևում են մեր \textbf{դիրքին} խմբում
+        \item<4-> Ծաղրելը նաև սեփական դիրքը \textbf{բարձրացնելու} միջոց է
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.38\textwidth}
+      \centering
+      \bigemoji[1.3cm]{ladder}\ \bigemoji[1cm]{crown}\par\medskip
+      \onslide<4->{\mascot[2cm]{smug}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% The group can be anything: country, "race"; cruelty to those in need
+\begin{frame}{Խումբը կարող է լինել ամեն ինչ}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \begin{itemize}
+        \item Խումբը կարող է լինել մի ամբողջ \textbf{երկիր}. դա երևում է ամեն դրոշ թափահարողից
+        \item<2-> Կամ «ռասա». ֆիզիկական հատկանիշներով հեշտ է տարբերել «օտարին»
+        \item<4-> Իսկ հաճախ դաժան ենք նաև նրանց հետ, ովքեր \textbf{օգնության կարիք} ունեն. անօթևաններ, աղքատներ, զոհեր, հիվանդներ, փախստականներ։ Ինչու՞
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \onslide<3->{%
+      \begin{bookquote}
+        Ռասիստը այնքան քիչ հպարտանալու բան ունի, որ նրա համար թանկ են ֆիզիկական հատկանիշները, որոնց ձեռքբերման մեջ ինքը \textbf{ոչ մի դեր} չի ունեցել։\par\smallskip
+        Զգուշացում. ես ռասիզմի երկրպագու չեմ։
+      \end{bookquote}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Egocentric bias and the Singer touch experiment
+\begin{frame}{Եսակենտրոն ուղեղ}
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \begin{itemize}
+        \item \textbf{Եսակենտրոն շեղում} (egocentric bias). դժվար է ապրումակցել նրանց, ովքեր \textbf{մենք չենք}
+        \item Աջ \textbf{վերեզրային գալարը} (supramarginal gyrus) «ուղղում» է շեղումը։ Շտապելիս դա դժվարանում է
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \onslide<2->{%
+      {\small\blackfont Զույգերը դիպչում են հաճելի կամ զզվելի բանի}\par\smallskip
+      \begin{tikzpicture}
+        \node at (0,0) {\bigemoji[0.75cm]{nauseated}};
+        \node at (0.9,0) {\bigemoji[0.75cm]{nauseated}};
+        \node[anchor=west, text width=4.3cm, font=\small, text=plum, align=left] at (1.4,0) {Երկուսն էլ \textbf{ճիշտ} են գնահատում իրար};
+        \node[visible on=<3->] at (0,-1.15) {\bigemoji[0.75cm]{yum}};
+        \node[visible on=<3->] at (0.9,-1.15) {\bigemoji[0.75cm]{nauseated}};
+        \node[anchor=west, text width=4.3cm, font=\small, text=plum, align=left, visible on=<3->] at (1.4,-1.15) {Գոհը \textbf{թերագնահատում է} մյուսի տառապանքը};
+      \end{tikzpicture}}
+    \end{column}
+  \end{columns}
+  \onslide<4->{%
+  \begin{card}[colback=peach!35!cardwhite]
+    Որքան հարմարավետ է կյանքդ, այնքան դժվար է հասկանալ նեղության մեջ գտնվողին։ «Քանի դեռ ամենաշփացածներին երկրներ ղեկավարելու չենք դնում, խնդիր չկա»։
+  \end{card}}
+\end{frame}
+
+% Just-world hypothesis
+\begin{frame}{Արդար աշխարհի վարկած (just-world hypothesis)}
+  \begin{columns}[c]
+    \begin{column}{0.44\textwidth}
+      \begin{itemize}
+        \item Ուղեղը ենթադրում է, որ աշխարհը \textbf{արդար} է. լավը պարգևատրվում է, վատը՝ պատժվում
+        \item Դա օգնում է. զսպում է վատ վարքը ու մոտիվացնում է (թե չէ ինչու՞ վեր կենալ անկողնուց)
+        \item<2-> Բայց դա \textbf{ճիշտ չէ}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \node[personnode, fill=mint!40!cardwhite, text width=2.5cm] (w) at (-1.6,2.2) {Աշխարհն \textbf{արդար} է};
+        \node[personnode, fill=brainpink!30!cardwhite, text width=2.5cm, visible on=<2->] (u) at (1.6,2.2) {Սա \textbf{արդար չէր}};
+        \node[personnode, fill=butter!55!cardwhite, visible on=<2->] (d) at (0,0.9) {\emoji{cyclone}\ դիսոնանս};
+        \draw[-{Stealth[length=2.5mm]}, plum, line width=1pt, visible on=<2->] (w) -- (d);
+        \draw[-{Stealth[length=2.5mm]}, plum, line width=1pt, visible on=<2->] (u) -- (d);
+        \node[personnode, text width=3cm, visible on=<3->] (a) at (-1.8,-0.9) {Աշխարհը դաժան է ու \textbf{պատահական}};
+        \node[personnode, fill=amRed!15!cardwhite, draw=amRed, line width=1.4pt, text width=3cm, visible on=<4->] (b) at (1.8,-0.9) {\textbf{Զոհն ինքն է} մեղավոր};
+        \draw[-{Stealth[length=2.5mm]}, plum, dashed, line width=1pt, visible on=<3->] (d) -- (a);
+        \draw[-{Stealth[length=3mm]}, amRed, line width=2pt, visible on=<4->] (d) -- (b);
+      \end{tikzpicture}\par\smallskip
+      \onslide<4->{{\small Երկրորդն ավելի դաժան է, բայց թույլ է տալիս պահել մեր հարմարավետ (ու սխալ) պատկերացումը}\par}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Who do we blame?
+\begin{frame}{Ում ենք մեղադրում}
+  \begin{itemize}
+    \item Զոհին ավելի քիչ են քննադատում, եթե կարող են \textbf{օգնել} նրան, կամ իմանում են, որ նրան փոխհատուցել են։ Եթե օգնել հնարավոր չէ՝ ավելի \textbf{խիստ} են
+    \item<2-> Իսկ ավելի շատ մեղադրում ենք նրան, ում հետ \textbf{նույնանում ենք}
+  \end{itemize}
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \onslide<2->{%
+      \begin{card}[colback=mint!35!cardwhite]
+        \emoji{tree}\ Ուրիշ տարիքի ու սեռի մարդու վրա ծառ ընկավ\par\smallskip
+        $\rightarrow$ «Խեղճ մարդ, \textbf{պատահականություն} էր»
+      \end{card}}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \onslide<3->{%
+      \begin{card}[colback=brainpink!25!cardwhite]
+        \emoji{car}\ Քո տարիքի մարդը քո նման մեքենայով բախվեց քո տան նման տան\par\smallskip
+        $\rightarrow$ «\textbf{Ինքն է մեղավոր}, անփույթ էր»
+      \end{card}}
+    \end{column}
+  \end{columns}
+  \vspace{2mm}
+  \onslide<4->{\centering Որովհետև եթե պատահականություն էր, կարող էր պատահել \textbf{քեզ}։ Իսկ դա վախեցնող միտք է։\par}
+\end{frame}
+
+% Chapter conclusion
+\begin{frame}{Հրաշալի է}
+  \begin{columns}[c]
+    \begin{column}{0.58\textwidth}
+      \begin{bookquote}
+        Չնայած շփման ու ընկերության բոլոր հակումներին, ուղեղը այնքան է մտահոգված իր ինքնության ու հանգստի պահպանմամբ, որ պատրաստ է \textbf{ոտնահարել} ցանկացածին, ով կարող է սպառնալ դրան։\par\smallskip
+        Հրաշալի է։
+      \end{bookquote}
+    \end{column}
+    \begin{column}{0.38\textwidth}
+      \centering\mascot[3cm]{angry}
+    \end{column}
+  \end{columns}
+\end{frame}

@@ -1,0 +1,25 @@
+% Heritability of the Big Five, Jang, Livesley & Vernon, J. Personality 1996 (the book's source):
+% 123 identical + 127 fraternal twin pairs; broad genetic influence O 61, C 44, E 53, A 41, N 41 %.
+% The book gives the range "40 to 60 per cent" (butter band). ytick listed explicitly (see _learnings pgfplots note).
+\begin{tikzpicture}
+  \begin{axis}[
+      set layers,
+      width=5.4cm, height=5.0cm,
+      xbar, bar width=0.42cm,
+      xmin=0, xmax=80,
+      symbolic y coords={N, A, E, C, O},
+      ytick={N, A, E, C, O},
+      yticklabels={Նևրոտիզմ, Բարեհամբույրություն, Էքստրավերսիա, Բարեխղճություն, Բացություն},
+      xtick={0,20,40,60}, xticklabel={\pgfmathprintnumber{\tick}\%},
+      tick label style={font=\footnotesize, text=plum}, axis line style={plum},
+      axis x line*=bottom, axis y line*=left, xmajorgrids, grid style={plum!10},
+      nodes near coords={\pgfmathprintnumber{\pgfplotspointmeta}\%},
+      nodes near coords style={font=\blackfont\footnotesize, text=plum},
+      enlarge y limits=0.13,
+    ]
+    \begin{pgfonlayer}{axis background}
+      \fill[butter!80] ({axis cs:40,N}|-{rel axis cs:0,0}) rectangle ({axis cs:60,O}|-{rel axis cs:0,1});
+    \end{pgfonlayer}
+    \addplot[fill=amBlue, draw=none] coordinates {(41,N) (41,A) (53,E) (44,C) (61,O)};
+  \end{axis}
+\end{tikzpicture}

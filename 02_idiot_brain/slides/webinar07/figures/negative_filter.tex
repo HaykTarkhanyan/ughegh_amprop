@@ -1,0 +1,19 @@
+% The same words, two filters: the usual ego-protecting bias vs depression's negative bias (book: Epp et al., 2012).
+% Use inside a frame (overlays: <2->).
+\begin{tikzpicture}[
+    w/.style={draw=plum, line width=0.7pt, fill=cardwhite, rounded corners=1.5mm, font=\small, text=plum, inner sep=3pt, minimum width=2.3cm},
+  ]
+  \node[w] (w1) at (0,1.05) {խոտ};
+  \node[w] (w2) at (0,0.35) {սպանություն};
+  \node[w] (w3) at (0,-0.35) {գովեստ};
+  \node[w] (w4) at (0,-1.05) {ձախողում};
+  \node[font=\scriptsize, text=plum!70!cream] at (0,1.65) {ինչ է կատարվում};
+  % usual brain
+  \node[flow=4.6cm, fill=mint!40!cardwhite, anchor=west] (n) at (2.4,0.95)
+    {\textbf{Սովորաբար}\\ {\color{mintdark}\textbf{գովեստ}}, խոտ\\ {\color{plum!40!cream} սպանություն, ձախողում}};
+  % depression
+  \node[flow=4.6cm, fill=brainpink!35!cardwhite, anchor=west, visible on=<2->] (d) at (2.4,-0.95)
+    {\textbf{Դեպրեսիայի ժամանակ}\\ {\color{pinkdark}\textbf{սպանություն, ձախողում}}\\ {\color{plum!40!cream} գովեստ, խոտ}};
+  \draw[arr] (1.3,0.3) -- (n.west);
+  \draw[arr, visible on=<2->] (1.3,-0.3) -- (d.west);
+\end{tikzpicture}

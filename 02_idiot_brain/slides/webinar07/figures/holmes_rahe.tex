@@ -1,0 +1,20 @@
+% Holmes & Rahe (1967) Social Readjustment Rating Scale, life change units (LCU).
+% Blue/red = values in the book (red = the divorce vs prison poll); orange = from the same scale, not in the book.
+% ytick lists every coordinate: with one \addplot per colour, ytick=data would only take the first plot's.
+\begin{tikzpicture}
+  \begin{axis}[
+      xbar, width=6.4cm, height=4.9cm, bar width=0.3cm, bar shift=0pt,
+      xmin=0, xmax=122, enlarge y limits=0.07,
+      symbolic y coords={xmas, inlaws, fired, marriage, injury, prison, divorce, spouse},
+      ytick={xmas, inlaws, fired, marriage, injury, prison, divorce, spouse},
+      yticklabels={Սուրբ Ծնունդ, Վեճ խնամիների հետ, Աշխատանքից ազատում, Ամուսնություն, Անձնական վնասվածք, Բանտարկություն, Ամուսնալուծություն, Կողակցի մահ},
+      tick label style={font=\scriptsize, text=plum}, axis line style={plum},
+      axis x line*=bottom, axis y line*=left, xtick=\empty,
+      nodes near coords, nodes near coords style={font=\blackfont\scriptsize, text=plum, anchor=west},
+      point meta=x, clip=false,
+    ]
+    \addplot[fill=amBlue, draw=none] coordinates {(100,spouse) (53,injury) (47,fired) (29,inlaws)};
+    \addplot[fill=amRed, draw=none] coordinates {(73,divorce) (63,prison)};
+    \addplot[fill=amOrange, draw=none] coordinates {(50,marriage) (12,xmas)};
+  \end{axis}
+\end{tikzpicture}

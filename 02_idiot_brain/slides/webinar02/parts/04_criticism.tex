@@ -1,0 +1,280 @@
+% ===== Section 4: why criticism is more powerful than praise (~15 min) =====
+\partaccent{brainpink}
+\topicopener{thumbsdown}{Քննադատություն}{Լավ ես երևում։ Հաճելի է, երբ մարդ չի անհանգստանում իր քաշի համար}{Ինչու է քննադատությունն ավելի ուժեղ, քան գովեստը}{sad}
+
+% Sticks and stones
+\begin{frame}{Փայտ ու քար}
+  \begin{card}[colback=brainpink!25!cardwhite]
+    \centering {\mediumfont «Փայտն ու քարը կարող են ոսկորներս կոտրել, բայց անունները երբեք ինձ չեն ցավեցնի»}\par
+    {\small անգլիական ասացվածք}
+  \end{card}
+  \vspace{2mm}
+  Բըրնեթի առարկությունները.\par\smallskip
+  \begin{itemize}
+    \item<2-> \emoji{bandage}\ Կոտրված ոսկորը շատ ուժեղ ցավ է. դժվար թե լավ չափանիշ լինի
+    \item<3-> \emoji{thinking}\ Եթե վիրավորանքներն իսկապես չեն ցավեցնում, ինչու՞ կա այս ասացվածքն ընդհանրապես
+    \item<4-> \emoji{knife}\ Չէ՞ որ չկա «Դանակներն ու սայրերը քեզ կկտրատեն, իսկ զեֆիրը բավական անվնաս է» ասացվածքը
+  \end{itemize}
+\end{frame}
+
+% The section title, decoded
+\begin{frame}{Հաճոյախոսությո՞ւն, թե՞ վիրավորանք}
+  \centering
+  \begin{tikzpicture}
+    \node[font=\blackfont\Large, text=plum] (a) at (0,1.2) {«Լավ ես երևում»};
+    \node[font=\blackfont\large, text=plum] (b) at (0,0) {«Հաճելի է, երբ մարդ չի անհանգստանում իր քաշի համար»};
+    \draw[mintdark, line width=2pt, visible on=<2->] ([yshift=-1mm]a.south west) -- ([yshift=-1mm]a.south east);
+    \node[tag=mintdark, font=\small\bfseries, anchor=west, visible on=<2->] at ([xshift=3mm]a.east) {\emoji{thumbsup}\ արտաքին};
+    \draw[mintdark, line width=2pt, visible on=<3->] ([yshift=-1mm]b.south west) -- ([yshift=-1mm]b.south east);
+    \node[tag=mintdark, font=\small\bfseries, anchor=north, visible on=<3->] at ([yshift=-2.5mm]b.south) {\emoji{thumbsup}\ վերաբերմունք};
+    \node[stamp=pinkdark, font=\blackfont\Large, visible on=<4->] at (4.9,-1.35) {...ուրեմն գեր եմ};
+  \end{tikzpicture}\par\vspace{4mm}
+  \raggedright
+  \onslide<2->{Ձևականորեն՝ \textbf{երկու} հաճոյախոսություն։ }\onslide<4->{Բայց թաքնված քննադատությունը, որ պետք է «վերծանել», ավելի ուժեղ է հնչում։ Zoom-ում՝ \emoji{thumbsup} թե \emoji{thumbsdown}։}
+\end{frame}
+
+% Try it: find the one who did not like the haircut
+\begin{frame}{Նոր սանրվածք}
+  \begin{columns}[c]
+    \begin{column}{0.42\textwidth}
+      \begin{tryit}
+        Նոր սանրվածքդ ցույց տվեցիր 24 ընկերոջ։ Գտիր նրան, ում դուր չեկավ։
+      \end{tryit}
+      \onslide<2->{%
+      Կարևոր չէ, քանի հոգի գովեց կամ ծիծաղեց կատակիդ վրա։ Հիշվում են նրանք, ովքեր մի պահ \textbf{կմկմացին} կամ \textbf{աչքերը ոլորեցին}։}
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \foreach \r/\row in {0/{grin,laughing,smileheart,clapping,thumbsup,grin}, 1/{laughing,thumbsup,grin,smileheart,laughing,clapping},
+                             2/{smileheart,clapping,laughing,grin,neutral,thumbsup}, 3/{thumbsup,grin,clapping,laughing,smileheart,grin}}{
+          \foreach \e [count=\c from 0] in \row {\node at (\c*1.15,-\r*1.15) {\bigemoji[0.85cm]{\e}};}}
+        \draw[pinkdark, line width=2.2pt, visible on=<2->] (4*1.15,-2*1.15) circle (0.6);
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Meme: Hide the Pain Harold
+\begin{frame}{Ծանո՞թ է}
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      \begin{bookquote}
+        Գովեստը շատ հաճելի է, բայց, անկեղծ լինենք, քննադատությունը խայթում է։
+      \end{bookquote}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \centering
+      \begin{meme}[4.9cm]{hide_the_pain_harold.jpg}
+        \memecap[font=\blackfont\scriptsize]{0.36}{0.58}{20 հոգի գովեց\\ նոր սանրվածքս}
+        \memecap[font=\blackfont\scriptsize]{0.36}{0.07}{մեկն ասաց.\\ «հմմ... համարձակ է»}
+      \end{meme}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Bad is stronger than good: the roadmap of explanations
+\begin{frame}{Վատն ավելի ուժեղ է, քան լավը}
+  \begin{card}[colback=brainpink!25!cardwhite]
+    Ուղեղի համար վատը սովորաբար ավելի ուժեղ է, քան լավը («Bad is stronger than good»)։ Բայց ինչու՞։ Մեխանի՞զմ, թե՞ տհաճի հանդեպ հիվանդագին հետաքրքրություն, ինչպես վերքի կեղևը պոկելը։
+  \end{card}
+  \vspace{2mm}
+  \centering
+  {\blackfont Չորս հնարավոր պատասխան}\par\smallskip
+  \onslide<2->{\chip[lavender]{testtube}{1. Քիմիա}}\quad
+  \onslide<3->{\chip[mint]{sparkles}{2. Նորություն}}\quad
+  \onslide<4->{\chip[butter]{crown}{3. Եսասեր ուղեղ}}\quad
+  \onslide<5->{\chip[peach]{magnifier}{4. Ակնկալիքներ ու նորմեր}}
+  \source{Baumeister et al., Rev. Gen. Psychol., 2001}
+\end{frame}
+
+% Answer 1: the HPA axis and cortisol
+\begin{frame}{1. Սթրեսի առանցքը (HPA)}
+  \begin{columns}[c]
+    \begin{column}{0.36\textwidth}
+      \centering
+      \begin{tikzpicture}[ar/.style={-{Stealth[length=2.2mm]}, plum, line width=1.1pt}]
+        \node[pbox=lavender!40!cardwhite, text width=3.4cm] (h) at (0,0) {\emoji{brain}\ հիպոթալամուս};
+        \node[pbox=lavender!40!cardwhite, text width=3.4cm] (p) at (0,-1.0) {\emoji{brain}\ հիպոֆիզ (pituitary)};
+        \node[pbox=peach!45!cardwhite, text width=3.4cm] (a) at (0,-2.0) {մակերիկամներ (adrenal)};
+        \node[pbox=brainpink!40!cardwhite, text width=3.4cm] (c) at (0,-3.0) {\emoji{lightning}\ \textbf{կորտիզոլ}};
+        \draw[ar] (h) -- (p); \draw[ar] (p) -- (a); \draw[ar] (a) -- (c);
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.6\textwidth}
+      \begin{itemize}
+        \item \textbf{Կորտիզոլ}՝ սթրեսի հորմոն, «կռվիր կամ փախիր»-ի քիմիական ձգաններից մեկը
+        \item<2-> Նրա արտազատումը կառավարում է \textbf{HPA առանցքը} (hypothalamic-pituitary-adrenal axis)՝ նյարդային ու հորմոնային համակարգերի կապը
+        \item<3-> Կարծում էին, որ այն միանում է \textbf{ցանկացած} սթրեսից (օրինակ՝ բարձր ձայնից)
+        \item<4-> Պարզվեց՝ ավելի ընտրողական է. միանում է, երբ \textbf{նպատակդ} է վտանգված
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \source{Dickerson, Gruenewald \& Kemeny, J. Pers., 2004}
+\end{frame}
+
+% Goals: the bird and the job interview
+\begin{frame}{Թռչունը և հարցազրույցը}
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \begin{card}[colback=mint!35!cardwhite]
+        \emoji[1.4em]{dove}\emoji[1.4em]{walking}\ {\blackfont Զբոսանք}\par\smallskip
+        Թռչունը «նվեր» թողեց ուսիդ։ Տհաճ է, բայց HPA-ն \textbf{չի} միանում. «թռչունից չկեղտոտվելը» քո նպատակը չէր։
+      \end{card}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \onslide<2->{%
+      \begin{card}[colback=brainpink!30!cardwhite]
+        \emoji[1.4em]{dove}\emoji[1.4em]{boss}\ {\blackfont Կարևոր հարցազրույց}\par\smallskip
+        Նույն թռչունը, բայց գնում ես աշխատանքի հարցազրույցի։ Նպատակը վտանգված է. HPA, կորտիզոլ։
+      \end{card}}
+    \end{column}
+  \end{columns}
+  \vspace{2mm}
+  \onslide<3->{%
+  \begin{bookquote}
+    Հարցազրույցին ինչ հագնելու մասին շատ կարծիքներ կան, բայց «թռչնի մարսողության արգասիքի առատ շերտը» դրանցից ոչ մեկում չկա։
+  \end{bookquote}}
+\end{frame}
+
+% Social self-preservation
+\begin{frame}{Սոցիալական ինքնապահպանում}
+  Ամենաակնհայտ նպատակը՝ \textbf{ողջ մնալ}։ Բայց մարդու համար կարևոր է նաև մնալ \textbf{հավանելի} նրանց համար, ում կարծիքը կարևոր է։\par\medskip
+  \centering
+  \begin{tikzpicture}[st/.style={pbox, text width=2.95cm, minimum height=1.9cm}, ar/.style={-{Stealth[length=2.4mm]}, plum, line width=1.2pt}]
+    \node[st, fill=brainpink!30!cardwhite, visible on=<2->] (a) at (0,0) {\emoji{thumbsdown}\\ քննադատություն, վիրավորանք, մերժում, ծաղր};
+    \node[st, fill=lavender!40!cardwhite, visible on=<3->] (b) at (3.6,0) {\emoji{warning}\\ սոցիալական գնահատման սպառնալիք};
+    \node[st, fill=peach!45!cardwhite, visible on=<4->] (c) at (7.2,0) {\emoji{lightning}\\ HPA $\rightarrow$\\ կորտիզոլ};
+    \node[st, fill=butter!60!cardwhite, visible on=<5->] (d) at (10.8,0) {\emoji{brain}\\ հիպոկամպ ու նշաձև մարմին. վառ հիշողություն};
+    \draw[ar, visible on=<3->] (a) -- (b); \draw[ar, visible on=<4->] (b) -- (c); \draw[ar, visible on=<5->] (c) -- (d);
+  \end{tikzpicture}\par\medskip
+  \raggedright
+  \onslide<6->{Հատկապես եթե \textbf{հրապարակային} է։ Քննադատությունը մեզ ֆիզիկապես «զգայուն» է դարձնում ու դրոշմվում հիշողության մեջ։}
+  \source{social-evaluative threat, Dickerson et al., 2004}
+\end{frame}
+
+% Oxytocin fades in minutes, cortisol lingers for hours
+\begin{frame}{Գովեստը անցնում է, քննադատությունը՝ մնում}
+  \centering
+  \begin{tikzpicture}[x=0.075cm]
+    \node[anchor=east, font=\small, text=plum, align=right] at (-2,0) {\emoji{thumbsup}\ գովեստ\\ \textbf{օքսիտոցին}};
+    \fill[amBlue] (0,-0.32) rectangle (5,0.32);
+    \node[anchor=west, font=\blackfont\small, text=plum] at (6,0) {մոտ 5 րոպե};
+    \node[anchor=east, font=\small, text=plum, align=right, visible on=<2->] at (-2,-1.3) {\emoji{thumbsdown}\ քննադատություն\\ \textbf{կորտիզոլ}};
+    \fill[amRed, visible on=<2->] (0,-1.62) rectangle (60,-0.98);
+    \fill[amRed!40, visible on=<2->] (60,-1.62) rectangle (120,-0.98);
+    \node[anchor=west, font=\blackfont\small, text=plum, visible on=<2->] at (121,-1.3) {1-2 ժամ};
+    \draw[plum, line width=0.8pt] (0,0.6) -- (0,-1.9);
+    \foreach \m in {0,30,60,90,120}{\node[font=\scriptsize, text=plum!70!cream] at (\m,-2.15) {\m};}
+    \node[font=\scriptsize, text=plum!70!cream, anchor=west] at (125,-2.15) {րոպե};
+  \end{tikzpicture}\par\vspace{4mm}
+  \raggedright
+  \onslide<3->{%
+  \begin{card}[colback=lavender!35!cardwhite]
+    \emoji{warning}\ Բըրնեթն ինքն է զգուշացնում. ուղեղում կատարվող ամեն ինչ առանձին քիմիական նյութերով բացատրելը հեշտ է, բայց մոլորեցնող։ Ուստի կան նաև այլ բացատրություններ։
+  \end{card}}
+  \source{Weitzman et al., J. Clin. Endocrinol. Metab., 1971 (գրքից)}
+\end{frame}
+
+% Answer 2: novelty and habituation
+\begin{frame}{2. Քաղաքավարությունը չի նկատվում}
+  \begin{columns}[c]
+    \begin{column}{0.58\textwidth}
+      \begin{itemize}
+        \item Մեծ մասամբ մարդիկ իրար հետ քաղաքավարի են։ Առցանց մեկնաբանությունները բացառություն են
+        \item<2-> Գանձապահին շնորհակալություն ենք ասում, որ մանրը վերադարձրեց, թեև դա մեր փողն է
+        \item<3-> Սովորականն ուղեղը զտում է. \textbf{ընտելացում} (habituation)
+        \item<4-> Քննադատությունը հազվադեպ է, ուստի \textbf{ցցվում է}։ Ծիծաղող դահլիճում մեկ դժգոհ դեմքը միանգամից աչքի է ընկնում
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.36\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \foreach \t [count=\i from 0] in {շնորհակալություն, լավ էր, ապրես, կեցցես}{
+          \node[draw=plum!45, text=plum!65!cream, rounded corners=2mm, font=\small, inner sep=3pt] at (0,-\i*0.7) {\t};}
+        \node[draw=pinkdark, fill=brainpink!30!cardwhite, text=pinkdark, rounded corners=2mm, line width=1.2pt,
+              font=\blackfont\large, inner sep=4pt, rotate=-5, visible on=<4->] at (0.2,-3.1) {Վատն էր։};
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \source{Castellucci \& Kandel, 1974: նույն ընտելացումը Aplysia-ի մոտ}
+\end{frame}
+
+% Answers 3 and 4: the egotistical brain, confirmation bias
+\begin{frame}{3. Եսասեր ուղեղ, 4. Հաստատման շեղում}
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \begin{card}[colback=butter!50!cardwhite]
+        \emoji[1.4em]{crown}\ {\blackfont Եսասեր ուղեղ}\par\smallskip
+        Հիշո՞ւմ ես վեբինար 1-ից. ուղեղը մեզ ավելի լավն է տեսնում։ Գովեստն ասում է այն, ինչ արդեն «գիտենք», իսկ քննադատությունը \textbf{ցնցում} է։
+      \end{card}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \onslide<2->{%
+      \begin{card}[colback=peach!40!cardwhite]
+        \emoji[1.4em]{magnifier}\ {\blackfont Հաստատման շեղում}\par\smallskip
+        Ելույթով ասում ես. «Կարծում եմ՝ կհավանեք»։ Վախենում ես մերժումից, փնտրում ես դրա նշանները ու \textbf{գտնում} ես։
+      \end{card}}
+    \end{column}
+  \end{columns}
+  \vspace{1mm}
+  \onslide<3->{%
+  \begin{card}[colback=lavender!35!cardwhite]
+    Ինչպես հիպոքոնդրիկը, որ միշտ «գտնում» է հազվագյուտ հիվանդությունների ախտանիշներ (confirmation bias)։
+  \end{card}}
+  \source{Nickerson, Rev. Gen. Psychol., 1998}
+\end{frame}
+
+% Answer 4, continued: we judge others by ourselves
+\begin{frame}{Իսկ եթե պարզապես քաղաքավարի՞ են}
+  \centering
+  \begin{tikzpicture}[st/.style={pbox, text width=3.6cm, minimum height=1.35cm}, ar/.style={-{Stealth[length=2.4mm]}, plum, line width=1.2pt}]
+    \node[st] (a) at (0,0) {Ես գովում եմ, որովհետև \textbf{այդպես է ընդունված}};
+    \node[st, visible on=<2->] (b) at (4.5,0) {Ուրեմն ուրիշներն էլ են այդպես անում};
+    \node[st, visible on=<3->, fill=lavender!40!cardwhite] (c) at (9.0,0) {Ամեն գովեստ \textbf{կասկածելի} է. անկե՞ղծ է, թե՞ պարզապես քաղաքավարի};
+    \draw[ar, visible on=<2->] (a) -- (b); \draw[ar, visible on=<3->] (b) -- (c);
+  \end{tikzpicture}\par\vspace{5mm}
+  \raggedright
+  \onslide<4->{%
+  \begin{card}[colback=brainpink!30!cardwhite]
+    \emoji[1.3em]{thumbsdown}\ Իսկ քննադատության դեպքում. ոչ միայն վատն էիր, այլ \textbf{այնքան} վատն էիր, որ մեկը խախտեց սոցիալական նորմերը, որ դա ասի։
+  \end{card}}
+\end{frame}
+
+% Negging: when the bias becomes a weapon
+\begin{frame}{Երբ սա զենք է դառնում}
+  \begin{columns}[c]
+    \begin{column}{0.44\textwidth}
+      \begin{itemize}
+        \item Ուղեղի այս թուլությունից կարող են օգտվել ուրիշները
+        \item<2-> \textbf{Նեգինգ} (negging). «պիկապի վարպետների» հնարք. հաճոյախոսության տեսքով վիրավորանք
+        \item<5-> Բըրնեթ. իրականում բոլորն ասում են մեկ բան՝ «էժան հոգեբանական հնարքով փորձում եմ վնասել ինքնավստահությունդ»
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \centering
+      \begin{tikzpicture}[q/.style={chatmsg=6.4cm, fill=cardwhite}]
+        \node[q, visible on=<2->] (q1) at (0,0) {«Սանրվածքդ հավանում եմ. քո դեմքով աղջիկների մեծ մասը չէր համարձակվի»};
+        \node[q, below=2mm of q1, visible on=<3->] (q2) {«Սովորաբար ցածրահասակ աղջիկներ չեմ հավանում, բայց դու կարծես լավն ես»};
+        \node[q, below=2mm of q2, visible on=<4->] (q3) {«Այս զգեստը շատ լավ կնստի, երբ մի քիչ նիհարես»};
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Chapter ending
+\begin{frame}{Դաժան հեգնանք}
+  \begin{columns}[c]
+    \begin{column}{0.58\textwidth}
+      Բոլորս գիտենք այն մարդուն, ով քո հաջողության պահին անմիջապես նշում է, թե ինչն ես սխալ արել։ Ինչու՞ ինքդ ինչ-որ բանի հասնես, երբ կարող ես ուրիշներին ցած քաշել։\par\medskip
+      \onslide<2->{%
+      \begin{bookquote}
+        Դաժան հեգնանք է. սպառնալիքներն այդքան ջանասիրաբար փնտրելով՝ ուղեղը վերջում ինքն է դրանք ստեղծում։
+      \end{bookquote}}
+    \end{column}
+    \begin{column}{0.36\textwidth}
+      \centering
+      \mascot[3.2cm]{thinking}
+    \end{column}
+  \end{columns}
+\end{frame}

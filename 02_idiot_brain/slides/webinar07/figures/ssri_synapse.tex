@@ -1,0 +1,35 @@
+% A serotonin synapse: the reuptake "pump" pulls serotonin back; an SSRI blocks it (slide 2).
+% Schematic, after the book's description of SSRIs. Use inside a frame (overlays: <2->).
+\begin{tikzpicture}[scale=1.12,
+    lbl/.style={font=\scriptsize, text=plum, align=center, inner sep=1pt},
+  ]
+  % sending and receiving neurons (straight membranes face the gap)
+  \filldraw[fill=brainpink!70!cardwhite, draw=plum, line width=1pt, rounded corners=5mm] (-3.3,-1.35) rectangle (-0.45,1.35);
+  \filldraw[fill=lavender!80!cardwhite, draw=plum, line width=1pt, rounded corners=5mm] (0.45,-1.35) rectangle (3.3,1.35);
+  \node[lbl, font=\scriptsize\bfseries] at (-2.15,1.0) {նեյրոն 1};
+  \node[lbl, font=\scriptsize\bfseries] at (2.15,1.0) {նեյրոն 2};
+  % vesicles full of serotonin
+  \foreach \x/\y in {-2.3/0.15, -1.45/0.55, -1.7/-0.5}{
+    \filldraw[fill=cardwhite, draw=plum, line width=0.6pt] (\x,\y) circle (0.3);
+    \foreach \dx/\dy in {-0.1/0.06, 0.08/0.1, 0.0/-0.1}{\fill[amBlue] (\x+\dx,\y+\dy) circle (0.055);}
+  }
+  % receptors on neuron 2
+  \foreach \y in {0.55, 0.0, -0.55}{
+    \draw[amOrange!90!black, line width=1.6pt] (0.45,\y+0.15) -- (0.62,\y+0.15) -- (0.62,\y-0.15) -- (0.45,\y-0.15);}
+  % serotonin in the gap
+  \foreach \x/\y in {-0.15/0.85, 0.12/0.42, -0.2/0.1, 0.2/-0.25, -0.05/-0.55}{\fill[amBlue] (\x,\y) circle (0.065);}
+  \foreach \x/\y in {0.15/0.7, -0.22/0.55, 0.05/0.15, -0.12/-0.3, 0.22/0.05, -0.25/-0.1, 0.1/-0.75}{\fill[amBlue, visible on=<2->] (\x,\y) circle (0.065);}
+  % reuptake pump on neuron 1
+  \filldraw[fill=mint, draw=plum, line width=0.8pt, rounded corners=0.6mm] (-0.6,-1.15) rectangle (-0.3,-0.82);
+  \draw[arr=mintdark, line width=1.1pt, visible on=<1>] (-0.05,-0.98) .. controls (-0.3,-0.98) and (-0.6,-0.98) .. (-1.0,-0.98);
+  % the SSRI blocks the pump
+  \filldraw[visible on=<2->, fill=amRed, draw=plum, line width=0.7pt] (-0.45,-0.98) circle (2.2mm);
+  \draw[visible on=<2->, white, line width=1.3pt, line cap=round] (-0.55,-1.08) -- (-0.35,-0.88) (-0.55,-0.88) -- (-0.35,-1.08);
+  % labels
+  \node[lbl, anchor=south] (s) at (0,1.55) {\textcolor{amBlue}{\textbf{սերոտոնին}}};
+  \draw[plum!60, line width=0.5pt] (s.south) -- (-0.12,0.95);
+  \node[lbl] (r) at (2.05,-0.2) {\textcolor{amOrange!80!black}{\textbf{ընկալիչներ}}};
+  \draw[plum!60, line width=0.5pt] (r.west) -- (0.68,0.0);
+  \node[lbl, anchor=north, visible on=<1>] at (-0.45,-1.45) {հետ է «քաշվում»\\ (reuptake)};
+  \node[lbl, anchor=north, visible on=<2->, text=amRed] at (-0.45,-1.45) {\textbf{SSRI-ն փակում է «պոմպը»}\\ սերոտոնինը ճեղքում մնում է երկար};
+\end{tikzpicture}

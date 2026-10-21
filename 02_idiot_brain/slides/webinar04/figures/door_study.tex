@@ -1,0 +1,39 @@
+% Simons & Levin's door study in three panels: an experimenter asks a pedestrian for directions,
+% two people carry a door between them, and a different experimenter is standing there afterwards.
+% Panels on slides 1-3 (use inside a frame).
+\begin{tikzpicture}[scale=0.84,
+    panel/.style={draw=plum, line width=0.8pt, fill=cardwhite, rounded corners=2.5mm},
+    plbl/.style={font=\scriptsize, text=plum, align=center, text width=3.1cm},
+  ]
+  \path[use as bounding box] (-0.1,-0.65) rectangle (12.6,2.85);
+  \foreach \i/\s in {0/1, 1/2, 2/3}{
+    \begin{scope}[xshift=\i*4.25cm, visible on=<\s->]
+      \draw[panel] (0,0) rectangle (4.0,2.9);
+      % pedestrian (right) with the map
+      \fill[plum!70] (3.0,1.95) circle (0.24);
+      \fill[plum!70, rounded corners=1.5mm] (2.72,0.35) rectangle (3.28,1.65);
+      \filldraw[fill=butter, draw=plum, line width=0.6pt, rotate around={-12:(2.45,1.15)}] (2.15,0.9) rectangle (2.75,1.4);
+    \end{scope}}
+  % panel 1: experimenter A (blue)
+  \fill[amBlue] (1.0,1.95) circle (0.24);
+  \fill[plum] (0.78,2.05) rectangle (1.22,2.2);
+  \fill[amBlue, rounded corners=1.5mm] (0.72,0.35) rectangle (1.28,1.65);
+  \node[say, font=\scriptsize, callout absolute pointer={(1.2,2.0)}] at (1.9,2.55) {Ինչպե՞ս գնամ...};
+  \node[plbl] at (2.0,-0.35) {հարցնում է ճանապարհը};
+  % panel 2: the door
+  \begin{scope}[xshift=4.25cm, visible on=<2->]
+    \fill[amBlue] (1.0,1.95) circle (0.24);
+    \fill[amBlue, rounded corners=1.5mm] (0.72,0.35) rectangle (1.28,1.65);
+    \filldraw[fill=peachdark!70, draw=plum, line width=0.9pt] (1.55,0.2) rectangle (2.35,2.55);
+    \fill[butter] (2.2,1.35) circle (0.06);
+    \node[plbl] at (2.0,-0.35) {մեջտեղով դուռ են անցկացնում};
+  \end{scope}
+  % panel 3: experimenter B (orange, different hair)
+  \begin{scope}[xshift=8.5cm, visible on=<3->]
+    \fill[amOrange] (1.0,1.95) circle (0.24);
+    \fill[peachdark] (0.74,2.1) .. controls (1.0,2.4) .. (1.26,2.1) -- cycle;
+    \fill[amOrange, rounded corners=1.5mm] (0.68,0.35) rectangle (1.32,1.75);
+    \node[say, font=\scriptsize, callout absolute pointer={(1.2,2.0)}] at (1.9,2.55) {...ու հետո՞};
+    \node[plbl] at (2.0,-0.35) {ուրիշ մարդ է կանգնած};
+  \end{scope}
+\end{tikzpicture}

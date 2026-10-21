@@ -1,0 +1,38 @@
+% Burnett's analogy: the brain as a police sketch artist who gets hundreds of descriptions at once
+% and must render a full-colour 3D town, updated every minute. Reveals in 3 steps (use inside a frame).
+\begin{tikzpicture}[
+    witness/.style={draw=plum, line width=0.7pt, rounded corners=2.5mm, inner sep=2.5pt,
+      font=\footnotesize, text=plum, anchor=west},
+  ]
+  \path[use as bounding box] (-6.9,-1.85) rectangle (6.9,1.75);
+  % --- witnesses (the senses) -------------------------------------------
+  \foreach \y/\e/\t/\c/\x in {1.36/eye/{«Կարմիր մի բան էր»}/peach/-6.8, 0.68/ear/{«Ձայնը ձախից էր»}/mint/-6.5,
+      0/nose/{«Հացի հոտ էր գալիս»}/butter/-6.8, -0.68/hand/{«Սառն էր»}/lavender/-6.4,
+      -1.36/tongue/{«Աղի՞ էր...»}/brainpink/-6.7}{
+    \node[witness, fill=\c!45!cardwhite] (w\e) at (\x,\y) {\emoji[1em]{\e}\ \t};
+    \draw[-{Stealth[length=2mm]}, plum!70, line width=0.8pt] (w\e.east) -- (-2.2,0.1*\y);}
+  \node[font=\mediumfont\scriptsize, text=plum!75!cream, visible on=<3->, anchor=west] at (-6.8,1.78)
+    {...ու ևս հարյուրավորը, միաժամանակ};
+  % --- the artist -----------------------------------------------------------
+  \node at (-1.1,0.15) {\mascot[1.9cm]{thinking}};
+  \node[rotate=20] at (-0.25,-0.6) {\bigemoji[0.65cm]{pencil}};
+  \node[font=\blackfont\small, text=plum] at (-1.1,-1.4) {նկարիչը};
+  % --- the drawing: a whole town in 3D ----------------------------------
+  \begin{scope}[visible on=<2->]
+    \draw[warr] (0.25,0.1) -- (1.05,0.1);
+    \filldraw[fill=cardwhite, draw=plum, line width=0.9pt, rounded corners=2mm] (1.2,-1.6) rectangle (6.8,1.6);
+    \fill[mint!40!cardwhite, rounded corners=2mm] (1.25,-1.55) rectangle (6.75,-0.6);
+    \fill[amOrange!70] (6.15,1.05) circle (0.26);
+    \foreach \x/\h/\c in {1.7/0.95/peach, 2.75/1.4/lavender, 3.9/0.85/brainpink, 4.9/1.2/butter}{
+      \filldraw[fill=\c, draw=plum, line width=0.7pt] (\x,-0.9) rectangle ++(0.8,\h);
+      \filldraw[fill=plum!70, draw=plum, line width=0.7pt] (\x-0.08,-0.9+\h) -- (\x+0.4,-0.9+\h+0.38) -- (\x+0.88,-0.9+\h) -- cycle;
+      \fill[cardwhite] (\x+0.15,-0.9+\h-0.4) rectangle ++(0.2,0.2);
+      \fill[cardwhite] (\x+0.45,-0.9+\h-0.4) rectangle ++(0.2,0.2);}
+    \node at (6.15,-1.05) {\bigemoji[0.55cm]{tree}};
+    \node at (2.35,-1.2) {\bigemoji[0.45cm]{walking}};
+    \node at (3.75,-1.2) {\bigemoji[0.45cm]{car}};
+    \node[font=\blackfont\scriptsize, text=plum, anchor=north west] at (1.35,1.53) {գունավոր, 3D, բոլոր բնակիչներով};
+  \end{scope}
+  \node[visible on=<3->, draw=plum, line width=0.8pt, fill=butter, rounded corners=2mm, rotate=-6,
+        font=\blackfont\scriptsize, text=plum, inner sep=3pt] at (5.5,-1.65) {\emoji[1em]{alarm}\ թարմացնել ամեն րոպե};
+\end{tikzpicture}

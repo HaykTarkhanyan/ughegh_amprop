@@ -1,18 +1,18 @@
 % Recommended sleep per day by age: National Sleep Foundation panel
 % (Hirshkowitz et al., Sleep Health, 2015). Bars show the recommended
-% RANGE (floating bars), labelled with the range. Teens highlighted.
+% RANGE (floating bars), labelled with the range. Young adults (the audience) highlighted.
 \begin{tikzpicture}
   \begin{axis}[
-      width=8.2cm, height=5.8cm,
-      xmin=0, xmax=20.5, ymin=-0.6, ymax=5.6, y dir=reverse,
-      ytick={0,1,2,3,4,5},
-      yticklabels={Նորածին, 1-2 տարեկան, 6-13 տարեկան, \textbf{14-17 տարեկան}, 26-64 տարեկան, 65+ տարեկան},
+      width=6.2cm, height=5.6cm,
+      xmin=0, xmax=20.5, ymin=-0.6, ymax=6.6, y dir=reverse,
+      ytick={0,1,2,3,4,5,6},
+      yticklabels={Նորածին, 1-2 տարեկան, 6-13 տարեկան, 14-17 տարեկան, \textbf{18-25 տարեկան}, 26-64 տարեկան, 65+ տարեկան},
       xtick={0,4,8,12,16}, xlabel={քնի ժամեր օրական}, xlabel style={font=\small, text=plum},
       tick label style={font=\small, text=plum}, axis line style={plum},
       axis x line*=bottom, axis y line*=left, xmajorgrids, grid style={plum!10},
       clip=false,
     ]
-    \foreach \y/\lo/\hi/\c in {0/14/17/amBlue, 1/11/14/amBlue, 2/9/11/amBlue, 3/8/10/amOrange, 4/7/9/amBlue, 5/7/8/amBlue}{
+    \foreach \y/\lo/\hi/\c in {0/14/17/amBlue, 1/11/14/amBlue, 2/9/11/amBlue, 3/8/10/amBlue, 4/7/9/amOrange, 5/7/9/amBlue, 6/7/8/amBlue}{
       \edef\temp{\noexpand\fill[\c, rounded corners=1.5pt] (axis cs:\lo,\y-0.32) rectangle (axis cs:\hi,\y+0.32);
                  \noexpand\node[anchor=west, font=\noexpand\blackfont\noexpand\small, text=plum] at (axis cs:\hi,\y) {\lo-\hi\noexpand\,ժ};}
       \temp

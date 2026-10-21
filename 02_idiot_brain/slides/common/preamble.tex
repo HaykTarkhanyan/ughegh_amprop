@@ -22,8 +22,9 @@
 \def\idiotfontdir{../../banner/assets/fonts/}
 \setsansfont{Mardoto}[Path=\idiotfontdir, Extension=.ttf, UprightFont=*-Regular, BoldFont=*-Bold]
 \setmainfont{Mardoto}[Path=\idiotfontdir, Extension=.ttf, UprightFont=*-Regular, BoldFont=*-Bold]
-\newfontfamily\mediumfont{Mardoto-Medium}[Path=\idiotfontdir, Extension=.ttf]
-\newfontfamily\blackfont{Mardoto-Black}[Path=\idiotfontdir, Extension=.ttf]
+% BoldFont: without it, \textbf inside \mediumfont text (quote boxes, \emph) silently stayed medium
+\newfontfamily\mediumfont{Mardoto-Medium}[Path=\idiotfontdir, Extension=.ttf, BoldFont=Mardoto-Bold]
+\newfontfamily\blackfont{Mardoto-Black}[Path=\idiotfontdir, Extension=.ttf, BoldFont=Mardoto-Black]
 \newfontfamily\titlefont{GlazzArm-Regular}[Path=\idiotfontdir, Extension=.ttf] % Armenian letters only
 \newfontfamily\handfont{Ink Free} % Windows font with Armenian; speech bubbles only
 % Mardoto has no italic: emphasis is medium weight in the accent colour instead.
@@ -37,6 +38,7 @@
 % ---------------------------------------------------------------------
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{array} % >{\raggedright\arraybackslash}p{..} columns: justified Armenian in narrow cells leaves big gaps
 \usepackage[most]{tcolorbox}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta, positioning, calc, shapes.geometric, shapes.callouts, shapes.misc,
@@ -85,9 +87,16 @@
 \makeatletter
 \newcommand{\artpage}[3]{\expandafter\def\csname idiot@art@#1@#2\endcsname{#3}}
 \input{../common/art/art_index.tex}
+% true inside a TikZ node hidden by `visible on`: opacity=0 does not hide included PDF pages,
+% so the art keeps its size but is not drawn
+\newif\ifidiot@hidden
 \newcommand{\idiot@art}[3]{% kind, name, size options
   \ifcsname idiot@art@#1@#2\endcsname
-    \includegraphics[#3, page=\csname idiot@art@#1@#2\endcsname]{#1.pdf}%
+    \ifidiot@hidden
+      \phantom{\includegraphics[#3, page=\csname idiot@art@#1@#2\endcsname]{#1.pdf}}%
+    \else
+      \includegraphics[#3, page=\csname idiot@art@#1@#2\endcsname]{#1.pdf}%
+    \fi
   \else
     \PackageError{idiot}{Unknown #1 '#2'; add it to build_art.py and rebuild the art}{}%
   \fi}
@@ -95,7 +104,7 @@
 \newcommand{\emoji}[2][1.15em]{\raisebox{-0.2em}{\idiot@art{emoji}{#2}{height=#1}}}
 % \bigemoji[<height>]{name}: no baseline shift, for TikZ nodes and big pictures
 \newcommand{\bigemoji}[2][1.5cm]{\idiot@art{emoji}{#2}{height=#1}}
-% \mascot[<width>]{mood}: panic, happy, scared, sleepy, sick, confused, smug, hungry, thinking
+% \mascot[<width>]{mood}: panic, happy, scared, sleepy, sick, confused, smug, hungry, thinking, sad, angry
 \newcommand{\mascot}[2][2.6cm]{\idiot@art{mascot}{#2}{width=#1}}
 \makeatother
 % the older figure files place the mascot with \pic{noggin=<mood>}
@@ -110,7 +119,7 @@
 \setbeamercolor{alerted text}{fg=pinkdark}
 \setbeamerfont{alerted text}{series=\bfseries}
 \setbeamercolor{frametitle}{fg=plum}
-\setbeamersize{text margin left=9mm, text margin right=9mm}
+\setbeamersize{text margin left=8mm, text margin right=8mm}
 \setbeamertemplate{frame begin}{\raggedright} % justified Armenian leaves big gaps
 
 % cream paper with the banner's faint dot grid
@@ -121,7 +130,7 @@
       (0,0) rectangle (\paperwidth,\paperheight);
   \end{tikzpicture}}
 
-% topic pill, top right of every frame: set by \topic (emoji + short name)
+% topic pill, bottom left of every frame (in the footline): set by \topic (emoji + short name)
 \def\idiottopicemoji{}
 \def\idiottopicname{}
 \newcommand{\idiotpill}[3][cardwhite]{% fill, emoji, text
@@ -134,31 +143,31 @@
 % \chip{emoji}{text}: inline sticker label, same as the banner's topic chips
 \newcommand{\chip}[3][cardwhite]{\idiotpill[#1]{#2}{#3}}
 
+% Compact title (one line in most frames) so the body gets the height; the topic pill lives in the footline.
 \setbeamertemplate{frametitle}{%
-  \vskip 3.5mm
-  \begin{minipage}[t]{0.66\paperwidth}
-    \raggedright{\blackfont\fontsize{17.5}{20.5}\selectfont\insertframetitle}\par
-    \vskip 1.3mm
-    \tikz\fill[accent, rounded corners=0.6mm] (0,0) rectangle (1.5cm,1.1mm);
-  \end{minipage}%
-  \hfill
-  \ifx\idiottopicname\empty\else
-    \raisebox{-1mm}{\idiotpill{\idiottopicemoji}{\idiottopicname}}%
-  \fi
-  \vskip 1mm}
+  \vskip 2.6mm
+  \raggedright{\blackfont\fontsize{15.5}{18}\selectfont\insertframetitle}\par
+  \vskip 0.9mm
+  \tikz\fill[accent, rounded corners=0.5mm] (0,0) rectangle (1.3cm,0.9mm);
+  \vskip 0.3mm}
 
 \setbeamertemplate{footline}{%
-  \hbox to \paperwidth{\hskip 9mm
-    {\mediumfont\fontsize{7}{8}\selectfont\color{plum!55!cream}Ապուշ ուղեղը · \insertshorttitle}\hfill
-    {\blackfont\fontsize{8}{9}\selectfont\color{plum!70!cream}\insertframenumber}\hskip 9mm}
-  \vskip 3mm}
+  \hbox to \paperwidth{\hskip 8mm
+    \ifx\idiottopicname\empty
+      {\mediumfont\fontsize{7}{8}\selectfont\color{plum!55!cream}Ապուշ ուղեղը · \insertshorttitle}%
+    \else
+      \scalebox{0.78}{\idiotpill{\idiottopicemoji}{\idiottopicname}}%
+    \fi
+    \hfill
+    {\blackfont\fontsize{8}{9}\selectfont\color{plum!70!cream}\insertframenumber}\hskip 8mm}
+  \vskip 2mm}
 
 \setbeamertemplate{itemize item}{\tikz[baseline=-0.65ex]\draw[plum, fill=accent, line width=0.6pt] (0,0) circle (0.95mm);}
 \setbeamertemplate{itemize subitem}{\tikz[baseline=-0.65ex]\fill[plum!70] (0,0) circle (0.6mm);}
 \setbeamertemplate{enumerate item}{\tikz[baseline=(n.base)]\node[fill=accent, draw=plum, line width=0.6pt,
   circle, inner sep=0.5mm, minimum size=4.2mm, font=\blackfont\scriptsize] (n) {\insertenumlabel};}
 \setlength{\leftmargini}{5mm}
-\setbeamertemplate{itemize/enumerate body begin}{\setlength{\itemsep}{1.6mm}}
+\setbeamertemplate{itemize/enumerate body begin}{\setlength{\itemsep}{1.2mm}}
 \setbeamertemplate{itemize/enumerate subbody begin}{\setlength{\itemsep}{0.6mm}\small}
 
 % ---------------------------------------------------------------------
@@ -213,7 +222,7 @@
 % ---------------------------------------------------------------------
 \tcbset{
   sticker/.style={enhanced, arc=3mm, boxrule=0.9pt, colframe=plum, colback=cardwhite, halign=left,
-    left=3mm, right=3mm, top=2mm, bottom=2mm, fontupper=\normalsize, coltext=plum,
+    left=2.6mm, right=2.6mm, top=1.6mm, bottom=1.6mm, fontupper=\small, coltext=plum,
     shadow={1.1mm}{-1.1mm}{0mm}{fill=plum}},
   tagged/.style={sticker, colback=#1!45!cream, colbacktitle=#1, coltitle=plum,
     fonttitle=\blackfont\footnotesize, top=3mm,
@@ -251,8 +260,9 @@
       \fill[plum, rounded corners=4mm] ([xshift=1.2mm, yshift=-1.2mm]mf.south west) rectangle ([xshift=1.2mm, yshift=-1.2mm]mf.north east);
     \end{scope}
     \node[anchor=west] at ([xshift=6mm]mf.north west) {\idiotpill[butter]{question}{Առասպել, թե՞ փաստ}};
+    % stamp on the box's bottom-right corner, clear of the statement's last line
     \onslide<2->{\node[draw=#3, text=#3, line width=2pt, rounded corners=2mm, rotate=-10, font=\blackfont\LARGE,
-      inner sep=4pt, fill=cardwhite] at ([xshift=-8mm, yshift=1mm]mf.south east) {#2};}
+      inner sep=4pt, fill=cardwhite] at ([xshift=4mm, yshift=-1mm]mf.south east) {#2};}
   \end{tikzpicture}
   \end{center}
   \onslide<2->{#4}}
@@ -268,6 +278,60 @@
   \end{tikzpicture}
   \end{center}
   \vfill}
+
+% Title slide in the banner's layout, for decks that have no banner of their own (webinar 2 on):
+%   \webinartitle{<number>}{<chapter line>}{<chips>}{<mood>}{<popup error text>}{{<emoji>}{<emoji>}{<emoji>}}
+% <chips> is a row of \chip{emoji}{word}; the three emoji are scattered decorations, as on the banner.
+\makeatletter
+\newcommand{\idiot@titledeco}[3]{%
+  \node[rotate=-12] at ([xshift=-33mm, yshift=-8mm]current page.north east) {\bigemoji[0.95cm]{#1}};
+  \node[rotate=14] at ([xshift=76mm, yshift=-21mm]current page.north west) {\bigemoji[0.8cm]{#2}};
+  \node[rotate=-10] at ([xshift=97mm, yshift=10mm]current page.south west) {\bigemoji[0.95cm]{#3}};}
+\newcommand{\webinartitle}[6]{%
+  \begin{frame}[plain]
+    \begin{tikzpicture}[remember picture, overlay]
+      \fill[peach, opacity=0.6] ([xshift=-16.7mm, yshift=-11.7mm]current page.north east) circle (27.5mm);
+      \fill[lavender, opacity=0.5] ([xshift=10mm, yshift=6mm]current page.south west) circle (25mm);
+      \fill[mint, opacity=0.5] ([xshift=82mm, yshift=-2.5mm]current page.south west) circle (19mm);
+      \fill[butter, opacity=0.7] ([xshift=73mm, yshift=-3.3mm]current page.north west) circle (10mm);
+      \node[anchor=north west, inner sep=0] at ([xshift=9mm, yshift=-7mm]current page.north west)
+        {\scalebox{1.15}{\idiotpill[lavender]{}{Վեբինար \##1}}};
+      % font= on the node, not in the text: a font switch in the text is lost after \\
+      \node[anchor=north west, inner sep=0, text=mint, align=left, font=\titlefont\fontsize{46}{50}\selectfont]
+        at ([xshift=9.4mm, yshift=-18.6mm]current page.north west) {Ապուշ\\ուղեղը};
+      \node[anchor=north west, inner sep=0, text=plum, align=left, font=\titlefont\fontsize{46}{50}\selectfont] (wt)
+        at ([xshift=8.6mm, yshift=-17.8mm]current page.north west) {Ապուշ\\ուղեղը};
+      \node[anchor=north west, inner sep=0, text width=7.2cm, align=left] (wc) at ([xshift=0.4mm, yshift=-4mm]wt.south west) {#3};
+      \node[anchor=north west, inner sep=0, text width=7.2cm, align=left, font=\blackfont\normalsize, text=plum] (wl)
+        at ([yshift=-3.5mm]wc.south west) {#2};
+      \node[anchor=north west, inner sep=0, font=\mediumfont\scriptsize, text=plum!80!cream]
+        at ([yshift=-1.8mm]wl.south west) {Դին Բըրնեթի «The Idiot Brain» գրքի հիման վրա};
+      \node[rotate=3] at ([xshift=-40mm, yshift=3mm]current page.east) {%
+        \begin{minipage}{7.0cm}
+        \begin{popup}{ուղեղ.exe}
+          \begin{minipage}[c]{2.5cm}\mascot[2.5cm]{#4}\end{minipage}\hfill
+          \begin{minipage}[c]{3.7cm}\raggedright
+            {\blackfont\large #5}\par\smallskip
+            {\mediumfont\scriptsize\color{plum!70!cream}Սպասե՞լ, թե՞ փակել}\par\medskip
+            \idiotpill[mint]{}{Սպասել}\hspace{1.5mm}\idiotpill[peach]{}{Փակել}
+          \end{minipage}
+        \end{popup}
+        \end{minipage}};
+      \idiot@titledeco#6
+    \end{tikzpicture}
+  \end{frame}}
+\makeatother
+
+% Meme template with Armenian sticker captions placed by fractions of the image (0,0 = bottom left):
+%   \begin{meme}[<width>]{<file in memes/>} \memecap{<x>}{<y>}{<text>} ... \end{meme}
+\newenvironment{meme}[2][8cm]{%
+  \begin{tikzpicture}
+    \node[anchor=south west, inner sep=0] (memeimg) at (0,0) {\includegraphics[width=#1]{memes/#2}};
+    \draw[plum, line width=1pt, rounded corners=1mm] (memeimg.south west) rectangle (memeimg.north east);
+    \begin{scope}[x={(memeimg.south east)}, y={(memeimg.north west)}]}
+  {\end{scope}\end{tikzpicture}}
+\newcommand{\memecap}[4][]{\node[fill=cardwhite, draw=plum, line width=0.7pt, rounded corners=1.5mm,
+  font=\blackfont\small, text=plum, align=center, inner sep=3pt, #1] at (#2,#3) {#4};}
 
 % Small source line at the bottom of a frame: \source{Loftus & Palmer, 1974}
 \newcommand{\source}[1]{%
@@ -290,7 +354,7 @@
   chatmsg/.style={draw=plum, line width=0.8pt, rounded corners=3mm, inner sep=6pt, text width=#1,
     align=left, font=\small, text=plum},
   chatmsg/.default=7cm,
-  invisible/.style={opacity=0, text opacity=0},
+  invisible/.style={opacity=0, text opacity=0, execute at begin node={\csname idiot@hiddentrue\endcsname}},
   visible on/.style={alt={#1{}{invisible}}},
   alt/.code args={<#1>#2#3}{\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}},
 }

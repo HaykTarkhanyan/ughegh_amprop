@@ -1,0 +1,38 @@
+% Webinar 5 of the Idiot Brain series (Armenian): chapter 6, "Personality: a testing concept".
+% Build from the repo root through the shared queue (never run lualatex directly):
+%     python 02_idiot_brain/slides/common/build_deck.py webinar05            one pass, ~3 min
+%     python 02_idiot_brain/slides/common/build_deck.py webinar05 --full     latexmk until stable, ~10-17 min
+% Needs the art first: uv run 02_idiot_brain/slides/common/build_art.py
+% Speaker notes: NOTES.md (by frame number and title). ~95 min talk incl. a 5 min break.
+\documentclass[aspectratio=169,11pt]{beamer}
+\input{../common/preamble.tex}
+\title[Վեբինար \#5]{Ապուշ ուղեղը}
+
+% ---------------------------------------------------------------------
+% Deck-only styles (a style with #1 cannot be defined inside a frame body)
+% ---------------------------------------------------------------------
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\tikzset{
+  % a labelled box in a diagram, filled with a pastel: \node[pbox=mint] {...};
+  pbox/.style={draw=plum, line width=0.8pt, fill=#1!45!cardwhite, rounded corners=2mm, align=center,
+    font=\small, text=plum, inner sep=4pt},
+  pbox/.default=cardwhite,
+  % one step of a story strip or cycle, fixed width: \node[strip=3.4cm] {...};
+  strip/.style={draw=plum, line width=0.8pt, fill=cardwhite, rounded corners=2mm, align=center,
+    font=\small, text=plum, inner sep=4pt, text width=#1, minimum height=1.25cm},
+  strip/.default=3.2cm,
+  arr/.style={-{Stealth[length=2.6mm]}, plum, line width=1.2pt},
+}
+% a box with a coloured title tab: \begin{traitbox}{<colour>}{<title>} ... \end{traitbox}
+\newtcolorbox{traitbox}[3][]{tagged=#2, title={#3}, fontupper=\small, #1}
+
+\begin{document}
+\input{parts/00_opening.tex}
+\input{parts/01_intro.tex}
+\input{parts/02_tests.tex}
+\input{parts/03_anger.tex}
+\input{parts/04_motivation.tex}
+\input{parts/05_humour.tex}
+\input{parts/06_wrapup.tex}
+\input{parts/07_appendix.tex}
+\end{document}

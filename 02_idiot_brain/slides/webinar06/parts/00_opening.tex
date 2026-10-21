@@ -1,0 +1,71 @@
+% ===== Opening: title, hook, the book and the series, today's plan (~5 min) =====
+
+\webinartitle{6}{Գլուխ 7. Խմբային գրկախառնություն}%
+  {\chip{masks}{դեմքեր} \chip{carrot}{համոզում} \chip{brokenheart}{սեր} \chip{people}{խումբ}}%
+  {panic}{Իսկ մարդիկ ի՞նչ կասեն}{{hug}{handshake}{clapping}}
+
+% Hook: four social glitches; the audience types the ones they know (answered later in the talk)
+\begin{frame}{Քեզ հետ եղե՞լ է}
+  \begin{columns}[c]
+    \begin{column}{0.6\textwidth}
+      \begin{popup}{ուղեղ.exe}
+        {\blackfont\large Ուրիշները միացել են քո ուղեղին}\par\medskip
+        \begin{enumerate}
+          \item<2-> Ծիծաղեցիր կատակի վրա, որ չհասկացար, որովհետև բոլորը ծիծաղում էին
+          \item<3-> Ընկերոջդ մի փոքր բանում «այո» ասացիր ու հայտնվեցիր մեծ գործի մեջ
+          \item<4-> Բաժանումից հետո օրերով չէիր ուզում ոչ ուտել, ոչ մարդկանց տեսնել
+          \item<5-> Խմբային չաթում ոչ ոք չի պատասխանում, որովհետև «հիմա ուրիշը կգրի»
+        \end{enumerate}
+      \end{popup}
+    \end{column}
+    \begin{column}{0.34\textwidth}
+      \centering
+      \mascot[3cm]{panic}\par\medskip
+      \onslide<6->{%
+      \begin{chatbox}
+        Գրիր համարները, որոնք քեզ հետ եղել են (օր.՝ \textbf{1, 4})
+      \end{chatbox}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% The book and where this chapter sits in the series
+\begin{frame}{Գիրքը և շարքը}
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \begin{card}
+        {\blackfont\Large The Idiot Brain} {\small (2016)}\par\smallskip
+        \textbf{Դին Բըրնեթ}՝ նեյրոգիտնական ու ստենդափ կատակերգու։ Գրված է կատակով, բայց ամեն պնդման տակ գիտական հոդված կա։
+      \end{card}
+      \begin{card}[colback=mint!35!cardwhite]
+        Ամեն վեբինարում՝ մեկ գլուխ, նախորդները դիտած լինելը \textbf{պարտադիր չէ}։ Որտեղ գիտությունը 2016-ից հետո փոխվել է, կտեսնես «Գիտությունն այսօր» տուփը։
+      \end{card}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      {\blackfont\small Գրքի 8 գլուխը}\par\smallskip
+      {\color{plum!50!cream}\small
+      1. Մարմնի կառավարում\\
+      2. Հիշողություն \quad 3. Վախ\\
+      4. Խելք \quad 5. Ընկալում\\
+      6. Անհատականություն}\par\smallskip
+      \chip[brainpink]{hug}{7. Ուրիշ մարդիկ. այսօր}\par\smallskip
+      {\color{plum!50!cream}\small 8. Երբ ուղեղը «փչանում» է}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Plan for today: five book sections, break after the second
+\begin{frame}{Այսօր}
+  \centering
+  \begin{tikzpicture}
+    \foreach \n/\x/\e/\t/\c in {1/0/masks/{Դեմքեր\\ ու խոսք}/mint, 2/2.62/carrot/{Համոզելու\\ հնարքներ}/butter,
+                             3/5.74/brokenheart/{Սեր ու\\ բաժանում}/brainpink, 4/8.36/people/{Խմբի\\ ուժը}/lavender,
+                             5/10.98/imp/{Ինչու ենք\\ դաժան}/peach}{
+      \node[flow=2.1cm, fill=\c!45!cardwhite, minimum height=2.5cm, font=\blackfont\small] at (\x, 0)
+        {\bigemoji[0.9cm]{\e}\\[1.5mm] \t};
+      \node[font=\blackfont\footnotesize, text=plum!70!cream] at (\x, -1.65) {\n};}
+    \node at (4.18, 0) {\bigemoji[0.7cm]{coffee}};
+    \node[font=\scriptsize, text=plum!70!cream] at (4.18, -1.65) {ընդմիջում};
+  \end{tikzpicture}\par\vspace{5mm}
+  {\small Բոլորը գրքի 7-րդ գլխից, գրքի հերթականությամբ \qquad \emoji{speech}\ Հարցերը գրիր չաթում ցանկացած պահի}
+\end{frame}

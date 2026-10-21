@@ -1,0 +1,22 @@
+% Opiates vs the pain system as a seesaw (schematic, after the book):
+% slide 1 the opiate wins (euphoria), slide 2 the brain boosts the pain system (balance), slide 3 the drug is gone (withdrawal).
+\begin{tikzpicture}[
+    wt/.style={draw=plum, line width=0.8pt, rounded corners=1.5mm, font=\small, text=plum, align=center, inner sep=3pt},
+  ]
+  \filldraw[fill=plum, draw=plum] (-0.35,-1.1) -- (0.35,-1.1) -- (0,-0.2) -- cycle;
+  \only<1>{\begin{scope}[rotate around={8:(0,-0.2)}]
+    \draw[plum, line width=3pt, line cap=round] (-2.9,-0.2) -- (2.9,-0.2);
+    \node[wt, fill=mint!50!cardwhite, anchor=south, minimum width=1.9cm, minimum height=1.2cm] at (-2.0,-0.12) {\emoji{pill}\\ ափիոնային\\ նյութ};
+    \node[wt, fill=brainpink!40!cardwhite, anchor=south, minimum width=1.3cm, minimum height=0.6cm] at (2.0,-0.12) {ցավ};
+  \end{scope}}
+  \only<2>{\begin{scope}
+    \draw[plum, line width=3pt, line cap=round] (-2.9,-0.2) -- (2.9,-0.2);
+    \node[wt, fill=mint!50!cardwhite, anchor=south, minimum width=1.9cm, minimum height=1.2cm] at (-2.0,-0.12) {\emoji{pill}\emoji{pill}\\ ավելի շատ\\ ափիոն};
+    \node[wt, fill=brainpink!60!cardwhite, anchor=south, minimum width=1.9cm, minimum height=1.2cm] at (2.0,-0.12) {\emoji{lightning}\\ ուժեղացված\\ ցավի համակարգ};
+  \end{scope}}
+  \only<3->{\begin{scope}[rotate around={-16:(0,-0.2)}]
+    \draw[plum, line width=3pt, line cap=round] (-2.9,-0.2) -- (2.9,-0.2);
+    \node[wt, fill=amRed!30!cardwhite, anchor=south, minimum width=1.9cm, minimum height=1.2cm] at (2.0,-0.12) {\emoji{lightning}\emoji{lightning}\\ ցավ\\ ամեն ինչից};
+  \end{scope}
+  \node[font=\blackfont\small, text=pinkdark] at (-2.2,1.6) {դեղը չկա};}
+\end{tikzpicture}

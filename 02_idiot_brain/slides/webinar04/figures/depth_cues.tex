@@ -1,0 +1,30 @@
+% Depth cues that work with one eye: occlusion (the tree hides part of the house), texture (grass
+% detail fades with distance) and lines converging into the distance (the road). Tags on slides 2-4.
+\begin{tikzpicture}
+  \path[use as bounding box] (-3.9,-2.15) rectangle (3.9,2.05);
+  \begin{scope}
+    \clip[rounded corners=3mm] (-3.8,-2.1) rectangle (3.8,2.0);
+    \fill[lavender!35!cardwhite] (-3.8,0.75) rectangle (3.8,2.0);
+    \fill[mint!55!cardwhite] (-3.8,-2.1) rectangle (3.8,0.75);
+    % grass texture: big and sparse near, tiny and dense far
+    \foreach \y/\s/\d in {-1.9/0.09/0.55, -1.45/0.07/0.45, -1.05/0.055/0.36, -0.7/0.04/0.28, -0.4/0.03/0.21, -0.15/0.022/0.16, 0.08/0.016/0.12, 0.28/0.012/0.09, 0.46/0.009/0.07}{
+      \pgfmathtruncatemacro{\grassn}{7.6/\d}
+      \foreach \k in {0,...,\grassn}{\fill[mintdark!70] (-3.8+\k*\d,\y) circle (\s);}}
+    % road converging to the horizon
+    \fill[plum!25!cardwhite] (-2.1,-2.1) -- (2.1,-2.1) -- (0.08,0.75) -- (-0.08,0.75) -- cycle;
+    \draw[plum!70, line width=0.9pt] (-2.1,-2.1) -- (-0.08,0.75) (2.1,-2.1) -- (0.08,0.75);
+    \foreach \a/\b in {-2.0/-1.45, -1.05/-0.68, -0.35/-0.1, 0.12/0.28, 0.42/0.52, 0.6/0.66}{
+      \draw[butter!90!amOrange, line width=1.6pt] (0,\a) -- (0,\b);}
+    % house, partly hidden by a tree
+    \filldraw[fill=peach, draw=plum, line width=0.7pt] (1.6,0.35) rectangle (2.6,1.15);
+    \filldraw[fill=plum!70, draw=plum, line width=0.7pt] (1.5,1.15) -- (2.1,1.6) -- (2.7,1.15) -- cycle;
+    \node at (1.7,0.85) {\bigemoji[1.2cm]{tree}};
+    % trees getting smaller along the road
+    \foreach \x/\y/\h in {-2.9/-1.0/1.1, -1.85/-0.05/0.7, -1.15/0.45/0.45, -0.6/0.72/0.28}{\node at (\x,\y) {\bigemoji[\h cm]{tree}};}
+  \end{scope}
+  \draw[plum, line width=0.9pt, rounded corners=3mm] (-3.8,-2.1) rectangle (3.8,2.0);
+  % tags
+  \node[visible on=<2->, wpill=amRed] at (2.85,1.75) {1 ծածկում};
+  \node[visible on=<3->, wpill=amBlue] at (-2.75,-1.8) {2 մանրամասներ};
+  \node[visible on=<4->, wpill=amOrange!85!black] at (2.2,-1.8) {3 զուգահեռները հատվում են};
+\end{tikzpicture}

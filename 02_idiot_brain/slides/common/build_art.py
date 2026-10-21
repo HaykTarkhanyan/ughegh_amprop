@@ -4,7 +4,7 @@
 # ///
 """Build the vector art the slide decks use: Twemoji icons and the brain mascot in several moods.
 
-Run:  uv run 02_idiot_brain/slides/common/build_art.py     (~15 s; ~40 s on the first run, which downloads the emoji)
+Run:  uv run 02_idiot_brain/slides/common/build_art.py     (~45 s; 70 s on 2026-10-21, which downloaded 124 new emoji)
 Out:  02_idiot_brain/slides/common/art/emoji.pdf    one Twemoji 15.1.0 icon per page (square)
       02_idiot_brain/slides/common/art/mascot.pdf   one mascot mood per page (420x400, same body as banner/mascot.svg)
       02_idiot_brain/slides/common/art/title_banner.pdf  the v2 banner (banner/out/v2_glazz) as a vector title slide
@@ -72,10 +72,44 @@ EMOJI = {
     "chart": "1f4ca", "testtube": "1f9ea", "people": "1f465", "pin": "1f4cc", "hourglass": "23f3",
     "microscope": "1f52c", "books": "1f4da", "megaphone": "1f4e3", "student": "1f9d1-200d-1f393",
     "zany": "1f92a", "hundred": "1f4af", "link": "1f517", "target": "1f3af",
+    # ch3 fear: superstition, phobias, horror, criticism
+    "clover": "1f340", "ufo": "1f6f8", "spider": "1f577", "spiderweb": "1f578", "snake": "1f40d",
+    "microphone": "1f3a4", "clown": "1f921", "pumpkin": "1f383", "knife": "1f52a", "bat": "1f987",
+    "blackcat": "1f408-200d-2b1b", "crossedfingers": "1f91e", "ladder": "1fa9c", "thumbsup": "1f44d",
+    "thumbsdown": "1f44e", "rocket": "1f680", "satellite": "1f4e1", "newspaper": "1f4f0", "chocolate": "1f36b",
+    "syringe": "1f489", "dice": "1f3b2", "hauntedhouse": "1f3da", "flushed": "1f633", "fearful": "1f628",
+    # ch4 intelligence
+    "graduation": "1f393", "teacher": "1f9d1-200d-1f3eb", "scientist": "1f9d1-200d-1f52c", "chess": "265f",
+    "abacus": "1f9ee", "ruler": "1f4cf", "jeans": "1f456", "glasses": "1f453", "dna": "1f9ec",
+    "loudspeaker": "1f4e2", "speakinghead": "1f5e3", "seedling": "1f331", "weightlifter": "1f3cb",
+    "giraffe": "1f992", "mouse": "1f42d", "exploding": "1f92f", "owl": "1f989", "clipboard": "1f4cb",
+    "numbers": "1f522", "medal": "1f3c5",
+    # ch5 perception
+    "rose": "1f339", "nose": "1f443", "tongue": "1f445", "yum": "1f60b", "bread": "1f35e", "lemon": "1f34b",
+    "chili": "1f336", "salt": "1f9c2", "candy": "1f36c", "speaker": "1f50a", "headphones": "1f3a7",
+    "feather": "1fab6", "gorilla": "1f98d", "basketball": "1f3c0", "magicwand": "1fa84", "tophat": "1f3a9",
+    "cloud": "2601", "plug": "1f50c", "clinking": "1f942", "dog": "1f415", "rainbow": "1f308",
+    "slightsmile": "1f642", "palette": "1f3a8",
+    # ch6 personality: tests, anger, motivation, humour
+    "masks": "1f3ad", "angry": "1f620", "rage": "1f621", "steam": "1f624", "bomb": "1f4a3", "volcano": "1f30b",
+    "angersymbol": "1f4a2", "crystalball": "1f52e", "railway": "1f6e4", "worker": "1f477", "laughing": "1f602",
+    "rofl": "1f923", "banana": "1f34c", "mountain": "1f3d4", "moneybag": "1f4b0", "lightning": "26a1",
+    "joker": "1f0cf", "finishflag": "1f3c1",
+    # ch7 other people
+    "hug": "1fac2", "handshake": "1f91d", "lying": "1f925", "neutral": "1f610", "carrot": "1f955", "wood": "1fab5",
+    "brokenheart": "1f494", "loveletter": "1f48c", "couple": "1f491", "kiss": "1f48b", "cowboy": "1f920",
+    "guitar": "1f3b8", "family": "1f46a", "police": "1f46e", "sheep": "1f411", "clapping": "1f44f",
+    "imp": "1f608", "ballot": "1f5f3", "smileheart": "1f970", "dollar": "1f4b5", "earth": "1f30d",
+    # ch8 when the brain breaks down
+    "raincloud": "1f327", "sunbehindcloud": "26c5", "pensive": "1f614", "cry": "1f622", "bandage": "1fa79",
+    "stethoscope": "1fa7a", "cigarette": "1f6ac", "slotmachine": "1f3b0", "siren": "1f6a8", "sunrise": "1f305",
+    "healthworker": "1f9d1-200d-2695-fe0f", "hearnoevil": "1f649", "anchor": "2693", "candle": "1f56f",
+    "telephone": "260e", "battery": "1f50b", "weary": "1f629", "lotus": "1fab7",
 }
 
 PLUM, PINK, FOLD, WHITE, BLUSH, MINT, DROP = "#4A2340", "#F7A8C4", "#E57FA6", "#FFFDF9", "#FF8FA8", "#B5E8D5", "#9ED8F5"
 SICK, SICK_FOLD = "#BFE3A6", "#8FC774"
+ANGRY, ANGRY_FOLD, VEIN_RED = "#F78DAA", "#D9577F", "#C2185B"
 BODY_CIRCLES = [(122, 175, 62), (160, 118, 64), (226, 102, 66), (292, 136, 60),
                 (300, 198, 56), (250, 232, 64), (162, 232, 64), (207, 178, 95)]
 FOLDS = ["M207,48 C198,72 216,92 205,116", "M118,140 C134,120 158,128 164,106", "M250,80 C270,92 262,112 286,116",
@@ -128,6 +162,11 @@ BLUSH_CHEEKS = (f'<ellipse cx="136" cy="230" rx="20" ry="11" fill="{BLUSH}" opac
                 f'<ellipse cx="280" cy="230" rx="20" ry="11" fill="{BLUSH}" opacity="0.55"/>')
 SWEAT = f'<path d="M330,84 q16,22 0,33 q-16,-11 0,-33 z" fill="{DROP}" stroke="{PLUM}" stroke-width="4"/>'
 WORRIED_BROWS = line("M146,146 L186,132") + line("M230,132 L270,146")
+TEAR = f'<path d="M150,224 q11,17 0,26 q-11,-9 0,-26 z" fill="{DROP}" stroke="{PLUM}" stroke-width="3"/>'
+# comic anger mark, four bent strokes over the right side of the head
+VEIN = (f'<g fill="none" stroke="{VEIN_RED}" stroke-width="7" stroke-linecap="round">'
+        '<path d="M306,58 q12,0 12,-12"/><path d="M332,46 q0,12 12,12"/>'
+        '<path d="M344,84 q-12,0 -12,12"/><path d="M318,96 q0,-12 -12,-12"/></g>')
 Z = lambda x, y, s: line(f"M{x},{y} h{s} l-{s},{s * 1.1:.0f} h{s}", 6)
 
 
@@ -171,6 +210,9 @@ MOODS = {
                + f'<path d="M226,250 q9,14 0,22 q-9,-8 0,-22 z" fill="{DROP}" stroke="{PLUM}" stroke-width="3"/>'),
     "thinking": ("down", PINK, FOLD, line("M148,138 L186,134") + line("M230,134 L268,138")
                  + eyes(-8, -10) + BLUSH_CHEEKS + line("M196,246 L222,242", 6)),
+    "sad": ("down", PINK, FOLD, WORRIED_BROWS + eyes(0, 9, 15) + line("M186,256 Q208,238 230,256", 6) + TEAR),
+    "angry": ("down", ANGRY, ANGRY_FOLD, line("M144,130 L188,150") + line("M228,150 L272,130")
+              + eyes(0, 5, 12) + BLUSH_CHEEKS + line("M184,254 Q208,236 232,254", 7) + VEIN),
 }
 
 

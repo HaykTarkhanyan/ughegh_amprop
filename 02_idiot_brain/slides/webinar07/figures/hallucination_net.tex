@@ -1,0 +1,21 @@
+% How the brain tells inside from outside, after Allen et al. (2008), as the book describes it.
+% Slide 1: the normal network. Slide 2: a hallucination (internal signal too strong, monitoring links weakened).
+\begin{tikzpicture}[nd/.style={flow=3.2cm, font=\small, inner sep=3pt}]
+  \node[nd, fill=butter!50!cardwhite] (th) at (-4.8,0) {\textbf{Թալամուս}\\ «հում» տվյալներ զգայարաններից};
+  \node[nd, fill=lavender!45!cardwhite, text width=6.4cm] (mon) at (0,2.15)
+    {\textbf{Նախաճակատային, նախաշարժիչ կեղև, ուղեղիկ}\\ «Սա \textbf{ես} եմ անում»};
+  \node[nd, fill=mint!45!cardwhite, text width=4.4cm] (em) at (0,-2.0) {\textbf{Հիպոկամպ, նշաձև մարմին}\\ հիշողություն, զգացմունք};
+  \only<1>{\node[nd, fill=cardwhite, text width=3.4cm] (sc) at (0,0)
+    {\textbf{Զգայական կեղև}\\ գծեր, գույներ $\rightarrow$\\ «ավտոբուս է»};}
+  \only<2->{\node[nd, fill=amOrange!35!cardwhite, draw=amOrange!80!black, text width=3.4cm] (sc) at (0,0)
+    {\textbf{Զգայական կեղև}\\ ներքինը \textbf{ուժեղացել} է};}
+  \only<1>{\node[nd, fill=cardwhite, text width=2.6cm] (out) at (4.8,0) {\emoji{eye}\emoji{ear}\\ ընկալում};}
+  \only<2->{\node[nd, fill=brainpink!45!cardwhite, text width=2.6cm] (out) at (4.8,0) {\emoji{speakinghead}\\ միտքը թվում է \textbf{դրսից}};}
+  \draw[arr] (th) -- (sc);
+  \draw[arr] (sc) -- (out);
+  \draw[arr, <->] (em) -- (sc);
+  \only<1>{\draw[arr, <->] (mon) -- (sc);}
+  \only<2->{\draw[arr=amRed, <->, dashed] (mon) -- (sc);
+    \node[font=\blackfont\scriptsize, text=amRed, anchor=west, inner sep=1pt] at (0.15,1.1) {կապը թուլացել է};
+    \node[font=\blackfont\scriptsize, text=amRed, anchor=west] at (em.east) {զգացմունքը չի մեղմվում};}
+\end{tikzpicture}

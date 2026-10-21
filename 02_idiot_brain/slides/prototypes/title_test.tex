@@ -1,0 +1,16 @@
+% Test of \webinartitle (common/preamble.tex), the title slide for webinars 2-7.
+% Build: python 02_idiot_brain/slides/common/build_deck.py prototypes --tex title_test.tex   (~40 s)
+\documentclass[aspectratio=169,11pt]{beamer}
+\input{../common/preamble.tex}
+\title[Վեբինար \#2]{Ապուշ ուղեղը}
+
+\begin{document}
+\webinartitle{2}{Գլուխ 3. Վախ. վախենալու բան չկա}%
+  {\chip{clover}{սնահավատություն} \chip{spider}{ֆոբիաներ} \chip{pumpkin}{սարսափ ֆիլմեր} \chip{thumbsdown}{քննադատություն}}%
+  {scared}{Վախի ռեժիմը միացված է}{{ufo}{blackcat}{snake}}
+
+\begin{frame}{Նոր տրամադրություններ}
+  \mascot[2.4cm]{sad}\quad\mascot[2.4cm]{angry}\quad
+  \emoji{brokenheart}\ \emoji{healthworker}\ \emoji{blackcat}\ \emoji{teacher}
+\end{frame}
+\end{document}

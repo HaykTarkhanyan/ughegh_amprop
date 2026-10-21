@@ -3,34 +3,34 @@
 % route through the cortex that only later says "it was a balloon".
 \begin{tikzpicture}[
     part/.style={draw=#1, line width=1.2pt, fill=#1!10!cardwhite, rounded corners=3mm,
-                 align=center, inner sep=5pt, text width=2.6cm, font=\small, text=plum},
+                 align=center, inner sep=4pt, text width=2.35cm, font=\small, text=plum},
     road/.style={-{Stealth[length=3.2mm]}, line width=2pt, #1},
   ]
-  \path[use as bounding box] (-7.2,-2.75) rectangle (7.2,2.75);
+  \path[use as bounding box] (-7.2,-2.9) rectangle (7.2,2.9);
 
-  \node[part=plum] (sense) at (-5.85,0)
-    {\bigemoji[0.7cm]{eye}\,\bigemoji[0.7cm]{ear}\\[2pt] \textbf{Զգայարաններ}\\ «ԲՈՒ՛Մ»};
-  \node[part=plum] (thal) at (-2.6,0)
-    {\bigemoji[0.7cm]{station}\\[2pt] \textbf{Թալամուս}\\ գլխավոր կայարանը};
+  \node[part=plum, text width=2.6cm] (sense) at (-5.75,0)
+    {\bigemoji[0.55cm]{eye}\,\bigemoji[0.55cm]{ear}\\ \textbf{Զգայարաններ}\\ «ԲՈՒ՛Մ»};
+  \node[part=plum] (thal) at (-2.85,0)
+    {\bigemoji[0.55cm]{station}\\ \textbf{Թալամուս}\\ (thalamus)\\ գլխավոր կայարանը};
   \draw[road=plum] (sense) -- (thal);
 
   % fast road
-  \node[part=amRed, visible on=<2->] (amy) at (0.9,1.55)
-    {\bigemoji[0.7cm]{bell}\\[2pt] \textbf{Նշաձև մարմին}\\ ահազանգը};
-  \node[part=amRed, visible on=<2->] (hypo) at (4.3,1.55)
-    {\bigemoji[0.7cm]{taxi}\\[2pt] \textbf{Հիպոթալամուս}\\ տաքսիների կանգառը};
-  \node[part=amRed, visible on=<2->, text width=1.75cm] (body) at (6.3,-0.45)
-    {\bigemoji[0.7cm]{anatomicalheart}\\[2pt] \textbf{Մարմին}\\ մարտական\\ վիճակ};
+  \node[part=amRed, visible on=<2->] (amy) at (0.25,1.75)
+    {\bigemoji[0.55cm]{bell}\\ \textbf{Նշաձև մարմին}\\ (amygdala)\\ ահազանգը};
+  \node[part=amRed, visible on=<2->, text width=2.7cm] (hypo) at (3.6,1.75)
+    {\bigemoji[0.55cm]{taxi}\\ \textbf{Հիպոթալամուս}\\ տաքսիների կանգառը};
+  \node[part=amRed, visible on=<2->, text width=2.1cm] (body) at (6.3,-0.8)
+    {\bigemoji[0.55cm]{anatomicalheart}\\ \textbf{Մարմին}\\ մարտական\\ վիճակ};
   \draw[road=amRed, visible on=<2->] (thal.north east) to[out=40, in=180]
-    node[pos=0.45, above left=-1pt, font=\blackfont\small, text=amRed] {ԱՐԱԳ ճամփա} (amy.west);
+    node[pos=0.4, above left=-1pt, font=\blackfont\small, text=amRed] {ԱՐԱԳ ճամփա} (amy.west);
   \draw[road=amRed, visible on=<2->] (amy) -- (hypo);
-  \draw[road=amRed, visible on=<2->] (hypo.south east) to[out=-30, in=90] (body.north);
+  \draw[road=amRed, visible on=<2->] (hypo.east) to[out=0, in=90] (body.north);
 
   % slow road
-  \node[part=amBlue, visible on=<3->] (cortex) at (0.9,-1.65)
-    {\bigemoji[0.7cm]{detective}\\[2pt] \textbf{Կեղև}\\ խուզարկուն};
+  \node[part=amBlue, visible on=<3->] (cortex) at (0.45,-1.8)
+    {\bigemoji[0.55cm]{detective}\\ \textbf{Կեղև}\\ (cortex)\\ խուզարկուն};
   \draw[road={amBlue, dashed}, visible on=<3->] (thal.south east) to[out=-40, in=180]
-    node[pos=0.45, below left=-1pt, font=\blackfont\small, text=amBlue] {դանդաղ ճամփա} (cortex.west);
-  \node[say, visible on=<3->, callout absolute pointer={(cortex.east)}, text width=2.6cm, font=\handfont\normalsize]
-    at (3.75,-1.85) {Փուչիկ էր ընդամենը։ Հանգստացե՛ք... ուշ է՞};
+    node[pos=0.4, below left=-1pt, font=\blackfont\small, text=amBlue] {դանդաղ ճամփա} (cortex.west);
+  \node[say, visible on=<3->, callout absolute pointer={(cortex.east)}, text width=2.5cm, font=\handfont\small]
+    at (3.6,-2.0) {Փուչիկ էր ընդամենը։ Հանգստացե՛ք... ուշ է՞};
 \end{tikzpicture}

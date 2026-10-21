@@ -1,0 +1,13 @@
+% Displacement (book): small irritations with no outlet pile up; the next harmless target gets all of it.
+% One segment per click (1-3), the waiter tips it over on click 4.
+\begin{tikzpicture}
+  \fill[amOrange!35, rounded corners=1.5mm] (0,0) rectangle (1.1,1.1);
+  \fill[amOrange!70, visible on=<2->] (0,1.1) rectangle (1.1,2.2);
+  \fill[amOrange, visible on=<3->] (0,2.2) rectangle (1.1,3.3);
+  \fill[amRed, visible on=<4->] (0,3.3) rectangle (1.1,4.2);
+  \draw[plum, line width=1pt, rounded corners=1.5mm] (0,0) rectangle (1.1,4.2);
+  \foreach \y in {1.1,2.2,3.3}{\draw[plum!50, line width=0.6pt] (0,\y) -- (0.3,\y);}
+  \node[font=\scriptsize, text=plum, rotate=90] at (-0.35,2.1) {զայրույթ};
+  \node[visible on=<4->] at (0.55,4.9) {\bigemoji[1.1cm]{bomb}};
+  \node[visible on=<4->, font=\blackfont\large, text=amRed, rotate=-10] at (1.9,4.75) {ԲՈՒՄ};
+\end{tikzpicture}

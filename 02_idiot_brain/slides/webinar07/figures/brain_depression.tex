@@ -1,0 +1,15 @@
+% Medial view of the brain (front = left; images/brain_medial.png, P. J. Lynch, Wikimedia Commons, CC BY 2.5)
+% with the areas the depression theories point at. Positions are fractions of the image (0,0 = bottom left).
+\begin{tikzpicture}
+  \node[anchor=south west, inner sep=0] (b) at (0,0) {\includegraphics[width=5cm]{brain_medial.png}};
+  \begin{scope}[x={(b.south east)}, y={(b.north west)}]
+    \node[braindot=amRed] (acc) at (0.30,0.715) {};
+    \node[brainlbl=brainpink!40!cardwhite, anchor=south] (al) at (0.42,1.02) {առաջային գոտկային կեղև};
+    \draw[plum, line width=0.6pt] (acc) -- (al.south);
+    \node[braindot=amBlue, visible on=<2->] (hyp) at (0.435,0.415) {};
+    \node[braindot=amBlue, visible on=<2->] (pit) at (0.355,0.265) {};
+    \node[brainlbl=lavender!50!cardwhite, anchor=north, visible on=<2->] (hl) at (0.36,-0.03) {հիպոթալամուս ու հիպոֆիզ (HPA)};
+    \draw[plum, line width=0.6pt, visible on=<2->] (hyp) -- (hl.north);
+    \draw[plum, line width=0.6pt, visible on=<2->] (pit) -- (hl.north);
+  \end{scope}
+\end{tikzpicture}

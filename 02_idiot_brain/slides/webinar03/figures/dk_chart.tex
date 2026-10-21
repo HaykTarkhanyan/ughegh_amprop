@@ -1,0 +1,26 @@
+% Kruger & Dunning (1999), Study 2 (logical reasoning), percentile of test score:
+% bottom quartile actual 12th, estimated 62nd; top quartile actual 86th, estimated 68th.
+\begin{tikzpicture}
+  \begin{axis}[
+      width=7.6cm, height=5.0cm,
+      ybar, bar width=0.85cm,
+      ymin=0, ymax=100,
+      symbolic x coords={bottom, top},
+      xtick={bottom, top},
+      xticklabels={{Ամենաթույլ\\ քառորդը}, {Ամենաուժեղ\\ քառորդը}},
+      xticklabel style={align=center, font=\small, text=plum},
+      ytick={0,50,100}, yticklabel={\pgfmathprintnumber{\tick}},
+      tick label style={font=\small, text=plum}, axis line style={plum},
+      axis x line*=bottom, axis y line*=left, ymajorgrids, grid style={plum!10},
+      ylabel={պերցենտիլ}, ylabel style={font=\small, text=plum},
+      nodes near coords, nodes near coords style={font=\blackfont\small, text=plum},
+      enlarge x limits=0.45,
+      legend style={draw=none, fill=none, font=\small, text=plum, at={(0.5,1.02)}, anchor=south, legend columns=2,
+        /tikz/every even column/.append style={column sep=4mm}},
+      legend image code/.code={\fill[#1] (0cm,-0.1cm) rectangle (0.3cm,0.15cm);},
+    ]
+    \addplot[fill=amBlue, draw=none] coordinates {(bottom,12) (top,86)};
+    \addplot[fill=amOrange, draw=none] coordinates {(bottom,62) (top,68)};
+    \legend{իրականում, իրենց կարծիքով}
+  \end{axis}
+\end{tikzpicture}

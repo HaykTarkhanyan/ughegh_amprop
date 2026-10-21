@@ -1,0 +1,17 @@
+% Heritability from 0 to 1 with the book's examples: being on fire (0.0), species (1.0),
+% and IQ in children (~0.45) and adults (~0.85) from Bouchard's review. Overlays 2-5.
+\begin{tikzpicture}[x=10.5cm]
+  \shade[left color=peach, right color=lavender, rounded corners=1.5mm] (0,-0.16) rectangle (1,0.16);
+  \draw[plum, line width=0.9pt, rounded corners=1.5mm] (0,-0.16) rectangle (1,0.16);
+  \foreach \v in {0,0.5,1}{\node[font=\small, text=plum, anchor=north] at (\v,-0.2) {\v};}
+  % ends: the book's two examples
+  \node[visible on=<2->, anchor=south, align=center, font=\small, text=plum, text width=3.6cm] at (0.08,0.25)
+    {\showon{2-}{\bigemoji[0.8cm]{fire}}\\ Հիմա այրվո՞ւմ ես։ Դա միայն միջավայրից է՝ \textbf{0.0}};
+  \node[visible on=<3->, anchor=south, align=center, font=\small, text=plum, text width=3.6cm] at (0.92,0.25)
+    {\showon{3-}{\bigemoji[0.8cm]{dna}}\\ Ծնողներդ խոզ են՝ դու էլ խոզ ես. տեսակը՝ \textbf{1.0}};
+  % IQ according to Bouchard
+  \fill[amBlue, visible on=<4->] (0.45,0) circle (1.6mm);
+  \fill[amRed, visible on=<5->] (0.85,0) circle (1.6mm);
+  \node[visible on=<4->, anchor=north, font=\blackfont\small, text=amBlue] at (0.45,-0.55) {IQ, երեխաներ $\approx$ 0.45};
+  \node[visible on=<5->, anchor=north, font=\blackfont\small, text=amRed] at (0.82,-0.55) {IQ, մեծեր $\approx$ 0.85};
+\end{tikzpicture}

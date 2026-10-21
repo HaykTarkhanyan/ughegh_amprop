@@ -1,0 +1,52 @@
+title = "Webinars 2-7 (chapters 3-8) built by six parallel agents; webinar 1 overflow really fixed"
+date = "2026-10-21"
+time = "03:00"
+areas = ["02_idiot_brain/slides/", "DECISIONS.md", "CONVENTIONS.md", "DEFERRED_TODO.md", "_learnings/"]
+
+done = [
+  "Interviewed Hayk: one chapter per webinar (~95 min decks), all six agents at once, Opus, chapter 8 book-only with no help-line slide (DECISIONS.md #9)",
+  "build_art.py: 124 new emoji for chapters 3-8 (268 total) and two mascot moods, sad and angry; 70 s run",
+  "preamble.tex: \\webinartitle (TikZ title slide in the banner's layout; webinar 1 keeps its banner image), tested in slides/prototypes/title_test.tex",
+  "slides/common/build_deck.py: machine-wide build queue (msvcrt file locks, freed by the OS if a process dies), --parts/--passes/--full/--wait, status.json per deck; first 1 slot, then 2 after measuring one build's peak RAM at 179 MB; fixed a --wait race reported by the webinar06 agent",
+  "slides/common/non_essential/frame_sheets.py: contact sheets of each frame's last overlay",
+  "slides/DECK_BRIEF.md: the spec every chapter agent followed",
+  "Launched six Opus agents at ~03:20; all finished between 04:31 and 04:53 (each ~70-95 min, 0.5-0.73 M tokens, 260-410 tool calls)",
+  "Keep-awake helper (SetThreadExecutionState) ran 03:39 to ~09:15; laptop was on battery at 47% at the start",
+  "Webinar 1: found the 2026-10-19 '0 overfull vbox' was a Git Bash grep bug; 48 real warnings from 20 frames fixed without changing the frame count; frame 101 now says webinar 2 = chapter 3",
+  "Cross-deck bugs found by the agents and fixed: \\textbf inside medium text rendered medium (BoldFont added); `visible on` did not hide emoji/mascots (\\idiot@art draws a phantom while hidden); myth-or-fact stamp covered statements (moved to the box corner); first `{...}` line after a frame title became a hidden subtitle (11 frames in webinars 3, 6, 7 got \\relax)",
+  "Final full builds, all seven decks: 0 errors, 0 overfull vbox, 0 missing chars; frames reviewed at 100 dpi by me: webinar01 107, 02 100, 03 99, 04 94, 05 101, 06 100, 07 96",
+  "All seven PDFs copied to the Desktop as idiot_brain_webinarN[_chX].pdf, byte-identical to the builds",
+]
+
+pending = [
+  "Hayk to go through each deck's 'judgment calls' (listed below in notes) before giving it",
+  "Student review subagent per deck: ask Hayk first, one deck at a time",
+  "DEFERRED_TODO.md: missing emoji, \\showon into the preamble, «դու» vs plural on the Questions frame, webinar 7 frame 90 one-liners, webinar 1 cosmetics (frames 36, 64)",
+]
+
+next = [
+  "Banners for webinars 2-7 once dates exist (build_banner.py is webinar 1 only)",
+]
+
+files = [
+  "02_idiot_brain/slides/common/build_art.py, preamble.tex, build_deck.py, non_essential/",
+  "02_idiot_brain/slides/DECK_BRIEF.md",
+  "02_idiot_brain/slides/webinar01/ (parts, figures, NOTES.md)",
+  "02_idiot_brain/slides/webinar02/ ... webinar07/ (new: main .tex, parts/, figures/, images/, memes/, NOTES.md)",
+  "02_idiot_brain/slides/prototypes/title_test.tex, README.md",
+  "DECISIONS.md (#9), CONVENTIONS.md, DEFERRED_TODO.md",
+  "_learnings/2026-10-21-0316, -0355, -0500, -0510",
+]
+
+commits = ["see git log: 'Idiot Brain: webinars 2-7 (chapters 3-8), shared build tools, webinar 1 fixes' (includes the uncommitted 2026-10-19 polish session), pushed to origin/main"]
+
+notes = """
+Judgment calls the agents flagged (full lists are in their reports; the main ones):
+- webinar02 (ch3): agoraphobia stamped 'partly'; negging frame 90 is sensitive; the book's '1 in 10' anxiety figure kept, doubt in NOTES only; Face on Mars try-it is an addition.
+- webinar03 (ch4): several 'science today' boxes that agree with the book (education +1-5 IQ/year, Lumosity FTC settlement, heritability by age, Pygmalion size) - cut any that go beyond 'book only'; ADHD-drug and dementia frames written kindly; Kim Peek and Einstein IQ figures unverified.
+- webinar04 (ch5): 15 interactive moments (brief said 6-9); homunculus sculpture shows genitals (Burnett's own joke); 'best man' localised to քավոր.
+- webinar05 (ch6): title pun «դժվար թեստ»; venting-anger correction from a 2024 meta-analysis; Zeigarnik 2025 meta-analysis; Gage stagecoach details in NOTES from memory.
+- webinar06 (ch7): many classic-study corrections (Asch 37%, Milgram 43.6% average, Stanford prison, bystanders 91%); a politician joke next to the genocide line cut; prices in dram; Chan & Au numbers unverified.
+- webinar07 (ch8): suicide appears on 14-16 and 29-30 (Robin Williams frame 16: Hayk should read it); serotonin box; added tone frame 11; six schematic charts.
+RAM: 1.7-3.5 GB of 15.6 GB free during the night; no build was killed.
+"""

@@ -1,0 +1,31 @@
+% Webinar 6 of the Idiot Brain series (Armenian): chapter 7, "Group hug!" (how other people shape the brain).
+% Build from the repo root (queued behind the machine-wide build lock, never run lualatex directly):
+%     python 02_idiot_brain/slides/common/build_deck.py webinar06 --full     (~10-17 min)
+%     python 02_idiot_brain/slides/common/build_deck.py webinar06 --parts 02 (one part, one pass)
+% Needs the shared art first: uv run 02_idiot_brain/slides/common/build_art.py
+% Speaker notes: NOTES.md (by frame number and title). ~95 min talk incl. a 5 min break.
+\documentclass[aspectratio=169,11pt]{beamer}
+\input{../common/preamble.tex}
+\title[Վեբինար \#6]{Ապուշ ուղեղը}
+
+% Deck-only styles (no #1 here, so they could live in a frame too; kept together for reuse)
+\tikzset{
+  stairstep/.style={draw=plum, line width=0.8pt, rounded corners=1.5mm, align=center,
+    font=\small, text=plum, inner sep=3pt, minimum height=0.75cm},
+  regionlabel/.style={fill=cardwhite, draw=plum, line width=0.7pt, rounded corners=1.5mm,
+    font=\blackfont\scriptsize, text=plum, inner sep=2.5pt, align=center},
+  personnode/.style={draw=plum, line width=0.8pt, fill=cardwhite, rounded corners=2mm,
+    align=center, font=\small, text=plum, inner sep=4pt},
+}
+
+\begin{document}
+\input{parts/00_opening.tex}
+\input{parts/01_intro.tex}
+\input{parts/02_faces.tex}
+\input{parts/03_persuasion.tex}
+\input{parts/04_love.tex}
+\input{parts/05_groups.tex}
+\input{parts/06_mean.tex}
+\input{parts/07_wrapup.tex}
+\input{parts/08_appendix.tex}
+\end{document}
