@@ -2,6 +2,8 @@
 
 Written 2026-10-21 for the agents building webinars 2-7 (chapters 3-8) in parallel, one agent per deck. It is also the spec for any later deck. Webinar 1 (`slides/webinar01/`, intro + chapters 1-2) is the finished reference: match its look, tone and quality.
 
+**Renumbered 2026-10-23 (DECISIONS.md #10):** chapter 2 moved out of webinar 1 into `slides/webinar02/`, so the decks below are now `webinar03`-`webinar08` (chapter N = webinar N), and webinar 1's wrap-up and appendix are `parts/03_wrapup.tex` and `parts/04_appendix.tex`. The text below keeps the 2026-10-21 numbers.
+
 | Deck | Chapter | Book file |
 |---|---|---|
 | `webinar02` | 3. Fear: nothing to be scared of | `02_idiot_brain/03_fear_nothing_to_be_scared_of.md` |

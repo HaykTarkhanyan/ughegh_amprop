@@ -1,31 +1,38 @@
-% Webinar 6 of the Idiot Brain series (Armenian): chapter 7, "Group hug!" (how other people shape the brain).
-% Build from the repo root (queued behind the machine-wide build lock, never run lualatex directly):
-%     python 02_idiot_brain/slides/common/build_deck.py webinar06 --full     (~10-17 min)
-%     python 02_idiot_brain/slides/common/build_deck.py webinar06 --parts 02 (one part, one pass)
-% Needs the shared art first: uv run 02_idiot_brain/slides/common/build_art.py
+% Webinar 6 of the Idiot Brain series (Armenian): chapter 6, "Personality: a testing concept".
+% Build from the repo root through the shared queue (never run lualatex directly):
+%     python 02_idiot_brain/slides/common/build_deck.py webinar06            one pass, ~3 min
+%     python 02_idiot_brain/slides/common/build_deck.py webinar06 --full     latexmk until stable, ~10-17 min
+% Needs the art first: uv run 02_idiot_brain/slides/common/build_art.py
 % Speaker notes: NOTES.md (by frame number and title). ~95 min talk incl. a 5 min break.
 \documentclass[aspectratio=169,11pt]{beamer}
 \input{../common/preamble.tex}
 \title[Վեբինար \#6]{Ապուշ ուղեղը}
 
-% Deck-only styles (no #1 here, so they could live in a frame too; kept together for reuse)
+% ---------------------------------------------------------------------
+% Deck-only styles (a style with #1 cannot be defined inside a frame body)
+% ---------------------------------------------------------------------
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \tikzset{
-  stairstep/.style={draw=plum, line width=0.8pt, rounded corners=1.5mm, align=center,
-    font=\small, text=plum, inner sep=3pt, minimum height=0.75cm},
-  regionlabel/.style={fill=cardwhite, draw=plum, line width=0.7pt, rounded corners=1.5mm,
-    font=\blackfont\scriptsize, text=plum, inner sep=2.5pt, align=center},
-  personnode/.style={draw=plum, line width=0.8pt, fill=cardwhite, rounded corners=2mm,
-    align=center, font=\small, text=plum, inner sep=4pt},
+  % a labelled box in a diagram, filled with a pastel: \node[pbox=mint] {...};
+  pbox/.style={draw=plum, line width=0.8pt, fill=#1!45!cardwhite, rounded corners=2mm, align=center,
+    font=\small, text=plum, inner sep=4pt},
+  pbox/.default=cardwhite,
+  % one step of a story strip or cycle, fixed width: \node[strip=3.4cm] {...};
+  strip/.style={draw=plum, line width=0.8pt, fill=cardwhite, rounded corners=2mm, align=center,
+    font=\small, text=plum, inner sep=4pt, text width=#1, minimum height=1.25cm},
+  strip/.default=3.2cm,
+  arr/.style={-{Stealth[length=2.6mm]}, plum, line width=1.2pt},
 }
+% a box with a coloured title tab: \begin{traitbox}{<colour>}{<title>} ... \end{traitbox}
+\newtcolorbox{traitbox}[3][]{tagged=#2, title={#3}, fontupper=\small, #1}
 
 \begin{document}
 \input{parts/00_opening.tex}
 \input{parts/01_intro.tex}
-\input{parts/02_faces.tex}
-\input{parts/03_persuasion.tex}
-\input{parts/04_love.tex}
-\input{parts/05_groups.tex}
-\input{parts/06_mean.tex}
-\input{parts/07_wrapup.tex}
-\input{parts/08_appendix.tex}
+\input{parts/02_tests.tex}
+\input{parts/03_anger.tex}
+\input{parts/04_motivation.tex}
+\input{parts/05_humour.tex}
+\input{parts/06_wrapup.tex}
+\input{parts/07_appendix.tex}
 \end{document}

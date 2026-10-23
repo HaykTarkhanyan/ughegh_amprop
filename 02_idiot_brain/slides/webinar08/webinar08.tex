@@ -1,0 +1,35 @@
+% Webinar 8 of the Idiot Brain series (Armenian), the last one: chapter 8 "When the brain breaks down ..." + the afterword.
+% Build from the repo root through the shared queue (never lualatex directly; ~3 min per pass for ~100 frames):
+%     python 02_idiot_brain/slides/common/build_deck.py webinar08            one pass
+%     python 02_idiot_brain/slides/common/build_deck.py webinar08 --full     until stable (~10-17 min)
+% Needs the art first: uv run 02_idiot_brain/slides/common/build_art.py
+% Speaker notes: NOTES.md (by frame number and title). ~95 min talk incl. a 5 min break.
+\documentclass[aspectratio=169,11pt]{beamer}
+\input{../common/preamble.tex}
+\title[Վեբինար \#8]{Ապուշ ուղեղը}
+
+% ---- deck-only helpers (parameterised styles must live outside frame bodies) ----
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\tikzset{
+  % a small labelled dot on the brain drawing: dot=<colour>
+  braindot/.style={circle, fill=#1, draw=plum, line width=0.7pt, inner sep=0pt, minimum size=2.6mm},
+  braindot/.default=amRed,
+  % a label sticker for the brain drawing: brainlbl=<fill>
+  brainlbl/.style={fill=#1, draw=plum, line width=0.6pt, rounded corners=1.2mm, inner sep=2.2pt,
+    font=\scriptsize, text=plum, align=center},
+  brainlbl/.default=cardwhite,
+  % arrows used by several figures: arr=<colour>
+  arr/.style={-{Stealth[length=2.6mm]}, line width=1.3pt, #1},
+  arr/.default=plum,
+}
+
+\begin{document}
+\input{parts/00_opening.tex}
+\input{parts/01_intro.tex}
+\input{parts/02_depression.tex}
+\input{parts/03_breakdown.tex}
+\input{parts/04_addiction.tex}
+\input{parts/05_psychosis.tex}
+\input{parts/06_finale.tex}
+\input{parts/07_appendix.tex}
+\end{document}

@@ -1,0 +1,40 @@
+title = "Webinar 1 split: chapter 2 becomes webinar 2, chapter decks renumbered to webinars 3-8"
+date = "2026-10-23"
+time = "14:19"
+areas = ["02_idiot_brain/slides/", "DECISIONS.md", "CONVENTIONS.md", "DEFERRED_TODO.md", "_learnings/"]
+
+done = [
+  "Hayk: 'everything up to chapter 2 is the first session, then chapter 2 is the second and so on'; no expansion to ~95 min (DECISIONS.md #10)",
+  "webinar01: memory part removed; hook items now all chapter 1 (car sickness, dessert, hypnic jerk, dressing gown); book frame and plan show intro + chapter 1; break moved before 'sleep'; wrap-up has 4 ideas, a car-sickness try-at-home card and a chapter 2 teaser; appendix keeps chapter 1 rows only; parts renamed 03_wrapup, 04_appendix",
+  "webinar02 (new): parts/01_memory.tex moved from webinar01 (git mv) with drake.jpg; new title (\\webinartitle{2}), hook, series and plan frames; break before 'alcohol'; wrap-up (4 ideas, try at home, chapter 3 teaser, questions) and appendix (memory corrections, additions, chapter 2 sources)",
+  "NOTES.md split by a script (scratchpad split_notes.py): webinar01 frames 1-59 + appendix 60-63, webinar02 frames 1-52 + appendix 53-55, numbering checked to run 1..N without gaps",
+  "Hayk: the dessert part did not explain why the new brain says yes to the reward. New webinar 1 frame 27 'Ինչու՞ է նոր ուղեղը «այո» ասում': the book's two reasons (sweet is a reward the brain wants, see ch8; Burnett's hypothesis that the brain regulates a varied diet) plus sensory-specific satiety (Rolls et al., Physiol. Behav. 1981, 27(1):137-142, checked); notes renumbered to 1-60 + appendix 61-64",
+  "Webinar 1 layout fix: frame 4's chapter list wrapped badly; webinar 2 title: 5 chips took 4 rows and cut off the credit line, 'դեմքեր ու անուններ' chip shortened to 'դեմք ու անուն' so they fit in 3",
+  "All eight decks rebuilt; webinars 3-8: 0 errors, 0 overfull vbox, 0 missing chars; title and series frames checked by eye",
+  "Desktop: the seven old PDFs deleted (Hayk OK), new ones named idiot_brain_webinarN_chN.pdf",
+  "Folders webinar02-07 renamed to webinar03-08 (and their main .tex); 77 text replacements in 22 files (scratchpad renumber_decks.py, each must match exactly once): title numbers, 'Nth webinar' wording, series lists, and cross-references by content (intro/ch1 stays webinar 1, memory/synapses/taxi drivers/flashbulb/selfish memory -> webinar 2, later chapters +1)",
+  "Learning: Git Bash grep -i with an Armenian pattern crashes (exit 134) and prints nothing; use rg",
+]
+
+pending = [
+  "Banner and posted text for webinar 1 still mention memory / faces and names; Hayk will tell the audience at the start (webinar 1 NOTES frame 1 has the line)",
+]
+
+next = [
+  "Dates for webinars 2-8, then banners if wanted",
+]
+
+files = [
+  "02_idiot_brain/slides/webinar01/ (webinar01.tex, parts/00_opening, 01_intro, 02_mind_controls, 03_wrapup, 04_appendix, NOTES.md)",
+  "02_idiot_brain/slides/webinar02/ (new)",
+  "02_idiot_brain/slides/webinar03/ ... webinar08/ (renamed from webinar02-07, numbers updated)",
+  "02_idiot_brain/slides/DECK_BRIEF.md, DECISIONS.md (#10), CONVENTIONS.md, DEFERRED_TODO.md",
+  "_learnings/2026-10-23-1436_grep_i_armenian_crashes.md",
+]
+
+commits = ["see git log: 'Idiot Brain: split webinar 1, chapter N is now webinar N', pushed to origin/main (Hayk OK'd commit + push)"]
+
+notes = """
+The split was done hours before webinar 1 (Friday 2026-10-23, 18:30 per banner/post_text.md).
+Build times today: a full latexmk of the 62-frame webinar 1 took 414 s with webinar 2 building in parallel.
+"""

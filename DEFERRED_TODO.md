@@ -2,7 +2,7 @@
 
 Topics cut from current work so they do not get lost. Newest at the top.
 
-## Chapter decks, webinars 2-7 (parked 2026-10-21, all six built and reviewed)
+## Chapter decks, webinars 2-7 (parked 2026-10-21, all six built and reviewed; since 2026-10-23 they are webinars 3-8, and the numbers below are the old ones)
 - Emoji the agents wanted but did not have (they used substitutes): tomato, elephant, pig, football, wolf, chicken, moose, older woman, elevator, parachute, skier, tooth, bank, wrench. Adding them to `build_art.py` only helps if the frames are then edited to use them.
 - Webinar 3 has a local `\showon{3-}{...}` macro (hide anything inside TikZ until a slide); move it to the preamble if another deck needs it, since `visible on` still does not hide plain `\includegraphics`.
 - "Questions" frame: webinars 3 and 7 use «դու» (Գրիր/միացրու), webinar 1 used plural (Գրեք). Pick one for the series.
@@ -10,9 +10,9 @@ Topics cut from current work so they do not get lost. Newest at the top.
 - Each agent's "judgment calls" list is in its final report (summarised in `_work_sessions/2026-10-21-0300_chapter_decks_launch.toml`); Hayk to go through them before each webinar.
 - Ask Hayk before any student-review subagent, one deck at a time.
 
-## Webinar 1 cosmetics (parked 2026-10-21; overflow fixed, these are small)
-- Frame 36 (body clock): the "Մարմնի ջերմաստիճան (36-37 °C)" label crosses the dotted night line.
-- Frame 64 (neuron): the "action potential" and "նեյրոն" labels are crossed by dendrite lines.
+## Webinar 1 cosmetics (parked 2026-10-21; overflow fixed, these are small; frame numbers updated after the 2026-10-23 split)
+- Webinar 1 frame 38 (body clock): the "Մարմնի ջերմաստիճան (36-37 °C)" label crosses the dotted night line.
+- Webinar 2 frame 13 (neuron): the "action potential" and "նեյրոն" labels are crossed by dendrite lines.
 - 16 small "Overfull \hbox" warnings remain (largest: hypnogram 10 pt, the Memory part title in Glazz 14 pt); checked by eye, nothing visibly cut.
 - Ask Hayk whether webinars 2-7 should get banners (needs dates; `build_banner.py` is webinar 1 only).
 

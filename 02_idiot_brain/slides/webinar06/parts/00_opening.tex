@@ -1,29 +1,30 @@
 % ===== Opening: title, hook, the book and the series, today's plan (~5 min) =====
 
-\webinartitle{6}{Գլուխ 7. Խմբային գրկախառնություն}%
-  {\chip{masks}{դեմքեր} \chip{carrot}{համոզում} \chip{brokenheart}{սեր} \chip{people}{խումբ}}%
-  {panic}{Իսկ մարդիկ ի՞նչ կասեն}{{hug}{handshake}{clapping}}
+\webinartitle{6}{Գլուխ 6. Անհատականություն. դժվար թեստ}%
+  {\chip{masks}{թեստեր} \chip{angry}{զայրույթ} \chip{rocket}{մոտիվացիա} \chip{laughing}{հումոր}}%
+  {confused}{Անձը չի գտնվել}{{crystalball}{joker}{volcano}}
 
-% Hook: four social glitches; the audience types the ones they know (answered later in the talk)
-\begin{frame}{Քեզ հետ եղե՞լ է}
+% Hook: the online quizzes everybody has taken
+\begin{frame}{Ո՞վ ես դու ըստ թեստի}
   \begin{columns}[c]
-    \begin{column}{0.6\textwidth}
-      \begin{popup}{ուղեղ.exe}
-        {\blackfont\large Ուրիշները միացել են քո ուղեղին}\par\medskip
-        \begin{enumerate}
-          \item<2-> Ծիծաղեցիր կատակի վրա, որ չհասկացար, որովհետև բոլորը ծիծաղում էին
-          \item<3-> Ընկերոջդ մի փոքր բանում «այո» ասացիր ու հայտնվեցիր մեծ գործի մեջ
-          \item<4-> Բաժանումից հետո օրերով չէիր ուզում ոչ ուտել, ոչ մարդկանց տեսնել
-          \item<5-> Խմբային չաթում ոչ ոք չի պատասխանում, որովհետև «հիմա ուրիշը կգրի»
-        \end{enumerate}
+    \begin{column}{0.56\textwidth}
+      \begin{popup}{թեստ.exe}
+        {\blackfont\large Իմացիր քո իսկական անհատականությունը}\par\smallskip
+        \begin{itemize}
+          \item<2-> Ո՞ր պիցցան ես դու \emoji{pizza}
+          \item<3-> Հոգվարթսի ո՞ր տնից ես \emoji{tophat}
+          \item<4-> Քո 4 տառը. INTJ, ENFP, ISFJ...
+          \item<5-> «Ա» տիպի՞ ես, թե՞ «Բ»
+        \end{itemize}
+        \onslide<2->{{\scriptsize\color{plum!60!cream}12 հարց · 2 րոպե · 100\% գիտական}}
       \end{popup}
     \end{column}
-    \begin{column}{0.34\textwidth}
+    \begin{column}{0.38\textwidth}
       \centering
-      \mascot[3cm]{panic}\par\medskip
+      \mascot[2.8cm]{thinking}\par\medskip
       \onslide<6->{%
       \begin{chatbox}
-        Գրիր համարները, որոնք քեզ հետ եղել են (օր.՝ \textbf{1, 4})
+        Անհատականության թեստ անցե՞լ ես։ Գրիր արդյունքդ (օր.՝ \textbf{INFP} կամ «Գրիֆինդոր»)
       \end{chatbox}}
     \end{column}
   \end{columns}
@@ -32,40 +33,74 @@
 % The book and where this chapter sits in the series
 \begin{frame}{Գիրքը և շարքը}
   \begin{columns}[T]
-    \begin{column}{0.52\textwidth}
+    \begin{column}{0.5\textwidth}
       \begin{card}
-        {\blackfont\Large The Idiot Brain} {\small (2016)}\par\smallskip
-        \textbf{Դին Բըրնեթ}՝ նեյրոգիտնական ու ստենդափ կատակերգու։ Գրված է կատակով, բայց ամեն պնդման տակ գիտական հոդված կա։
-      \end{card}
-      \begin{card}[colback=mint!35!cardwhite]
-        Ամեն վեբինարում՝ մեկ գլուխ, նախորդները դիտած լինելը \textbf{պարտադիր չէ}։ Որտեղ գիտությունը 2016-ից հետո փոխվել է, կտեսնես «Գիտությունն այսօր» տուփը։
+        {\blackfont\Large The Idiot Brain} {\small (2016)}\par
+        «Ապուշ ուղեղը». նեյրոգիտնական \textbf{Դին Բըրնեթը} բացատրում է, թե ինչու է ուղեղն այդքան տպավորիչ ու միաժամանակ այդքան անկատար\par\medskip
+        \begin{itemize}
+          \item Ամեն վեբինար՝ գրքի մեկ գլուխ
+          \item Գլուխները իրարից անկախ են. կարելի է միանալ ցանկացածից
+          \item Ամեն պնդման տակ գիտական աղբյուր կա
+        \end{itemize}
       \end{card}
     \end{column}
-    \begin{column}{0.42\textwidth}
+    \begin{column}{0.44\textwidth}
       {\blackfont\small Գրքի 8 գլուխը}\par\smallskip
-      {\color{plum!50!cream}\small
-      1. Մարմնի կառավարում\\
+      {\color{plum!55!cream}\small
+      Ներածություն \quad 1. Մարմին\\
       2. Հիշողություն \quad 3. Վախ\\
-      4. Խելք \quad 5. Ընկալում\\
-      6. Անհատականություն}\par\smallskip
-      \chip[brainpink]{hug}{7. Ուրիշ մարդիկ. այսօր}\par\smallskip
-      {\color{plum!50!cream}\small 8. Երբ ուղեղը «փչանում» է}
+      4. Խելք \quad 5. Ընկալում}\par\smallskip
+      \chip[brainpink]{masks}{6. Անհատականություն}\quad{\small\blackfont $\leftarrow$ այսօր}\par\smallskip
+      {\color{plum!55!cream}\small
+      7. Ուրիշ մարդիկ\\
+      8. Երբ ուղեղը «փչանում» է}\par\medskip
+      \begin{card}[left=1.3mm, right=1.3mm, colback=lavender!35!cardwhite]
+        Այսօր՝ \textbf{ով ենք մենք}. բնավորություն, զայրույթ, մոտիվացիա ու հումոր
+      \end{card}
     \end{column}
   \end{columns}
 \end{frame}
 
-% Plan for today: five book sections, break after the second
+% Plan for today
 \begin{frame}{Այսօր}
+  \begin{columns}[T]
+    \begin{column}{0.19\textwidth}
+      \begin{card}[left=1.3mm, right=1.3mm, colback=butter!45!cream]
+        \centering\bigemoji[0.9cm]{railway}\par\smallskip
+        {\blackfont Սկիզբ}\par\smallskip
+        \raggedright Մետաղյա ձող գլխի միջով
+      \end{card}
+    \end{column}
+    \begin{column}{0.19\textwidth}
+      \begin{card}[left=1.3mm, right=1.3mm, colback=lavender!45!cream]
+        \centering\bigemoji[0.9cm]{masks}\par\smallskip
+        {\blackfont Թեստեր}\par\smallskip
+        \raggedright Ինչո՞վ է «Մեծ հնգյակը» տարբերվում MBTI-ից
+      \end{card}
+    \end{column}
+    \begin{column}{0.19\textwidth}
+      \begin{card}[left=1.3mm, right=1.3mm, colback=brainpink!40!cream]
+        \centering\bigemoji[0.9cm]{angry}\par\smallskip
+        {\blackfont Զայրույթ}\par\smallskip
+        \raggedright Ինչու է այն երբեմն օգտակար
+      \end{card}
+    \end{column}
+    \begin{column}{0.19\textwidth}
+      \begin{card}[left=1.3mm, right=1.3mm, colback=mint!45!cream]
+        \centering\bigemoji[0.9cm]{rocket}\par\smallskip
+        {\blackfont Մոտիվացիա}\par\smallskip
+        \raggedright Ինչն է մեզ իրականում շարժում
+      \end{card}
+    \end{column}
+    \begin{column}{0.19\textwidth}
+      \begin{card}[left=1.3mm, right=1.3mm, colback=peach!45!cream]
+        \centering\bigemoji[0.9cm]{laughing}\par\smallskip
+        {\blackfont Հումոր}\par\smallskip
+        \raggedright Ինչու է դժվար ծիծաղը չափել
+      \end{card}
+    \end{column}
+  \end{columns}
+  \vspace{4mm}
   \centering
-  \begin{tikzpicture}
-    \foreach \n/\x/\e/\t/\c in {1/0/masks/{Դեմքեր\\ ու խոսք}/mint, 2/2.62/carrot/{Համոզելու\\ հնարքներ}/butter,
-                             3/5.74/brokenheart/{Սեր ու\\ բաժանում}/brainpink, 4/8.36/people/{Խմբի\\ ուժը}/lavender,
-                             5/10.98/imp/{Ինչու ենք\\ դաժան}/peach}{
-      \node[flow=2.1cm, fill=\c!45!cardwhite, minimum height=2.5cm, font=\blackfont\small] at (\x, 0)
-        {\bigemoji[0.9cm]{\e}\\[1.5mm] \t};
-      \node[font=\blackfont\footnotesize, text=plum!70!cream] at (\x, -1.65) {\n};}
-    \node at (4.18, 0) {\bigemoji[0.7cm]{coffee}};
-    \node[font=\scriptsize, text=plum!70!cream] at (4.18, -1.65) {ընդմիջում};
-  \end{tikzpicture}\par\vspace{5mm}
-  {\small Բոլորը գրքի 7-րդ գլխից, գրքի հերթականությամբ \qquad \emoji{speech}\ Հարցերը գրիր չաթում ցանկացած պահի}
+  {\small \emoji{coffee}\ Մեջտեղում՝ 5 րոպե ընդմիջում \qquad \emoji{speech}\ Հարցերը գրիր չաթում ցանկացած պահի}
 \end{frame}

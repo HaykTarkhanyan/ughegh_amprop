@@ -1,5 +1,5 @@
 % ===== Part 1 = chapter 1, Mind controls (~42 min) =====
-\partopener{Մաս 1 · Գլուխ 1}{Մարմնի կառավարում}{Ինչպես է ուղեղը ղեկավարում մարմինը (ու սովորաբար խառնում ամեն ինչ)}{panic}{mint}
+\partopener{Գլուխ 1}{Մարմնի կառավարում}{Ինչպես է ուղեղը ղեկավարում մարմինը (ու սովորաբար խառնում ամեն ինչ)}{panic}{mint}
 
 % Chapter opening joke: the brain's first job was keeping the body alive
 \begin{frame}{Սկզբում ուղեղը մեկ գործ ուներ}
@@ -222,6 +222,25 @@
   \end{columns}
 \end{frame}
 
+% Why the cortex says yes to dessert: the book's two reasons, then the experiment behind the second (added 2026-10-23)
+\begin{frame}{Ինչու՞ է նոր ուղեղը «այո» ասում}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item<1-> Քաղցրը \textbf{պարգև} է. ուղեղն այն ճանաչում ու «ուզում» է, ու այդ ցանկությունը հաղթում է ստամոքսի «բավ է»-ին {\small(պարգևի համակարգի մասին՝ վեբինար 8-ում)}
+        \item<2-> Ինչու է կեղևն ընդհանրապես խառնվում, ճշգրիտ հայտնի չէ։ Բըրնեթի վարկածը. մարդուն \textbf{բազմազան} սնունդ է պետք, ու ուղեղն ինքն է «կազմում ճաշացանկը», ոչ թե ուտում է ինչ պատահի
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \onslide<3->{%
+      \begin{scienceupdate}
+        Կշտանում ենք \textbf{կոնկրետ համից}։ Ճաշից հետո մակարոնն արդեն այնքան համեղ չէ, իսկ քաղցրը \textbf{նոր} համ է ու դեռ հաճելի է։ Սա կոչվում է «զգայական-սպեցիֆիկ հագեցում» (sensory-specific satiety) ու համահունչ է Բըրնեթի վարկածին։
+      \end{scienceupdate}}
+    \end{column}
+  \end{columns}
+  \source{Rolls et al., Physiol. Behav., 1981}
+\end{frame}
+
 \begin{frame}{Հին ուղեղ ընդդեմ նորի. 1 : 1}
   \begin{columns}[T]
     \begin{column}{0.47\textwidth}
@@ -328,6 +347,17 @@
     \end{column}
   \end{columns}
   \source{Wrangham, Catching Fire, 2009}
+\end{frame}
+
+% ---------------------------------------------------------------- break (midway since the 2026-10-23 split: chapter 2 is webinar 2 now)
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[butter!60!cream] (current page.south west) rectangle (current page.north east);
+    \node at ([yshift=8mm]current page.center) {\mascot[4cm]{sleepy}};
+    \node[anchor=north, font=\titlefont\fontsize{30}{32}\selectfont, text=plum] at ([yshift=-17mm]current page.center) {Ընդմիջում};
+    \node[anchor=north, font=\mediumfont\large, text=plum] at ([yshift=-31mm]current page.center)
+      {5 րոպե \emoji{coffee}\quad Կանգնիր, ձգվիր, ջուր խմիր};
+  \end{tikzpicture}
 \end{frame}
 
 % ---------------------------------------------------------------- sleep
@@ -709,7 +739,7 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Մաս 1-ը՝ մեկ էջում}
+\begin{frame}{Գլուխ 1-ը՝ մեկ էջում}
   \begin{columns}[T]
     \begin{column}{0.47\textwidth}
       \begin{card}\emoji{rollercoaster}\ {\blackfont Ծովախտ}\par Աչքերի ու ականջի վեճը հին ուղեղը թույն է կարծում\end{card}
@@ -723,15 +753,4 @@
   \vspace{0.5mm}
   \centering
   \mascot[1.2cm]{happy}
-\end{frame}
-
-% ---------------------------------------------------------------- break
-\begin{frame}[plain]
-  \begin{tikzpicture}[remember picture, overlay]
-    \fill[butter!60!cream] (current page.south west) rectangle (current page.north east);
-    \node at ([yshift=8mm]current page.center) {\mascot[4cm]{sleepy}};
-    \node[anchor=north, font=\titlefont\fontsize{30}{32}\selectfont, text=plum] at ([yshift=-17mm]current page.center) {Ընդմիջում};
-    \node[anchor=north, font=\mediumfont\large, text=plum] at ([yshift=-31mm]current page.center)
-      {5 րոպե \emoji{coffee}\quad Կանգնիր, ձգվիր, ջուր խմիր};
-  \end{tikzpicture}
 \end{frame}

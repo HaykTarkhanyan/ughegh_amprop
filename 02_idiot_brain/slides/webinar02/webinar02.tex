@@ -1,62 +1,17 @@
-% Webinar 2 of the Idiot Brain series (Armenian): chapter 3, "Fear: nothing to be scared of".
+% Webinar 2 of the Idiot Brain series (Armenian): chapter 2, "The gift of memory (keep the receipt)".
+% Split out of webinar 1 on 2026-10-23 (one chapter per webinar); the chapter slides are the ones webinar 1 had.
 % Build from the repo root, never with lualatex directly (one machine-wide build queue):
-%     python 02_idiot_brain/slides/common/build_deck.py webinar02          (one pass, ~3 min)
-%     python 02_idiot_brain/slides/common/build_deck.py webinar02 --full   (latexmk until stable, ~10-17 min)
+%     python 02_idiot_brain/slides/common/build_deck.py webinar02          (one pass)
+%     python 02_idiot_brain/slides/common/build_deck.py webinar02 --full   (latexmk until stable)
 % Needs the art first: uv run 02_idiot_brain/slides/common/build_art.py
-% Speaker notes: NOTES.md (by frame number and title). ~95 min talk incl. a 5 min break.
+% Speaker notes: NOTES.md (by frame number and title). ~55 min talk incl. a 5 min break.
 \documentclass[aspectratio=169,11pt]{beamer}
 \input{../common/preamble.tex}
 \title[Վեբինար \#2]{Ապուշ ուղեղը}
 
-% ---------------------------------------------------------------------
-% Deck-only helpers (styles with #1 must live here, not in a frame body)
-% ---------------------------------------------------------------------
-\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
-% \strike{text}: crossed-out word (Burnett's drafts)
-\newcommand{\strike}[1]{\tikz[baseline=(s.base)]{\node[inner sep=0.5pt] (s) {#1};
-  \draw[pinkdark, line width=1.3pt] ([yshift=0.15ex]s.west) -- ([yshift=0.15ex]s.east);}}
-\tikzset{
-  % rubber stamp: \node[stamp=pinkdark] {ԳԱՂՏՆԻ};
-  stamp/.style={draw=#1, text=#1, line width=1.6pt, rounded corners=1.5mm, rotate=-9,
-    font=\blackfont\large, inner sep=4pt, fill=cardwhite},
-  % small label next to a diagram part
-  tag/.style={font=\scriptsize, text=#1, align=center, inner sep=1pt},
-  tag/.default=plum,
-  % box in a cycle or chain diagram, coloured
-  pbox/.style={draw=plum, line width=0.8pt, fill=#1, rounded corners=2mm, align=center,
-    font=\small, text=plum, inner sep=4pt},
-  pbox/.default=cardwhite,
-}
-% Side view of a brain (front = left), centred near (0,0), about 6 x 4 units; used by the brain figures
-\newcommand{\brainsilhouette}{%
-  \filldraw[fill=brainpink!35!cardwhite, draw=plum, line width=1pt]
-    (-2.9,0.2) .. controls (-3.1,1.6) and (-1.8,2.35) .. (-0.4,2.3)
-    .. controls (1.0,2.45) and (2.8,1.9) .. (2.95,0.6)
-    .. controls (3.05,-0.2) and (2.6,-0.75) .. (1.9,-0.85)
-    .. controls (1.2,-0.95) and (0.7,-0.8) .. (0.35,-0.9)
-    .. controls (-0.3,-1.1) and (-1.2,-0.7) .. (-1.8,-0.75)
-    .. controls (-2.5,-0.8) and (-2.8,-0.5) .. (-2.9,0.2) -- cycle;
-  % cerebellum
-  \filldraw[fill=lavender!60!cardwhite, draw=plum, line width=1pt]
-    (1.35,-0.85) .. controls (1.5,-1.55) and (2.5,-1.6) .. (2.75,-0.95)
-    .. controls (2.6,-0.75) and (2.0,-0.8) .. (1.35,-0.85) -- cycle;
-  % brainstem
-  \filldraw[fill=peach!70!cardwhite, draw=plum, line width=1pt]
-    (0.35,-0.9) .. controls (0.45,-1.5) and (0.6,-2.0) .. (0.75,-2.3)
-    -- (1.25,-2.3) .. controls (1.15,-1.8) and (1.1,-1.2) .. (1.3,-0.85) -- cycle;
-  % a few folds
-  \draw[fold, line width=0.8pt] (-2.2,1.1) .. controls (-1.7,1.5) and (-1.2,1.1) .. (-0.8,1.6)
-    (-0.3,1.9) .. controls (0.1,1.4) and (0.6,1.8) .. (1.0,1.5)
-    (1.5,1.75) .. controls (1.8,1.2) and (2.3,1.4) .. (2.5,0.9)
-    (-1.5,0.3) .. controls (-1.0,0.6) and (-0.6,0.2) .. (-0.1,0.5)
-    (0.6,0.8) .. controls (1.0,0.4) and (1.5,0.7) .. (2.0,0.3);}
-
 \begin{document}
 \input{parts/00_opening.tex}
-\input{parts/01_superstition.tex}
-\input{parts/02_phobias.tex}
-\input{parts/03_thrills.tex}
-\input{parts/04_criticism.tex}
-\input{parts/05_wrapup.tex}
-\input{parts/06_appendix.tex}
+\input{parts/01_memory.tex}
+\input{parts/02_wrapup.tex}
+\input{parts/03_appendix.tex}
 \end{document}
