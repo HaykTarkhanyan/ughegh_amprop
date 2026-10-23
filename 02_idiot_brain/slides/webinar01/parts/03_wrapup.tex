@@ -51,12 +51,17 @@
     \fill[lavender!60!cream] (current page.south west) rectangle (current page.north east);
     \fill[pattern={Dots[distance=4.4mm, radius=0.28mm]}, pattern color=plum!10!lavender!60!cream]
       (current page.south west) rectangle (current page.north east);
-    \node at ([xshift=-3.2cm]current page.center) {\mascot[4.4cm]{happy}};
-    \node[anchor=west, text=plum] at ([xshift=0.2cm, yshift=0.6cm]current page.center)
+    % mascot and text sit 1.2 cm further left than in the other decks, to leave room for the QR box
+    \node at ([xshift=-4.4cm]current page.center) {\mascot[4.4cm]{happy}};
+    \node[anchor=west, text=plum] at ([xshift=-1.0cm, yshift=0.6cm]current page.center)
       {\titlefont\fontsize{40}{42}\selectfont Հարցեր};
-    \node[anchor=west, text=plum, font=\mediumfont\large, align=left] at ([xshift=0.2cm, yshift=-1.0cm]current page.center)
+    \node[anchor=west, text=plum, font=\mediumfont\large, align=left] at ([xshift=-1.0cm, yshift=-1.0cm]current page.center)
       {Գրեք չաթում կամ\\ միացրեք խոսափողը \emoji{megaphone}};
-    \node[anchor=west, text=plum!70!cream, font=\small] at ([xshift=0.2cm, yshift=-2.1cm]current page.center)
+    \node[anchor=west, text=plum!70!cream, font=\small] at ([xshift=-1.0cm, yshift=-2.1cm]current page.center)
       {Դին Բըրնեթ, «The Idiot Brain», 2016};
+    % Telegram group QR again, for late joiners (same link as frame 2)
+    \node[anchor=north east, fill=white, draw=plum, line width=1pt, rounded corners=2mm, inner sep=2mm,
+          align=center, font=\mediumfont\footnotesize, text=plum] at ([xshift=-6mm, yshift=-6mm]current page.north east)
+      {\href{https://t.me/ugheghamprop}{\qrcode[height=2.3cm]{https://t.me/ugheghamprop}}\\[1mm] Telegram խումբը};
   \end{tikzpicture}
 \end{frame}

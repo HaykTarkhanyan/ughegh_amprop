@@ -12,6 +12,10 @@ done = [
   "Webinar 1 layout fix: frame 4's chapter list wrapped badly; webinar 2 title: 5 chips took 4 rows and cut off the credit line, 'դեմքեր ու անուններ' chip shortened to 'դեմք ու անուն' so they fit in 3",
   "All eight decks rebuilt; webinars 3-8: 0 errors, 0 overfull vbox, 0 missing chars; title and series frames checked by eye",
   "Desktop: the seven old PDFs deleted (Hayk OK), new ones named idiot_brain_webinarN_chN.pdf",
+  "Webinar 1 frame 2 (new): join the Telegram group, QR drawn by the LaTeX qrcode package (loaded in webinar01.tex only) + clickable link https://t.me/ugheghamprop; notes renumbered to 1-61 + appendix 62-65",
+  "Webinar 1 frame 2 now also links the GitHub repo (and names the slides/pdf folder); the closing Questions frame repeats the Telegram QR (Hayk: yes); QR decoded from the rendered slide with zxing-cpp: https://t.me/ugheghamprop",
+  "Finished PDFs committed in 02_idiot_brain/slides/pdf/ (Hayk: yes; DECISIONS.md #11, CONVENTIONS.md rule)",
+  "Webinar 1 notes rendered to webinar01/build/NOTES.html (TOC + collapsible sections, scratchpad notes_html.py) and opened in Edge",
   "Folders webinar02-07 renamed to webinar03-08 (and their main .tex); 77 text replacements in 22 files (scratchpad renumber_decks.py, each must match exactly once): title numbers, 'Nth webinar' wording, series lists, and cross-references by content (intro/ch1 stays webinar 1, memory/synapses/taxi drivers/flashbulb/selfish memory -> webinar 2, later chapters +1)",
   "Learning: Git Bash grep -i with an Armenian pattern crashes (exit 134) and prints nothing; use rg",
 ]

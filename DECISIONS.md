@@ -2,11 +2,19 @@
 
 Newest at the top.
 
+## 11. Finished slide PDFs are committed in `slides/pdf/`; webinar 1 links the repo and a Telegram group
+
+- **Date / status:** 2026-10-23, active
+- **Decision:** The eight finished decks are copied from each `build/` (still gitignored) to `02_idiot_brain/slides/pdf/idiot_brain_webinarN_chN.pdf` and committed. Webinar 1's frame 2 shows a QR code and link for the webinar's Telegram group (https://t.me/ugheghamprop) and the repo link with the PDF folder; the closing "Questions" frame repeats the QR. The QR is drawn by the LaTeX `qrcode` package (TeX Live 2025, loaded in `webinar01.tex` only), and the rendered slide was decoded with zxing-cpp to check that it opens the link.
+- **Why:** Hayk asked for the Telegram QR and the repo link at the start, and said yes to putting the PDFs in the repo, since otherwise the link would show only LaTeX sources. About 18 MB for all eight.
+- **Alternatives rejected:** a QR image made in Python (an extra file and dependency; TeX draws it itself); a second QR for the repo on frame 2 (two codes on one slide make phones pick either); committing `build/` (aux files and old job names); linking the slide straight to the PDF folder (Hayk asked for the repo link).
+- **What would change this:** the repo grows too much from re-committed PDFs (move them to GitHub Releases); the Telegram group is for the whole series (add the QR to webinars 2-8 too).
+
 ## 10. Chapter 2 leaves webinar 1: one chapter per webinar from the start, eight webinars
 
 - **Date / status:** 2026-10-23, active (supersedes the "webinar 1 stays intro + chapters 1-2" part of #9 and #3)
 - **Decision:** Webinar 1 is the introduction + chapter 1; chapter 2 (memory) becomes its own deck in `slides/webinar02/`; the chapter decks move up one folder, so chapter N is `slides/webinar0N/` (3-8). The memory slides were moved as they were, not rewritten or expanded: webinar 2 got its own title, hook, series and plan frames, a wrap-up, a teaser for chapter 3 and an appendix, all built from webinar 1's; webinar 1's break moved to before "sleep", webinar 2's sits before "alcohol". Cross-references in the later decks were renumbered by what they point to (intro and chapter 1 content stays "webinar 1", memory content became "webinar 2").
-- **Why:** Hayk on 2026-10-23: "i just want eveything up to chapter 2 to be the first session then chapter 2 is seconds and so on" and "i dont care about minutes aount standards slide coutns". Result: webinar 1 has 60 presented frames (~65 min; 59 after the split, plus one frame Hayk asked for on why the cortex says yes to dessert), webinar 2 has 52 (~55 min), the others stay at 88-96.
+- **Why:** Hayk on 2026-10-23: "i just want eveything up to chapter 2 to be the first session then chapter 2 is seconds and so on" and "i dont care about minutes aount standards slide coutns". Result: webinar 1 has 61 presented frames (~65 min; 59 after the split, plus two Hayk asked for: a Telegram-group QR as frame 2 and why the cortex says yes to dessert), webinar 2 has 52 (~55 min), the others stay at 88-96.
 - **Alternatives rejected:** expanding webinars 1 and 2 to ~95 min each from the book (Hayk does not care about length); calling the memory deck "webinar 1b" to keep the old folder numbers (inconsistent); keeping the old deck for the 2026-10-23 talk and splitting afterwards (Hayk asked for the split).
 - **What would change this:** webinars 1 and 2 feel too short in practice (expand them from the parts of chapters 1-2 the slides skip); a fixed schedule forces two chapters into one evening again.
 - **Known mismatch:** webinar 1's banner (title slide and the posted image) still shows a "հիշողություն" chip, and `banner/post_text.md` promises "faces vs names", which is now webinar 2. Webinar 1's notes tell the speaker to say so on frame 1.

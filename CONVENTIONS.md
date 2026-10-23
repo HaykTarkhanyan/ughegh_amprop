@@ -16,6 +16,7 @@ Recurring choices, written down once they have been made twice.
 ## Slides (Beamer + LuaLaTeX)
 - One folder per webinar: `slides/webinarNN/webinarNN.tex` + `parts/` + `figures/` + `images/` + `memes/` + `NOTES.md`; build output goes to `build/` (gitignored). Webinar 1 = intro + chapter 1; from webinar 2 on, chapter N = webinar N (spec: `slides/DECK_BRIEF.md`; split on 2026-10-23, DECISIONS.md #10).
 - Build with `python 02_idiot_brain/slides/common/build_deck.py <deck>` (one pass; `--parts`, `--passes 2`, `--full`, `--wait`), never with `lualatex` directly: it queues every build, at most two at once, so parallel work cannot load all four cores with LuaLaTeX runs. Count problems with its report or `grep -F 'Overfull \vbox'`: in Git Bash, regex forms of that pattern return 0 even when the log has matches. Search Armenian text with `rg`, never `grep -i`: Git Bash's grep crashes on it and prints nothing. Check the result with `slides/common/non_essential/frame_sheets.py`.
+- Finished PDFs: after a deck's final `--full` build, copy `build/webinarNN.pdf` to `slides/pdf/idiot_brain_webinarN_chN.pdf` (committed) and to the Desktop under the same name; check both with `cmp`.
 - Title slide: webinar 1 shows its banner image; from webinar 2 on, `\webinartitle` draws the banner's layout in TikZ.
 - All styling lives in `slides/common/preamble.tex`. Decks only hold content.
 - Icons and mascot moods: `\emoji{name}`, `\bigemoji[size]{name}`, `\mascot[width]{mood}`. To add one, add it to `slides/common/build_art.py` and rerun it.
