@@ -5,7 +5,9 @@
 """Contact sheets of a built deck: the LAST overlay of each frame, 9 frames per PNG, labelled with the frame number.
 
 The log's "Overfull \\vbox" misses TikZ drawn past the frame edge, so every frame still needs a look; these
-sheets make that a few images instead of hundreds of pages. The labels match the frame numbers in the footline.
+sheets make that a few images instead of hundreds of pages. The labels count frames (and --frames uses that count),
+so they match the footline numbers only up to the first [noframenumbering] frame: in webinars 2-8 the unnumbered
+Telegram frame is label 2, and every later label is the footline number + 1.
 
 Run:  uv run 02_idiot_brain/slides/common/non_essential/frame_sheets.py webinar02                 (~1 s per frame)
       uv run 02_idiot_brain/slides/common/non_essential/frame_sheets.py webinar02 --frames 30-45

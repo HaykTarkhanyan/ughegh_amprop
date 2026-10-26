@@ -2,14 +2,18 @@
 # requires-python = ">=3.10"
 # dependencies = ["fonttools==4.60.1"]
 # ///
-"""Build the webinar 1 banner for the Idiot Brain series: SVG source + PNG, two sizes, one folder per version.
+"""Build a webinar banner for the Idiot Brain series: SVG source + PNG, two sizes.
 
-Run:  uv run 02_idiot_brain/banner/build_banner.py      (~20 s: four headless Edge renders)
-Out:  02_idiot_brain/banner/out/<version>/banner_1920x1080.{svg,png}  - post / YouTube thumbnail (16:9)
-      02_idiot_brain/banner/out/<version>/banner_1600x640.{svg,png}   - Discord event cover (2.5:1)
-Versions differ only in the title look (VERSIONS below). Edit TEXT to change the wording.
+Run:  uv run 02_idiot_brain/banner/build_banner.py                (webinar 1, ~20 s: four headless Edge renders)
+      uv run 02_idiot_brain/banner/build_banner.py --webinar 2    (~4 s: two renders, v2 look only; any of 2-8)
+Out:  webinar 1:  02_idiot_brain/banner/out/<version>/...   (both versions; the slides' title_banner.pdf comes from v2_glazz)
+      webinar N:  02_idiot_brain/banner/out/webinar0N/...   (v2_glazz, the look chosen in DECISIONS.md #5)
+      banner_1920x1080.{svg,png}  - post / YouTube thumbnail (16:9)
+      banner_1600x640.{svg,png}   - Discord event cover (2.5:1)
+Versions differ only in the title look (VERSIONS below). Edit WEBINARS to change the wording.
 Fonts: assets/fonts (fonter.am), emoji: assets/emoji (Twemoji 15.1.0).
 """
+import argparse
 import base64
 import logging
 import struct
@@ -36,20 +40,132 @@ logging.basicConfig(
 )
 log = logging.getLogger("build_banner")
 
-TEXT = {
-    "tag": "Վեբինար #1",
-    "title": ["Ապուշ", "ուղեղը"],
-    "chips": [("rollercoaster", "ծովախտ"), ("doughnut", "ախորժակ"), ("sleep", "քուն"),
-              ("scream", "վախ"), ("thought", "հիշողություն")],
-    "credit": "Դին Բըրնեթի «The Idiot Brain» գրքի հիման վրա",
-    "date": "Ուրբաթ, հոկտեմբերի 23",
-    "time": "18:30",
-    "place": "Zoom",
-    "window_title": "ուղեղ.exe",
-    "error": ["Ուղեղը չի", "արձագանքում"],
-    "error_hint": "Սպասե՞լ, թե՞ փակել",
-    "buttons": ["Սպասել", "Փակել"],
+# Loose emoji around the layout: each webinar names 6 (wide) and 3 (cover), placed at these (x, y, size, rotation)
+DECOR_WIDE_AT = [(1480, 40, 96, -12), (880, 205, 80, 14), (1110, 900, 104, -10),
+                 (1420, 935, 88, 18), (1700, 905, 100, 8), (1810, 60, 84, 0)]
+DECOR_COVER_AT = [(760, 40, 70, -12), (1440, 548, 70, -10), (1300, 560, 64, 8)]
+NO_DATE = "Ամսաթիվը՝ շուտով"  # shown when "date" is None; the time is then left out too
+
+# Chips: at most four short labels that make sense without the slides (five longer ones push the date off)
+WEBINARS = {
+    1: {
+        "tag": "Վեբինար #1",
+        "title": ["Ապուշ", "ուղեղը"],
+        "chips": [("rollercoaster", "ծովախտ"), ("doughnut", "ախորժակ"), ("sleep", "քուն"),
+                  ("scream", "վախ"), ("thought", "հիշողություն")],
+        "credit": "Դին Բըրնեթի «The Idiot Brain» գրքի հիման վրա",
+        "date": "Ուրբաթ, հոկտեմբերի 23",
+        "time": "18:30",
+        "place": "Zoom",
+        "window_title": "ուղեղ.exe",
+        "error": ["Ուղեղը չի", "արձագանքում"],
+        "error_hint": "Սպասե՞լ, թե՞ փակել",
+        "buttons": ["Սպասել", "Փակել"],
+        "decor_wide": ["zzz", "question", "nausea", "key", "cake", "cyclone"],
+        "decor_cover": ["zzz", "nausea", "cake"],
+    },
+    2: {  # chapter 2, memory
+        "tag": "Վեբինար #2",
+        "title": ["Ապուշ", "ուղեղը"],
+        "chips": [("door", "մոռացկոտություն"), ("eyes", "դեմք ու անուն"), ("wine", "ալկոհոլ"),
+                  ("magnifier", "կեղծ հիշողություն")],
+        "credit": "Դին Բըրնեթի «The Idiot Brain» գրքի հիման վրա",
+        "date": "Ուրբաթ, հոկտեմբերի 30",
+        "time": "18:30",
+        "place": "Zoom",
+        "window_title": "ուղեղ.exe",
+        "error": ["Ֆայլը", "չի գտնվել"],
+        "error_hint": "Փնտրե՞լ, թե՞ հորինել",
+        "buttons": ["Փնտրել", "Հորինել"],
+        "decor_wide": ["floppy", "question", "puzzle", "key", "mirror", "thought"],
+        "decor_cover": ["floppy", "puzzle", "key"],
+    },
+    3: {  # chapter 3, fear; dates for 3-8 not set yet (2026-10-26)
+        "tag": "Վեբինար #3",
+        "title": ["Ապուշ", "ուղեղը"],
+        "chips": [("clover", "սնահավատություն"), ("spider", "ֆոբիաներ"), ("pumpkin", "սարսափ ֆիլմեր"),
+                  ("thumbsdown", "քննադատություն")],
+        "credit": "Դին Բըրնեթի «The Idiot Brain» գրքի հիման վրա",
+        "date": None, "time": None, "place": "Zoom",
+        "window_title": "ուղեղ.exe",
+        "error": ["Վտանգ է", "հայտնաբերվել"],
+        "error_hint": "Կռվե՞լ, թե՞ փախչել",
+        "buttons": ["Կռվել", "Փախչել"],
+        "decor_wide": ["bat", "ghost", "snake", "spiderweb", "hauntedhouse", "blackcat"],
+        "decor_cover": ["bat", "snake", "ghost"],
+    },
+    4: {  # chapter 4, intelligence
+        "tag": "Վեբինար #4",
+        "title": ["Ապուշ", "ուղեղը"],
+        "chips": [("numbers", "IQ թեստեր"), ("loudspeaker", "ինքնավստահություն"), ("puzzle", "խաչբառեր"),
+                  ("giraffe", "հասակ ու խելք")],
+        "credit": "Դին Բըրնեթի «The Idiot Brain» գրքի հիման վրա",
+        "date": None, "time": None, "place": "Zoom",
+        "window_title": "ուղեղ.exe",
+        "error": ["Խելքը չի", "հաջողվում չափել"],
+        "error_hint": "Ստուգե՞լ, թե՞ վստահել",
+        "buttons": ["Ստուգել", "Վստահել"],
+        "decor_wide": ["graduation", "question", "chess", "abacus", "exploding", "glasses"],
+        "decor_cover": ["graduation", "chess", "exploding"],
+    },
+    5: {  # chapter 5, perception
+        "tag": "Վեբինար #5",
+        "title": ["Ապուշ", "ուղեղը"],
+        "chips": [("nose", "հոտ ու համ"), ("eye", "տեսողություն"), ("ear", "լսողություն"),
+                  ("headphones", "ուշադրություն")],
+        "credit": "Դին Բըրնեթի «The Idiot Brain» գրքի հիման վրա",
+        "date": None, "time": None, "place": "Zoom",
+        "window_title": "ուղեղ.exe",
+        "error": ["Իրականությունը", "բեռնված է 1%-ով"],
+        "error_hint": "Տեսնե՞լ, թե՞ գուշակել",
+        "buttons": ["Տեսնել", "Գուշակել"],
+        "decor_wide": ["rose", "eyes", "bread", "candy", "magicwand", "feather"],
+        "decor_cover": ["rose", "bread", "magicwand"],
+    },
+    6: {  # chapter 6, personality
+        "tag": "Վեբինար #6",
+        "title": ["Ապուշ", "ուղեղը"],
+        "chips": [("masks", "անհատականության թեստեր"), ("angry", "զայրույթ"), ("rocket", "մոտիվացիա"),
+                  ("laughing", "հումոր")],
+        "credit": "Դին Բըրնեթի «The Idiot Brain» գրքի հիման վրա",
+        "date": None, "time": None, "place": "Zoom",
+        "window_title": "ուղեղ.exe",
+        "error": ["Անձը", "չի գտնվել"],
+        "error_hint": "Բարկանա՞լ, թե՞ ծիծաղել",
+        "buttons": ["Բարկանալ", "Ծիծաղել"],
+        "decor_wide": ["crystalball", "question", "volcano", "railway", "joker", "rofl"],
+        "decor_cover": ["crystalball", "volcano", "joker"],
+    },
+    7: {  # chapter 7, other people ("Group hug!")
+        "tag": "Վեբինար #7",
+        "title": ["Ապուշ", "ուղեղը"],
+        "chips": [("carrot", "համոզում"), ("brokenheart", "սեր ու բաժանում"), ("people", "խմբի ուժը"),
+                  ("imp", "դաժանություն")],
+        "credit": "Դին Բըրնեթի «The Idiot Brain» գրքի հիման վրա",
+        "date": None, "time": None, "place": "Zoom",
+        "window_title": "ուղեղ.exe",
+        "error": ["Իսկ մարդիկ", "ի՞նչ կասեն"],
+        "error_hint": "Գրկե՞լ, թե՞ հեռանալ",
+        "buttons": ["Գրկել", "Հեռանալ"],
+        "decor_wide": ["hug", "handshake", "sheep", "clapping", "loveletter", "kiss"],
+        "decor_cover": ["hug", "handshake", "sheep"],
+    },
+    8: {  # chapter 8 + afterword, mental health; the popup stays gentle (no joke about the illnesses themselves)
+        "tag": "Վեբինար #8",
+        "title": ["Ապուշ", "ուղեղը"],
+        "chips": [("raincloud", "դեպրեսիա"), ("battery", "սթրես"), ("monkey", "կախվածություն"),
+                  ("speakinghead", "հալյուցինացիաներ")],
+        "credit": "Դին Բըրնեթի «The Idiot Brain» գրքի հիման վրա",
+        "date": None, "time": None, "place": "Zoom",
+        "window_title": "ուղեղ.exe",
+        "error": ["Տեղի է ունեցել", "անսպասելի սխալ"],
+        "error_hint": "Սա թուլություն չէ",
+        "buttons": ["Հասկանալ", "Աջակցել"],
+        "decor_wide": ["raincloud", "question", "sunbehindcloud", "lotus", "rainbow", "sunrise"],
+        "decor_cover": ["sunbehindcloud", "rainbow", "lotus"],
+    },
 }
+TEXT = WEBINARS[1]  # replaced in main() by --webinar
 
 PLUM, PINK, CREAM, WHITE = "#4A2340", "#F7A8C4", "#FFF6EC", "#FFFDF9"
 PEACH, LAVENDER, MINT, BUTTER, BLUSH = "#FFD9C2", "#D9C8F5", "#B5E8D5", "#FFE8A3", "#FF8FA8"
@@ -180,7 +296,11 @@ def title(x, top, style, size):
 
 def date_row(x, y, icon, size, gap=40):
     parts = []
-    for name, s in (("spiral_calendar", TEXT["date"]), ("clock_630", TEXT["time"]), ("laptop", TEXT["place"])):
+    items = [("spiral_calendar", TEXT["date"] or NO_DATE)]
+    if TEXT["date"]:
+        items.append(("clock_630", TEXT["time"]))
+    items.append(("laptop", TEXT["place"]))
+    for name, s in items:
         parts.append(emoji(name, x, y - icon * 0.82, icon))
         x += icon + 12
         parts.append(text(x, y, s, size=size))
@@ -197,10 +317,10 @@ def spinner(cx, cy, r=24, dot=6.5):
     return f'<g transform="translate({cx} {cy})">{"".join(dots)}</g>'
 
 
-def button(x, y, w, h, s, fill):
+def button(x, y, w, h, s, fill, size=34):
     return (f'<rect x="{x + 6}" y="{y + 6}" width="{w}" height="{h}" rx="16" fill="{PLUM}"/>'
             f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="16" fill="{fill}" stroke="{PLUM}" stroke-width="5"/>'
-            + text(x + w / 2, y + h / 2 + 12, s, size=34, anchor="middle"))
+            + text(x + w / 2, y + h / 2 + 12, s, size=size, anchor="middle"))
 
 
 def window(transform):
@@ -230,8 +350,10 @@ def window(transform):
         y += size * 1.15
     hint_size = fit(TEXT["error_hint"], "Mardoto", 500, 30, 360)
     p.append(text(412, y + 22, TEXT["error_hint"], weight=500, size=hint_size, extra='opacity="0.75"'))
-    p.append(button(412, 480, 170, 78, TEXT["buttons"][0], MINT))
-    p.append(button(602, 480, 170, 78, TEXT["buttons"][1], PEACH))
+    # both labels share one size, shrunk only if the longer one would not fit inside its 170 px button
+    bsize = min(fit(s, "Mardoto", 700, 34, 146) for s in TEXT["buttons"])
+    p.append(button(412, 480, 170, 78, TEXT["buttons"][0], MINT, bsize))
+    p.append(button(602, 480, 170, 78, TEXT["buttons"][1], PEACH, bsize))
     p.append("</g>")
     return "\n".join(p)
 
@@ -254,10 +376,11 @@ def wide(style):
     chips, bottom = chip_rows(110, title_end + 56, 960, 74, 34, 18)
     body.append(chips)
     body.append(text(112, bottom + 64, TEXT["credit"], weight=500, size=32, extra='opacity="0.85"'))
+    if bottom + 160 > H - 40:
+        raise ValueError(f"wide: the chips end at y={bottom:.0f}, so the date row falls off the banner; use fewer or shorter chips")
     body.append(date_row(110, bottom + 160, 46, 38))
     body.append(window("translate(1035 205) rotate(3 400 300)"))
-    body += [emoji("zzz", 1480, 40, 96, -12), emoji("question", 880, 205, 80, 14), emoji("nausea", 1110, 900, 104, -10),
-             emoji("key", 1420, 935, 88, 18), emoji("cake", 1700, 905, 100, 8), emoji("cyclone", 1810, 60, 84, 0)]
+    body += [emoji(name, *at) for name, at in zip(TEXT["decor_wide"], DECOR_WIDE_AT, strict=True)]
     return W, H, "\n".join(body)
 
 
@@ -271,10 +394,12 @@ def cover(style):
     body.append(svg)
     chips, bottom = chip_rows(64, title_end + 34, 830, 54, 26, 12)
     body.append(chips)
+    if bottom + 40 > 616 - 40:
+        raise ValueError(f"cover: the chips end at y={bottom:.0f}, so the credit line runs into the date row; use fewer or shorter chips")
     body.append(text(66, bottom + 40, TEXT["credit"], weight=500, size=22, extra='opacity="0.85"'))
     body.append(date_row(64, 616, 34, 28, gap=30))
     body.append(window("translate(905 66) scale(0.76) rotate(3 400 300)"))
-    body += [emoji("zzz", 760, 40, 70, -12), emoji("nausea", 1440, 548, 70, -10), emoji("cake", 1300, 560, 64, 8)]
+    body += [emoji(name, *at) for name, at in zip(TEXT["decor_cover"], DECOR_COVER_AT, strict=True)]
     return W, H, "\n".join(body)
 
 
@@ -300,9 +425,16 @@ def render(svg_path, png_path, W, H):
 
 
 def main():
+    global TEXT
+    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument("--webinar", type=int, default=1, choices=sorted(WEBINARS))
+    n = p.parse_args().webinar
+    TEXT = WEBINARS[n]
     t0 = time.time()
-    for version, style in VERSIONS.items():
-        out = OUT / version
+    # webinar 1 keeps both looks and its old paths; later webinars get the chosen v2 look only
+    versions = VERSIONS if n == 1 else {"v2_glazz": VERSIONS["v2_glazz"]}
+    for version, style in versions.items():
+        out = OUT / version if n == 1 else OUT / f"webinar{n:02d}"
         out.mkdir(parents=True, exist_ok=True)
         for name, build in (("banner_1920x1080", wide), ("banner_1600x640", cover)):
             W, H, body = build(style)

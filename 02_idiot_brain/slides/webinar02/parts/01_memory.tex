@@ -61,14 +61,14 @@
       \onslide<2->{%
       \begin{tikzpicture}[storystep/.style={flow=5.4cm, align=left, inner sep=4pt}]
         \node[storystep] (a) at (0,0) {\emoji{bulb}\ «Գնամ խոհանոցից մկրատը բերեմ»};
-        \node[storystep, visible on=<3->] (b) at (0,-1.35) {\emoji{musical}\ Ճանապարհին՝ սիրածդ երգը, մեմ, սերիալի սյուժեի լուծումը};
-        \node[storystep, visible on=<4->, fill=brainpink!30!cardwhite] (c) at (0,-2.7) {\emoji{door}\ Խոհանոց. «...ինչի՞ համար էի եկել»};
+        \node[storystep, visible on=<3->] (b) at (0,-1.55) {\emoji{musical}\ Ճանապարհին՝ սիրածդ երգը, մեմ, սերիալի սյուժեի լուծումը};
+        \node[storystep, visible on=<4->, fill=brainpink!30!cardwhite] (c) at (0,-3.1) {\emoji{door}\ Խոհանոց. «...ինչի՞ համար էի եկել»};
         \draw[-{Stealth}, plum, line width=1pt, visible on=<3->] (a) -- (b);
         \draw[-{Stealth}, plum, line width=1pt, visible on=<4->] (b) -- (c);
       \end{tikzpicture}}
     \end{column}
   \end{columns}
-  \vspace{4mm}
+  \vspace{2mm}
   \onslide<5->{%
   \begin{card}[colback=lavender!35!cardwhite]
     \centering Նոր միտքը \textbf{դուրս է հրել} հինը կարճաժամկետ հիշողությունից, մինչ այն կհասցներ «պահպանվել»։
@@ -244,10 +244,10 @@
       \end{card}}
     \end{column}
   \end{columns}
-  \vspace{3mm}
+  \vspace{2mm}
   \onslide<3->{%
   \begin{card}[colback=peach!35!cardwhite]
-    Ծայրահեղ դեպք՝ տրավմատիկ «ֆլեշ» հիշողություններ (flashbulb memories). այնքան վառ են, որ խանգարում են ապրել։
+    Ծայրահեղ դեպք՝ տրավմայի հիշողություններ, որ նորից ու նորից են «վերադառնում» (գրքում՝ «flashbulb memories»). այնքան վառ են, որ խանգարում են ապրել։
   \end{card}}
 \end{frame}
 
@@ -308,8 +308,8 @@
     \begin{column}{0.72\textwidth}
       \begin{tikzpicture}
         \node[chatmsg=8cm, fill=peach!40!cardwhite, anchor=north west] (m1) at (0,0)
-          {\textbf{Մայրիկ.} Հիշու՞մ ես էն բարձրահասակ աղջկան՝ քո դասարանից։ Մազերը ներկում էր, մեր կողքի փողոցում էին ապրում, մինչև ծնողները բաժանվեցին։ Քույրը քո զարմիկի ընկերուհին էր։ Միշտ կարմիր վերարկու էր հագնում, չէր սազում իրեն...};
-        \node[chatmsg=2.4cm, fill=cardwhite, anchor=north east, visible on=<2->] (m2) at ([yshift=-3mm]m1.south east) {\textbf{Ես.} Անունը՞};
+          {\textbf{Մայրիկ.} Հիշո՞ւմ ես էն բարձրահասակ աղջկան՝ քո դասարանից։ Մազերը ներկում էր, մեր կողքի փողոցում էին ապրում, մինչև ծնողները բաժանվեցին։ Քույրը քո զարմիկի ընկերուհին էր։ Միշտ կարմիր վերարկու էր հագնում, չէր սազում իրեն...};
+        \node[chatmsg=2.4cm, fill=cardwhite, anchor=north east, visible on=<2->] (m2) at ([yshift=-3mm]m1.south east) {\textbf{Ես.} Անո՞ւնը};
         \node[chatmsg=2.4cm, fill=peach!40!cardwhite, anchor=north west, visible on=<3->] at ([yshift=-3mm]m1.south west |- m2.south) {\textbf{Մայրիկ.} Չգիտեմ։};
       \end{tikzpicture}
     \end{column}
@@ -628,7 +628,7 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Ինչու՞ է ուղեղն այդպես անում}
+\begin{frame}{Ինչո՞ւ է ուղեղն այդպես անում}
   \begin{columns}[c]
     \begin{column}{0.52\textwidth}
       \begin{itemize}
@@ -703,7 +703,7 @@
       Էլիզաբեթ Լոֆթուս, 1974. մարդիկ դիտել են ավտովթարի տեսագրություն ու պատասխանել. «Ի՞նչ արագությամբ էին գնում մեքենաները, երբ \textbf{\_\_\_\_} իրար»\par\medskip
       \begin{tikzpicture}
         \begin{axis}[
-            xbar, width=6.6cm, height=4.4cm, bar width=0.4cm,
+            xbar, width=6.6cm, height=4.4cm, bar width=0.4cm, bar shift=0pt, % two \addplot: without this the bars sit off their labels
             xmin=0, xmax=100, enlarge y limits=0.15, % xmax leaves room for the "66 կմ/ժ" labels inside the column
             symbolic y coords={hpvecin, xpvecin, dem, baxvecin, jaxjaxvecin},
             ytick={hpvecin, xpvecin, dem, baxvecin, jaxjaxvecin}, % not ytick=data: two \addplot

@@ -1,8 +1,17 @@
 % ===== Opening: title, hook, the book and the series, today's plan (~5 min) =====
 
-\webinartitle{2}{Գլուխ 2. Հիշողության նվերը}%
-  {\chip{door}{կարճ ու երկար} \chip{eyes}{դեմք ու անուն} \chip{wine}{ալկոհոլ} \chip{crown}{եսասեր հիշողություն} \chip{magnifier}{երբ այն փչանում է}}%
-  {thinking}{Ֆայլը գտնվեց։ Մի քիչ խմբագրված։}{{door}{eyes}{crown}}
+% Title: the webinar 2 banner, as in webinar 1 (images/title_banner.png = banner/out/webinar02/banner_1920x1080.png;
+% rebuild with: uv run 02_idiot_brain/banner/build_banner.py --webinar 2, then copy it here)
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \node at (current page.center) {\includegraphics[width=\paperwidth]{title_banner.png}};
+  \end{tikzpicture}
+\end{frame}
+
+% Telegram group + GitHub (2026-10-26): unnumbered and without footer, so NOTES.md keeps its frame numbers
+\begin{frame}[plain, noframenumbering]{Telegram խումբն ու GitHub-ը}
+  \telegramframebody
+\end{frame}
 
 % Hook: four everyday memory glitches; the audience types the ones they know
 \begin{frame}{Ծանո՞թ է}
@@ -65,7 +74,7 @@
     \begin{column}{0.4\textwidth}
       \begin{card}[colback=lavender!45!cream]
         {\blackfont Մինչև ընդմիջումը}\par\smallskip
-        \chip{door}{կարճ ու երկար}\par\smallskip
+        \chip{door}{մոռացկոտություն}\par\smallskip
         \chip{eyes}{դեմքեր ու անուններ}
       \end{card}
     \end{column}

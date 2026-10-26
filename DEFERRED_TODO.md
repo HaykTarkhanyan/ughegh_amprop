@@ -2,6 +2,17 @@
 
 Topics cut from current work so they do not get lost. Newest at the top.
 
+## Slide review 2026-10-26: findings not fixed (cosmetic or Hayk's call)
+Two reviewer agents looked at every frame of all eight decks; the confirmed layout, wording, spelling and fact fixes went in the same day. Left open (frame = footer number):
+- Hayk's call: webinar 4 frame 14 myth verdict «ՓԱՍՏ» for «միջին IQ-ն միշտ 100 է» (reviewer suggests «ՄԱՍԱՄԲ»); webinar 8 help line (reviewer raised it again; Hayk decided "book only" on 2026-10-21, DECISIONS.md #9); webinar 1 banner still shows the «հիշողություն» chip (webinar 1 is already presented).
+- pgfplots tick and value numbers render in the serif math font next to Mardoto labels: webinar 1 frames 44, 48; webinar 2 frame 42; webinar 4 frames 26, 32, 51, 75. Webinar 3 frame 59 already fixes it (`assume math mode=true` plus a sans font); copy that.
+- Small handwritten bubbles are hard to read at screen-share size: webinar 1 frames 20, 26, 52; webinar 4 frame 26 (also one-word orphans in its chart title and footnote).
+- Webinar 2 chapter opener: «ՀԻՇՈՂՈՒԹՅՈՒՆ» touches the mascot circle (needs a size cap in `\partopener`).
+- Webinar 5: frame 85 red HUD label covers the BARO/RA readouts; frame 38 closing sentence touches the box shadows; frame 93 appendix B joins two items in one bullet.
+- Webinar 6 frame 27: in the iceberg, the 🔮 emoji sits on the line above its word.
+- Appendix letters: webinar 8 frames 95-96 and webinar 7 frames 99-100 use a new letter and "(1/2)" together; webinar 6 keeps one letter.
+- Chapter 1 is «Մարմին» in the book-list frames of webinars 5-6 and «Մարմնի կառավարում» in 7-8.
+
 ## Chapter decks, webinars 2-7 (parked 2026-10-21, all six built and reviewed; since 2026-10-23 they are webinars 3-8, and the numbers below are the old ones)
 - Emoji the agents wanted but did not have (they used substitutes): tomato, elephant, pig, football, wolf, chicken, moose, older woman, elevator, parachute, skier, tooth, bank, wrench. Adding them to `build_art.py` only helps if the frames are then edited to use them.
 - Webinar 3 has a local `\showon{3-}{...}` macro (hide anything inside TikZ until a slide); move it to the preamble if another deck needs it, since `visible on` still does not hide plain `\includegraphics`.

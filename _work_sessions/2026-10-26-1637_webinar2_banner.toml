@@ -1,0 +1,43 @@
+title = "Banners and posts for webinars 2-8, Telegram frame in every deck, overall slide review"
+date = "2026-10-26"
+time = "16:37"
+areas = ["02_idiot_brain/banner/", "DECISIONS.md"]
+
+done = [
+  "Hayk: webinar 2 is Friday 2026-10-30, 18:30, Zoom",
+  "build_banner.py: WEBINARS dict + --webinar N (webinar 1 unchanged: rebuilt SVGs and PNGs byte-identical to git); loose emoji moved into the dict; raises if the chips push the date row off the banner",
+  "Webinar 2 banner (v2 Glazz): out/webinar02/banner_1920x1080 and banner_1600x640; popup 'Ֆայլը չի գտնվել', buttons 'Փնտրել / Հորինել'; chips մոռացկոտություն, դեմք ու անուն, ալկոհոլ, կեղծ հիշողություն (first draft had 'կարճ ու երկար'; Hayk: sounds out of context without the word memory)",
+  "8 Twemoji SVGs copied from slides/common/art/twemoji into banner/assets/emoji (door, eyes, wine, crown, magnifier, floppy, puzzle, mirror)",
+  "banner/post_text_webinar02.md: post in webinar 1's shape, five bullets all from the webinar 2 deck, Telegram link",
+  "Desktop: idiot_brain_webinar2_banner.png (1920x1080) and idiot_brain_webinar2_banner_cover.png (1600x640)",
+  "DECISIONS.md #12",
+  "Webinars 3-8: banners (wide + cover) and posts, no dates yet (Hayk), so 'Ամսաթիվը՝ շուտով' on the banners and [ամսաթիվ]/[ժամ] in the posts; 47 more Twemoji copied (scratchpad copy_banner_emoji.py reads build_art.py's table)",
+  "build_banner.py: loose-emoji positions shared (DECOR_WIDE_AT / DECOR_COVER_AT), entries name emoji only; date row without date; button labels fitted (Բարկանալ, Հասկանալ spilled out before); webinar 1 and 2 outputs checked byte-identical after each change",
+  "The chip-overflow check caught webinar 7 ('համոզելու հնարքներ' made three rows), shortened to 'համոզում'",
+  "Desktop/idiot_brain_banners/: webinarN_banner.png, webinarN_cover.png, webinarN_post.txt for N = 2..8",
+  "CONVENTIONS.md: banner rule",
+  "Hayk: Q8 yes (webinar 2 title = banner), Q9 yes (Telegram in webinars 2-8), Q10 yes (մոռացկոտություն); preamble macros \\telegramframebody / \\telegramqrbox, used by all 8 decks; webinars 2-8 frame is [plain, noframenumbering] so NOTES keep their numbers (scratchpad telegram_all.py, 24 files); DECISIONS.md #13",
+  "frame_sheets.py docstring: labels count frames, so after an unnumbered frame they run one ahead of the footline",
+  "Overall review (Hayk asked): two Opus reviewer agents, every frame of all eight decks (webinars 1-4: 0.39 M tokens, 33 min; 5-8: 0.47 M tokens, 35 min). I checked each finding against the rendered frames and the book before fixing",
+  "Fixed: overlapping boxes (w01 f54, w02 f9, w03 f17/42/83, w08 f15), w02 f42 bars off their labels (bar shift=0pt), axis labels on captions (w05 f54, w08 f61), w03 f74 meme caption, w03 f88/89 numbering vs the roadmap, 58 «ու՞» -> «ո՞ւ» plus վարկա՞ծը/Անո՞ւնը, w05 f78 «վերագրել» -> «գերակայել» (the book says overrule), w06 f31 «շփվող» filed under two traits, w04 f91 vs its own IQ-100 correction, years matched to sources (w04 Rosen 2010, w07 Farrow 2015), nested quotes, small wording",
+  "Fact corrections where the book is outdated, with appendix rows: sleepwalking is a non-REM arousal disorder, not weak REM atonia (w01 f41, ICSD-3); 'flashbulb memories' in the literature are vivid memories of hearing shocking news, the recurring trauma memories the book means are intrusive memories (w02 f16; Brown & Kulik 1977, Talarico & Rubin 2003); motion sickness 'mostly' in transport (and VR); w01 dessert frame points to the reward system in webinars 3 and 8; Rolls 1981 added to w01 appendix B",
+  "Not fixed, parked in DEFERRED_TODO.md (cosmetic or Hayk's call); CONVENTIONS.md: Armenian ՞ placement and nested quotes",
+]
+
+pending = [
+  "Dates for webinars 3-8: fill date/time in WEBINARS and the post blanks, rebuild",
+]
+
+next = []
+
+files = [
+  "02_idiot_brain/banner/build_banner.py",
+  "02_idiot_brain/banner/assets/emoji/ (8 new)",
+  "02_idiot_brain/banner/out/webinar02/",
+  "02_idiot_brain/banner/post_text_webinar02.md",
+  "DECISIONS.md",
+]
+
+commits = ["see git log: 'Idiot Brain: banners and posts for webinars 2-8, Telegram frame in every deck, review fixes', pushed to origin/main (Hayk: Q7 yes)"]
+
+notes = "Run: uv run 02_idiot_brain/banner/build_banner.py --webinar 2 (3 s here; webinar 1 with both looks 11 s)."

@@ -2,6 +2,22 @@
 
 Newest at the top.
 
+## 13. Telegram frame in every deck, unnumbered in webinars 2-8; webinar 2's title slide is its banner
+
+- **Date / status:** 2026-10-26, active (extends #11)
+- **Decision:** The Telegram/GitHub frame and the corner QR on the Questions frame now come from two preamble macros (`\telegramframebody`, `\telegramqrbox`) and appear in all eight decks. In webinars 2-8 the frame is `[plain, noframenumbering]`: no footer and no number, so every later frame keeps its number and NOTES.md only gained a line under frame 1. Webinar 2's title slide is now its banner PNG (`webinar02/images/title_banner.png`), as webinar 1 shows its banner; webinar 2's plan frame says "մոռացկոտություն" instead of "կարճ ու երկար".
+- **Why:** Hayk said yes to the QR in webinars 2-8 (Q9), to the banner title (Q8) and to the label (Q10). In webinar 1 the inserted frame shifted every number and the notes had to be renumbered; the other decks' notes cross-reference frame numbers in prose ("(19)", "(29-36)", "41-րդ ֆրեյմ"), which a script cannot shift safely.
+- **Alternatives rejected:** a numbered frame 2 with renumbered notes (see above); the QR on the title slide (both title layouts are full); a PDF of the banner made by `build_art.py` like webinar 1's `title_banner.pdf` (that run rebuilds all art through Edge for one image; the 1920x1080 PNG is sharp at the slide's 16 cm width).
+- **What would change this:** webinar 1 is presented again and should match the others (make its frame unnumbered and undo the notes shift); the banners of webinars 3-8 get dates and should become their title slides too.
+
+## 12. One banner per webinar from `build_banner.py --webinar N`, v2 look only
+
+- **Date / status:** 2026-10-26, active (does what #9's "What would change this" named once webinar 2 got a date)
+- **Decision:** `build_banner.py` keeps each webinar's wording, chips, popup text and loose emoji in a `WEBINARS` dict and takes `--webinar N`; webinar 1 still builds both looks into `out/v1_bubble` and `out/v2_glazz` (the slides' title image comes from there), later webinars build only the v2 Glazz look into `out/webinar0N/`. Post texts sit next to it as `post_text_webinar0N.md`. Webinar 2: Friday 2026-10-30, 18:30, Zoom (Hayk). Webinars 3-8 were built the same day without dates (Hayk: "No dates yet"): `"date": None` shows "Ամսաթիվը՝ շուտով" and drops the time, and their posts carry `[ամսաթիվ]` / `[ժամ]` blanks. Each popup reuses its deck's title-slide line; button labels share one size, shrunk to fit the 170 px buttons.
+- **Why:** webinar 2 needed a banner and post. Rebuilding webinar 1 after the change gave byte-identical SVGs and PNGs (`git diff --stat` on `banner/out` empty), so nothing already posted or used in the slides moved. Webinar 2 shows four chips, not five: five memory labels need three rows, which pushes the date row off the 1920x1080 banner; the script now raises an error instead of drawing past the edge.
+- **Alternatives rejected:** a copy of the script per webinar (duplicated layout code); both looks for every webinar (v2 was chosen in #5); a TikZ poster from the slides' `\webinartitle` (the banner is the series' public look and already has the date row).
+- **What would change this:** the decks' title slides should show each webinar's banner too (swap `\webinartitle` for the image, as in webinar 1).
+
 ## 11. Finished slide PDFs are committed in `slides/pdf/`; webinar 1 links the repo and a Telegram group
 
 - **Date / status:** 2026-10-23, active
