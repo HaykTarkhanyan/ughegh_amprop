@@ -3,21 +3,22 @@
 Recurring choices, written down once they have been made twice.
 
 ## Book texts
-- One folder per book (`01_power_oh_habit/`, `02_idiot_brain/`). The Idiot Brain is one Markdown file per chapter, `NN_<slug>.md` (DECISIONS.md #1).
+- One folder per book (`01_idiot_brain/`, `02_power_of_habit/`; numbered on 2026-10-27, DECISIONS.md #15), one Markdown file per chapter, `NN_<slug>.md`, flat next to the PDF; front sections get `00`, back sections the numbers after the last chapter. Source notes are linked into the text as `[^N]` under `## Notes` (DECISIONS.md #1, #14).
+- The script that made a book's chapter files is kept in that book's `archive/` (it is not needed again unless the texts are redone).
 
 ## Webinar material (Armenian)
 - Everything students see is in Armenian: banner, slides, post text. Speaker notes too (`slides/<deck>/NOTES.md`).
 - Armenian punctuation: «» for quotes, ։ (U+0589) for a full stop, ՝ ՞ ՛ ՜ placed on the word. Use "." for the միջակետ before a list: Mardoto has no U+2024.
 - No em or en dashes in Armenian text either; use ՝, a comma or a full stop.
 - Look: the banner palette (plum `#4A2340` text on cream `#FFF6EC`, pastel accents: pink, peach, lavender, mint, butter), Mardoto for text, Glazz for big titles (Armenian letters only), Twemoji 15.1.0 icons, the pink brain mascot (`banner/mascot.svg`). Charts with 3+ series use the Armenian flag colours.
-- Fonts come from fonter.am and live in `02_idiot_brain/banner/assets/fonts/`; the slides load them from there.
+- Fonts come from fonter.am and live in `01_idiot_brain/banner/assets/fonts/`; the slides load them from there.
 - A glyph missing from a font is an error, never a silent blank (`\tracinglostchars=3` in the slides, `Metrics.check` in the banner script).
 
 ## Slides (Beamer + LuaLaTeX)
 - One folder per webinar: `slides/webinarNN/webinarNN.tex` + `parts/` + `figures/` + `images/` + `memes/` + `NOTES.md`; build output goes to `build/` (gitignored). Webinar 1 = intro + chapter 1; from webinar 2 on, chapter N = webinar N (spec: `slides/DECK_BRIEF.md`; split on 2026-10-23, DECISIONS.md #10).
-- Build with `python 02_idiot_brain/slides/common/build_deck.py <deck>` (one pass; `--parts`, `--passes 2`, `--full`, `--wait`), never with `lualatex` directly: it queues every build, at most two at once, so parallel work cannot load all four cores with LuaLaTeX runs. Count problems with its report or `grep -F 'Overfull \vbox'`: in Git Bash, regex forms of that pattern return 0 even when the log has matches. Search Armenian text with `rg`, never `grep -i`: Git Bash's grep crashes on it and prints nothing. Check the result with `slides/common/non_essential/frame_sheets.py`.
+- Build with `python 01_idiot_brain/slides/common/build_deck.py <deck>` (one pass; `--parts`, `--passes 2`, `--full`, `--wait`), never with `lualatex` directly: it queues every build, at most two at once, so parallel work cannot load all four cores with LuaLaTeX runs. Count problems with its report or `grep -F 'Overfull \vbox'`: in Git Bash, regex forms of that pattern return 0 even when the log has matches. Search Armenian text with `rg`, never `grep -i`: Git Bash's grep crashes on it and prints nothing. Check the result with `slides/common/non_essential/frame_sheets.py`.
 - Finished PDFs: after a deck's final `--full` build, copy `build/webinarNN.pdf` to `slides/pdf/idiot_brain_webinarN_chN.pdf` (committed) and to the Desktop under the same name; check both with `cmp`.
-- Banners: `uv run 02_idiot_brain/banner/build_banner.py --webinar N` (one `WEBINARS` entry per webinar: at most 4 chips that make sense without the slides, the deck's popup line, 6 + 3 loose emoji); post text in `banner/post_text_webinarNN.md`, every bullet taken from a frame of that deck. When a date is set, fill `date`/`time` in the entry and the blanks in the post, then rebuild.
+- Banners: `uv run 01_idiot_brain/banner/build_banner.py --webinar N` (one `WEBINARS` entry per webinar: at most 4 chips that make sense without the slides, the deck's popup line, 6 + 3 loose emoji); post text in `banner/post_text_webinarNN.md`, every bullet taken from a frame of that deck. When a date is set, fill `date`/`time` in the entry and the blanks in the post, then rebuild.
 - Armenian punctuation on slides and in notes: the question mark ՞ sits on the stressed vowel, and on «ու» it goes on the «ո» (ինչո՞ւ, հիշո՞ւմ, դո՞ւ, never ինչու՞); with a final article it goes on the stem (վարկա՞ծը, անո՞ւնը). Quotes inside «» are „ “ (Mardoto has them). The 2026-10-26 review found 58 «ու՞» across the eight decks and notes.
 - Title slide: webinar 1 shows its banner image; from webinar 2 on, `\webinartitle` draws the banner's layout in TikZ.
 - All styling lives in `slides/common/preamble.tex`. Decks only hold content.

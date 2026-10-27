@@ -1,0 +1,41 @@
+title = "The Power of Habit: texts re-extracted from the PDF; book folders renumbered (01_idiot_brain, 02_power_of_habit); extractors archived"
+date = "2026-10-27"
+time = "00:36"
+areas = ["02_power_of_habit/", "01_idiot_brain/", "DECISIONS.md", "CONVENTIONS.md", "_learnings/"]
+
+done = [
+  "Summarised the Idiot Brain state for Hayk (sessions 2026-10-14 to 2026-10-26)",
+  "Hayk: 'ignore my notes and llm notes u can even delete, just by yourself get the texts as a first step'",
+  "Font and indent survey of the calibre PDF (422 pages, bookmarks give the section pages): body Georgia 15, paragraph indent x0 = 87, flush 72; titles LiberationSans 17.2 / 15 / 21; captions Arial 11.2; footnotes Georgia 9 + 11.2; endnotes keyed by a Georgia-Bold phrase",
+  "split_power_of_habit.py: 12 files 00_prologue .. 11_appendix, 45 figures in figures/ (4.7 MB), 8 author footnotes as [^fnN], 285 endnotes linked as [^N]",
+  "Checks: letters-only text equals pdftotext for all 12 sections and all endnotes; 283 notes in order, 1 via text before an ellipsis, 1 via first 3 words (book typo 'organcizational'); both and 10 random links checked by eye",
+  "Bugs found on the way: PyMuPDF splits widely spaced justified lines into one line per word (row merge; _learnings/2026-10-27-0220); quotes on note keys stopped 44 links; the appendix question lists use a hanging indent (87 -> 117)",
+  "Deleted (Hayk OK): the 18 notes / llm files, then the old full-text folders 01_loop .. 09 (Q7)",
+  "Q5: 02_idiot_brain -> 01_idiot_brain, 01_power_oh_habit -> 02_power_of_habit (git mv, 665 renames); 58 live references updated by scratchpad rename_refs.py; history files keep old paths (DECISIONS.md #15)",
+  "After the rename: prototype deck builds (17 s, 0 errors / overfull / missing chars); webinar 2 banner PNGs byte-identical to HEAD, SVGs differ only in CRLF (git: 0 changed lines)",
+  "Q8: extractors in 01_idiot_brain/archive/split_chapters.py (from the 2026-10-14 scratchpad) and 02_power_of_habit/archive/split_power_of_habit.py, with logging and READMEs; both rerun, output byte-identical to the committed files (10 + 57 files); 5.6 s and 17.7 s",
+  "DECISIONS.md #14, #15; CONVENTIONS.md 'Book texts'",
+]
+
+pending = [
+  "The committed slide PDFs (and the webinar 1 PDF already shared) still print 02_idiot_brain/slides/pdf; preamble.tex says 01_idiot_brain now, so it changes on each deck's next --full build",
+  "Root README.md still holds the prompt of the old notes -> LLM workflow",
+]
+
+next = [
+  "Whatever Hayk wants on top of the Power of Habit texts (webinars like Idiot Brain?)",
+]
+
+files = [
+  "02_power_of_habit/00_prologue.md .. 11_appendix.md, figures/, archive/ (new)",
+  "02_power_of_habit/ old chapter folders with notes, llm and full-text files (deleted)",
+  "01_idiot_brain/ (renamed from 02_idiot_brain), archive/ (new); docstrings, .tex comments, DECK_BRIEF.md, NOTES.md, preamble.tex",
+  "DECISIONS.md, CONVENTIONS.md, _learnings/2026-10-27-0220_pymupdf_splits_justified_lines.md",
+]
+
+commits = ["see git log: 'Book texts: Power of Habit re-extracted, folders renumbered, extractors archived' (Hayk: Q9 commit and push)"]
+
+notes = """
+Times are local (the system clock said WEST).
+Word counts (body without notes): prologue 3.0k, ch1-9 8.1k-10.6k each, afterword 3.5k, appendix 3.0k; about 117k words with notes.
+"""

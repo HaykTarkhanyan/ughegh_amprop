@@ -2,6 +2,25 @@
 
 Newest at the top.
 
+## 15. Book folders renumbered: `01_idiot_brain/`, `02_power_of_habit/`
+
+- **Date / status:** 2026-10-27, active
+- **Decision:** `02_idiot_brain/` is now `01_idiot_brain/` and `01_power_oh_habit/` is now `02_power_of_habit/` (also fixing the "oh" typo), with `git mv` so history follows. Live docs and code were updated (58 places: script docstrings, `.tex` header comments, `DECK_BRIEF.md`, `CONVENTIONS.md`, webinar 1 `NOTES.md`, and the Telegram frame's line «սլայդները՝ 01\_idiot\_brain/slides/pdf թղթապանակում» in `preamble.tex`). Session logs, `_learnings/` and entries #1-#14 keep the old paths as written at the time. Each book's text extractor is now kept in its `archive/` (both checked to reproduce the committed files byte for byte).
+- **Why:** Hayk: "idiot brain is 01 and this should be 02". The scripts find their files from `Path(__file__)`, so nothing in a build depends on the folder name: after the rename the prototype deck built cleanly, and the webinar 2 banner PNGs came out byte-identical (the SVGs differ only in CRLF line endings, which git normalises: 0 changed lines).
+- **Known side effect:** the committed slide PDFs, and the webinar 1 PDF people already have, still print `02_idiot_brain/slides/pdf` until each deck is rebuilt. The printed GitHub link goes to the repo root, so it still works.
+- **Alternatives rejected:** keeping the numbers by reading order (The Power of Habit was read first, Dec 2025); rewriting old paths in the history files (they record what was true then).
+- **What would change this:** more books arrive and a rule for the order is wanted (reading date, webinar order); until then the number is Hayk's call.
+
+## 14. The Power of Habit re-extracted in the Idiot Brain format; Hayk's notes and the LLM notes dropped
+
+- **Date / status:** 2026-10-27, active (applies #1's format to the first book)
+- **Decision:** `01_power_oh_habit/` holds one Markdown file per section, flat: `00_prologue.md`, `01_the_habit_loop.md` ... `09_the_neurology_of_free_will.md`, `10_afterword.md`, `11_appendix.md`. Each has the chapter text, the author's footnotes as `[^fnN]` under `## Footnotes`, and the book's source notes linked into the text as `[^N]` under `## Notes`. The 45 in-chapter figures are PNGs in `figures/pNNN_K.png` (PDF page, image number), referenced with `![Figure](...)` where they sit. The per-chapter `*_notes.md` / `*_llm.md` files are deleted (Hayk: "ignore my notes and llm notes u can even delete").
+- **Why:** Hayk asked for the texts to be extracted from scratch. The old `*_full_text.md` files were raw dumps with hard line breaks, no notes, and no prologue, afterword or appendix. The PDF is a calibre build, so structure comes from fonts and indents: a paragraph starts at x0 = 87, continuation lines sit at 72 (no sentence-end guessing, unlike #1). The endnotes are keyed by a bold phrase quoted from the text, not by numbers, so each one is linked where its phrase appears. Checks: for all 12 sections and all 285 notes, the letters-only text equals `pdftotext`'s for the same pages, character for character. 283 notes link in order, 1 by the text before an ellipsis in its key, and 1 by its first 3 words (the key has the book's typo "organcizational"); both loose links were checked by eye, as were 10 random ones (seed 509).
+- **Kept as in the PDF:** line-final hyphens are real hyphens in this reflowed ebook ("self-pity", "co-opetition"; `pdftotext` drops them). Nine URLs in the notes that the PDF spreads out with spaces were rejoined from an explicit list, and zero-width spaces were removed. Some journal names in the notes still carry stray spaces from the PDF ("Ne uropsyc hopharmacology").
+- **Left out:** title and copyright pages, contents, part pages (Part One = ch. 1-3, Part Two = ch. 4-7, Part Three = ch. 8-9), dedication, acknowledgments, "A Note on Sources", about the author. Italics are dropped (text only, as in #1).
+- **Alternatives rejected:** keeping the old full texts (hard line breaks, missing sections); `pdftotext` with sentence-end heuristics as in #1 (the indent rule is exact here); dropping the figures (the text refers to them: "He'll follow the habit:" is followed by a diagram); dropping the notes (they hold the study references, as in #1).
+- **What would change this:** a cleaner source (EPUB) turns up, or the figures turn out to be of no use (4.7 MB in the repo).
+
 ## 13. Telegram frame in every deck, unnumbered in webinars 2-8; webinar 2's title slide is its banner
 
 - **Date / status:** 2026-10-26, active (extends #11)
