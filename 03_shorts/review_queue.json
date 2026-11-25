@@ -2,7 +2,7 @@
   "title": "Shorts: scripts waiting for review",
   "subtitle": "Tick 'approve' (voice + animation can start) or 'needs changes' for each script. Comment on details on that short's PLAN.html page (03_shorts/<folder>/PLAN.html). Showcases get the full animation first (Q16).",
   "date": "2026-11-25",
-  "warning": "Nothing is voiced or animated until approved here (Q17). Approving costs about $0.05 of TTS per short; animation of a showcase is about 2-3 h of work.",
+  "warning": "Nothing is voiced or animated until approved here (Q17). Shorts must be 3:00 or less with pauses, so treat ~2:45 of speech as the ceiling; QWERTY (~2:47) is over it and needs a cut. Approving costs about $0.05 of TTS per short.",
   "tags": {
     "ok": {
       "label": "approve",
@@ -117,6 +117,15 @@
               "detail": [
                 "Open: U-dd «վարակվել», U-ee the comment call-to-action"
               ]
+            },
+            {
+              "id": "A11",
+              "title": "Approve: Kids glued to CoComelon-style TV (kids_tv, 11 beats, ~154 s)",
+              "exclusive": "kids",
+              "note": "Orienting reflex + bright fast shows + repetition; not hypnosis (Anderson 1981); the 2011 fast-cartoon study and its limits; WHO limits; tips.",
+              "detail": [
+                "Open: U-ff was CoComelon meant?, U-gg names, U-hh terms"
+              ]
             }
           ]
         }
@@ -195,6 +204,12 @@
               "title": "Needs changes: Contagious yawning (yawning, 11 beats, ~120 s)",
               "exclusive": "yawn",
               "note": "Leave comments on yawning/PLAN.html"
+            },
+            {
+              "id": "C11",
+              "title": "Needs changes: Kids glued to CoComelon-style TV (kids_tv)",
+              "exclusive": "kids",
+              "note": "Leave comments on kids_tv/PLAN.html"
             }
           ]
         }

@@ -1,0 +1,62 @@
+[
+  {
+    "key": "hook",
+    "text": "Միացնում ես երեխայի համար մուլտֆիլմ, և նա կարծես անջատվում է աշխարհից։ Ինչո՞ւ են փոքրերն այդպես կպչում Քոքոմելոնի նման շոուներին։",
+    "screen": "CoComelon",
+    "visual": "A toddler silhouette on a sofa lit by a flickering screen; the room around goes dim while the screen glows. Frame 0 shows the question."
+  },
+  {
+    "key": "reflex",
+    "text": "Առաջին պատճառը շատ հին ռեֆլեքսն է։ Ամեն կտրուկ փոփոխություն՝ նոր կադր, հանկարծակի ձայն, շարժում, ուղեղում ավտոմատ «սա ի՞նչ է» արձագանք է առաջացնում։ Այդ ռեֆլեքսն օգնել է մեր նախնիներին գոյատևել, և էկրաններն այն օգտագործում են։",
+    "visual": "A head with an alert icon that fires at every sudden change; a prehistoric rustle in the bushes, then a TV cut, the same alert."
+  },
+  {
+    "key": "features",
+    "text": "Այսպիսի շոուներում այդ ամենը շատ է՝ վառ գույներ, մեծ դեմքեր ու աչքեր, պարզ երաժշտություն, անընդհատ շարժում և շատ հաճախակի կադրափոխություն։ Ուղեղը նոր ազդանշան է ստանում գրեթե անընդհատ։",
+    "visual": "A generic drawn kids-show frame (not a copy of any show): bright blocks of colour, a big-eyed face, bouncing notes; the alert icon fires again and again on a timeline."
+  },
+  {
+    "key": "repetition",
+    "text": "Եվ կրկնություն՝ նույն երգերը, նույն կերպարները, նույն կառուցվածքը։ Փոքր երեխաների համար կանխատեսելին հաճելի է։ Նրանք սովորում են կրկնությամբ և ուրախանում, երբ գուշակում են, թե ինչ է լինելու։",
+    "visual": "The same short song loop playing three times; a child's face lights up a beat before each chorus."
+  },
+  {
+    "key": "not_hypnosis",
+    "text": "Բայց երեխաները հիպնոսացված չեն։ 1980-ականների սկզբին հոգեբան Դանիել Անդերսոնը ցույց տվեց, որ երբ «Սեզամ Սթրիթ» հաղորդման խոսքը դարձնում էին անհասկանալի, երեխաները քիչ էին նայում էկրանին։ Նրանց ուշադրությունը կախված է նրանից, թե որքան են հասկանում։",
+    "screen_small": "Anderson et al., 1981",
+    "visual": "Two TVs: normal speech -> a child watching; the same picture with garbled speech -> the child looks away to a toy. An 'ուշադրություն' bar drops."
+  },
+  {
+    "key": "combo",
+    "text": "Իսկ շատ պարզ երգերը փոքրերը հասկանում են ամբողջությամբ։ Ահա թե ինչու է այս համադրությունն այդքան գրավիչ՝ ամեն պահի ինչ-որ բան գրավում է աչքը, և ամեն ինչ հասկանալի է։",
+    "visual": "Two circles overlapping: 'աչքը գրավող' and 'հասկանալի'; the overlap glows."
+  },
+  {
+    "key": "study",
+    "text": "Արդյո՞ք արագ մուլտֆիլմները վնասում են։ 2011 թվականին չորս տարեկան 60 երեխայի հետ փորձում մի խումբը 9 րոպե դիտեց արագ մուլտֆիլմ, մյուսը՝ դանդաղ, երրորդը նկարեց։ Արագ մուլտֆիլմից անմիջապես հետո երեխաներն ավելի վատ կատարեցին ուշադրության և ինքնատիրապետման առաջադրանքները։",
+    "screen_small": "Lillard & Peterson, Pediatrics, 2011",
+    "visual": "Three groups of 20 dots: 'արագ մուլտ', 'դանդաղ մուլտ', 'նկարում են'; a test bar per group, the fast group lower. A small note: scene every 11 s vs every 34 s."
+  },
+  {
+    "key": "caveat",
+    "text": "Բայց հետազոտողները չէին կարող ասել՝ պատճառն արագությո՞ւնն էր, թե՞ ֆանտաստիկ իրադարձությունները, և չէին ստուգել՝ ազդեցությունը մնո՞ւմ է։ Հենց այսպիսի նոր շոուներն առանձին համարյա ուսումնասիրված չեն։",
+    "visual": "A question mark split between 'արագություն' and 'ֆանտաստիկա'; a clock with 'մնո՞ւմ է'."
+  },
+  {
+    "key": "guidelines",
+    "text": "Առողջապահության համաշխարհային կազմակերպությունը խորհուրդ է տալիս մինչև մեկ տարեկանների համար էկրան չօգտագործել, իսկ երկուսից չորս տարեկանների համար՝ օրական առավելագույնը մեկ ժամ։ Թեև որոշ մասնագետներ ասում են, որ բովանդակությունն ու համատեքստն ավելի կարևոր են, քան րոպեները։",
+    "screen_small": "WHO, 2019",
+    "visual": "An age line 0-1-2-4 with a crossed screen under 1 and '1 ժամ' for 2-4; then a balance 'րոպեներ' vs 'ինչ և ինչպես'."
+  },
+  {
+    "key": "tips",
+    "text": "Ի՞նչ անել։ Ընտրել ավելի դանդաղ, պատմություն ունեցող շոուներ, անջատել հաջորդ տեսանյութի ավտոմատ միացումը և, եթե կարող ես, դիտել երեխայի հետ ու խոսել այն մասին, ինչ տեսնում է։",
+    "visual": "Three quick cards: a slower story show, an 'autoplay' toggle switching off, a parent and a child pointing at the screen together."
+  },
+  {
+    "key": "takeaway",
+    "text": "Այնպես որ, երեխան ծույլ կամ կախված չէ։ Նրա ուղեղն անում է այն, ինչ միշտ արել է՝ արձագանքում է նորին և վայելում ծանոթը։ Իսկ շոուն ուղղակի շատ լավ գիտի, թե ինչպես օգտագործել դա։",
+    "screen": "Ուղեղն արձագանքում է նորին և վայելում ծանոթը",
+    "visual": "Big karaoke text over the glowing screen; the room lights come back on; loop to the hook."
+  }
+]
