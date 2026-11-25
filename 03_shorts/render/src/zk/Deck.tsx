@@ -91,7 +91,7 @@ export const DeckScene: React.FC<{ T?: DeckTimes }> = ({ T = DECK_T }) => {
   const redPulse = verdict * (0.6 + 0.4 * Math.sin((t - T.verdict) * 4));
 
   const counterIn = ramp(t, T.scan - 0.4, 0.5);
-  const which = ramp(t, T.which, 0.5);
+  const which = ramp(t, T.which + 0.15, 0.5); // starts after the verdict line has gone
   const ghostId = REDS[Math.floor((t - T.which) * 7) % REDS.length] ?? REDS[0];
 
   return (
@@ -155,7 +155,7 @@ export const DeckScene: React.FC<{ T?: DeckTimes }> = ({ T = DECK_T }) => {
       </div>
 
       {/* verdict, then "which red card? unknown" */}
-      <div style={{ position: "absolute", left: 470, top: 120, opacity: verdict * (1 - which), fontFamily: FONT, fontSize: 44, fontWeight: 700, color: C.ink, transform: `translateY(${(1 - verdict) * 12}px)` }}>
+      <div style={{ position: "absolute", left: 470, top: 120, opacity: verdict * (1 - ramp(t, T.which - 0.45, 0.45)), fontFamily: FONT, fontSize: 44, fontWeight: 700, color: C.ink, transform: `translateY(${(1 - verdict) * 12}px)` }}>
         Բոլոր սևերն այստեղ են, ուրեմն քոնը <span style={{ color: C.red }}>կարմիր է</span>
       </div>
       <div style={{ position: "absolute", left: 470, top: 92, opacity: which, display: "flex", alignItems: "center", gap: 26 }}>

@@ -175,7 +175,7 @@ export const BallsScene: React.FC<{ T?: BallsTimes }> = ({ T = BALLS_T }) => {
         </div>
       ) : null}
 
-      <HalvingBar x={410} y={705} width={1100} rounds={completed} opacity={barIn} label="Միայն գուշակելով հաջողելու հավանականությունը" roundWord="Ռաունդ" />
+      <HalvingBar x={410} y={738} width={1100} rounds={completed} opacity={barIn} label="Միայն գուշակելով հաջողելու հավանականությունը" roundWord="Ռաունդ" />
 
       {/* the end: he is sure, and still does not know which is red */}
       <div style={{ position: "absolute", left: RIGHT_X, width: PANEL.w, top: PANEL.y + 170, display: "flex", justifyContent: "center", opacity: endIn }}>
