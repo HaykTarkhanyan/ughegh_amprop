@@ -33,7 +33,7 @@ recording. Script source: `beats.hy.json`. The earlier TTS version of this short
 
 <!-- script:start -->
 
-13 beats, 3,453 characters (3,470 with numbers spelled out): ~239 s of speech, ~4:20 with pauses and the end tail, 18.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
+13 beats, 3,429 characters (3,446 with numbers spelled out): ~237 s of speech, ~4:18 with pauses and the end tail, 18.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
 
 **1. gossip.** Ընկերուհիդ գրում է՝ «Լսե՞լ ես Անիի մասին»։ Դու մի գաղտնիք գիտես Անիի մասին։ Բայց չգիտես՝ ընկերուհիդ էլ գիտի՞ նույնը, թե ուզում է քեզնից իմանալ։ Եթե առաջինը դու պատմես, իսկ նա չգիտեր, գաղտնիքը դու ես տարածել։ Նա էլ նույն վախն ունի։ Ուրեմն ինչպե՞ս պարզել, որ երկուսդ էլ գիտեք, առանց որևէ մեկի բարձրաձայնելու։ *[pause 1.5 s]*
 
@@ -47,9 +47,9 @@ recording. Script source: `beats.hy.json`. The earlier TTS version of this short
 
 **6. waldo_zero.** Ընկերդ անցքից տեսնում է նրան և համոզվում, որ գտել ես։ Բայց ստվարաթուղթը ծածկում է ամբողջ նկարը, և նա չգիտի՝ էջի որ մասում է։ Էջը ստվարաթղթի տակ կարող էր լինել ցանկացած տեղ։ *[pause 2 s]*
 
-**7. card.** Նույն սկզբունքով կարելի է ապացուցել, որ ձեռքիդ քարտը կարմիր է։ Խառը կապոցից մի քարտ ես քաշում և առանց ցույց տալու ասում՝ «Կարմիր է»։ Ինչպե՞ս ապացուցել՝ առանց քարտը բացելու։ Կապոցի մնացած 51 քարտը շրջում ես և ցույց տալիս, որ բոլոր 26 սև քարտերը դեռ այնտեղ են։ Եթե բոլոր սևերը կապոցում են, ուրեմն ձեռքիդ քարտը կարմիր է։ Ընկերդ դա գիտի, բայց չգիտի՝ որ կարմիր քարտն է՝ յոթնո՞ց, թե՞ թագուհի։ *[pause 1.5 s]*
+**7. card.** Նույն սկզբունքը գործում է քարտերով։ Խառը կապոցից մի քարտ ես քաշում և առանց ցույց տալու ասում՝ «Կարմիր է»։ Ինչպե՞ս ապացուցել՝ առանց քարտը բացելու։ Կապոցի մնացած 51 քարտը շրջում ես և ցույց տալիս, որ բոլոր 26 սև քարտերը դեռ այնտեղ են։ Եթե բոլոր սևերը կապոցում են, ուրեմն ձեռքիդ քարտը կարմիր է։ Ընկերդ դա գիտի, բայց չգիտի՝ որ կարմիր քարտն է՝ յոթնո՞ց, թե՞ թագուհի։ *[pause 1.5 s]*
 
-**8. balls.** Իսկ եթե պետք է ապացուցել ոչ թե գաղտնիք, այլ տարբերություն։ Ընկերդ դալտոնիկ է, և ձեռքին երկու գնդակ ունի՝ կարմիր ու կանաչ։ Նրա համար դրանք նույնն են։ Նա գնդակները թաքցնում է մեջքի ետևում, փոխում է ձեռքերը կամ չի փոխում, հետո ցույց է տալիս և հարցնում՝ փոխեցի՞։ *[pause 3 s]*
+**8. balls.** Իսկ երբեմն պետք է ապացուցել ոչ թե գաղտնիք, այլ տարբերություն։ Ընկերդ դալտոնիկ է, և ձեռքին երկու գնդակ ունի՝ կարմիր ու կանաչ։ Նրա համար դրանք նույնն են։ Նա գնդակները թաքցնում է մեջքի ետևում, փոխում է ձեռքերը կամ չի փոխում, հետո ցույց է տալիս և հարցնում՝ փոխեցի՞։ *[pause 3 s]*
 
 **9. balls_logic.** Դու ամեն անգամ ճիշտ ես պատասխանում։ Եթե գնդակներն իսկապես նույն գույնի լինեին, չէիր կարող իմանալ, միայն կգուշակեիր։ Մեկ անգամ գուշակելը կարող է հաջողվել՝ հիսուն տոկոս։ Երկու անգամ անընդմեջ՝ քառորդ, տասը անգամ՝ մոտ հազարից մեկ, քսան անգամ՝ մոտ միլիոնից մեկ։ Քսան ռաունդից հետո նա համոզված է։ Իսկ թե որն է կարմիրը, մինչև հիմա չգիտի։ *[pause 2 s]*
 
@@ -115,8 +115,15 @@ in `render/out/v1/`). Phase times are defaults until the narration gives the bea
   round 1 slowly (curtain "մեջքի ետևում", a coin lands on «փոխել», the balls trade places behind the curtain,
   «Փոխեցի՞» / «Այո, փոխեցիր»); 19 fast rounds with the halving bar to "1 / 1 048 576"; a check mark and "convinced, but
   does not know which is red".
-- Still to build: the gossip chat (beats 1, 12), the three real-life cards (beats 2, 11), the faked-video film
-  strips (beat 10), the title card, captions, and the vertical versions for the Short.
+- **The connecting scenes** (`render/src/zk/Story.tsx`, built 2026-11-25): the gossip chat (a phone with «Լսե՞լ ես
+  Անիի մասին», the two thought bubbles, the secret flying out and "spilled", her mirrored fear, "how to find out
+  without saying it"); the three everyday cases (password that never leaves the phone, blurred income "enough",
+  blurred birth date "18+"); the title card; the faked video (a real strip and a staged one with the failures cut,
+  "they look the same", "conviction ✓, transferable information 0"); the real systems (a digit puzzle solved in a
+  blur, then bank salary range, EU age check, hidden crypto transfer, each locked and checked); the gossip close (both
+  answers locked, "match ✓"); the takeaway.
+- **The whole long video** (`ZkLong`, 4:17 with the temporary guide voice): `render/out/v2/ZkLong_guide.mp4`.
+- Still to build: the vertical version for the Short (the scenes are laid out for 16:9).
 
 ## Recording guide (for your one take)
 

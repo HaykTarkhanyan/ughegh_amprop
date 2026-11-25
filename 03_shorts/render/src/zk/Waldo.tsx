@@ -228,13 +228,13 @@ export const WaldoScene: React.FC<{ T?: WaldoTimes }> = ({ T = WALDO_T }) => {
         <div style={{ fontFamily: FONT, fontSize: 30, fontWeight: 800, color: "#2A2117", textAlign: "center", marginTop: -8 }}>Գտի՛ր նրան</div>
       </div>
 
-      <div style={{ position: "absolute", left: 0, right: 0, top: 990, textAlign: "center", fontFamily: FONT, fontSize: 36, fontWeight: 700, color: C.ink, opacity: ramp(t, T.opaque + 0.3, 0.5) * (1 - ramp(t, T.anywhere, 0.4)) }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 24, textAlign: "center", fontFamily: FONT, fontSize: 36, fontWeight: 700, color: C.ink, opacity: ramp(t, T.opaque + 0.3, 0.5) * (1 - ramp(t, T.anywhere, 0.4)) }}>
         Ընկերդ տեսնում է միայն սա
       </div>
-      <div style={{ position: "absolute", left: 0, right: 0, top: 990, textAlign: "center", fontFamily: FONT, fontSize: 36, fontWeight: 700, color: C.ink, opacity: anyIn * (1 - verdict) }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 24, textAlign: "center", fontFamily: FONT, fontSize: 36, fontWeight: 700, color: C.ink, opacity: anyIn * (1 - verdict) }}>
         Էջը տակը կարող է լինել <span style={{ color: C.orange }}>ցանկացած տեղ</span>
       </div>
-      <div style={{ position: "absolute", left: 0, right: 0, top: 975, display: "flex", justifyContent: "center", alignItems: "center", gap: 18, fontFamily: FONT, fontSize: 38, fontWeight: 700, color: C.ink, opacity: verdict }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 14, display: "flex", justifyContent: "center", alignItems: "center", gap: 18, fontFamily: FONT, fontSize: 38, fontWeight: 700, color: C.ink, opacity: verdict }}>
         <CheckMark size={60} progress={ramp(t, T.verdict, 0.6)} />
         Համոզված է, որ գտել ես, բայց չգիտի՝ <span style={{ color: C.orange }}>որտեղ</span>
       </div>

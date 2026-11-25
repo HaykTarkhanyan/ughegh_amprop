@@ -23,6 +23,13 @@ stays in `../bakeoff/remotion/` as a record.
 | `ZkWaldo` | `src/zk/Waldo.tsx` | 1920 x 1080 | Where's Waldo as a zero-knowledge proof: crowd page, magnifier, the big sheet with a hole, "the page could be anywhere" |
 | `ZkDeck` | `src/zk/Deck.tsx` | 1920 x 1080 | The red card: all 26 black cards are still in the rest of the deck |
 | `ZkBalls` | `src/zk/Balls.tsx` | 1920 x 1080 | The colour-blind friend: two balls, swap or not, 20 rounds, the halving bar |
+| `ZkLong` | `src/zk/Long.tsx` | 1920 x 1080 | The whole long video: all 13 beats on the narration's timeline (scenes from `Story.tsx`, `Waldo.tsx`, `Deck.tsx`, `Balls.tsx`), key moments tied to spoken words, centred captions, the narration |
+
+**Rebuilding the long video after the narration changes** (from `03_shorts/`): `python tools/build_timeline.py
+zero_knowledge`, then `python render/sync_short.py zero_knowledge`, then render `ZkLong`. `Long.tsx` finds the key
+moments by the first words of sentences (e.g. the sheet sweeps in on «Ստվարաթուղթը»); if the script's wording
+changes, it stops with "no word starting with ...", and the prefix in `Long.tsx` needs updating. The narration now is
+a temporary Gemini guide voice (`zero_knowledge/audio/README.md`); Hayk's recording replaces it.
 
 Each scene takes its phase times as a prop (`DECK_T`, `BALLS_T`, `WALDO_T` are the defaults). When the narration
 is recorded, the beat times from `tools/build_timeline.py` set these, so a faster or slower reading only changes the

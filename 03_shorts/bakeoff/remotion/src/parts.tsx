@@ -1,14 +1,14 @@
 // Small building blocks: easing ramps, a label pill, fridge and person icons, the bomber with its dots.
 import React from "react";
 import { Easing, Img, interpolate, staticFile } from "remotion";
-import { C, DATA, FONT } from "./data";
+import { C, DATA, FONT, V2 } from "./data";
 
 // 0 -> 1 between t0 and t0 + dur (seconds), clamped, eased.
 export const ramp = (t: number, t0: number, dur: number, ease = Easing.bezier(0.16, 1, 0.3, 1)) =>
   interpolate(t, [t0, t0 + dur], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: ease });
 
 export const Pill: React.FC<{ text: string; top: number; opacity: number }> = ({ text, top, opacity }) => (
-  <div style={{ position: "absolute", top, left: 120, right: 192, display: "flex", justifyContent: "center", opacity }}>
+  <div style={{ position: "absolute", top, left: V2 ? 150 : 120, right: V2 ? 150 : 192, display: "flex", justifyContent: "center", opacity }}>
     <div
       style={{
         fontFamily: FONT, fontSize: 34, fontWeight: 600, color: C.ink, background: "rgba(14,15,18,0.78)", lineHeight: 1.25,
