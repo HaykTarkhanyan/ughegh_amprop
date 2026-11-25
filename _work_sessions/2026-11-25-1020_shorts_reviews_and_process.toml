@@ -19,11 +19,14 @@ done = [
   "Short 3 (Simpson's paradox), Bayes choices reused without asking: 03_shorts/simpson/beats.hy.json (13 beats, 2,101 chars, ~145 s) and PLAN.md. Kidney stones (Charig 1986: 78% vs 83% overall, 93/87 and 73/69 by size) as the dot example, Berkeley 1973 (department table verified against R's UCBAdmissions counts; Berkeley was not sued), COVID Italy vs China 2020 (qualitative, no Italian numbers read), rule beat with the 'split by causes before the treatment' exception. Lint 0 errors. Review points U-e..U-h",
   "Short 4 (regression to the mean: praise 'fails', punishment 'works'): 03_shorts/regression/beats.hy.json (14 beats, 2,294 chars, ~158 s), PLAN.md, simulate.py (seed 509: best 50 fall 92 -> 82, worst 50 rise 47 -> 59, best of test 2 had 81 on test 1). Kahneman's flight instructors (TF&S ch. 17; Tversky & Kahneman 1974), Galton 1886 (2/3; family counts not confirmed, left out); Commons portraits found. Lint 0 errors. Review points U-i..U-l",
   "Short 5 (waiting): 03_shorts/waiting/beats.hy.json (12 beats, 2,301 chars, ~159 s), PLAN.md, simulate_lines.py (your line fastest 10 of 30; 0.335 long run). Houston story told as unverified; Maister 1985 rules; Disney posted vs actual ~2/3 (TouringPlans); interactive queues confirmed; Hornik's 36% left out. Review points U-m..U-o",
+  "Hayk: Q7 'whichever u think is the best' -> Remotion (DECISIONS #21, d7da781); Q15 inline one by one; Q16 showcases = crypto, friendship, QWERTY, Petrov; Q17 scripts first for all",
+  "Six scripts + plans (each fact-checked, linted to 0 errors, opened as HTML): crypto_paint (Diffie-Hellman with paint, toy numbers 5/23 -> 2, GCHQ 1970-74 kept secret until 1997), friendship (network.py: 17 of 20 fewer; Facebook 92.7%; flu sensors ~2 weeks; bus beat 92%), qwerty (Yasuoka telegraph origin, 1888 contest, 1893 standard, Dvorak 1944/1956), petrov (26 Sep 1983, 5 missiles, sun glint, role debated, Bayes link), own_voice (air + bone; Hughes & Harrison 2013; Mita 1977 mirror faces), yawning (55%; oxygen falsified; Norscia & Palagi 2011 vs Bartholomew & Cirulli 2014; dogs 21/29). New tool: tools/plan_script.py fills PLAN.md's script section from beats.hy.json",
 ]
 
 pending = [
   "Waiting short: Hayk reviews 03_shorts/waiting/PLAN.html (U-m..U-o)",
-  "Six more topics asked (QWERTY, own voice on recordings, contagious yawning, Stanislav Petrov 1983, public-key crypto with paint, friendship paradox); Hayk: lean into nice animation, install what is needed",
+  "Scripts awaiting Hayk: bayes_test, simpson, regression, waiting, crypto_paint, friendship, qwerty, petrov, own_voice, yawning (10 PLAN.html pages with U-questions)",
+  "After approval: animate the 4 showcases (crypto, friendship, QWERTY, Petrov) in Remotion; then the rest",
   "Regression short: Hayk reviews 03_shorts/regression/PLAN.html (script + U-i..U-l)",
   "Simpson short: Hayk reviews 03_shorts/simpson/PLAN.html (script + U-e..U-h)",
   "Bayes short: Hayk reviews 03_shorts/bayes_test/PLAN.html (script + U-a..U-d), then voice, crowd-grid component, render",
