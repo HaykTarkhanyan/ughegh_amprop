@@ -2,6 +2,14 @@
 
 Newest at the top.
 
+## 24. Where's Waldo replaces the cave in the first video; the series renders from `03_shorts/render/`
+
+- **Date / status:** 2026-11-25, active (amends the structure in #23)
+- **Decision:** The easy example in the zero-knowledge video is Where's Waldo (a sheet far bigger than the page, with a small hole), not the Ali Baba cave; the repeated-rounds maths and the "a video of it convinces nobody" beat move to the colour-blind balls. The hidden character is our own design (orange cap, striped blue scarf), not Waldo. All series animation lives in a new Remotion project, `03_shorts/render/`, set up from the pilot's pinned lockfile; the pilot stays in `bakeoff/` as a record.
+- **Why:** Hayk, Q22: "Where's Waldo instead" (after "for the cave i imagined a simpler example ... hello world style"). The Waldo proof is one step and visual; the balls already repeat, so nothing is lost. Waldo's look is a trademarked character design (Martin Handford), so only the book title is referred to. The render move was planned in #21 ("move the winner").
+- **Alternatives rejected:** the classic 3-step cave diagram (offered, not chosen); the cave plus a "no word" run; keeping the work inside `bakeoff/remotion/` (a folder named after a finished comparison).
+- **What would change this:** Hayk wanting the cave back (the draft is in `render/src/zk/drafts/Cave.tsx`); a viewer test showing the Waldo leak (it reveals his immediate surroundings) confuses more than it teaches.
+
 ## 23. The first video: zero-knowledge proofs, narrated by Hayk, as a short intro plus a long horizontal explainer
 
 - **Date / status:** 2026-11-25, active

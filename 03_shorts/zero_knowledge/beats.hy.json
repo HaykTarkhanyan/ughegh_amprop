@@ -18,32 +18,27 @@
     "visual": "The three cards collapse into one line: 'ապացուցել ✓, բացահայտել ✗'; the title appears."
   },
   {
-    "key": "cave_setup",
-    "text": "Ամենահայտնի բացատրությունը քարանձավն է։ Պատկերացրու օղակաձև քարանձավ՝ մուտքից երկու արահետ է գնում, ձախ և աջ, որոնք խորքում միանում են փակ դռնով։ Դուռը բացվում է միայն գաղտնի բառով։ Ընկերուհիդ ասում է, որ գիտի այդ բառը։ Դու ուզում ես համոզվել, բայց առանց բառը լսելու։",
-    "screen_small": "Quisquater et al., «How to explain zero-knowledge protocols to your children», 1990",
-    "visual": "Top-down drawing of a ring-shaped cave: entrance at the bottom, paths A (left) and B (right) meeting at a door at the top; the door glows with a lock. The friend stands at the entrance, you outside."
+    "key": "waldo_setup",
+    "text": "Ամենապարզ օրինակը մանկական գրքերից է՝ «Որտե՞ղ է Ուոլդոն»։ Հսկայական նկար՝ հարյուրավոր մարդկանցով, և պետք է գտնել մեկին։ Դու գտել ես նրան։ Ընկերդ չի հավատում, բայց դու չես ուզում ցույց տալ՝ որտեղ է, որ նրա խաղը չփչացնես։",
+    "pause_after": 1,
+    "screen_small": "Naor, Naor & Reingold, «Applied Kid Cryptography», 1999",
+    "visual": "16:9. A busy picture page (an original crowd illustration, not the book's art) fills the frame; a reference portrait of the person to find (our own design: orange cap, blue scarf) top right; a magnifier sweeps and stops on him: «Գտա»."
   },
   {
-    "key": "cave_round",
-    "text": "Նա մտնում է քարանձավ և ընտրում արահետներից մեկը, իսկ դու դրսում ես և չես տեսնում՝ որը։ Հետո դու գալիս ես մուտքի մոտ և բղավում՝ «Դուրս արի ձախից»։ Եթե նա գիտի բառը, միշտ կարող է դուրս գալ քո ասած կողմից, անհրաժեշտության դեպքում բացելով դուռը։ Իսկ եթե չգիտի, կկարողանա միայն վերադառնալ նույն ճանապարհով, և քո պահանջը կկատարի միայն այն դեպքում, եթե պատահաբար ճիշտ արահետ էր ընտրել։",
+    "key": "waldo_trick",
+    "text": "Վերցնում ես մի մեծ ստվարաթուղթ՝ նկարից շատ ավելի մեծ, և մեջտեղում փոքրիկ անցք ես բացում։ Ստվարաթուղթը դնում ես նկարի վրա այնպես, որ անցքից երևա հենց նա։",
     "pause_after": 2,
-    "visual": "The showcase, part 1: the friend's dot walks into path B while a curtain hides the inside from you; your shout 'ձախից'; split-screen of two endings: with the word she opens the door and comes out left; without it she is stuck at the door and can only come back right (a red X). Hold for the pause."
+    "visual": "The showcase: a huge dark cardboard sheet (several times the page) slides in, see-through at first so the viewer sees the page underneath, its small round hole landing on the person; then the sheet turns opaque."
   },
   {
-    "key": "cave_rounds",
-    "text": "Մեկ անգամ նա կարող էր բախտ ունենալ՝ հիսուն տոկոս։ Երկու անգամ անընդմեջ՝ քառորդ։ Տասը անգամ՝ մոտ հազարից մեկ։ Քսան անգամ՝ մոտ միլիոնից մեկ։ Քսան անգամ ճիշտ կողմից դուրս գալուց հետո դու համոզված ես։ Իսկ բառն այդպես էլ չես լսել։",
-    "pause_after": 1.5,
-    "visual": "The showcase, part 2: rounds run fast (random side called, she exits it); a 'just luck' bar halves every round: 1/2, 1/4 ... 1/1024 at round 10, 1/1 048 576 at round 20."
-  },
-  {
-    "key": "why_zero",
-    "text": "Բայց ինչո՞ւ «զրոյական գիտելիք»։ Որովհետև դու ոչ մի բան չես կարող փոխանցել ուրիշին։ Եթե ամբողջը նկարես և տեսանյութը ցույց տաս ընկերներիդ, ոչ ոք չի համոզվի։ Նույն տեսանյութը կարելի է սարքել առանց բառն իմանալու՝ բավական է նախապես պայմանավորվել, թե որ կողմն ես ասելու, կամ ուղղակի կտրել անհաջող փորձերը։ Դու քարանձավից դուրս ես գալիս միայն համոզմունքով, առանց որևէ տեղեկության, որ կարողանաս ուրիշին տալ։",
+    "key": "waldo_zero",
+    "text": "Ընկերդ անցքից տեսնում է նրան և համոզվում, որ գտել ես։ Բայց ստվարաթուղթը ծածկում է ամբողջ նկարը, և նա չգիտի՝ էջի որ մասում է։ Էջը ստվարաթղթի տակ կարող էր լինել ցանկացած տեղ։",
     "pause_after": 2,
-    "visual": "A phone films the cave; the same 20-round video plays next to a 'fake' one made from a script of agreed calls and cut failures (film strips with scissors): the two look identical; a label 'նույնն են'. Then you walk away with a check mark in your head and nothing in your hands."
+    "visual": "The friend's view: only the hole with the person in it, black all around; dashed outlines of the page appear in several positions under the sheet (top left, centre, bottom right), each consistent with what the hole shows."
   },
   {
     "key": "card",
-    "text": "Երբեմն նույնիսկ մեկ քայլը բավական է։ Խառը կապոցից մի քարտ ես քաշում և առանց ցույց տալու ասում՝ «Կարմիր է»։ Ինչպե՞ս ապացուցել՝ առանց քարտը բացելու։ Կապոցի մնացած 51 քարտը շրջում ես և ցույց տալիս, որ բոլոր 26 սև քարտերը դեռ այնտեղ են։ Եթե բոլոր սևերը կապոցում են, ուրեմն ձեռքիդ քարտը կարմիր է։ Ընկերդ դա գիտի, բայց չգիտի՝ որ կարմիր քարտն է՝ յոթնո՞ց, թե՞ թագուհի։",
+    "text": "Նույն սկզբունքով կարելի է ապացուցել, որ ձեռքիդ քարտը կարմիր է։ Խառը կապոցից մի քարտ ես քաշում և առանց ցույց տալու ասում՝ «Կարմիր է»։ Ինչպե՞ս ապացուցել՝ առանց քարտը բացելու։ Կապոցի մնացած 51 քարտը շրջում ես և ցույց տալիս, որ բոլոր 26 սև քարտերը դեռ այնտեղ են։ Եթե բոլոր սևերը կապոցում են, ուրեմն ձեռքիդ քարտը կարմիր է։ Ընկերդ դա գիտի, բայց չգիտի՝ որ կարմիր քարտն է՝ յոթնո՞ց, թե՞ թագուհի։",
     "pause_after": 1.5,
     "visual": "A face-down card in your hand; the rest of the deck is turned face up and fanned out; the 26 black cards light up one by one inside the deck (a counter 26/26: all black cards are still there); your card stays face down with a red glow but no face."
   },
@@ -55,13 +50,19 @@
   },
   {
     "key": "balls_logic",
-    "text": "Դու ամեն անգամ ճիշտ ես պատասխանում։ Եթե գնդակներն իսկապես նույն գույնի լինեին, չէիր կարող իմանալ, միայն կգուշակեիր։ Քսան ռաունդից հետո նա նույնքան համոզված է, որքան դու քարանձավի դեպքում։ Իսկ թե որն է կարմիրը, մինչև հիմա չգիտի։",
-    "pause_after": 1.5,
-    "visual": "Your answers with check marks; the halving bar from the cave returns and runs to 1 in a million; the friend's side still shows two grey balls with a check mark between them."
+    "text": "Դու ամեն անգամ ճիշտ ես պատասխանում։ Եթե գնդակներն իսկապես նույն գույնի լինեին, չէիր կարող իմանալ, միայն կգուշակեիր։ Մեկ անգամ գուշակելը կարող է հաջողվել՝ հիսուն տոկոս։ Երկու անգամ անընդմեջ՝ քառորդ, տասը անգամ՝ մոտ հազարից մեկ, քսան անգամ՝ մոտ միլիոնից մեկ։ Քսան ռաունդից հետո նա համոզված է։ Իսկ թե որն է կարմիրը, մինչև հիմա չգիտի։",
+    "pause_after": 2,
+    "visual": "Your answers with check marks; 20 fast rounds while the 'just guessing' bar halves to 1 / 1 048 576; the friend's side still shows two khaki balls with a check mark between them."
+  },
+  {
+    "key": "why_zero",
+    "text": "Բայց ինչո՞ւ «զրոյական գիտելիք»։ Եթե ընկերդ ամբողջը նկարի և տեսանյութը ցույց տա ուրիշին, ոչ ոք չի համոզվի։ Նույն տեսանյութը կարելի է սարքել՝ բավական է նախապես պայմանավորվել, թե երբ է փոխելու, կամ ուղղակի կտրել անհաջող փորձերը։ Նա մնում է միայն համոզմունքով, առանց որևէ տեղեկության, որ կարողանա ուրիշին տալ։",
+    "pause_after": 2,
+    "visual": "The friend films the balls game on a phone; the real 20-round video plays next to a staged one (agreed swaps, cut failures: film strips and scissors); they look identical, 'նույնն են'; he walks away with a check mark in his head and nothing in his hands."
   },
   {
     "key": "real",
-    "text": "Իրական համակարգերում քարանձավի ու գնդակների փոխարեն մաթեմատիկական խնդիրներ են, որոնց պատասխանը կարող է անընդհատ ճիշտ տալ միայն գաղտնիքն իմացողը։ Ռաունդներն էլ անում է համակարգիչը՝ վայրկյանի մի մասում։ Հոլանդական մի խոշոր բանկ, օրինակ, հրապարակեց մեթոդ, որով կարելի է ապացուցել, որ աշխատավարձդ որոշակի միջակայքում է՝ առանց ճշգրիտ թիվը ցույց տալու։ Եվրոպական միությունն այսպես տարիքի ստուգում է փորձարկում, իսկ որոշ կրիպտոարժույթներ թաքցնում են, թե ով ում որքան է փոխանցել։",
+    "text": "Իրական համակարգերում ստվարաթղթի ու գնդակների փոխարեն մաթեմատիկական խնդիրներ են, որոնց պատասխանը կարող է անընդհատ ճիշտ տալ միայն գաղտնիքն իմացողը։ Ռաունդներն էլ անում է համակարգիչը՝ վայրկյանի մի մասում։ Հոլանդական մի խոշոր բանկ, օրինակ, հրապարակեց մեթոդ, որով կարելի է ապացուցել, որ աշխատավարձդ որոշակի միջակայքում է՝ առանց ճշգրիտ թիվը ցույց տալու։ Եվրոպական միությունն այսպես տարիքի ստուգում է փորձարկում, իսկ որոշ կրիպտոարժույթներ թաքցնում են, թե ով ում որքան է փոխանցել։",
     "screen_small": "ING, Zero-Knowledge Range Proof, 2017; EU age verification app, 2025; Zcash, 2016",
     "visual": "The balls morph into a grid of numbers answered in a blur of rounds; then the three cards from beat 2 return, each now with a lock and a check mark: salary in a range, '18+ ✓', a transaction with hidden fields marked valid."
   },

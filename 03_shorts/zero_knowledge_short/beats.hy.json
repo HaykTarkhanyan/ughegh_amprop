@@ -12,21 +12,15 @@
     "visual": "Two quick cards stacked vertically: a login box whose password never leaves the phone, an age gate '18+ ✓' with the birth date blurred; the title."
   },
   {
-    "key": "cave",
-    "text": "Պատկերացրու օղակաձև քարանձավ՝ երկու արահետ, որոնք խորքում միանում են գաղտնի բառով բացվող դռնով։ Ընկերուհիդ մտնում է մի արահետով, իսկ դու դրսից բղավում ես՝ «Դուրս արի ձախից»։ Եթե բառը գիտի, միշտ կարող է։ Եթե չգիտի, կհաջողվի միայն կես անգամ։",
-    "pause_after": 1.5,
-    "visual": "The same cave drawing as the long video, rotated for vertical (entrance at the bottom, door at the top); one round plays: she goes right, you call left, she opens the door and exits left."
-  },
-  {
-    "key": "rounds",
-    "text": "Քսան անգամ անընդմեջ պատահաբար հաջողելու հավանականությունը մոտ միլիոնից մեկ է։ Դու համոզված ես, իսկ բառը չես լսել։",
-    "pause_after": 1.5,
-    "visual": "Twenty fast rounds; the 'just luck' bar halves to 1 / 1 048 576."
+    "key": "waldo",
+    "text": "Ինչպես «Որտե՞ղ է Ուոլդոն» գրքում՝ գտել ես նրան, բայց չես ուզում ցույց տալ՝ որտեղ։ Մեծ ստվարաթղթի փոքրիկ անցքից ցույց ես տալիս միայն նրան։ Ընկերդ համոզված է, որ գտել ես, բայց չգիտի՝ էջի որ մասում է։",
+    "pause_after": 2,
+    "visual": "9:16. The crowd page, the person found, the huge sheet with a small hole sliding over it; then only the hole on black, and dashed page outlines in several positions."
   },
   {
     "key": "tease",
-    "text": "Ինչո՞ւ է սա կոչվում «զրոյական գիտելիք», և ինչպես նույնն անել քարտերի կապոցով, տե՛ս երկար տեսանյութում։",
-    "visual": "A film strip with scissors (the faked video) and a face-down red card flash by as a teaser; a 'long video' pointer."
+    "text": "Իսկ ինչպես նույնն անել քարտերի կապոցով կամ երկու գնդակով, և ինչո՞ւ է սա կոչվում «զրոյական գիտելիք», տե՛ս երկար տեսանյութում։",
+    "visual": "A face-down red card and two khaki balls flash by as a teaser; a 'long video' pointer."
   },
   {
     "key": "takeaway",

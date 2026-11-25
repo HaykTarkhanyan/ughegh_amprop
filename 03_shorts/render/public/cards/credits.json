@@ -1,0 +1,13 @@
+[
+  {
+    "title": "File:English pattern playing cards deck.svg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:English_pattern_playing_cards_deck.svg",
+    "author": "Дмитрий Фомин (Dmitry Fomin)",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "note": "Fetched as the 3840 px thumbnail (Commons blocks bulk original downloads); cut into 52 PNGs by assets_src/cut_cards.py",
+    "files": [
+      "deck_3840.png -> cards/*.png"
+    ]
+  }
+]
