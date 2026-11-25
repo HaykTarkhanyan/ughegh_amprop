@@ -135,6 +135,96 @@
               "detail": [
                 "Open: U-ii keep the honest angle?, U-jj terms, U-kk credit exurb1a?"
               ]
+            },
+            {
+              "id": "A13",
+              "title": "Approve: How Mashtots designed the Armenian alphabet (mashtots, 10 beats, ~2:11)",
+              "exclusive": "mashtots",
+              "note": "Most alphabets have no author; ours has a name, a year and a first sentence. Why Greek letters fail («ճնճղուկ»), one sound one letter, Greek order, letters as numbers; Korea and the Cherokee did the same.",
+              "detail": [
+                "Open: U-ll wording, U-mm classical sentence in the voice, U-nn Korea/Cherokee extension, U-oo Georgian claim left out"
+              ]
+            },
+            {
+              "id": "A14",
+              "title": "Approve: Why English spelling is a mess (english_spelling, 9 beats, ~2:05)",
+              "exclusive": "english_spelling",
+              "note": "English kids learn to read 2x slower; knight was «քնիխտ»; the Great Vowel Shift + printing froze old spellings; Latin letters added (debt, island by mistake); Armenian the opposite. English only on screen.",
+              "detail": [
+                "Open: U-pp term, U-qq transliterations in the voice, U-rr «պարտք»/«կղզի»"
+              ]
+            },
+            {
+              "id": "A15",
+              "title": "Approve: Why the week has 7 days (week_seven, 8 beats, ~1:57)",
+              "exclusive": "week_seven",
+              "note": "Day, month, year come from the sky, the week does not (29.5 days); Jewish Sabbath + Roman planet days; 24 mod 7 = 3 gives the day order (a seven-pointed star); Armenian «երկուշաբթի» counts from the Sabbath; French and Soviet weeks failed.",
+              "detail": [
+                "Open: U-ss ուրբաթ etymology, U-tt terms, U-uu Soviet detail"
+              ]
+            },
+            {
+              "id": "A16",
+              "title": "Approve: Why a minute has 60 seconds (minute_60, 8 beats, ~2:12)",
+              "exclusive": "minute_60",
+              "note": "Money and metres go in tens, time in sixties; Babylonian base 60 (finger-joint hypothesis); 60 divides well; Egyptian 12+12 unequal hours; «սեկունդ» = 'second small part'; French decimal time failed.",
+              "detail": [
+                "Open: U-vv the Russian link, U-ww closing line too strong?"
+              ]
+            },
+            {
+              "id": "A17",
+              "title": "Approve: The decoy effect (medium popcorn) (decoy_popcorn, 8 beats, ~1:47)",
+              "exclusive": "decoy_popcorn",
+              "note": "The medium exists to sell the large; dram example; the magazine demo 84% vs 32%; comparing is easy, pricing is hard; 19 studies with real products found no effect, it holds for numbers.",
+              "detail": [
+                "Open: U-xx term «խայծի էֆեկտ», U-yy Ariely on the source line, U-zz «ադիբուդի»"
+              ]
+            },
+            {
+              "id": "A18",
+              "title": "Approve: The IKEA effect (ikea_effect, 8 beats, ~1:38)",
+              "exclusive": "ikea_effect",
+              "note": "Builders pay 63% more for their own box; origami makers value their frogs like experts'; only if finished; effort, competence, ownership (a Munich replication); the cake-mix egg story is a legend; grandfather's crooked fence.",
+              "detail": [
+                "Open: U-aaa brand in the voice, U-bbb local touch"
+              ]
+            },
+            {
+              "id": "A19",
+              "title": "Approve: Map projections (Greenland vs Africa) (map_projection, 8 beats, ~1:43)",
+              "exclusive": "map_projection",
+              "note": "Africa is 14x Greenland; drag Greenland south (smaller than Algeria), lift Armenia north (x6); orange peel and Gauss; Mercator kept angles for sailors; x4 at 60°; equal-area maps wreck shapes; Google's globe.",
+              "detail": [
+                "Open: U-ccc «պրոյեկցիա» once?, U-ddd «Գուգլ քարտեզները»"
+              ]
+            },
+            {
+              "id": "A20",
+              "title": "Approve: Zero-knowledge proofs (zero_knowledge, 8 beats, ~1:41)",
+              "exclusive": "zero_knowledge",
+              "note": "Prove a secret without revealing it: the colour-blind friend and two balls, 20 rounds = 1 in a million by luck; he still does not know which is red; age checks without a birth date, hidden crypto payments.",
+              "detail": [
+                "Open: U-eee term, U-fff «դալտոնիկ», U-ggg «ռաունդ»"
+              ]
+            },
+            {
+              "id": "A21",
+              "title": "Approve: Greek statues were painted (painted_statues, 8 beats, ~1:44)",
+              "exclusive": "painted_statues",
+              "note": "Paint traces under raking, UV and infrared light (Egyptian blue glows); the Peplos Kore; why we thought white (weathering, Renaissance copies, cleaning, the 1930s scraping); the copies are hypotheses.",
+              "detail": [
+                "Open: U-hhh local anchor?, U-iii «Պեպլոսով կորե»"
+              ]
+            },
+            {
+              "id": "A22",
+              "title": "Approve: Wheeled suitcase vs backpack (luggage_wheels, 8 beats, ~1:50)",
+              "exclusive": "luggage_wheels",
+              "note": "Moon before wheels; physics says zero work, yet you sweat (your body bobs and lifts the load each step); wheels let the floor carry it; the flat four-wheel case on a strap, then the pilot's upright case; why so late has no clear answer.",
+              "detail": [
+                "Open: U-jjj is this the topic you meant?, U-kkk Yerevan pavement joke, U-lll «բորտուղեկցորդ»"
+              ]
             }
           ]
         }
@@ -225,6 +315,66 @@
               "title": "Needs changes: The toothless man from Dmanisi (dmanisi)",
               "exclusive": "dmanisi",
               "note": "Leave comments on dmanisi/PLAN.html"
+            },
+            {
+              "id": "C13",
+              "title": "Needs changes: How Mashtots designed the Armenian alphabet (mashtots)",
+              "exclusive": "mashtots",
+              "note": "Leave comments on mashtots/PLAN.html"
+            },
+            {
+              "id": "C14",
+              "title": "Needs changes: Why English spelling is a mess (english_spelling)",
+              "exclusive": "english_spelling",
+              "note": "Leave comments on english_spelling/PLAN.html"
+            },
+            {
+              "id": "C15",
+              "title": "Needs changes: Why the week has 7 days (week_seven)",
+              "exclusive": "week_seven",
+              "note": "Leave comments on week_seven/PLAN.html"
+            },
+            {
+              "id": "C16",
+              "title": "Needs changes: Why a minute has 60 seconds (minute_60)",
+              "exclusive": "minute_60",
+              "note": "Leave comments on minute_60/PLAN.html"
+            },
+            {
+              "id": "C17",
+              "title": "Needs changes: The decoy effect (medium popcorn) (decoy_popcorn)",
+              "exclusive": "decoy_popcorn",
+              "note": "Leave comments on decoy_popcorn/PLAN.html"
+            },
+            {
+              "id": "C18",
+              "title": "Needs changes: The IKEA effect (ikea_effect)",
+              "exclusive": "ikea_effect",
+              "note": "Leave comments on ikea_effect/PLAN.html"
+            },
+            {
+              "id": "C19",
+              "title": "Needs changes: Map projections (Greenland vs Africa) (map_projection)",
+              "exclusive": "map_projection",
+              "note": "Leave comments on map_projection/PLAN.html"
+            },
+            {
+              "id": "C20",
+              "title": "Needs changes: Zero-knowledge proofs (zero_knowledge)",
+              "exclusive": "zero_knowledge",
+              "note": "Leave comments on zero_knowledge/PLAN.html"
+            },
+            {
+              "id": "C21",
+              "title": "Needs changes: Greek statues were painted (painted_statues)",
+              "exclusive": "painted_statues",
+              "note": "Leave comments on painted_statues/PLAN.html"
+            },
+            {
+              "id": "C22",
+              "title": "Needs changes: Wheeled suitcase vs backpack (luggage_wheels)",
+              "exclusive": "luggage_wheels",
+              "note": "Leave comments on luggage_wheels/PLAN.html"
             }
           ]
         }

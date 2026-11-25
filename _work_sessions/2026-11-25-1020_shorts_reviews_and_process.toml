@@ -25,9 +25,16 @@ done = [
   "Short 11 (kids glued to CoComelon-style TV): kids_tv/ script + plan (Anderson 1981, Lillard & Peterson 2011, WHO 2019); CoComelon cut-rate measurement blocked: yt-dlp gets only storyboards for made-for-kids videos (learning 1240); Distractatron unsourced, left out",
   "Fable (claude-fable-5-2) overall review of all 11 scripts -> 03_shorts/FABLE_REVIEW.md (F1-F152, ~676k tokens over two runs): qwerty and waiting need rework, the rest small fixes; strongest friendship, petrov, own_voice; numbers spoken aloud make scripts longer",
   "Measured 2 digit-heavy beats (TTS ~$0.006): +21-22% vs the 870 chars/min estimate. New tools/hy_numbers.py (Armenian number speller); plan_script.py reports the calibrated midpoint and flags > 2:45; build_timeline.py weights caption words by spoken length. Only qwerty is over (~2:56); regression and crypto at ~2:44",
+  "Found the exurb1a jawbone passage (How to Be Correct About Everything All the Time, 11:41) by grepping the subtitles of all 87 channel videos; short 12 dmanisi/ (toothless Homo erectus D3444/D3900, the 'someone fed him' story vs what the bone shows, toothless bonobo, Mead femur quote) with 2 Commons images",
+  "pause_after per beat (Fable F122): build_timeline.py adds it to the gap after the beat; plan_script.py counts it and shows [pause N s]",
+  "Ten more scripts written after the Fable review, applying F131-F134 (claim in the first seconds, no summary card, no «Այնպես որ», years on the source line, marked pauses, one local anchor, no Latin in the voice): mashtots, english_spelling, week_seven, minute_60, decoy_popcorn, ikea_effect, map_projection, zero_knowledge, painted_statues, luggage_wheels (1:38-2:12 each); own_voice and yawning were already scripted",
+  "Fact checks that changed scripts: 'Babylon invented the week' unsettled (two traditions); decoy effect absent with real products (Frederick 2014); cake-mix egg story a legend; Winckelmann and Sadow 'macho' quotes unconfirmed (left out); Boston Gall-Peters unconfirmed (left out); Oo/Ff added-letter dates conflict (11th/12th/13th c., no date given)",
+  "Review tick-list now 22 scripts (A1-A22 / C1-C22)",
 ]
 
 pending = [
+  "Hayk reviews the 11 new scripts (dmanisi + the ten); open U-ids U-ii..U-lll in their PLAN.html pages; U-jjj asks whether luggage_wheels is the topic he meant",
+  "Before voicing: check the facts marked 'check before voicing' (Hangul/Sequoyah, Egyptian decans, Goldwasser-Micali Turing Award, ուրբաթ etymology)",
   "Waiting short: Hayk reviews 03_shorts/waiting/PLAN.html (U-m..U-o)",
   "Scripts awaiting Hayk: bayes_test, simpson, regression, waiting, crypto_paint, friendship, qwerty, petrov, own_voice, yawning (10 PLAN.html pages with U-questions)",
   "After approval: animate the 4 showcases (crypto, friendship, QWERTY, Petrov) in Remotion; then the rest",
