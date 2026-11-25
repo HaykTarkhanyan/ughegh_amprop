@@ -1,0 +1,225 @@
+{
+  "title": "Shorts: scripts waiting for review",
+  "subtitle": "Tick 'approve' (voice + animation can start) or 'needs changes' for each script. Comment on details on that short's PLAN.html page (03_shorts/<folder>/PLAN.html). Showcases get the full animation first (Q16).",
+  "date": "2026-11-25",
+  "warning": "Nothing is voiced or animated until approved here (Q17). Approving costs about $0.05 of TTS per short; animation of a showcase is about 2-3 h of work.",
+  "tags": {
+    "ok": {
+      "label": "approve",
+      "color": "#1b7f5b"
+    },
+    "fix": {
+      "label": "needs changes",
+      "color": "#D90012"
+    }
+  },
+  "sections": [
+    {
+      "id": "approve",
+      "title": "Approve (voice + animation can start)",
+      "tag": "ok",
+      "intro": "Showcases first (Q16). Each row: what the short says, then its open review points.",
+      "groups": [
+        {
+          "title": "Showcases",
+          "items": [
+            {
+              "id": "A1",
+              "title": "Approve: showcase: Public-key crypto with paint (crypto_paint, 14 beats, ~158 s)",
+              "exclusive": "crypto",
+              "note": "Diffie-Hellman with paint: yellow + secret red / blue, Eva cannot unmix; toy numbers 5, 23 -> 2; GCHQ kept it secret until 1997.",
+              "detail": [
+                "Open: U-p terms, U-q name the discrete logarithm?, U-r keep the GCHQ beat?"
+              ]
+            },
+            {
+              "id": "A2",
+              "title": "Approve: showcase: Friendship paradox (friendship, 13 beats, ~135 s)",
+              "exclusive": "friend",
+              "note": "20-person network: 17 have fewer friends than their friends; Facebook 92.7%; buses feel full; flu sensors 2 weeks early; vaccinate random friends.",
+              "detail": [
+                "Open: U-s term, U-t hook wording, U-u keep the μ + D/μ card?"
+              ]
+            },
+            {
+              "id": "A3",
+              "title": "Approve: showcase: QWERTY (qwerty, 12 beats, ~167 s)",
+              "exclusive": "qwerty",
+              "note": "Not made to slow typists: telegraph operators (Yasuoka), 1888 contest, 1893 standard, Dvorak's own doubtful study, Armenian phonetic layout.",
+              "detail": [
+                "Open: U-v terms, U-w how the voice says QWERTY / Z / SE, U-x cut beats 5 or 10?"
+              ]
+            },
+            {
+              "id": "A4",
+              "title": "Approve: showcase: Stanislav Petrov (petrov, 13 beats, ~131 s)",
+              "exclusive": "petrov",
+              "note": "26 Sep 1983: 5 missiles on screen, 'not believing the computer', sun glint on clouds, the Bayes link, role debated.",
+              "detail": [
+                "Open: U-y terms, U-z keep the Bayes link?, U-aa sensitivity"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Other scripts",
+          "items": [
+            {
+              "id": "A5",
+              "title": "Approve: Bayes: the 99% test (bayes_test, 14 beats, ~150 s)",
+              "exclusive": "bayes",
+              "note": "1,000 dots: a positive means 50%, 9% for a rarer disease; gynecologists 1 in 5 right; retest, symptoms; formula card.",
+              "detail": [
+                "Open: U-a address, U-b «սկրինինգ», U-c cut?, U-d HIV line"
+              ]
+            },
+            {
+              "id": "A6",
+              "title": "Approve: Simpson's paradox (simpson, 13 beats, ~145 s)",
+              "exclusive": "simpson",
+              "note": "Kidney stones 78 vs 83 but better in both groups; Berkeley 1973; COVID Italy vs China; compare like with like.",
+              "detail": [
+                "Open: U-e «ֆակուլտետ», U-f method names, U-g keep COVID?, U-h keep the exception?"
+              ]
+            },
+            {
+              "id": "A7",
+              "title": "Approve: Regression to the mean (regression, 14 beats, ~158 s)",
+              "exclusive": "regr",
+              "note": "Kahneman's flight instructors; 1,000 students: best 92 -> 82, worst 47 -> 59, and backwards; Galton 1886.",
+              "detail": [
+                "Open: U-i term, U-j «նախատինք», U-k keep the backwards beat?, U-l trim?"
+              ]
+            },
+            {
+              "id": "A8",
+              "title": "Approve: Why waiting feels longer (waiting, 12 beats, ~159 s)",
+              "exclusive": "wait",
+              "note": "Houston story (told as unverified), Maister's rules, Disney's posted waits ~2/3 real, the other line wins 2 of 3 times, the snake line.",
+              "detail": [
+                "Open: U-m «Մայստեր», U-n keep Houston?, U-o «ուղեբեռի ժապավեն»"
+              ]
+            },
+            {
+              "id": "A9",
+              "title": "Approve: Your own voice on a recording (own_voice, 12 beats, ~115 s)",
+              "exclusive": "voice",
+              "note": "Air + bone conduction; plug your ears; mirror faces (1977); own voice rated more attractive (2013).",
+              "detail": [
+                "Open: U-bb terms, U-cc add a beat?"
+              ]
+            },
+            {
+              "id": "A10",
+              "title": "Approve: Contagious yawning (yawning, 11 beats, ~120 s)",
+              "exclusive": "yawn",
+              "note": "About half catch a yawn; oxygen idea falsified; cooling theory; kin > strangers vs the 2014 null result; dogs 21 of 29.",
+              "detail": [
+                "Open: U-dd «վարակվել», U-ee the comment call-to-action"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fix",
+      "title": "Needs changes (comment on that short's PLAN.html)",
+      "tag": "fix",
+      "intro": "Tick here instead of approve when a script needs edits; the details go as comments on its plan page.",
+      "groups": [
+        {
+          "title": "Showcases",
+          "items": [
+            {
+              "id": "C1",
+              "title": "Needs changes: showcase: Public-key crypto with paint (crypto_paint, 14 beats, ~158 s)",
+              "exclusive": "crypto",
+              "note": "Leave comments on crypto_paint/PLAN.html"
+            },
+            {
+              "id": "C2",
+              "title": "Needs changes: showcase: Friendship paradox (friendship, 13 beats, ~135 s)",
+              "exclusive": "friend",
+              "note": "Leave comments on friendship/PLAN.html"
+            },
+            {
+              "id": "C3",
+              "title": "Needs changes: showcase: QWERTY (qwerty, 12 beats, ~167 s)",
+              "exclusive": "qwerty",
+              "note": "Leave comments on qwerty/PLAN.html"
+            },
+            {
+              "id": "C4",
+              "title": "Needs changes: showcase: Stanislav Petrov (petrov, 13 beats, ~131 s)",
+              "exclusive": "petrov",
+              "note": "Leave comments on petrov/PLAN.html"
+            }
+          ]
+        },
+        {
+          "title": "Other scripts",
+          "items": [
+            {
+              "id": "C5",
+              "title": "Needs changes: Bayes: the 99% test (bayes_test, 14 beats, ~150 s)",
+              "exclusive": "bayes",
+              "note": "Leave comments on bayes_test/PLAN.html"
+            },
+            {
+              "id": "C6",
+              "title": "Needs changes: Simpson's paradox (simpson, 13 beats, ~145 s)",
+              "exclusive": "simpson",
+              "note": "Leave comments on simpson/PLAN.html"
+            },
+            {
+              "id": "C7",
+              "title": "Needs changes: Regression to the mean (regression, 14 beats, ~158 s)",
+              "exclusive": "regr",
+              "note": "Leave comments on regression/PLAN.html"
+            },
+            {
+              "id": "C8",
+              "title": "Needs changes: Why waiting feels longer (waiting, 12 beats, ~159 s)",
+              "exclusive": "wait",
+              "note": "Leave comments on waiting/PLAN.html"
+            },
+            {
+              "id": "C9",
+              "title": "Needs changes: Your own voice on a recording (own_voice, 12 beats, ~115 s)",
+              "exclusive": "voice",
+              "note": "Leave comments on own_voice/PLAN.html"
+            },
+            {
+              "id": "C10",
+              "title": "Needs changes: Contagious yawning (yawning, 11 beats, ~120 s)",
+              "exclusive": "yawn",
+              "note": "Leave comments on yawning/PLAN.html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "choices": [
+    {
+      "name": "address",
+      "label": "U-a: how the narrator addresses the viewer",
+      "options": [
+        "«դու» (as now)",
+        "«դուք»"
+      ]
+    },
+    {
+      "name": "first",
+      "label": "Which approved showcase to animate first",
+      "options": [
+        "crypto_paint",
+        "friendship",
+        "qwerty",
+        "petrov"
+      ]
+    }
+  ],
+  "note_prompt": "Anything else (order, topics to drop, general wording notes)?"
+}
