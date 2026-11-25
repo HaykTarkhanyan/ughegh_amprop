@@ -1,0 +1,66 @@
+[
+  {
+    "key": "hook",
+    "text": "Լսում ես քո ձայնը ձայնագրության մեջ և մտածում՝ իսկապե՞ս այսպես եմ խոսում։ Այո, մոտավորապես այդպես են քեզ լսում մյուսները։",
+    "visual": "A phone playing a voice memo; a face cringing; a waveform. Frame 0 shows the question."
+  },
+  {
+    "key": "two_paths",
+    "text": "Երբ խոսում ես, ձայնդ ականջիդ հասնում է երկու ճանապարհով՝ օդով, ինչպես մյուսների ձայնը, և ներսից՝ գանգի ոսկորներով։",
+    "visual": "A head in profile: sound waves leaving the mouth and curving through the air to the ear (path 1); vibrations travelling from the throat through the skull straight to the inner ear (path 2)."
+  },
+  {
+    "key": "bone_bass",
+    "text": "Ոսկորները լավ են հաղորդում ցածր հաճախությունները՝ բասը։ Դրա համար ներսից լսած ձայնդ ավելի խոր ու թավ է թվում։",
+    "visual": "A frequency bar chart of 'your voice': the air path in one colour, the bone path adding tall bars on the low end."
+  },
+  {
+    "key": "recording",
+    "text": "Իսկ միկրոֆոնը լսում է միայն օդով եկող ձայնը։ Ոսկորների ճանապարհը վերանում է, և ձայնը թվում է ավելի բարակ ու բարձր։",
+    "visual": "A microphone catches only path 1; the bone-path bars disappear from the chart; the same voice now looks thinner."
+  },
+  {
+    "key": "try",
+    "text": "Փորձիր հիմա՝ մատներով փակիր ականջներդ և խոսիր։ Ձայնդ կդառնա ավելի բարձր ու թավ, որովհետև հիմա այն լսում ես հիմնականում ոսկորներով։",
+    "visual": "Fingers in ears; the air path fades, the bone path glows; the low bars grow even taller."
+  },
+  {
+    "key": "used_to",
+    "text": "Այսինքն՝ ամբողջ կյանքում լսել ես քո ձայնի մի տարբերակ, որը ոչ ոք չի լսում, բացի քեզնից։ Ձայնագրությունը քեզ համար անծանոթ է, իսկ մյուսների համար դա հենց քո ձայնն է։",
+    "visual": "Two speech bubbles side by side: 'ինչ լսում ես դու' (rich) and 'ինչ լսում են մյուսները' (the recording); friends nodding at the second."
+  },
+  {
+    "key": "mirror",
+    "text": "Նույնը դեմքի հետ է։ Հայելում տեսնում ենք մեր դեմքը շրջված։ 1977 թվականի հետազոտությունում մարդիկ իրենց շրջված լուսանկարն էին ավելի շատ հավանում, իսկ ընկերները՝ իսկականը։ Հավանում ենք այն, ինչին սովոր ենք։",
+    "screen_small": "Mita, Dermer & Knight, 1977",
+    "visual": "A simple drawn face and its mirror image side by side; the person points at the mirrored one, a friend at the true one."
+  },
+  {
+    "key": "study",
+    "text": "Եվ մի լավ լուր։ 2013 թվականի մի հետազոտությունում մարդիկ գնահատում էին տարբեր ձայների գրավչությունը, և նրանց մեջ առանց զգուշացնելու խառնել էին իրենց ձայնը։ Մարդիկ իրենց ձայնն ավելի գրավիչ գնահատեցին, քան այն գնահատում էին ուրիշները։",
+    "screen_small": "Hughes & Harrison, 2013",
+    "visual": "A row of anonymous voice cards with star ratings; one card (secretly 'you') gets the highest stars from you, fewer from others."
+  },
+  {
+    "key": "why_cringe",
+    "text": "Ուրեմն խնդիրը ձայնը չէ, այլ անակնկալը։ Ձայնը մեր պատկերացման կարևոր մասն է ինքներս մեզ մասին, և երբ այն ուրիշ է հնչում, թվում է, թե օտարին ենք լսում։",
+    "visual": "A thought bubble with a 'self-portrait' that does not match the reflection; a question mark melting into a smile."
+  },
+  {
+    "key": "practice",
+    "text": "Դրա համար էլ հաղորդավարներն ու երգիչները հաճախ են լսում իրենց ձայնագրությունները։ Սովորաբար մի քանի անգամ լսելուց հետո տարօրինակությունն անցնում է։",
+    "visual": "A podcast microphone and headphones; a 'cringe meter' dropping with each replay."
+  },
+  {
+    "key": "card",
+    "text": "Կարճ ասած՝ ներսից լսածդ ձայնն օդ է՝ գումարած ոսկոր, իսկ ձայնագրությունը՝ միայն օդ։",
+    "screen": "ներսից՝ օդ + ոսկոր, ձայնագրություն՝ միայն օդ",
+    "visual": "Card with the two equations and the two little frequency charts."
+  },
+  {
+    "key": "takeaway",
+    "text": "Այնպես որ, ձայնագրությունը քեզ չի աղավաղում։ Այն միայն հանում է այն մասը, որը լսում ես միայն դու։",
+    "screen": "Ձայնագրությունը հանում է այն, ինչ լսում ես միայն դու",
+    "visual": "Big karaoke text over the head diagram; loops back to the phone."
+  }
+]
