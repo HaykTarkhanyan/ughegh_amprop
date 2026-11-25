@@ -1,0 +1,45 @@
+[
+  {
+    "key": "hook",
+    "text": "Ինչպե՞ս ապացուցել, որ գաղտնիք գիտես, առանց գաղտնիքից գեթ մի բան ասելու։ Թվում է՝ անհնար է։ Բայց հնարավոր է։",
+    "visual": "Frame 0: a locked box labelled «գաղտնիք» and a green check mark beside it, with no line connecting them."
+  },
+  {
+    "key": "balls",
+    "text": "Պատկերացրու՝ ընկերդ դալտոնիկ է, և ձեռքին երկու գնդակ ունի՝ կարմիր ու կանաչ։ Նրա համար դրանք նույնն են։ Դու ուզում ես ապացուցել, որ դրանք տարբեր գույնի են, բայց չասել, թե որն է կարմիրը։",
+    "visual": "Split view: what you see (a red and a green ball) and what the friend sees (two identical grey balls)."
+  },
+  {
+    "key": "game",
+    "text": "Նա գնդակները թաքցնում է մեջքի ետևում, պատահականորեն փոխում է ձեռքերը կամ չի փոխում, հետո ցույց է տալիս և հարցնում՝ փոխեցի՞։ Դու ամեն անգամ ճիշտ ես պատասխանում։",
+    "visual": "The friend's hands go behind the back, a coin-flip icon decides swap or not, the balls come back; your answer 'փոխեցիր' / 'չփոխեցիր' with a check mark."
+  },
+  {
+    "key": "rounds",
+    "text": "Մեկ անգամը կարող է բախտ լինել՝ հիսուն տոկոս։ Բայց քսան անգամ անընդմեջ պատահաբար գուշակելու հավանականությունը մոտ մեկ միլիոնից մեկ է։ Քսան ռաունդից հետո նա համոզված է՝ գնդակները տարբեր են։",
+    "pause_after": 2,
+    "visual": "The showcase: a row of 20 rounds fills with check marks; beside it a 'just guessing' bar halves at every round (1/2, 1/4, 1/8 ...) until it is a sliver labelled 1 / 1 048 576."
+  },
+  {
+    "key": "zero",
+    "text": "Իսկ ի՞նչ իմացավ նա։ Միայն այն, որ դու տարբերում ես գնդակները։ Թե որն է կարմիրը, մինչև հիմա չգիտի։ Սա է զրոյական գիտելիքով ապացույցը՝ համոզում ես, ոչինչ չբացահայտելով։",
+    "visual": "The friend's view again: still two grey balls, now with a check mark between them."
+  },
+  {
+    "key": "origin",
+    "text": "Գաղափարը երեք գիտնական առաջարկեցին ութսունականներին, և նրանցից երկուսը հետո ստացան Թյուրինգի մրցանակը՝ համակարգչային գիտության ամենաբարձր պարգևը։ Իսկ իրական համակարգերում գնդակների փոխարեն մաթեմատիկական խնդիրներ են, որոնց պատասխանը միայն գաղտնիքն իմացողը կարող է անընդհատ ճիշտ տալ։",
+    "screen_small": "Goldwasser, Micali & Rackoff, 1985",
+    "visual": "Three silhouettes, two with a small award medal; the balls morph into a grid of numbers (a puzzle) answered correctly round after round."
+  },
+  {
+    "key": "uses",
+    "text": "Այսօր դա արդեն կիրառվում է։ Կարելի է կայքին ապացուցել, որ տասնութ տարեկանից մեծ ես, առանց ծննդյան ամսաթիվը ցույց տալու։ Եվրոպական միությունը նման տարիքի ստուգում է փորձարկում, իսկ որոշ կրիպտոարժույթներ այդպես թաքցնում են, թե ով ում որքան է փոխանցել։",
+    "visual": "A phone shows only '18+ ✓' to a website, the birth date stays blurred in a locked area; then a transaction line where sender, receiver and amount are hidden but a check mark says 'valid'."
+  },
+  {
+    "key": "takeaway",
+    "text": "Ապացուցելն ու բացահայտելը նույն բանը չեն։ Կարելի է համոզել՝ ոչինչ չտալով։",
+    "screen": "Ապացուցել ≠ բացահայտել",
+    "visual": "The locked box and the check mark from the hook, now joined by a dotted line that never opens the box; loops."
+  }
+]

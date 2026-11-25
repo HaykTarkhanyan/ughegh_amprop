@@ -1,0 +1,57 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Short: Map projections (why Greenland looks as big as Africa) - script and plan</title><style>
+:root { color-scheme: light dark; --text: #1f2328; --muted: #59636e; --line: #d1d9e0; --soft: #f6f8fa; --link: #0033a0; }
+@media (prefers-color-scheme: dark) { :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --soft: #161b22; --link: #79a6ff; } }
+body { margin: 0 auto; max-width: 980px; padding: 24px 16px 64px; color: var(--text); background: Canvas;
+       font: 16px/1.6 system-ui, "Segoe UI", sans-serif; }
+a { color: var(--link); }
+nav { background: var(--soft); border: 1px solid var(--line); border-radius: 8px; padding: 10px 18px; margin: 16px 0 24px; }
+details { border-top: 1px solid var(--line); padding: 8px 0; }
+summary { cursor: pointer; font-size: 1.3em; font-weight: 650; padding: 4px 0; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .94em; }
+th, td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: var(--soft); }
+code { background: var(--soft); border-radius: 4px; padding: 1px 5px; font-size: .9em; }
+pre { background: var(--soft); border-radius: 6px; padding: 12px; overflow-x: auto; }
+pre code { padding: 0; }
+img { max-width: 100%; }
+</style></head><body><h1 id="short-map-projections-why-greenland-looks-as-big-as-africa---script-and-plan">Short: Map projections (why Greenland looks as big as Africa) - script and plan</h1>
+<p>Draft for Hayk's review, 2026-11-25. Script first (Q17), rendered in Remotion (DECISIONS.md #21). Script source: <code>beats.hy.json</code>. Follows the Fable batch notes (F131-F134). A strong animation candidate: almost every beat is a moving map.</p>
+<nav><strong>Contents</strong><ul><li><a href="#the-idea-in-one-paragraph">The idea in one paragraph</a></li><li><a href="#the-script-armenian">The script (Armenian)</a></li><li><a href="#facts-checked">Facts (checked)</a></li><li><a href="#visuals">Visuals</a></li><li><a href="#questions-for-hayk-review-points">Questions for Hayk (review points)</a></li></ul></nav><details open id="the-idea-in-one-paragraph"><summary>The idea in one paragraph</summary>
+<p>On this map Greenland is nearly Africa's size; Africa is really 14 times larger. Drag Greenland to the equator and it shrinks below Algeria; lift Armenia to Greenland's latitude and it swells about six times. A sphere cannot be flattened without distortion (try an orange peel; Gauss proved there is no way around it). Mercator chose to stretch, because his map was for sailors: it keeps angles, so a straight line is a constant compass course, which forces equal stretching north-south and east-west. The stretch grows towards the poles (x4 at 60°; the pole itself is infinitely far, so the map is cut near 85°). Equal-area maps fix sizes and wreck shapes; every map sacrifices something. Google Maps switched to a globe on desktop in 2018. The takeaway: a map does not lie, it answers one question, and Mercator's was how not to get lost at sea.</p>
+</details><details open id="the-script-armenian"><summary>The script (Armenian)</summary>
+<!-- script:start -->
+
+<p>8 beats, 1,433 characters (1,448 with numbers spelled out): ~99 s of speech, ~1:43 with pauses and the end tail, 1.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).</p>
+<p><strong>1. hook.</strong> Այս քարտեզում Գրենլանդիան գրեթե Աֆրիկայի չափ է։ Իրականում Աֆրիկան տասնչորս անգամ մեծ է։</p>
+<p><strong>2. drag.</strong> Եթե Գրենլանդիան քաշենք դեպի հասարակած, այն կծկվում է ու դառնում Ալժիրից էլ փոքր։ Իսկ եթե Հայաստանը բարձրացնենք Գրենլանդիայի տեղը, քարտեզին այն կերևա մոտ վեց անգամ ավելի մեծ, քան հիմա։ <em>[pause 1.5 s]</em></p>
+<p><strong>3. orange.</strong> Պատճառը պարզ է՝ գնդի մակերևույթն անհնար է հարթեցնել առանց աղավաղման։ Փորձիր նարնջի կեղևը հարթ դնել սեղանին՝ կա՛մ կպատռվի, կա՛մ կձգվի։ Մաթեմատիկոս Գաուսը նույնիսկ ապացուցեց, որ ուրիշ ճանապարհ չկա։</p>
+<p><strong>4. mercator.</strong> Մերկատորն ընտրեց ձգել։ Նրա քարտեզը ծովագնացների համար էր, և այն պահում է անկյունները։ Եթե երկու նավահանգիստ քարտեզի վրա ուղիղ գծով միացնես, կստանաս կողմնացույցի հաստատուն ուղղություն։ Դրա համար նա հյուսիսում ամեն ինչ ձգեց և՛ լայնությամբ, և՛ բարձրությամբ նույն չափով։</p>
+<p><strong>5. stretch.</strong> Ձգումն աճում է բևեռին մոտենալով։ Վաթսուներորդ զուգահեռականում երկրները քարտեզին չորս անգամ ավելի մեծ են, քան հասարակածում։ Իսկ բևեռն ինքը քարտեզի վրա անվերջ հեռու է, դրա համար Մերկատորի քարտեզները կտրում են ութսունհինգ աստիճանի մոտ։</p>
+<p><strong>6. others.</strong> Կան քարտեզներ, որ պահում են մակերեսները, բայց դրանք աղավաղում են ձևերը՝ Աֆրիկան ձգվում է ներքև, ինչպես հալած պանիր։ Ամեն քարտեզ ինչ-որ բան զոհում է։ Կատարյալ հարթ քարտեզ չկա։</p>
+<p><strong>7. google.</strong> Գուգլ քարտեզները, որ երկար տարիներ Մերկատորն էին ցույց տալիս, 2018 թվականին համակարգչում փոխեցին մոտեցումը՝ երբ բավականաչափ հեռանում ես, քարտեզը դառնում է գլոբուս։</p>
+<p><strong>8. takeaway.</strong> Քարտեզը սուտ չի ասում, այլ պատասխանում է մի կոնկրետ հարցի։ Մերկատորի հարցն էր՝ ինչպես չմոլորվել ծովում։ Չափերի մասին նա չէր հարցնում։</p>
+<!-- script:end -->
+
+<p>Armenian lint: 0 errors, 0 hints.</p>
+</details><details open id="facts-checked"><summary>Facts (checked)</summary>
+<ul>
+<li><strong>Areas:</strong> Greenland about 2.17 million km², Africa about 30.4 million km² (14.0 times); Algeria 2.38 million km², so Greenland is smaller than Algeria (NPR 2026, Mental Floss, data.europa.eu guide).</li>
+<li><strong>Mercator's stretch:</strong> linear scale sec φ, area scale sec² φ (standard). Computed here: x1.71 at Armenia's 40.2°N, x4.0 at 60°, x10.5 at 72°N (mid-Greenland), so Armenia moved to 72°N would look 10.47 / 1.71 = 6.1 times bigger than on today's Mercator map ("about six"). Web Mercator is cut at about 85.05°.</li>
+<li><strong>Why Mercator:</strong> a conformal projection (glossary: «կոնֆորմ արտապատկերում»), made in 1569 for navigation; rhumb lines (constant compass bearing) are straight. Standard; the year is on the source line, not in the voice.</li>
+<li><strong>Gauss:</strong> Theorema Egregium (1827): a sphere's curvature cannot be kept on a plane, so no flat map is free of distortion.</li>
+<li><strong>Google Maps:</strong> desktop switched to a 3D globe when zoomed out, announced 2 August 2018; Google's own example was Greenland no longer looking as large as Africa; mobile kept the flat map (Engadget, TechCrunch, TechRadar). The script says «համակարգչում».</li>
+<li><strong>Left out:</strong> the Boston schools switching to Gall-Peters (2017) was not confirmed in the search.</li>
+</ul>
+</details><details open id="visuals"><summary>Visuals</summary>
+<ul>
+<li><strong>Real maps (Commons):</strong> <code>File:Mercator 1569 world map composite.jpg</code> (public domain, Mercator's own), <code>File:Tissot indicatrix world map Mercator proj.svg</code> (CC BY-SA 4.0, Eric Gaba), <code>File:Gall–Peters projection SW.jpg</code> (CC BY-SA 3.0, Strebe).</li>
+<li><strong>Drawn and animated (the showcase):</strong> Greenland's true outline sliding south and shrinking next to Algeria; Armenia sliding north and swelling (computed with sec² φ, from Natural Earth outlines, public domain); the orange peel; a ship on a straight course with a fixed compass; Tissot circles swelling; a Mercator-to-Gall-Peters morph; a map curling into a globe. Needs d3-geo in Remotion (the projections are one line each).</li>
+</ul>
+</details><details open id="questions-for-hayk-review-points"><summary>Questions for Hayk (review points)</summary>
+<ul>
+<li><strong>U-ccc, the term:</strong> «քարտեզագրական պրոյեկցիա» is in the glossary as «պրոյեկցիա»; the script avoids the word and says «քարտեզ». Name it once?</li>
+<li><strong>U-ddd, «Գուգլ քարտեզները»</strong> in the voice: fine, or «Google Maps» on screen only?</li>
+<li>U-a («դու» vs «դուք») applies here too.</li>
+</ul>
+</details></body></html>

@@ -1,0 +1,46 @@
+[
+  {
+    "key": "hook",
+    "text": "Այս քարտեզում Գրենլանդիան գրեթե Աֆրիկայի չափ է։ Իրականում Աֆրիկան տասնչորս անգամ մեծ է։",
+    "visual": "Frame 0: a Mercator world map with Greenland and Africa outlined orange, looking similar; a '×14' label appears on Africa."
+  },
+  {
+    "key": "drag",
+    "text": "Եթե Գրենլանդիան քաշենք դեպի հասարակած, այն կծկվում է ու դառնում Ալժիրից էլ փոքր։ Իսկ եթե Հայաստանը բարձրացնենք Գրենլանդիայի տեղը, քարտեզին այն կերևա մոտ վեց անգամ ավելի մեծ, քան հիմա։",
+    "pause_after": 1.5,
+    "visual": "The showcase: Greenland's true outline slides south across the Mercator map, shrinking until it sits beside Algeria and is smaller; then Armenia slides north and swells about six times."
+  },
+  {
+    "key": "orange",
+    "text": "Պատճառը պարզ է՝ գնդի մակերևույթն անհնար է հարթեցնել առանց աղավաղման։ Փորձիր նարնջի կեղևը հարթ դնել սեղանին՝ կա՛մ կպատռվի, կա՛մ կձգվի։ Մաթեմատիկոս Գաուսը նույնիսկ ապացուցեց, որ ուրիշ ճանապարհ չկա։",
+    "screen_small": "Gauss, Theorema Egregium, 1827",
+    "visual": "An orange peel flattened on a table: it tears into petals or stretches at the edges."
+  },
+  {
+    "key": "mercator",
+    "text": "Մերկատորն ընտրեց ձգել։ Նրա քարտեզը ծովագնացների համար էր, և այն պահում է անկյունները։ Եթե երկու նավահանգիստ քարտեզի վրա ուղիղ գծով միացնես, կստանաս կողմնացույցի հաստատուն ուղղություն։ Դրա համար նա հյուսիսում ամեն ինչ ձգեց և՛ լայնությամբ, և՛ բարձրությամբ նույն չափով։",
+    "screen_small": "Mercator, 1569",
+    "visual": "A ship sails a straight line between two ports on the Mercator map while a compass needle stays fixed; on a globe the same course is a spiral."
+  },
+  {
+    "key": "stretch",
+    "text": "Ձգումն աճում է բևեռին մոտենալով։ Վաթսուներորդ զուգահեռականում երկրները քարտեզին չորս անգամ ավելի մեծ են, քան հասարակածում։ Իսկ բևեռն ինքը քարտեզի վրա անվերջ հեռու է, դրա համար Մերկատորի քարտեզները կտրում են ութսունհինգ աստիճանի մոտ։",
+    "visual": "Equal circles drawn on a globe (Tissot's circles) are projected onto the map and swell towards the top; labels ×1 at the equator, ×4 at 60°, the top edge cut at 85°."
+  },
+  {
+    "key": "others",
+    "text": "Կան քարտեզներ, որ պահում են մակերեսները, բայց դրանք աղավաղում են ձևերը՝ Աֆրիկան ձգվում է ներքև, ինչպես հալած պանիր։ Ամեն քարտեզ ինչ-որ բան զոհում է։ Կատարյալ հարթ քարտեզ չկա։",
+    "visual": "The map morphs from Mercator to an equal-area projection (Gall-Peters): sizes become right, shapes stretch vertically; a third, compromise projection (Robinson) for a moment."
+  },
+  {
+    "key": "google",
+    "text": "Գուգլ քարտեզները, որ երկար տարիներ Մերկատորն էին ցույց տալիս, 2018 թվականին համակարգչում փոխեցին մոտեցումը՝ երբ բավականաչափ հեռանում ես, քարտեզը դառնում է գլոբուս։",
+    "visual": "A browser map zooms out and curls into a globe; Greenland shrinks to its true size."
+  },
+  {
+    "key": "takeaway",
+    "text": "Քարտեզը սուտ չի ասում, այլ պատասխանում է մի կոնկրետ հարցի։ Մերկատորի հարցն էր՝ ինչպես չմոլորվել ծովում։ Չափերի մասին նա չէր հարցնում։",
+    "screen": "Ամեն քարտեզ ինչ-որ բան զոհում է",
+    "visual": "The Mercator map with a ship's straight course, Greenland pulsing between its map size and true size; loops."
+  }
+]

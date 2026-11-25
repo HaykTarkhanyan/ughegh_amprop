@@ -1,0 +1,57 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Short: Zero-knowledge proofs - script and plan</title><style>
+:root { color-scheme: light dark; --text: #1f2328; --muted: #59636e; --line: #d1d9e0; --soft: #f6f8fa; --link: #0033a0; }
+@media (prefers-color-scheme: dark) { :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --soft: #161b22; --link: #79a6ff; } }
+body { margin: 0 auto; max-width: 980px; padding: 24px 16px 64px; color: var(--text); background: Canvas;
+       font: 16px/1.6 system-ui, "Segoe UI", sans-serif; }
+a { color: var(--link); }
+nav { background: var(--soft); border: 1px solid var(--line); border-radius: 8px; padding: 10px 18px; margin: 16px 0 24px; }
+details { border-top: 1px solid var(--line); padding: 8px 0; }
+summary { cursor: pointer; font-size: 1.3em; font-weight: 650; padding: 4px 0; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .94em; }
+th, td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: var(--soft); }
+code { background: var(--soft); border-radius: 4px; padding: 1px 5px; font-size: .9em; }
+pre { background: var(--soft); border-radius: 6px; padding: 12px; overflow-x: auto; }
+pre code { padding: 0; }
+img { max-width: 100%; }
+</style></head><body><h1 id="short-zero-knowledge-proofs---script-and-plan">Short: Zero-knowledge proofs - script and plan</h1>
+<p>Draft for Hayk's review, 2026-11-25. Script first (Q17), rendered in Remotion (DECISIONS.md #21). Script source: <code>beats.hy.json</code>. Follows the Fable batch notes (F131-F134). Related to <code>crypto_paint/</code> (public keys with paint): publish after it, a few videos apart.</p>
+<nav><strong>Contents</strong><ul><li><a href="#the-idea-in-one-paragraph">The idea in one paragraph</a></li><li><a href="#the-script-armenian">The script (Armenian)</a></li><li><a href="#facts-checked">Facts (checked)</a></li><li><a href="#visuals">Visuals</a></li><li><a href="#questions-for-hayk-review-points">Questions for Hayk (review points)</a></li></ul></nav><details open id="the-idea-in-one-paragraph"><summary>The idea in one paragraph</summary>
+<p>How do you prove you know a secret without revealing any of it? Your friend is colour-blind and holds a red and a green ball that look the same to him. He hides them behind his back, swaps them or not at random, and asks "did I swap?"; you are right every time. Once could be luck (50%); twenty times in a row by luck is about one in a million, so he is convinced the balls differ, yet he still does not know which one is red. That is a zero-knowledge proof: convince, reveal nothing. Three researchers proposed it in the 1980s (two later won the Turing Award); real systems replace the balls with maths puzzles only the secret's owner can keep answering. Today it can prove to a website that you are over 18 without your birth date (the EU is testing this) and hide who paid whom in some cryptocurrencies. The takeaway: proving and revealing are not the same thing.</p>
+</details><details open id="the-script-armenian"><summary>The script (Armenian)</summary>
+<!-- script:start -->
+
+<p>8 beats, 1,406 characters (1,406 with numbers spelled out): ~97 s of speech, ~1:41 with pauses and the end tail, 2 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).</p>
+<p><strong>1. hook.</strong> Ինչպե՞ս ապացուցել, որ գաղտնիք գիտես, առանց գաղտնիքից գեթ մի բան ասելու։ Թվում է՝ անհնար է։ Բայց հնարավոր է։</p>
+<p><strong>2. balls.</strong> Պատկերացրու՝ ընկերդ դալտոնիկ է, և ձեռքին երկու գնդակ ունի՝ կարմիր ու կանաչ։ Նրա համար դրանք նույնն են։ Դու ուզում ես ապացուցել, որ դրանք տարբեր գույնի են, բայց չասել, թե որն է կարմիրը։</p>
+<p><strong>3. game.</strong> Նա գնդակները թաքցնում է մեջքի ետևում, պատահականորեն փոխում է ձեռքերը կամ չի փոխում, հետո ցույց է տալիս և հարցնում՝ փոխեցի՞։ Դու ամեն անգամ ճիշտ ես պատասխանում։</p>
+<p><strong>4. rounds.</strong> Մեկ անգամը կարող է բախտ լինել՝ հիսուն տոկոս։ Բայց քսան անգամ անընդմեջ պատահաբար գուշակելու հավանականությունը մոտ մեկ միլիոնից մեկ է։ Քսան ռաունդից հետո նա համոզված է՝ գնդակները տարբեր են։ <em>[pause 2 s]</em></p>
+<p><strong>5. zero.</strong> Իսկ ի՞նչ իմացավ նա։ Միայն այն, որ դու տարբերում ես գնդակները։ Թե որն է կարմիրը, մինչև հիմա չգիտի։ Սա է զրոյական գիտելիքով ապացույցը՝ համոզում ես, ոչինչ չբացահայտելով։</p>
+<p><strong>6. origin.</strong> Գաղափարը երեք գիտնական առաջարկեցին ութսունականներին, և նրանցից երկուսը հետո ստացան Թյուրինգի մրցանակը՝ համակարգչային գիտության ամենաբարձր պարգևը։ Իսկ իրական համակարգերում գնդակների փոխարեն մաթեմատիկական խնդիրներ են, որոնց պատասխանը միայն գաղտնիքն իմացողը կարող է անընդհատ ճիշտ տալ։</p>
+<p><strong>7. uses.</strong> Այսօր դա արդեն կիրառվում է։ Կարելի է կայքին ապացուցել, որ տասնութ տարեկանից մեծ ես, առանց ծննդյան ամսաթիվը ցույց տալու։ Եվրոպական միությունը նման տարիքի ստուգում է փորձարկում, իսկ որոշ կրիպտոարժույթներ այդպես թաքցնում են, թե ով ում որքան է փոխանցել։</p>
+<p><strong>8. takeaway.</strong> Ապացուցելն ու բացահայտելը նույն բանը չեն։ Կարելի է համոզել՝ ոչինչ չտալով։</p>
+<!-- script:end -->
+
+<p>Armenian lint: 0 errors, 0 hints.</p>
+</details><details open id="facts-checked"><summary>Facts (checked)</summary>
+<ul>
+<li><strong>The colour-blind friend and two balls:</strong> a standard explanation (Wikipedia, Zero-knowledge proof): the friend never learns which ball is green and which is red. Chosen over the Ali Baba cave (Quisquater et al., published 1990) because it needs no story set-up and animates in one frame.</li>
+<li><strong>Rounds:</strong> a guesser passes each round with probability 1/2; 20 rounds: 1 / 2²⁰ = 1 / 1,048,576.</li>
+<li><strong>Origin:</strong> Goldwasser, Micali &amp; Rackoff, "The knowledge complexity of interactive proof systems" (1985); Goldwasser and Micali received the 2012 Turing Award. From general knowledge, not from the searches: <strong>check before voicing</strong>.</li>
+<li><strong>Age checks:</strong> the European Commission sought an age-verification app fitting the EU Digital Identity Wallet; its specification calls for zero-knowledge proofs but does not require them (EFF, April 2025); Google open-sourced its ZKP libraries for EU age assurance in July 2025 (Google blog, google/longfellow-zk). Whether it has shipped by late 2026 was not checked, so the script says «փորձարկում է».</li>
+<li><strong>Cryptocurrency:</strong> Zcash (launched 28 October 2016) uses zk-SNARKs to keep balances verifiable while hiding the parties and amounts (Zcash docs, Electric Coin Co.). The script says «որոշ կրիպտոարժույթներ», no name.</li>
+</ul>
+</details><details open id="visuals"><summary>Visuals</summary>
+<ul>
+<li><strong>Drawn, all of it:</strong> split view of what you see (red / green) and what the friend sees (grey / grey); hands behind the back with a coin-flip; the 20-round strip with the "just guessing" bar halving each round (the showcase, held for the 2 s pause); the balls turning into a number puzzle; the phone showing only "18+ ✓"; a transaction with hidden fields and a valid mark.</li>
+<li>Colours: red and green only for the balls, with a grey "friend's view" so colour-blind viewers get the joke too.</li>
+</ul>
+</details><details open id="questions-for-hayk-review-points"><summary>Questions for Hayk (review points)</summary>
+<ul>
+<li><strong>U-eee, the term:</strong> «զրոյական գիտելիքով ապացույց» (not in the glossary): or «զրոյական իմացությամբ ապացույց»?</li>
+<li><strong>U-fff, «դալտոնիկ»</strong> for colour-blind: natural, or «գույները չտարբերող»?</li>
+<li><strong>U-ggg, «ռաունդ»</strong> in the voice: or «փուլ»?</li>
+<li>U-a («դու» vs «դուք») applies here too.</li>
+</ul>
+</details></body></html>
