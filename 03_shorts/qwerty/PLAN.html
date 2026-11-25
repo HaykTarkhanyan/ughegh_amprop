@@ -1,0 +1,67 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Showcase 3: Why the QWERTY layout won (messier than the &quot;made to slow typists down&quot; myth) - script and plan</title><style>
+:root { color-scheme: light dark; --text: #1f2328; --muted: #59636e; --line: #d1d9e0; --soft: #f6f8fa; --link: #0033a0; }
+@media (prefers-color-scheme: dark) { :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --soft: #161b22; --link: #79a6ff; } }
+body { margin: 0 auto; max-width: 980px; padding: 24px 16px 64px; color: var(--text); background: Canvas;
+       font: 16px/1.6 system-ui, "Segoe UI", sans-serif; }
+a { color: var(--link); }
+nav { background: var(--soft); border: 1px solid var(--line); border-radius: 8px; padding: 10px 18px; margin: 16px 0 24px; }
+details { border-top: 1px solid var(--line); padding: 8px 0; }
+summary { cursor: pointer; font-size: 1.3em; font-weight: 650; padding: 4px 0; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .94em; }
+th, td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: var(--soft); }
+code { background: var(--soft); border-radius: 4px; padding: 1px 5px; font-size: .9em; }
+pre { background: var(--soft); border-radius: 6px; padding: 12px; overflow-x: auto; }
+pre code { padding: 0; }
+img { max-width: 100%; }
+</style></head><body><h1 id="showcase-3-why-the-qwerty-layout-won-messier-than-the-made-to-slow-typists-down-myth---script-and-plan">Showcase 3: Why the QWERTY layout won (messier than the "made to slow typists down" myth) - script and plan</h1>
+<p>Draft for Hayk's review, 2026-11-25. Script first (Q17); after approval: full animation (Q16, showcase) in Remotion (DECISIONS.md #21). Script source: <code>beats.hy.json</code>.</p>
+<nav><strong>Contents</strong><ul><li><a href="#the-idea-in-one-paragraph">The idea in one paragraph</a></li><li><a href="#the-script-armenian">The script (Armenian)</a></li><li><a href="#facts-checked">Facts (checked)</a></li><li><a href="#animation-plan-showcase">Animation plan (showcase)</a></li><li><a href="#questions-for-hayk-review-points">Questions for Hayk (review points)</a></li></ul></nav><details open id="the-idea-in-one-paragraph"><summary>The idea in one paragraph</summary>
+<p>"QWERTY was designed to slow typists down" is a myth. Sholes's keyboard changed many times from a near-alphabetical start; jamming may have played a part but is disputed; the Yasuokas (Kyoto, 2011) showed the layout grew from the needs of telegraph operators (Z next to S and E because Morse Z looks like "SE"). Remington took it over in 1873; the "TYPEWRITER on the top row" story is a legend; an 1888 typing contest won on a QWERTY Remington made noise; in 1893 the big makers merged on it, then teletypes, computers and phones inherited it. Even the "we are stuck with a worse layout" story is shaky: Dvorak's own 1944 Navy test is suspect and a better 1956 test found no gain. It reached the Armenian phonetic layout too. Lesson: a too-neat story is usually wrong.</p>
+</details><details open id="the-script-armenian"><summary>The script (Armenian)</summary>
+<!-- script:start -->
+
+<p>12 beats, 2,420 characters, ~167 s of speech at ~870 characters a minute.</p>
+<p><strong>1. hook.</strong> Լսե՞լ ես, որ QWERTY դասավորությունը հորինել են, որպեսզի մեքենագրողներին դանդաղեցնեն։ Սա ամենահայտնի առասպելներից է, իսկ իրական պատմությունը շատ ավելի խառն է։</p>
+<p><strong>2. sholes.</strong> 1860-70-ականներին ամերիկացի Քրիստոֆեր Շոուլզն ընկերների հետ գրամեքենա էր ստեղծում։ Ստեղնաշարը տարիների ընթացքում բազմիցս փոխվեց։ Առաջին տարբերակներում տառերը գրեթե այբբենական կարգով էին շարված։</p>
+<p><strong>3. jam.</strong> Հաճախ ասում են, թե հաճախակի զույգ տառերը հեռացրին իրարից, որ մետաղե լծակները չխճճվեն։ Գուցե դա էլ դեր խաղաց, բայց պատմաբանները դրա մասին մինչ օրս վիճում են։</p>
+<p><strong>4. telegraph.</strong> Ճապոնացի հետազոտողներ Յասուոկաներն այլ բան ցույց տվեցին։ Առաջին գրամեքենաների կարևոր օգտատերերը հեռագրիչներն էին, որոնք Մորզեի կոդով եկած հաղորդագրություններն արագ վերածում էին տեքստի։ Ստեղնաշարը փոխվում էր նրանց կարիքներով։ Օրինակ՝ ամերիկյան Մորզեի կոդում Z-ը հեշտությամբ շփոթվում է SE զույգի հետ, և Z-ը հայտնվեց S-ի ու E-ի մոտ։</p>
+<p><strong>5. remington.</strong> 1873 թվականին արտադրությունը վերցրեց Ռեմինգթոնը՝ զենք և կարի մեքենաներ արտադրող ընկերությունը։ Այդ ժամանակ ստեղնաշարն արդեն գրեթե այսպիսին էր։</p>
+<p><strong>6. legend.</strong> Ասում են նաև, որ վերին շարքում կան TYPEWRITER բառի բոլոր տառերը, որպեսզի վաճառողներն արագ տպեն այն ու տպավորեն գնորդներին։ Տառերն իսկապես այնտեղ են, բայց որ սա է եղել պատճառը, ոչ ոք չի ապացուցել։</p>
+<p><strong>7. contest.</strong> Իսկ ինչո՞ւ հաղթեց հենց այս դասավորությունը։ 1888 թվականին Ցինցինատիում արագ տպելու մրցույթում Ֆրենկ Մակգուրինը, որը կույր մեթոդով էր տպում QWERTY-ով Ռեմինգթոնի վրա, հաղթեց մրցակցին ու ստացավ 500 դոլար։ Մրցույթը մեծ աղմուկ բարձրացրեց, թեև հաջորդ ամիս նրան էլ հաղթեցին։</p>
+<p><strong>8. standard.</strong> 1893 թվականին ամերիկյան խոշոր արտադրողները միավորվեցին, և QWERTY-ն դարձավ ստանդարտ։ Հետո այն անցավ հեռատիպերին, իսկ նրանցից՝ համակարգիչներին ու հեռախոսներին։</p>
+<p><strong>9. dvorak.</strong> 1936 թվականին Օգոստ Դվորակը պատենտավորեց «ավելի արագ» դասավորություն։ Նրա ամենահայտնի ապացույցը՝ ռազմածովային ուժերի 1944 թվականի փորձը, անցկացրել էր հենց ինքը՝ Դվորակը, և այն հետագայում կասկածի տակ դրվեց։ 1956 թվականի ավելի խնամքով կազմակերպված փորձում վերապատրաստված մեքենագրողները Դվորակի ստեղնաշարով ավելի արագ չդարձան։</p>
+<p><strong>10. path.</strong> Այսինքն՝ նույնիսկ այն պնդումը, թե խրված ենք վատ դասավորության մեջ, վիճելի է։ Տնտեսագետները մինչ օրս վիճում են՝ QWERTY-ն սխալ ընտրության օրինա՞կ է, թե՞ բավականաչափ լավ լուծում, որը փոխելն ավելի թանկ կարժենա, քան կշահենք։</p>
+<p><strong>11. armenian.</strong> Եվ այն հասել է նաև մեզ՝ հայերեն հնչյունային դասավորության մեջ տառերը դրված են QWERTY-ի նույնահնչյուն տառերի տեղում՝ Ա-ն A-ի վրա, Ս-ն S-ի։</p>
+<p><strong>12. takeaway.</strong> Այնպես որ, երբ պատմությունը չափազանց կոկիկ է՝ «հորինեցին, որ դանդաղեցնեն», հավանաբար այն ճիշտ չէ։ Իրական պատմությունները սովորաբար ավելի խառն են։</p>
+<!-- script:end -->
+
+<p>Armenian lint: 0 errors after three house-style fixes (articles before vowels, a redundant «մենք»).</p>
+</details><details open id="facts-checked"><summary>Facts (checked)</summary>
+<ul>
+<li><strong>Telegraph origin</strong> (Koichi &amp; Motoko Yasuoka, "On the Prehistory of QWERTY", <em>ZINBUN</em> 42, Kyoto University; 2011 per Smithsonian, the repository labels it 2009/2010): the early Type-Writer keyboard derived from the Hughes-Phelps printing telegraph for Morse receivers; the layout "accidentally grew into QWERTY among the different requirements"; American Morse Z is often confused with "SE", hence Z near S and E; they reject both the "slow typists" and the jamming-as-design-goal stories. Smithsonian notes the mechanical explanation remains contested.</li>
+<li><strong>Remington, 1873</strong>: E. Remington and Sons (arms, sewing machines) took over production.</li>
+<li><strong>"TYPEWRITER" on the top row</strong>: true as a fact (checked: all its letters are in QWERTYUIOP); that salesmen were the reason is a legend, said as such.</li>
+<li><strong>1888 contest</strong> (Cincinnati, 25 July 1888): Frank McGurrin, touch-typing on a Remington No. 2, beat Louis Traub (Caligraph) and won $500; it popularised touch typing; McGurrin lost to Mae Orr the next month (said as "the next month he was beaten too"). Sources: Wikipedia, oz.Typewriter blog, Yasuoka's blog; finger counts for Traub vary, so the script does not mention them.</li>
+<li><strong>1893</strong>: Remington-linked makers merged (Union Typewriter Company) and adopted QWERTY as the de facto standard (Smithsonian); Teletype adopted it in the 1910s.</li>
+<li><strong>Dvorak</strong>: patented 1936; the 1944 Navy study (14 retrained vs 18 QWERTY typists) was run by Lt. Cdr. August Dvorak, later judged biased at best; Earle Strong's 1956 GSA study found retrained typists matched but did not beat their QWERTY speed. The debate: Paul David, "Clio and the Economics of QWERTY" (1985) vs Liebowitz &amp; Margolis, "The Fable of the Keys" (<em>J. Law &amp; Economics</em>, 1990). Both sides accuse the other of bias; the script calls it «վիճելի».</li>
+<li><strong>Armenian phonetic layout</strong>: Armenian letters on the QWERTY keys of the same sound (Ա on A, Ս on S).</li>
+</ul>
+</details><details open id="animation-plan-showcase"><summary>Animation plan (showcase)</summary>
+<ul>
+<li><strong>Typebars:</strong> a semicircle of typebars swinging up to the paper, two neighbours jamming (beat 3).</li>
+<li><strong>Layout morphs:</strong> keys slide between layouts: the alphabetical piano-key prototype -&gt; intermediate layouts -&gt; QWERTY (beat 2), QWERTY -&gt; Dvorak and back (beat 9), Latin -&gt; Armenian phonetic (beat 11). One <code>Keyboard</code> component with an animated key-position map.</li>
+<li><strong>Morse:</strong> a telegraph key clicking, dots and dashes for Z vs "S E" side by side (beat 4).</li>
+<li><strong>Race:</strong> two typists with word counters (beat 7).</li>
+<li><strong>Timeline:</strong> 1868 -&gt; 1873 -&gt; 1888 -&gt; 1893 -&gt; 1910s -&gt; today, the same top row on each device (beat 8).</li>
+<li>Estimated 2-3 h; the keyboard morph is the core reusable piece.</li>
+</ul>
+</details><details open id="questions-for-hayk-review-points"><summary>Questions for Hayk (review points)</summary>
+<ul>
+<li><strong>U-v, terms:</strong> «մեքենագրող», «լծակներ» (typebars), «հեռագրիչ», «հեռատիպ», «կույր մեթոդով տպել»: natural?</li>
+<li><strong>U-w, English letters in speech:</strong> the voice must say "QWERTY", "Z", "SE", "TYPEWRITER": the TTS may read them oddly; alternative: spell them in Armenian in the spoken text (Քվերթի, զեդ) and keep Latin only on screen.</li>
+<li><strong>U-x, length:</strong> ~2.8 min, the longest so far; beats 5 (Remington) and 10 (economists) can be cut.</li>
+<li>U-a («դու» vs «դուք») applies here too.</li>
+</ul>
+</details></body></html>
