@@ -1,0 +1,257 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Short 2: &quot;The test is 99% accurate&quot; (Bayes) - script and plan</title><style>
+:root { color-scheme: light dark; --text: #1f2328; --muted: #59636e; --line: #d1d9e0; --soft: #f6f8fa; --link: #0033a0; }
+@media (prefers-color-scheme: dark) { :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --soft: #161b22; --link: #79a6ff; } }
+body { margin: 0 auto; max-width: 980px; padding: 24px 16px 64px; color: var(--text); background: Canvas;
+       font: 16px/1.6 system-ui, "Segoe UI", sans-serif; }
+a { color: var(--link); }
+nav { background: var(--soft); border: 1px solid var(--line); border-radius: 8px; padding: 10px 18px; margin: 16px 0 24px; }
+details { border-top: 1px solid var(--line); padding: 8px 0; }
+summary { cursor: pointer; font-size: 1.3em; font-weight: 650; padding: 4px 0; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .94em; }
+th, td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: var(--soft); }
+code { background: var(--soft); border-radius: 4px; padding: 1px 5px; font-size: .9em; }
+pre { background: var(--soft); border-radius: 6px; padding: 12px; overflow-x: auto; }
+pre code { padding: 0; }
+img { max-width: 100%; }
+</style></head><body><h1 id="short-2-the-test-is-99-accurate-bayes---script-and-plan">Short 2: "The test is 99% accurate" (Bayes) - script and plan</h1>
+<p>Draft for Hayk's review, 2026-11-25. No voice is made until the script is approved (rule from short 2 on). Script source: <code>beats.hy.json</code> (this page shows the same text).</p>
+<nav><strong>Contents</strong><ul><li><a href="#decisions-so-far">Decisions so far</a></li><li><a href="#the-idea-in-one-paragraph">The idea in one paragraph</a></li><li><a href="#structure-and-timing">Structure and timing</a></li><li><a href="#the-script-armenian">The script (Armenian)</a></li><li><a href="#the-numbers-checked">The numbers (checked)</a></li><li><a href="#facts-and-sources">Facts and sources</a></li><li><a href="#visuals">Visuals</a></li><li><a href="#questions-for-hayk-review-points">Questions for Hayk (review points)</a></li><li><a href="#production-plan-after-approval">Production plan (after approval)</a></li></ul></nav><details open id="decisions-so-far"><summary>Decisions so far</summary>
+<div class="table"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q11</td>
+<td>Examples</td>
+<td>the medical test only</td>
+</tr>
+<tr>
+<td>Q12</td>
+<td>How to show it</td>
+<td>a crowd of 1,000 dots: count people, not probabilities</td>
+</tr>
+<tr>
+<td>Q13</td>
+<td>The formula</td>
+<td>a brief card near the end</td>
+</tr>
+<tr>
+<td>Q14</td>
+<td>Length</td>
+<td>a deeper 2-3 min video</td>
+</tr>
+</tbody>
+</table></div>
+</details><details open id="the-idea-in-one-paragraph"><summary>The idea in one paragraph</summary>
+<p>"The test is 99% accurate and you are positive" sounds like "99% sick". We take 1,000 people, light up the 10 who are sick, test everyone, and pull out everyone who tested positive: 10 sick and about 10 healthy, so a positive means 50%, not 99%. The reason is that healthy people outnumber the sick 99 to 1, so the test's small 1% error hits a huge group. Then: a rarer disease (9%), real doctors getting it wrong (Gigerenzer 2007), what helps (a second test, who gets tested), the formula card, and the question to ask next time.</p>
+</details><details open id="structure-and-timing"><summary>Structure and timing</summary>
+<p>~150 s of speech (2,182 characters at the measured ~870 a minute), ~155 s with pauses.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Beat</th>
+<th>~s</th>
+<th>Said (in short)</th>
+<th>Shown</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>hook</td>
+<td>6</td>
+<td>the test is 99% accurate, you are positive: what is the chance you are sick?</td>
+<td>big "99%", a test card with "+"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>guess</td>
+<td>11</td>
+<td>most say 99%, most doctors too; the answer can be 50% or even 9%; let us count people</td>
+<td>"99%?" crossed out, "50%" and "9%"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>crowd</td>
+<td>8</td>
+<td>1,000 people, 1 in 100 is sick, so 10</td>
+<td>40 x 25 grid of dots, 10 turn red, counter</td>
+</tr>
+<tr>
+<td>4</td>
+<td>meaning</td>
+<td>10</td>
+<td>what 99% means: finds 99 of 100 sick, wrongly flags 1 of 100 healthy</td>
+<td>two 10 x 10 blocks: 99 of 100 red ringed, 1 of 100 grey ringed</td>
+</tr>
+<tr>
+<td>5</td>
+<td>test_sick</td>
+<td>4</td>
+<td>test everyone; all 10 sick are found</td>
+<td>scanner sweep, 10 red dots ringed</td>
+</tr>
+<tr>
+<td>6</td>
+<td>test_healthy</td>
+<td>9</td>
+<td>but 990 healthy: 1% of them, about 10, also test positive: false positives</td>
+<td>10 grey dots ringed, counter 20</td>
+</tr>
+<tr>
+<td>7</td>
+<td>reveal</td>
+<td>12</td>
+<td>gather all positives: 20, only 10 sick, so 50%, not 99%</td>
+<td>the 20 fly out into big icons: 10 red, 10 grey; "10 / 20 = 50%"</td>
+</tr>
+<tr>
+<td>8</td>
+<td>why</td>
+<td>10</td>
+<td>the healthy are 99 times more; a small 1% error on a huge group</td>
+<td>990 vs 10 blocks; the 1% slice of grey = the red block in size</td>
+</tr>
+<tr>
+<td>9</td>
+<td>rarer</td>
+<td>14</td>
+<td>same test, disease 1 in 1,000: 1 sick vs ~10 false positives, about 9%</td>
+<td>grid with 1 red dot; "1 / 11 ≈ 9%"</td>
+</tr>
+<tr>
+<td>10</td>
+<td>doctors</td>
+<td>17</td>
+<td>2007: 160 gynecologists, only 1 in 5 right; after a 1-hour lesson in counts of people, 87% right</td>
+<td>160 doctor icons, 21% then 87% lit; source line</td>
+</tr>
+<tr>
+<td>11</td>
+<td>retest</td>
+<td>25</td>
+<td>test again (another method); the sick stay positive, almost no healthy one does: ~99%; that is why a positive HIV test is always confirmed with other tests</td>
+<td>the 20 icons, second scan, grey ones lose rings; "≈ 99%"</td>
+</tr>
+<tr>
+<td>12</td>
+<td>symptoms</td>
+<td>16</td>
+<td>who gets tested matters: with symptoms you are not "1 in 100"; if 1 in 10 is sick, a positive means ~92%</td>
+<td>grid with 100 red; "99 / 108 ≈ 92%"</td>
+</tr>
+<tr>
+<td>13</td>
+<td>formula</td>
+<td>9</td>
+<td>this is Bayes' formula: start from how common it is, then update with the test</td>
+<td>formula card ~4 s, "= 10 / 20 = 50%"</td>
+</tr>
+<tr>
+<td>14</td>
+<td>takeaway</td>
+<td>8</td>
+<td>next time you hear "99% accurate", ask how rare the thing is</td>
+<td>big text over the faint crowd; loops to the start</td>
+</tr>
+</tbody>
+</table></div>
+</details><details open id="the-script-armenian"><summary>The script (Armenian)</summary>
+<p><strong>1. hook.</strong> Թեստը 99 տոկոսով ճշգրիտ է, և քո պատասխանը դրական է։ Ո՞րն է հավանականությունը, որ իսկապես հիվանդ ես։</p>
+<p><strong>2. guess.</strong> Մեծ մասը կասի՝ 99 տոկոս։ Բժիշկների մեծ մասը նույնպես։ Իսկ ճիշտ պատասխանը կարող է լինել 50, կամ նույնիսկ 9 տոկոս։ Հաշվենք ոչ թե տոկոսներով, այլ մարդկանցով։</p>
+<p><strong>3. crowd.</strong> Պատկերացրու հազար մարդ։ Հիվանդությունը հազվադեպ է՝ հարյուրից մեկն է հիվանդ։ Ուրեմն հազարից հիվանդ է տասը մարդ։</p>
+<p><strong>4. meaning.</strong> Ի՞նչ է նշանակում 99 տոկոս։ Թեստը հարյուր հիվանդից գտնում է 99-ին, իսկ հարյուր առողջից միայն մեկին է սխալմամբ դրական պատասխան տալիս։</p>
+<p><strong>5. test_sick.</strong> Ստուգենք բոլոր հազարին։ Տասը հիվանդին էլ թեստը գտնում է։</p>
+<p><strong>6. test_healthy.</strong> Բայց կա նաև 990 առողջ մարդ։ Նրանց մեկ տոկոսը՝ մոտ տասը մարդ, նույնպես դրական պատասխան է ստանում։ Սրանք կեղծ դրական պատասխաններ են։</p>
+<p><strong>7. reveal.</strong> Հիմա հավաքենք դրական պատասխան ստացած բոլոր մարդկանց։ Քսան մարդ։ Նրանցից հիվանդ է միայն տասը։ Այսինքն՝ քո դրական պատասխանը նշանակում է ոչ թե 99, այլ 50 տոկոս։</p>
+<p><strong>8. why.</strong> Պատճառը պարզ է։ Առողջները 99 անգամ ավելի շատ են, քան հիվանդները։ Թեստի փոքր՝ մեկ տոկոս սխալը կիրառվում է հսկայական խմբի վրա։</p>
+<p><strong>9. rarer.</strong> Իսկ եթե հիվանդությունն ավելի հազվադեպ է՝ հազարից մեկ։ Թեստը նույնն է։ Հիվանդ է մեկ մարդ, իսկ կեղծ դրական պատասխան ստանում է մոտ տասը առողջ։ Դրական պատասխանը ճիշտ է տասնմեկից մեկ անգամ՝ մոտ 9 տոկոս։</p>
+<p><strong>10. doctors.</strong> Սա միայն տեսական խնդիր չէ։ 2007 թվականին 160 գինեկոլոգի տվել են նման հարց՝ կրծքագեղձի քաղցկեղի սկրինինգի մասին։ Ճիշտ է պատասխանել միայն ամեն հինգերորդը։ Իսկ մեկ ժամվա դասից հետո, երբ թվերը բացատրել են մարդկանց քանակով, ճիշտ են պատասխանել 87 տոկոսը։</p>
+<p><strong>11. retest.</strong> Ի՞նչ անել։ Առաջինը՝ կրկնել թեստը, ավելի լավ է՝ ուրիշ մեթոդով։ Քսան դրականներին նորից ստուգենք։ Հիվանդները նորից դրական են, իսկ տասը առողջներից երկրորդ անգամ դրական պատասխան համարյա ոչ ոք չի ստանում։ Երկու դրական պատասխանից հետո հավանականությունը մոտ 99 տոկոս է։ Դրա համար էլ, օրինակ, ՄԻԱՎ-ի դրական թեստը միշտ հաստատում են ուրիշ թեստերով։</p>
+<p><strong>12. symptoms.</strong> Երկրորդը՝ կարևոր է, թե ով է թեստ անում։ Եթե ախտանիշներ ունես, դու այլևս «հարյուրից մեկը» չես։ Ասենք՝ ախտանիշներ ունեցողներից հիվանդ է ամեն տասներորդը։ Այդ դեպքում նույն դրական պատասխանը նշանակում է մոտ 92 տոկոս։</p>
+<p><strong>13. formula.</strong> Այս ամենի հետևում Բայեսի բանաձևն է։ Սկսիր նրանից, թե որքան տարածված է հիվանդությունը, հետո թարմացրու այն թեստի պատասխանով։</p>
+<p><strong>14. takeaway.</strong> Այնպես որ, երբ հաջորդ անգամ լսես «99 տոկոսով ճշգրիտ», հարցրու՝ իսկ որքա՞ն հազվադեպ է այն, ինչ փնտրում ենք։</p>
+<p>Armenian lint (style guide): 0 errors, 0 hints. Terms follow the course's own Bayes lecture (<code>sample_problems_qysu/site/probability/w06-total-bayes.html</code>): «կեղծ դրական», «Բայեսի բանաձև», «տարածված».</p>
+</details><details open id="the-numbers-checked"><summary>The numbers (checked)</summary>
+<p>"99% accurate" is simplified to: sensitivity 99% (finds 99 of 100 sick) and specificity 99% (clears 99 of 100 healthy). Per 1,000 people:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Sick</th>
+<th>True positives</th>
+<th>False positives</th>
+<th>A positive means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>disease 1 in 100</td>
+<td>10</td>
+<td>9.9 (shown as 10)</td>
+<td>9.9 (shown as 10)</td>
+<td>50.0%</td>
+</tr>
+<tr>
+<td>disease 1 in 1,000</td>
+<td>1</td>
+<td>1.0</td>
+<td>10.0</td>
+<td>9.0% (1 in 11)</td>
+</tr>
+<tr>
+<td>with symptoms, 1 in 10</td>
+<td>100</td>
+<td>99</td>
+<td>9</td>
+<td>91.7% (said "about 92")</td>
+</tr>
+<tr>
+<td>second test of the 20 positives (1 in 100 case)</td>
+<td>9.8 stay positive</td>
+<td></td>
+<td>0.1</td>
+<td>99.0%</td>
+</tr>
+</tbody>
+</table></div>
+<p>The second-test figure assumes the two tests err independently. A repeat of the same test can repeat the same error, so the script says "better with another method".</p>
+</details><details open id="facts-and-sources"><summary>Facts and sources</summary>
+<ul>
+<li><strong>The gynecologists (beat 10).</strong> From three accounts by Gigerenzer (the paper's hosts refuse automated fetches, so the paper itself was not read): Scientific American Mind, April 2009 ("Knowing Your Chances"); APS Observer, 2007; Cochrane Colloquium abstract, 2008. In a 2007 continuing-education course, 160 gynecologists got a mammography question (prevalence 1%, sensitivity 90%, false-positive rate 9%, correct answer about 1 in 10). Only 21% chose it; 60% chose 90% or 81%. After training in natural frequencies, 87% understood it. One account ties the 87% to "a one-hour lecture ... to a group of 150 gynecologists", so the script does not say it was the same 160. Original: Gigerenzer, Gaissmaier, Kurz-Milcke, Schwartz &amp; Woloshin, <em>Psychological Science in the Public Interest</em> 8(2), 2007, doi:10.1111/j.1539-6053.2008.00033.x.</li>
+<li><strong>HIV confirmation (beat 11).</strong> Checked 2026-11-25: the CDC/APHL laboratory algorithm follows a reactive antigen/antibody screening test with a different supplemental test (an HIV-1/HIV-2 differentiation immunoassay or a nucleic acid test); WHO confirms a positive with its standard three-test strategy, and its verification toolkit advises against tests from the same manufacturer in one algorithm (shared cross-reactivity), which is the "another method" point. Sources: WHO HIV testing information note (2023), University of Washington HIV curriculum, CDC stacks. Hence «ուրիշ թեստերով» (plural).</li>
+<li><strong>"Most doctors too" (beat 2).</strong> Rests on the gynecologist study and the older Eddy (1982) and Hoffrage &amp; Gigerenzer (1998) results; fine as a teaser because beat 10 backs it up.</li>
+</ul>
+</details><details open id="visuals"><summary>Visuals</summary>
+<ul>
+<li><strong>Crowd:</strong> 1,000 dots in a 40 x 25 grid, 14 px dots with a 4 px gap (18 px cells): x 140-860, y 330-780, inside the safe area and above the caption band (captions sit in y ~1040-1200; everything else stays above ~1030). Counters and labels go in y 800-1020. Which dots are sick or false positives is fixed with seed 509.</li>
+<li><strong>Colours:</strong> healthy grey <code>#5A606A</code>, sick red <code>#E8383D</code>, a positive test = an orange ring <code>#F2A800</code>, results in orange. Same look as the pilot.</li>
+<li><strong>Pull-out:</strong> the ringed dots fly out of the grid and become large person icons (the pilot's <code>Person</code>).</li>
+<li><strong>Formula card:</strong> <code>P(D | +) = P(+ | D) · P(D) / P(+)</code>, with <code>D՝ հիվանդ է, +՝ թեստը դրական է</code>, and <code>= 10 / 20 = 50%</code> under it, as in the course page's notation.</li>
+<li><strong>Reused from the pilot:</strong> captions (measured, 2 lines), the takeaway's big karaoke text, person icons, label pill, palette, font. <strong>New:</strong> a crowd-grid component with states (fill in, colour, scan, ring, pull out, reset), a counter, the formula card, a doctors grid.</li>
+</ul>
+</details><details open id="questions-for-hayk-review-points"><summary>Questions for Hayk (review points)</summary>
+<ul>
+<li><strong>U-a, address:</strong> the script says «դու» (singular), as in the pilot. Keep, or plural «դուք»?</li>
+<li><strong>U-b, wording:</strong> «սկրինինգ» (or «զննում»?), «կրծքագեղձի քաղցկեղ», «ախտանիշներ ունեցողներից»: natural?</li>
+<li><strong>U-c, length:</strong> ~2.5 min. The longest beats are 10 (doctors) and 11 (retest + HIV); either can be cut.</li>
+<li><strong>U-d, HIV line:</strong> keep (checked, see Facts), or replace with another real example of confirmatory testing?</li>
+<li>The course page has an interactive version of the same picture (10,000 squares with sliders); the video could end with a pointer to it if the course site is public.</li>
+</ul>
+</details><details open id="production-plan-after-approval"><summary>Production plan (after approval)</summary>
+<ol type="1">
+<li>Voice: 14 beats, Sadaltager, no style prompt: ~45 s, ~$0.05 (paid key; the free one gives ~3-10 calls a day).</li>
+<li>Timeline + <code>check_sync.py</code>; ~1 s.</li>
+<li>Scenes in the chosen framework (Q7; Remotion by default): ~1.5-2 h, most of it the crowd-grid component, which later shorts can reuse (any "out of N people" story).</li>
+<li>Stills of each new scene, then one draft render, then the final: ~3-5 min per 155 s render.</li>
+<li>Reviews: contact sheet, then <code>gemini_review.py</code> (~$0.02 a pass), then the review page for Hayk.</li>
+</ol>
+</details></body></html>

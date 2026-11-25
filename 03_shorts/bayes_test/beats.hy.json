@@ -1,0 +1,78 @@
+[
+  {
+    "key": "hook",
+    "text": "Թեստը 99 տոկոսով ճշգրիտ է, և քո պատասխանը դրական է։ Ո՞րն է հավանականությունը, որ իսկապես հիվանդ ես։",
+    "visual": "Big '99%' and a test card with a '+' result. Frame 0 already shows the question (thumbnail)."
+  },
+  {
+    "key": "guess",
+    "text": "Մեծ մասը կասի՝ 99 տոկոս։ Բժիշկների մեծ մասը նույնպես։ Իսկ ճիշտ պատասխանը կարող է լինել 50, կամ նույնիսկ 9 տոկոս։ Հաշվենք ոչ թե տոկոսներով, այլ մարդկանցով։",
+    "visual": "'99%?' crossed out, '50%' and '9%' flash; then the screen fills with dots."
+  },
+  {
+    "key": "crowd",
+    "text": "Պատկերացրու հազար մարդ։ Հիվանդությունը հազվադեպ է՝ հարյուրից մեկն է հիվանդ։ Ուրեմն հազարից հիվանդ է տասը մարդ։",
+    "screen": "1000 մարդ",
+    "visual": "A 40 x 25 grid of 1,000 grey dots fills in row by row; then 10 dots (fixed positions, seed 509) turn red. Counter: '10 հիվանդ'."
+  },
+  {
+    "key": "meaning",
+    "text": "Ի՞նչ է նշանակում 99 տոկոս։ Թեստը հարյուր հիվանդից գտնում է 99-ին, իսկ հարյուր առողջից միայն մեկին է սխալմամբ դրական պատասխան տալիս։",
+    "visual": "Side panel, two 10 x 10 blocks: 100 red dots with 99 ringed orange; 100 grey dots with 1 ringed orange."
+  },
+  {
+    "key": "test_sick",
+    "text": "Ստուգենք բոլոր հազարին։ Տասը հիվանդին էլ թեստը գտնում է։",
+    "visual": "A scanner line sweeps down the grid; the 10 red dots get orange rings. Counter: 'դրական՝ 10'."
+  },
+  {
+    "key": "test_healthy",
+    "text": "Բայց կա նաև 990 առողջ մարդ։ Նրանց մեկ տոկոսը՝ մոտ տասը մարդ, նույնպես դրական պատասխան է ստանում։ Սրանք կեղծ դրական պատասխաններ են։",
+    "visual": "10 grey dots scattered over the grid get orange rings. Counter: 'դրական՝ 20'. Label 'կեղծ դրական' next to one of them."
+  },
+  {
+    "key": "reveal",
+    "text": "Հիմա հավաքենք դրական պատասխան ստացած բոլոր մարդկանց։ Քսան մարդ։ Նրանցից հիվանդ է միայն տասը։ Այսինքն՝ քո դրական պատասխանը նշանակում է ոչ թե 99, այլ 50 տոկոս։",
+    "visual": "The 20 ringed dots fly out of the grid into a 2 x 10 row of large person icons: 10 red, 10 grey; the rest of the grid dims. Big '10 / 20 = 50%'."
+  },
+  {
+    "key": "why",
+    "text": "Պատճառը պարզ է։ Առողջները 99 անգամ ավելի շատ են, քան հիվանդները։ Թեստի փոքր՝ մեկ տոկոս սխալը կիրառվում է հսկայական խմբի վրա։",
+    "visual": "Grid splits into two blocks: 990 grey vs 10 red. A 1% slice of the grey block (10 dots) lights up and slides next to the red block: the same size."
+  },
+  {
+    "key": "rarer",
+    "text": "Իսկ եթե հիվանդությունն ավելի հազվադեպ է՝ հազարից մեկ։ Թեստը նույնն է։ Հիվանդ է մեկ մարդ, իսկ կեղծ դրական պատասխան ստանում է մոտ տասը առողջ։ Դրական պատասխանը ճիշտ է տասնմեկից մեկ անգամ՝ մոտ 9 տոկոս։",
+    "screen": "հազարից 1 հիվանդ",
+    "visual": "Grid resets: only 1 red dot; scan; 1 red + 10 grey ringed; pulled out: 1 red and 10 grey icons. Big '1 / 11 ≈ 9%'."
+  },
+  {
+    "key": "doctors",
+    "text": "Սա միայն տեսական խնդիր չէ։ 2007 թվականին 160 գինեկոլոգի տվել են նման հարց՝ կրծքագեղձի քաղցկեղի սկրինինգի մասին։ Ճիշտ է պատասխանել միայն ամեն հինգերորդը։ Իսկ մեկ ժամվա դասից հետո, երբ թվերը բացատրել են մարդկանց քանակով, ճիշտ են պատասխանել 87 տոկոսը։",
+    "screen": "160 գինեկոլոգ",
+    "screen_small": "Gigerenzer et al., 2007",
+    "visual": "160 doctor icons (16 x 10); 21% (34) light up orange, the rest grey; then a second state with 87% lit. Small source line."
+  },
+  {
+    "key": "retest",
+    "text": "Ի՞նչ անել։ Առաջինը՝ կրկնել թեստը, ավելի լավ է՝ ուրիշ մեթոդով։ Քսան դրականներին նորից ստուգենք։ Հիվանդները նորից դրական են, իսկ տասը առողջներից երկրորդ անգամ դրական պատասխան համարյա ոչ ոք չի ստանում։ Երկու դրական պատասխանից հետո հավանականությունը մոտ 99 տոկոս է։ Դրա համար էլ, օրինակ, ՄԻԱՎ-ի դրական թեստը միշտ հաստատում են ուրիշ թեստերով։",
+    "visual": "Back to the 20 icons; a second scan; the 10 grey icons lose their rings, the 10 red keep them. Big '≈ 99%'. Small 'ՄԻԱՎ' card at the end."
+  },
+  {
+    "key": "symptoms",
+    "text": "Երկրորդը՝ կարևոր է, թե ով է թեստ անում։ Եթե ախտանիշներ ունես, դու այլևս «հարյուրից մեկը» չես։ Ասենք՝ ախտանիշներ ունեցողներից հիվանդ է ամեն տասներորդը։ Այդ դեպքում նույն դրական պատասխանը նշանակում է մոտ 92 տոկոս։",
+    "visual": "New grid: 100 red of 1,000; scan: 99 red ringed + 9 grey ringed; '99 / 108 ≈ 92%'."
+  },
+  {
+    "key": "formula",
+    "text": "Այս ամենի հետևում Բայեսի բանաձևն է։ Սկսիր նրանից, թե որքան տարածված է հիվանդությունը, հետո թարմացրու այն թեստի պատասխանով։",
+    "screen": "Բայեսի բանաձև",
+    "visual": "Formula card for ~4 s: P(D | +) = P(+ | D) · P(D) / P(+), legend 'D՝ հիվանդ է, +՝ թեստը դրական է', and under it '= 10 / 20 = 50%'."
+  },
+  {
+    "key": "takeaway",
+    "text": "Այնպես որ, երբ հաջորդ անգամ լսես «99 տոկոսով ճշգրիտ», հարցրու՝ իսկ որքա՞ն հազվադեպ է այն, ինչ փնտրում ենք։",
+    "screen": "Որքա՞ն հազվադեպ է այն, ինչ փնտրում ենք",
+    "visual": "Big karaoke text over the faint 1,000-dot grid with the 10 red dots; last frame close to the first for a loop."
+  }
+]
