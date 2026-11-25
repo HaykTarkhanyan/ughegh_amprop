@@ -1,0 +1,46 @@
+[
+  {
+    "key": "hook",
+    "text": "Ինքդ հավաքած դարակը քո աչքում ավելի թանկ է, քան նույն դարակը՝ պատրաստի։ Եվ դա չափել են փողով։",
+    "visual": "Frame 0: two identical shelves; the left one has a screwdriver and a price tag that keeps rising, the right one a fixed tag."
+  },
+  {
+    "key": "boxes",
+    "text": "Փորձի մասնակիցների մի մասը հավաքեց Իկեայի պարզ արկղ, մյուսներին տվեցին նույն արկղը՝ արդեն հավաքված։ Հետո հարցրին՝ որքա՞ն կվճարեիք դրա համար։ Հավաքողները պատրաստ էին վճարել 63 տոկոսով ավելի։",
+    "screen_small": "Norton, Mochon & Ariely, 2012",
+    "visual": "Two groups of dots: one assembles flat-pack boxes (pieces snap together), one receives finished boxes; their bids rise as bars, the builders' bar 63% taller."
+  },
+  {
+    "key": "origami",
+    "text": "Օրիգամիով փորձն ավելի ծիծաղելի էր։ Սկսնակներն իրենց ծռմռված թղթե գորտերը գնահատում էին գրեթե այնքան, որքան վարպետների պատրաստածը։ Իսկ կողքից նայողների համար դրանք գրեթե ոչինչ չարժեին։",
+    "pause_after": 1.5,
+    "visual": "A lopsided paper frog next to an elegant expert crane; the maker's price tag for the frog almost matches the crane's; an onlooker's tag for the frog drops to almost nothing."
+  },
+  {
+    "key": "finish",
+    "text": "Բայց կա պայման՝ գործը պետք է ավարտին հասցնես։ Երբ մարդիկ արկղը հավաքում էին ու հետո քանդում, կամ կիսատ էին թողնում, էֆեկտն անհետանում էր։",
+    "visual": "The builders' bar from beat 2 shrinks back when a box is taken apart or left half-built."
+  },
+  {
+    "key": "why",
+    "text": "Ինչո՞ւ է այդպես։ Ջանքը մեզ համար արժեքի նշան է։ Ավարտված գործն ապացույց է, որ կարող ենք։ Եվ իրը դառնում է մի փոքր «ես»։ Մյունխենի հետազոտողները կրկնեցին փորձը և գտան նույնը՝ մարդիկ հավաքած իրը զգում են որպես իրենցը։",
+    "screen_small": "Sarstedt, Neubert & Barth, 2017",
+    "visual": "Effort drops (sweat beads) fill the box with orange; a small mirror on its side shows the maker's silhouette."
+  },
+  {
+    "key": "cake",
+    "text": "Հաճախ պատմում են, որ հիսունականներին պատրաստի տորթի խառնուրդը վատ էր վաճառվում, մինչև արտադրողները չոր ձուն հանեցին, որ գնողն ինքը թարմ ձու ավելացնի։ Գեղեցիկ պատմություն է, բայց պատմաբանները կասկածում են՝ մրցակիցը չոր ձվով խառնուրդ էր վաճառում, և լավ էլ վաճառում էր։",
+    "visual": "A 1950s-style cake box; an egg cracks into the bowl; a stamp 'լեգենդ' lands; a rival box with 'dried egg inside' keeps selling (a rising sales line)."
+  },
+  {
+    "key": "trap",
+    "text": "Նույն միտումը կա նաև գաղափարների հետ։ Ձեռնարկատերը գերագնահատում է իր բիզնես ծրագիրը, ծրագրավորողը՝ իր կոդը, պապը՝ իր ձեռքով սարքած ցանկապատը, որը ծուռ է, բայց իր կարծիքով հարևանինից լավն է։",
+    "visual": "Three quick vignettes with the same rising price tag: a pitch deck, a screen of code, and a crooked village fence with a proud grandfather beside it."
+  },
+  {
+    "key": "takeaway",
+    "text": "Երբ քո ձեռքով արածը քեզ շատ լավն է թվում, դա ճիշտ է՝ քեզ համար։ Մյուսների համար այն պարզ արկղ է։",
+    "screen": "Քեզ համար՝ գլուխգործոց, մյուսների համար՝ արկղ",
+    "visual": "The self-built shelf from the hook, glowing for its maker; to an onlooker's eyes it turns plain; loops."
+  }
+]
