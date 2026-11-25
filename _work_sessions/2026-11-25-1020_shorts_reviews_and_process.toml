@@ -18,9 +18,12 @@ done = [
   "Short 2 (Bayes, '99% accurate test'): Hayk Q11 medical test only, Q12 crowd of 1,000 dots, Q13 brief formula card, Q14 2-3 min. Wrote 03_shorts/bayes_test/beats.hy.json (14 beats, 2,182 chars, ~150 s) and PLAN.md (structure, verified numbers 50% / 9% / 92% / 99%, visuals, sources, review points U-a..U-d); lint 0 errors; opened as HTML for comments. Facts: Gigerenzer 2007 gynecologists (21% right, 87% after natural frequencies; 150 vs 160 ambiguity kept out of the script) from 3 Gigerenzer-written accounts (paper 403 to fetchers); HIV confirmation with other tests (CDC/APHL, WHO three-test strategy). No voice made: Hayk reviews the script first",
   "Short 3 (Simpson's paradox), Bayes choices reused without asking: 03_shorts/simpson/beats.hy.json (13 beats, 2,101 chars, ~145 s) and PLAN.md. Kidney stones (Charig 1986: 78% vs 83% overall, 93/87 and 73/69 by size) as the dot example, Berkeley 1973 (department table verified against R's UCBAdmissions counts; Berkeley was not sued), COVID Italy vs China 2020 (qualitative, no Italian numbers read), rule beat with the 'split by causes before the treatment' exception. Lint 0 errors. Review points U-e..U-h",
   "Short 4 (regression to the mean: praise 'fails', punishment 'works'): 03_shorts/regression/beats.hy.json (14 beats, 2,294 chars, ~158 s), PLAN.md, simulate.py (seed 509: best 50 fall 92 -> 82, worst 50 rise 47 -> 59, best of test 2 had 81 on test 1). Kahneman's flight instructors (TF&S ch. 17; Tversky & Kahneman 1974), Galton 1886 (2/3; family counts not confirmed, left out); Commons portraits found. Lint 0 errors. Review points U-i..U-l",
+  "Short 5 (waiting): 03_shorts/waiting/beats.hy.json (12 beats, 2,301 chars, ~159 s), PLAN.md, simulate_lines.py (your line fastest 10 of 30; 0.335 long run). Houston story told as unverified; Maister 1985 rules; Disney posted vs actual ~2/3 (TouringPlans); interactive queues confirmed; Hornik's 36% left out. Review points U-m..U-o",
 ]
 
 pending = [
+  "Waiting short: Hayk reviews 03_shorts/waiting/PLAN.html (U-m..U-o)",
+  "Six more topics asked (QWERTY, own voice on recordings, contagious yawning, Stanislav Petrov 1983, public-key crypto with paint, friendship paradox); Hayk: lean into nice animation, install what is needed",
   "Regression short: Hayk reviews 03_shorts/regression/PLAN.html (script + U-i..U-l)",
   "Simpson short: Hayk reviews 03_shorts/simpson/PLAN.html (script + U-e..U-h)",
   "Bayes short: Hayk reviews 03_shorts/bayes_test/PLAN.html (script + U-a..U-d), then voice, crowd-grid component, render",
