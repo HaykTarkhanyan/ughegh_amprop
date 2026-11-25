@@ -1,0 +1,77 @@
+[
+  {
+    "key": "hook",
+    "text": "Գովում ես՝ հաջորդ անգամ ավելի վատ է ստացվում։ Նախատում ես՝ ավելի լավ։ Ուրեմն նախատինքն ավելի արդյունավե՞տ է, քան գովասանքը։",
+    "visual": "Split screen: a thumbs-up followed by a falling arrow, a frowning face followed by a rising arrow. Frame 0 shows the question."
+  },
+  {
+    "key": "kahneman",
+    "text": "1960-ականներին հոգեբան Դանիել Քանեմանը դասախոսում էր իսրայելցի օդաչու-հրահանգիչների համար և ասում, որ գովասանքն ավելի արդյունավետ է, քան պատիժը։ Հրահանգիչներից մեկն առարկեց՝ երբ կուրսանտին գովում եմ լավ թռիչքի համար, հաջորդը սովորաբար ավելի վատ է լինում, իսկ երբ գոռում եմ վատ թռիչքից հետո, հաջորդն ավելի լավ է։",
+    "screen": "Դանիել Քանեման",
+    "visual": "Portrait card (Commons, if a free photo exists) with the name; then a simple plane icon doing a smooth loop, a thumbs-up, a wobbly loop."
+  },
+  {
+    "key": "right",
+    "text": "Հրահանգիչը ճիշտ էր նկատել, բայց սխալ էր բացատրել։",
+    "visual": "Two stamps: 'նկատել՝ ✓' and 'բացատրել՝ ✗'."
+  },
+  {
+    "key": "luck",
+    "text": "Ամեն թռիչք կախված է երկու բանից՝ հմտությունից և բախտից։ Շատ լավ թռիչքը սովորաբար լավ հմտություն է՝ գումարած հաջողություն։ Հաջորդ անգամ հմտությունը մնում է, իսկ բախտը՝ ոչ։",
+    "visual": "A score bar made of two parts: a solid 'հմտություն' block and a flickering 'բախտ' block; on the next try the skill block stays, the luck block is redrawn smaller."
+  },
+  {
+    "key": "setup",
+    "text": "Ստուգենք համակարգչով։ Հազար ուսանող նույն քննությունը գրում է երկու անգամ։ Ամեն գնահատական հմտություն է՝ գումարած պատահականություն, և ոչ ոքի չենք գովում ու չենք նախատում։",
+    "screen": "1000 ուսանող",
+    "visual": "1,000 dots stacked into a histogram over a score axis (40-100) by their first-test scores (regression/build/simulation.json)."
+  },
+  {
+    "key": "top",
+    "text": "Առաջին քննության լավագույն հիսունի միջինը 92 էր։ Երկրորդ անգամ՝ 82։ Նրանց մեծ մասն ավելի վատ գրեց, թեև ոչ ոք նրանց չգովեց։",
+    "visual": "The top 50 dots turn orange (mean marker at 92). The dots fly to their second-test positions: the orange cloud slides towards the middle, marker 82."
+  },
+  {
+    "key": "bottom",
+    "text": "Իսկ ամենաթույլ հիսունը 47-ից բարձրացավ 59-ի, թեև ոչ ոք նրանց չնախատեց։",
+    "visual": "The bottom 50 turn red on the first-test histogram (marker 47) and slide towards the middle on the second (marker 59)."
+  },
+  {
+    "key": "reverse",
+    "text": "Եվ ամենահետաքրքիրը։ Եթե ընտրենք երկրորդ քննության լավագույն հիսունին, նրանց միջինն այստեղ 93 է, իսկ առաջին քննությունում՝ ընդամենը 81։ Բախտը չգիտի, թե որն է առաջինը, որը՝ երկրորդը։",
+    "visual": "Re-tag: the top 50 of test 2 glow; the animation runs backwards to test 1 and their cloud again slides towards the middle (93 -> 81)."
+  },
+  {
+    "key": "praise",
+    "text": "Հիմա հրահանգչի պատմությունը պարզ է։ Գովասանքը գալիս էր ամենալավ թռիչքներից հետո, որոնց սովորաբար հաջորդում են ավելի միջինները։ Նախատինքը՝ ամենավատերից հետո, որոնց հաջորդում են ավելի լավերը։ Այսպես թվերը մեզ «պատժում» են բարի լինելու համար և «պարգևատրում»՝ խիստ լինելու համար։",
+    "visual": "Timeline of 12 flights as dots on a line around an average; praise icons on the peaks followed by drops, scolding icons on the dips followed by rises."
+  },
+  {
+    "key": "galton",
+    "text": "Երևույթն առաջինը նկարագրեց Ֆրենսիս Գալթոնը 1886 թվականին։ Բարձրահասակ ծնողների երեխաները նույնպես բարձր են, բայց սովորաբար ոչ այնքան, որքան ծնողները։ Կարճահասակներինը՝ կարճ, բայց ավելի մոտ միջինին։ Գալթոնը սա անվանեց ռեգրեսիա, այսինքն՝ հետ գնալ դեպի միջինը։",
+    "screen": "Ֆրենսիս Գալթոն, 1886",
+    "visual": "Galton portrait (public domain, Commons); parent and child silhouettes: tall parents with a tall-but-shorter child, short parents with a short-but-taller child, an average line across."
+  },
+  {
+    "key": "everyday",
+    "text": "Նույնը շատ տեղերում է։ Մարդը բժշկի է գնում, երբ ամենավատ վիճակում է, և ցանկացած միջոց կարող է թվալ, թե օգնեց։ Մարզչին փոխում են ամենավատ մրցաշրջանից հետո, և նոր մարզիչը հերոս է թվում։",
+    "visual": "Two quick vignettes: a symptom curve peaking at the doctor's visit then easing; a team's results dipping, a coach swap marker, then results rising."
+  },
+  {
+    "key": "check",
+    "text": "Ինչպե՞ս իմանալ՝ իրո՞ք գովասանքն է, թե միայն միջինին վերադարձը։ Պետք է համեմատել նրանց հետ, ում ոչ գովել են, ոչ նախատել։ Եթե նրանք էլ նույն կերպ են փոխվել, գործը բախտինն էր։",
+    "visual": "Two groups after a bad result: 'նախատել են' and 'ոչինչ չեն ասել'; both rise by the same amount."
+  },
+  {
+    "key": "card",
+    "text": "Կարճ ասած՝ արդյունքը հմտություն է՝ գումարած բախտ։ Ծայրահեղ արդյունքից հետո սպասիր ավելի միջին արդյունքի։",
+    "screen": "արդյունք = հմտություն + բախտ",
+    "visual": "Card: 'արդյունք = հմտություն + բախտ' and a small arrow from an extreme dot back towards the average."
+  },
+  {
+    "key": "takeaway",
+    "text": "Այնպես որ, երբ թվում է, թե նախատինքն օգնում է, իսկ գովասանքը՝ վնասում, հարցրու՝ իսկ առանց դրանց ի՞նչ կլիներ։",
+    "screen": "Իսկ առանց դրանց ի՞նչ կլիներ",
+    "visual": "Big karaoke text over the faint histogram; last frame close to the first for a loop."
+  }
+]
