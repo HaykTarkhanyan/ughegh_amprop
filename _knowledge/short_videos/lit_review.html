@@ -1,0 +1,534 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Programmatic short videos: tools review</title><style>
+:root { color-scheme: light dark; --text: #1f2328; --muted: #59636e; --line: #d1d9e0; --soft: #f6f8fa; --link: #0033a0; }
+@media (prefers-color-scheme: dark) { :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --soft: #161b22; --link: #79a6ff; } }
+body { margin: 0 auto; max-width: 980px; padding: 24px 16px 64px; color: var(--text); background: Canvas;
+       font: 16px/1.6 system-ui, "Segoe UI", sans-serif; }
+a { color: var(--link); }
+nav { background: var(--soft); border: 1px solid var(--line); border-radius: 8px; padding: 10px 18px; margin: 16px 0 24px; }
+details { border-top: 1px solid var(--line); padding: 8px 0; }
+summary { cursor: pointer; font-size: 1.3em; font-weight: 650; padding: 4px 0; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .94em; }
+th, td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: var(--soft); }
+code { background: var(--soft); border-radius: 4px; padding: 1px 5px; font-size: .9em; }
+pre { background: var(--soft); border-radius: 6px; padding: 12px; overflow-x: auto; }
+pre code { padding: 0; }
+img { max-width: 100%; }
+</style></head><body><h1 id="programmatic-short-videos-tools-review">Programmatic short videos: tools review</h1>
+<p>Date: 2026-11-25. Scope: short vertical videos for YouTube Shorts, Instagram Reels and TikTok about thinking errors (first idea: survivorship bias, with local examples such as "Soviet fridges still work, so Soviet things were better"). "Made with AI" here means: Claude (or Gemini) writes the script and the code, and the code renders the video. No AI-generated images or AI video (Veo and the like); that is out of scope by Hayk's choice.</p>
+<p>Hayk's answers that set the scope (Q1-Q6, 2026-11-25):</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1</td>
+<td>Language</td>
+<td>Armenian only</td>
+</tr>
+<tr>
+<td>Q2</td>
+<td>Look</td>
+<td>Code-drawn animation mixed with real photos (animated: zoom, pan, highlight)</td>
+</tr>
+<tr>
+<td>Q3</td>
+<td>How automated</td>
+<td>Claude Code in-session: topic in, Claude writes script and scene code, renders, checks; Hayk reviews</td>
+</tr>
+<tr>
+<td>Q4</td>
+<td>Posting</td>
+<td>Manual upload for now</td>
+</tr>
+<tr>
+<td>Q5</td>
+<td>Where</td>
+<td>This repo: review in <code>_knowledge/short_videos/</code>, production later in <code>03_shorts/</code></td>
+</tr>
+<tr>
+<td>Q6</td>
+<td>Look</td>
+<td>A new look, not the webinar branding (no brain mascot, no plum/cream)</td>
+</tr>
+</tbody>
+</table></div>
+<p>How sure each claim is:</p>
+<ul>
+<li><strong>[L]</strong> checked live today on this machine (PyPI, npm, GitHub API, local ffmpeg)</li>
+<li><strong>[S]</strong> from web search summaries today; the page itself was not read in full, so treat numbers as approximate</li>
+<li><strong>[Q]</strong> from the earlier research in <code>sample_problems_qysu/_knowledge/manim_llm_video/research.md</code> (2026-11-24), not repeated here</li>
+<li><strong>[U]</strong> my inference, not verified</li>
+</ul>
+<hr />
+<nav><strong>Contents</strong><ul><li><a href="#contents">Contents</a></li><li><a href="#1-short-answer">1. Short answer</a></li><li><a href="#2-what-is-already-working-the-qysu-pipeline">2. What is already working (the qysu pipeline)</a></li><li><a href="#3-the-rendering-framework-the-fundamental-choice">3. The rendering framework (the fundamental choice)</a></li><li><a href="#4-armenian-voice">4. Armenian voice</a></li><li><a href="#5-captions-armenian-word-by-word">5. Captions (Armenian, word by word)</a></li><li><a href="#6-real-photos-and-footage">6. Real photos and footage</a></li><li><a href="#7-format-size-safe-zones-length-hook">7. Format: size, safe zones, length, hook</a></li><li><a href="#8-music-and-sound">8. Music and sound</a></li><li><a href="#9-checking-a-finished-video">9. Checking a finished video</a></li><li><a href="#10-platform-rules-monetization-ai-labels-posting-apis">10. Platform rules: monetization, AI labels, posting APIs</a></li><li><a href="#11-ruled-out-and-why">11. Ruled out and why</a></li><li><a href="#12-content-note-the-soviet-fridge-example">12. Content note: the Soviet fridge example</a></li><li><a href="#13-costs-per-video">13. Costs per video</a></li><li><a href="#14-open-decisions-and-next-step">14. Open decisions and next step</a></li><li><a href="#15-sources">15. Sources</a></li></ul></nav><details open id="contents"><summary>Contents</summary>
+<ol type="1">
+<li><a href="#1-short-answer">Short answer</a></li>
+<li><a href="#2-what-is-already-working-the-qysu-pipeline">What is already working (the qysu pipeline)</a></li>
+<li><a href="#3-the-rendering-framework-the-fundamental-choice">The rendering framework (the fundamental choice)</a></li>
+<li><a href="#4-armenian-voice">Armenian voice</a></li>
+<li><a href="#5-captions-armenian-word-by-word">Captions (Armenian, word by word)</a></li>
+<li><a href="#6-real-photos-and-footage">Real photos and footage</a></li>
+<li><a href="#7-format-size-safe-zones-length-hook">Format: size, safe zones, length, hook</a></li>
+<li><a href="#8-music-and-sound">Music and sound</a></li>
+<li><a href="#9-checking-a-finished-video">Checking a finished video</a></li>
+<li><a href="#10-platform-rules-monetization-ai-labels-posting-apis">Platform rules: monetization, AI labels, posting APIs</a></li>
+<li><a href="#11-ruled-out-and-why">Ruled out and why</a></li>
+<li><a href="#12-content-note-the-soviet-fridge-example">Content note: the Soviet fridge example</a></li>
+<li><a href="#13-costs-per-video">Costs per video</a></li>
+<li><a href="#14-open-decisions-and-next-step">Open decisions and next step</a></li>
+<li><a href="#15-sources">Sources</a></li>
+</ol>
+<hr />
+</details><details open id="1-short-answer"><summary>1. Short answer</summary>
+<ul>
+<li>The voice is solved: the qysu pipeline already makes Armenian narration with Gemini TTS (voice Sadaltager), one WAV per sentence, with a cost ledger. About $0.01 per 45 s of speech. <strong>[Q]</strong></li>
+<li>The open question is <strong>what renders the picture</strong>. Three realistic candidates:
+<ul>
+<li><strong>Remotion</strong> (React/TypeScript, mature, free for one person, official Claude Code skills, built-in TikTok-style captions). My pick for this look.</li>
+<li><strong>HyperFrames</strong> (HeyGen, plain HTML/CSS, Apache 2.0, built for coding agents, but only 7 months old and pre-1.0). Close second.</li>
+<li><strong>Manim</strong> (already set up, great for math diagrams, but weak at photos, typography and kinetic captions).</li>
+</ul></li>
+<li>Armenian <strong>word-by-word captions</strong> are the hardest part: Whisper-based aligners are weak on Armenian. Because we have the exact text the voice reads, we do not need speech recognition, only timing. Start with timing spread by character count inside each sentence; move to forced alignment (MMS) if it drifts visibly.</li>
+<li>Posting by API is real work: YouTube and TikTok keep API uploads <strong>private</strong> until the app passes an audit. Manual upload (Q4) is the right start.</li>
+<li>YouTube does not pay for "mass-produced, template" videos (inauthentic content policy). Fine for us as long as each short has its own script and a real point of view; risky if we churn near-identical clones.</li>
+</ul>
+<hr />
+</details><details open id="2-what-is-already-working-the-qysu-pipeline"><summary>2. What is already working (the qysu pipeline)</summary>
+<p>In <code>~/OneDrive/Desktop/misc/sample_problems_qysu/animations/</code> <strong>[L]</strong>:</p>
+<ul>
+<li><code>tools/tts_gemini.py beats narration/&lt;scene&gt;.hy.json media/narration/&lt;scene&gt;/</code>: one WAV per beat, reuses unchanged beats, writes <code>manifest.json</code> with durations, logs cost to <code>tts_ledger.csv</code>. Standard library only, no SDK.</li>
+<li>Model <code>gemini-3.8-flash-tts</code>, voice Sadaltager (picked after a listening test on 2026-11-24, qysu DECISIONS #29), style prompt "calm university lecturer".</li>
+<li><code>scenes/narration.py</code> (<code>NarratedScene</code>): <code>self.say("key")</code> ... <code>self.finish_beat()</code> syncs Manim animations to the clips and writes an <code>.srt</code>.</li>
+<li><code>tools/render_check.py</code>: renders, prints the failing line, makes a contact sheet of frames.</li>
+<li>Manim CE 0.22.1 in a uv venv with Python 3.12; system ffmpeg 5.1.2 is on PATH. <strong>[L]</strong></li>
+<li>The first narrated prototype (Cantor staircase, 76 s) works.</li>
+</ul>
+<p>What carries over to shorts no matter which framework wins: the beats JSON format, <code>tts_gemini.py</code>, the ledger, the key handling, the contact-sheet check. The beats JSON plus <code>manifest.json</code> (durations) is a clean hand-off point: any renderer can read it.</p>
+<p>What does not carry over well: the house style (dark background, 16:9, lecturer pace) and Manim itself, if the new look needs real typography and photos (section 3).</p>
+<hr />
+</details><details open id="3-the-rendering-framework-the-fundamental-choice"><summary>3. The rendering framework (the fundamental choice)</summary>
+<p>This is a "fundamental" choice in the CLAUDE.md sense: every scene, template and helper will be written in it, so switching later means rewriting them. Not decided here.</p>
+<h3 id="31-candidates">3.1 Candidates</h3>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Language</th>
+<th>Version, last activity</th>
+<th>Licence</th>
+<th>Photos / video clips</th>
+<th>Text and Armenian fonts</th>
+<th>Captions</th>
+<th>Agent support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Remotion</strong></td>
+<td>React + TypeScript, renders in headless Chrome</td>
+<td>npm <code>remotion</code> 4.0.547 (24 Nov 2026), 75.5k stars, pushed daily <strong>[L]</strong></td>
+<td>Own licence: free for individuals and teams up to 3; companies pay ($25/seat/month or $0.01/render) <strong>[S]</strong></td>
+<td><code>&lt;Img&gt;</code>, <code>&lt;OffthreadVideo&gt;</code>, CSS transforms: trivial</td>
+<td>Any web font via CSS, so any Armenian font; real text layout (wrapping, kerning) <strong>[U]</strong></td>
+<td><code>@remotion/captions</code> 4.0.547 <strong>[L]</strong> with TikTok-style word-highlight pages <strong>[S]</strong></td>
+<td>Official Agent Skills for Claude Code since Jan 2026 (<code>npx skills add remotion-dev/skills</code>, 8k stars) <strong>[L][S]</strong></td>
+</tr>
+<tr>
+<td><strong>HyperFrames</strong> (HeyGen)</td>
+<td>Plain HTML + CSS + JS with seekable animations, headless Chrome + FFmpeg</td>
+<td>npm <code>hyperframes</code> 0.9.92 (25 Nov 2026), 89.6k stars, launched Apr 2026 <strong>[L][S]</strong></td>
+<td>Apache 2.0, no render fees <strong>[L]</strong></td>
+<td>Native HTML media</td>
+<td>Any web font via CSS <strong>[U]</strong></td>
+<td>Kinetic-caption blocks in its catalog <strong>[S]</strong></td>
+<td>Built for agents: skills for plan, write, lint, preview, render; a <code>/remotion-to-hyperframes</code> port skill <strong>[L]</strong></td>
+</tr>
+<tr>
+<td><strong>Manim CE</strong></td>
+<td>Python</td>
+<td>0.22.1 (27 Oct 2026), 42.9k stars <strong>[L]</strong></td>
+<td>MIT</td>
+<td><code>ImageMobject</code> works, but no video clips inside a scene and photo effects are manual <strong>[U]</strong></td>
+<td>Pango <code>Text</code>; Arial for Armenian; no real paragraph layout <strong>[Q]</strong></td>
+<td>Hand-built per word</td>
+<td>No official skill; our own <code>AUTHORING.md</code> + cheat sheet in qysu <strong>[Q]</strong></td>
+</tr>
+<tr>
+<td><strong>Revideo</strong></td>
+<td>TypeScript (Motion Canvas fork with headless render)</td>
+<td><code>@revideo/core</code> 0.11.0 (Jul 2026), 4.2k stars, now under <code>midrender</code> <strong>[L]</strong></td>
+<td>MIT</td>
+<td>Yes</td>
+<td>Canvas text <strong>[U]</strong></td>
+<td>Manual</td>
+<td>None found</td>
+</tr>
+<tr>
+<td><strong>Motion Canvas</strong></td>
+<td>TypeScript</td>
+<td>3.17.2 (Feb 2025), last push Jul 2026 <strong>[L]</strong></td>
+<td>MIT</td>
+<td>Yes</td>
+<td>Canvas text</td>
+<td>Manual</td>
+<td>None; no headless render (button in the editor) <strong>[S]</strong></td>
+</tr>
+<tr>
+<td><strong>MoviePy</strong></td>
+<td>Python</td>
+<td>2.2.1 (May 2025, no release since) <strong>[L]</strong></td>
+<td>MIT</td>
+<td>Good for cutting/compositing clips</td>
+<td>PIL/ImageMagick text, clunky</td>
+<td>Manual</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Plain ffmpeg + ASS subtitles</strong></td>
+<td>CLI</td>
+<td>ffmpeg 5.1.2 local <strong>[L]</strong></td>
+<td>LGPL/GPL</td>
+<td>Ken Burns via <code>zoompan</code></td>
+<td>libass renders any installed font; karaoke tags (<code>\k</code>) for word highlight <strong>[U]</strong></td>
+<td>Yes, ASS karaoke</td>
+<td>None; filter graphs get unreadable fast</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="32-how-they-fit-this-project">3.2 How they fit this project</h3>
+<ul>
+<li><strong>Remotion</strong>: the closest fit for "animation + photos + big bold Armenian captions". Mature (4.x for years), large community, deterministic renders, a captions package made for exactly this format, and official skills for the agent we use. Costs: a Node/React project in a repo that is otherwise Python and LaTeX; Chrome-based rendering is heavier than Manim. Remotion renders frames in parallel; on this 4-core laptop it must be capped (<code>--concurrency=2</code>) or it will load every core <strong>[U]</strong>: check the default on the first render.</li>
+<li><strong>HyperFrames</strong>: same rendering idea (HTML in headless Chrome), but plain HTML/CSS instead of React, which agents write very reliably, and Apache 2.0. The worry is age: launched April 2026, still 0.9.x, roadmap tied to HeyGen's paid Studio app ($25/month Pro). Expect breaking changes. The star count (89.6k in 7 months) says hype, not stability.</li>
+<li><strong>Manim</strong>: keep it for math-heavy scenes (it is excellent there), not as the base for shorts. Photos, video clips, paragraph text and kinetic captions all fight the tool. If a short ever needs a Manim diagram, render it as a clip and drop it into the main framework <strong>[U]</strong>.</li>
+<li><strong>Revideo / Motion Canvas / MoviePy</strong>: no reason to pick them over the above. Revideo's future follows a commercial editor; Motion Canvas has no headless render; MoviePy's last release is 18 months old.</li>
+</ul>
+<h3 id="33-what-would-flip-the-pick">3.3 What would flip the pick</h3>
+<ul>
+<li>If a one-hour <strong>bake-off</strong> (same 20 s fridge script in Remotion and HyperFrames, in session) shows HyperFrames' skills give clearly better first drafts with less fixing, pick HyperFrames.</li>
+<li>If the shorts become a team or company effort with more than 3 people, Remotion needs a paid licence; HyperFrames does not.</li>
+<li>If Hayk wants to stay in Python only, Manim + ffmpeg is the fallback, accepting weaker captions and photo work.</li>
+</ul>
+<hr />
+</details><details open id="4-armenian-voice"><summary>4. Armenian voice</summary>
+<p>Covered in depth in the qysu research (section 3.3) <strong>[Q]</strong>. Summary for shorts:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Engine</th>
+<th>Armenian</th>
+<th>Cost</th>
+<th>Word timings</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gemini 3.8 Flash TTS</strong> (current)</td>
+<td>Yes</td>
+<td>~<span class="math inline">0.0135/<em>m</em><em>i</em><em>n</em>; <em>F</em><em>l</em><em>a</em><em>s</em><em>h</em> − <em>L</em><em>i</em><em>t</em><em>e</em> </span>0.009/min; free tier ~10 calls/day</td>
+<td>Not documented</td>
+<td>Style is steerable by prompt. Prices "roughly double" from 2027-01-01 <strong>[Q]</strong></td>
+</tr>
+<tr>
+<td><strong>Azure AI Speech</strong> (<code>hy-AM-AnahitNeural</code>, <code>hy-AM-HaykNeural</code>)</td>
+<td>Yes</td>
+<td>~$0.015/min, free 0.5M chars/month</td>
+<td><strong>Native word boundaries</strong></td>
+<td>Older-generation voices; would solve caption timing exactly <strong>[Q]</strong></td>
+</tr>
+<tr>
+<td><strong>ElevenLabs v4/v3</strong></td>
+<td>Yes</td>
+<td>~$0.08/min</td>
+<td>Character timestamps <strong>[U]</strong></td>
+<td>~5x the price</td>
+</tr>
+<tr>
+<td>Edge TTS, Google Cloud TTS classic</td>
+<td><strong>No</strong> Armenian</td>
+<td></td>
+<td></td>
+<td>Ruled out <strong>[Q]</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>For shorts the voice needs more energy than the "calm lecturer" prompt. A quick test: the same 3 sentences in 3-4 Gemini voices with a "lively, fast, storytelling" style prompt, ~$0.05 total. Use the paid key: the free tier allows only ~10 calls a day <strong>[Q]</strong>.</p>
+<hr />
+</details><details open id="5-captions-armenian-word-by-word"><summary>5. Captions (Armenian, word by word)</summary>
+<p>Most short-form viewers start muted, so big on-screen captions are standard <strong>[U]</strong> (widely repeated, not checked). The typical style shows 1-4 words at a time and highlights the word being spoken.</p>
+<h3 id="51-getting-word-timings">5.1 Getting word timings</h3>
+<p>The key fact: we know the exact text, because we wrote it and the TTS read it. So this is <strong>alignment</strong>, not speech recognition.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>How</th>
+<th>Accuracy</th>
+<th>Effort</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A. Sentence timing only</strong></td>
+<td>Each beat's start/end from <code>manifest.json</code> (already there)</td>
+<td>Exact per sentence</td>
+<td>None</td>
+<td>Fine for 1-line subtitles, not for word highlight</td>
+</tr>
+<tr>
+<td><strong>B. Spread by characters</strong></td>
+<td>Inside each sentence, give each word time in proportion to its length (plus a small pause at commas)</td>
+<td>Usually close for TTS, which speaks evenly <strong>[U]</strong></td>
+<td>~30 lines</td>
+<td>Start here; check by watching</td>
+</tr>
+<tr>
+<td><strong>C. Forced alignment (MMS)</strong></td>
+<td><code>ctc-forced-aligner</code> 1.0.2 <strong>[L]</strong> with the MMS-300m model (1,130 languages, tagged <code>hy</code>) <strong>[S]</strong>; Armenian text is romanized with uroman first <strong>[S]</strong></td>
+<td>Word-level, from the audio</td>
+<td>Torch on CPU, ~300M model <strong>[U]</strong></td>
+<td>Repo BSD-2, but the <strong>model weights are CC-BY-NC-4.0</strong> (non-commercial) <strong>[S]</strong>. Armenian accuracy untested</td>
+</tr>
+<tr>
+<td><strong>D. WhisperX</strong></td>
+<td>3.8.6 <strong>[L]</strong>; needs a language-specific wav2vec2 aligner</td>
+<td>Unknown for Armenian</td>
+<td>Medium</td>
+<td>No Armenian aligner confirmed <strong>[S]</strong>; and Whisper's Armenian is weak <strong>[Q]</strong></td>
+</tr>
+<tr>
+<td><strong>E. Azure word boundaries</strong></td>
+<td>Comes free with Azure TTS</td>
+<td>Exact</td>
+<td>Low</td>
+<td>Only if the voice is Azure, not Gemini</td>
+</tr>
+<tr>
+<td><strong>F. Ask Gemini for timestamps</strong></td>
+<td>Send the WAV, ask for per-word times</td>
+<td>Unknown</td>
+<td>Low</td>
+<td><strong>[U]</strong>: not documented, likely loose</td>
+</tr>
+</tbody>
+</table></div>
+<p>Plan: B first, upgrade to C only if the highlight visibly drifts.</p>
+<h3 id="52-drawing-the-captions">5.2 Drawing the captions</h3>
+<ul>
+<li>Remotion: <code>@remotion/captions</code> (<code>createTikTokStyleCaptions</code> groups words into pages) <strong>[S]</strong>, styled with CSS.</li>
+<li>HyperFrames: caption blocks in its catalog <strong>[S]</strong>, styled with CSS.</li>
+<li>Python: <strong>pycaps</strong> (CSS-styled animated captions, word-being-narrated class, MIT, 235 stars, last push Sep 2026) <strong>[L][S]</strong>. Careful: the PyPI name <code>pycaps</code> belongs to an unrelated package from 2017 <strong>[L]</strong>, so install it from GitHub (<code>francozanardi/pycaps</code>).</li>
+<li>ffmpeg/libass: ASS karaoke tags; works with any installed Armenian font <strong>[U]</strong>.</li>
+</ul>
+<p>Armenian-specific check for any of these: the font must have the Armenian glyphs and the punctuation (։ ՝ ՞ « »). The style guide's rules apply to every caption (armenian-style-guide skill).</p>
+<hr />
+</details><details open id="6-real-photos-and-footage"><summary>6. Real photos and footage</summary>
+<p>For the "Soviet fridge" type of local example, the best material is the most local:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>What</th>
+<th>Licence / rules</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Own photos and phone clips</strong></td>
+<td>A fridge in a relative's kitchen, a Yerevan street, a market</td>
+<td>Yours</td>
+<td>Best for the local angle and the most authentic, which also helps with YouTube's policy (section 10) <strong>[U]</strong></td>
+</tr>
+<tr>
+<td><strong>Wikimedia Commons</strong></td>
+<td>Historical photos, Soviet products, Wald's bomber diagram</td>
+<td>Per-file licence (mostly CC BY, CC BY-SA, public domain); credit line = author + licence <strong>[S]</strong></td>
+<td>The API (<code>imageinfo</code> + <code>extmetadata</code>) returns the licence and author, so the credit line in the video description can be generated <strong>[S]</strong></td>
+</tr>
+<tr>
+<td><strong>Pexels API</strong></td>
+<td>Generic stock photos and video B-roll</td>
+<td>Free, commercial use OK; API apps must show a link to Pexels; 200 requests/hour, 20,000/month <strong>[S]</strong></td>
+<td>Logos/trademarks in a shot need care <strong>[S]</strong>; generic look</td>
+</tr>
+<tr>
+<td>Pixabay</td>
+<td>Stock photos, video, music</td>
+<td>Not checked <strong>[U]</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Making photos move in code: slow zoom and pan (Ken Burns), a highlight box or arrow on a detail, a split screen ("what we see" vs "what got thrown away"), cut-outs with the background removed (e.g. <code>rembg</code>, local, CPU <strong>[U]</strong>). All four frameworks above can do the first three; HTML-based ones do it with a few lines of CSS.</p>
+<hr />
+</details><details open id="7-format-size-safe-zones-length-hook"><summary>7. Format: size, safe zones, length, hook</summary>
+<ul>
+<li><strong>Canvas:</strong> 1080x1920, 9:16, one master file for all three platforms <strong>[S]</strong>. 30 fps is enough for this style <strong>[U]</strong>.</li>
+<li><strong>Safe zones:</strong> each app covers parts of the frame with its buttons and caption. Published numbers come from ad specs and disagree; one shared "safe everywhere" box is about <strong>900x1400 centred</strong> <strong>[S]</strong>. Shorts has the widest right button column (~192 px) and Reels/Shorts cover more of the bottom (~670 px) than TikTok (~480 px) <strong>[S]</strong>. Rule for our templates: captions and key visuals in the centre band, nothing important in the bottom ~25% or the right ~15%. Check uploads with a safe-zone overlay tool (e.g. Socialync's checker) <strong>[S]</strong>.</li>
+<li><strong>Length:</strong> Shorts allow up to 3 minutes since October 2024 <strong>[S]</strong>. Advice clusters around 20-45 s, and 30-60 s for explainers <strong>[S]</strong> (vendor blogs, not YouTube). For a survivorship-bias explainer, aim for 30-45 s <strong>[U]</strong>.</li>
+<li><strong>Hook:</strong> most drop-off happens in the first 1-3 s; open with the claim or the question, not with an intro <strong>[S]</strong> ("Our grandparents' fridge still works. So why doesn't yours?"). The Shorts feed tests each video on a small audience first and stops if engagement is weak <strong>[S]</strong>.</li>
+<li><strong>Loop:</strong> an ending that leads back into the opening line raises rewatch rate <strong>[S]</strong>.</li>
+</ul>
+<hr />
+</details><details open id="8-music-and-sound"><summary>8. Music and sound</summary>
+<ul>
+<li>Simplest: add a trending sound in the TikTok/Instagram app at upload (manual step, and their library is licensed for use on that platform) <strong>[U]</strong>.</li>
+<li>Free libraries: YouTube Audio Library (manual download), Pixabay Music <strong>[U]</strong>.</li>
+<li>AI music: Google Lyria 3 Clip ~<span class="math inline">0.04<em>p</em><em>e</em><em>r</em>30<em>s</em><em>s</em><em>o</em><em>n</em><em>g</em>, <em>L</em><em>y</em><em>r</em><em>i</em><em>a</em>3<em>P</em><em>r</em><em>o</em>/3.5 </span>0.08 per song, no free tier <strong>[S]</strong>. Not video, so not excluded by Q-scope, but your call.</li>
+<li>Sound effects (whoosh on a zoom, pop on a highlight) help pacing in this format <strong>[U]</strong>; keep a small local folder of free SFX.</li>
+<li>Mix the voice clearly above the music (music around -20 dB under the voice) <strong>[U]</strong>.</li>
+</ul>
+<hr />
+</details><details open id="9-checking-a-finished-video"><summary>9. Checking a finished video</summary>
+<ul>
+<li><strong>Contact sheet</strong> of frames (the qysu <code>render_check.py</code> idea): catches layout bugs, text off-screen, safe-zone problems. Claude reads the image. Free.</li>
+<li><strong>Gemini as a first viewer:</strong> upload the MP4 and ask for a critique of the hook, pacing and clarity, with MM:SS timestamps <strong>[S]</strong>. Default sampling is 1 frame per second <strong>[S]</strong>, so it judges pacing and content, not fast caption flicker. Cost: cents per short <strong>[U]</strong>.</li>
+<li><strong>Hayk on the phone:</strong> the real check. One look at the first 3 seconds and the captions on a phone screen.</li>
+</ul>
+<hr />
+</details><details open id="10-platform-rules-monetization-ai-labels-posting-apis"><summary>10. Platform rules: monetization, AI labels, posting APIs</summary>
+<h3 id="101-youtube-inauthentic-content">10.1 YouTube "inauthentic content"</h3>
+<ul>
+<li>July 2025: YouTube renamed "repetitious content" to "inauthentic content": mass-produced or repetitive videos, including AI-made template content without the creator's own perspective, are not monetized. Reviewers look at the channel as a whole <strong>[S]</strong>.</li>
+<li>July 2026 clarification groups it into: generic/template content, distressing content, and synthetic AI personas on sensitive topics (health, finance) <strong>[S]</strong>.</li>
+<li>Using AI for scripting, editing and graphics is allowed <strong>[S]</strong>.</li>
+<li>What this means for us <strong>[U]</strong>: each short needs its own script, its own example and a point of view (the local angle helps). The danger is not the tools but a channel of 50 shorts that differ only in the word swapped into the template.</li>
+</ul>
+<h3 id="102-ai-labels">10.2 AI labels</h3>
+<ul>
+<li>YouTube auto-labels <strong>photorealistic</strong> AI content since May 2026, even if not disclosed <strong>[S]</strong>. TikTok and Meta label content with C2PA markers and expect disclosure of realistic AI content <strong>[S]</strong>. The EU's labelling duties for AI content start in August 2026 <strong>[S]</strong>.</li>
+<li>Our videos (code-drawn graphics, real photos, a synthetic narrator voice that is nobody's real voice) are not photorealistic synthetic scenes. Whether a TTS narrator alone needs the disclosure tick: <strong>[U]</strong>, check YouTube's help page before the first upload.</li>
+</ul>
+<h3 id="103-posting-by-api-for-later-q4--manual-now">10.3 Posting by API (for later; Q4 = manual now)</h3>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Rule for a new app</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>YouTube Data API</td>
+<td>Uploads from unverified projects created after 28 Jul 2020 are <strong>private</strong> until the project passes an audit; default quota 10,000 units/day; per-upload cost disputed (100 vs 1 unit)</td>
+<td><strong>[S]</strong></td>
+</tr>
+<tr>
+<td>TikTok Content Posting API</td>
+<td>Unaudited apps: all posts <strong>private</strong>, at most 5 users per 24 h, accounts must be private; audit takes days to 2 weeks; ~15 posts/day/creator cap</td>
+<td><strong>[S]</strong></td>
+</tr>
+<tr>
+<td>Instagram Graph API</td>
+<td>Professional account needed; 50 API posts per rolling 24 h; Reels via container then publish</td>
+<td><strong>[S]</strong></td>
+</tr>
+<tr>
+<td>Postiz</td>
+<td>Open-source scheduler (AGPL-3.0, 42k stars) <strong>[L]</strong>; self-hosting still needs our own app approvals on each platform <strong>[S]</strong>; its cloud version uses its approved apps <strong>[U]</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</details><details open id="11-ruled-out-and-why"><summary>11. Ruled out and why</summary>
+<ul>
+<li><strong>AI video and AI images</strong> (Veo 3.1 at ~<span class="math inline">0.05 − 0.40<em>p</em><em>e</em><em>r</em><em>s</em><em>e</em><em>c</em><em>o</em><em>n</em><em>d</em> * *[<em>S</em>] * *, <em>N</em><em>a</em><em>n</em><em>o</em><em>B</em><em>a</em><em>n</em><em>a</em><em>n</em><em>a</em><em>i</em><em>m</em><em>a</em><em>g</em><em>e</em><em>s</em> </span>0.03-0.13 each <strong>[S]</strong>): out of scope (Hayk, 2026-11-25).</li>
+<li><strong>Turnkey generators</strong> (MoneyPrinterTurbo, MIT, 145k stars <strong>[L]</strong>; ShortGPT, last push Feb 2025 <strong>[L]</strong>): topic in, stock footage + captions + TTS out. That is the generic stock-footage look (the option Hayk did not pick in Q2), and their default TTS (edge-tts) has no Armenian <strong>[Q]</strong>. They are useful only as reading material for pipeline ideas.</li>
+<li><strong>Cloud render APIs</strong> (Shotstack ~<span class="math inline">0.20/<em>m</em><em>i</em><em>n</em>, <em>J</em><em>S</em><em>O</em><em>N</em>2<em>V</em><em>i</em><em>d</em><em>e</em><em>o</em> </span>0.20-0.25/min, Creatomate ~$0.28/min at 720p <strong>[S]</strong>): JSON templates rendered in their cloud. We render locally for free, and the in-session loop does not need a cloud.</li>
+<li><strong>Avatars</strong> (HeyGen, Synthesia): not the chosen look, and the "synthetic persona" category is where YouTube's policy bites hardest <strong>[S]</strong>.</li>
+</ul>
+<hr />
+</details><details open id="12-content-note-the-soviet-fridge-example"><summary>12. Content note: the Soviet fridge example</summary>
+<p>A good topic, and more interesting if told honestly, because it is <strong>partly true</strong>:</p>
+<ul>
+<li>A 1988 study of Soviet product quality noted that among common electrical appliances, "the refrigerator is usually the most reliable" <strong>[S]</strong>. ZIL was the prestige brand <strong>[S]</strong>.</li>
+<li>But a CIA report on 1959-65 appliances called them "poorly designed, crudely built, and subject to breakdowns" <strong>[S]</strong>, and contemporary complaints about new fridges breaking fast exist <strong>[S]</strong>.</li>
+<li>The survivorship part: the ones that broke were thrown away decades ago; the ones we see are the survivors. Also: simple design (no electronics), thick metal, and much higher electricity use are trade-offs, not pure quality <strong>[U]</strong>.</li>
+</ul>
+<p>A short that says "partly true, and here is why your eyes still lie to you" is stronger and safer against comment-section pushback than "it's all bias".</p>
+<hr />
+</details><details open id="13-costs-per-video"><summary>13. Costs per video</summary>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Cost per 30-45 s short</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gemini TTS (Armenian voice)</td>
+<td>~$0.01 <strong>[Q]</strong> (doubles in 2027)</td>
+</tr>
+<tr>
+<td>Gemini critique of the MP4</td>
+<td>a few cents at most <strong>[U]</strong></td>
+</tr>
+<tr>
+<td>Rendering, captions, photos (own, Commons, Pexels)</td>
+<td>$0 (local)</td>
+</tr>
+<tr>
+<td>Framework licence</td>
+<td>$0 (Remotion free for one person; others open source)</td>
+</tr>
+<tr>
+<td>Claude Code session</td>
+<td>the real cost: Hayk's usage limit, not dollars</td>
+</tr>
+</tbody>
+</table></div>
+<p>Render time on this laptop for a 1080x1920, 30-45 s video: <strong>unknown [U]</strong>; measure on the first one. (Manim did 15-25 s of 720p in 16-75 s; 1080x1920 has 2.25x the pixels <strong>[Q]</strong>.)</p>
+<hr />
+</details><details open id="14-open-decisions-and-next-step"><summary>14. Open decisions and next step</summary>
+<p>Open (asked in the session, IDs continue from Q6):</p>
+<ul>
+<li><strong>Q7:</strong> rendering framework: Remotion / HyperFrames / Manim / a bake-off first.</li>
+<li><strong>Q8:</strong> voice for shorts: a 3-4 voice test with a livelier style prompt, or keep Sadaltager.</li>
+<li><strong>Q9:</strong> first video: the survivorship-bias fridge short as the pilot, or another topic.</li>
+</ul>
+<p>Proposed next step: one pilot short (30-45 s), end to end, in the chosen framework: beats JSON -&gt; Gemini TTS -&gt; render 1080x1920 -&gt; captions (method B) -&gt; contact sheet + Gemini critique -&gt; Hayk watches on the phone. Then write <code>03_shorts/AUTHORING.md</code> from what worked, the way qysu's <code>AUTHORING.md</code> was written.</p>
+<hr />
+</details><details open id="15-sources"><summary>15. Sources</summary>
+<p>Live checks <strong>[L]</strong>: PyPI JSON API (<code>manim</code>, <code>moviepy</code>, <code>manim-voiceover</code>, <code>ctc-forced-aligner</code>, <code>stable-ts</code>, <code>whisperx</code>, <code>pycaps</code>, <code>edge-tts</code>), <code>npm view</code> (<code>remotion</code>, <code>@remotion/captions</code>, <code>@revideo/core</code>, <code>@motion-canvas/core</code>, <code>hyperframes</code>), <code>gh api repos/...</code> for stars, last push and licence, all on 2026-11-25.</p>
+<p>Earlier research <strong>[Q]</strong>: <code>~/OneDrive/Desktop/misc/sample_problems_qysu/_knowledge/manim_llm_video/research.md</code> (2026-11-24) and <code>animations/README.md</code>, <code>tools/tts_gemini.py</code>.</p>
+<p>Web <strong>[S]</strong>:</p>
+<ul>
+<li>Remotion licence and pricing: <a href="https://www.remotion.dev/docs/license/pricing">https://www.remotion.dev/docs/license/pricing</a>, <a href="https://remotion.dev/docs/license">https://remotion.dev/docs/license</a></li>
+<li>Remotion with coding agents: <a href="https://www.remotion.dev/docs/ai/coding-agents">https://www.remotion.dev/docs/ai/coding-agents</a>, <a href="https://remotion.dev/skills">https://remotion.dev/skills</a></li>
+<li>Remotion word-highlight captions: <a href="https://www.remotion.dev/elements/captions/word-highlight-captions/">https://www.remotion.dev/elements/captions/word-highlight-captions/</a></li>
+<li>HyperFrames: <a href="https://github.com/heygen-com/hyperframes">https://github.com/heygen-com/hyperframes</a>, <a href="https://hyperframes.heygen.com/">https://hyperframes.heygen.com/</a>, <a href="https://dev.to/andrew-ooo/hyperframes-review-heygens-html-to-video-for-ai-agents-170i">https://dev.to/andrew-ooo/hyperframes-review-heygens-html-to-video-for-ai-agents-170i</a></li>
+<li>Revideo / Motion Canvas: <a href="https://raw.githubusercontent.com/midrender/revideo/main/README.md">https://raw.githubusercontent.com/midrender/revideo/main/README.md</a>, <a href="https://www.pkgpulse.com/guides/remotion-vs-motion-canvas-vs-revideo-programmatic-video-2026">https://www.pkgpulse.com/guides/remotion-vs-motion-canvas-vs-revideo-programmatic-video-2026</a></li>
+<li>MoneyPrinterTurbo / ShortGPT: <a href="https://dev.to/creeta/101k-stars-and-cant-do-long-form-moneyprinterturbos-limit-26jk">https://dev.to/creeta/101k-stars-and-cant-do-long-form-moneyprinterturbos-limit-26jk</a></li>
+<li>MMS forced aligner: <a href="https://huggingface.co/MahmoudAshraf/mms-300m-1130-forced-aligner">https://huggingface.co/MahmoudAshraf/mms-300m-1130-forced-aligner</a>, <a href="https://docs.pytorch.org/audio/main/tutorials/forced_alignment_for_multilingual_data_tutorial.html">https://docs.pytorch.org/audio/main/tutorials/forced_alignment_for_multilingual_data_tutorial.html</a></li>
+<li>WhisperX: <a href="https://github.com/m-bain/whisperx">https://github.com/m-bain/whisperx</a>, <a href="https://arxiv.org/abs/2303.00747">https://arxiv.org/abs/2303.00747</a></li>
+<li>pycaps: <a href="https://dev.to/francozanardi/adding-animated-subtitles-to-videos-with-python-4hml">https://dev.to/francozanardi/adding-animated-subtitles-to-videos-with-python-4hml</a></li>
+<li>Wikimedia Commons reuse: <a href="https://commons.wikimedia.org/wiki/Commons:Credit_line/en">https://commons.wikimedia.org/wiki/Commons:Credit_line/en</a>, <a href="https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia">https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia</a></li>
+<li>Pexels API: <a href="https://www.pexels.com/api/documentation/">https://www.pexels.com/api/documentation/</a>, <a href="https://pexels.com/terms-of-service">https://pexels.com/terms-of-service</a></li>
+<li>Safe zones: <a href="https://adaptlypost.com/blog/social-media-safe-zones-2026-complete-guide">https://adaptlypost.com/blog/social-media-safe-zones-2026-complete-guide</a>, <a href="https://reap.video/blog/short-form-video-safe-zones">https://reap.video/blog/short-form-video-safe-zones</a>, <a href="https://www.socialync.io/tools/safe-zones">https://www.socialync.io/tools/safe-zones</a></li>
+<li>Shorts length and hooks: <a href="https://vidiq.com/blog/post/youtube-shorts-algorithm/">https://vidiq.com/blog/post/youtube-shorts-algorithm/</a>, <a href="https://www.opus.pro/blog/ideal-youtube-shorts-length-format-retention">https://www.opus.pro/blog/ideal-youtube-shorts-length-format-retention</a>, <a href="https://piktochart.com/blog/how-long-youtube-shorts/">https://piktochart.com/blog/how-long-youtube-shorts/</a></li>
+<li>Gemini video understanding: <a href="https://ai.google.dev/gemini-api/docs/video-understanding">https://ai.google.dev/gemini-api/docs/video-understanding</a></li>
+<li>Lyria pricing: <a href="https://invideo.io/blog/lyria-ai-music-generator/">https://invideo.io/blog/lyria-ai-music-generator/</a>, <a href="https://benchlm.ai/media-pricing/lyria">https://benchlm.ai/media-pricing/lyria</a></li>
+<li>YouTube inauthentic content: <a href="https://support.google.com/youtube/answer/1311392">https://support.google.com/youtube/answer/1311392</a>, <a href="https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/">https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/</a></li>
+<li>AI labels: <a href="https://blog.youtube/news-and-events/improving-ai-labels-viewers-creators/">https://blog.youtube/news-and-events/improving-ai-labels-viewers-creators/</a>, <a href="https://thenextweb.com/news/youtube-will-now-automatically-label-ai-generated-videos-whether-creators-disclose-them-or-not">https://thenextweb.com/news/youtube-will-now-automatically-label-ai-generated-videos-whether-creators-disclose-them-or-not</a></li>
+<li>YouTube upload API: <a href="https://developers.google.com/youtube/v3/docs/videos/insert">https://developers.google.com/youtube/v3/docs/videos/insert</a>, <a href="https://developers.google.com/youtube/v3/determine_quota_cost">https://developers.google.com/youtube/v3/determine_quota_cost</a></li>
+<li>TikTok Content Posting API: <a href="https://developers.tiktok.com/docs/en/content-sharing-guidelines">https://developers.tiktok.com/docs/en/content-sharing-guidelines</a>, <a href="https://developers.tiktok.com/docs/en/content-posting-api-get-started">https://developers.tiktok.com/docs/en/content-posting-api-get-started</a></li>
+<li>Instagram publishing limit: <a href="https://developers.facebook.com/docs/instagram-platform/content-publishing">https://developers.facebook.com/docs/instagram-platform/content-publishing</a></li>
+<li>Postiz: <a href="https://github.com/gitroomhq/postiz-app">https://github.com/gitroomhq/postiz-app</a>, <a href="https://docs.postiz.com/general/introduction">https://docs.postiz.com/general/introduction</a></li>
+<li>Veo 3.1 prices: <a href="https://the-decoder.com/?p=33867">https://the-decoder.com/?p=33867</a>, <a href="https://wavespeed.ai/blog/cost-and-billing/google-veo-3-pricing/">https://wavespeed.ai/blog/cost-and-billing/google-veo-3-pricing/</a></li>
+<li>Nano Banana prices: <a href="https://fourweekmba.com/ai-google-halves-nano-banana-image-price-triples-input-price/">https://fourweekmba.com/ai-google-halves-nano-banana-image-price-triples-input-price/</a></li>
+<li>Cloud render APIs: <a href="https://shotstack.io/vs/creatomate-alternatives/">https://shotstack.io/vs/creatomate-alternatives/</a>, <a href="https://www.wireflow.ai/blog/json2video-pricing">https://www.wireflow.ai/blog/json2video-pricing</a></li>
+<li>Soviet fridges: <a href="https://www.springerprofessional.de/domestic-refrigerators/7396414">https://www.springerprofessional.de/domestic-refrigerators/7396414</a>, <a href="https://www.cia.gov/readingroom/node/2007713">https://www.cia.gov/readingroom/node/2007713</a>, <a href="https://nintil.com/the-soviet-union-durable-goods/">https://nintil.com/the-soviet-union-durable-goods/</a>, <a href="https://novayagazeta.ru/articles/2020/02/20/84012-konets-partii-holodilnika">https://novayagazeta.ru/articles/2020/02/20/84012-konets-partii-holodilnika</a></li>
+</ul>
+</details></body></html>

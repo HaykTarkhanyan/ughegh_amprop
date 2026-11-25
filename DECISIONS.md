@@ -2,6 +2,14 @@
 
 Newest at the top.
 
+## 19. Short videos (Shorts, Reels, TikTok): Armenian, code-drawn animation + real photos, made in session, uploaded by hand
+
+- **Date / status:** 2026-11-25, active (tools review done; rendering framework still open)
+- **Decision:** Short vertical videos on thinking errors (first: survivorship bias, Soviet fridges) are Armenian only, drawn by code (animation mixed with real photos that the code zooms, pans and highlights), made by Claude Code in session (topic in, script and scene code written, rendered, checked, Hayk reviews), and uploaded by hand. They get a new look, not the webinar branding. The tools review lives in `_knowledge/short_videos/lit_review.md`; production will go to `03_shorts/`.
+- **Why:** Hayk's answers Q1-Q6 in the 2026-11-25 session, plus "when I say AI generated ... it will be programmatically made with help of AI ... It's not gonna be Gemini or something images". The Armenian voice already works in sample_problems_qysu (Gemini TTS, voice Sadaltager, ~$0.01 per 45 s), so the open choice is the renderer.
+- **Alternatives rejected:** AI video or AI images (Hayk); stock footage under big captions (the generic faceless-channel look); a one-command pipeline from day one (more upfront work before knowing what a good short looks like); posting by API (YouTube and TikTok keep uploads from unaudited apps private, see the review section 10.3); Armenian + English versions; the webinar mascot and palette; a separate repo or the qysu repo.
+- **What would change this:** after 3-5 shorts, freeze what worked into a one-command pipeline; automate posting once manual upload becomes the bottleneck; Q7 (Remotion / HyperFrames / Manim) gets its own entry when decided.
+
 ## 15. Book folders renumbered: `01_idiot_brain/`, `02_power_of_habit/`
 
 - **Date / status:** 2026-10-27, active
