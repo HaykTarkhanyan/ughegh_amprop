@@ -277,10 +277,11 @@ def main():
             found = [(start + a, start + z) for a, z in pauses_in(clip, sr, s0 + 0.05, s1 - 0.05)]
             words, n = snap(words, found)
             snapped += n
-        entry = {k: b[k] for k in ("key", "text", "screen", "screen_small", "visual") if k in b}
+        entry = {k: b[k] for k in ("key", "text", "screen", "screen_small", "visual", "pause_after") if k in b}
         entry.update({"start": round(start, 3), "end": round(t, 3), "words": words, "pages": pages(words)})
         timeline["beats"].append(entry)
-        gap = int(GAP_S * sr)
+        # pause_after: seconds of silence for the picture after this beat (Fable review F122, 2026-11-25)
+        gap = int((GAP_S + b.get("pause_after", 0)) * sr)
         joined.extend(array("h", [0]) * gap)
         t += gap / sr
     timeline["duration"] = round(t, 3)

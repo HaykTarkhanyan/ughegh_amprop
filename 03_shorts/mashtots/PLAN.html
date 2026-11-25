@@ -1,0 +1,66 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Short: How Mashtots designed the Armenian alphabet, and why anyone builds an alphabet from scratch - script and plan</title><style>
+:root { color-scheme: light dark; --text: #1f2328; --muted: #59636e; --line: #d1d9e0; --soft: #f6f8fa; --link: #0033a0; }
+@media (prefers-color-scheme: dark) { :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --soft: #161b22; --link: #79a6ff; } }
+body { margin: 0 auto; max-width: 980px; padding: 24px 16px 64px; color: var(--text); background: Canvas;
+       font: 16px/1.6 system-ui, "Segoe UI", sans-serif; }
+a { color: var(--link); }
+nav { background: var(--soft); border: 1px solid var(--line); border-radius: 8px; padding: 10px 18px; margin: 16px 0 24px; }
+details { border-top: 1px solid var(--line); padding: 8px 0; }
+summary { cursor: pointer; font-size: 1.3em; font-weight: 650; padding: 4px 0; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .94em; }
+th, td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: var(--soft); }
+code { background: var(--soft); border-radius: 4px; padding: 1px 5px; font-size: .9em; }
+pre { background: var(--soft); border-radius: 6px; padding: 12px; overflow-x: auto; }
+pre code { padding: 0; }
+img { max-width: 100%; }
+</style></head><body><h1 id="short-how-mashtots-designed-the-armenian-alphabet-and-why-anyone-builds-an-alphabet-from-scratch---script-and-plan">Short: How Mashtots designed the Armenian alphabet, and why anyone builds an alphabet from scratch - script and plan</h1>
+<p>Draft for Hayk's review, 2026-11-25. Script first (Q17), rendered in Remotion (DECISIONS.md #21). Script source: <code>beats.hy.json</code>. Written after the Fable review, so it follows its batch notes (F131-F134): the tension in the first seconds, one spoken year (the one the hook promises), no summary card, no «Այնպես որ,» ending, two marked pauses.</p>
+<nav><strong>Contents</strong><ul><li><a href="#the-idea-in-one-paragraph">The idea in one paragraph</a></li><li><a href="#the-script-armenian">The script (Armenian)</a></li><li><a href="#facts-checked">Facts (checked)</a></li><li><a href="#visuals">Visuals</a></li><li><a href="#questions-for-hayk-review-points">Questions for Hayk (review points)</a></li></ul></nav><details open id="the-idea-in-one-paragraph"><summary>The idea in one paragraph</summary>
+<p>Most alphabets have no author; they drifted into shape over centuries. Ours has a name, a year and a first sentence. Why would someone sit down and invent letters? Because around 400 Armenia was split between Byzantium and Persia, the church read Greek and Syriac, and people did not understand; and because Greek letters cannot write Armenian sounds (try «ճնճղուկ»). A borrowed set (Daniel's letters) fell short, so Mashtots built 36 letters on one rule, one sound one letter, keeping the Greek order where the sounds matched and inventing the rest; the letters were also numbers. Others did the same for the same reason: King Sejong's scholars drew Korean consonants after the mouth, and Sequoyah, who could not read, gave the Cherokee a script. The takeaway: most alphabets happened; ours was a decision.</p>
+</details><details open id="the-script-armenian"><summary>The script (Armenian)</summary>
+<!-- script:start -->
+
+<p>10 beats, 1,806 characters (1,828 with numbers spelled out): ~125 s of speech, ~2:11 with pauses and the end tail, 3.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).</p>
+<p><strong>1. hook.</strong> Աշխարհի այբուբենների մեծ մասը հեղինակ չունի։ Դրանք դարերով են ձևավորվել։ Մերն ունի հեղինակ, տարեթիվ և նույնիսկ առաջին նախադասություն։ Բայց ինչո՞ւ է մարդը նստում ու զրոյից տառեր հորինում։</p>
+<p><strong>2. problem.</strong> Հինգերորդ դարի սկիզբ։ Հայաստանը բաժանված է Բյուզանդիայի և Պարսկաստանի միջև։ Եկեղեցում կարդում են հունարեն ու ասորերեն գրքեր, և մարդիկ չեն հասկանում։ Մաշտոց վարդապետը քարոզում էր գավառներում և ամեն օր տեսնում էր դա։</p>
+<p><strong>3. greek.</strong> Ինչո՞ւ չվերցնել պատրաստի հունական տառերը։ Որովհետև հայերենն ունի հնչյուններ, որ հունարենը չունի՝ ծա, ձա, ճե, ջե, ղատ, ռա։ Փորձիր հունական տառերով գրել «ճնճղուկ» բառը։ <em>[pause 1.5 s]</em></p>
+<p><strong>4. daniel.</strong> Սկզբում փորձեցին ասորի եպիսկոպոս Դանիելի գտած տառերը։ Բայց դրանք չէին բավականացնում հայերենի բոլոր հնչյունների համար։</p>
+<p><strong>5. design.</strong> 405 թվականին Մաշտոցը գնաց Ասորիքի քաղաքներ և հույն գրիչ Հռոփանոսի օգնությամբ ստեղծեց 36 տառ։ Սկզբունքը պարզ էր՝ մեկ հնչյուն, մեկ տառ։ Որտեղ հունարենն ուներ նույն հնչյունը, պահեց հունական հերթականությունը՝ այբ, բեն, գիմ, դա, ինչպես ալֆա, բետա, գամմա, դելտա։ Իսկ նոր հնչյունների համար հորինեց նոր տառեր։</p>
+<p><strong>6. numbers.</strong> Տառերը նաև թվեր էին՝ այբը մեկն էր, բենը՝ երկուսը, ժեն՝ տասը։ Այդ պատճառով հին ձեռագրերում տարեթվերը գրված են տառերով։</p>
+<p><strong>7. first_sentence.</strong> Ասում են՝ առաջին նախադասությունը, որ գրեցին նոր տառերով, Սողոմոնի առակներից էր՝ «Ճանաչել զիմաստութիւն եւ զխրատ, իմանալ զբանս հանճարոյ»։ Ճանաչել իմաստությունն ու խրատը, հասկանալ հանճարի խոսքերը։ <em>[pause 2 s]</em></p>
+<p><strong>8. result.</strong> Մի քանի տասնամյակում հայերեն թարգմանվեցին Աստվածաշունչը և հունական ու ասորական գրքեր, իսկ հինգերորդ դարը կոչվեց ոսկեդար։ Թագավորությունը շուտով կորավ, բայց գիրը մնաց։</p>
+<p><strong>9. others.</strong> Ուրիշներն էլ են նույնն արել։ Կորեական թագավոր Սեջոնի գիտնականները բաղաձայնների ձևերը նկարեցին բերանի ու լեզվի դիրքերով։ Իսկ չերոկի հնդկացի Սեքվոյան, որ ինքը ոչ մի լեզվով կարդալ չգիտեր, հորինեց իր ժողովրդի գիրը, և այն շատ արագ տարածվեց։</p>
+<p><strong>10. takeaway.</strong> Այբուբենների մեծ մասն ինքնըստինքյան է ձևավորվել։ Մերը որոշում էր՝ որ այս լեզուն պետք է գրվի իր սեփական տառերով։</p>
+<!-- script:end -->
+
+<p>Armenian lint: 0 errors, 0 hints (the Proverbs line is a quotation in classical spelling and is kept as written).</p>
+</details><details open id="facts-checked"><summary>Facts (checked)</summary>
+<ul>
+<li><strong>Date, people, place:</strong> 405 on all three Wikipedia pages (Mesrop Mashtots, Armenian alphabet, History of the Armenian alphabet); supported by Catholicos Sahak Partev and King Vramshapuh; devised "in the cities of Edessa and Samsat" (Samosata). Primary source: Koriun's <em>Life of Mashtots</em>, written by his pupil (oldest manuscript 12th century).</li>
+<li><strong>Why:</strong> Armenia "lost its independence in 387 and was divided between the Byzantine Empire and Persia"; Greek, Persian and Syriac scripts were "none of which was well suited for representing the many complex sounds" of Armenian; his first aim was religious literature for his people. Preaching in the provinces (Goghtn) is from Koriun as retold in the Wikipedia article.</li>
+<li><strong>Daniel's letters:</strong> Mashtots consulted "Daniel, a bishop of Mesopotamia"; that his letters were not enough for Armenian sounds is Koriun's account (the Wikipedia pages read did not give the count, so the script gives none).</li>
+<li><strong>Hropanos:</strong> Koriun's Greek calligrapher «Հռոփանոս» (Rufanos, Rufinus "a monk of Samosata" in the English article).</li>
+<li><strong>36 letters, Greek order, numbers:</strong> 36 originally; Օ and Ֆ added later (the three pages say the 11th, 12th and 13th century: they disagree, so the script gives no date); the order follows Greek where the sounds match (the Armenian alphabet page: "the general consensus is that Armenian is modeled after the Greek alphabet"; the History page leans to Pahlavi or Aramaic models for the letter shapes); each letter has a numerical value (Ա 1, Բ 2, Ժ 10, Ճ 100), used for dates in manuscripts.</li>
+<li><strong>First sentence:</strong> Proverbs 1:2, «Ճանաչել զիմաստութիւն եւ զխրատ, իմանալ զբանս հանճարոյ»; one page says it "is said to be the first sentence", hence «Ասում են».</li>
+<li><strong>Golden age:</strong> the Bible and Greek and Syriac books translated within decades; the 5th century is called the golden age (ոսկեդար). The Arsacid kingdom ended in 428.</li>
+<li><strong>Hangul:</strong> created under King Sejong (1443, published 1446); the basic consonant shapes depict the speech organs (ㄱ the tongue root, ㄴ the tongue tip). From general knowledge; check the Hunminjeongeum Haerye summary before voicing.</li>
+<li><strong>Sequoyah:</strong> created the Cherokee syllabary (finished about 1821) without being able to read any language; it spread quickly. From general knowledge; check before voicing.</li>
+<li><strong>Left out on purpose:</strong> Armenian medieval sources also credit Mashtots with the Georgian and Caucasian Albanian scripts; the Georgian claim is disputed by most scholars, so the script does not raise it (a doubt beat would take the air out of the story, Fable pattern 8).</li>
+</ul>
+</details><details open id="visuals"><summary>Visuals</summary>
+<ul>
+<li><strong>Real photos (Commons):</strong> <code>File:Mesrop Mashtots statue at Matenadaran Yerevan 2026.jpg</code> (CC BY-SA 4.0, Furkan Akkurt), <code>File:Armenian manuscript fragment (5th century).jpg</code> (public domain), <code>File:Erkatagir manuscript.jpg</code> (public domain), <code>File:Sequoyah painting.jpg</code> (public domain, Henry Inman after Charles Bird King).</li>
+<li><strong>Drawn:</strong> the alphabets-without-author hook; the split map; «ճնճղուկ» failing in Greek letters; the Greek and Armenian rows with matching letters linked and the new letters dropping in (the showcase moment); letters flipping to numbers; the first sentence written in erkatagir; the mouth profile turning into ㄱ and ㄴ.</li>
+<li><strong>Font for erkatagir:</strong> needs a free font with old-style capitals; otherwise draw the first sentence from the manuscript photo.</li>
+</ul>
+</details><details open id="questions-for-hayk-review-points"><summary>Questions for Hayk (review points)</summary>
+<ul>
+<li><strong>U-ll, wording:</strong> «զրոյից տառեր հորինում», «Մաշտոց վարդապետ», «Ասորիքի քաղաքներ», «հույն գրիչ Հռոփանոս»: natural?</li>
+<li><strong>U-mm, the classical sentence:</strong> the voice reads «Ճանաչել զիմաստութիւն ...» in classical spelling, then the modern version. Keep both, or only the modern one (the voice may stumble on the classical forms)?</li>
+<li><strong>U-nn, the extension:</strong> Korea and the Cherokee as "others did the same" (my pick), or end on Armenian alone?</li>
+<li><strong>U-oo, Georgian alphabet claim:</strong> leave it out (my pick), or mention it as a tradition?</li>
+<li>U-a («դու» vs «դուք») applies here too.</li>
+</ul>
+</details></body></html>

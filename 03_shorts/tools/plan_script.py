@@ -43,13 +43,16 @@ def main():
     chars = sum(len(b["text"]) for b in beats)
     spoken_chars = sum(len(spoken(b["text"])) for b in beats)
     est = (chars + spoken_chars) / 2 / CHARS_PER_MIN * 60  # midpoint: digits as written vs spelled out
-    total = est + GAP_S * (len(beats) - 1) + TAIL_S
-    flag = " **Over the 2:45 speech ceiling: cut a beat.**" if est > CEILING_S else ""
+    silent = sum(b.get("pause_after", 0) for b in beats)  # marked pauses for the picture (F122)
+    total = est + GAP_S * (len(beats) - 1) + silent + TAIL_S
+    flag = " **Over the 2:45 speech ceiling: cut a beat.**" if est + silent > CEILING_S else ""
+    pauses = f", {silent:g} s of them marked silent pauses" if silent else ""
     lines = [START, "", f"{len(beats)} beats, {chars:,} characters ({spoken_chars:,} with numbers spelled out): "
-             f"~{round(est)} s of speech, ~{int(total // 60)}:{round(total % 60):02d} with pauses and the end tail "
-             f"(estimate, calibrated on 2 measured beats, about +-10%).{flag}", ""]
+             f"~{round(est)} s of speech, ~{int(total // 60)}:{round(total % 60):02d} with pauses and the end tail"
+             f"{pauses} (estimate, calibrated on 2 measured beats, about +-10%).{flag}", ""]
     for i, b in enumerate(beats, 1):
-        lines += [f"**{i}. {b['key']}.** {b['text']}", ""]
+        pause = f" *[pause {b['pause_after']:g} s]*" if b.get("pause_after") else ""
+        lines += [f"**{i}. {b['key']}.** {b['text']}{pause}", ""]
     lines.append(END)
     head, rest = plan.split(START, 1)
     _, tail = rest.split(END, 1)

@@ -1,0 +1,50 @@
+[
+  {
+    "key": "hook",
+    "text": "Անգլիացի երեխաները կարդալ սովորում են երկու անգամ ավելի դանդաղ, քան իտալացի կամ ֆին երեխաները։ Եվ մեղավորը ոչ թե երեխաներն են, այլ ուղղագրությունը։",
+    "screen_small": "Seymour, Aro & Erskine, 2003",
+    "visual": "Frame 0: two progress bars over a school year, Finnish / Italian kids reach the end, the English bar stops at less than half."
+  },
+  {
+    "key": "ough",
+    "text": "Նայիր այս բառերին։ Նույն չորս տառը, և ամեն բառում այլ կերպ է կարդացվում։",
+    "pause_after": 2,
+    "visual": "On screen only (no voice): though, through, tough, cough, bough, with 'ough' highlighted orange and the five pronunciations under each in Armenian letters (դոու, թրու, թաֆ, քոֆ, բաու)."
+  },
+  {
+    "key": "was_logical",
+    "text": "Բայց մի ժամանակ անգլերենը գրվում էր այնպես, ինչպես կարդացվում էր։ Վեց հարյուր տարի առաջ «ասպետ» բառը կարդում էին «քնիխտ»՝ ճիշտ այնպես, ինչպես գրված է։ Այսօր ասում են «նայթ»։ Հետո հնչյունները փոխվեցին, իսկ գրությունը՝ ոչ։",
+    "visual": "The word knight with each letter lit as it is 'spoken' in Middle English (k-n-i-ch-t); then the k and gh grey out to today's 'nait'."
+  },
+  {
+    "key": "shift",
+    "text": "Մոտավորապես հազար չորս հարյուրից հազար յոթ հարյուր թվականներին անգլերենի երկար ձայնավորները տեղաշարժվեցին։ Այն բառը, որ այսօր կարդում ենք «բայթ», կարդացվում էր «բիթ», «միթ»-ը՝ «մեյթ», «հաուս»-ը՝ «հուս»։ Սա կոչվում է ձայնավորների մեծ տեղաշարժ, և ճշգրիտ պատճառը մինչ օրս չգիտենք։",
+    "visual": "A mouth chart (vowel trapezoid): the long vowels slide up one step each like a chain, the top ones break into diphthongs; bite, meet, house on screen with their old and new readings."
+  },
+  {
+    "key": "print",
+    "text": "Եվ հենց այդ ժամանակ Անգլիա հասավ տպագրությունը։ Գրքերը տպվեցին հազարներով, և բառերի գրությունը սկսեց քարանալ, մինչդեռ արտասանությունը դեռ շարժվում էր։ Ստացվեց հին արտասանության լուսանկար։",
+    "visual": "A printing press stamps 'bite' over and over while the spoken form above it keeps sliding; a camera flash freezes the spelling."
+  },
+  {
+    "key": "latin",
+    "text": "Հետո գիտնականներն ուզեցին, որ բառերը լատիներենի նման երևան։ «Պարտք» բառում ավելացրին տառ, որ չի կարդացվում, որովհետև լատիներեն պարտքը «դեբիտում» է։ Իսկ «կղզի» բառում լուռ տառ ավելացրին սխալմամբ՝ կարծելով, թե այն լատիներեն «ինսուլա»-ից է։ Իրականում դա հին անգլերեն բառ է։",
+    "visual": "dette -> debt with a silent b dropping in grey; iland -> island with an s dropping in, then a red stamp 'սխալ ստուգաբանություն'."
+  },
+  {
+    "key": "armenian",
+    "text": "Հայերենում պատմությունը հակառակն է։ Մաշտոցը յուրաքանչյուր հնչյունի համար տառ ստեղծեց, և այսօր էլ հայերենը կարդում ենք գրեթե այնպես, ինչպես գրված է։ Գրեթե, որովհետև բառի սկզբում եչ տառը կարդում ենք «յե», իսկ ո տառը՝ «վո»։",
+    "visual": "Armenian words light letter by letter with one sound each; then two exceptions flagged: «երկիր» (յե) and «ոսկի» (վո)."
+  },
+  {
+    "key": "reform",
+    "text": "Իսկ ինչո՞ւ անգլիացիները չեն ուղղում։ Փորձել են դարեր շարունակ։ Ամենահաջողը Նոյ Վեբստերն էր, որ ամերիկյան անգլերենում «գույն» բառից հանեց մի ավելորդ տառ։ Բայց մեկ ամբողջական ռեֆորմ կնշանակեր, որ հին գրքերը հանկարծ դժվար կարդացվեն։",
+    "visual": "colour -> color, centre -> center; then a library shelf whose spines blur when a 'reform' switch flips."
+  },
+  {
+    "key": "takeaway",
+    "text": "Անգլերենի ուղղագրությունը սխալ չէ՝ այն հին է։ Ամեն տարօրինակ տառ ցույց է տալիս, թե ինչպես էին խոսում հինգ հարյուր տարի առաջ։",
+    "screen": "Ուղղագրությունը սխալ չէ՝ այն հին է",
+    "visual": "The word knight returns with its silent k and gh glowing faintly; loops to the hook bars."
+  }
+]
