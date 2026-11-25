@@ -1,0 +1,46 @@
+[
+  {
+    "key": "hook",
+    "text": "Մարդիկ Լուսին հասան ավելի շուտ, քան ճամպրուկին անիվներ դրեցին։ Իսկ ինչո՞ւ է անիվներով ճամպրուկն այդքան ավելի հեշտ, քան նույն քաշով ուսապարկը։",
+    "visual": "Frame 0: the Moon landing silhouette 1969 on a timeline; a wheeled suitcase arrives just after it; then a suitcase and a backpack on a scale, both 20 kg."
+  },
+  {
+    "key": "zero_work",
+    "text": "Ֆիզիկան այստեղ տարօրինակ պատասխան ունի։ Աշխատանքն ուժ է՝ բազմապատկած ճանապարհով, ուժի ուղղությամբ։ Ուսապարկը պահում ես դեպի վեր, իսկ քայլում ես հորիզոնական։ Ուրեմն, ըստ դասագրքի, հարթ ճանապարհին ուսապարկի վրա ոչ մի աշխատանք չես կատարում։",
+    "visual": "A walker with a backpack; an up arrow (the force) and a sideways arrow (the motion) at right angles; the formula on screen, work = 0."
+  },
+  {
+    "key": "body",
+    "text": "Բայց քրտնում ես, որովհետև մարմինը սայլ չէ։ Ամեն քայլի ժամանակ մի փոքր իջնում ու բարձրանում ես, և ոտքերի մկաններն ամեն անգամ նորից բարձրացնում են քեզ ու ուսապարկը։ Չափումները ցույց են տալիս՝ բեռը մեծացնելիս էներգիայի ծախսն աճում է գրեթե համամասնորեն։",
+    "pause_after": 1.5,
+    "visual": "The walker's centre of mass traced as a wavy line, the backpack riding the waves; each rise lights the knee and ankle; a cost-vs-load line rising straight."
+  },
+  {
+    "key": "wheels",
+    "text": "Անիվը վերացնում է այդ խնդիրը։ Ճամպրուկի քաշը պահում է հատակը, ոչ թե դու, և այն չի բարձրանում ու իջնում քո քայլերի հետ։ Հարթ հատակին այն քաշելու համար պետք է ուժ, որ նրա քաշի ընդամենը մի քանի տոկոսն է։",
+    "visual": "The same walker pulling a case: the case's path is a flat line while the walker still bobs; a small force arrow on the handle versus the big weight arrow carried by the floor."
+  },
+  {
+    "key": "sadow",
+    "text": "Ուրեմն ինչո՞ւ այդքան ուշ։ Առաջին հաջողված անիվավոր ճամպրուկն արտոնագրվեց յոթանասունականների սկզբին։ Այն պառկած էր, չորս փոքր անիվով, և քաշում էին գոտիով՝ շան պես։ Հեշտ շրջվում էր ու դժվար էր թեքվում։",
+    "screen_small": "Sadow, US patent 3,653,474, 1972",
+    "visual": "A flat four-wheeled suitcase on a leash-like strap wobbles and tips over at a corner."
+  },
+  {
+    "key": "plath",
+    "text": "Իսկական փոփոխությունը տասնհինգ տարի անց եկավ։ Մի օդաչու ճամպրուկը կանգնեցրեց ուղիղ, դրեց երկու անիվ և երկար բռնակ, որը ներս է մտնում։ Սկզբում նա վաճառում էր միայն ընկեր օդաչուներին ու բորտուղեկցորդներին։ Հետո այն դարձավ այն ճամպրուկը, որ այսօր բոլորն ունեն։",
+    "screen_small": "Robert Plath, Rollaboard, 1987",
+    "visual": "The flat case stands up, two wheels and a telescoping handle slide out; a line of flight crew rolling them through a terminal."
+  },
+  {
+    "key": "why_late",
+    "text": "Ինչո՞ւ ոչ ավելի շուտ, հստակ պատասխան չկա։ Կային բեռնակիրներ ու սայլակներ, կարճ ճանապարհներ, քարե փողոցներ։ Իսկ Երևանի որոշ մայթերին ուսապարկը մինչև հիմա հաղթում է։",
+    "visual": "Porters with carts at an old station; then a suitcase bouncing over an uneven Yerevan pavement while a backpacker strolls past."
+  },
+  {
+    "key": "takeaway",
+    "text": "Ամենաակնհայտ գյուտերը հաճախ ակնհայտ են դառնում միայն այն բանից հետո, երբ ինչ-որ մեկն արդեն արել է դրանք։",
+    "screen": "Ակնհայտն ակնհայտ է միայն հետո",
+    "visual": "The Moon-landing timeline from the hook with the suitcase rolling in late; loops."
+  }
+]

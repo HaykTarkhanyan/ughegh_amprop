@@ -1,0 +1,46 @@
+[
+  {
+    "key": "hook",
+    "text": "Հին հունական արձանները սպիտակ չէին։ Դրանք ներկված էին՝ կարմիր, կապույտ, ոսկեգույն։ Ինչպե՞ս գիտենք, և ինչո՞ւ ենք դարեր շարունակ կարծել հակառակը։",
+    "visual": "Frame 0: a white marble head; colour washes over it in a sweep (red lips, blue eyes, gold hair band), then fades back to white."
+  },
+  {
+    "key": "traces",
+    "text": "Ներկի հետքերը մնացել են։ Երբեմն դրանք երևում են աչքով, երբեմն՝ միայն թեք լույսի կամ ուլտրամանուշակագույն ճառագայթների տակ։ Իսկ եգիպտական կապույտ ներկն ինֆրակարմիր լույսի տակ փայլում է, և այդպես գտնում են նույնիսկ մանրադիտակային հետքերը։",
+    "pause_after": 1.5,
+    "visual": "A raking light beam sweeps across a marble relief and 'colour shadows' appear; then an infrared view where tiny specks glow white (Egyptian blue)."
+  },
+  {
+    "key": "kore",
+    "text": "Աթենքի Ակրոպոլիսում գտնված այս աղջկա արձանի վրա հայտնաբերման պահին դեռ ներկ կար։ Այսօր դրանից մնացել են միայն մուգ բծեր։",
+    "screen_small": "Պեպլոսով կորե, մ.թ.ա. մոտ 530",
+    "visual": "Real photo of the Peplos Kore (Commons), slow zoom on the dark patches; a ghost of the painted pattern flickers over them."
+  },
+  {
+    "key": "why_white",
+    "text": "Ուրեմն ինչո՞ւ էինք կարծում, թե սպիտակ են։ Երկու հազար տարում ներկը թափվել է, անձրևն ու հողը լվացել են այն։ Վերածննդի դարաշրջանում գտած արձաններն արդեն մերկ քար էին, և քանդակագործները սկսեցին ընդօրինակել հենց այդ սպիտակ քարը։",
+    "visual": "A timeline: paint flakes off over centuries; a Renaissance workshop carves a white figure from the white antique in front of it."
+  },
+  {
+    "key": "ideal",
+    "text": "Ժամանակի ընթացքում սպիտակ մարմարը դարձավ գեղեցկության իդեալ, իսկ պահպանված ներկը հաճախ մաքրում էին։ Անցյալ դարի երեսունականներին Լոնդոնում Պարթենոնի քանդակները նույնիսկ պղնձե գործիքներով քերեցին, որ ավելի սպիտակ երևան։",
+    "screen_small": "Բրիտանական թանգարան, 1937-1938",
+    "visual": "Museum workers scrape a relief with small copper tools; the surface turns whiter; a stamp 'ավելի սպիտակ'."
+  },
+  {
+    "key": "copies",
+    "text": "Այսօր գիտնականները պատրաստում են արձանների ներկված պատճեններ։ Շատերին դրանք կոպիտ են թվում, խաղալիքի նման։",
+    "visual": "Real photos of painted reconstructions from the 'Gods in Color' exhibitions (Commons), side by side with the white originals."
+  },
+  {
+    "key": "doubt",
+    "text": "Եվ այստեղ կա ազնիվ վերապահում՝ այդ պատճենները վարկածներ են։ Հետքերը քիչ են, և իսկական արձանները հավանաբար ավելի նուրբ էին ներկված՝ ստվերներով, երանգներով, ոսկեզօծումով։ Գույն կար, դա փաստ է։ Թե ինչպիսին էր այն ամբողջությամբ, ճշգրիտ չգիտենք։",
+    "visual": "Three versions of one face: flat bright paint, a subtle shaded version, and a question mark; a 'փաստ' label on the colour, a 'վարկած' label on the details."
+  },
+  {
+    "key": "takeaway",
+    "text": "Մեր պատկերացումը Հին Հունաստանի մասին ոչ թե հույներից է, այլ նրանից, ինչ թողել է ժամանակը։ Եվ դարեր շարունակ հիացել ենք մի գեղեցկությամբ, որը վնասվածքի արդյունք էր։",
+    "screen": "Սպիտակը ժամանակի հետքն է, ոչ թե հույների ընտրությունը",
+    "visual": "The white head from the hook, colour washing over it one last time and staying; loops."
+  }
+]
