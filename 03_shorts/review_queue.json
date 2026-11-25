@@ -126,6 +126,15 @@
               "detail": [
                 "Open: U-ff was CoComelon meant?, U-gg names, U-hh terms"
               ]
+            },
+            {
+              "id": "A12",
+              "title": "Approve: The toothless man from Dmanisi (dmanisi, 10 beats, ~132 s)",
+              "exclusive": "dmanisi",
+              "note": "1.77-million-year-old toothless man near Armenia; the 'someone fed him' story vs what the bone shows; a toothless bonobo; the Mead femur quote; beautiful stories need checking.",
+              "detail": [
+                "Open: U-ii keep the honest angle?, U-jj terms, U-kk credit exurb1a?"
+              ]
             }
           ]
         }
@@ -210,6 +219,12 @@
               "title": "Needs changes: Kids glued to CoComelon-style TV (kids_tv)",
               "exclusive": "kids",
               "note": "Leave comments on kids_tv/PLAN.html"
+            },
+            {
+              "id": "C12",
+              "title": "Needs changes: The toothless man from Dmanisi (dmanisi)",
+              "exclusive": "dmanisi",
+              "note": "Leave comments on dmanisi/PLAN.html"
             }
           ]
         }

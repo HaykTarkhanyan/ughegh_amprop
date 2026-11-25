@@ -1,0 +1,56 @@
+[
+  {
+    "key": "hook",
+    "text": "Գրեթե երկու միլիոն տարի առաջ մի տղամարդ կորցրեց բոլոր ատամները, բացի մեկից։ Եվ դրանից հետո ապրեց ևս մի քանի տարի։ Ինչպե՞ս։",
+    "visual": "Close-up of the real D3444 skull photo (Commons), the single remaining tooth circled; a question mark. Frame 0 shows the skull and the question."
+  },
+  {
+    "key": "find",
+    "text": "Նրա գանգն ու ծնոտը գտել են մեր հարևանությամբ՝ Վրաստանի Դմանիսի գյուղի մոտ։ Նա մեր հեռավոր ազգականն էր՝ Աֆրիկայից դուրս եկած առաջին մարդկանցից։",
+    "screen": "Դմանիսի, Վրաստան",
+    "visual": "A map of the South Caucasus: Armenia, then Dmanisi in Georgia lights up close to the border; an arrow from Africa to the Caucasus."
+  },
+  {
+    "key": "sockets",
+    "text": "Ինչպե՞ս գիտենք, որ նա երկար է ապրել առանց ատամների։ Երբ ատամն ընկնում է, նրա տեղը ժամանակի ընթացքում լցվում է ոսկրով։ Այս ծնոտում այդ տեղերը համարյա ամբողջությամբ փակվել էին, իսկ դա տարիներ է պահանջում։",
+    "visual": "A drawn jaw with tooth sockets; a time slider moves and the empty sockets fill in with bone; a label 'տարիներ'."
+  },
+  {
+    "key": "story",
+    "text": "Եվ այստեղից ծնվեց հուզիչ պատմություն՝ եթե նա չէր կարող ծամել, ուրեմն ինչ-որ մեկը կերակրում էր նրան։ Երկու միլիոն տարի առաջ ինչ-որ մեկը հոգ էր տանում ծերացած ազգականի մասին։ Սա հաճախ անվանում են կարեկցանքի ամենահին ապացույցներից մեկը։",
+    "visual": "Warm-toned paleo-art (Mauricio Antón, 'Altruistic behaviour of Homo erectus', CC BY 4.0), slow pan; small fire light."
+  },
+  {
+    "key": "bone_says",
+    "text": "Բայց ի՞նչ է ասում ինքը՝ ոսկորը։ Այն ասում է, որ նա ապրել է առանց ատամների։ Այն չի ասում՝ ինչպես։ Գտածոյի հեղինակներն իրենք գրել են, որ ուրիշները կարող էին օգնել նրան, բայց նաև հարց են բարձրացրել՝ գուցե նա ինքն էր հարմարվել, օրինակ՝ փափուկ սնունդ ուտելով։",
+    "screen_small": "Lordkipanidze et al., Nature, 2005",
+    "visual": "The skull again with two labels: 'ապրել է առանց ատամների ✓' and 'ինչպե՞ս ?'; then two paths branching: 'օգնություն' and 'փափուկ սնունդ'."
+  },
+  {
+    "key": "bonobo",
+    "text": "2020 թվականին հետազոտողները նկարագրեցին վայրի բոնոբոյի, որն առանց ատամների երկար ապրեց։ Այսինքն՝ առանց ատամների գոյատևելը միշտ չէ, որ ուրիշի օգնություն է պահանջում։",
+    "screen_small": "Surbeck et al., 2020",
+    "visual": "A drawn bonobo silhouette in a forest, a toothless grin; the 'օգնություն' path dims slightly, both paths stay."
+  },
+  {
+    "key": "mead",
+    "text": "Նույն ճակատագիրն ունի մեկ այլ սիրված պատմություն՝ իբր մարդաբան Մարգարեթ Միդն ասել է, որ քաղաքակրթության առաջին նշանն ապաքինված ազդրոսկրն է։ Ստուգողները չեն գտել, որ նա երբևէ դա ասել է։ Իր գրանցված խոսքերում նա քաղաքակրթությունը կապում էր քաղաքների, աշխատանքի բաժանման և գրի հետ։",
+    "visual": "A viral-style quote card with a healed thigh bone; a stamp 'չհաստատված'; then three small icons: a city, a split of jobs, writing."
+  },
+  {
+    "key": "still",
+    "text": "Ուրեմն կարեկցանքը հորինվա՞ծ է։ Ոչ։ Նեանդերթալցիների մեջ էլ կան ծանր վնասվածքներից ապաքինված կմախքներ, և գիտնականները մինչ օրս վիճում են, թե դա որքանով է խնամքի արդյունք։ Ուղղակի մեկ ոսկորը մեզ ամեն ինչ չի պատմում։",
+    "visual": "A Neanderthal skeleton silhouette with healed fractures highlighted; a scale 'խնամք' vs 'դիմացկունություն' gently tipping back and forth."
+  },
+  {
+    "key": "both",
+    "text": "Դմանիսիի տղամարդը կամ ինքը հաղթահարեց ցավն ու դժվարությունները, կամ նրան օգնեցին մոտիկները։ Երկու պատմությունն էլ ուշագրավ են։ Իսկ ազնիվն այն է, որ ասենք՝ չգիտենք որը։",
+    "visual": "The skull photo between two soft-lit scenes: a lone figure enduring, a group sharing food; neither is chosen."
+  },
+  {
+    "key": "takeaway",
+    "text": "Ամենագեղեցիկ պատմություններն ամենաշատն է պետք ստուգել։ Ոչ թե որովհետև դրանք սխալ են, այլ որովհետև շատ ենք ուզում, որ ճիշտ լինեն։",
+    "screen": "Ամենագեղեցիկ պատմություններն ամենաշատն է պետք ստուգել",
+    "visual": "Big karaoke text over the skull photo; the single tooth glints; loop back to the hook."
+  }
+]
