@@ -16,9 +16,11 @@ done = [
   "Heads-up note (Q7 unanswered, every fix rendered twice, ~9 min per round): last double round at ~11:15, then Remotion only; bakeoff/README.md records the one known difference",
   "Final frame review: survivor fridge behind the takeaway text -> moved to the top row. Gemini pass 3 ($0.016): unspoken takeaway words too dim -> 0.5 opacity; hard cut at 0:14 parked; <60 s rejected again. Final Remotion render ~2 min",
   "Short 2 (Bayes, '99% accurate test'): Hayk Q11 medical test only, Q12 crowd of 1,000 dots, Q13 brief formula card, Q14 2-3 min. Wrote 03_shorts/bayes_test/beats.hy.json (14 beats, 2,182 chars, ~150 s) and PLAN.md (structure, verified numbers 50% / 9% / 92% / 99%, visuals, sources, review points U-a..U-d); lint 0 errors; opened as HTML for comments. Facts: Gigerenzer 2007 gynecologists (21% right, 87% after natural frequencies; 150 vs 160 ambiguity kept out of the script) from 3 Gigerenzer-written accounts (paper 403 to fetchers); HIV confirmation with other tests (CDC/APHL, WHO three-test strategy). No voice made: Hayk reviews the script first",
+  "Short 3 (Simpson's paradox), Bayes choices reused without asking: 03_shorts/simpson/beats.hy.json (13 beats, 2,101 chars, ~145 s) and PLAN.md. Kidney stones (Charig 1986: 78% vs 83% overall, 93/87 and 73/69 by size) as the dot example, Berkeley 1973 (department table verified against R's UCBAdmissions counts; Berkeley was not sued), COVID Italy vs China 2020 (qualitative, no Italian numbers read), rule beat with the 'split by causes before the treatment' exception. Lint 0 errors. Review points U-e..U-h",
 ]
 
 pending = [
+  "Simpson short: Hayk reviews 03_shorts/simpson/PLAN.html (script + U-e..U-h)",
   "Bayes short: Hayk reviews 03_shorts/bayes_test/PLAN.html (script + U-a..U-d), then voice, crowd-grid component, render",
   "Q7: Remotion or HyperFrames (Hayk), then DECISIONS #21, delete the losing project, move the winner to 03_shorts/render/",
   "Q10: Armenian term for survivorship bias («վերապրողի սխալ» now); also «սովետական» vs «խորհրդային», singular «դու», «Հա», «սարքել» (my wording, unchecked by Hayk)",

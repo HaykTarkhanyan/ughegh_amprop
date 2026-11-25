@@ -1,0 +1,253 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Short 3: Simpson&#x27;s paradox (&quot;better in every group, worse overall&quot;) - script and plan</title><style>
+:root { color-scheme: light dark; --text: #1f2328; --muted: #59636e; --line: #d1d9e0; --soft: #f6f8fa; --link: #0033a0; }
+@media (prefers-color-scheme: dark) { :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --soft: #161b22; --link: #79a6ff; } }
+body { margin: 0 auto; max-width: 980px; padding: 24px 16px 64px; color: var(--text); background: Canvas;
+       font: 16px/1.6 system-ui, "Segoe UI", sans-serif; }
+a { color: var(--link); }
+nav { background: var(--soft); border: 1px solid var(--line); border-radius: 8px; padding: 10px 18px; margin: 16px 0 24px; }
+details { border-top: 1px solid var(--line); padding: 8px 0; }
+summary { cursor: pointer; font-size: 1.3em; font-weight: 650; padding: 4px 0; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .94em; }
+th, td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: var(--soft); }
+code { background: var(--soft); border-radius: 4px; padding: 1px 5px; font-size: .9em; }
+pre { background: var(--soft); border-radius: 6px; padding: 12px; overflow-x: auto; }
+pre code { padding: 0; }
+img { max-width: 100%; }
+</style></head><body><h1 id="short-3-simpsons-paradox-better-in-every-group-worse-overall---script-and-plan">Short 3: Simpson's paradox ("better in every group, worse overall") - script and plan</h1>
+<p>Draft for Hayk's review, 2026-11-25. No voice until the script is approved. Script source: <code>beats.hy.json</code>.</p>
+<nav><strong>Contents</strong><ul><li><a href="#choices-carried-over-from-the-bayes-short-not-asked-again">Choices (carried over from the Bayes short, not asked again)</a></li><li><a href="#the-idea-in-one-paragraph">The idea in one paragraph</a></li><li><a href="#structure-and-timing">Structure and timing</a></li><li><a href="#the-script-armenian">The script (Armenian)</a></li><li><a href="#the-numbers-checked">The numbers (checked)</a></li><li><a href="#caveats-kept-out-of-the-script">Caveats kept out of the script</a></li><li><a href="#visuals">Visuals</a></li><li><a href="#questions-for-hayk-review-points">Questions for Hayk (review points)</a></li><li><a href="#production-plan-after-approval">Production plan (after approval)</a></li></ul></nav><details open id="choices-carried-over-from-the-bayes-short-not-asked-again"><summary>Choices (carried over from the Bayes short, not asked again)</summary>
+<p>Hayk asked for this one without new instructions, so the Bayes answers are reused: real examples, people shown as dots (counting, not probabilities), a deeper ~2.5 min video, one brief formula-style card (here: "the overall rate is a weighted average"). Change any of these in the review.</p>
+</details><details open id="the-idea-in-one-paragraph"><summary>The idea in one paragraph</summary>
+<p>Two treatments for kidney stones: A cures 78%, B cures 83%, so B looks better. But A is better for small stones AND for large stones. The overall number lies because A got most of the hard cases (large stones) and B most of the easy ones: the overall rate is a weighted average, and the weights differ. The same thing made Berkeley look biased against women in 1973 (women applied to the hard departments) and made Italy's COVID death rate look worse than China's in early 2020 (Italy's cases were older). Rule: when the groups differ in something that existed before the treatment, compare like with like; when the split is itself a result of the treatment, trust the overall number.</p>
+</details><details open id="structure-and-timing"><summary>Structure and timing</summary>
+<p>~145 s of speech (2,101 characters at ~870 a minute), ~150 s with pauses.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Beat</th>
+<th>~s</th>
+<th>Said (in short)</th>
+<th>Shown</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>hook</td>
+<td>9</td>
+<td>two kidney-stone treatments, 78% vs 83%: which do you pick?</td>
+<td>two cards "Ա 78%" / "Բ 83%", B glows</td>
+</tr>
+<tr>
+<td>2</td>
+<td>twist</td>
+<td>11</td>
+<td>A is better for small AND large stones: better in every group, worse overall: Simpson's paradox</td>
+<td>badges under A, title card</td>
+</tr>
+<tr>
+<td>3</td>
+<td>study</td>
+<td>11</td>
+<td>real numbers, a 1986 British study: open surgery vs a small hole in the skin, 350 patients each</td>
+<td>two method icons, source line</td>
+</tr>
+<tr>
+<td>4</td>
+<td>crowd</td>
+<td>11</td>
+<td>350 people each side: 273 cleared vs 289; B looks better</td>
+<td>two 350-dot crowds, white = cleared, red = not; "78%" vs "83%"</td>
+</tr>
+<tr>
+<td>5</td>
+<td>split</td>
+<td>3</td>
+<td>split them by stone size</td>
+<td>dots regroup into small (top) / large (bottom) bands; A heavy at the bottom, B at the top</td>
+</tr>
+<tr>
+<td>6</td>
+<td>small</td>
+<td>6</td>
+<td>small stones: 93% vs 87%</td>
+<td>small bands light up, "81 / 87" vs "234 / 270", check on A</td>
+</tr>
+<tr>
+<td>7</td>
+<td>large</td>
+<td>6</td>
+<td>large stones: 73% vs 69%; A wins both</td>
+<td>large bands, "192 / 263" vs "55 / 80", check on A</td>
+</tr>
+<tr>
+<td>8</td>
+<td>why</td>
+<td>20</td>
+<td>look who got what: most hard (large) stones got A, most easy ones B; A got the hard cases</td>
+<td>dots recoloured by size: A mostly dark, B mostly light</td>
+</tr>
+<tr>
+<td>9</td>
+<td>weighted</td>
+<td>13</td>
+<td>the overall rate is a weighted average; 3/4 of A's patients had large stones, 3/4 of B's small</td>
+<td>card with the two weighted sums, weights as bar widths</td>
+</tr>
+<tr>
+<td>10</td>
+<td>berkeley</td>
+<td>25</td>
+<td>1973 Berkeley: men 44% admitted, women 35%, looks like bias; but in 4 of the 6 largest departments women did better; women applied where few got in</td>
+<td>100 men vs 100 women, split easy / hard departments</td>
+</tr>
+<tr>
+<td>11</td>
+<td>covid</td>
+<td>16</td>
+<td>early 2020: Italy's share of deaths among infected higher than China's overall, lower in every age group; Italy's infected were older</td>
+<td>schematic age bars, older crowd for Italy</td>
+</tr>
+<tr>
+<td>12</td>
+<td>rule</td>
+<td>17</td>
+<td>if the groups differ in something from before the treatment (stone size, age, choice of department), compare groups separately; if the split is a result of the treatment, trust the total</td>
+<td>rule card</td>
+</tr>
+<tr>
+<td>13</td>
+<td>takeaway</td>
+<td>7</td>
+<td>when numbers say "this is better", ask: are they comparing the same kind of cases?</td>
+<td>big text over the faint crowds; loops to the start</td>
+</tr>
+</tbody>
+</table></div>
+</details><details open id="the-script-armenian"><summary>The script (Armenian)</summary>
+<p><strong>1. hook.</strong> Երկու բուժում երիկամի քարերի համար։ Առաջինից հետո քարից ազատվում է հիվանդների 78 տոկոսը, երկրորդից հետո՝ 83 տոկոսը։ Ո՞րը կընտրես։</p>
+<p><strong>2. twist.</strong> Իսկ հիմա՝ առաջին բուժումն ավելի լավն է և՛ փոքր, և՛ մեծ քարերի դեպքում։ Ավելի լավը՝ ամեն խմբում, բայց ավելի վատը՝ ընդհանուր։ Սա Սիմպսոնի պարադոքսն է։</p>
+<p><strong>3. study.</strong> Թվերն իրական են՝ 1986 թվականի բրիտանական հետազոտությունից։ Քարերը հեռացնում էին կամ բաց վիրահատությամբ, կամ մաշկի փոքր անցքով։ Ամեն մեթոդով՝ 350 հիվանդ։</p>
+<p><strong>4. crowd.</strong> Պատկերացրու 350 մարդ ամեն կողմում։ Բաց վիրահատությունից հետո քարից ազատվել է 273-ը, երկրորդ մեթոդից հետո՝ 289-ը։ Երկրորդն ավելի լավն է թվում։</p>
+<p><strong>5. split.</strong> Հիմա բաժանենք նրանց ըստ քարի չափի։</p>
+<p><strong>6. small.</strong> Փոքր քարեր՝ բաց վիրահատությունն օգնում է 93 տոկոսին, երկրորդ մեթոդը՝ 87 տոկոսին։</p>
+<p><strong>7. large.</strong> Մեծ քարեր՝ 73 տոկոսն ընդդեմ 69-ի։ Բաց վիրահատությունը հաղթում է երկու խմբում էլ։</p>
+<p><strong>8. why.</strong> Ինչպե՞ս։ Նայիր, թե ով ինչ բուժում է ստացել։ Մեծ, դժվար քարերով հիվանդների մեծ մասին արել են բաց վիրահատություն, իսկ փոքր, հեշտ քարերով հիվանդների մեծ մասին՝ երկրորդ մեթոդը։ Բաց վիրահատությանը բաժին են ընկել դժվար դեպքերը, և դրա համար ընդհանուր թիվը վատ է երևում։</p>
+<p><strong>9. weighted.</strong> Ընդհանուր տոկոսը խմբերի տոկոսների կշռավորված միջինն է։ Բաց վիրահատության հիվանդների երեք քառորդը մեծ քարերով էր, իսկ երկրորդ մեթոդի հիվանդների երեք քառորդը՝ փոքր քարերով։</p>
+<p><strong>10. berkeley.</strong> Նույնը եղավ 1973 թվականին Բերքլիի համալսարանում։ Ընդունվել էր տղամարդ դիմորդների 44 տոկոսը և կին դիմորդների միայն 35 տոկոսը։ Կարծես խտրականություն լինի։ Բայց վեց խոշոր ֆակուլտետներից չորսում կանայք ընդունվում էին ավելի բարձր տոկոսով։ Պարզվեց, որ կանայք ավելի հաճախ էին դիմում այն ֆակուլտետներ, որտեղ ընդունվում էին քչերը։</p>
+<p><strong>11. covid.</strong> Իսկ 2020 թվականի սկզբին Իտալիայում կորոնավիրուսով վարակվածների մեջ մահացածների բաժինն ընդհանուր առմամբ ավելի մեծ էր, քան Չինաստանում, թեև ամեն տարիքային խմբում ավելի փոքր էր։ Պատճառը՝ Իտալիայում վարակվածներն ավելի տարեց էին։</p>
+<p><strong>12. rule.</strong> Ուրեմն ո՞ր թվին հավատալ։ Եթե խմբերը տարբերվում են մի բանով, որը կար մինչև բուժումը՝ քարի չափով, տարիքով, ֆակուլտետի ընտրությամբ, համեմատիր խմբերն առանձին՝ նմանը նմանի հետ։ Բայց եթե խմբերը բաժանում ես մի բանով, որը հենց բուժման հետևանքն է, ճիշտն ընդհանուր թիվն է։</p>
+<p><strong>13. takeaway.</strong> Այնպես որ, երբ թվերն ասում են՝ «սա ավելի լավն է», հարցրու՝ իսկ նույն տեսակի դեպքե՞ր են համեմատում։</p>
+<p>Armenian lint: 0 errors, 0 hints. Terms: «կշռավորված միջին» (glossary), «Սիմպսոն» spelled as in the course (<code>sample_problems_qysu</code>, Simpson distribution).</p>
+</details><details open id="the-numbers-checked"><summary>The numbers (checked)</summary>
+<p><strong>Kidney stones</strong> (Charig et al., BMJ 1986; reanalysed as Simpson's paradox by Julious &amp; Mullee, BMJ 1994):</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th></th>
+<th>A, open surgery</th>
+<th>B, through the skin (PCNL)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>all</td>
+<td>273 / 350 = 78.0%</td>
+<td>289 / 350 = 82.6% (said 83)</td>
+</tr>
+<tr>
+<td>small stones (&lt; 2 cm)</td>
+<td>81 / 87 = 93.1%</td>
+<td>234 / 270 = 86.7%</td>
+</tr>
+<tr>
+<td>large stones (&gt;= 2 cm)</td>
+<td>192 / 263 = 73.0%</td>
+<td>55 / 80 = 68.8% (said 69)</td>
+</tr>
+<tr>
+<td>share of hard cases</td>
+<td>263 / 350 = 75% large</td>
+<td>270 / 350 = 77% small</td>
+</tr>
+</tbody>
+</table></div>
+<p>Sums check: 81 + 192 = 273, 234 + 55 = 289; 263 of the 343 large-stone patients got A, 270 of the 357 small-stone patients got B.</p>
+<p><strong>Berkeley, fall 1973</strong> (Bickel, Hammel &amp; O'Connell, Science 187, 1975): campus-wide 44% of 8,442 men and 35% of 4,321 women admitted (spoken). Six largest departments (applicants, admission rate):</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Dept</th>
+<th>Men</th>
+<th>Women</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>825, 62%</td>
+<td>108, 82%</td>
+</tr>
+<tr>
+<td>B</td>
+<td>560, 63%</td>
+<td>25, 68%</td>
+</tr>
+<tr>
+<td>C</td>
+<td>325, 37%</td>
+<td>593, 34%</td>
+</tr>
+<tr>
+<td>D</td>
+<td>417, 33%</td>
+<td>375, 35%</td>
+</tr>
+<tr>
+<td>E</td>
+<td>191, 28%</td>
+<td>393, 24%</td>
+</tr>
+<tr>
+<td>F</td>
+<td>373, 6%</td>
+<td>341, 7%</td>
+</tr>
+<tr>
+<td>all six</td>
+<td>2,691, 44.5%</td>
+<td>1,835, 30.4%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Women did better in 4 of 6 (A, B, D, F). For the picture, A+B are grouped as "easy" (men 62.5%, women 79.7%) and C-F as "hard" (men 25.5%, women 26.5%); 92.8% of women but 48.5% of men applied to the hard ones. Verified 2026-11-25 against R's built-in <code>UCBAdmissions</code> dataset (raw admitted / rejected counts from Bickel et al., via the Rdatasets CSV): every department figure matches; the paper's own PDF could not be fetched (404 / 403).</p>
+<p><strong>COVID-19, early 2020</strong> (von Kügelgen, Gresele &amp; Schölkopf, IEEE Trans. AI 2021; arXiv 2005.07180): China (data of 17 Feb 2020) vs Italy (9 Mar 2020): Italy's case fatality rate lower in every age group, higher in total, because a larger share of Italy's confirmed cases were elderly. China's total 2.3% (1,023 / 44,672). Italy's exact figures were not read, so the script gives no numbers and the bars are schematic. To read the paper's Table before rendering if exact bars are wanted.</p>
+</details><details open id="caveats-kept-out-of-the-script"><summary>Caveats kept out of the script</summary>
+<ul>
+<li>The kidney-stone comparison was not randomised: open surgery was done in 1972-80, PCNL in 1980-85. Stone size is the confounder the paradox is about, but the periods differ too.</li>
+<li>Berkeley: the paper found a small bias in favour of women once departments are accounted for, and pointed at earlier stages of education for the different choices. Berkeley was afraid of a lawsuit but was not sued (Bickel interview), so the script does not say it was.</li>
+<li>Beat 12's rule is the standard causal-inference advice (split by causes that come before the treatment, not by its results), simplified to one sentence.</li>
+</ul>
+</details><details open id="visuals"><summary>Visuals</summary>
+<ul>
+<li><strong>Two crowds:</strong> 350 dots each in 18 x 20 grids, 18 px cells; A at x 146-470, B at x 530-854, y 330-690, so labels and counters fit in y 700-1020, above the caption band (y ~1040-1200).</li>
+<li><strong>Colours:</strong> cleared = warm white <code>#F4F1EA</code>, not cleared = red <code>#E8383D</code>; for "why", recoloured by stone size: large = dark orange, small = light. Results and check marks in orange <code>#F2A800</code>.</li>
+<li><strong>Split:</strong> the dots move (not fade) into a small-stone band and a large-stone band per crowd, so it is visible that A's crowd is mostly large stones and B's mostly small.</li>
+<li><strong>Weighted card:</strong> each treatment's rate drawn as two bar segments whose widths are the group sizes.</li>
+<li><strong>Berkeley:</strong> 100 men vs 100 women, each split easy / hard (51 / 49 and 7 / 93), admitted ones lit.</li>
+<li><strong>Reused:</strong> the crowd-grid component planned for the Bayes short (this short needs the same grid with a "move into bands" state), captions, karaoke ending, palette, font.</li>
+</ul>
+</details><details open id="questions-for-hayk-review-points"><summary>Questions for Hayk (review points)</summary>
+<ul>
+<li><strong>U-e, «ֆակուլտետ»</strong> for a US graduate department: or «բաժին» / «ծրագիր»?</li>
+<li><strong>U-f, method names:</strong> «բաց վիրահատություն» and «մաշկի փոքր անցքով»: clear enough, or name the second «պերկուտան» / «էնդոսկոպիկ»?</li>
+<li><strong>U-g, the COVID beat:</strong> keep (topical, but sensitive), or drop it to stay nearer 2 min?</li>
+<li><strong>U-h, beat 12's exception</strong> («եթե ... բուժման հետևանքն է»): keep (honest, slightly abstract) or cut?</li>
+<li>The address question from the Bayes plan (U-a, «դու» vs «դուք») applies here too.</li>
+</ul>
+</details><details open id="production-plan-after-approval"><summary>Production plan (after approval)</summary>
+<p>Same as the Bayes short: voice (13 beats, ~$0.05), timeline + sync check, scenes (the crowd-grid component is shared, so this short is mostly new states: bands, recolouring, the weighted card), stills, one draft and one final render, contact sheet, Gemini review, review page.</p>
+</details></body></html>

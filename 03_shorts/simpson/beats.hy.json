@@ -1,0 +1,73 @@
+[
+  {
+    "key": "hook",
+    "text": "Երկու բուժում երիկամի քարերի համար։ Առաջինից հետո քարից ազատվում է հիվանդների 78 տոկոսը, երկրորդից հետո՝ 83 տոկոսը։ Ո՞րը կընտրես։",
+    "visual": "Two cards side by side: 'Ա 78%' and 'Բ 83%'; B glows as the obvious pick. Frame 0 shows both numbers (thumbnail)."
+  },
+  {
+    "key": "twist",
+    "text": "Իսկ հիմա՝ առաջին բուժումն ավելի լավն է և՛ փոքր, և՛ մեծ քարերի դեպքում։ Ավելի լավը՝ ամեն խմբում, բայց ավելի վատը՝ ընդհանուր։ Սա Սիմպսոնի պարադոքսն է։",
+    "screen": "Սիմպսոնի պարադոքս",
+    "visual": "Under card A two small badges 'փոքր քարեր ✓' and 'մեծ քարեր ✓' pop in; B's glow fades; title card."
+  },
+  {
+    "key": "study",
+    "text": "Թվերն իրական են՝ 1986 թվականի բրիտանական հետազոտությունից։ Քարերը հեռացնում էին կամ բաց վիրահատությամբ, կամ մաշկի փոքր անցքով։ Ամեն մեթոդով՝ 350 հիվանդ։",
+    "screen_small": "Charig et al., BMJ, 1986",
+    "visual": "Two simple icons: an open-surgery scalpel line vs a small keyhole; labels 'Ա՝ բաց վիրահատություն', 'Բ՝ փոքր անցքով'."
+  },
+  {
+    "key": "crowd",
+    "text": "Պատկերացրու 350 մարդ ամեն կողմում։ Բաց վիրահատությունից հետո քարից ազատվել է 273-ը, երկրորդ մեթոդից հետո՝ 289-ը։ Երկրորդն ավելի լավն է թվում։",
+    "visual": "Two crowds of 350 dots (18 x 20 grids) side by side. Successes turn warm white, failures red. Counters: '273 / 350 = 78%' and '289 / 350 = 83%'."
+  },
+  {
+    "key": "split",
+    "text": "Հիմա բաժանենք նրանց ըստ քարի չափի։",
+    "visual": "Dots regroup inside each crowd into two bands: small stones on top, large stones below. A: 87 small / 263 large (heavy at the bottom); B: 270 small / 80 large (heavy at the top)."
+  },
+  {
+    "key": "small",
+    "text": "Փոքր քարեր՝ բաց վիրահատությունն օգնում է 93 տոկոսին, երկրորդ մեթոդը՝ 87 տոկոսին։",
+    "visual": "The two small-stone bands light up, others dim. Counters '81 / 87 = 93%' vs '234 / 270 = 87%'; a check mark on A."
+  },
+  {
+    "key": "large",
+    "text": "Մեծ քարեր՝ 73 տոկոսն ընդդեմ 69-ի։ Բաց վիրահատությունը հաղթում է երկու խմբում էլ։",
+    "visual": "The large-stone bands light up: '192 / 263 = 73%' vs '55 / 80 = 69%'; check mark on A; both check marks stay."
+  },
+  {
+    "key": "why",
+    "text": "Ինչպե՞ս։ Նայիր, թե ով ինչ բուժում է ստացել։ Մեծ, դժվար քարերով հիվանդների մեծ մասին արել են բաց վիրահատություն, իսկ փոքր, հեշտ քարերով հիվանդների մեծ մասին՝ երկրորդ մեթոդը։ Բաց վիրահատությանը բաժին են ընկել դժվար դեպքերը, և դրա համար ընդհանուր թիվը վատ է երևում։",
+    "visual": "Dots recolour by stone size instead of outcome (large = dark orange, small = light). A is mostly dark, B mostly light. Label 'դժվար դեպքեր' on A's big band."
+  },
+  {
+    "key": "weighted",
+    "text": "Ընդհանուր տոկոսը խմբերի տոկոսների կշռավորված միջինն է։ Բաց վիրահատության հիվանդների երեք քառորդը մեծ քարերով էր, իսկ երկրորդ մեթոդի հիվանդների երեք քառորդը՝ փոքր քարերով։",
+    "screen": "կշռավորված միջին",
+    "visual": "Card: 'Ա: 93% x 87 + 73% x 263 -> 78%' and 'Բ: 87% x 270 + 69% x 80 -> 83%', weights drawn as bar widths."
+  },
+  {
+    "key": "berkeley",
+    "text": "Նույնը եղավ 1973 թվականին Բերքլիի համալսարանում։ Ընդունվել էր տղամարդ դիմորդների 44 տոկոսը և կին դիմորդների միայն 35 տոկոսը։ Կարծես խտրականություն լինի։ Բայց վեց խոշոր ֆակուլտետներից չորսում կանայք ընդունվում էին ավելի բարձր տոկոսով։ Պարզվեց, որ կանայք ավելի հաճախ էին դիմում այն ֆակուլտետներ, որտեղ ընդունվում էին քչերը։",
+    "screen_small": "Bickel et al., Science, 1975",
+    "visual": "Two crowds of 100 applicants (men, women) from the six largest departments: each split into 'easy' (A, B) and 'hard' (C-F) departments: men 51 / 49, women 7 / 93; admitted ones light up."
+  },
+  {
+    "key": "covid",
+    "text": "Իսկ 2020 թվականի սկզբին Իտալիայում կորոնավիրուսով վարակվածների մեջ մահացածների բաժինն ընդհանուր առմամբ ավելի մեծ էր, քան Չինաստանում, թեև ամեն տարիքային խմբում ավելի փոքր էր։ Պատճառը՝ Իտալիայում վարակվածներն ավելի տարեց էին։",
+    "screen_small": "von Kügelgen et al., 2021",
+    "visual": "Schematic age-group bars (no exact rates): Italy's bar lower in every age group; then the case mix: Italy's crowd mostly older (darker dots), China's mostly younger."
+  },
+  {
+    "key": "rule",
+    "text": "Ուրեմն ո՞ր թվին հավատալ։ Եթե խմբերը տարբերվում են մի բանով, որը կար մինչև բուժումը՝ քարի չափով, տարիքով, ֆակուլտետի ընտրությամբ, համեմատիր խմբերն առանձին՝ նմանը նմանի հետ։ Բայց եթե խմբերը բաժանում ես մի բանով, որը հենց բուժման հետևանքն է, ճիշտն ընդհանուր թիվն է։",
+    "visual": "Rule card: 'կար մինչև բուժումը -> համեմատիր խմբերով'; small second line 'բուժման հետևանքն է -> նայիր ընդհանուրին'."
+  },
+  {
+    "key": "takeaway",
+    "text": "Այնպես որ, երբ թվերն ասում են՝ «սա ավելի լավն է», հարցրու՝ իսկ նույն տեսակի դեպքե՞ր են համեմատում։",
+    "screen": "Նույն տեսակի դեպքե՞ր են համեմատում",
+    "visual": "Big karaoke text over the faint two crowds; last frame close to the first (the two cards) for a loop."
+  }
+]
