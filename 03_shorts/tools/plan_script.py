@@ -34,6 +34,8 @@ CEILING_S = 165                 # 2:45 of speech keeps a Short under 3:00 (YouTu
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("short", type=Path)
+    ap.add_argument("--ceiling", type=float, default=CEILING_S,
+                    help="seconds of speech + pauses before the plan flags a cut; 0 = no limit (long videos)")
     args = ap.parse_args()
     beats = json.loads((args.short / "beats.hy.json").read_text(encoding="utf-8"))
     plan_path = args.short / "PLAN.md"
@@ -45,7 +47,8 @@ def main():
     est = (chars + spoken_chars) / 2 / CHARS_PER_MIN * 60  # midpoint: digits as written vs spelled out
     silent = sum(b.get("pause_after", 0) for b in beats)  # marked pauses for the picture (F122)
     total = est + GAP_S * (len(beats) - 1) + silent + TAIL_S
-    flag = " **Over the 2:45 speech ceiling: cut a beat.**" if est + silent > CEILING_S else ""
+    over = args.ceiling and est + silent > args.ceiling
+    flag = f" **Over the {int(args.ceiling // 60)}:{int(args.ceiling % 60):02d} speech ceiling: cut a beat.**" if over else ""
     pauses = f", {silent:g} s of them marked silent pauses" if silent else ""
     lines = [START, "", f"{len(beats)} beats, {chars:,} characters ({spoken_chars:,} with numbers spelled out): "
              f"~{round(est)} s of speech, ~{int(total // 60)}:{round(total % 60):02d} with pauses and the end tail"

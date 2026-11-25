@@ -1,53 +1,82 @@
 [
   {
-    "key": "hook",
-    "text": "Ինչպե՞ս ապացուցել, որ գաղտնիք գիտես, առանց գաղտնիքից գեթ մի բան ասելու։ Օրինակ՝ կայքին ապացուցել, որ 18 տարեկանից մեծ ես, առանց ծննդյան ամսաթիվը ցույց տալու։",
-    "visual": "Frame 0: a locked box labelled «գաղտնիք» and a green check mark beside it, with no line connecting them; a phone shows '18+ ?'."
+    "key": "gossip",
+    "text": "Ընկերուհիդ գրում է՝ «Լսե՞լ ես Անիի մասին»։ Դու մի գաղտնիք գիտես Անիի մասին։ Բայց չգիտես՝ ընկերուհիդ էլ գիտի՞ նույնը, թե ուզում է քեզնից իմանալ։ Եթե առաջինը դու պատմես, իսկ նա չգիտեր, գաղտնիքը դու ես տարածել։ Նա էլ նույն վախն ունի։ Ուրեմն ինչպե՞ս պարզել, որ երկուսդ էլ գիտեք, առանց որևէ մեկի բարձրաձայնելու։",
+    "pause_after": 1.5,
+    "visual": "16:9. A phone chat on the left: the friend's message «Լսե՞լ ես Անիի մասին»; on the right two thought bubbles, yours with a locked envelope «գաղտնիք», hers with a '?'. Two typing dots that start and stop."
+  },
+  {
+    "key": "same_problem",
+    "text": "Թվում է՝ բամբասանքի խնդիր է։ Բայց հենց նույն խնդիրն ամեն օր լուծում են կայքերն ու բանկերը։ Կայքը պետք է համոզվի, որ գիտես գաղտնաբառդ, բայց ավելի ապահով է, եթե գաղտնաբառն ինքը երբեք չուղարկես։ Բանկը պետք է իմանա, որ եկամուտդ բավական է վարկի համար, բայց պարտադիր չէ, որ իմանա ճշգրիտ թիվը։ Իսկ կայքը պետք է իմանա, որ 18 տարեկանից մեծ ես, բայց ոչ քո ծննդյան ամսաթիվը։",
+    "visual": "Three cards slide in left to right: a login box (password dots never leave the phone), a loan form (salary blurred, a check mark 'բավական է'), a website age gate ('18+ ✓', birth date blurred)."
+  },
+  {
+    "key": "name",
+    "text": "Բոլոր դեպքերում հարցը նույնն է՝ ինչպե՞ս ապացուցել, որ ինչ-որ բան ճիշտ է, և ոչինչ ավել չբացահայտել։ Մաթեմատիկոսներն ունեն դրա պատասխանը, և այն կոչվում է զրոյական գիտելիքով ապացույց։",
+    "pause_after": 1,
+    "screen": "Զրոյական գիտելիքով ապացույց",
+    "visual": "The three cards collapse into one line: 'ապացուցել ✓, բացահայտել ✗'; the title appears."
+  },
+  {
+    "key": "cave_setup",
+    "text": "Ամենահայտնի բացատրությունը քարանձավն է։ Պատկերացրու օղակաձև քարանձավ՝ մուտքից երկու արահետ է գնում, ձախ և աջ, որոնք խորքում միանում են փակ դռնով։ Դուռը բացվում է միայն գաղտնի բառով։ Ընկերուհիդ ասում է, որ գիտի այդ բառը։ Դու ուզում ես համոզվել, բայց առանց բառը լսելու։",
+    "screen_small": "Quisquater et al., «How to explain zero-knowledge protocols to your children», 1990",
+    "visual": "Top-down drawing of a ring-shaped cave: entrance at the bottom, paths A (left) and B (right) meeting at a door at the top; the door glows with a lock. The friend stands at the entrance, you outside."
+  },
+  {
+    "key": "cave_round",
+    "text": "Նա մտնում է քարանձավ և ընտրում արահետներից մեկը, իսկ դու դրսում ես և չես տեսնում՝ որը։ Հետո դու գալիս ես մուտքի մոտ և բղավում՝ «Դուրս արի ձախից»։ Եթե նա գիտի բառը, միշտ կարող է դուրս գալ քո ասած կողմից, անհրաժեշտության դեպքում բացելով դուռը։ Իսկ եթե չգիտի, կկարողանա միայն վերադառնալ նույն ճանապարհով, և քո պահանջը կկատարի միայն այն դեպքում, եթե պատահաբար ճիշտ արահետ էր ընտրել։",
+    "pause_after": 2,
+    "visual": "The showcase, part 1: the friend's dot walks into path B while a curtain hides the inside from you; your shout 'ձախից'; split-screen of two endings: with the word she opens the door and comes out left; without it she is stuck at the door and can only come back right (a red X). Hold for the pause."
+  },
+  {
+    "key": "cave_rounds",
+    "text": "Մեկ անգամ նա կարող էր բախտ ունենալ՝ հիսուն տոկոս։ Երկու անգամ անընդմեջ՝ քառորդ։ Տասը անգամ՝ մոտ հազարից մեկ։ Քսան անգամ՝ մոտ միլիոնից մեկ։ Քսան անգամ ճիշտ կողմից դուրս գալուց հետո դու համոզված ես։ Իսկ բառն այդպես էլ չես լսել։",
+    "pause_after": 1.5,
+    "visual": "The showcase, part 2: rounds run fast (random side called, she exits it); a 'just luck' bar halves every round: 1/2, 1/4 ... 1/1024 at round 10, 1/1 048 576 at round 20."
+  },
+  {
+    "key": "why_zero",
+    "text": "Բայց ինչո՞ւ «զրոյական գիտելիք»։ Որովհետև դու ոչ մի բան չես կարող փոխանցել ուրիշին։ Եթե ամբողջը նկարես և տեսանյութը ցույց տաս ընկերներիդ, ոչ ոք չի համոզվի։ Նույն տեսանյութը կարելի է սարքել առանց բառն իմանալու՝ բավական է նախապես պայմանավորվել, թե որ կողմն ես ասելու, կամ ուղղակի կտրել անհաջող փորձերը։ Դու քարանձավից դուրս ես գալիս միայն համոզմունքով, առանց որևէ տեղեկության, որ կարողանաս ուրիշին տալ։",
+    "pause_after": 2,
+    "visual": "A phone films the cave; the same 20-round video plays next to a 'fake' one made from a script of agreed calls and cut failures (film strips with scissors): the two look identical; a label 'նույնն են'. Then you walk away with a check mark in your head and nothing in your hands."
+  },
+  {
+    "key": "card",
+    "text": "Երբեմն նույնիսկ մեկ քայլը բավական է։ Խառը կապոցից մի քարտ ես քաշում և առանց ցույց տալու ասում՝ «Կարմիր է»։ Ինչպե՞ս ապացուցել՝ առանց քարտը բացելու։ Կապոցի մնացած 51 քարտը շրջում ես և ցույց տալիս, որ բոլոր 26 սև քարտերը դեռ այնտեղ են։ Եթե բոլոր սևերը կապոցում են, ուրեմն ձեռքիդ քարտը կարմիր է։ Ընկերդ դա գիտի, բայց չգիտի՝ որ կարմիր քարտն է՝ յոթնո՞ց, թե՞ թագուհի։",
+    "pause_after": 1.5,
+    "visual": "A face-down card in your hand; the rest of the deck is turned face up and fanned out; the 26 black cards light up one by one inside the deck (a counter 26/26: all black cards are still there); your card stays face down with a red glow but no face."
   },
   {
     "key": "balls",
-    "text": "Պատկերացրու՝ ընկերդ դալտոնիկ է, և ձեռքին երկու գնդակ ունի՝ կարմիր ու կանաչ։ Նրա համար դրանք նույնն են։ Դու ուզում ես ապացուցել, որ դրանք տարբեր գույնի են, բայց չասել, թե որն է կարմիրը։",
-    "visual": "Split view: what you see (a red and a green ball) and what the friend sees (two identical grey balls)."
-  },
-  {
-    "key": "round",
-    "text": "Նա գնդակները թաքցնում է մեջքի ետևում, պատահականորեն փոխում է ձեռքերը կամ չի փոխում, հետո ցույց է տալիս և հարցնում՝ փոխեցի՞։",
+    "text": "Իսկ եթե պետք է ապացուցել ոչ թե գաղտնիք, այլ տարբերություն։ Ընկերդ դալտոնիկ է, և ձեռքին երկու գնդակ ունի՝ կարմիր ու կանաչ։ Նրա համար դրանք նույնն են։ Նա գնդակները թաքցնում է մեջքի ետևում, փոխում է ձեռքերը կամ չի փոխում, հետո ցույց է տալիս և հարցնում՝ փոխեցի՞։",
     "pause_after": 3,
-    "visual": "One round plays in near silence (F210): the friend's hands go behind the back, a coin-flip icon decides swap or not, the balls come back; the viewer sees it from the friend's grey side and has to guess too."
+    "visual": "Split frame: what you see (red, green) and what the friend sees (grey, grey). One round plays in near silence: hands behind the back, a coin flip decides, the balls come back; the viewer sees the grey side and has to guess too."
   },
   {
-    "key": "answer",
-    "text": "Դու ամեն անգամ ճիշտ ես պատասխանում։ Եթե գնդակներն իսկապես նույն գույնի լինեին, չէիր կարող իմանալ՝ նա փոխեց, թե ոչ։ Միայն կգուշակեիր։",
-    "visual": "Your answer 'փոխեցիր' with a check mark; then the grey-grey view with a question mark over 'փոխե՞ց' (F207)."
-  },
-  {
-    "key": "rounds",
-    "text": "Մեկ անգամ գուշակելը կարող է հաջողվել՝ հիսուն տոկոս։ Բայց քսան անգամ անընդմեջ պատահաբար գուշակելու հավանականությունը մոտ մեկ միլիոնից մեկ է։ Քսան ռաունդից հետո նա համոզված է՝ գնդակները տարբեր են։",
-    "pause_after": 2.5,
-    "visual": "The showcase: a row of 20 rounds fills with check marks; beside it a 'just guessing' bar halves at every round (1/2, 1/4, 1/8 ...) until it is a sliver labelled 1 / 1 048 576."
-  },
-  {
-    "key": "zero",
-    "text": "Իսկ ի՞նչ իմացավ նա։ Միայն այն, որ դու տարբերում ես գնդակները։ Թե որն է կարմիրը, մինչև հիմա չգիտի։ Սա է զրոյական գիտելիքով ապացույցը՝ համոզում ես, ոչինչ չբացահայտելով։",
+    "key": "balls_logic",
+    "text": "Դու ամեն անգամ ճիշտ ես պատասխանում։ Եթե գնդակներն իսկապես նույն գույնի լինեին, չէիր կարող իմանալ, միայն կգուշակեիր։ Քսան ռաունդից հետո նա նույնքան համոզված է, որքան դու քարանձավի դեպքում։ Իսկ թե որն է կարմիրը, մինչև հիմա չգիտի։",
     "pause_after": 1.5,
-    "visual": "The friend's view again: still two grey balls, now with a check mark between them."
+    "visual": "Your answers with check marks; the halving bar from the cave returns and runs to 1 in a million; the friend's side still shows two grey balls with a check mark between them."
   },
   {
     "key": "real",
-    "text": "Իրական համակարգերում գնդակների փոխարեն մաթեմատիկական խնդիրներ են։ Դրանց պատասխանը կարող է անընդհատ ճիշտ տալ միայն նա, ով գիտի գաղտնիքը։",
-    "screen_small": "Goldwasser, Micali & Rackoff, 1985",
-    "visual": "The balls morph into a grid of numbers (a puzzle) answered correctly round after round."
+    "text": "Իրական համակարգերում քարանձավի ու գնդակների փոխարեն մաթեմատիկական խնդիրներ են, որոնց պատասխանը կարող է անընդհատ ճիշտ տալ միայն գաղտնիքն իմացողը։ Ռաունդներն էլ անում է համակարգիչը՝ վայրկյանի մի մասում։ Հոլանդական մի խոշոր բանկ, օրինակ, հրապարակեց մեթոդ, որով կարելի է ապացուցել, որ աշխատավարձդ որոշակի միջակայքում է՝ առանց ճշգրիտ թիվը ցույց տալու։ Եվրոպական միությունն այսպես տարիքի ստուգում է փորձարկում, իսկ որոշ կրիպտոարժույթներ թաքցնում են, թե ով ում որքան է փոխանցել։",
+    "screen_small": "ING, Zero-Knowledge Range Proof, 2017; EU age verification app, 2025; Zcash, 2016",
+    "visual": "The balls morph into a grid of numbers answered in a blur of rounds; then the three cards from beat 2 return, each now with a lock and a check mark: salary in a range, '18+ ✓', a transaction with hidden fields marked valid."
   },
   {
-    "key": "uses",
-    "text": "Եվ սա արդեն տեսություն չէ։ Տարիքի այդպիսի ստուգում փորձարկում է Եվրոպական միությունը, իսկ որոշ կրիպտոարժույթներ այդպես թաքցնում են, թե ով ում որքան է փոխանցել։",
-    "visual": "The phone from the hook now shows only '18+ ✓' to a website, the birth date stays blurred in a locked area; then a transaction line where sender, receiver and amount are hidden but a check mark says 'valid'."
+    "key": "gossip_close",
+    "text": "Իսկ ի՞նչ անի ընկերուհիդ։ Գաղտնիքներ համեմատելու համար էլ կա մեթոդ, և այն կա իրական ծրագրերում։ Որոշ գաղտնի չատերում երկուսդ էլ գրում եք նույն հարցի պատասխանը, և ծրագիրն ասում է միայն՝ համընկնում է, թե ոչ։ Պատասխանն ինքը ոչ ոք չի տեսնում։",
+    "pause_after": 1,
+    "screen_small": "Socialist Millionaires' Protocol, Off-the-Record Messaging",
+    "visual": "The chat from the hook returns: both type an answer into a locked box; the boxes meet and a single word appears, 'համընկնում է ✓'; the answers stay hidden."
   },
   {
     "key": "takeaway",
     "text": "Ապացուցելն ու բացահայտելը նույն բանը չեն։ Կարելի է համոզել՝ ոչինչ չտալով։",
-    "pause_after": 1,
+    "pause_after": 1.5,
     "screen": "Ապացուցել ≠ բացահայտել",
-    "visual": "The locked box and the check mark from the hook, now joined by a dotted line that never opens the box; loops."
+    "visual": "The locked envelope from the hook and a check mark joined by a dotted line that never opens it."
   }
 ]

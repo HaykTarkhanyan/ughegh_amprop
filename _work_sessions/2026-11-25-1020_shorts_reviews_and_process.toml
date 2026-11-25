@@ -35,6 +35,7 @@ done = [
   "Voice test F164/F230 (5 clips, TTS $0.027 + Gemini transcription check $0.0055): digits, the classical Proverbs line, Mercator/Gauss, minuta/secunda all right; «քոֆ» heard as «քաֆ»; letter names need Hayk's ear -> voice_test/batch2_risky.html",
   "Checked for the rewrites: Armenian numerals 4 x 9 (Wikipedia), Akhtamar interior frescoes (Tatev 930 on one source), Webster 1806/1828 color/center",
   "03_shorts/README.md: 'Script rules' (Fable rules, digits) + two strands + Fable's publishing order; DECISIONS.md #22 (script rules, digits) staged alone via the HEAD-blob trick",
+  "First video decided (DECISIONS #23): zero-knowledge proofs in Hayk's structure (gossip hook, websites/banks, cave, why 'zero knowledge' = a video of it could be faked, red card with all 26 black cards still in the deck, colour-blind balls, real systems incl. ING range proof and OTR socialist-millionaire check); Q18 short + long, Q19 long is 16:9, Q20 balls, Q21 Hayk narrates in one free-reading take. zero_knowledge/ (long, 13 beats ~4:38) + zero_knowledge_short/ (6 beats ~1:04); plan_script.py --ceiling 0 for long videos",
 ]
 
 pending = [

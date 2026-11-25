@@ -1,0 +1,38 @@
+[
+  {
+    "key": "gossip",
+    "text": "Ընկերուհիդ գրում է՝ «Լսե՞լ ես Անիի մասին»։ Դու գաղտնիքը գիտես, բայց չգիտես՝ նա էլ գիտի՞, թե ուզում է քեզնից իմանալ։ Ինչպե՞ս ստուգել՝ առանց գաղտնիքը բարձրաձայնելու։",
+    "pause_after": 1,
+    "visual": "9:16. Frame 0: the chat message «Լսե՞լ ես Անիի մասին» and your locked envelope «գաղտնիք»; her bubble shows '?'."
+  },
+  {
+    "key": "same_problem",
+    "text": "Նույն խնդիրն ունեն կայքերն ու բանկերը՝ համոզվել, որ գիտես գաղտնաբառդ, կամ որ 18 տարեկանից մեծ ես, առանց ավելորդ բան իմանալու։ Լուծումը կոչվում է զրոյական գիտելիքով ապացույց։",
+    "screen": "Զրոյական գիտելիքով ապացույց",
+    "visual": "Two quick cards stacked vertically: a login box whose password never leaves the phone, an age gate '18+ ✓' with the birth date blurred; the title."
+  },
+  {
+    "key": "cave",
+    "text": "Պատկերացրու օղակաձև քարանձավ՝ երկու արահետ, որոնք խորքում միանում են գաղտնի բառով բացվող դռնով։ Ընկերուհիդ մտնում է մի արահետով, իսկ դու դրսից բղավում ես՝ «Դուրս արի ձախից»։ Եթե բառը գիտի, միշտ կարող է։ Եթե չգիտի, կհաջողվի միայն կես անգամ։",
+    "pause_after": 1.5,
+    "visual": "The same cave drawing as the long video, rotated for vertical (entrance at the bottom, door at the top); one round plays: she goes right, you call left, she opens the door and exits left."
+  },
+  {
+    "key": "rounds",
+    "text": "Քսան անգամ անընդմեջ պատահաբար հաջողելու հավանականությունը մոտ միլիոնից մեկ է։ Դու համոզված ես, իսկ բառը չես լսել։",
+    "pause_after": 1.5,
+    "visual": "Twenty fast rounds; the 'just luck' bar halves to 1 / 1 048 576."
+  },
+  {
+    "key": "tease",
+    "text": "Ինչո՞ւ է սա կոչվում «զրոյական գիտելիք», և ինչպես նույնն անել քարտերի կապոցով, տե՛ս երկար տեսանյութում։",
+    "visual": "A film strip with scissors (the faked video) and a face-down red card flash by as a teaser; a 'long video' pointer."
+  },
+  {
+    "key": "takeaway",
+    "text": "Ապացուցելն ու բացահայտելը նույն բանը չեն։",
+    "pause_after": 1,
+    "screen": "Ապացուցել ≠ բացահայտել",
+    "visual": "The locked envelope and the check mark joined by a dotted line; loops to the chat."
+  }
+]

@@ -2,6 +2,14 @@
 
 Newest at the top.
 
+## 23. The first video: zero-knowledge proofs, narrated by Hayk, as a short intro plus a long horizontal explainer
+
+- **Date / status:** 2026-11-25, active
+- **Decision:** The channel opens with zero-knowledge proofs, in Hayk's own structure (gossip hook, real uses, the cave, why "zero knowledge", the red card, the two balls, real systems, back to the gossip). Two videos: a vertical Short (~1 min, `03_shorts/zero_knowledge_short/`) and a horizontal 16:9 long explainer (~4-5 min, `03_shorts/zero_knowledge/`). Hayk narrates both himself in one free-reading take each; the animation is fitted to his recording (components timed from the beat times), not the other way round.
+- **Why:** Hayk: "for this video, I understand what I want, and I want this to be our initial video"; "I will narrate the script myself, and then you fit the video to the script". Q18-Q21 answered: short intro + long explainer, horizontal for the long one, the colour-blind balls as the repeated demo, one take free reading.
+- **Alternatives rejected:** one Short up to 2:45 (too tight for five demos); the Gemini TTS voice of #20 (stays the default for the other shorts); vertical for the long video (YouTube shows long vertical videos with side bars on desktop).
+- **What would change this:** the free-reading take cannot be split and aligned reliably (then re-record one file per beat, or add a forced aligner, licence permitting); the long horizontal layout costs far more than reusing the vertical one.
+
 ## 22. Shorts scripts follow written script rules; numbers are written as digits
 
 - **Date / status:** 2026-11-25, active

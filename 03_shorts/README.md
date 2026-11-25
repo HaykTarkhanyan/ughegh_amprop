@@ -41,7 +41,9 @@ that led here: `../_knowledge/short_videos/lit_review.md`.
 decoy, IKEA, Dmanisi, statues, ...) and "why is this thing the way it is" shorts (alphabet, spelling, week,
 minute, suitcase, own voice, yawning, ...). Alternate them.
 
-**Publishing order (Fable F233, pending Hayk):** own_voice, decoy_popcorn, bayes_test, map_projection, friendship,
+**First video (Hayk, DECISIONS #23):** zero-knowledge proofs, narrated by Hayk: the Short `zero_knowledge_short/` and the long 16:9 explainer `zero_knowledge/`.
+
+**Publishing order after it (Fable F233, pending Hayk; zero_knowledge moves to the front):** own_voice, decoy_popcorn, bayes_test, map_projection, friendship,
 painted_statues, petrov, mashtots, english_spelling, crypto_paint, yawning, week_seven, regression, zero_knowledge,
 dmanisi, ikea_effect, kids_tv, simpson, minute_60, luggage_wheels, waiting (rework), qwerty (rework). Option:
 mashtots and english_spelling around 21 February (International Mother Language Day).
