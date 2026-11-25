@@ -2,6 +2,14 @@
 
 Newest at the top.
 
+## 20. Shorts: voice Sadaltager with no style prompt, ~70 s with a takeaway, the Wald story told as a story
+
+- **Date / status:** 2026-11-25, active
+- **Decision:** Shorts are narrated by Gemini 3.8 Flash TTS, voice Sadaltager, with no style prompt. They run longer rather than shorter (the pilot is ~70 s, nine beats, ending with a takeaway the viewer can use). Anecdotes that are partly legend are framed as stories and illustrations are labelled: the Wald bomber beat opens with «Պատմում են, որ ...», and the red-dot plane carries «նկարազարդում».
+- **Why:** Voice: two listening rounds on 2026-11-25. Round 1, a "lively, energetic storyteller" prompt on Sadaltager, Puck, Sadachbia and Autonoe: Hayk, "with this lively they all sounded too artifical". Round 2, no prompt vs a "natural, relaxed, like telling a friend over coffee" prompt on Sadaltager, Achird and Autonoe: Hayk, "natural_Sadaltager_no_style was best". Length: Hayk, "why is 53 s long for a short? i dont think so" and "i would actually prefer a bit longer shorts - so theyre not just doomscroll garbage"; my 30-45 s target in the review was a guess from vendor blogs. Wald: Commons describes File:Survivorship-bias.svg as "Illustration of hypothetical damage pattern" (2021), and secondary sources find no record of the "officers wanted armour the other way" scene; Wald's 1943 memos are vulnerability calculations.
+- **Alternatives rejected:** the lively prompt (artificial); the qysu "calm university lecturer" prompt (made for lectures); Azure hy-AM voices (not tested yet, only if word-exact caption timing becomes a must); a 30-45 s cap; telling the Wald scene as fact.
+- **What would change this:** retention numbers from the first uploads (people leaving early on long shorts); a new Gemini voice or an Armenian-native TTS that sounds more natural; Hayk's ear on a full short rather than a 13 s sample.
+
 ## 19. Short videos (Shorts, Reels, TikTok): Armenian, code-drawn animation + real photos, made in session, uploaded by hand
 
 - **Date / status:** 2026-11-25, active (tools review done; rendering framework still open)

@@ -213,6 +213,8 @@ All four frameworks above can do the first three; HTML-based ones do it with a f
   right ~15%. Check uploads with a safe-zone overlay tool (e.g. Socialync's checker) **[S]**.
 - **Length:** Shorts allow up to 3 minutes since October 2024 **[S]**. Advice clusters around 20-45 s, and 30-60 s for
   explainers **[S]** (vendor blogs, not YouTube). For a survivorship-bias explainer, aim for 30-45 s **[U]**.
+  **Overruled by Hayk (2026-11-25):** a bit longer, so a short has substance and is not doomscroll filler; the pilot
+  is ~70 s (DECISIONS.md #20).
 - **Hook:** most drop-off happens in the first 1-3 s; open with the claim or the question, not with an intro **[S]**
   ("Our grandparents' fridge still works. So why doesn't yours?"). The Shorts feed tests each video on a small
   audience first and stops if engagement is weak **[S]**.
@@ -305,6 +307,12 @@ A good topic, and more interesting if told honestly, because it is **partly true
 
 A short that says "partly true, and here is why your eyes still lie to you" is stronger and safer against
 comment-section pushback than "it's all bias".
+
+The same goes for the classic Wald bomber story (added after a heads-up note, checked 2026-11-25): Wald's 1943 memos
+are real vulnerability calculations, but the "officers wanted armour where the holes were" scene has no record and
+reads as later retelling, and the famous red-dot plane on Commons is described there as an "Illustration of
+hypothetical damage pattern" drawn in 2021 **[S]**. The pilot tells it as «Պատմում են, որ ...» and labels the
+picture «նկարազարդում».
 
 ---
 

@@ -8,3 +8,16 @@ build/
 __pycache__/
 # Git Bash crash dumps
 *.stackdump
+
+# Node projects (03_shorts bake-off)
+node_modules/
+# rendered videos and previews (regenerated from code)
+03_shorts/**/out/
+
+# bake-off: copies made by 03_shorts/bakeoff/sync_assets.py
+03_shorts/bakeoff/remotion/public/
+03_shorts/bakeoff/remotion/src/data.json
+03_shorts/bakeoff/hyperframes/assets/
+03_shorts/*/build/
+03_shorts/bakeoff/hyperframes/.hyperframes/
+03_shorts/bakeoff/hyperframes/renders/

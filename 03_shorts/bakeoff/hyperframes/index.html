@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="hy" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "NotoArm";
+        src: url("assets/NotoSansArmenian-Variable.ttf") format("truetype");
+        font-weight: 100 900;
+      }
+      /* New look for the shorts: near-black, warm white, flag orange for "survived". Same values as the Remotion build. */
+      :root {
+        --bg: #0e0f12;
+        --ink: #f4f1ea;
+        --muted: #8a8f98;
+        --orange: #f2a800;
+        --red: #e8383d;
+        --grey: #3a3e46;
+        --font: "NotoArm", sans-serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); }
+      #root { position: relative; width: 100%; height: 100%; font-family: var(--font); color: var(--ink); background: var(--bg); }
+      .scene { position: absolute; inset: 0; overflow: hidden; background: var(--bg); opacity: 0; }
+      .photo { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.72) 72%, rgba(0,0,0,0.8) 100%); }
+      .shade { position: absolute; inset: 0; background: #000; opacity: 0; }
+      .pill-row { position: absolute; top: 300px; left: 120px; right: 192px; display: flex; justify-content: center; opacity: 0; }
+      .pill { font-size: 28px; font-weight: 600; background: rgba(14,15,18,0.78); padding: 12px 26px; border-radius: 999px; white-space: nowrap; }
+      .fridge { position: absolute; border-radius: 14%/8%; }
+      .fridge::before { content: ""; position: absolute; top: 36%; left: 7%; right: 7%; height: 2%; min-height: 2px; background: rgba(0,0,0,0.28); }
+      .fridge::after { content: ""; position: absolute; top: 14%; left: 12%; width: 6%; min-width: 3px; height: 14%; border-radius: 4px; background: rgba(0,0,0,0.35); box-shadow: 0 calc(var(--h) * 0.3) 0 rgba(0,0,0,0.35); }
+      .person { position: absolute; }
+      .person i { position: absolute; display: block; }
+      .card { position: absolute; left: 110px; top: 300px; width: 860px; padding: 20px; background: var(--ink); border-radius: 32px; opacity: 0; }
+      .plane { position: relative; width: 820px; }
+      .plane img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+      .dot { position: absolute; border-radius: 50%; background: #c00000; }
+      .ring { position: absolute; border-radius: 50%; border: 9px solid var(--orange); background: rgba(242,168,0,0); }
+      .illus { position: absolute; left: 100px; top: 16px; font-size: 28px; color: #6b6b70; }
+      .record { position: absolute; width: 140px; height: 140px; border-radius: 50%; }
+      #captions { position: absolute; left: 140px; width: 640px; bottom: 720px; height: 0; }
+      .cap { position: absolute; left: 0; right: 0; bottom: 0; text-align: center; opacity: 0; visibility: hidden; }
+      .cap span, #lesson-text span { display: inline-block; font-weight: 800; }
+      .cap span { margin: 0 16px; font-size: 68px; line-height: 1.18; -webkit-text-stroke: 10px var(--bg); paint-order: stroke fill; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="71.1" data-width="1080" data-height="1920">
+      <section id="s-hook" class="scene">
+        <img id="hook-photo" class="photo" src="assets/zil_yerevan_zoo.jpg" alt="" />
+        <div class="scrim"></div>
+        <div id="hook-shade" class="shade"></div>
+        <div id="hook-pill" class="pill-row"><div class="pill" data-label="zoo"></div></div>
+        <div id="hook-card" style="position: absolute; left: 520px; top: 470px; width: 260px">
+          <div class="fridge" style="position: relative; width: 260px; height: 460px; background: #e4e7eb; --h: 460px"></div>
+          <svg width="260" height="460" style="position: absolute; left: 0; top: 0">
+            <path id="hook-crack" d="M130 30 L110 120 L150 190 L118 280 L156 360 L128 440" fill="none" stroke="#e8383d" stroke-width="10"
+              stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="520" stroke-dashoffset="520" />
+          </svg>
+          <div id="hook-years" data-label="modern_years" style="margin-top: 18px; text-align: center; font-size: 44px; font-weight: 800; color: var(--red); opacity: 0"></div>
+        </div>
+      </section>
+
+      <section id="s-reveal" class="scene">
+        <img id="reveal-photo" src="assets/zil_factory_1966.jpg" alt="" style="position: absolute; top: 0; left: 0; height: 1920px; width: auto" />
+        <div class="scrim"></div>
+        <div id="reveal-shade" class="shade"></div>
+        <div id="reveal-pill" class="pill-row"><div class="pill" data-label="factory"></div></div>
+        <div id="reveal-grid"></div>
+      </section>
+
+      <section id="s-name" class="scene" style="display: flex; align-items: center; justify-content: center">
+        <div style="margin-top: -260px; text-align: center">
+          <div id="name-title" data-label="title" style="font-size: 108px; font-weight: 900"></div>
+          <div id="name-bar" style="height: 10px; width: 560px; background: var(--orange); margin: 18px auto; border-radius: 5px"></div>
+          <div id="name-en" data-label="title_en" style="font-size: 48px; font-weight: 500; color: var(--muted)"></div>
+        </div>
+      </section>
+
+      <section id="s-wald" class="scene">
+        <div id="wald-card" class="card"><div class="plane" id="wald-plane"><img src="assets/bomber_plane.svg" alt="" /></div><div class="illus" data-label="illustration"></div></div>
+      </section>
+
+      <section id="s-wald_answer" class="scene">
+        <div id="wa-portrait" style="position: absolute; top: 330px; left: 0; right: 0; text-align: center; opacity: 0">
+          <img src="assets/wald.jpg" alt="" style="width: 320px; height: 320px; border-radius: 50%; object-fit: cover; object-position: 50% 20%; border: 6px solid var(--ink)" />
+          <div data-label="wald" style="font-size: 66px; font-weight: 800; margin-top: 26px"></div>
+          <div data-label="wald_years" style="font-size: 40px; font-weight: 500; color: var(--muted); margin-top: 6px"></div>
+        </div>
+        <div id="wa-card" class="card"><div class="plane" id="wa-plane"><img src="assets/bomber_plane.svg" alt="" /><div id="wa-dots" style="position: absolute; inset: 0"></div></div><div class="illus" data-label="illustration"></div></div>
+      </section>
+
+      <section id="s-more" class="scene">
+        <div id="records"></div>
+        <div id="ninety" style="position: absolute; top: 360px; left: 0; right: 0; text-align: center; opacity: 0">
+          <div id="ninety-num" style="font-size: 280px; font-weight: 900; color: var(--orange); line-height: 1"></div>
+          <div id="ninety-word" style="font-size: 64px; font-weight: 700"></div>
+          <div style="margin: 60px auto 0; width: 320px; height: 36px; display: flex; border-radius: 6px; overflow: hidden">
+            <div style="flex: 0 0 70px; background: #c98a3d"></div><div style="flex: 1; background: #f4f1ea"></div><div style="flex: 0 0 26px; background: var(--red)"></div>
+          </div>
+        </div>
+        <div id="crowd48" style="position: absolute; inset: 0; opacity: 0"></div>
+      </section>
+
+      <section id="s-dropouts" class="scene">
+        <div id="duo"></div>
+        <div id="crowd72"></div>
+      </section>
+
+      <section id="s-lesson" class="scene">
+        <div data-layout-ignore style="position: absolute; left: 0; right: 0; top: 260px; text-align: center; font-size: 620px; font-weight: 900; color: var(--orange); opacity: 0.07">?</div>
+        <div id="lesson-text" style="position: absolute; left: 130px; width: 650px; top: 470px; text-align: center; font-size: 72px; line-height: 1.25"></div>
+      </section>
+
+      <section id="s-outro" class="scene">
+        <img id="outro-photo" class="photo" src="assets/zil_yerevan_zoo.jpg" alt="" />
+        <div class="scrim"></div>
+        <div id="outro-shade" class="shade"></div>
+      </section>
+
+      <div id="captions"></div>
+      <audio id="narration" class="clip" data-start="0" data-track-index="1" data-volume="1" src="assets/narration.wav"></audio>
+    </div>
+
+    <script src="assets/data.js"></script>
+    <script>
+      // Everything below is a function of timeline time, built from window.SHORT (written by ../sync_assets.py).
+      const S = window.SHORT;
+      const TL = S.timeline;
+      const beat = (k) => { const b = TL.beats.find((x) => x.key === k); if (!b) throw new Error("no beat " + k); return b; };
+      const at = (k, prefix) => {
+        const b = beat(k);
+        const w = b.words.find((x) => x.w.replace(/[«»]/g, "").startsWith(prefix));
+        if (!w) throw new Error(`no word "${prefix}" in beat ${k}`);
+        return w.start; // absolute seconds
+      };
+      const $ = (id) => document.getElementById(id);
+      const el = (parent, tag, css, cls) => { const e = document.createElement(tag); if (cls) e.className = cls; Object.assign(e.style, css); parent.appendChild(e); return e; };
+      document.querySelectorAll("[data-label]").forEach((e) => { e.textContent = S.labels[e.dataset.label]; });
+      const ease = "expo.out";
+      const tl = gsap.timeline({ paused: true });
+
+      // Scene slots: each beat's scene shows from its start to the next beat's start.
+      TL.beats.forEach((b, i) => {
+        const next = TL.beats[i + 1] ? TL.beats[i + 1].start : TL.duration + 1.2;
+        const sc = $("s-" + b.key);
+        tl.set(sc, { opacity: 1 }, b.start);
+        if (i + 1 < TL.beats.length) tl.set(sc, { opacity: 0 }, next);
+      });
+      const slot = (k) => { const i = TL.beats.findIndex((x) => x.key === k); const b = TL.beats[i]; return [b.start, (TL.beats[i + 1] ? TL.beats[i + 1].start : TL.duration + 1.2) - b.start]; };
+
+      const fridge = (parent, x, y, w, h, color) => el(parent, "div", { left: x + "px", top: y + "px", width: w + "px", height: h + "px", background: color, "--h": h + "px" }, "fridge");
+      const person = (parent, x, y, s, color) => {
+        const p = el(parent, "div", { left: x + "px", top: y + "px", width: s + "px", height: s * 1.5 + "px" }, "person");
+        el(p, "i", { left: s * 0.28 + "px", top: 0, width: s * 0.44 + "px", height: s * 0.44 + "px", borderRadius: "50%", background: color });
+        el(p, "i", { left: 0, top: s * 0.52 + "px", width: s + "px", height: s * 0.98 + "px", borderRadius: `${s * 0.5}px ${s * 0.5}px ${s * 0.16}px ${s * 0.16}px`, background: color });
+        return p;
+      };
+
+      // 1. Hook: the Yerevan Zoo ZIL, then "yours broke in five years".
+      {
+        const [s0, d] = slot("hook");
+        const q = at("hook", "քոնը");
+        tl.fromTo("#hook-photo", { scale: 1 }, { scale: 1.08, duration: d, ease: "none" }, s0);
+        tl.fromTo("#hook-pill", { opacity: 0 }, { opacity: 1, duration: 0.5, ease }, s0 + 0.3);
+        tl.fromTo("#hook-shade", { opacity: 0 }, { opacity: 0.45, duration: 0.4, ease }, q);
+        tl.fromTo("#hook-card", { x: 640 }, { x: 0, duration: 0.5, ease }, q);
+        tl.fromTo("#hook-crack", { strokeDashoffset: 520 }, { strokeDashoffset: 0, duration: 0.5, ease }, q + 0.5);
+        tl.fromTo("#hook-years", { opacity: 0 }, { opacity: 1, duration: 0.5, ease }, q + 0.5);
+      }
+
+      // 2. Reveal: the 1966 factory, then 20 fridges of which 19 fall away.
+      {
+        const [s0, d] = slot("reveal");
+        const t1 = at("reveal", "Փչացած"), t2 = at("reveal", "աղբանոցում"), t3 = at("reveal", "Տեսնում");
+        tl.fromTo("#reveal-photo", { x: -260 }, { x: -980, duration: d, ease: "none" }, s0);
+        tl.fromTo("#reveal-pill", { opacity: 0 }, { opacity: 1, duration: 0.4, ease }, s0 + 0.2);
+        tl.to("#reveal-pill", { opacity: 0, duration: 0.3 }, t1 + 0.9);
+        tl.fromTo("#reveal-shade", { opacity: 0 }, { opacity: 0.86, duration: 0.5, ease }, t1 + 0.9);
+        const G = { cols: 5, rows: 4, w: 96, h: 156, gap: 32, top: 330, survivor: 12 };
+        const gw = G.cols * G.w + (G.cols - 1) * G.gap;
+        for (let i = 0; i < G.cols * G.rows; i++) {
+          const f = fridge($("reveal-grid"), (1080 - gw) / 2 + (i % G.cols) * (G.w + G.gap), G.top + Math.floor(i / G.cols) * (G.h + G.gap), G.w, G.h, "#f4f1ea");
+          gsap.set(f, { opacity: 0, scale: 0 });
+          tl.to(f, { opacity: 1, scale: 1, duration: 0.3, ease }, t1 + 1.1 + i * 0.025);
+          if (i === G.survivor) {
+            f.style.zIndex = 2;
+            tl.to(f, { backgroundColor: "#f2a800", scale: 1.25, boxShadow: "0 0 40px #f2a800", duration: 0.4, ease }, t3);
+          } else {
+            const tf = t2 + ((i * 7) % 20) * 0.04;
+            tl.set(f, { backgroundColor: "#e8383d" }, tf + 0.03);
+            tl.to(f, { y: 140, opacity: 0.15, duration: 0.6, ease: "power2.in" }, tf);
+          }
+        }
+      }
+
+      // 3. Name: the title card.
+      {
+        const [s0] = slot("name");
+        tl.fromTo("#name-title", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: "back.out(1.6)" }, s0);
+        tl.fromTo("#name-bar", { width: 0 }, { width: 560, duration: 0.6, ease }, s0 + 0.3);
+        tl.fromTo("#name-en", { opacity: 0 }, { opacity: 1, duration: 0.5, ease }, s0 + 0.5);
+      }
+
+      // 4-5. The bomber: dots appear in batches, then Wald, then rings on the empty zones.
+      const aspect = S.bomber_aspect;
+      const PW = 820, PH = PW / aspect; // card ends at y ~950, above three-line captions
+      const addDots = (container) => S.dots.map((d) => {
+        const size = d.r * PW * 2;
+        return el(container, "div", { left: d.x * PW - size / 2 + "px", top: d.y * PH - size / 2 + "px", width: size + "px", height: size + "px" }, "dot");
+      });
+      ["wald-plane", "wa-plane"].forEach((id) => { $(id).style.height = PH + "px"; });
+      {
+        const [s0, d] = slot("wald");
+        const dots = addDots($("wald-plane"));
+        tl.fromTo("#wald-card", { opacity: 0 }, { opacity: 1, duration: 0.4, ease }, s0);
+        dots.forEach((dot, i) => {
+          gsap.set(dot, { scale: 0 });
+          tl.to(dot, { scale: 1, duration: 0.18, ease: "back.out(2)" }, s0 + 0.6 + (((i * 73) % 195) / 195) * d * 0.65);
+        });
+      }
+      {
+        const [s0] = slot("wald_answer");
+        const tz = at("wald_answer", "Զրահը"), tn = at("wald_answer", "Այնտեղ");
+        addDots($("wa-dots"));
+        tl.fromTo("#wa-portrait", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.5, ease }, s0);
+        tl.to("#wa-portrait", { opacity: 0, duration: 0.3 }, tz - 0.3);
+        tl.fromTo("#wa-card", { opacity: 0 }, { opacity: 1, duration: 0.4, ease }, tz - 0.2);
+        tl.to("#wa-dots", { opacity: 0.4, duration: 0.5, ease }, tn);
+        [[0.393, 0.18], [0.598, 0.18], [0.495, 0.27], [0.497, 0.7]].forEach(([x, y], k) => {
+          const size = 150;
+          const r = el($("wa-plane"), "div", { left: x * PW - size / 2 + "px", top: y * PH - size / 2 + "px", width: size + "px", height: size + "px" }, "ring");
+          gsap.set(r, { scale: 0, opacity: 0 });
+          tl.to(r, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, tz + 0.2 + k * 0.15);
+          tl.to(r, { scale: 1.07, duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: 9 }, tz + 0.55 + k * 0.15);
+          tl.to(r, { backgroundColor: "rgba(242,168,0,0.28)", duration: 0.5, ease }, tn);
+        });
+      }
+
+      // 6. More: old songs (records), then "grandpa smoked and lived to 90".
+      {
+        const [s0] = slot("more");
+        const tBad = at("more", "վատերը"), tG = at("more", "Իսկ"), tD = at("more", "որովհետև");
+        const kept = [1, 6, 11];
+        const disc = (label) => `radial-gradient(circle, ${label} 0 17%, #0E0F12 18% 21%, #26282D 22% 30%, #1B1D21 31% 40%, #26282D 41% 52%, #1B1D21 53% 100%)`;
+        for (let i = 0; i < 16; i++) {
+          const r = el($("records"), "div", { left: 215 + (i % 4) * 170 + "px", top: 340 + Math.floor(i / 4) * 170 + "px", background: disc("#6E737C") }, "record");
+          gsap.set(r, { opacity: 0.25 });
+          tl.to(r, { opacity: 1, duration: 0.3, ease }, s0 + i * 0.03);
+          if (kept.includes(i)) {
+            tl.to(r, { scale: 1.12, boxShadow: "0 0 36px #f2a800", duration: 0.4, ease }, tBad + 0.3);
+            tl.set(r, { background: disc("#F2A800") }, tBad + 0.3);
+          } else {
+            tl.to(r, { opacity: 0.12, scale: 0.85, duration: 0.5, ease }, tBad + (i % 5) * 0.06);
+          }
+        }
+        tl.to("#records", { opacity: 0, duration: 0.3 }, tG - 0.3);
+        const [years, word] = S.labels.grandpa_years.split(" ");
+        $("ninety-num").textContent = years;
+        $("ninety-word").textContent = word;
+        tl.fromTo("#ninety", { opacity: 0 }, { opacity: 1, duration: 0.4, ease }, tG);
+        tl.to("#ninety", { opacity: 0, duration: 0.3 }, tD - 0.2);
+        tl.fromTo("#crowd48", { opacity: 0 }, { opacity: 1, duration: 0.4, ease }, tD);
+        for (let i = 0; i < 48; i++) {
+          const g = i === 19;
+          const p = person($("crowd48"), 216 + (i % 8) * 84, 340 + Math.floor(i / 8) * 114, 60, g ? "#f2a800" : "#8a8f98");
+          gsap.set(p, { opacity: g ? 1 : 0.7, scale: g ? 1.25 : 1 });
+          if (!g) tl.to(p, { opacity: 0.15, duration: 0.8, ease }, tD + 0.6 + (i % 8) * 0.05);
+        }
+      }
+
+      // 7. Dropouts: Jobs and Gates, then the crowd nobody writes about.
+      {
+        const [s0] = slot("dropouts");
+        const tB = at("dropouts", "Բայց");
+        [[330, "jobs"], [650, "gates"]].forEach(([x, k]) => {
+          const w = el($("duo"), "div", { position: "absolute", left: x - 50 + "px", top: "330px", width: "100px", textAlign: "center" });
+          person(w, 0, 0, 100, "#f2a800");
+          const n = el(w, "div", { position: "absolute", top: "165px", left: "-70px", width: "240px", fontSize: "42px", fontWeight: 800 });
+          n.textContent = S.labels[k];
+          tl.fromTo(w, { scale: 0 }, { scale: 1, duration: 0.5, ease: "back.out(1.6)" }, s0 + 0.1);
+        });
+        for (let i = 0; i < 72; i++) {
+          const r = Math.floor(i / 12);
+          const p = person($("crowd72"), 223 + (i % 12) * 54, 640 + r * 74, 40, "#3a3e46");
+          gsap.set(p, { opacity: 0 });
+          tl.to(p, { opacity: 0.9, duration: 0.4, ease }, tB + 0.2 + r * 0.12 + (i % 12) * 0.015);
+        }
+      }
+
+      // 8. Lesson: the key sentence big, each word lighting up as it is spoken.
+      {
+        beat("lesson").words.forEach((w) => {
+          const sp = el($("lesson-text"), "span", { color: "#f4f1ea", opacity: 0.28 });
+          sp.textContent = w.w + " ";
+          tl.set(sp, { opacity: 1, color: "#f2a800" }, w.start);
+          tl.set(sp, { color: "#f4f1ea" }, w.end);
+        });
+      }
+
+      // 9. Outro: back to the zoo fridge, ending on the opening frame for a clean loop.
+      {
+        const [s0, d] = slot("outro");
+        tl.fromTo("#outro-photo", { scale: 1.08 }, { scale: 1, duration: d, ease: "none" }, s0);
+        tl.fromTo("#outro-shade", { opacity: 0.5 }, { opacity: 0.35, duration: d * 0.8, ease: "none" }, s0);
+        tl.to("#outro-shade", { opacity: 0, duration: d * 0.2, ease: "none" }, s0 + d * 0.8);
+      }
+
+      // Captions: one group per page, current word in orange; off during the title and the lesson.
+      {
+        const off = new Set(["name", "lesson"]);
+        const pages = TL.beats.flatMap((b) => b.pages.map((p) => ({ ...p, beat: b.key })));
+        pages.forEach((p, i) => {
+          if (off.has(p.beat)) return;
+          const g = el($("captions"), "div", {}, "cap");
+          const end = pages[i + 1] ? Math.min(pages[i + 1].start - 0.05, p.end + 0.4) : TL.duration + 1.2 - 0.35;
+          p.words.forEach((w) => {
+            const sp = el(g, "span", { color: "#f4f1ea" });
+            sp.textContent = w.w;
+            tl.set(sp, { color: "#f2a800", scale: 1.04 }, w.start);
+            tl.set(sp, { color: "#f4f1ea", scale: 1 }, w.end);
+          });
+          tl.set(g, { visibility: "visible" }, p.start - 0.05);
+          tl.fromTo(g, { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.13, ease: "power2.out" }, p.start - 0.05);
+          tl.set(g, { opacity: 0, visibility: "hidden" }, end);
+        });
+      }
+
+      tl.set({}, {}, 71.1);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+[
+  {
+    "key": "hook",
+    "text": "Տատիկիդ սովետական սառնարանը դեռ աշխատում է, իսկ քոնը հինգ տարում փչացավ։ Ուրեմն առաջ ավելի լա՞վ էին սարքում։",
+    "visual": "Photo of an old Soviet fridge, slow zoom in. Second sentence: a modern fridge drawn in code gets a crack."
+  },
+  {
+    "key": "reveal",
+    "text": "Մի շտապիր։ Փչացած սառնարանները վաղուց աղբանոցում են։ Տեսնում ենք միայն ողջ մնացածներին։",
+    "visual": "A grid of 20 fridge icons; 19 turn grey and fall away, 1 stays lit."
+  },
+  {
+    "key": "name",
+    "text": "Սա կոչվում է վերապրողի սխալ։",
+    "screen": "Վերապրողի սխալ",
+    "screen_small": "survivorship bias",
+    "visual": "Title card, big text."
+  },
+  {
+    "key": "wald",
+    "text": "Պատմում են, որ Երկրորդ համաշխարհային պատերազմում ամերիկացիները նայում էին վերադարձած ռմբակոծիչներին ու ուզում էին զրահ ավելացնել այնտեղ, որտեղ ամենաշատ անցքերն էին։",
+    "visual": "The bomber diagram with red dots (Wikimedia Commons Survivorship-bias.svg, a 2021 illustration of a hypothetical damage pattern, not wartime data); dots appear in batches; small label 'illustration'.",
+    "screen_small": "նկարազարդում"
+  },
+  {
+    "key": "wald_answer",
+    "text": "Մաթեմատիկոս Աբրահամ Վալդն ասաց՝ հակառակը։ Զրահը դրեք այնտեղ, որտեղ անցք չկա։ Այնտեղ խոցված ինքնաթիռները չէին վերադառնում։",
+    "screen": "Աբրահամ Վալդ",
+    "visual": "Name card; then the empty areas (engines, cockpit, tail) light up."
+  },
+  {
+    "key": "more",
+    "text": "Հին երգերի դեպքում էլ նույնն է՝ լավերն են մնացել, վատերը մոռացվել են։ Իսկ «պապս ամբողջ կյանքում ծխել է ու ապրել իննսուն տարի» պատմությունը լսում ենք, որովհետև վաղ մահացածները ոչինչ չեն պատմում։",
+    "visual": "Quick cuts: a vinyl record (few kept, many crossed out); then a cigarette icon and a big 90."
+  },
+  {
+    "key": "dropouts",
+    "text": "Սթիվ Ջոբսն ու Բիլ Գեյթսը թողել են համալսարանն ու հարստացել։ Բայց համալսարանը թողած ու ոչնչի չհասած հազարավոր մարդկանց մասին ոչ ոք գիրք չի գրում։",
+    "visual": "Two silhouettes lit, a crowd of hundreds of grey silhouettes behind them fades in."
+  },
+  {
+    "key": "lesson",
+    "text": "Այնպես որ, երբ լսում ես հաջողության պատմություն, հարցրու՝ իսկ քանի՞ հոգի փորձեց, ու չստացվեց։",
+    "screen": "Իսկ քանի՞ հոգի փորձեց, ու չստացվեց",
+    "visual": "The question as big text, one word at a time."
+  },
+  {
+    "key": "outro",
+    "text": "Հա, սովետական սառնարանները պարզ ու ամուր էին։ Բայց հարցը միշտ նույնն է՝ իսկ ո՞ւր են նրանք, որոնք չդիմացան։",
+    "visual": "Back to the fridge photo; the question as big text; the last frame matches the first for a loop."
+  }
+]
