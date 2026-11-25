@@ -23,6 +23,9 @@ import wave
 from array import array
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from hy_numbers import spoken  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[2]
 (ROOT / "logs").mkdir(exist_ok=True)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s",
@@ -69,7 +72,9 @@ def trim(samples, sr):
 
 
 def weight(w, with_pause=True):
-    letters = len(re.sub(r"[^\w]", "", w))
+    # letters as spoken: «1983» is said «հազար ինը հարյուր ութսուներեք» (Fable review 2026-11-25: captions slipped
+    # around digits when a 4-digit year weighed like a 4-letter word)
+    letters = len(re.sub(r"[^\w]", "", spoken(w)))
     pause = sum(PAUSE_WEIGHT.get(ch, 0) for ch in w if not ch.isalnum()) if with_pause else 0
     return max(letters, 1) + pause
 

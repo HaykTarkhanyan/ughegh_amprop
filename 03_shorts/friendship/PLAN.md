@@ -16,7 +16,7 @@ reaches the well-connected. The formula: a random friend has μ + D/μ friends.
 
 <!-- script:start -->
 
-13 beats, 1,952 characters, ~135 s of speech at ~870 characters a minute.
+13 beats, 1,952 characters (2,027 with numbers spelled out): ~137 s of speech, ~2:20 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%).
 
 **1. hook.** Մեծ հավանականությամբ քո ընկերները միջինում ավելի շատ ընկերներ ունեն, քան դու։ Եվ սա վիրավորանք չէ, այլ մաթեմատիկա։
 

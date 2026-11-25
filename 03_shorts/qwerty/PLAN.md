@@ -17,7 +17,7 @@ Armenian phonetic layout too. Lesson: a too-neat story is usually wrong.
 
 <!-- script:start -->
 
-12 beats, 2,420 characters, ~167 s of speech at ~870 characters a minute.
+12 beats, 2,420 characters (2,608 with numbers spelled out): ~173 s of speech, ~2:56 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%). **Over the 2:45 speech ceiling: cut a beat.**
 
 **1. hook.** Լսե՞լ ես, որ QWERTY դասավորությունը հորինել են, որպեսզի մեքենագրողներին դանդաղեցնեն։ Սա ամենահայտնի առասպելներից է, իսկ իրական պատմությունը շատ ավելի խառն է։
 

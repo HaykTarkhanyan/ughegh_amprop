@@ -2,7 +2,8 @@
 
 PLAN.md must contain the two marker lines `<!-- script:start -->` and `<!-- script:end -->`; everything between
 them is replaced by the beats (numbered, key in bold, then the Armenian text) and a length line (characters and
-seconds at the measured ~870 characters per minute, _learnings/2026-11-25-1032_...). Run it after every script edit,
+seconds: the midpoint of the estimate from the text as written and with numbers spelled out (tools/hy_numbers.py),
+at ~870 characters per minute, calibrated on two measured digit-heavy beats on 2026-11-25). Run it after every script edit,
 then rerun the html-review converter so the HTML page (and its comments) stays attached.
 
 Usage (from 03_shorts/):  python tools/plan_script.py crypto_paint
@@ -14,6 +15,9 @@ import logging
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from hy_numbers import spoken  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[2]
 (ROOT / "logs").mkdir(exist_ok=True)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s",
@@ -23,6 +27,8 @@ log = logging.getLogger("plan_script")
 
 START, END = "<!-- script:start -->", "<!-- script:end -->"
 CHARS_PER_MIN = 870
+GAP_S, TAIL_S = 0.12, 1.2      # build_timeline.py gap between beats, Composition tail
+CEILING_S = 165                 # 2:45 of speech keeps a Short under 3:00 (YouTube limit)
 
 
 def main():
@@ -35,8 +41,13 @@ def main():
     if plan.count(START) != 1 or plan.count(END) != 1:
         raise SystemExit(f"{plan_path}: needs exactly one {START} and one {END} line")
     chars = sum(len(b["text"]) for b in beats)
-    lines = [START, "", f"{len(beats)} beats, {chars:,} characters, ~{round(chars / CHARS_PER_MIN * 60)} s of speech "
-             f"at ~{CHARS_PER_MIN} characters a minute.", ""]
+    spoken_chars = sum(len(spoken(b["text"])) for b in beats)
+    est = (chars + spoken_chars) / 2 / CHARS_PER_MIN * 60  # midpoint: digits as written vs spelled out
+    total = est + GAP_S * (len(beats) - 1) + TAIL_S
+    flag = " **Over the 2:45 speech ceiling: cut a beat.**" if est > CEILING_S else ""
+    lines = [START, "", f"{len(beats)} beats, {chars:,} characters ({spoken_chars:,} with numbers spelled out): "
+             f"~{round(est)} s of speech, ~{int(total // 60)}:{round(total % 60):02d} with pauses and the end tail "
+             f"(estimate, calibrated on 2 measured beats, about +-10%).{flag}", ""]
     for i, b in enumerate(beats, 1):
         lines += [f"**{i}. {b['key']}.** {b['text']}", ""]
     lines.append(END)

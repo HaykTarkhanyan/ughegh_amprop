@@ -37,6 +37,10 @@ remember. That is why a single snake line is fairer and, on average, faster.
 
 ## The script (Armenian)
 
+<!-- script:start -->
+
+12 beats, 2,301 characters (2,326 with numbers spelled out): ~160 s of speech, ~2:42 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%).
+
 **1. hook.** Յոթ րոպե կանգնած սպասելն ավելի երկար է թվում, քան վեց րոպե քայլելը։ Ու դա լավ գիտեն օդանավակայաններում, Դիսնեյում և ամեն խանութում։
 
 **2. houston.** Պատմում են, որ Հյուսթոնի օդանավակայանում ուղևորները բողոքում էին ուղեբեռի երկար սպասումից։ Ինքնաթիռից մինչև ուղեբեռի ժապավեն քայլում էին մեկ րոպե, հետո յոթ րոպե կանգնած սպասում։ Օդանավակայանն ուղեբեռն ավելի արագ չդարձրեց։ Այն ուղևորներին վեց անգամ ավելի երկար քայլեցրեց։ Եվ բողոքները համարյա դադարեցին։
@@ -60,6 +64,8 @@ remember. That is why a single snake line is fairer and, on average, faster.
 **11. card.** Կարճ ասած՝ սպասման երկարությունը մասամբ ժամացույցն է, մասամբ՝ զգացողությունը։
 
 **12. takeaway.** Այնպես որ, հաջորդ անգամ հերթում զբաղեցրու ժամանակդ, իմացիր, թե որքան է մնացել, և մի նախանձիր կողքի հերթին։ Միջինում այն քոնից արագ չէ։
+
+<!-- script:end -->
 
 Armenian lint: 0 errors, 1 hint («իրականում», kept: it marks a real contrast, posted vs actual, as A72 allows).
 

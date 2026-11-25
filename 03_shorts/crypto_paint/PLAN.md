@@ -18,7 +18,7 @@ to be Aram.
 
 <!-- script:start -->
 
-14 beats, 2,291 characters, ~158 s of speech at ~870 characters a minute.
+14 beats, 2,291 characters (2,394 with numbers spelled out): ~162 s of speech, ~2:44 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%).
 
 **1. hook.** Ինչպե՞ս պայմանավորվել գաղտնի բանալու շուրջ, եթե ձեր զրույցը լսում է ամբողջ աշխարհը։ Դու դա անում ես գրեթե ամեն անգամ, երբ կայք ես բացում կողպեքի նշանով։
 

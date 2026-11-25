@@ -39,6 +39,10 @@ treatment, compare like with like; when the split is itself a result of the trea
 
 ## The script (Armenian)
 
+<!-- script:start -->
+
+13 beats, 2,101 characters (2,319 with numbers spelled out): ~152 s of speech, ~2:35 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%).
+
 **1. hook.** Երկու բուժում երիկամի քարերի համար։ Առաջինից հետո քարից ազատվում է հիվանդների 78 տոկոսը, երկրորդից հետո՝ 83 տոկոսը։ Ո՞րը կընտրես։
 
 **2. twist.** Իսկ հիմա՝ առաջին բուժումն ավելի լավն է և՛ փոքր, և՛ մեծ քարերի դեպքում։ Ավելի լավը՝ ամեն խմբում, բայց ավելի վատը՝ ընդհանուր։ Սա Սիմպսոնի պարադոքսն է։
@@ -64,6 +68,8 @@ treatment, compare like with like; when the split is itself a result of the trea
 **12. rule.** Ուրեմն ո՞ր թվին հավատալ։ Եթե խմբերը տարբերվում են մի բանով, որը կար մինչև բուժումը՝ քարի չափով, տարիքով, ֆակուլտետի ընտրությամբ, համեմատիր խմբերն առանձին՝ նմանը նմանի հետ։ Բայց եթե խմբերը բաժանում ես մի բանով, որը հենց բուժման հետևանքն է, ճիշտն ընդհանուր թիվն է։
 
 **13. takeaway.** Այնպես որ, երբ թվերն ասում են՝ «սա ավելի լավն է», հարցրու՝ իսկ նույն տեսակի դեպքե՞ր են համեմատում։
+
+<!-- script:end -->
 
 Armenian lint: 0 errors, 0 hints. Terms: «կշռավորված միջին» (glossary), «Սիմպսոն» spelled as in the course
 (`sample_problems_qysu`, Simpson distribution).

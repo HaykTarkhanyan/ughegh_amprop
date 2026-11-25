@@ -16,7 +16,7 @@ their owners. The honest answer: we do not fully know, and that is the point of 
 
 <!-- script:start -->
 
-11 beats, 1,747 characters, ~120 s of speech at ~870 characters a minute.
+11 beats, 1,747 characters (1,841 with numbers spelled out): ~124 s of speech, ~2:06 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%).
 
 **1. hook.** Զգուշացում՝ այս տեսանյութը դիտելիս հավանաբար կհորանջես։ Եվ ահա թե ինչու։
 

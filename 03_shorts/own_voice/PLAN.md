@@ -17,7 +17,7 @@ listening.
 
 <!-- script:start -->
 
-12 beats, 1,663 characters, ~115 s of speech at ~870 characters a minute.
+12 beats, 1,663 characters (1,706 with numbers spelled out): ~116 s of speech, ~1:59 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%).
 
 **1. hook.** Լսում ես քո ձայնը ձայնագրության մեջ և մտածում՝ իսկապե՞ս այսպես եմ խոսում։ Այո, մոտավորապես այդպես են քեզ լսում մյուսները։
 

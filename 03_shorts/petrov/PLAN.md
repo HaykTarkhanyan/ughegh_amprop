@@ -16,7 +16,7 @@ the story came out in 1998, and he died in 2017.
 
 <!-- script:start -->
 
-13 beats, 1,903 characters, ~131 s of speech at ~870 characters a minute.
+13 beats, 1,903 characters (2,004 with numbers spelled out): ~135 s of speech, ~2:17 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%).
 
 **1. hook.** 1983 թվականի սեպտեմբերի 26-ի գիշերը խորհրդային համակարգը հայտնեց՝ ԱՄՆ-ից հրթիռներ են արձակվել։ Մարդը, որը պետք է զեկուցեր, որոշեց չհավատալ համակարգչին։
 

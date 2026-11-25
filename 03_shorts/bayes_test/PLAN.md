@@ -43,6 +43,10 @@ gets tested), the formula card, and the question to ask next time.
 
 ## The script (Armenian)
 
+<!-- script:start -->
+
+14 beats, 2,182 characters (2,315 with numbers spelled out): ~155 s of speech, ~2:38 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%).
+
 **1. hook.** Թեստը 99 տոկոսով ճշգրիտ է, և քո պատասխանը դրական է։ Ո՞րն է հավանականությունը, որ իսկապես հիվանդ ես։
 
 **2. guess.** Մեծ մասը կասի՝ 99 տոկոս։ Բժիշկների մեծ մասը նույնպես։ Իսկ ճիշտ պատասխանը կարող է լինել 50, կամ նույնիսկ 9 տոկոս։ Հաշվենք ոչ թե տոկոսներով, այլ մարդկանցով։
@@ -70,6 +74,8 @@ gets tested), the formula card, and the question to ask next time.
 **13. formula.** Այս ամենի հետևում Բայեսի բանաձևն է։ Սկսիր նրանից, թե որքան տարածված է հիվանդությունը, հետո թարմացրու այն թեստի պատասխանով։
 
 **14. takeaway.** Այնպես որ, երբ հաջորդ անգամ լսես «99 տոկոսով ճշգրիտ», հարցրու՝ իսկ որքա՞ն հազվադեպ է այն, ինչ փնտրում ենք։
+
+<!-- script:end -->
 
 Armenian lint (style guide): 0 errors, 0 hints. Terms follow the course's own Bayes lecture
 (`sample_problems_qysu/site/probability/w06-total-bayes.html`): «կեղծ դրական», «Բայեսի բանաձև», «տարածված».

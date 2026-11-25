@@ -21,7 +21,7 @@ autoplay off, watch together. The child is not lazy; the show just knows how the
 
 <!-- script:start -->
 
-11 beats, 2,228 characters, ~154 s of speech at ~870 characters a minute.
+11 beats, 2,228 characters (2,271 with numbers spelled out): ~155 s of speech, ~2:38 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%).
 
 **1. hook.** Միացնում ես երեխայի համար մուլտֆիլմ, և նա կարծես անջատվում է աշխարհից։ Ինչո՞ւ են փոքրերն այդպես կպչում Քոքոմելոնի նման շոուներին։
 
