@@ -1,0 +1,69 @@
+[
+  {
+    "key": "hook",
+    "text": "1983 թվականի սեպտեմբերի 26-ի գիշերը խորհրդային համակարգը հայտնեց՝ ԱՄՆ-ից հրթիռներ են արձակվել։ Մարդը, որը պետք է զեկուցեր, որոշեց չհավատալ համակարգչին։",
+    "visual": "A dark bunker; a red warning light blinking; a radar-style screen with a blip over North America. Frame 0 shows the date."
+  },
+  {
+    "key": "context",
+    "text": "Տարին ամենալարվածներից էր։ Մեկ ամիս էլ չէր անցել, ինչ ԽՍՀՄ-ը խոցել էր կորեական ուղևորատար ինքնաթիռ։ Երկու կողմն էլ սպասում էր հարձակման։",
+    "visual": "A 1983 calendar: 1 September marked with a plane icon; two flags facing each other with tension lines."
+  },
+  {
+    "key": "bunker",
+    "text": "Մոսկվայի մոտ գտնվող բունկերում հերթապահում էր փոխգնդապետ Ստանիսլավ Պետրովը։ Նրա գործը «Օկո»՝ «աչք» կոչվող արբանյակային համակարգի տվյալներին հետևելն էր։",
+    "screen": "Ստանիսլավ Պետրով",
+    "visual": "A bunker room with consoles; satellites in high elliptical orbits watching the USA; a name card."
+  },
+  {
+    "key": "alarm",
+    "text": "Կեսգիշերից քիչ անց ազդանշանը միացավ՝ մեկ հրթիռ։ Հետո ևս չորս։ Համակարգը հայտնում էր հրթիռային հարձակման մասին։",
+    "visual": "The screen shows 1 launch, then counts up to 5; a siren pulse; the word 'ՀԱՐՁԱԿՈՒՄ' flashes."
+  },
+  {
+    "key": "stakes",
+    "text": "Եթե Պետրովը զեկուցեր հարձակման մասին, ղեկավարությունն ընդամենը մի քանի րոպե կունենար որոշելու՝ պատասխանե՞լ, թե՞ ոչ։",
+    "visual": "A countdown clock; a chain of command drawn as boxes from the bunker upward."
+  },
+  {
+    "key": "reasoning",
+    "text": "Նա կշռադատեց։ Ավելի ուշ պատմել է՝ պատերազմը հինգ հրթիռով չեն սկսում։ Համակարգը նոր էր։ Իսկ ցամաքային ռադարները ոչինչ չէին տեսնում։",
+    "visual": "Three reasons pop in as cards: '5 հրթիռ, ոչ թե հարյուրներ', 'նոր համակարգ', 'ռադարները՝ ոչինչ'."
+  },
+  {
+    "key": "decision",
+    "text": "Նա զեկուցեց, որ դա համակարգի սխալ է։ Ավելի ուշ ասել է՝ «Որոշեցի չհավատալ համակարգչին»։ Եվ նա ճիշտ էր։",
+    "visual": "A telephone; a 'սխալ ազդանշան' stamp; the blips fade off the screen."
+  },
+  {
+    "key": "unsure",
+    "text": "Բայց ինքն էլ վստահ չէր։ 2013 թվականին խոստովանել է, որ այդ պահին երբեք լիովին վստահ չի եղել։ Րոպեները, մինչև պարզ դարձավ, որ հրթիռներ չկան, նրա համար անվերջ էին թվում։",
+    "visual": "A clock ticking slowly; the screen stays empty; his silhouette waiting."
+  },
+  {
+    "key": "cause",
+    "text": "Հետո պարզվեց պատճառը՝ արևի լույսն անդրադառնում էր բարձր ամպերից Հյուսիսային Դակոտայի վրա, և արբանյակները դա ընդունեցին հրթիռի կրակի տեղ։",
+    "visual": "A diagram: the sun low on the horizon, light bouncing off high clouds into a satellite's sensor, which marks it as a launch flare."
+  },
+  {
+    "key": "bayes",
+    "text": "Պետրովը մտածում էր այնպես, ինչպես Բայեսի մասին մեր տեսանյութում։ Հարցն այն չէ, թե ինչ է ասում ազդանշանը, այլ թե որն է ավելի հավանական՝ իրական պատերազմ, որը սկսվում է ընդամենը հինգ հրթիռով, թե՞ նոր համակարգի սխալ։",
+    "visual": "A balance scale: 'պատերազմ՝ 5 հրթիռով' (tiny) vs 'նոր համակարգի սխալ' (heavy); a small link to the Bayes video's crowd of dots."
+  },
+  {
+    "key": "honesty",
+    "text": "Արդյո՞ք նա միայնակ փրկեց աշխարհը։ Պատմաբանները վիճում են։ Նա ինքը հրթիռ արձակել չէր կարող, և հայտնի չէ, թե ինչ կորոշեր ղեկավարությունը։ Բայց վերև հասավ հենց նրա գնահատականը։",
+    "visual": "The chain of command again, with question marks at the top; Petrov's box highlighted at the bottom."
+  },
+  {
+    "key": "after",
+    "text": "Պետրովին չպարգևատրեցին, և պատմությունը հայտնի դարձավ միայն 1998 թվականին։ Հետագայում նա միջազգային մրցանակներ ստացավ, այդ թվում՝ Դրեզդենի խաղաղության մրցանակը 2013 թվականին։ Մահացավ 2017 թվականին։",
+    "visual": "Timeline 1983 -> 1998 (a memoir book) -> 2013 (a prize) -> 2017."
+  },
+  {
+    "key": "takeaway",
+    "text": "Այնպես որ, երբ մեքենան ասում է՝ «հաստատ է», հարցրու՝ իսկ որքա՞ն հավանական է սա առանց մեքենայի։ Երբեմն սա ամենակարևոր հարցն է։",
+    "screen": "Որքա՞ն հավանական է սա առանց մեքենայի",
+    "visual": "Big karaoke text over the dark radar screen; loops back to the blinking light."
+  }
+]
