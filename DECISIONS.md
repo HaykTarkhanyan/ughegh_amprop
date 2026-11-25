@@ -2,6 +2,14 @@
 
 Newest at the top.
 
+## 21. Shorts are rendered with Remotion
+
+- **Date / status:** 2026-11-25, active
+- **Decision:** The shorts are built in Remotion (React + TypeScript, 4.0.547 pinned), starting from the pilot's components in `03_shorts/bakeoff/remotion/`. The HyperFrames build stays in `03_shorts/bakeoff/hyperframes/` as a record of the bake-off and gets no more work.
+- **Why:** Hayk, asked Q7 for the fourth time: "whichever u think is the best". The bake-off (`03_shorts/bakeoff/README.md`) gave nearly identical videos, so the choice is about the process: Remotion is mature (4.x for years), sends no telemetry, streams frames into the encoder (HyperFrames needed ~2.9 GB of temp disk with 2 workers and failed once at 1.8 GB free), and its components and types carry over between shorts. Its weakness, no built-in layout check, is covered by the measured caption band, `tools/contact_sheet.py` with the safe area drawn, and the Gemini review.
+- **Alternatives rejected:** HyperFrames (pre-1.0, telemetry on by default, roadmap tied to HeyGen's paid app, the disk spike; its `check` was the one real advantage); Manim alone (weak at photos and text, see the lit review); Remotion + Manim clips (kept as an option for one math-heavy scene, not a default).
+- **What would change this:** Remotion's licence (free for teams up to 3) if the channel becomes a team of 4+; a scene Remotion cannot do well (then a Manim clip for that scene); HyperFrames reaching 1.0 with telemetry off by default.
+
 ## 20. Shorts: voice Sadaltager with no style prompt, ~70 s with a takeaway, the Wald story told as a story
 
 - **Date / status:** 2026-11-25, active
