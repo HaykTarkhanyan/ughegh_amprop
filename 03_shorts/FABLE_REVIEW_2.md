@@ -5,6 +5,14 @@ ending, tone, length, and whether the planned pictures carry the beats. **Not a 
 something reads wrong on its face it gets one line marked "on its face", and nothing was researched. Nothing was
 voiced, rendered or committed, and no other file was changed. This file continues `FABLE_REVIEW.md` (F1-F152).
 
+> **Status (2026-11-25, after Hayk's "fix all"):** applied in all eleven scripts; each `PLAN.md` has a section
+> "After the Fable review" listing every F-ID and what was done. Decisions taken by default: F216 option (a),
+> physics only (U-jjj unanswered); F172 option (a), claim less; F186 the ten-hour clock spine. Not applied: F199
+> (frog hook; it conflicts with F200's one object). Still questions for Hayk: the [ear] and term items (F160
+> «կարեկցանք», the U-questions marked "your ear"), and the publishing order F233 (copied into `README.md`).
+> F164 / F230 voice test: `voice_test/batch2_risky.html` (digits, the classical sentence and the names came back
+> right in a Gemini transcription; «քոֆ» was heard as «քաֆ»; the letter names need a human ear).
+
 ## Contents
 
 - [0. How to read this, and the length table](#0-how-to-read-this-and-the-length-table)

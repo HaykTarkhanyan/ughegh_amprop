@@ -6,37 +6,37 @@ sounds, one that drifted away from them; publish them next to each other.
 
 ## The idea in one paragraph
 
-English children learn to read more than twice as slowly as Finnish or Italian children, and the spelling is to
-blame. Look at though, through, tough, cough, bough. But English was once written as spoken: «knight» was read
-«քնիխտ». Between about 1400 and 1700 the long vowels moved (the Great Vowel Shift: «բայթ» was «բիթ»), and just then
-printing arrived and froze the spellings, a photograph of the old pronunciation. Scholars then added Latin-looking
-letters, sometimes wrongly (the b in debt, the s in island). Armenian went the other way: Mashtots gave each sound a
-letter, and we still read almost as written. Reform keeps failing, partly because it would make old books hard to
-read. The takeaway: English spelling is not wrong, it is old.
+«Դոու, թրու, թաֆ, քոֆ, բաու»: the same four letters, five readings (though, through, tough, cough, bough), and that
+is why English children learn to read twice as slowly as Finnish or Italian ones. But English was once written as
+spoken: «knight» was read «քնիխտ»; then the sounds changed and the writing did not. Over about three hundred years
+the long vowels moved (the Great Vowel Shift: «հուս» became «հաուս»), and just then printing arrived and froze the
+spellings: a photograph of the old pronunciation. Armenian started from the opposite rule (one letter per sound)
+and its spelling is still close to speech, though not fully. English reform keeps failing, partly because old
+books would become hard to read; Webster's American "color" is the one success. The takeaway: English spelling is
+not wrong, it is old, and many of its odd letters show how people spoke five hundred years ago. (After the Fable
+review: the debt / island beat is cut.)
 
 ## The script (Armenian)
 
 <!-- script:start -->
 
-9 beats, 1,746 characters (1,746 with numbers spelled out): ~120 s of speech, ~2:05 with pauses and the end tail, 2 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
+8 beats, 1,338 characters (1,338 with numbers spelled out): ~92 s of speech, ~1:43 with pauses and the end tail, 8.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
 
-**1. hook.** Անգլիացի երեխաները կարդալ սովորում են երկու անգամ ավելի դանդաղ, քան իտալացի կամ ֆին երեխաները։ Եվ մեղավորը ոչ թե երեխաներն են, այլ ուղղագրությունը։
+**1. hook.** Դոու, թրու, թաֆ, քոֆ, բաու։ Նույն չորս տառը՝ հինգ տարբեր արտասանությամբ։ *[pause 1.5 s]*
 
-**2. ough.** Նայիր այս բառերին։ Նույն չորս տառը, և ամեն բառում այլ կերպ է կարդացվում։ *[pause 2 s]*
+**2. cost.** Դրա համար անգլիացի երեխաները կարդալ սովորում են երկու անգամ ավելի դանդաղ, քան իտալացի կամ ֆին երեխաները։ Բայց մի ժամանակ անգլերենը գրվում էր այնպես, ինչպես կարդացվում էր։
 
-**3. was_logical.** Բայց մի ժամանակ անգլերենը գրվում էր այնպես, ինչպես կարդացվում էր։ Վեց հարյուր տարի առաջ «ասպետ» բառը կարդում էին «քնիխտ»՝ ճիշտ այնպես, ինչպես գրված է։ Այսօր ասում են «նայթ»։ Հետո հնչյունները փոխվեցին, իսկ գրությունը՝ ոչ։
+**3. knight.** Վեց հարյուր տարի առաջ «ասպետ» բառը կարդում էին «քնիխտ»՝ ճիշտ այնպես, ինչպես գրված է։ Հետո հնչյունները փոխվեցին, իսկ գրությունը՝ ոչ։ Այսօր ասում են «նայթ»։ *[pause 1 s]*
 
-**4. shift.** Մոտավորապես հազար չորս հարյուրից հազար յոթ հարյուր թվականներին անգլերենի երկար ձայնավորները տեղաշարժվեցին։ Այն բառը, որ այսօր կարդում ենք «բայթ», կարդացվում էր «բիթ», «միթ»-ը՝ «մեյթ», «հաուս»-ը՝ «հուս»։ Սա կոչվում է ձայնավորների մեծ տեղաշարժ, և ճշգրիտ պատճառը մինչ օրս չգիտենք։
+**4. shift.** Մոտ երեք հարյուր տարում անգլերենի երկար ձայնավորները տեղաշարժվեցին։ «Տուն» բառը, որ կարդացվում էր «հուս», դարձավ «հաուս»։ Սա կոչվում է ձայնավորների մեծ տեղաշարժ, և ճշգրիտ պատճառը մինչ օրս չգիտենք։ *[pause 1.5 s]*
 
-**5. print.** Եվ հենց այդ ժամանակ Անգլիա հասավ տպագրությունը։ Գրքերը տպվեցին հազարներով, և բառերի գրությունը սկսեց քարանալ, մինչդեռ արտասանությունը դեռ շարժվում էր։ Ստացվեց հին արտասանության լուսանկար։
+**5. print.** Եվ հենց այդ ժամանակ Անգլիա հասավ տպագրությունը։ Գրքերը տպվեցին հազարներով, և բառերի գրությունը սկսեց քարանալ, մինչդեռ արտասանությունը դեռ շարժվում էր։ Ստացվեց հին արտասանության լուսանկար։ *[pause 2 s]*
 
-**6. latin.** Հետո գիտնականներն ուզեցին, որ բառերը լատիներենի նման երևան։ «Պարտք» բառում ավելացրին տառ, որ չի կարդացվում, որովհետև լատիներեն պարտքը «դեբիտում» է։ Իսկ «կղզի» բառում լուռ տառ ավելացրին սխալմամբ՝ կարծելով, թե այն լատիներեն «ինսուլա»-ից է։ Իրականում դա հին անգլերեն բառ է։
+**6. armenian.** Հայերենը սկսվեց հակառակ սկզբունքով։ Մաշտոցը յուրաքանչյուր հնչյունի համար տառ ստեղծեց, և հայերենի ուղղագրությունն այսօր էլ մոտ է արտասանությանը, թեև ոչ ամբողջությամբ։ *[pause 1 s]*
 
-**7. armenian.** Հայերենում պատմությունը հակառակն է։ Մաշտոցը յուրաքանչյուր հնչյունի համար տառ ստեղծեց, և այսօր էլ հայերենը կարդում ենք գրեթե այնպես, ինչպես գրված է։ Գրեթե, որովհետև բառի սկզբում եչ տառը կարդում ենք «յե», իսկ ո տառը՝ «վո»։
+**7. reform.** Իսկ ինչո՞ւ անգլիացիները չեն ուղղում։ Փորձել են դարեր շարունակ։ Ամենահաջողը Նոյ Վեբստերն էր, որի բառարաններն ամերիկյան անգլերենում տարածեցին «գույն» բառի ավելի կարճ գրությունը։ Բայց անգլերենի ամբողջական ռեֆորմը կնշանակեր, որ հին գրքերը հանկարծ դժվար կարդացվեն։
 
-**8. reform.** Իսկ ինչո՞ւ անգլիացիները չեն ուղղում։ Փորձել են դարեր շարունակ։ Ամենահաջողը Նոյ Վեբստերն էր, որ ամերիկյան անգլերենում «գույն» բառից հանեց մի ավելորդ տառ։ Բայց մեկ ամբողջական ռեֆորմ կնշանակեր, որ հին գրքերը հանկարծ դժվար կարդացվեն։
-
-**9. takeaway.** Անգլերենի ուղղագրությունը սխալ չէ՝ այն հին է։ Ամեն տարօրինակ տառ ցույց է տալիս, թե ինչպես էին խոսում հինգ հարյուր տարի առաջ։
+**8. takeaway.** Անգլերենի ուղղագրությունը սխալ չէ՝ այն հին է։ Նրա տարօրինակ տառերից շատերը ցույց են տալիս, թե ինչպես էին խոսում հինգ հարյուր տարի առաջ։ *[pause 1.5 s]*
 
 <!-- script:end -->
 
@@ -74,6 +74,19 @@ says them in Armenian letters («քնիխտ», «նայթ», «բայթ», «բ�
   stamping a frozen word while the sound keeps moving; letters dropping into debt and island; colour -> color.
 - **Real image:** `File:The Caxton Celebration - William Caxton showing specimens of his printing to King Edward IV
   and his Queen.jpg` (public domain, William Small).
+
+## After the Fable review (FABLE_REVIEW_2.md, applied 2026-11-25)
+
+- **F168** the -ough words are frame 0 and second 0, the reading statistic follows as the consequence. **F169** the
+  voice reads the five («Դոու, թրու, թաֆ, քոֆ, բաու»).
+- **F170 / F171** beat 6 (debt, island) cut, and the takeaway says «տարօրինակ տառերից շատերը», not "every".
+- **F172** option (a): claim less («մոտ է արտասանությանը, թեև ոչ ամբողջությամբ»); no "Mashtots made us read as
+  written", no Armenian reform claim.
+- **F173** no spoken date range (on screen), one sound pair (house), two-row picture instead of the vowel chart.
+  **F174** knight order fixed (then the sounds changed, today «նայթ»). **F175** 2 s on the "photograph".
+- Webster (F231) checked: his 1806 and 1828 dictionaries set color / center in American spelling (he championed
+  existing forms); the script says his dictionaries spread the shorter spelling. **F222** pauses 8.5 s.
+- Voice test: «քոֆ» was heard as «քաֆ»; listen to t3 in `voice_test/batch2_risky.html`.
 
 ## Questions for Hayk (review points)
 

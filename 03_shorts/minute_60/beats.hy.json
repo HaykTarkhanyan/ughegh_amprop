@@ -1,46 +1,39 @@
 [
   {
     "key": "hook",
-    "text": "Փողը, մետրը, կիլոգրամը տասով են բաժանվում։ Իսկ ժամը՝ վաթսունով։ Ամեն անգամ ժամացույցին նայելիս օգտագործում ես մոտ չորս հազար տարեկան մի հաշվարկ։",
-    "visual": "Frame 0: a banknote, a ruler and a scale tick in tens; a clock face ticks in sixties; a clay tablet fades in behind it."
+    "text": "Այս ժամացույցն ունի տասը ժամ, իսկ ամեն ժամը՝ հարյուր րոպե։ Այն ստեղծեց Ֆրանսիական հեղափոխությունը, նույնը, որ աշխարհին տվեց մետրն ու կիլոգրամը։ Մետրը մնաց։ Տասնորդական ժամը երկու տարի էլ չդիմացավ։",
+    "pause_after": 1,
+    "visual": "Frame 0: the real Revolutionary 10-hour clock face (Commons photo), slow zoom; a metre stick and a kilogram weight appear beside it and stay; the clock fades."
+  },
+  {
+    "key": "old",
+    "text": "Ժամանակը չտեղի տվեց, որովհետև վաթսունը շատ ավելի հին է՝ մոտ չորս հազար տարեկան։ Շումերները, հետո բաբելոնացիները հաշվում էին վաթսունով։ Ինչո՞ւ, հստակ չգիտենք։",
+    "visual": "A Babylonian clay tablet (YBC 7289, Commons) with its wedge numbers; a '60' glows on it."
   },
   {
     "key": "fingers",
-    "text": "Շումերները, հետո բաբելոնացիները հաշվում էին ոչ թե տասով, այլ վաթսունով։ Ինչո՞ւ, հստակ չգիտենք։ Ամենահայտնի վարկածը մատներն են՝ բութ մատով հաշվում ես մյուս չորս մատների տասներկու հոդը, իսկ մյուս ձեռքի հինգ մատով՝ քանի անգամ ես հասել տասներկուսի։ Հինգ անգամ տասներկու՝ վաթսուն։",
-    "pause_after": 1.5,
-    "screen_small": "վարկած",
-    "visual": "Two drawn hands: the right thumb taps the 12 finger joints one by one, each full round folds a finger of the left hand; the counter reaches 60."
+    "text": "Բայց վաթսունով հաշվելը հեշտ է հենց ձեռքերով։ Փորձիր՝ բութ մատով հաշվիր նույն ձեռքի մյուս չորս մատների տասներկու հոդը։ Ամեն անգամ, երբ հասնես տասներկուսի, մյուս ձեռքի մի մատը ծալիր։ Հինգ մատ, հինգ անգամ տասներկու՝ վաթսուն։",
+    "pause_after": 3,
+    "screen_small": "հնարավոր է՝ այսպես էին հաշվում (վարկած)",
+    "visual": "Two drawn hands: the right thumb taps the 12 finger joints one by one, each full round folds a finger of the left hand; during the 3 s pause the viewer counts along and the counter reaches 60."
   },
   {
     "key": "divides",
-    "text": "Իսկ վաթսունը մեկ այլ առավելություն էլ ունի՝ այն առանց մնացորդի բաժանվում է երկուսի, երեքի, չորսի, հինգի, վեցի, տասի, տասներկուսի, տասնհինգի, քսանի և երեսունի։ Կես ժամը երեսուն րոպե է, երրորդը՝ քսան, քառորդը՝ տասնհինգ։ Իսկ եթե ժամը հարյուր րոպե լիներ, դրա երրորդը կլիներ երեսուներեք ամբողջ երեք, երեք, երեք՝ անվերջ։",
-    "visual": "A 60-dot ring splits cleanly into halves, thirds, quarters, fifths, sixths (colour bands); a 100-dot ring tries thirds and leaves one dot blinking."
-  },
-  {
-    "key": "hours",
-    "text": "Իսկ ինչո՞ւ է օրը քսանչորս ժամ։ Դա եգիպտացիներից է։ Գիշերը նրանք ժամանակը չափում էին աստղերով, որոնք մեկը մյուսի հետևից էին ծագում, և գիշերը բաժանվեց տասներկու մասի։ Ցերեկն էլ՝ տասներկու։ Եվ այդ ժամերը հավասար չէին՝ ամռանը ցերեկվա ժամն ավելի երկար էր, ձմռանը՝ կարճ։",
-    "visual": "A night sky where star groups rise one after another, numbering 1-12; then two sundials, summer and winter, with stretched and squeezed hours."
+    "text": "Եվ վաթսունը շատ լավ է բաժանվում՝ երկուսի, երեքի, չորսի, հինգի, վեցի և էլի շատ թվերի։ Կես ժամը երեսուն րոպե է, երրորդը՝ քսան, քառորդը՝ տասնհինգ։ Տասնորդական ժամի երրորդը կլիներ երեսուներեք ամբողջ երեք, երեք, երեք՝ անվերջ։",
+    "pause_after": 2,
+    "visual": "A 60-dot ring splits cleanly into halves, thirds, quarters, fifths, sixths, tenths, twelfths (colour bands, more than the voice names); a 100-dot ring tries thirds and leaves one dot blinking while the digits 33.333... run off the screen."
   },
   {
     "key": "names",
-    "text": "Վաթսունը հույն աստղագետները վերցրին Բաբելոնից և դրանով բաժանում էին աստիճանը։ Հետո նույն կերպ սկսեցին բաժանել ժամը։ Լատիներենում առաջին բաժանումը կոչվեց «առաջին փոքր մաս», երկրորդը՝ «երկրորդ փոքր մաս»։ Այստեղից են «մինուտ» և «սեկունդ» բառերը, որ գիտենք ռուսերենից։ Իսկ «սեկունդ»-ը բառացի նշանակում է «երկրորդ»։",
+    "text": "Վաթսունը հույն աստղագետները վերցրին Բաբելոնից՝ աստիճանը բաժանելու համար, հետո նույն կերպ բաժանեցին ժամը։ Լատիներենում առաջին բաժանումը կոչվեց «մինուտա», այսինքն՝ «փոքր», իսկ երկրորդը՝ «սեկունդա», այսինքն՝ «երկրորդ»։ Այստեղից են «մինուտ» և «սեկունդ» բառերը, որ գիտենք ռուսերենից։ Իսկ ժամացույցների վրա րոպեի սլաքը հայտնվեց միայն տասնվեցերորդ դարի վերջից։",
     "pause_after": 1.5,
-    "visual": "A degree splits into 60, each part into 60 again; Latin labels 'pars minuta prima' and 'pars minuta secunda' shrink to 'minute' and 'second', then Russian минута, секунда and Armenian րոպե, վայրկյան."
-  },
-  {
-    "key": "clocks",
-    "text": "Բայց դարեր շարունակ րոպեն ապրում էր միայն գիտնականների թղթերում։ Առաջին մեխանիկական ժամացույցները ցույց էին տալիս միայն ժամը։ Րոպեի սլաքը սկսեց երևալ տասնվեցերորդ դարի վերջից։",
-    "visual": "An old one-hand tower clock; a minute hand fades in later."
-  },
-  {
-    "key": "france",
-    "text": "Փոխել փորձե՞լ են։ Ֆրանսիական հեղափոխությունը մտցրեց տասնորդական ժամանակ՝ օրը տասը ժամ, ժամը հարյուր րոպե, րոպեն հարյուր վայրկյան։ Ժամացույցներ էլ պատրաստեցին։ Բայց մարդիկ այդպես էլ չընդունեցին այն, և երկու տարի էլ չանցած՝ այն դարձավ ոչ պարտադիր։",
-    "visual": "A real French decimal clock face (10 hours) beside a normal one; the decimal face fades."
+    "visual": "A degree splits into 60, each part into 60 again; Latin labels 'pars minuta prima' and 'pars minuta secunda' shrink to минута / секунда and to English 'second' with '= 2nd' beside it (F185); an old one-hand tower clock gets a minute hand."
   },
   {
     "key": "takeaway",
-    "text": "Վաթսունը չորս հազար տարի գոյատևել է, որովհետև լավ է բաժանվում։ Իսկ տասն ամենուր է միայն այն պատճառով, որ տասը մատ ունենք։",
+    "text": "Ֆրանսիան փոխեց չափերն ու կշիռները, բայց ոչ ժամացույցը։ Ժամանակն անընդհատ կիսում ենք, երեքի ու չորսի բաժանում։ Վաթսունը լավ է բաժանվում, տասը՝ մատներից է։",
+    "pause_after": 1.5,
     "screen": "Վաթսունը լավ է բաժանվում, տասը՝ մատներից է",
-    "visual": "The 60-dot ring and two hands with ten fingers side by side; loops to the clock in the hook."
+    "visual": "The 60-dot ring and two hands with ten fingers side by side, the metre stick from the hook beside them; loops to the 10-hour clock."
   }
 ]

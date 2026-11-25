@@ -5,35 +5,34 @@ Draft for Hayk's review, 2026-11-25. Script first (Q17), rendered in Remotion (D
 
 ## The idea in one paragraph
 
-The shelf you assembled is worth more to you than the same shelf ready-made, and it has been measured in money:
-people who built a simple IKEA box would pay 63% more for it than people handed the same box built. Amateur
-origami makers valued their crumpled frogs almost like experts' work, while onlookers saw nearly nothing. The catch:
-you have to finish; build-then-destroy or half-built kills the effect. Why: effort reads as value, a finished job
-proves we can, and the thing becomes a little "me" (a Munich team found the same, through psychological
-ownership). The famous cake-mix egg story is probably a legend. The same pull inflates our ideas, code and
-grandfather's crooked fence. The takeaway: it really is great, for you; to others it is a box.
+The box you assembled is worth more to you than the same box ready-made, and it has been measured in money:
+people who built a simple box would pay 63% more for it than people handed the same box built. The boxes were from
+IKEA, hence the name. Amateur origami makers valued their crumpled frogs almost like experts' work, while onlookers
+saw nearly nothing. The catch: you have to finish; build-then-destroy or half-built kills the effect. Why: a
+finished thing becomes a little part of you, no longer a box but your box (a Munich replication found the same,
+through psychological ownership). The same pull works wherever our effort is: a business plan, code, grandfather's
+crooked fence. The takeaway: it really is great, for you; to others it is just a box. (After the Fable review: the
+cake-mix legend is cut, the effect is named, one object from hook to close.)
 
 ## The script (Armenian)
 
 <!-- script:start -->
 
-8 beats, 1,369 characters (1,378 with numbers spelled out): ~95 s of speech, ~1:38 with pauses and the end tail, 1.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
+7 beats, 1,032 characters (1,041 with numbers spelled out): ~71 s of speech, ~1:21 with pauses and the end tail, 7.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
 
-**1. hook.** Ինքդ հավաքած դարակը քո աչքում ավելի թանկ է, քան նույն դարակը՝ պատրաստի։ Եվ դա չափել են փողով։
+**1. hook.** Ինքդ հավաքած արկղը քո աչքում ավելի թանկ է, քան նույն արկղը՝ պատրաստի։ Եվ դա չափել են փողով։
 
-**2. boxes.** Փորձի մասնակիցների մի մասը հավաքեց Իկեայի պարզ արկղ, մյուսներին տվեցին նույն արկղը՝ արդեն հավաքված։ Հետո հարցրին՝ որքա՞ն կվճարեիք դրա համար։ Հավաքողները պատրաստ էին վճարել 63 տոկոսով ավելի։
+**2. boxes.** Փորձի մասնակիցների մի մասը հավաքեց պարզ արկղ, մյուսներին տվեցին նույն արկղը՝ արդեն հավաքված։ Հետո հարցրին՝ որքա՞ն կվճարեիք դրա համար։ Հավաքողները պատրաստ էին վճարել 63 տոկոսով ավելի։ *[pause 1.5 s]*
 
-**3. origami.** Օրիգամիով փորձն ավելի ծիծաղելի էր։ Սկսնակներն իրենց ծռմռված թղթե գորտերը գնահատում էին գրեթե այնքան, որքան վարպետների պատրաստածը։ Իսկ կողքից նայողների համար դրանք գրեթե ոչինչ չարժեին։ *[pause 1.5 s]*
+**3. origami.** Արկղերն Իկեայից էին, և երևույթը կոչվեց Իկեայի էֆեկտ։ Նույն հետազոտողները փորձեցին նաև օրիգամիով։ Սկսնակներն իրենց ծռմռված թղթե գորտերը գնահատում էին գրեթե այնքան, որքան վարպետների պատրաստածը։ Իսկ կողքից նայողների համար դրանք գրեթե ոչինչ չարժեին։ *[pause 2.5 s]*
 
-**4. finish.** Բայց կա պայման՝ գործը պետք է ավարտին հասցնես։ Երբ մարդիկ արկղը հավաքում էին ու հետո քանդում, կամ կիսատ էին թողնում, էֆեկտն անհետանում էր։
+**4. finish.** Բայց կա պայման՝ գործը պետք է ավարտին հասցնես։ Երբ մարդիկ արկղը հավաքում էին ու հետո քանդում, կամ կիսատ էին թողնում, էֆեկտն անհետանում էր։ *[pause 1 s]*
 
-**5. why.** Ինչո՞ւ է այդպես։ Ջանքը մեզ համար արժեքի նշան է։ Ավարտված գործն ապացույց է, որ կարող ենք։ Եվ իրը դառնում է մի փոքր «ես»։ Մյունխենի հետազոտողները կրկնեցին փորձը և գտան նույնը՝ մարդիկ հավաքած իրը զգում են որպես իրենցը։
+**5. why.** Ինչո՞ւ է այդպես։ Ավարտած իրը դառնում է մի փոքր քո մասը։ Այն այլևս ուղղակի արկղ չէ, այլ քո արկղը։ *[pause 1 s]*
 
-**6. cake.** Հաճախ պատմում են, որ հիսունականներին պատրաստի տորթի խառնուրդը վատ էր վաճառվում, մինչև արտադրողները չոր ձուն հանեցին, որ գնողն ինքը թարմ ձու ավելացնի։ Գեղեցիկ պատմություն է, բայց պատմաբանները կասկածում են՝ մրցակիցը չոր ձվով խառնուրդ էր վաճառում, և լավ էլ վաճառում էր։
+**6. trap.** Այս միտումը գործում է ամենուր, որտեղ մեր ջանքն է՝ ձեռնարկատիրոջ բիզնես ծրագրում, ծրագրավորողի կոդում, պապի ձեռքով սարքած ցանկապատում, որը ծուռ է, բայց նրա կարծիքով հարևանինից լավն է։
 
-**7. trap.** Նույն միտումը կա նաև գաղափարների հետ։ Ձեռնարկատերը գերագնահատում է իր բիզնես ծրագիրը, ծրագրավորողը՝ իր կոդը, պապը՝ իր ձեռքով սարքած ցանկապատը, որը ծուռ է, բայց իր կարծիքով հարևանինից լավն է։
-
-**8. takeaway.** Երբ քո ձեռքով արածը քեզ շատ լավն է թվում, դա ճիշտ է՝ քեզ համար։ Մյուսների համար այն պարզ արկղ է։
+**7. takeaway.** Երբ քո ձեռքով արածը քեզ շատ լավն է թվում, դա ճիշտ է՝ քեզ համար։ Մյուսների համար այն ուղղակի արկղ է։ *[pause 1.5 s]*
 
 <!-- script:end -->
 
@@ -64,6 +63,17 @@ Armenian lint: 0 errors, 0 hints.
   expert crane (`File:Origami jumping frog.svg`, CC0, as a reference); the shrinking bar for unfinished boxes; the
   mirror on the box; the 1950s cake box with a "լեգենդ" stamp; the three vignettes, ending on the crooked village
   fence (the local anchor).
+
+## After the Fable review (FABLE_REVIEW_2.md, applied 2026-11-25)
+
+- **F195** cut the cake-mix beat. **F196** the effect is named right after the boxes («Արկղերն Իկեայից էին, և
+  երևույթը կոչվեց Իկեայի էֆեկտ»), the brand said once there (U-aaa). **F197** no new facts in the hole; pauses
+  7.5 s instead (2.5 s on the frog).
+- **F198** one reason voiced (the thing becomes "mine"), the other two as words on screen, Munich on the source
+  line. **F200** one object, a box, from frame 0 to the last line; "wherever our effort is" instead of "with ideas".
+- **F228** «ավելի ծիծաղելի էր» cut. **F226** the screen line is the voiced last sentence.
+- **F199** (frog as hook) not applied: it conflicts with F200's one object, and the 63% is the measured result;
+  the frog stays as the beat 3 payoff. About 1:20 now, the lightest piece in the batch.
 
 ## Questions for Hayk (review points)
 

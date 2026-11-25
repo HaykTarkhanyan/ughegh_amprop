@@ -2,3 +2,8 @@ datetime,model,video,tokens_in,tokens_out,usd_est
 2026-11-25T10:38:52,gemini-3.8-flash,pilot_remotion.mp4,7489,2804,0.0161
 2026-11-25T10:47:33,gemini-3.8-flash,pilot_remotion.mp4,7489,2887,0.0164
 2026-11-25T11:02:41,gemini-3.8-flash,pilot_remotion.mp4,7489,2699,0.0157
+2026-11-25T15:18:46,gemini-3.8-flash,tts_check_t1_letters.wav,547,120,0.0009
+2026-11-25T15:18:55,gemini-3.8-flash,tts_check_t2_classical.wav,415,100,0.0007
+2026-11-25T15:19:25,gemini-3.8-flash,tts_check_t3_english.wav,542,108,0.0008
+2026-11-25T15:19:39,gemini-3.8-flash,tts_check_t4_digits.wav,959,315,0.0019
+2026-11-25T15:19:50,gemini-3.8-flash,tts_check_t5_names.wav,736,179,0.0012

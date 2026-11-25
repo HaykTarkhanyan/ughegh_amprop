@@ -30,6 +30,11 @@ done = [
   "Ten more scripts written after the Fable review, applying F131-F134 (claim in the first seconds, no summary card, no «Այնպես որ», years on the source line, marked pauses, one local anchor, no Latin in the voice): mashtots, english_spelling, week_seven, minute_60, decoy_popcorn, ikea_effect, map_projection, zero_knowledge, painted_statues, luggage_wheels (1:38-2:12 each); own_voice and yawning were already scripted",
   "Fact checks that changed scripts: 'Babylon invented the week' unsettled (two traditions); decoy effect absent with real products (Frederick 2014); cake-mix egg story a legend; Winckelmann and Sadow 'macho' quotes unconfirmed (left out); Boston Gall-Peters unconfirmed (left out); Oo/Ff added-letter dates conflict (11th/12th/13th c., no date given)",
   "Review tick-list now 22 scripts (A1-A22 / C1-C22)",
+  "Fable review 2 of the 11 new scripts -> 03_shorts/FABLE_REVIEW_2.md (F153-F238, ~272k tokens, ~20 min): 4 ready, 6 small fixes, luggage rework; F131-F134 landed; new habits: doubt-beat reflex, eight-beat mold, tiny pauses, 'not A but B' closings",
+  "Hayk: 'fix all'. Applied F153-F238 in all 11 scripts and plans (each PLAN.md lists F-ID -> change): cuts (Mead, Neanderthals, Korea/Cherokee, debt/island, cake mix, 24 hours, Turing sentence), new hooks (ճնճղուկ, -ough read aloud, choose-your-popcorn, 18+ website, real 10-hour clock), the week showcase's missing link, tagged reconstructions, pauses 7.5-9.5 s per script, voice says the screen line; luggage = physics only (F216 a, default); lengths now 1:19-1:58",
+  "Voice test F164/F230 (5 clips, TTS $0.027 + Gemini transcription check $0.0055): digits, the classical Proverbs line, Mercator/Gauss, minuta/secunda all right; «քոֆ» heard as «քաֆ»; letter names need Hayk's ear -> voice_test/batch2_risky.html",
+  "Checked for the rewrites: Armenian numerals 4 x 9 (Wikipedia), Akhtamar interior frescoes (Tatev 930 on one source), Webster 1806/1828 color/center",
+  "03_shorts/README.md: 'Script rules' (Fable rules, digits) + two strands + Fable's publishing order; DECISIONS.md #22 (script rules, digits) staged alone via the HEAD-blob trick",
 ]
 
 pending = [

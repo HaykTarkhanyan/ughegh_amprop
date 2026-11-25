@@ -1,56 +1,59 @@
 [
   {
-    "key": "hook",
-    "text": "Աշխարհի այբուբենների մեծ մասը հեղինակ չունի։ Դրանք դարերով են ձևավորվել։ Մերն ունի հեղինակ, տարեթիվ և նույնիսկ առաջին նախադասություն։ Բայց ինչո՞ւ է մարդը նստում ու զրոյից տառեր հորինում։",
-    "visual": "Frame 0: the Latin, Greek and Cyrillic alphabets as blurry grey rows with '?' as author; the Armenian row lights up orange with a signature 'Մաշտոց'."
+    "key": "challenge",
+    "text": "Փորձիր հունական տառերով գրել «ճնճղուկ» բառը։",
+    "pause_after": 2,
+    "visual": "Frame 0: the word «ճնճղուկ» with empty slots under it and a Greek letter tray; the viewer tries during the pause; ν and ου fit, the ճ and ղ slots blink red."
+  },
+  {
+    "key": "no_letters",
+    "text": "Չի ստացվի՝ հունարենը չունի ծա, ձա, ճե, ջե, ղատ, ռա հնչյունները։ Մաշտոցն ուներ հենց այս խնդիրը։",
+    "visual": "The six missing sounds pop out as red letters beside the Greek tray; the Mashtots statue photo fades in."
+  },
+  {
+    "key": "author",
+    "text": "Աշխարհի այբուբենների մեծ մասը հեղինակ չունի։ Մերն ունի հեղինակ, տարեթիվ և նույնիսկ առաջին նախադասություն։ Եվ Մաշտոցը զրոյից չսկսեց՝ մի բան վերցրեց հույներից, մի բան հորինեց ինքը։",
+    "visual": "The Latin, Greek and Arabic alphabets as grey rows with '?' as author (no Cyrillic, F165); the Armenian row lights up orange with 'Մաշտոց, 405'; then a split: 'վերցրեց' / 'հորինեց'."
   },
   {
     "key": "problem",
-    "text": "Հինգերորդ դարի սկիզբ։ Հայաստանը բաժանված է Բյուզանդիայի և Պարսկաստանի միջև։ Եկեղեցում կարդում են հունարեն ու ասորերեն գրքեր, և մարդիկ չեն հասկանում։ Մաշտոց վարդապետը քարոզում էր գավառներում և ամեն օր տեսնում էր դա։",
+    "text": "Հինգերորդ դարի սկիզբն էր։ Հայաստանը բաժանված էր Բյուզանդիայի և Պարսկաստանի միջև։ Եկեղեցում կարդում էին հունարեն ու ասորերեն գրքեր, և մարդիկ չէին հասկանում։ Մաշտոց վարդապետը քարոզում էր գավառներում և ամեն օր տեսնում էր դա։",
     "visual": "Map of Armenia split by a line: Byzantium (west) and Persia (east); a church interior with Greek and Syriac text floating over puzzled faces (dots with question marks)."
   },
   {
-    "key": "greek",
-    "text": "Ինչո՞ւ չվերցնել պատրաստի հունական տառերը։ Որովհետև հայերենն ունի հնչյուններ, որ հունարենը չունի՝ ծա, ձա, ճե, ջե, ղատ, ռա։ Փորձիր հունական տառերով գրել «ճնճղուկ» բառը։",
-    "pause_after": 1.5,
-    "visual": "The word «ճնճղուկ» assembled from Greek letters: ν and ου fit, the ճ and ղ slots stay empty and blink red."
+    "key": "rule",
+    "text": "405 թվականին Մաշտոցը ստեղծեց 36 տառ։ Սկզբունքը մեկն էր՝ մեկ հնչյուն, մեկ տառ։",
+    "screen_small": "Եդեսիա և Սամոսատ, գրիչ Հռոփանոսի օգնությամբ (Կորյուն, «Վարք Մաշտոցի»)",
+    "visual": "A counter runs to 36; each new letter appears next to one sound wave, one to one."
   },
   {
-    "key": "daniel",
-    "text": "Սկզբում փորձեցին ասորի եպիսկոպոս Դանիելի գտած տառերը։ Բայց դրանք չէին բավականացնում հայերենի բոլոր հնչյունների համար։",
-    "visual": "A short row of borrowed letters; Armenian sounds fly in as dots and several find no slot."
-  },
-  {
-    "key": "design",
-    "text": "405 թվականին Մաշտոցը գնաց Ասորիքի քաղաքներ և հույն գրիչ Հռոփանոսի օգնությամբ ստեղծեց 36 տառ։ Սկզբունքը պարզ էր՝ մեկ հնչյուն, մեկ տառ։ Որտեղ հունարենն ուներ նույն հնչյունը, պահեց հունական հերթականությունը՝ այբ, բեն, գիմ, դա, ինչպես ալֆա, բետա, գամմա, դելտա։ Իսկ նոր հնչյունների համար հորինեց նոր տառեր։",
-    "screen_small": "Կորյուն, «Վարք Մաշտոցի»",
-    "visual": "Two rows, Greek above, Armenian below: matching letters connect with lines (Α-Ա, Β-Բ, Γ-Գ, Δ-Դ, Ε-Ե, Ζ-Զ); the new Armenian letters (Ծ, Ձ, Ճ, Ջ, Ղ, Ռ ...) drop in orange between them. A counter runs to 36."
+    "key": "greek_order",
+    "text": "Որտեղ հունարենն ուներ նույն հնչյունը, նա պահեց հունական հերթականությունը՝ այբ, բեն, գիմ, դա, ինչպես ալֆա, բետա, գամմա, դելտա։ Իսկ նոր հնչյունների համար հորինեց նոր տառեր և տեղավորեց դրանք արանքներում։",
+    "pause_after": 2.5,
+    "visual": "The showcase: two rows, Greek above, Armenian below; matching letters connect with lines (Α-Ա, Β-Բ, Γ-Գ, Δ-Դ, Ε-Ե, Ζ-Զ); during the pause the new Armenian letters (Ը, Ժ, Խ, Ծ, Ձ, Ղ, Ճ, Ջ, Ռ ...) drop in orange into the gaps."
   },
   {
     "key": "numbers",
-    "text": "Տառերը նաև թվեր էին՝ այբը մեկն էր, բենը՝ երկուսը, ժեն՝ տասը։ Այդ պատճառով հին ձեռագրերում տարեթվերը գրված են տառերով։",
-    "visual": "Letters flip to numbers: Ա 1, Բ 2, Ժ 10, Ճ 100; then a manuscript colophon date in letters decodes into digits."
+    "text": "Տառերը նաև թվեր էին, և 36 տառը կազմում էր չորս իննյակ՝ միավորներ, տասնավորներ, հարյուրավորներ և հազարավորներ։ Այբը մեկն էր, ժեն՝ տասը, ճեն՝ հարյուր, ռան՝ հազար։",
+    "pause_after": 1.5,
+    "visual": "The 36 letters rearrange into a 4 x 9 grid: row 1 Ա-Թ (1-9), row 2 Ժ-Ղ (10-90), row 3 Ճ-Ջ (100-900), row 4 Ռ-Ք (1000-9000); Ա, Ժ, Ճ, Ռ glow as they are named."
   },
   {
     "key": "first_sentence",
     "text": "Ասում են՝ առաջին նախադասությունը, որ գրեցին նոր տառերով, Սողոմոնի առակներից էր՝ «Ճանաչել զիմաստութիւն եւ զխրատ, իմանալ զբանս հանճարոյ»։ Ճանաչել իմաստությունն ու խրատը, հասկանալ հանճարի խոսքերը։",
     "pause_after": 2,
-    "visual": "The sentence written letter by letter in erkatagir (old capital letters), then the modern spelling under it."
+    "visual": "The sentence written letter by letter in erkatagir (old capital letters), then the modern spelling under it. If the voice test fails on the classical line, the voice says only the modern line and the classical one is shown written (F164)."
   },
   {
     "key": "result",
-    "text": "Մի քանի տասնամյակում հայերեն թարգմանվեցին Աստվածաշունչը և հունական ու ասորական գրքեր, իսկ հինգերորդ դարը կոչվեց ոսկեդար։ Թագավորությունը շուտով կորավ, բայց գիրը մնաց։",
-    "visual": "A shelf filling with books; a crown fades out, the letters stay lit."
-  },
-  {
-    "key": "others",
-    "text": "Ուրիշներն էլ են նույնն արել։ Կորեական թագավոր Սեջոնի գիտնականները բաղաձայնների ձևերը նկարեցին բերանի ու լեզվի դիրքերով։ Իսկ չերոկի հնդկացի Սեքվոյան, որ ինքը ոչ մի լեզվով կարդալ չգիտեր, հորինեց իր ժողովրդի գիրը, և այն շատ արագ տարածվեց։",
-    "visual": "A mouth profile morphs into the Hangul letter ㄱ (tongue root) and ㄴ (tongue tip); then Sequoyah's portrait (public domain) with a few syllabary signs."
+    "text": "Մի քանի տասնամյակում հայերեն թարգմանվեցին Աստվածաշունչը և հունական ու ասորական գրքեր, իսկ հինգերորդ դարը կոչվեց ոսկեդար։",
+    "visual": "A shelf filling with manuscripts."
   },
   {
     "key": "takeaway",
-    "text": "Այբուբենների մեծ մասն ինքնըստինքյան է ձևավորվել։ Մերը որոշում էր՝ որ այս լեզուն պետք է գրվի իր սեփական տառերով։",
-    "screen": "Այբուբենը որոշում էր",
-    "visual": "All 36 letters plus the later Օ and Ֆ form a grid; the hook's grey rows return beside it; loops to frame 0."
+    "text": "Այբուբենների մեծ մասն ինքնըստինքյան է ձևավորվել։ Մերը որոշում էր։ Թագավորությունը շուտով կորավ, բայց գիրը մնաց։",
+    "pause_after": 1.5,
+    "screen": "Թագավորությունը կորավ, բայց գիրը մնաց",
+    "visual": "A crown fades out, the 36 letters plus the later Օ and Ֆ stay lit; loops to the «ճնճղուկ» challenge."
   }
 ]

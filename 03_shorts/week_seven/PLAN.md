@@ -7,34 +7,39 @@ facts and can go out in either order.
 ## The idea in one paragraph
 
 The day, the month and the year come from the sky; the week does not, and the Moon is not the answer (29.5 days
-does not split into sevens). Seven comes from two traditions that merged in the first centuries AD: the Jewish
-Sabbath week, and the Roman planetary week, one day for each of the seven moving lights. The odd order of the
-planet days has a neat cause: each hour had a ruling planet in slow-to-fast order, a day has 24 hours, and 24
-leaves 3 when divided by 7, so each day starts three planets on. Armenian kept the Jewish counting
-(«երկուշաբթի» is the week's second day). The French ten-day week and the Soviet five- and six-day weeks (Armenia
-included) both failed. The takeaway: seven is neither nature nor mathematics, just two old traditions that met.
+does not split into sevens). Seven comes from two traditions. The first is the Jewish Sabbath week, which Armenian
+kept: the week starts on Sunday, so «երկուշաբթի» is literally the week's second day. The second is the Roman
+planetary week, one day for each of the seven moving lights, which English kept (Saturday, Sunday, Monday). Their
+odd order (Saturn, then the Sun, then the Moon) has a neat cause: the hours had ruling planets in slow-to-fast
+order, a day was named after the planet of its first hour, and 24 leaves 3 when divided by 7, so each day starts
+three planets on, which draws a seven-pointed star. The Soviet five- and six-day weeks (Armenia included, spouses
+with different days off) failed. The takeaway: the week is not from the sky but from people. (After the Fable
+review: the Armenian names moved up, the missing "named after the first hour" link added, the French week and the
+Friday etymology cut.)
 
 ## The script (Armenian)
 
 <!-- script:start -->
 
-8 beats, 1,619 characters (1,641 with numbers spelled out): ~112 s of speech, ~1:57 with pauses and the end tail, 2.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
+9 beats, 1,491 characters (1,503 with numbers spelled out): ~103 s of speech, ~1:54 with pauses and the end tail, 9 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
 
-**1. hook.** Օրը, ամիսը և տարին գալիս են երկնքից։ Շաբաթը՝ ոչ։ Օրը Երկրի պտույտն է, ամիսը՝ Լուսնի, տարին՝ Արևի շուրջ պտույտը։ Իսկ յոթ օրը ոչ մի բանի պտույտ չէ։ Ուրեմն որտեղի՞ց է այն։
+**1. hook.** Օրը, ամիսը և տարին գալիս են երկնքից։ Շաբաթը՝ ոչ։ Օրը Երկրի պտույտն է, ամիսը՝ Լուսնի, տարին՝ Արևի շուրջ պտույտը։ Ուրեմն որտեղի՞ց է յոթը։ *[pause 1 s]*
 
 **2. moon.** Հաճախ ասում են՝ Լուսնի փուլերից է։ Բայց լուսնային ամիսը մոտ քսանինն ու կես օր է, և յոթի վրա չի բաժանվում։ Յոթը եկել է երկու այլ տեղից։
 
 **3. sabbath.** Առաջինը հրեական շաբաթն է՝ վեց օր աշխատանք, յոթերորդը՝ հանգիստ։ Այստեղից է մեր «շաբաթ» բառը։
 
-**4. planets.** Երկրորդը հին աստղագուշակությունն է։ Աչքով երկնքում երևում էր յոթ շարժվող լուսատու՝ Արևը, Լուսինը, Մերկուրին, Վեներան, Մարսը, Յուպիտերը և Սատուրնը։ Հռոմեական աշխարհում ամեն օրը նվիրեցին մեկին։ Անգլերենում շաբաթ օրը Սատուրնի օրն է, կիրակին՝ Արևի, երկուշաբթին՝ Լուսնի։
+**4. armenian.** Եվ հայերենը պահել է հենց այդ հաշիվը, որտեղ շաբաթը սկսվում է կիրակիով։ Երկուշաբթին բառացի շաբաթվա երկրորդ օրն է, երեքշաբթին՝ երրորդը, և այդպես մինչև հինգշաբթի։ Իսկ կիրակին հունարենից է՝ «Տիրոջ օր»։ *[pause 1 s]*
 
-**5. order.** Բայց ինչո՞ւ այս հերթով։ Հին աստղագետները լուսատուները դասավորում էին ըստ արագության՝ Սատուրն, Յուպիտեր, Մարս, Արև, Վեներա, Մերկուրի, Լուսին։ Ամեն ժամ ուներ իր տիրակալը՝ այս հերթով։ Օրն ունի քսանչորս ժամ, և քսանչորսը յոթի բաժանելիս մնում է երեք։ Դրա համար ամեն հաջորդ օր սկսվում է երեք քայլ առաջ՝ Սատուրնից Արև, Արևից Լուսին, Լուսնից Մարս։ *[pause 2.5 s]*
+**5. planets.** Երկրորդ աղբյուրը հին աստղագուշակությունն է։ Աչքով երկնքում երևում էր յոթ շարժվող լուսատու, և հռոմեական աշխարհում ամեն օրը նվիրեցին մեկին։ Անգլերենը դա պահել է՝ շաբաթ օրը Սատուրնի օրն է, կիրակին՝ Արևի, երկուշաբթին՝ Լուսնի։
 
-**6. armenian.** Հայերենը պահել է հրեական հաշիվը։ Երկուշաբթին բառացի շաբաթվա երկրորդ օրն է, երեքշաբթին՝ երրորդը, և այդպես մինչև հինգշաբթի։ Կիրակին հունարենից է՝ «Տիրոջ օր», իսկ ուրբաթը՝ ասորերենից, «նախօրյակ» իմաստով։
+**6. order_setup.** Բայց սա տարօրինակ հերթ է՝ Սատուրն, հետո Արև, հետո Լուսին։ Երկնքում նրանք այդպես չեն դասավորված։ Հին աստղագետները լուսատուները շարում էին ըստ արագության, և օրվա ամեն ժամ ուներ իր տիրակալը՝ այդ հերթով։ Իսկ օրը կոչվում էր այն լուսատուի անունով, որին պատկանում էր առաջին ժամը։
 
-**7. soviet.** Յոթն այնքան ամուր է, որ փոխել չի հաջողվել։ Ֆրանսիական հեղափոխությունը մտցրեց տասնօրյա շաբաթ, Նապոլեոնը վերացրեց այն։ Իսկ Խորհրդային Միությունը, Հայաստանն էլ հետը, մոտ տասը տարի ապրեց հնգօրյա, հետո վեցօրյա շաբաթով։ Ամուսինները հաճախ տարբեր օրեր էին հանգստանում։ 1940 թվականին վերադարձան յոթին։
+**7. order_count.** Օրն ունի 24 ժամ։ 24-ը յոթի բաժանելիս մնում է երեք։ Ուրեմն հաջորդ օրվա առաջին ժամն ընկնում է երեք քայլ առաջ՝ Սատուրնից՝ Արև, Արևից՝ Լուսին, Լուսնից՝ Մարս։ *[pause 4.5 s]*
 
-**8. takeaway.** Յոթ օրը ոչ բնության օրենք է, ոչ մաթեմատիկա։ Դա երկու հին ավանդույթի հանդիպում է, որ այնքան սովորական դարձավ, որ այլևս չենք նկատում։
+**8. soviet.** Յոթն այնքան ամուր է, որ փոխել չի հաջողվել։ Խորհրդային Միությունը, Հայաստանն էլ հետը, մոտ տասը տարի ապրեց հնգօրյա, հետո վեցօրյա շաբաթով։ Ամուսինները հաճախ տարբեր օրեր էին հանգստանում։ Ի վերջո վերադարձան յոթին։ *[pause 1.5 s]*
+
+**9. takeaway.** Ուրեմն յոթ օրը երկու հին ավանդույթի հանդիպում է։ Շաբաթը երկնքից չէ, մարդկանցից է։ *[pause 1 s]*
 
 <!-- script:end -->
 
@@ -72,6 +77,17 @@ Armenian lint: 0 errors, 0 hints (after «քսանինն ու կես» and dropp
   animated.
 - **Drawn:** the three orbits and the empty fourth one; the 29.5-day strip; the six-plus-one squares; the Armenian
   names split into number + շաբթի; the French strip and the Soviet roster.
+
+## After the Fable review (FABLE_REVIEW_2.md, applied 2026-11-25)
+
+- **F176** the repeated hook sentence cut. **F177** the Armenian day names moved up next to the Sabbath. **F180** the
+  clause "the week starts on Sunday" added. U-ss: the Friday etymology dropped (unchecked, F231).
+- **F178** the missing link added ("a day was named after the planet of its first hour"), and the odd order is said
+  first ("Saturn, then the Sun, then the Moon: in the sky they do not stand that way").
+- **F179** the showcase split into set-up and count, 4.5 s of near silence for the star; the seven planet names are
+  shown, not voiced.
+- **F181** the voice says the screen line «Շաբաթը երկնքից չէ, մարդկանցից է». **F182** the French week and the year
+  1940 cut (France now lives only in minute_60, F227). **F222** pauses 9 s.
 
 ## Questions for Hayk (review points)
 

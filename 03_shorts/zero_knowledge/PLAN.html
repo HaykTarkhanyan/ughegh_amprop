@@ -17,20 +17,21 @@ pre code { padding: 0; }
 img { max-width: 100%; }
 </style></head><body><h1 id="short-zero-knowledge-proofs---script-and-plan">Short: Zero-knowledge proofs - script and plan</h1>
 <p>Draft for Hayk's review, 2026-11-25. Script first (Q17), rendered in Remotion (DECISIONS.md #21). Script source: <code>beats.hy.json</code>. Follows the Fable batch notes (F131-F134). Related to <code>crypto_paint/</code> (public keys with paint): publish after it, a few videos apart.</p>
-<nav><strong>Contents</strong><ul><li><a href="#the-idea-in-one-paragraph">The idea in one paragraph</a></li><li><a href="#the-script-armenian">The script (Armenian)</a></li><li><a href="#facts-checked">Facts (checked)</a></li><li><a href="#visuals">Visuals</a></li><li><a href="#questions-for-hayk-review-points">Questions for Hayk (review points)</a></li></ul></nav><details open id="the-idea-in-one-paragraph"><summary>The idea in one paragraph</summary>
-<p>How do you prove you know a secret without revealing any of it? Your friend is colour-blind and holds a red and a green ball that look the same to him. He hides them behind his back, swaps them or not at random, and asks "did I swap?"; you are right every time. Once could be luck (50%); twenty times in a row by luck is about one in a million, so he is convinced the balls differ, yet he still does not know which one is red. That is a zero-knowledge proof: convince, reveal nothing. Three researchers proposed it in the 1980s (two later won the Turing Award); real systems replace the balls with maths puzzles only the secret's owner can keep answering. Today it can prove to a website that you are over 18 without your birth date (the EU is testing this) and hide who paid whom in some cryptocurrencies. The takeaway: proving and revealing are not the same thing.</p>
+<nav><strong>Contents</strong><ul><li><a href="#the-idea-in-one-paragraph">The idea in one paragraph</a></li><li><a href="#the-script-armenian">The script (Armenian)</a></li><li><a href="#facts-checked">Facts (checked)</a></li><li><a href="#visuals">Visuals</a></li><li><a href="#after-the-fable-review-fable_review_2md-applied-2026-11-25">After the Fable review (FABLE_REVIEW_2.md, applied 2026-11-25)</a></li><li><a href="#questions-for-hayk-review-points">Questions for Hayk (review points)</a></li></ul></nav><details open id="the-idea-in-one-paragraph"><summary>The idea in one paragraph</summary>
+<p>How do you prove you know a secret without revealing any of it, say, prove to a website you are over 18 without your birth date? Your friend is colour-blind and holds a red and a green ball that look the same to him. He hides them behind his back, swaps them or not at random, and asks "did I swap?" (one round plays in silence). You are right every time; if the balls really were the same colour, you could only guess. Once could be luck (50%); twenty times in a row by luck is about one in a million, so he is convinced the balls differ, yet he still does not know which one is red. That is a zero-knowledge proof: convince, reveal nothing. Real systems replace the balls with maths puzzles only the secret's owner can keep answering; the EU is testing such age checks and some cryptocurrencies hide who paid whom. The takeaway: proving and revealing are not the same thing.</p>
 </details><details open id="the-script-armenian"><summary>The script (Armenian)</summary>
 <!-- script:start -->
 
-<p>8 beats, 1,406 characters (1,406 with numbers spelled out): ~97 s of speech, ~1:41 with pauses and the end tail, 2 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).</p>
-<p><strong>1. hook.</strong> Ինչպե՞ս ապացուցել, որ գաղտնիք գիտես, առանց գաղտնիքից գեթ մի բան ասելու։ Թվում է՝ անհնար է։ Բայց հնարավոր է։</p>
+<p>9 beats, 1,323 characters (1,328 with numbers spelled out): ~91 s of speech, ~1:42 with pauses and the end tail, 8 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).</p>
+<p><strong>1. hook.</strong> Ինչպե՞ս ապացուցել, որ գաղտնիք գիտես, առանց գաղտնիքից գեթ մի բան ասելու։ Օրինակ՝ կայքին ապացուցել, որ 18 տարեկանից մեծ ես, առանց ծննդյան ամսաթիվը ցույց տալու։</p>
 <p><strong>2. balls.</strong> Պատկերացրու՝ ընկերդ դալտոնիկ է, և ձեռքին երկու գնդակ ունի՝ կարմիր ու կանաչ։ Նրա համար դրանք նույնն են։ Դու ուզում ես ապացուցել, որ դրանք տարբեր գույնի են, բայց չասել, թե որն է կարմիրը։</p>
-<p><strong>3. game.</strong> Նա գնդակները թաքցնում է մեջքի ետևում, պատահականորեն փոխում է ձեռքերը կամ չի փոխում, հետո ցույց է տալիս և հարցնում՝ փոխեցի՞։ Դու ամեն անգամ ճիշտ ես պատասխանում։</p>
-<p><strong>4. rounds.</strong> Մեկ անգամը կարող է բախտ լինել՝ հիսուն տոկոս։ Բայց քսան անգամ անընդմեջ պատահաբար գուշակելու հավանականությունը մոտ մեկ միլիոնից մեկ է։ Քսան ռաունդից հետո նա համոզված է՝ գնդակները տարբեր են։ <em>[pause 2 s]</em></p>
-<p><strong>5. zero.</strong> Իսկ ի՞նչ իմացավ նա։ Միայն այն, որ դու տարբերում ես գնդակները։ Թե որն է կարմիրը, մինչև հիմա չգիտի։ Սա է զրոյական գիտելիքով ապացույցը՝ համոզում ես, ոչինչ չբացահայտելով։</p>
-<p><strong>6. origin.</strong> Գաղափարը երեք գիտնական առաջարկեցին ութսունականներին, և նրանցից երկուսը հետո ստացան Թյուրինգի մրցանակը՝ համակարգչային գիտության ամենաբարձր պարգևը։ Իսկ իրական համակարգերում գնդակների փոխարեն մաթեմատիկական խնդիրներ են, որոնց պատասխանը միայն գաղտնիքն իմացողը կարող է անընդհատ ճիշտ տալ։</p>
-<p><strong>7. uses.</strong> Այսօր դա արդեն կիրառվում է։ Կարելի է կայքին ապացուցել, որ տասնութ տարեկանից մեծ ես, առանց ծննդյան ամսաթիվը ցույց տալու։ Եվրոպական միությունը նման տարիքի ստուգում է փորձարկում, իսկ որոշ կրիպտոարժույթներ այդպես թաքցնում են, թե ով ում որքան է փոխանցել։</p>
-<p><strong>8. takeaway.</strong> Ապացուցելն ու բացահայտելը նույն բանը չեն։ Կարելի է համոզել՝ ոչինչ չտալով։</p>
+<p><strong>3. round.</strong> Նա գնդակները թաքցնում է մեջքի ետևում, պատահականորեն փոխում է ձեռքերը կամ չի փոխում, հետո ցույց է տալիս և հարցնում՝ փոխեցի՞։ <em>[pause 3 s]</em></p>
+<p><strong>4. answer.</strong> Դու ամեն անգամ ճիշտ ես պատասխանում։ Եթե գնդակներն իսկապես նույն գույնի լինեին, չէիր կարող իմանալ՝ նա փոխեց, թե ոչ։ Միայն կգուշակեիր։</p>
+<p><strong>5. rounds.</strong> Մեկ անգամ գուշակելը կարող է հաջողվել՝ հիսուն տոկոս։ Բայց քսան անգամ անընդմեջ պատահաբար գուշակելու հավանականությունը մոտ մեկ միլիոնից մեկ է։ Քսան ռաունդից հետո նա համոզված է՝ գնդակները տարբեր են։ <em>[pause 2.5 s]</em></p>
+<p><strong>6. zero.</strong> Իսկ ի՞նչ իմացավ նա։ Միայն այն, որ դու տարբերում ես գնդակները։ Թե որն է կարմիրը, մինչև հիմա չգիտի։ Սա է զրոյական գիտելիքով ապացույցը՝ համոզում ես, ոչինչ չբացահայտելով։ <em>[pause 1.5 s]</em></p>
+<p><strong>7. real.</strong> Իրական համակարգերում գնդակների փոխարեն մաթեմատիկական խնդիրներ են։ Դրանց պատասխանը կարող է անընդհատ ճիշտ տալ միայն նա, ով գիտի գաղտնիքը։</p>
+<p><strong>8. uses.</strong> Եվ սա արդեն տեսություն չէ։ Տարիքի այդպիսի ստուգում փորձարկում է Եվրոպական միությունը, իսկ որոշ կրիպտոարժույթներ այդպես թաքցնում են, թե ով ում որքան է փոխանցել։</p>
+<p><strong>9. takeaway.</strong> Ապացուցելն ու բացահայտելը նույն բանը չեն։ Կարելի է համոզել՝ ոչինչ չտալով։ <em>[pause 1 s]</em></p>
 <!-- script:end -->
 
 <p>Armenian lint: 0 errors, 0 hints.</p>
@@ -46,6 +47,11 @@ img { max-width: 100%; }
 <ul>
 <li><strong>Drawn, all of it:</strong> split view of what you see (red / green) and what the friend sees (grey / grey); hands behind the back with a coin-flip; the 20-round strip with the "just guessing" bar halving each round (the showcase, held for the 2 s pause); the balls turning into a number puzzle; the phone showing only "18+ ✓"; a transaction with hidden fields and a valid mark.</li>
 <li>Colours: red and green only for the balls, with a grey "friend's view" so colour-blind viewers get the joke too.</li>
+</ul>
+</details><details open id="after-the-fable-review-fable_review_2md-applied-2026-11-25"><summary>After the Fable review (FABLE_REVIEW_2.md, applied 2026-11-25)</summary>
+<ul>
+<li><strong>F207</strong> the logical core is said («Եթե գնդակներն իսկապես նույն գույնի լինեին, չէիր կարող իմանալ ... Միայն կգուշակեիր»). <strong>F208</strong> the origin beat is now only the bridge to real systems; names and year on the source line, no Turing award sentence (so the unchecked fact is gone, F231).</li>
+<li><strong>F209</strong> «Թվում է՝ անհնար է։ Բայց հնարավոր է։» cut; the hook is concrete (the 18+ website). <strong>F210</strong> one round plays in 3 s of near silence before «Դու ամեն անգամ ճիշտ ես պատասխանում». <strong>F222</strong> pauses 8 s.</li>
 </ul>
 </details><details open id="questions-for-hayk-review-points"><summary>Questions for Hayk (review points)</summary>
 <ul>

@@ -2,6 +2,14 @@
 
 Newest at the top.
 
+## 22. Shorts scripts follow written script rules; numbers are written as digits
+
+- **Date / status:** 2026-11-25, active
+- **Decision:** Every short script follows the rules in `03_shorts/README.md` ("Script rules"): claim in the first seconds, no summary-card narration, years and names on the source line, 8-12 s of marked pauses (`pause_after`) with the longest on the showcase, a doubt beat only about the video's own claim and ending on what is known, the voice says the closing screen line, no Latin in the voice, and numbers written as digits in `beats.hy.json` (words only where the spoken form is the point).
+- **Why:** Two Fable reviews (`03_shorts/FABLE_REVIEW.md` F131-F134, `FABLE_REVIEW_2.md` F222-F229). The digits rule was decided on measurement: a test clip with 13 digit forms («1800 դրամ», «84 տոկոսն», «24-ը», «405 թվականին» ...) came back from a Gemini transcription all correct (`03_shorts/voice_test/batch2_risky/transcripts.json`), digits make one-glance captions, and `build_timeline.py` already weights a digit token by its spoken length. Hayk said "fix all" to the review.
+- **Alternatives rejected:** numbers spelled out (two-line captions such as «հազար չորս հարյուրից հազար յոթ հարյուր թվականներին»); leaving it per script (five scripts used digits, six words).
+- **What would change this:** a voiced short where the TTS misreads a digit form; Hayk preferring spelled-out numbers on screen.
+
 ## 21. Shorts are rendered with Remotion
 
 - **Date / status:** 2026-11-25, active

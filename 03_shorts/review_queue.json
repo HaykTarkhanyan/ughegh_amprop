@@ -129,99 +129,99 @@
             },
             {
               "id": "A12",
-              "title": "Approve: The toothless man from Dmanisi (dmanisi, 10 beats, ~132 s)",
+              "title": "Approve: The toothless man from Dmanisi (dmanisi, 9 beats, ~1:45)",
               "exclusive": "dmanisi",
-              "note": "1.77-million-year-old toothless man near Armenia; the 'someone fed him' story vs what the bone shows; a toothless bonobo; the Mead femur quote; beautiful stories need checking.",
+              "note": "Toothless man near Armenia; the 'someone fed him' story (painting tagged as an artist's picture) vs what the bone shows; a toothless bonobo; 'we do not know which'. Mead and Neanderthal beats cut. Fable review applied.",
               "detail": [
                 "Open: U-ii keep the honest angle?, U-jj terms, U-kk credit exurb1a?"
               ]
             },
             {
               "id": "A13",
-              "title": "Approve: How Mashtots designed the Armenian alphabet (mashtots, 10 beats, ~2:11)",
+              "title": "Approve: How Mashtots designed the Armenian alphabet (mashtots, 10 beats, ~1:49)",
               "exclusive": "mashtots",
-              "note": "Most alphabets have no author; ours has a name, a year and a first sentence. Why Greek letters fail («ճնճղուկ»), one sound one letter, Greek order, letters as numbers; Korea and the Cherokee did the same.",
+              "note": "Hook = try writing «ճնճղուկ» in Greek letters; author, year, first sentence; one sound one letter, the Greek order kept, the 36 letters as a 4 x 9 number grid; closes on 'the kingdom was lost, the script stayed'. Fable review applied.",
               "detail": [
                 "Open: U-ll wording, U-mm classical sentence in the voice, U-nn Korea/Cherokee extension, U-oo Georgian claim left out"
               ]
             },
             {
               "id": "A14",
-              "title": "Approve: Why English spelling is a mess (english_spelling, 9 beats, ~2:05)",
+              "title": "Approve: Why English spelling is a mess (english_spelling, 8 beats, ~1:43)",
               "exclusive": "english_spelling",
-              "note": "English kids learn to read 2x slower; knight was «քնիխտ»; the Great Vowel Shift + printing froze old spellings; Latin letters added (debt, island by mistake); Armenian the opposite. English only on screen.",
+              "note": "Hook = the five -ough words read aloud; knight was «քնիխտ»; the vowel shift + printing froze old spellings; Armenian started from the opposite rule; Webster; 'not wrong, old'. Fable review applied.",
               "detail": [
                 "Open: U-pp term, U-qq transliterations in the voice, U-rr «պարտք»/«կղզի»"
               ]
             },
             {
               "id": "A15",
-              "title": "Approve: Why the week has 7 days (week_seven, 8 beats, ~1:57)",
+              "title": "Approve: Why the week has 7 days (week_seven, 9 beats, ~1:54)",
               "exclusive": "week_seven",
-              "note": "Day, month, year come from the sky, the week does not (29.5 days); Jewish Sabbath + Roman planet days; 24 mod 7 = 3 gives the day order (a seven-pointed star); Armenian «երկուշաբթի» counts from the Sabbath; French and Soviet weeks failed.",
+              "note": "Sky gives day, month, year, not the week; Jewish Sabbath week (Armenian names count from it); Roman planet days; named after the first hour + 24 mod 7 = 3 draws a seven-pointed star; Soviet weeks failed. Fable review applied.",
               "detail": [
                 "Open: U-ss ուրբաթ etymology, U-tt terms, U-uu Soviet detail"
               ]
             },
             {
               "id": "A16",
-              "title": "Approve: Why a minute has 60 seconds (minute_60, 8 beats, ~2:12)",
+              "title": "Approve: Why a minute has 60 seconds (minute_60, 6 beats, ~1:40)",
               "exclusive": "minute_60",
-              "note": "Money and metres go in tens, time in sixties; Babylonian base 60 (finger-joint hypothesis); 60 divides well; Egyptian 12+12 unequal hours; «սեկունդ» = 'second small part'; French decimal time failed.",
+              "note": "Hook = a real 10-hour French clock (the metre stayed, decimal time did not); count to 60 on your hands; 60 divides well (a third of 100 never ends); minuta / secunda; 'sixty divides well, ten comes from our fingers'. Fable review applied.",
               "detail": [
                 "Open: U-vv the Russian link, U-ww closing line too strong?"
               ]
             },
             {
               "id": "A17",
-              "title": "Approve: The decoy effect (medium popcorn) (decoy_popcorn, 8 beats, ~1:47)",
+              "title": "Approve: The decoy effect (medium popcorn) (decoy_popcorn, 10 beats, ~1:52)",
               "exclusive": "decoy_popcorn",
-              "note": "The medium exists to sell the large; dram example; the magazine demo 84% vs 32%; comparing is easy, pricing is hard; 19 studies with real products found no effect, it holds for numbers.",
+              "note": "The medium sells the large; the viewer chooses before the medium appears; the 84% vs 32% magazine demo; comparing is easy, pricing is hard; no effect with real products, it holds for numbers. Fable review applied.",
               "detail": [
                 "Open: U-xx term «խայծի էֆեկտ», U-yy Ariely on the source line, U-zz «ադիբուդի»"
               ]
             },
             {
               "id": "A18",
-              "title": "Approve: The IKEA effect (ikea_effect, 8 beats, ~1:38)",
+              "title": "Approve: The IKEA effect (ikea_effect, 7 beats, ~1:21)",
               "exclusive": "ikea_effect",
-              "note": "Builders pay 63% more for their own box; origami makers value their frogs like experts'; only if finished; effort, competence, ownership (a Munich replication); the cake-mix egg story is a legend; grandfather's crooked fence.",
+              "note": "Builders pay 63% more for their own box; named IKEA effect; crooked origami frogs; only if finished; it becomes 'my box'; grandfather's fence. Cake-mix legend cut. ~1:20. Fable review applied.",
               "detail": [
                 "Open: U-aaa brand in the voice, U-bbb local touch"
               ]
             },
             {
               "id": "A19",
-              "title": "Approve: Map projections (Greenland vs Africa) (map_projection, 8 beats, ~1:43)",
+              "title": "Approve: Map projections (Greenland vs Africa) (map_projection, 9 beats, ~1:46)",
               "exclusive": "map_projection",
-              "note": "Africa is 14x Greenland; drag Greenland south (smaller than Algeria), lift Armenia north (x6); orange peel and Gauss; Mercator kept angles for sailors; x4 at 60°; equal-area maps wreck shapes; Google's globe.",
+              "note": "Africa is 14x Greenland; drag Greenland south, lift Armenia north (x6); orange peel and Gauss; why Mercator stretched (sailors); every map sacrifices something; try zooming out in Google Maps. Fable review applied.",
               "detail": [
                 "Open: U-ccc «պրոյեկցիա» once?, U-ddd «Գուգլ քարտեզները»"
               ]
             },
             {
               "id": "A20",
-              "title": "Approve: Zero-knowledge proofs (zero_knowledge, 8 beats, ~1:41)",
+              "title": "Approve: Zero-knowledge proofs (zero_knowledge, 9 beats, ~1:42)",
               "exclusive": "zero_knowledge",
-              "note": "Prove a secret without revealing it: the colour-blind friend and two balls, 20 rounds = 1 in a million by luck; he still does not know which is red; age checks without a birth date, hidden crypto payments.",
+              "note": "Prove you are 18+ without a birth date; the colour-blind friend and two balls, one silent round, 20 rounds = 1 in a million by luck; he still does not know which is red. Fable review applied.",
               "detail": [
                 "Open: U-eee term, U-fff «դալտոնիկ», U-ggg «ռաունդ»"
               ]
             },
             {
               "id": "A21",
-              "title": "Approve: Greek statues were painted (painted_statues, 8 beats, ~1:44)",
+              "title": "Approve: Greek statues were painted (painted_statues, 9 beats, ~1:58)",
               "exclusive": "painted_statues",
-              "note": "Paint traces under raking, UV and infrared light (Egyptian blue glows); the Peplos Kore; why we thought white (weathering, Renaissance copies, cleaning, the 1930s scraping); the copies are hypotheses.",
+              "note": "Frame 0 = white original next to its tagged reconstruction; traces under UV / infrared; the Peplos Kore; why we thought white, the 1930s scraping; our churches had frescoes (Akhtamar); the copies are hypotheses. Fable review applied.",
               "detail": [
                 "Open: U-hhh local anchor?, U-iii «Պեպլոսով կորե»"
               ]
             },
             {
               "id": "A22",
-              "title": "Approve: Wheeled suitcase vs backpack (luggage_wheels, 8 beats, ~1:50)",
+              "title": "Approve: Wheeled suitcase vs backpack (luggage_wheels, 6 beats, ~1:19)",
               "exclusive": "luggage_wheels",
-              "note": "Moon before wheels; physics says zero work, yet you sweat (your body bobs and lifts the load each step); wheels let the floor carry it; the flat four-wheel case on a strap, then the pilot's upright case; why so late has no clear answer.",
+              "note": "Physics only (Fable's option a, U-jjj default): textbook says zero work, yet you sweat (your body lifts the load each step); wheels give it to the floor, if the floor is smooth (Yerevan pavements). ~1:20. Fable review applied.",
               "detail": [
                 "Open: U-jjj is this the topic you meant?, U-kkk Yerevan pavement joke, U-lll «բորտուղեկցորդ»"
               ]

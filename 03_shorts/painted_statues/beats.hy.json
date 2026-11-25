@@ -2,19 +2,21 @@
   {
     "key": "hook",
     "text": "Հին հունական արձանները սպիտակ չէին։ Դրանք ներկված էին՝ կարմիր, կապույտ, ոսկեգույն։ Ինչպե՞ս գիտենք, և ինչո՞ւ ենք դարեր շարունակ կարծել հակառակը։",
-    "visual": "Frame 0: a white marble head; colour washes over it in a sweep (red lips, blue eyes, gold hair band), then fades back to white."
+    "pause_after": 1,
+    "visual": "Frame 0 (F211): a real pair side by side, a white original and its painted reconstruction (Commons, Gods in Color), the copy tagged «վերակազմություն» from the first frame (F212)."
   },
   {
     "key": "traces",
     "text": "Ներկի հետքերը մնացել են։ Երբեմն դրանք երևում են աչքով, երբեմն՝ միայն թեք լույսի կամ ուլտրամանուշակագույն ճառագայթների տակ։ Իսկ եգիպտական կապույտ ներկն ինֆրակարմիր լույսի տակ փայլում է, և այդպես գտնում են նույնիսկ մանրադիտակային հետքերը։",
     "pause_after": 1.5,
-    "visual": "A raking light beam sweeps across a marble relief and 'colour shadows' appear; then an infrared view where tiny specks glow white (Egyptian blue)."
+    "visual": "A raking light beam sweeps across a marble relief and 'colour shadows' appear; then an infrared view where tiny specks glow white (Egyptian blue). Drawn parts tagged «նկարազարդում»."
   },
   {
     "key": "kore",
     "text": "Աթենքի Ակրոպոլիսում գտնված այս աղջկա արձանի վրա հայտնաբերման պահին դեռ ներկ կար։ Այսօր դրանից մնացել են միայն մուգ բծեր։",
+    "pause_after": 1,
     "screen_small": "Պեպլոսով կորե, մ.թ.ա. մոտ 530",
-    "visual": "Real photo of the Peplos Kore (Commons), slow zoom on the dark patches; a ghost of the painted pattern flickers over them."
+    "visual": "Real photo of the Peplos Kore (Commons, ACMA 679), slow zoom on the dark patches; then the painted cast after Gilliéron's 1887 drawings beside it, tagged «վերակազմություն»."
   },
   {
     "key": "why_white",
@@ -24,23 +26,32 @@
   {
     "key": "ideal",
     "text": "Ժամանակի ընթացքում սպիտակ մարմարը դարձավ գեղեցկության իդեալ, իսկ պահպանված ներկը հաճախ մաքրում էին։ Անցյալ դարի երեսունականներին Լոնդոնում Պարթենոնի քանդակները նույնիսկ պղնձե գործիքներով քերեցին, որ ավելի սպիտակ երևան։",
+    "pause_after": 1.5,
     "screen_small": "Բրիտանական թանգարան, 1937-1938",
-    "visual": "Museum workers scrape a relief with small copper tools; the surface turns whiter; a stamp 'ավելի սպիտակ'."
+    "visual": "Museum workers scrape a relief with small copper tools; during the pause a before-and-after of the surface (F215)."
+  },
+  {
+    "key": "home",
+    "text": "Մեր որոշ եկեղեցիներ էլ, որ այսօր սովոր ենք տեսնել մերկ քարով, ներսից որմնանկարներով էին ծածկված։ Աղթամարում դրանք մինչև հիմա երևում են։",
+    "pause_after": 1,
+    "visual": "Real photos (Commons): the interior frescoes of the Holy Cross church on Akhtamar; then a bare-stone church interior for contrast."
   },
   {
     "key": "copies",
     "text": "Այսօր գիտնականները պատրաստում են արձանների ներկված պատճեններ։ Շատերին դրանք կոպիտ են թվում, խաղալիքի նման։",
-    "visual": "Real photos of painted reconstructions from the 'Gods in Color' exhibitions (Commons), side by side with the white originals."
+    "visual": "Real photos of painted reconstructions from the Gods in Color exhibitions (Commons), each tagged «վերակազմություն», side by side with the white originals."
   },
   {
     "key": "doubt",
-    "text": "Եվ այստեղ կա ազնիվ վերապահում՝ այդ պատճենները վարկածներ են։ Հետքերը քիչ են, և իսկական արձանները հավանաբար ավելի նուրբ էին ներկված՝ ստվերներով, երանգներով, ոսկեզօծումով։ Գույն կար, դա փաստ է։ Թե ինչպիսին էր այն ամբողջությամբ, ճշգրիտ չգիտենք։",
+    "text": "Բայց այդ պատճենները վարկածներ են։ Հետքերը քիչ են, և իսկական արձանները հավանաբար ավելի նուրբ էին ներկված՝ ստվերներով, երանգներով, ոսկեզօծումով։ Գույն կար, դա փաստ է։ Թե ինչպիսին էր այն ամբողջությամբ, ճշգրիտ չգիտենք։",
+    "pause_after": 1,
     "visual": "Three versions of one face: flat bright paint, a subtle shaded version, and a question mark; a 'փաստ' label on the colour, a 'վարկած' label on the details."
   },
   {
     "key": "takeaway",
     "text": "Մեր պատկերացումը Հին Հունաստանի մասին ոչ թե հույներից է, այլ նրանից, ինչ թողել է ժամանակը։ Եվ դարեր շարունակ հիացել ենք մի գեղեցկությամբ, որը վնասվածքի արդյունք էր։",
-    "screen": "Սպիտակը ժամանակի հետքն է, ոչ թե հույների ընտրությունը",
-    "visual": "The white head from the hook, colour washing over it one last time and staying; loops."
+    "pause_after": 1.5,
+    "screen": "Հիացել ենք գեղեցկությամբ, որը վնասվածք էր",
+    "visual": "The white original from frame 0 alone, then its tagged reconstruction beside it again; loops."
   }
 ]

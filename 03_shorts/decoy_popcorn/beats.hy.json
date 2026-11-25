@@ -1,14 +1,26 @@
 [
   {
     "key": "hook",
-    "text": "Կինոթատրոնի միջին չափի ադիբուդին հաճախ այնտեղ չէ, որ դու այն գնես։ Այն այնտեղ է, որ մեծը գնես։",
+    "text": "Միջին չափի ադիբուդին վաճառում է մեծը։ Նույնիսկ երբ միջինը ոչ ոք չի գնում։",
     "visual": "Frame 0: three popcorn buckets, small / medium / large; the medium one flickers like a hologram while the large one glows orange."
   },
   {
-    "key": "prices",
-    "text": "Ասենք՝ փոքրն արժի հազար դրամ, մեծը՝ երկու հազար։ Գինը կրկնակի է, և շատերը կվերցնեն փոքրը։ Հիմա ավելացնենք միջինը՝ հազար ութ հարյուր դրամ։ Միջինի կողքին մեծը թվում է գրեթե նվեր՝ ընդամենը երկու հարյուր դրամ ավելի։",
+    "key": "choice",
+    "text": "Փոքրն արժի 1000 դրամ, մեծը՝ 2000։ Դու ո՞րը կվերցնես։",
+    "pause_after": 1.5,
     "screen_small": "օրինակ, գները հորինված են",
-    "visual": "Price tags 1000 / 2000 dram, a crowd of dots mostly goes to small; the medium appears at 1800 and a '+200' arrow points from it to the large; dots drift to the large."
+    "visual": "Two buckets with price tags 1000 / 2000 dram and a pointer hovering between them during the pause (the viewer chooses, F191)."
+  },
+  {
+    "key": "medium",
+    "text": "Հիմա ավելացնենք միջինը՝ 1800 դրամ։",
+    "pause_after": 1.5,
+    "visual": "The medium bucket drops in between at 1800; hold."
+  },
+  {
+    "key": "gift",
+    "text": "Մեծը հանկարծ ավելի գրավիչ դարձա՞վ։ Միջինի կողքին այն թվում է գրեթե նվեր՝ ընդամենը 200 դրամ ավելի։ Գները նույնն են, փոխվել է համեմատությունը։",
+    "visual": "A '+200' arrow points from the medium to the large; a crowd of dots drifts from small to large."
   },
   {
     "key": "name",
@@ -17,30 +29,32 @@
   },
   {
     "key": "economist",
-    "text": "Ամենահայտնի ցուցադրումը մի ամսագրի բաժանորդագրությունն էր։ Միայն կայքը՝ հիսունինը դոլար, միայն տպագիրը՝ հարյուր քսանհինգ, տպագիրն ու կայքը միասին՝ նույնպես հարյուր քսանհինգ։ Ուսանողների ութսունչորս տոկոսն ընտրեց միասինը։ Երբ «միայն տպագիրը» հանեցին, որ ոչ ոք չէր ընտրել, միասինն ընտրողները նվազեցին երեսուներկու տոկոսի։",
-    "pause_after": 2,
+    "text": "Ամենահայտնի ցուցադրումը մի ամսագրի բաժանորդագրությունն էր։ Միայն կայքը՝ 59 դոլար, միայն տպագիրը՝ 125, տպագիրն ու կայքը միասին՝ նույնպես 125։ Ուսանողների 84 տոկոսն ընտրեց միասինը։ Հետո հանեցին «միայն տպագիրը», որ ոչ ոք չէր ընտրել, և միասինն ընտրողները նվազեցին 32 տոկոսի։",
+    "pause_after": 2.5,
     "screen_small": "Ariely, Predictably Irrational, 2008",
     "visual": "The showcase: three cards ($59 / $125 / $125); 100 dots flow, 16 to web, 0 to print, 84 to both; the print card is pulled away and the dots re-flow to 68 web / 32 both. Hold for the pause."
   },
   {
     "key": "why",
-    "text": "Ինչո՞ւ է հնարքը գործում։ Գինն ինքնին գնահատելը դժվար է, իսկ համեմատելը՝ հեշտ։ «Տպագիրն ու կայքը» ակնհայտորեն լավն է «միայն տպագրից», և այդ հեշտ համեմատությունը մոռացնել է տալիս դժվար հարցը՝ արժե՞ ընդհանրապես հարյուր քսանհինգ դոլար վճարել։",
+    "text": "Ինչո՞ւ է հնարքը գործում։ Գինն ինքնին գնահատելը դժվար է, իսկ համեմատելը՝ հեշտ։ «Տպագիրն ու կայքը» ակնհայտորեն լավն է «միայն տպագրից»։ Եվ այդ հեշտ համեմատությունը մոռացնել է տալիս դժվար հարցը՝ արժե՞ ընդհանրապես 125 դոլար վճարել։",
     "visual": "A balance scale: the easy comparison (both vs print) tips instantly; the hard one ($125 vs your wallet) fades behind it."
   },
   {
     "key": "everywhere",
-    "text": "Նույն կառուցվածքը կտեսնես սուրճի բաժակներում, բջջային կապի փաթեթներում, բաժանորդագրություններում՝ երեք տարբերակ, որոնցից մեկը կարծես հատուկ վատն է։",
+    "text": "Այս կառուցվածքը կտեսնես ամենուր՝ սուրճի բաժակներում, բջջային կապի փաթեթներում, բաժանորդագրություններում։ Երեք տարբերակ, որոնցից մեկը կարծես հատուկ վատն է։",
     "visual": "Three quick rows: coffee S/M/L, phone plans 10 / 50 / 60 GB, three subscription tiers; in each, one option is visibly dominated."
   },
   {
     "key": "limits",
-    "text": "Բայց էֆեկտն այնքան ամուր չէ, որքան պատմում են։ Հետազոտողների մի խումբ տասնինը փորձ արեց իրական ապրանքներով, որոնք մարդիկ տեսնում ու համտեսում էին, և էֆեկտը չգտավ։ Այն լավ է գործում, երբ ընտրությունը թվերի մեջ է՝ գներ, գիգաբայթեր, գրամներ։ Ադիբուդու գինը հենց այդպիսին է։",
+    "text": "Բայց էֆեկտն այնքան ամուր չէ, որքան պատմում են։ Հետազոտողների մի խումբ 19 փորձ արեց իրական ապրանքներով, որոնք մարդիկ տեսնում ու համտեսում էին, և էֆեկտը չգտավ։ Այն լավ է գործում, երբ ընտրությունը թվերի մեջ է՝ գներ, գիգաբայթեր, գրամներ։ Ադիբուդու գինը հենց այդպիսին է։",
+    "pause_after": 1,
     "screen_small": "Frederick, Lee & Baskin, 2014",
     "visual": "Two panels: real products (tasting cups) with the effect at zero; numeric tags (prices, GB, grams) with the effect clearly present; the popcorn price tag slides into the numeric panel."
   },
   {
     "key": "takeaway",
     "text": "Հաջորդ անգամ, երբ երեք չափ տեսնես, մտքում ջնջիր այն մեկը, որ ոչ ոք չի վերցնում։ Հետո նոր ընտրիր։",
+    "pause_after": 1.5,
     "screen": "Ջնջիր խայծը, հետո ընտրիր",
     "visual": "A finger swipes the medium bucket away; small and large stand alone; loops to the hook."
   }

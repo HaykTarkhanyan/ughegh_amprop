@@ -18,6 +18,34 @@ that led here: `../_knowledge/short_videos/lit_review.md`.
 - **Script review:** Hayk did not need to see the first script; from the second short on, he checks the script
   before the voice is made.
 
+## Script rules (from the two Fable reviews, DECISIONS.md #22)
+
+- **Hook:** the claim or the puzzle in the first 3 seconds, first sentence short; no date, label, term or hedge first.
+- **One idea and one extension.** A fact that does not serve the video's one turn goes to the description or its
+  own short. The beat count follows the content, not a mold (FABLE_REVIEW_2 F224).
+- **Years and researchers' names on the source line** (`screen_small`), in the voice only when the date is the point.
+- **Doubt beat:** only about a claim this video made, after one solid thing, ending on what is known. Never tell a
+  story only to take it back (F223).
+- **Pauses:** 8-12 s per script as `pause_after`, the longest on the showcase; let the viewer do something in them
+  (choose, count, read along) (F222).
+- **Closing:** one closing beat, no summary card, no «Այնպես որ,»; the voice says the closing screen line (F226);
+  vary the frame, "not A, but B" only where it is the idea (F225).
+- **Voice:** no Latin in the voice (English words on screen, voiced in Armenian letters); numbers as digits in the
+  text, words only where the spoken form is the point («քսանինն ու կես», «երեսուներեք ամբողջ երեք, երեք, երեք»)
+  (F229, checked in `voice_test/batch2_risky.html`).
+- **Honesty:** say what is a story and what is data; tag every reconstruction, painting or drawn scene of a
+  disputed story on screen («նկարազարդում», «նկարչի պատկերացում», «վերակազմություն») (F157, F212).
+- **Local anchor:** one per script, best inside the idea (Armenia in the map showcase, prices in drams).
+
+**Two strands (F232):** the channel now has thinking-error shorts (survivorship, Bayes, Simpson, regression,
+decoy, IKEA, Dmanisi, statues, ...) and "why is this thing the way it is" shorts (alphabet, spelling, week,
+minute, suitcase, own voice, yawning, ...). Alternate them.
+
+**Publishing order (Fable F233, pending Hayk):** own_voice, decoy_popcorn, bayes_test, map_projection, friendship,
+painted_statues, petrov, mashtots, english_spelling, crypto_paint, yawning, week_seven, regression, zero_knowledge,
+dmanisi, ikea_effect, kids_tv, simpson, minute_60, luggage_wheels, waiting (rework), qwerty (rework). Option:
+mashtots and english_spelling around 21 February (International Mother Language Day).
+
 ## One short, end to end
 
 From `03_shorts/` (times measured on 2026-11-25):

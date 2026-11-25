@@ -8,34 +8,37 @@ moving map.
 
 On this map Greenland is nearly Africa's size; Africa is really 14 times larger. Drag Greenland to the equator and
 it shrinks below Algeria; lift Armenia to Greenland's latitude and it swells about six times. A sphere cannot be
-flattened without distortion (try an orange peel; Gauss proved there is no way around it). Mercator chose to
-stretch, because his map was for sailors: it keeps angles, so a straight line is a constant compass course, which
-forces equal stretching north-south and east-west. The stretch grows towards the poles (x4 at 60°; the pole itself
-is infinitely far, so the map is cut near 85°). Equal-area maps fix sizes and wreck shapes; every map sacrifices
-something. Google Maps switched to a globe on desktop in 2018. The takeaway: a map does not lie, it answers one
-question, and Mercator's was how not to get lost at sea.
+flattened without distortion (try an orange peel; Gauss proved there is no way around it). So why draw the world
+like this? Gerardus Mercator, a 16th-century mapmaker, made his map for sailors: it keeps angles, so a straight
+line is a constant compass course, which forces equal stretching north-south and east-west. The stretch grows
+towards the poles and the pole itself is infinitely far, so the map is cut near 85 degrees. Equal-area maps fix
+sizes and wreck shapes; every map sacrifices something. Try it: zoom all the way out in Google Maps on a computer
+and the map becomes a globe. The takeaway: a map does not lie, it answers one question, and Mercator's was how not
+to get lost at sea.
 
 ## The script (Armenian)
 
 <!-- script:start -->
 
-8 beats, 1,433 characters (1,448 with numbers spelled out): ~99 s of speech, ~1:43 with pauses and the end tail, 1.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
+9 beats, 1,370 characters (1,385 with numbers spelled out): ~95 s of speech, ~1:46 with pauses and the end tail, 8.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
 
-**1. hook.** Այս քարտեզում Գրենլանդիան գրեթե Աֆրիկայի չափ է։ Իրականում Աֆրիկան տասնչորս անգամ մեծ է։
+**1. hook.** Այս քարտեզում Գրենլանդիան գրեթե Աֆրիկայի չափ է։ Իրականում Աֆրիկան 14 անգամ մեծ է։ *[pause 1 s]*
 
-**2. drag.** Եթե Գրենլանդիան քաշենք դեպի հասարակած, այն կծկվում է ու դառնում Ալժիրից էլ փոքր։ Իսկ եթե Հայաստանը բարձրացնենք Գրենլանդիայի տեղը, քարտեզին այն կերևա մոտ վեց անգամ ավելի մեծ, քան հիմա։ *[pause 1.5 s]*
+**2. drag_greenland.** Եթե Գրենլանդիան քաշենք դեպի հասարակած, այն կծկվում է ու դառնում Ալժիրից էլ փոքր։ *[pause 2 s]*
 
-**3. orange.** Պատճառը պարզ է՝ գնդի մակերևույթն անհնար է հարթեցնել առանց աղավաղման։ Փորձիր նարնջի կեղևը հարթ դնել սեղանին՝ կա՛մ կպատռվի, կա՛մ կձգվի։ Մաթեմատիկոս Գաուսը նույնիսկ ապացուցեց, որ ուրիշ ճանապարհ չկա։
+**3. drag_armenia.** Իսկ եթե Հայաստանը բարձրացնենք Գրենլանդիայի տեղը, քարտեզին այն կերևա մոտ վեց անգամ ավելի մեծ, քան հիմա։ *[pause 2 s]*
 
-**4. mercator.** Մերկատորն ընտրեց ձգել։ Նրա քարտեզը ծովագնացների համար էր, և այն պահում է անկյունները։ Եթե երկու նավահանգիստ քարտեզի վրա ուղիղ գծով միացնես, կստանաս կողմնացույցի հաստատուն ուղղություն։ Դրա համար նա հյուսիսում ամեն ինչ ձգեց և՛ լայնությամբ, և՛ բարձրությամբ նույն չափով։
+**4. orange.** Գնդի մակերևույթն անհնար է հարթեցնել առանց աղավաղման։ Փորձիր նարնջի կեղևը հարթ դնել սեղանին՝ կա՛մ կպատռվի, կա՛մ կձգվի։ Մաթեմատիկոս Գաուսը նույնիսկ ապացուցեց, որ ուրիշ ճանապարհ չկա։ *[pause 1 s]*
 
-**5. stretch.** Ձգումն աճում է բևեռին մոտենալով։ Վաթսուներորդ զուգահեռականում երկրները քարտեզին չորս անգամ ավելի մեծ են, քան հասարակածում։ Իսկ բևեռն ինքը քարտեզի վրա անվերջ հեռու է, դրա համար Մերկատորի քարտեզները կտրում են ութսունհինգ աստիճանի մոտ։
+**5. mercator.** Բայց ինչո՞ւ է մեկն աշխարհն այսպես ձգել։ Տասնվեցերորդ դարի քարտեզագիր Գերարդ Մերկատորն իր քարտեզը ծովագնացների համար էր անում։ Այն պահում է անկյունները՝ եթե երկու նավահանգիստ քարտեզի վրա ուղիղ գծով միացնես, կստանաս կողմնացույցի հաստատուն ուղղություն։ Դրա համար նա հյուսիսում ամեն ինչ ձգեց և՛ լայնությամբ, և՛ բարձրությամբ նույն չափով։
 
-**6. others.** Կան քարտեզներ, որ պահում են մակերեսները, բայց դրանք աղավաղում են ձևերը՝ Աֆրիկան ձգվում է ներքև, ինչպես հալած պանիր։ Ամեն քարտեզ ինչ-որ բան զոհում է։ Կատարյալ հարթ քարտեզ չկա։
+**6. stretch.** Ձգումն աճում է բևեռին մոտենալով, իսկ բևեռն ինքը քարտեզի վրա անվերջ հեռու է։ Դրա համար Մերկատորի քարտեզները կտրում են մոտ 85 աստիճանում։
 
-**7. google.** Գուգլ քարտեզները, որ երկար տարիներ Մերկատորն էին ցույց տալիս, 2018 թվականին համակարգչում փոխեցին մոտեցումը՝ երբ բավականաչափ հեռանում ես, քարտեզը դառնում է գլոբուս։
+**7. others.** Կան քարտեզներ, որ պահում են մակերեսները, բայց դրանք աղավաղում են ձևերը՝ Աֆրիկան ձգվում է ներքև, ինչպես հալած պանիր։ Ամեն քարտեզ ինչ-որ բան զոհում է։ Կատարյալ հարթ քարտեզ չկա։ *[pause 1.5 s]*
 
-**8. takeaway.** Քարտեզը սուտ չի ասում, այլ պատասխանում է մի կոնկրետ հարցի։ Մերկատորի հարցն էր՝ ինչպես չմոլորվել ծովում։ Չափերի մասին նա չէր հարցնում։
+**8. google.** Ստուգիր ինքդ՝ բաց Գուգլ քարտեզները համակարգչում և հեռացիր մինչև վերջ։ Քարտեզը կդառնա գլոբուս։ Գուգլն այդպես արեց, որ Գրենլանդիան այլևս Աֆրիկայի չափ չերևա։
+
+**9. takeaway.** Քարտեզը սուտ չի ասում, այլ պատասխանում է մի կոնկրետ հարցի։ Մերկատորի հարցն էր՝ ինչպես չմոլորվել ծովում։ Չափերի մասին նա չէր հարցնում։ *[pause 1 s]*
 
 <!-- script:end -->
 
@@ -66,6 +69,15 @@ Armenian lint: 0 errors, 0 hints.
   Armenia sliding north and swelling (computed with sec² φ, from Natural Earth outlines, public domain); the orange
   peel; a ship on a straight course with a fixed compass; Tissot circles swelling; a Mercator-to-Gall-Peters morph;
   a map curling into a globe. Needs d3-geo in Remotion (the projections are one line each).
+
+## After the Fable review (FABLE_REVIEW_2.md, applied 2026-11-25)
+
+- **F201** Mercator introduced («Տասնվեցերորդ դարի քարտեզագիր Գերարդ Մերկատորը»). **F205** one question at the turn
+  («Բայց ինչո՞ւ է մեկն աշխարհն այսպես ձգել») and the stretch beat leads with the pole; ×4 at 60° is a label.
+- **F202 / F226** the screen line is the voiced thought («Քարտեզը պատասխանում է մի կոնկրետ հարցի»).
+- **F203** the drag beat split in two with 2 s each, 1 s on the orange, 1.5 s on the morph: 8.5 s of pauses.
+- **F204** the Google beat is now something to try, no spoken year. **F206** «քարտեզագրական պրոյեկցիաներ» on
+  screen once (U-ccc). **F228** «Պատճառը պարզ է» cut. **F229** «14 անգամ», «85 աստիճանում» as digits.
 
 ## Questions for Hayk (review points)
 

@@ -7,40 +7,41 @@ pauses.
 
 ## The idea in one paragraph
 
-Most alphabets have no author; they drifted into shape over centuries. Ours has a name, a year and a first
-sentence. Why would someone sit down and invent letters? Because around 400 Armenia was split between Byzantium and
-Persia, the church read Greek and Syriac, and people did not understand; and because Greek letters cannot write
-Armenian sounds (try «ճնճղուկ»). A borrowed set (Daniel's letters) fell short, so Mashtots built 36 letters on one
-rule, one sound one letter, keeping the Greek order where the sounds matched and inventing the rest; the letters
-were also numbers. Others did the same for the same reason: King Sejong's scholars drew Korean consonants after the
-mouth, and Sequoyah, who could not read, gave the Cherokee a script. The takeaway: most alphabets happened; ours was
-a decision.
+Try writing «ճնճղուկ» in Greek letters: it cannot be done, because Greek has no ծ, ձ, ճ, ջ, ղ, ռ. Mashtots had
+exactly this problem. Most alphabets have no author; ours has an author, a year and a first sentence, and he did
+not start from nothing: he took something from the Greeks and invented the rest. Around 400 Armenia was split
+between Byzantium and Persia and the church read Greek and Syriac; in 405 Mashtots made 36 letters on one rule,
+one sound one letter, kept the Greek order where the sounds matched (այբ, բեն, գիմ, դա like alpha, beta, gamma,
+delta) and slotted new letters into the gaps. The 36 letters were also numbers, four rows of nine: units, tens,
+hundreds, thousands. The first sentence came from Proverbs; within decades the Bible and Greek and Syriac books
+were translated. Most alphabets just formed; ours was a decision. The kingdom was soon lost, but the script
+stayed.
 
 ## The script (Armenian)
 
 <!-- script:start -->
 
-10 beats, 1,806 characters (1,828 with numbers spelled out): ~125 s of speech, ~2:11 with pauses and the end tail, 3.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
+10 beats, 1,398 characters (1,428 with numbers spelled out): ~97 s of speech, ~1:49 with pauses and the end tail, 9.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
 
-**1. hook.** Աշխարհի այբուբենների մեծ մասը հեղինակ չունի։ Դրանք դարերով են ձևավորվել։ Մերն ունի հեղինակ, տարեթիվ և նույնիսկ առաջին նախադասություն։ Բայց ինչո՞ւ է մարդը նստում ու զրոյից տառեր հորինում։
+**1. challenge.** Փորձիր հունական տառերով գրել «ճնճղուկ» բառը։ *[pause 2 s]*
 
-**2. problem.** Հինգերորդ դարի սկիզբ։ Հայաստանը բաժանված է Բյուզանդիայի և Պարսկաստանի միջև։ Եկեղեցում կարդում են հունարեն ու ասորերեն գրքեր, և մարդիկ չեն հասկանում։ Մաշտոց վարդապետը քարոզում էր գավառներում և ամեն օր տեսնում էր դա։
+**2. no_letters.** Չի ստացվի՝ հունարենը չունի ծա, ձա, ճե, ջե, ղատ, ռա հնչյունները։ Մաշտոցն ուներ հենց այս խնդիրը։
 
-**3. greek.** Ինչո՞ւ չվերցնել պատրաստի հունական տառերը։ Որովհետև հայերենն ունի հնչյուններ, որ հունարենը չունի՝ ծա, ձա, ճե, ջե, ղատ, ռա։ Փորձիր հունական տառերով գրել «ճնճղուկ» բառը։ *[pause 1.5 s]*
+**3. author.** Աշխարհի այբուբենների մեծ մասը հեղինակ չունի։ Մերն ունի հեղինակ, տարեթիվ և նույնիսկ առաջին նախադասություն։ Եվ Մաշտոցը զրոյից չսկսեց՝ մի բան վերցրեց հույներից, մի բան հորինեց ինքը։
 
-**4. daniel.** Սկզբում փորձեցին ասորի եպիսկոպոս Դանիելի գտած տառերը։ Բայց դրանք չէին բավականացնում հայերենի բոլոր հնչյունների համար։
+**4. problem.** Հինգերորդ դարի սկիզբն էր։ Հայաստանը բաժանված էր Բյուզանդիայի և Պարսկաստանի միջև։ Եկեղեցում կարդում էին հունարեն ու ասորերեն գրքեր, և մարդիկ չէին հասկանում։ Մաշտոց վարդապետը քարոզում էր գավառներում և ամեն օր տեսնում էր դա։
 
-**5. design.** 405 թվականին Մաշտոցը գնաց Ասորիքի քաղաքներ և հույն գրիչ Հռոփանոսի օգնությամբ ստեղծեց 36 տառ։ Սկզբունքը պարզ էր՝ մեկ հնչյուն, մեկ տառ։ Որտեղ հունարենն ուներ նույն հնչյունը, պահեց հունական հերթականությունը՝ այբ, բեն, գիմ, դա, ինչպես ալֆա, բետա, գամմա, դելտա։ Իսկ նոր հնչյունների համար հորինեց նոր տառեր։
+**5. rule.** 405 թվականին Մաշտոցը ստեղծեց 36 տառ։ Սկզբունքը մեկն էր՝ մեկ հնչյուն, մեկ տառ։
 
-**6. numbers.** Տառերը նաև թվեր էին՝ այբը մեկն էր, բենը՝ երկուսը, ժեն՝ տասը։ Այդ պատճառով հին ձեռագրերում տարեթվերը գրված են տառերով։
+**6. greek_order.** Որտեղ հունարենն ուներ նույն հնչյունը, նա պահեց հունական հերթականությունը՝ այբ, բեն, գիմ, դա, ինչպես ալֆա, բետա, գամմա, դելտա։ Իսկ նոր հնչյունների համար հորինեց նոր տառեր և տեղավորեց դրանք արանքներում։ *[pause 2.5 s]*
 
-**7. first_sentence.** Ասում են՝ առաջին նախադասությունը, որ գրեցին նոր տառերով, Սողոմոնի առակներից էր՝ «Ճանաչել զիմաստութիւն եւ զխրատ, իմանալ զբանս հանճարոյ»։ Ճանաչել իմաստությունն ու խրատը, հասկանալ հանճարի խոսքերը։ *[pause 2 s]*
+**7. numbers.** Տառերը նաև թվեր էին, և 36 տառը կազմում էր չորս իննյակ՝ միավորներ, տասնավորներ, հարյուրավորներ և հազարավորներ։ Այբը մեկն էր, ժեն՝ տասը, ճեն՝ հարյուր, ռան՝ հազար։ *[pause 1.5 s]*
 
-**8. result.** Մի քանի տասնամյակում հայերեն թարգմանվեցին Աստվածաշունչը և հունական ու ասորական գրքեր, իսկ հինգերորդ դարը կոչվեց ոսկեդար։ Թագավորությունը շուտով կորավ, բայց գիրը մնաց։
+**8. first_sentence.** Ասում են՝ առաջին նախադասությունը, որ գրեցին նոր տառերով, Սողոմոնի առակներից էր՝ «Ճանաչել զիմաստութիւն եւ զխրատ, իմանալ զբանս հանճարոյ»։ Ճանաչել իմաստությունն ու խրատը, հասկանալ հանճարի խոսքերը։ *[pause 2 s]*
 
-**9. others.** Ուրիշներն էլ են նույնն արել։ Կորեական թագավոր Սեջոնի գիտնականները բաղաձայնների ձևերը նկարեցին բերանի ու լեզվի դիրքերով։ Իսկ չերոկի հնդկացի Սեքվոյան, որ ինքը ոչ մի լեզվով կարդալ չգիտեր, հորինեց իր ժողովրդի գիրը, և այն շատ արագ տարածվեց։
+**9. result.** Մի քանի տասնամյակում հայերեն թարգմանվեցին Աստվածաշունչը և հունական ու ասորական գրքեր, իսկ հինգերորդ դարը կոչվեց ոսկեդար։
 
-**10. takeaway.** Այբուբենների մեծ մասն ինքնըստինքյան է ձևավորվել։ Մերը որոշում էր՝ որ այս լեզուն պետք է գրվի իր սեփական տառերով։
+**10. takeaway.** Այբուբենների մեծ մասն ինքնըստինքյան է ձևավորվել։ Մերը որոշում էր։ Թագավորությունը շուտով կորավ, բայց գիրը մնաց։ *[pause 1.5 s]*
 
 <!-- script:end -->
 
@@ -88,6 +89,20 @@ Armenian lint: 0 errors, 0 hints (the Proverbs line is a quotation in classical 
   to numbers; the first sentence written in erkatagir; the mouth profile turning into ㄱ and ㄴ.
 - **Font for erkatagir:** needs a free font with old-style capitals; otherwise draw the first sentence from the
   manuscript photo.
+
+## After the Fable review (FABLE_REVIEW_2.md, applied 2026-11-25)
+
+- **F161** the hook is now the ճնճղուկ challenge (2 s to try it), then the missing sounds, then "author, year, first
+  sentence, and he did not start from nothing" (the how, not the school "why"). «զրոյից» now says he did NOT start
+  from zero.
+- **F162** cut beat 9 (Korea, Cherokee): the unchecked Hangul and Sequoyah facts go with it (F231). **F163** the
+  design beat split in two, Hropanos and the cities on the source line, 2.5 s on the Greek-order showcase.
+- **F164** voice test done: the classical sentence and the digits came back right; the letter names need your ear
+  (`voice_test/batch2_risky.html`, t1). U-mm: both versions kept.
+- **F165** no Cyrillic in the "no author" row (Latin, Greek, Arabic). **F166** Daniel's letters cut; the numbers
+  beat is now the 4 x 9 grid (units, tens, hundreds, thousands), checked against Wikipedia, Armenian numerals.
+- **F167** beat 2 now all past tense. **F225** closes on the image «Թագավորությունը շուտով կորավ, բայց գիրը
+  մնաց», which is also the screen line (F226). **F222** pauses 9.5 s.
 
 ## Questions for Hayk (review points)
 
