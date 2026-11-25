@@ -2,7 +2,7 @@
 // Cards: Dmitry Fomin's English pattern deck (CC0, Wikimedia Commons), in public/cards/<suit><rank>.png (cut from one thumbnail by assets_src/cut_cards.py).
 import React from "react";
 import { Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import { C, FONT, lerp, pop, ramp, shuffled } from "../theme";
+import { C, FONT, easeInOut, lerp, pop, ramp, shuffled } from "../theme";
 import { Backdrop, Bubble, CheckMark, Label } from "./common";
 
 const RANKS = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
@@ -77,6 +77,7 @@ export const DeckScene: React.FC<{ T?: DeckTimes }> = ({ T = DECK_T }) => {
   const t = frame / fps;
 
   const stackIn = pop(t, T.stackIn, 8, 0.6);
+  const big = lerp(2.1, 1, ramp(t, T.deal - 0.6, 0.6, easeInOut)); // stack scale before the deal
   const blackFound = Math.max(0, Math.min(26, Math.floor((t - T.scan) / T.scanStep) + 1));
   const gathered = ramp(t, T.gather, 1.3);
   const verdict = ramp(t, T.verdict, 0.6);
@@ -84,9 +85,10 @@ export const DeckScene: React.FC<{ T?: DeckTimes }> = ({ T = DECK_T }) => {
 
   // your card: the top of the stack, flown to the hand
   const draw = ramp(t, T.draw, 1.0);
-  const handX = lerp(STACK.x, HAND.x, draw);
-  const handY = lerp(STACK.y - 30, HAND.y, draw) - Math.sin(draw * Math.PI) * 120;
-  const handS = lerp(1, HAND.s, draw);
+  const big0 = 2.1;
+  const handX = lerp(STACK.x - (CW * (big0 - 1)) / 2, HAND.x, draw);
+  const handY = lerp(STACK.y - (CH * (big0 - 1)) / 2 - 30, HAND.y, draw) - Math.sin(draw * Math.PI) * 120;
+  const handS = lerp(big0, HAND.s, draw);
   const handRot = lerp(0, -6, draw);
   const redPulse = verdict * (0.6 + 0.4 * Math.sin((t - T.verdict) * 4));
 
@@ -109,8 +111,9 @@ export const DeckScene: React.FC<{ T?: DeckTimes }> = ({ T = DECK_T }) => {
         const fly = ramp(t, d0, 0.55);
         const r = Math.floor(i / COLS), c = i % COLS;
         const gx = GX + c * (CW + GAP), gy = GY[r];
-        let x = lerp(STACK.x + depth * 0.15, gx, fly);
-        let y = lerp(STACK.y - depth * 0.55, gy, fly) - Math.sin(fly * Math.PI) * 60;
+        const sx = STACK.x - (CW * (big - 1)) / 2 + depth * 0.15 * big, sy = STACK.y - (CH * (big - 1)) / 2 - depth * 0.55 * big;
+        let x = lerp(sx, gx, fly);
+        let y = lerp(sy, gy, fly) - Math.sin(fly * Math.PI) * 60;
         const rot = interpolate(fly, [0, 0.5, 1], [0, (c % 2 ? 6 : -6), 0]);
         const flip = 180 - 180 * ramp(t, T.flip + (c + r * 2) * T.flipStep, 0.45);
         const black = isBlack(id);
@@ -134,7 +137,7 @@ export const DeckScene: React.FC<{ T?: DeckTimes }> = ({ T = DECK_T }) => {
           opacity *= lerp(1, 0.28, redDim) * lerp(1, 0.4, gathered);
           grey = 0.7 * redDim;
         }
-        return <Card key={id} id={id} x={x} y={y} rot={rot} flip={flip} glow={glow} lift={lift} opacity={opacity} grey={grey} />;
+        return <Card key={id} id={id} x={x} y={y} scale={lerp(big, 1, fly)} rot={rot} flip={flip} glow={glow} lift={lift} opacity={opacity} grey={grey} />;
       })}
 
       {/* your card stays face down for the whole video */}

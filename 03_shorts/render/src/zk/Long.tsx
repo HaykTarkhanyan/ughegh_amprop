@@ -62,7 +62,7 @@ const GROUPS: Group[] = [
   {
     keys: ["same_problem"], render: (dur) => {
       const g0 = beat("same_problem").start;
-      return <ProblemsScene dur={dur} m={{ site: rel(g0, at("same_problem", "Կայքը")), bank: rel(g0, at("same_problem", "Բանկը")), age: rel(g0, at("same_problem", "Իսկ")) }} />;
+      return <ProblemsScene dur={dur} m={{ site: rel(g0, at("same_problem", "կայքերն")), bank: rel(g0, at("same_problem", "Բանկը")), age: rel(g0, at("same_problem", "Իսկ")) }} />;
     },
   },
   { keys: ["name"], render: (dur) => <TitleScene dur={dur} m={{ name: rel(beat("name").start, at("name", "Մաթեմատիկոսներն")) }} /> },

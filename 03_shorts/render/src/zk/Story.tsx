@@ -168,6 +168,11 @@ export const ProblemsScene: React.FC<SceneProps> = ({ dur = 30, m }) => {
       <div style={{ position: "absolute", left: 0, right: 0, top: 70, textAlign: "center", fontFamily: FONT, fontSize: 44, fontWeight: 800, color: C.ink, opacity: ramp(t, 0.2, 0.5) }}>
         Նույն խնդիրը՝ <span style={{ color: C.orange }}>ամեն օր</span>
       </div>
+      {/* three empty slots from the start, filled as each case is named */}
+      {[150, 710, 1270].map((x, k) => (
+        <div key={k} style={{ position: "absolute", left: x, top: 210, width: 500, height: 560, borderRadius: 34, border: "3px dashed rgba(255,255,255,0.16)", boxSizing: "border-box", opacity: ramp(t, 0.4 + k * 0.25, 0.5),
+          display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT, fontSize: 120, fontWeight: 800, color: "rgba(255,255,255,0.08)" }}>?</div>
+      ))}
       <CaseCard x={150} y={210} t={t} t0={c1} title="Կայք" checked={ramp(t, c1 + 2.4, 0.5)}>
         <Row label="գաղտնաբառ">
           <span style={{ fontFamily: FONT, fontSize: 44, color: C.ink, letterSpacing: 6 }}>{"••••••••".slice(0, Math.round(8 * dotsIn))}</span>
