@@ -50,7 +50,8 @@ const Captions: React.FC = () => {
   if (V2) {
     // v2 (2026-11-25, Hayk: captions too central): lower, smaller, lighter, a soft shadow instead of the outline
     return (
-      <div style={{ position: "absolute", left: 130, width: 650, bottom: 1920 - 1245, textAlign: "center", opacity: pop, translate: `0px ${(1 - pop) * 10}px` }}>
+      // centred on the frame (x 540): the box x 200-880 stays left of the ~192 px button column (lit review section 7)
+      <div style={{ position: "absolute", left: 200, width: 680, bottom: 1920 - 1245, textAlign: "center", opacity: pop, translate: `0px ${(1 - pop) * 10}px` }}>
         {page.words.map((w, i) => {
           const now = t >= w.start && t < w.end;
           return (

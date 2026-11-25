@@ -4,7 +4,7 @@ Usage (from 03_shorts/):
     python tools/contact_sheet.py VIDEO.mp4 --out sheet.png [--every 1] [--width 200] [--cols 10] [--start 0 --end 0]
     (--end 0 = to the end of the video)
 One ffmpeg pass extracts the frames (fps filter), Pillow lays them out. Runtime: about 5-15 s for a 70 s 1080x1920
-video. Also draws the 9:16 safe area used for captions (x 120-888, y 288-1248; x <= 780 below y 840, from the
+video. Also draws the 9:16 safe area used for captions (x 120-888, y 288-1248, from the
 HyperFrames vertical guide) as a thin outline, so text that leaves it stands out.
 """
 import argparse
@@ -24,8 +24,10 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
                               logging.FileHandler(ROOT / "logs" / "contact_sheet.log", encoding="utf-8")])
 log = logging.getLogger("contact_sheet")
 
-# Safe area in 1080x1920 pixels (polygon): narrower on the right below y=840 (TikTok's action rail).
-SAFE = [(120, 288), (888, 288), (888, 840), (780, 840), (780, 1248), (120, 1248)]
+# Safe area in 1080x1920 pixels: the right ~192 px is the widest button column (Shorts), the bottom ~670 px the title
+# and description (lit review section 7). Until 2026-11-25 the box had an extra notch (x <= 780 below y 840) that no
+# source backs; it pushed the captions ~85 px left of centre.
+SAFE = [(120, 288), (888, 288), (888, 1248), (120, 1248)]
 
 
 def main():
