@@ -1,0 +1,60 @@
+{
+  "model": "gemini-3.8-flash",
+  "video": "bakeoff\\out\\preview\\pilot_remotion.mp4",
+  "usage": {
+    "promptTokenCount": 7489,
+    "candidatesTokenCount": 504,
+    "totalTokenCount": 10376,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1028
+      },
+      {
+        "modality": "VIDEO",
+        "tokenCount": 6461
+      }
+    ],
+    "thoughtsTokenCount": 2383,
+    "serviceTier": "standard"
+  },
+  "usd_est": 0.0164,
+  "review": {
+    "pronunciation": [],
+    "sync": [],
+    "visual": [
+      {
+        "time": "00:10",
+        "problem": "The animated grid of refrigerators overlaps with the captions ('աղբանոցում են։ Տեսնում ենք միայն'), causing visual clutter in the lower half of the frame.",
+        "severity": "medium"
+      },
+      {
+        "time": "00:17",
+        "problem": "The bomber diagram box is relatively small with wide black borders around it, making the bullet hole dots hard to see clearly on small mobile phone screens.",
+        "severity": "low"
+      }
+    ],
+    "hook": {
+      "verdict": "Effective",
+      "would_keep_watching": true,
+      "why": "It opens with a relatable everyday trope (grandma's Soviet fridge outliving modern appliances) paired with real local footage from the Yerevan Zoo, instantly piquing curiosity before flipping the assumption."
+    },
+    "pacing": [
+      {
+        "time": "00:34",
+        "problem": "Rushing through three rapid-fire examples in 20 seconds (old music, smoking grandpa, college dropouts) immediately after the main airplane story creates brief cognitive overload and bloats the video past the 60-second mark."
+      }
+    ],
+    "clarity": {
+      "understood": true,
+      "summary_of_what_a_viewer_learns": "The viewer learns the concept of survivorship bias: why people mistakenly assume old products or past trends were superior simply because failed examples are filtered out and invisible.",
+      "confusing_parts": []
+    },
+    "facts": [],
+    "top_3_fixes": [
+      "Cut one of the secondary examples (such as the old songs or smoking grandpa) to bring the total duration under 60 seconds for higher short-form retention.",
+      "Shift the refrigerator grid graphic upward at 00:10 to prevent it from overlapping with the text captions.",
+      "Enlarge the WWII bomber illustration at 00:16–00:30 so the bullet hole markers and unprotected areas are more prominent on mobile displays."
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+datetime,model,video,tokens_in,tokens_out,usd_est
+2026-11-25T10:38:52,gemini-3.8-flash,pilot_remotion.mp4,7489,2804,0.0161
+2026-11-25T10:47:33,gemini-3.8-flash,pilot_remotion.mp4,7489,2887,0.0164
+2026-11-25T11:02:41,gemini-3.8-flash,pilot_remotion.mp4,7489,2699,0.0157

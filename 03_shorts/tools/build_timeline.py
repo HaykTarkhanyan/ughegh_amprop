@@ -34,6 +34,14 @@ LEAD_S, TAIL_S, GAP_S = 0.05, 0.10, 0.12   # silence kept before / after each cl
 THRESHOLD = 0.02                            # fraction of the clip's peak that counts as sound
 PAUSE_WEIGHT = {"։": 4, ".": 4, "՝": 2, ",": 2, "»": 0, "«": 0}  # extra "characters" of time after punctuation
 PAGE_WORDS = 3
+MIN_PAGE_S = 0.6                            # a caption page shorter than this is merged with a neighbour
+MAX_MERGED_WORDS = 5
+CAPTION_FONT = Path(__file__).resolve().parents[1] / "assets" / "fonts" / "NotoSansArmenian-Variable.ttf"
+CAPTION_PX = 68                             # caption font size the renderers use (weight 800)
+WORD_GAP_PX = 32                            # 2 x 16 px margin around each caption word (inline-block)
+BOX_PX = 640                                # caption box width in both renderers (x 140-780, the TikTok-safe band)
+MAX_LINES = 2                               # two lines end at y ~1040; pictures stay above that
+MIN_CAPTION_PX = 48
 FPS = 30
 PAUSE_RMS = 10 ** (-35 / 20) * 32768        # -35 dBFS, as in ffmpeg silencedetect noise=-35dB
 MIN_PAUSE_S = 0.08                          # shorter dips are gaps between sounds, not pauses
@@ -132,25 +140,102 @@ AUXILIARY = {"է", "են", "էր", "էին", "եմ", "ես", "ենք", "եք", "
 NO_BREAK_AFTER = {"որ", "ու", "և", "իսկ", "բայց", "երբ"}
 
 
+_FONT = None
+
+
+def word_px(w):
+    """Width in pixels of one caption word at CAPTION_PX in Noto Sans Armenian weight 800 (outline and zoom excluded)."""
+    global _FONT
+    if _FONT is None:
+        from PIL import ImageFont  # only needed here; Pillow 13.0 on this machine
+        if not CAPTION_FONT.exists():
+            raise SystemExit(f"caption font missing: {CAPTION_FONT}")
+        _FONT = ImageFont.truetype(str(CAPTION_FONT), CAPTION_PX)
+        _FONT.set_variation_by_axes([800, 100])  # wght, wdth
+    return _FONT.getlength(w["w"])
+
+
+def n_lines(words, size=None):
+    """How many lines the browser makes of these words in a BOX_PX box: greedy wrapping, each inline-block word
+    taking its width (at font size `size`, default CAPTION_PX) plus WORD_GAP_PX of margin, as the renderers do."""
+    scale = (size or CAPTION_PX) / CAPTION_PX
+    lines, cur = 1, 0.0
+    for w in words:
+        need = word_px(w) * scale + WORD_GAP_PX
+        if cur > 0 and cur + need > BOX_PX:
+            lines, cur = lines + 1, need
+        else:
+            cur += need
+    return lines
+
+
+def fits(words):
+    return n_lines(words) <= MAX_LINES
+
+
 def pages(words):
-    """Group words into caption pages: at most PAGE_WORDS words (one more if it is an auxiliary verb, which must not
-    open a page), a new page after a full stop or after a comma once the page has two words, and never a page that ends on a conjunction such as «որ»."""
+    """Group words into caption pages of at most MAX_LINES lines (wrapping simulated with the real font): a page
+    closes when the next word would make a third line, after PAGE_WORDS words, after a full stop, or after a comma
+    once the page has two words. An auxiliary verb or a word that closes a quotation never opens a page, and a page
+    never ends on a conjunction such as «որ». Pages grouped by word count alone wrapped to 3-5 lines (Armenian words
+    are long) and rose into the picture; strictly one line split most pages into single words that flashed for
+    0.1-0.3 s (both 2026-11-25)."""
     out, cur = [], []
     for i, w in enumerate(words):
         cur.append(w)
         bare = re.sub(r"[^\w]", "", w["w"])
-        nxt = re.sub(r"[^\w]", "", words[i + 1]["w"]) if i + 1 < len(words) else ""
+        nxt_raw = words[i + 1]["w"] if i + 1 < len(words) else ""
+        nxt = re.sub(r"[^\w]", "", nxt_raw)
+        closes_quote = "»" in nxt_raw and "«" not in nxt_raw  # «... տարի» must not open a page (Gemini, 2026-11-25)
         end_mark = re.search(r"[։.?!]»?$", w["w"])
         comma = re.search(r"[,՝]»?$", w["w"])
         punct = end_mark or (comma and len(cur) >= 2)  # a lone "Հա," would flash for 0.3 s
-        full = len(cur) >= PAGE_WORDS and nxt not in AUXILIARY and bare not in NO_BREAK_AFTER
+        may_break = nxt not in AUXILIARY and not closes_quote and bare not in NO_BREAK_AFTER
+        too_wide = bool(nxt_raw) and not fits(cur + [words[i + 1]])
+        full = (len(cur) >= PAGE_WORDS or too_wide) and may_break
         if punct or full or len(cur) > PAGE_WORDS + 1:
             out.append(cur)
             cur = []
     if cur:
         out.append(cur)
-    return [{"text": " ".join(x["w"] for x in p), "start": p[0]["start"], "end": p[-1]["end"],
-             "words": p} for p in out]
+    # A page the voice gets through in under MIN_PAGE_S cannot be read (HyperFrames check, 2026-11-25: «իսկ ո՞ւր
+    # են» for 0.34 s after pause snapping): merge it into the next page, or the previous one, if the result stays
+    # within MAX_MERGED_WORDS. Never across a sentence end: «աղբանոցում են։ Տեսնում ենք միայն» made a 3-line page
+    # that rose into the picture (Gemini review v2, confirmed on frames).
+    def ends_sentence(page):
+        return bool(re.search(r"[։.?!]»?$", page[-1]["w"]))
+
+    merged = True
+    while merged:
+        merged = False
+        for k, p in enumerate(out):
+            if p[-1]["end"] - p[0]["start"] >= MIN_PAGE_S:
+                continue
+            can_next = (k + 1 < len(out) and not ends_sentence(p) and len(p) + len(out[k + 1]) <= MAX_MERGED_WORDS
+                        and fits(p + out[k + 1]))
+            can_prev = (k > 0 and not ends_sentence(out[k - 1]) and len(out[k - 1]) + len(p) <= MAX_MERGED_WORDS
+                        and fits(out[k - 1] + p))
+            if can_prev and (ends_sentence(p) or not can_next):
+                out[k - 1:k + 1] = [out[k - 1] + p]
+            elif can_next:
+                out[k:k + 2] = [p + out[k + 1]]
+            else:
+                continue
+            merged = True
+            break
+    return [{"text": " ".join(x["w"] for x in p), "start": p[0]["start"], "end": p[-1]["end"], "words": p,
+             "size": page_size(p)} for p in out]
+
+
+def page_size(words):
+    """CAPTION_PX, or the largest smaller size (2 px steps, not under MIN_CAPTION_PX) at which the page fits in
+    MAX_LINES lines and no single word is wider than the box. A page kept long by the auxiliary / quote rules can
+    otherwise wrap to 3 lines."""
+    size = CAPTION_PX
+    while size > MIN_CAPTION_PX and (n_lines(words, size) > MAX_LINES
+                                     or max(word_px(x) * size / CAPTION_PX for x in words) + WORD_GAP_PX > BOX_PX):
+        size -= 2
+    return size
 
 
 def main():

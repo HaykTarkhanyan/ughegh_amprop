@@ -1,39 +1,50 @@
-title = "Short videos (Shorts, Reels, TikTok): tools review before building"
+title = "Short videos: tools review, then voice test, pilot short and a Remotion vs HyperFrames bake-off"
 date = "2026-11-25"
 time = "01:44"
-areas = ["_knowledge/short_videos/", "DECISIONS.md"]
+areas = ["_knowledge/short_videos/", "03_shorts/", "DECISIONS.md", ".gitignore"]
 
 done = [
   "Hayk wants automated short videos (YouTube, Instagram, TikTok) on thinking errors, e.g. survivorship bias with local examples (Soviet fridges); asked for a quick search of programmatic options first, saved locally. Quick = inline, no subagents",
-  "Read the earlier Manim + Gemini TTS work in misc/sample_problems_qysu (animations/README.md, tools/tts_gemini.py, _knowledge/manim_llm_video/research.md) so the review builds on it instead of repeating the TTS research",
-  "Hayk mid-turn: ask questions first for targeted searches; 'AI generated' means code written with AI help, not Veo or generated images. Q1 Armenian only, Q2 animation + real photos, Q3 Claude Code in session, Q4 manual upload, Q5 this repo, Q6 new look (no webinar branding)",
-  "About 20 web searches plus live checks (PyPI JSON, npm view, gh api) for Remotion 4.0.547, HyperFrames 0.9.92 (Apache 2.0, Apr 2026), Manim 0.22.1, Revideo 0.11.0, Motion Canvas 3.17.2, MoviePy 2.2.1, ctc-forced-aligner 1.0.2, WhisperX 3.8.6, pycaps (PyPI name taken by an unrelated 2017 package), MoneyPrinterTurbo, Postiz",
-  "Wrote _knowledge/short_videos/lit_review.md (15 sections, claims tagged L/S/Q/U) and its HTML view; opened with html-review",
-  "DECISIONS.md #19: the scope from Q1-Q6",
+  "Read the earlier Manim + Gemini TTS work in misc/sample_problems_qysu (animations/README.md, tools/tts_gemini.py, _knowledge/manim_llm_video/research.md) so the review builds on it",
+  "Hayk mid-turn: ask questions first; 'AI generated' means code written with AI help, not Veo or generated images. Q1 Armenian only, Q2 animation + real photos, Q3 Claude Code in session, Q4 manual upload, Q5 this repo, Q6 new look",
+  "About 20 web searches plus live checks (PyPI, npm, gh api); wrote _knowledge/short_videos/lit_review.md + HTML (commit ddb7dc3, pushed); DECISIONS.md #19",
+  "Q7 bake-off first, Q8 test voices, Q9 fridge + bomber + more examples; Hayk does not need to see the first script, checks scripts from the second short on",
+  "armenian-style-guide loaded before any Armenian; pilot script 9 beats (hook, reveal, name, wald, wald_answer, more, dropouts, lesson, outro), lint 0 errors after fixes (article -ն before ու, dropped filler պարզապես); labels.hy.json linted too",
+  "Voice test round 1 (lively prompt; Sadaltager, Puck, Sadachbia, Autonoe): 'they all sounded too artifical'. Round 2 (no prompt / natural prompt; Sadaltager, Achird, Autonoe): 'natural_Sadaltager_no_style was best'. GEMINI_API_KEY_VOICE hit its free daily quota after 3 calls; GEMINI_API_KEY used for the rest",
+  "Hayk: 53 s is not long, prefers 'a bit longer shorts - so theyre not just doomscroll garbage'; added the dropouts beat (Jobs, Gates) and a takeaway beat; 71.8 s of speech",
+  "Heads-up note checked: Commons calls the red-dot bomber an illustration of a hypothetical damage pattern (2021); the 'officers wanted the opposite' scene has no record. Wald beat now opens «Պատմում են, որ», picture labelled «նկարազարդում». DECISIONS.md #20",
+  "03_shorts/tools: tts_gemini.py (copied from qysu), build_timeline.py (trim silence, join, word times by length, caption pages without lone words or auxiliaries at a page start), fetch_commons.py (search, get with licence, credits), media_gallery.py (one standalone audio/video page)",
+  "Photos from Commons with credits.json: ZIL fridge at the Yerevan Zoo (CC BY-SA 4.0, RG72, portrait 9:16), ZIL factory 1966 (CC BY 4.0, Moscow archive), Abraham Wald (CC BY-SA 2.0 de), Survivorship-bias.svg (CC BY-SA 4.0; 195 red dots split out so they can animate)",
+  "Bake-off: Remotion 4.0.547 (create-video scaffold, 446 lines TS/TSX) and HyperFrames 0.9.92 (init scaffold, 338-line index.html, telemetry off via DO_NOT_TRACK=1 / HYPERFRAMES_NO_TELEMETRY=1; its skill's 'usage note' to HeyGen skipped). Same inputs via bakeoff/sync_assets.py, Noto Sans Armenian, captions in the safe band",
+  "HyperFrames check found 12 safe-zone hits, a 0.5 s label, 26 px text, a 1.8 s closing line, a 0.05 s caption overlap; all fixed in both builds. compare_frames.py sheet: the two renders are nearly identical; then fixed captions overlapping the bomber card and the hook card peeking in, in both",
+  "Render times (71 s video, 2 workers): Remotion 4 min 44 s / 4 min 26 s; HyperFrames 3 min 52 s render (4 min 52 s with CLI start)",
 ]
 
 pending = [
-  "Q7 rendering framework (Remotion recommended, HyperFrames close second, Manim fallback, or a bake-off first)",
-  "Q8 voice test for shorts (livelier style prompt, 3-4 Gemini voices, ~$0.05)",
-  "Q9 first pilot topic (fridge survivorship-bias short proposed)",
+  "Q7: Hayk picks Remotion or HyperFrames from the two videos and bakeoff/README.md; record as DECISIONS.md #21",
+  "Hayk to check the Armenian I wrote: the pilot script and labels; open term question: «վերապրողի սխալ» for survivorship bias (not in the glossary), «սովետական» vs «խորհրդային», singular «դու» address, «Հա» vs «Այո», «սարքել»",
   "Check YouTube's help page on whether a TTS narrator alone needs the AI disclosure tick, before the first upload",
+  "Root DEFERRED_TODO.md not touched (it has uncommitted October changes); parked items are in 03_shorts/README.md 'Later'",
 ]
 
 next = [
-  "One pilot short end to end: beats JSON -> Gemini TTS -> 1080x1920 render -> captions spread by characters -> contact sheet + Gemini critique -> Hayk on the phone",
-  "Then 03_shorts/AUTHORING.md from what worked",
+  "After Q7: delete the losing project, move the winner to 03_shorts/render/, write 03_shorts/AUTHORING.md from what worked",
+  "Second short: Hayk checks the script before the voice is made",
 ]
 
 files = [
-  "_knowledge/short_videos/lit_review.md",
-  "_knowledge/short_videos/lit_review.html",
-  "DECISIONS.md (#19 only)",
+  "_knowledge/short_videos/lit_review.md (+ .html)",
+  "DECISIONS.md (#19, #20 only)",
+  "03_shorts/ (README.md, tools/, pilot_survivorship/, voice_test/, bakeoff/, assets/fonts/)",
+  ".gitignore (node_modules, render output, bake-off copies)",
   "_work_sessions/2026-11-25-0144_short_videos_lit_review.toml",
 ]
 
-commits = []
+commits = ["ddb7dc3 Short videos: tools review, scope decision #19"]
 
 notes = [
-  "DECISIONS.md had uncommitted entries 16-18 from October in the working tree; only #19 was staged (blob built from HEAD + #19), so the committed file jumps from #15 to #19 until those are committed",
+  "DECISIONS.md had uncommitted entries 16-18 from October in the working tree; only #19/#20 were staged (blob built from HEAD + the new entries)",
   "Search summaries disagree on several numbers (YouTube upload quota cost 100 vs 1 unit, Instagram 25/50/100 posts, safe-zone pixels); the review gives the range and tags them S",
+  "TTS spend this session ~$0.06 over 24 calls (03_shorts/tts_ledger.csv)",
+  "My first Remotion render piped progress through grep/awk, so nothing showed until the end; later renders log straight to bakeoff/out/*.log",
 ]

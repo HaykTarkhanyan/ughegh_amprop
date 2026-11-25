@@ -53,7 +53,7 @@ const Captions: React.FC = () => {
         const now = t >= w.start && t < w.end;
         return (
           <span key={i} style={{
-            display: "inline-block", margin: "0 16px", fontFamily: FONT, fontSize: 68, fontWeight: 800, lineHeight: 1.18,
+            display: "inline-block", margin: "0 16px", fontFamily: FONT, fontSize: page.size, fontWeight: 800, lineHeight: 1.18,
             color: now ? C.orange : C.ink, WebkitTextStroke: `10px ${C.bg}`, paintOrder: "stroke fill",
             scale: now ? "1.04" : "1", // a bigger zoom plus the 10 px outline ate the space between words
           }}>{w.w}</span>

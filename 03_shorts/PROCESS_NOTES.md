@@ -30,7 +30,11 @@ most of it to fix things a still frame or a check would have shown.
 4. **Caption timing snapped to real pauses** (done: `build_timeline.py`, checked by `check_sync.py`): median error
    0.195 s -> 0.034 s. Run `check_sync.py` after every new narration.
 5. **Contact sheet with the safe area drawn** (done: `tools/contact_sheet.py`): one frame per second shows text
-   leaving the safe area and words running together, which no automatic check caught.
+   leaving the safe area and words running together, which no automatic check caught. At 1 fps it can miss a
+   moment (the grid overlap at 10.0-11.0 s showed only as a partial overlap); use `--every 0.5 --start --end` on
+   busy beats.
+5b. **A fixed caption band** (done): pages measured with the real font, at most 2 lines, so captions always sit in
+   y ~1040-1200 and every scene keeps its content above ~1030. New scenes should be designed against that line.
 6. **One command per short** (not built yet): `make_short.py <short>` = narration (reuses unchanged beats) ->
    timeline -> copy assets -> draft render -> contact sheet -> Gemini review -> review page. Removes ~10 manual
    commands and the risk of rendering with a stale timeline when `sync_assets.py` is forgotten after a change.
@@ -46,4 +50,35 @@ most of it to fix things a still frame or a check would have shown.
 
 ## Gemini review of the pilot
 
-(filled in below after the run)
+`python tools/gemini_review.py bakeoff/out/preview/pilot_remotion.mp4 pilot_survivorship/beats.hy.json --out
+pilot_survivorship/review/gemini_review_remotion.json`: gemini-3.8-flash, 7,489 tokens in, 2,804 out, ~$0.016, 34 s.
+Each point checked against the frames and Hayk's decisions:
+
+| Gemini said | Verdict | Done |
+|---|---|---|
+| no pronunciation problems; no sync problems | weak evidence: it samples video at 1 fps, so it cannot judge sync finely; `check_sync.py` stays the sync test | - |
+| hook strong, idea understood, no disputable facts | agrees with the frame review; the «Պատմում են» framing of Wald worked | - |
+| location pill text too small (0:00, 0:07) | valid: 28 px was exactly the phone floor | 34 px, may wrap to two lines |
+| «տարի» with its closing quote opens a caption page (0:41) | valid: a page break inside the quoted saying | page rule: a word that closes a quote stays on the previous page |
+| the takeaway (0:54-1:01) is text on black and loses momentum | valid: the only beat without a picture | faint callback grid of failed fridges and one survivor, drifting |
+| cut an example to stay under 60 s | rejected: Hayk wants longer shorts with substance (DECISIONS.md #20) | - |
+
+So: 3 useful findings out of 6 for under 2 cents. Worth running on every short, after the frame review and before
+showing it to Hayk.
+
+Second pass on the fixed video (`gemini_review_remotion_v2.json`, ~$0.016): the three fixed issues were gone. New:
+
+| Gemini said | Verdict | Done |
+|---|---|---|
+| the fridge grid overlaps the captions at 0:10 | valid, worse than "medium": frames at 10.0-11.0 s showed white fridges behind white caption text; the cause was 5-word caption pages wrapping to 5 lines | caption pages now measured with the real font and limited to 2 lines (`_learnings/...armenian_captions_measure_line_wrap.md`); grid smaller and higher |
+| the bomber diagram is small on a phone | rejected for now: a larger card collides with captions or the side rails; the full-size video shows the dots clearly | - |
+| cut an example to stay under 60 s (again) | rejected (DECISIONS.md #20) | - |
+
+Lesson: run the review again after fixes. The second pass found the worst layout bug of the night, one that two
+frame reviews and HyperFrames' check had missed.
+
+Third pass (`gemini_review_remotion_v3.json`, ~$0.016; three passes ~$0.048 in all): no pronunciation, sync or fact
+issues; hook and clarity fine. Valid: the takeaway's unspoken words at 28% opacity were too dim to read ahead ->
+50%. Parked: the hard cut into the title card at 0:14 (a plain cut is normal in shorts; a small zoom could soften
+it). Rejected a third time: cutting an example to get under 60 s. Its timestamps are approximate (it put the dim
+text at 0:48; the only dim text is at 0:55-1:01), so locate each finding in the frames before fixing.

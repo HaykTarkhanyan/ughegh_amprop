@@ -18,6 +18,10 @@ speeds through long words, so time is not proportional to letters.
 nearest word boundary within 0.8 s (boundaries after punctuation preferred) and spreads words by length only between
 those anchors. `--no-snap` gives the old behaviour.
 
+**Side effect:** with real timing, some caption pages got very short where the voice rushes before a pause
+(«իսկ ո՞ւր են» was on screen 0.34 s; HyperFrames' check flagged it as unreadable). `pages()` now merges a page shorter
+than 0.6 s into a neighbour when the result stays within 5 words (55 -> 51 pages in the pilot).
+
 **Limits:** the check is partly circular (it uses the same pauses). Where the voice does not pause at all (3 commas
 in the pilot) the error stays up to ~0.9 s. Real word-level timing needs forced alignment (MMS) or a TTS with word
 timestamps (Azure hy-AM), see `_knowledge/short_videos/lit_review.md` section 5.

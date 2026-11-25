@@ -1,0 +1,71 @@
+{
+  "model": "gemini-3.8-flash",
+  "video": "bakeoff\\out\\preview\\pilot_remotion.mp4",
+  "usage": {
+    "promptTokenCount": 7489,
+    "candidatesTokenCount": 652,
+    "totalTokenCount": 10293,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1028
+      },
+      {
+        "modality": "VIDEO",
+        "tokenCount": 6461
+      }
+    ],
+    "thoughtsTokenCount": 2152,
+    "serviceTier": "standard"
+  },
+  "usd_est": 0.0161,
+  "review": {
+    "pronunciation": [],
+    "sync": [],
+    "visual": [
+      {
+        "time": "00:00",
+        "problem": "Top-left location tag («ԶԻԼ սառնարան, Երևանի կենդանաբանական այգի») uses very small, low-contrast text against the sky background, making it hard to read on mobile screens.",
+        "severity": "low"
+      },
+      {
+        "time": "00:41",
+        "problem": "The closing quotation mark in «տարի» hangs awkwardly at the start of the caption line («տարի» պատմությունը լսում ենք), creating an awkward line break.",
+        "severity": "low"
+      },
+      {
+        "time": "00:54",
+        "problem": "From 00:54 to 01:01, the visual drops to plain black background with text only, losing visual momentum compared to the earlier animations and historical footage.",
+        "severity": "medium"
+      }
+    ],
+    "hook": {
+      "verdict": "Strong and relatable hook.",
+      "would_keep_watching": true,
+      "why": "It taps into a ubiquitous cultural trope (grandma's indestructible Soviet fridge vs. modern appliances breaking in 5 years) and immediately poses an intriguing question."
+    },
+    "pacing": [
+      {
+        "time": "00:34",
+        "problem": "Stacking three rapid-fire examples in a row (old songs, 90-year-old smoker, university dropouts) after the Abraham Wald airplane story slows down the video's conclusion and pushes the runtime past 60 seconds."
+      }
+    ],
+    "clarity": {
+      "understood": true,
+      "summary_of_what_a_viewer_learns": "The viewer learns about survivorship bias: why we mistakenly perceive older goods or successful college dropouts as standard when we only observe the ones that survived, ignoring the vast majority that failed or broke down.",
+      "confusing_parts": []
+    },
+    "facts": [],
+    "top_3_fixes": [
+      {
+        "1": "Cut one of the secondary examples (e.g., the old music or smoking grandfather beat) to keep the total duration under 60 seconds and preserve high retention."
+      },
+      {
+        "2": "Add an engaging graphic or b-roll animation during the takeaway section (00:54-01:01) instead of plain text on a black background."
+      },
+      {
+        "3": "Increase the font size and add a semi-transparent dark backing behind the top-left contextual labels (00:00 and 00:07) for better legibility on mobile screens."
+      }
+    ]
+  }
+}

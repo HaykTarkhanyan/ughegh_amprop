@@ -1,0 +1,66 @@
+{
+  "model": "gemini-3.8-flash",
+  "video": "bakeoff\\out\\preview\\pilot_remotion.mp4",
+  "usage": {
+    "promptTokenCount": 7489,
+    "candidatesTokenCount": 534,
+    "totalTokenCount": 10188,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1028
+      },
+      {
+        "modality": "VIDEO",
+        "tokenCount": 6461
+      }
+    ],
+    "thoughtsTokenCount": 2165,
+    "serviceTier": "standard"
+  },
+  "usd_est": 0.0157,
+  "review": {
+    "pronunciation": [],
+    "sync": [],
+    "visual": [
+      {
+        "time": "00:14",
+        "problem": "The transition to the 'վերապրողի սխալ' definition screen is a harsh cut to a plain black screen that breaks visual continuity after the vintage footage.",
+        "severity": "low"
+      },
+      {
+        "time": "00:48",
+        "problem": "The inactive/unspoken subtitle text is dark gray on a near-black background, making it almost illegible before it turns yellow.",
+        "severity": "medium"
+      }
+    ],
+    "hook": {
+      "verdict": "Strong",
+      "would_keep_watching": true,
+      "why": "Using the iconic Soviet ZIL fridge located at the Yerevan Zoo immediately triggers nostalgia and addresses a very common real-world myth."
+    },
+    "pacing": [
+      {
+        "time": "00:34",
+        "problem": "Too many disparate examples (old songs, 90-year-old smoker, university dropouts) are packed into a 20-second span, making the second half feel rushed compared to the well-paced Abraham Wald story."
+      }
+    ],
+    "clarity": {
+      "understood": true,
+      "summary_of_what_a_viewer_learns": "Viewers learn what survivorship bias is through the story of Abraham Wald and understand why surviving vintage appliances, successful dropouts, or smoking elders create a false illusion of quality or safety.",
+      "confusing_parts": []
+    },
+    "facts": [],
+    "top_3_fixes": [
+      {
+        "fix": "Increase the contrast of upcoming subtitle words so viewers can read ahead slightly; dark gray text on black background is barely visible."
+      },
+      {
+        "fix": "Cut one of the rapid-fire examples between 00:34 and 00:54 (e.g. drop the old music slide) to give the remaining examples room to breathe and keep the video under 60 seconds."
+      },
+      {
+        "fix": "Smooth out the title card transition at 00:14 with a slight motion or background texture instead of a jarring cut to a flat black screen."
+      }
+    ]
+  }
+}

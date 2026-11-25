@@ -11,8 +11,8 @@ export const Pill: React.FC<{ text: string; top: number; opacity: number }> = ({
   <div style={{ position: "absolute", top, left: 120, right: 192, display: "flex", justifyContent: "center", opacity }}>
     <div
       style={{
-        fontFamily: FONT, fontSize: 28, fontWeight: 600, color: C.ink, background: "rgba(14,15,18,0.78)",
-        padding: "12px 26px", borderRadius: 999, maxWidth: 840, textAlign: "center", whiteSpace: "nowrap",
+        fontFamily: FONT, fontSize: 34, fontWeight: 600, color: C.ink, background: "rgba(14,15,18,0.78)", lineHeight: 1.25,
+        padding: "12px 26px", borderRadius: 28, maxWidth: 700, textAlign: "center",
       }}
     >
       {text}

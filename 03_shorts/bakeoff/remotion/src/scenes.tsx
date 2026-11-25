@@ -37,7 +37,7 @@ export const Hook: React.FC<P> = ({ t, dur }) => {
   );
 };
 
-const GRID = { cols: 5, rows: 4, w: 96, h: 156, gap: 32, top: 330, survivor: 12 };
+const GRID = { cols: 5, rows: 4, w: 80, h: 130, gap: 26, top: 300, survivor: 12 }; // lowest point ~950 px, above 3-line captions
 export const Reveal: React.FC<P> = ({ t, dur }) => {
   const t1 = at("reveal", "Փչացած");
   const t2 = at("reveal", "աղբանոցում");
@@ -60,7 +60,7 @@ export const Reveal: React.FC<P> = ({ t, dur }) => {
           <Fridge key={i} w={GRID.w} h={GRID.h} color={isSurvivor ? (glow > 0 ? C.orange : C.ink) : fall > 0.05 ? C.red : C.ink}
             style={{
               position: "absolute", left: (1080 - gw) / 2 + c * (GRID.w + GRID.gap), top: GRID.top + r * (GRID.h + GRID.gap),
-              opacity: appear * (1 - 0.85 * fall), translate: `0px ${fall * 140}px`, scale: String(appear * (1 + 0.25 * glow)),
+              opacity: appear * (1 - 0.85 * fall), translate: `0px ${fall * 50}px`, scale: String(appear * (1 + 0.25 * glow)),
               boxShadow: glow > 0 ? `0 0 ${40 * glow}px ${C.orange}` : undefined, zIndex: isSurvivor ? 2 : 1,
             }} />
         );
@@ -194,7 +194,7 @@ export const Dropouts: React.FC<P> = ({ t }) => {
           <div style={{ fontFamily: FONT, fontSize: 42, fontWeight: 800, color: C.ink, marginTop: 12, width: 240, marginLeft: -70 }}>{p.name}</div>
         </div>
       ))}
-      {Array.from({ length: 72 }, (_, i) => {
+      {Array.from({ length: 60 }, (_, i) => { // 5 rows: stays above two-line captions
         const r = Math.floor(i / 12);
         const a = ramp(t, tB + 0.2 + r * 0.12 + (i % 12) * 0.015, 0.4);
         return (
@@ -206,18 +206,26 @@ export const Dropouts: React.FC<P> = ({ t }) => {
 };
 
 // The key sentence as big text, each word lighting up as it is spoken (captions are off in this beat).
-export const BigKaraoke: React.FC<P & { beatKey: string; top: number; size: number }> = ({ t, beatKey, top, size }) => {
+export const BigKaraoke: React.FC<P & { beatKey: string; top: number; size: number }> = ({ t, dur, beatKey, top, size }) => {
   const b = beat(beatKey);
   const abs = b.start + t;
   return (
     <AbsoluteFill style={{ background: C.bg }}>
-      <div style={{ position: "absolute", left: 0, right: 0, top: 260, textAlign: "center", fontFamily: FONT, fontSize: 620, fontWeight: 900, color: C.orange, opacity: 0.07 }}>?</div>
+      {/* Callback to the opening: faint failed fridges and one survivor, drifting slowly (Gemini: the plain black
+          background here lost momentum). The survivor sits in the top row (y 300-430), above the 7-line text block. */}
+      <div style={{ position: "absolute", inset: 0, translate: `0px ${interpolate(t, [0, dur], [40, -40])}px` }}>
+        {Array.from({ length: 36 }, (_, i) => (
+          <Fridge key={i} w={80} h={130} color={i === 2 ? C.orange : C.red}
+            style={{ position: "absolute", left: 225 + (i % 6) * 110, top: 300 + Math.floor(i / 6) * 160, opacity: i === 2 ? 0.55 : 0.13 }} />
+        ))}
+      </div>
       <div style={{ position: "absolute", left: 130, width: 650, top, textAlign: "center", fontFamily: FONT, fontSize: size, fontWeight: 800, lineHeight: 1.25 }}>
         {b.words.map((w, i) => {
           const on = abs >= w.start;
           const now = abs >= w.start && abs < w.end;
           return (
-            <span key={i} style={{ color: now ? C.orange : C.ink, opacity: on ? 1 : 0.28 }}>{w.w} </span>
+            // unspoken words at 0.5: 0.28 was too dim to read ahead (Gemini review v3)
+            <span key={i} style={{ color: now ? C.orange : C.ink, opacity: on ? 1 : 0.5 }}>{w.w} </span>
           );
         })}
       </div>

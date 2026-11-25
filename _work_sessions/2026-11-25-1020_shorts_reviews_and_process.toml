@@ -1,0 +1,45 @@
+title = "Shorts pilot: visual and Gemini reviews, caption timing and layout fixes, process notes, learnings"
+date = "2026-11-25"
+time = "10:20"
+areas = ["03_shorts/", "_learnings/"]
+
+done = [
+  "Resumed after the night session (2026-11-25-0144); Hayk: 'lets continue dont ask many questions now, just do your reviews, like visual review and so on and think about how the processes can be imporved maybe create learning files'. Q7 (framework) and Q10 (term) left open, not asked",
+  "The HyperFrames single-worker render from 02:46 had finished (4 min 8 s, barely slower than 2 workers' 3 min 52 s); C: had 7.2 GB free again",
+  "tools/contact_sheet.py (frame every N s, safe area outlined). Visual review of the final Remotion render found: words running together next to the highlighted word (outline + zoom ate the 18 px gap), the title over the safe edge, the last caption breaking the loop. Fixed in both builds",
+  "tools/check_sync.py (narration pauses via ffmpeg silencedetect vs predicted breaks): length-only timing median 0.195 s off, up to ~1 s. build_timeline.py now snaps word boundaries to real pauses: median 0.034 s",
+  "tools/gemini_review.py (gemini-3.8-flash hears the Armenian voice; JSON review; ledger). Pass 1 ($0.016): 3 valid (small pill, page starting with «տարի», plain takeaway beat), 1 rejected (cut to <60 s, against DECISIONS #20). Pass 2 ($0.016): fridge grid behind captions at 0:10 (confirmed on frames, the worst bug), bomber small (rejected), <60 s again (rejected)",
+  "Fixes: bigger wrapping pill; quote-closing word stays on its page; takeaway gets a faint grid of failed fridges + one survivor; short pages (<0.6 s) merge with a neighbour but never across a sentence end; caption pages measured with Pillow + the real font, max 2 lines, per-page font size; smaller, higher fridge grid; dropout crowd 5 rows",
+  "Process: stills of changed scenes before full renders (two stills in 30 s vs 2.5-5.5 min per full render); stopped my own obsolete HyperFrames render and its 3 orphaned node processes",
+  "PROCESS_NOTES.md (time spent, 10 improvements by payoff, both Gemini passes); README updated; 9 learning files (2026-11-25-1030 .. 1110)",
+  "Commit 33d3e0f pushed (shorts pilot, tools, learnings, DECISIONS #20 only)",
+  "Heads-up note (Q7 unanswered, every fix rendered twice, ~9 min per round): last double round at ~11:15, then Remotion only; bakeoff/README.md records the one known difference",
+  "Final frame review: survivor fridge behind the takeaway text -> moved to the top row. Gemini pass 3 ($0.016): unspoken takeaway words too dim -> 0.5 opacity; hard cut at 0:14 parked; <60 s rejected again. Final Remotion render ~2 min",
+]
+
+pending = [
+  "Q7: Remotion or HyperFrames (Hayk), then DECISIONS #21, delete the losing project, move the winner to 03_shorts/render/",
+  "Q10: Armenian term for survivorship bias («վերապրողի սխալ» now); also «սովետական» vs «խորհրդային», singular «դու», «Հա», «սարքել» (my wording, unchecked by Hayk)",
+  "Not built yet: make_short.py (one command per short), scene templates, a layout check for Remotion",
+  "YouTube AI-disclosure question for a TTS narrator, before the first upload",
+]
+
+next = [
+  "Hayk watches the final pilot (review page) and answers Q7",
+  "Second short: script reviewed by Hayk before the voice; ~870 chars per minute of speech",
+]
+
+files = [
+  "03_shorts/tools/{contact_sheet,check_sync,gemini_review}.py (new), build_timeline.py (snapping, page rules, measured 2-line pages), fetch_commons.py (credits)",
+  "03_shorts/bakeoff/remotion/src/*, 03_shorts/bakeoff/hyperframes/index.html (same fixes in both)",
+  "03_shorts/pilot_survivorship/review/gemini_review_remotion*.json, assets/credits.txt",
+  "03_shorts/PROCESS_NOTES.md, README.md, bakeoff/README.md",
+  "_learnings/2026-11-25-1030 ... 1110 (9 files)",
+]
+
+commits = ["33d3e0f Shorts pilot: voice tests, survivorship-bias short, Remotion vs HyperFrames bake-off, tools, learnings"]
+
+notes = [
+  "Spend today: Gemini reviews 3 x ~$0.016 = ~$0.048 (03_shorts/gemini_ledger.csv); no new TTS calls. Total with the night: TTS ~$0.06 + reviews ~$0.05",
+  "Renders this morning: Remotion 2.5-4.6 min, HyperFrames 1 worker 4-5.5 min per 71 s video",
+]

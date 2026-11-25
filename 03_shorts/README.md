@@ -27,19 +27,28 @@ From `03_shorts/` (times measured on 2026-11-25):
 2. Voice, ~30 s for 9 beats, ~$0.02:
    `python tools/tts_gemini.py --key-name GEMINI_API_KEY beats <short>/beats.hy.json <short>/audio --voice Sadaltager --style ""`
    (unchanged beats are reused; spend goes to `tts_ledger.csv`; the default key's free tier allows ~10 calls a day).
-3. Timeline, under 1 s: `python tools/build_timeline.py <short>`: trims silence, joins the clips into
-   `<short>/build/narration.wav`, spreads word times by length inside each sentence, groups caption pages.
+3. Timeline, ~1 s: `python tools/build_timeline.py <short>`: trims silence, joins the clips into
+   `<short>/build/narration.wav`, spreads word times by length and snaps them to the voice's real pauses, groups
+   caption pages (at most 2 lines, measured with the real font, each page with its own font size; no lone words,
+   no auxiliary or closing quote at a page start, no page under 0.6 s, no merge across a sentence end). Captions
+   live in the band y ~1040-1200: keep every scene's content above ~1030.
+   Then `python tools/check_sync.py <short>` (median error should be well under 0.1 s).
 4. Photos: `python tools/fetch_commons.py search "..."`, then `get "File:..." <short>/assets --name x`; licences and
    authors go to `<short>/assets/credits.json` for the video description.
-5. Render: see `bakeoff/README.md` until the framework is chosen (Q7).
-6. Look at it: `python tools/media_gallery.py <files> --out <page>.html`, then open with html-review.
+5. Render: see `bakeoff/README.md` until the framework is chosen (Q7). Check stills of changed scenes first, render
+   in full last (`PROCESS_NOTES.md`).
+6. Review, in this order: `python tools/contact_sheet.py <mp4> --out sheet.png` (a frame per second with the safe
+   area drawn; read it), then `python tools/gemini_review.py <540x960 preview> <short>/beats.hy.json --out
+   <short>/review/gemini_review.json` (~$0.02; verify each finding), then
+   `python tools/media_gallery.py <files> --out <page>.html` and open it with html-review for Hayk.
 
 ## Folders
 
 | Path | What |
 |------|------|
 | `pilot_survivorship/` | First short: survivorship bias (Yerevan Zoo ZIL fridge, Wald's bombers, old songs, a 90-year-old smoker, Jobs and Gates). `beats.hy.json`, `labels.hy.json`, `audio/`, `assets/` + `credits.json`, `build/` |
-| `tools/` | `tts_gemini.py` (copied from sample_problems_qysu/animations on 2026-11-25, unchanged), `build_timeline.py`, `fetch_commons.py`, `media_gallery.py` |
+| `tools/` | `tts_gemini.py` (copied from sample_problems_qysu/animations on 2026-11-25, unchanged), `build_timeline.py`, `check_sync.py`, `fetch_commons.py` (search, get, credits), `contact_sheet.py`, `gemini_review.py`, `media_gallery.py` |
+| `PROCESS_NOTES.md` | What the pilot taught about the process: where the time went, improvements by payoff, the Gemini review |
 | `bakeoff/` | The same short rendered in Remotion and in HyperFrames, for Q7 |
 | `voice_test/` | The two voice test pages (Q8) |
 | `assets/fonts/` | Noto Sans Armenian + its licence |

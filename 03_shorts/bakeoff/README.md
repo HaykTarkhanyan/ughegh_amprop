@@ -11,6 +11,11 @@ pages from `tools/build_timeline.py`), `narration.wav`, the on-screen labels (`l
 bomber plane SVG with its 195 dots split out, and Noto Sans Armenian. Both builds use the same storyboard, colours,
 font sizes, positions and timings; every layout fix found by one tool was applied to both.
 
+**Parity ended on 2026-11-25 ~11:20.** Both builds got every fix up to the measured two-line captions (renders at
+~11:15). After that, fixes go into Remotion only until Q7 is answered (a heads-up note pointed out that double
+rendering cost ~9 min per round). Known difference since then: in HyperFrames the orange survivor in the takeaway
+beat still sits in the bottom row, behind the last text line; in Remotion it moved to the top row.
+
 ## Run
 
 ```bash
@@ -33,11 +38,14 @@ python compare_frames.py out/pilot_remotion.mp4 out/pilot_hyperframes.mp4 --out 
 | Code | 446 lines of TS/TSX in 6 files: components, `useCurrentFrame()` + `interpolate()`, data imported as JSON | 338 lines in one HTML file: CSS + a GSAP timeline built from `window.SHORT` |
 | Checks before render | TypeScript only (types, not layout) | `check`: lint + runtime + layout + motion + contrast + "craft". First run: 12 safe-zone hits (TikTok right rail, Reels/Shorts bottom), a label shown 0.5 s, text under the 28 px phone floor, a 1.8 s closing line, caption groups overlapping 0.05 s |
 | First look | `remotion still` of one frame: 61 s | `check` run: 50 s |
-| Full render (71 s video) | 4 min 44 s, 4 min 26 s, 4 min 3 s (three versions), 42-44 MB; frames stream into the encoder | 3 min 52 s render, 4 min 52 s with CLI start, 37.5 MB, with 2 workers |
+| Full render (71 s video) | 4 min 44 s, 4 min 26 s, 4 min 3 s, 3 min 28 s (four versions), 42-44 MB; frames stream into the encoder | 2 workers: 3 min 52 s (4 min 52 s with CLI start), 37.5 MB. 1 worker: 4 min 8 s, 5 min 26 s |
 | Disk during render | no temp frames | with 2+ workers every frame is saved as an image first: **~2.9 GB of temp files for 71 s**. The third render failed at frame 9 with 1.8 GB free on C:. `--workers 1` streams instead (slower) |
 | Telemetry | none seen | on by default; the agent skill even asks to send a "usage note" linked to the account. Off with `DO_NOT_TRACK=1` / `HYPERFRAMES_NO_TELEMETRY=1` (used on every call here) |
 | Licence | free for individuals and teams up to 3 | Apache 2.0 |
 | Maturity | 4.x line for years, 75k stars | launched Apr 2026, pre-1.0, roadmap tied to HeyGen's paid app |
+
+HyperFrames' `check` still reports `first_frame_empty` ("Frame 0 is covered by #s-hook") on the final version. It is
+a false positive here: frame 0 is the zoo photo with the first caption, not an empty frame.
 
 Not used on either side: the Studio editors (Remotion Studio, HyperFrames preview/desktop app). Both skills push
 for them; for a Claude-in-session workflow the CLI was enough.

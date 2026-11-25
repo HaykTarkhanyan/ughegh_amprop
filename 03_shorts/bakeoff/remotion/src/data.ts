@@ -2,7 +2,7 @@
 import raw from "./data.json";
 
 export type Word = { w: string; start: number; end: number };
-export type Page = { text: string; start: number; end: number; words: Word[] };
+export type Page = { text: string; start: number; end: number; words: Word[]; size: number }; // size: px, fits 2 lines
 export type Beat = {
   key: string;
   text: string;

@@ -28,7 +28,7 @@
       .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.72) 72%, rgba(0,0,0,0.8) 100%); }
       .shade { position: absolute; inset: 0; background: #000; opacity: 0; }
       .pill-row { position: absolute; top: 300px; left: 120px; right: 192px; display: flex; justify-content: center; opacity: 0; }
-      .pill { font-size: 28px; font-weight: 600; background: rgba(14,15,18,0.78); padding: 12px 26px; border-radius: 999px; white-space: nowrap; }
+      .pill { font-size: 34px; font-weight: 600; line-height: 1.25; background: rgba(14,15,18,0.78); padding: 12px 26px; border-radius: 28px; max-width: 700px; text-align: center; }
       .fridge { position: absolute; border-radius: 14%/8%; }
       .fridge::before { content: ""; position: absolute; top: 36%; left: 7%; right: 7%; height: 2%; min-height: 2px; background: rgba(0,0,0,0.28); }
       .fridge::after { content: ""; position: absolute; top: 14%; left: 12%; width: 6%; min-width: 3px; height: 14%; border-radius: 4px; background: rgba(0,0,0,0.35); box-shadow: 0 calc(var(--h) * 0.3) 0 rgba(0,0,0,0.35); }
@@ -111,7 +111,7 @@
       </section>
 
       <section id="s-lesson" class="scene">
-        <div data-layout-ignore style="position: absolute; left: 0; right: 0; top: 260px; text-align: center; font-size: 620px; font-weight: 900; color: var(--orange); opacity: 0.07">?</div>
+        <div id="lesson-grid" data-layout-ignore style="position: absolute; inset: 0"></div>
         <div id="lesson-text" style="position: absolute; left: 130px; width: 650px; top: 470px; text-align: center; font-size: 72px; line-height: 1.25"></div>
       </section>
 
@@ -180,7 +180,7 @@
         tl.fromTo("#reveal-pill", { opacity: 0 }, { opacity: 1, duration: 0.4, ease }, s0 + 0.2);
         tl.to("#reveal-pill", { opacity: 0, duration: 0.3 }, t1 + 0.9);
         tl.fromTo("#reveal-shade", { opacity: 0 }, { opacity: 0.86, duration: 0.5, ease }, t1 + 0.9);
-        const G = { cols: 5, rows: 4, w: 96, h: 156, gap: 32, top: 330, survivor: 12 };
+        const G = { cols: 5, rows: 4, w: 80, h: 130, gap: 26, top: 300, survivor: 12 }; // lowest point ~950 px, above 3-line captions
         const gw = G.cols * G.w + (G.cols - 1) * G.gap;
         for (let i = 0; i < G.cols * G.rows; i++) {
           const f = fridge($("reveal-grid"), (1080 - gw) / 2 + (i % G.cols) * (G.w + G.gap), G.top + Math.floor(i / G.cols) * (G.h + G.gap), G.w, G.h, "#f4f1ea");
@@ -192,7 +192,7 @@
           } else {
             const tf = t2 + ((i * 7) % 20) * 0.04;
             tl.set(f, { backgroundColor: "#e8383d" }, tf + 0.03);
-            tl.to(f, { y: 140, opacity: 0.15, duration: 0.6, ease: "power2.in" }, tf);
+            tl.to(f, { y: 50, opacity: 0.15, duration: 0.6, ease: "power2.in" }, tf);
           }
         }
       }
@@ -283,7 +283,7 @@
           n.textContent = S.labels[k];
           tl.fromTo(w, { scale: 0 }, { scale: 1, duration: 0.5, ease: "back.out(1.6)" }, s0 + 0.1);
         });
-        for (let i = 0; i < 72; i++) {
+        for (let i = 0; i < 60; i++) { // 5 rows: stays above two-line captions
           const r = Math.floor(i / 12);
           const p = person($("crowd72"), 223 + (i % 12) * 54, 640 + r * 74, 40, "#3a3e46");
           gsap.set(p, { opacity: 0 });
@@ -293,6 +293,13 @@
 
       // 8. Lesson: the key sentence big, each word lighting up as it is spoken.
       {
+        // Callback to the opening: faint failed fridges and one survivor (bottom row, below the text), drifting.
+        const [s0, d] = slot("lesson");
+        for (let i = 0; i < 36; i++) {
+          const f = fridge($("lesson-grid"), 225 + (i % 6) * 110, 300 + Math.floor(i / 6) * 160, 80, 130, i === 32 ? "#f2a800" : "#e8383d");
+          f.style.opacity = i === 32 ? 0.55 : 0.13;
+        }
+        tl.fromTo("#lesson-grid", { y: 40 }, { y: -40, duration: d, ease: "none" }, s0);
         beat("lesson").words.forEach((w) => {
           const sp = el($("lesson-text"), "span", { color: "#f4f1ea", opacity: 0.28 });
           sp.textContent = w.w + " ";
@@ -318,7 +325,7 @@
           const g = el($("captions"), "div", {}, "cap");
           const end = pages[i + 1] ? Math.min(pages[i + 1].start - 0.05, p.end + 0.4) : TL.duration + 1.2 - 0.35;
           p.words.forEach((w) => {
-            const sp = el(g, "span", { color: "#f4f1ea" });
+            const sp = el(g, "span", { color: "#f4f1ea", fontSize: p.size + "px" }); // size fits 2 lines (build_timeline.py)
             sp.textContent = w.w;
             tl.set(sp, { color: "#f2a800", scale: 1.04 }, w.start);
             tl.set(sp, { color: "#f4f1ea", scale: 1 }, w.end);
