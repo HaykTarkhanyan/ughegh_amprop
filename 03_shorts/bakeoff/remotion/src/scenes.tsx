@@ -1,7 +1,7 @@
 // One component per beat. `t` is seconds since the beat started, `dur` the beat's slot in seconds.
 import React from "react";
 import { AbsoluteFill, Easing, Img, interpolate, spring, staticFile } from "remotion";
-import { at, beat, C, DATA, FONT, L } from "./data";
+import { at, beat, C, DATA, FONT, L, V2 } from "./data";
 import { Bomber, Fridge, Person, Pill, ramp } from "./parts";
 
 type P = { t: number; dur: number; fps: number };
@@ -11,7 +11,19 @@ const Shade: React.FC<{ opacity: number }> = ({ opacity }) => (
 );
 // Darkens the bottom of a photo so the captions stay readable.
 const CaptionScrim = () => (
-  <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.72) 72%, rgba(0,0,0,0.8) 100%)" }} />
+  <AbsoluteFill style={{ background: V2
+    ? "linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.78) 68%, rgba(0,0,0,0.6) 100%)"
+    : "linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.72) 72%, rgba(0,0,0,0.8) 100%)" }} />
+);
+// v2: the dark scenes get a backdrop that runs to the bottom edge (a faint grid and a glow), so the frame is not
+// empty black under the captions
+const Backdrop2 = () => (
+  <AbsoluteFill style={{
+    background: `radial-gradient(ellipse 80% 45% at 50% 38%, rgba(242,168,0,0.14), transparent 72%),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.06) 0 2px, transparent 2px 60px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.06) 0 2px, transparent 2px 60px),
+      linear-gradient(180deg, #15171C, #0B0C0F)`,
+  }} />
 );
 
 export const Hook: React.FC<P> = ({ t, dur }) => {
@@ -23,7 +35,7 @@ export const Hook: React.FC<P> = ({ t, dur }) => {
       <CaptionScrim />
       <Shade opacity={0.45 * ramp(t, q, 0.4)} />
       <Pill text={L.zoo} top={300} opacity={ramp(t, 0.3, 0.5)} />
-      <div style={{ position: "absolute", left: 520, top: 470, translate: `${(1 - ramp(t, q, 0.5)) * 640}px 0px` }}>
+      <div style={{ position: "absolute", left: V2 ? 500 : 520, top: V2 ? 430 : 470, translate: `${(1 - ramp(t, q, 0.5)) * 640}px 0px`, scale: V2 ? "1.3" : "1", transformOrigin: "top left" }}>
         <Fridge w={260} h={460} color="#E4E7EB" />
         <svg width={260} height={460} style={{ position: "absolute", left: 0, top: 0 }}>
           <path d="M130 30 L110 120 L150 190 L118 280 L156 360 L128 440" fill="none" stroke={C.red} strokeWidth={10}
@@ -82,9 +94,9 @@ export const Name: React.FC<P> = ({ t, fps }) => {
   );
 };
 
-const PLANE_W = 820; // card ends at y ~950, above three-line captions
+const PLANE_W = V2 ? 1000 : 820; // v1: card ends at y ~950, above three-line captions; v2: ends at y ~1110
 const BomberCard: React.FC<{ dotScale: (i: number) => number; dotOpacity?: number; opacity?: number; children?: React.ReactNode }> = ({ dotScale, dotOpacity, opacity = 1, children }) => (
-  <div style={{ position: "absolute", left: 110, top: 300, width: 860, padding: 20, boxSizing: "border-box", background: C.card, borderRadius: 32, opacity }}>
+  <div style={{ position: "absolute", left: V2 ? 20 : 110, top: V2 ? 330 : 300, width: V2 ? 1040 : 860, padding: 20, boxSizing: "border-box", background: C.card, borderRadius: 32, opacity, boxShadow: V2 ? "0 30px 80px rgba(0,0,0,0.6)" : undefined }}>
     <Bomber width={PLANE_W} dotScale={dotScale} dotOpacity={dotOpacity}>{children}</Bomber>
     <div style={{ position: "absolute", left: 100, top: 16, fontFamily: FONT, fontSize: 28, color: "#6B6B70" }}>{L.illustration}</div>
   </div>
@@ -95,6 +107,7 @@ export const Wald: React.FC<P> = ({ t, dur }) => {
   const span = dur * 0.65;
   return (
     <AbsoluteFill style={{ background: C.bg }}>
+      {V2 ? <Backdrop2 /> : null}
       <BomberCard opacity={ramp(t, 0, 0.4)} dotScale={(i) => ramp(t, 0.6 + (dotOrder(i) / 195) * span, 0.18, Easing.out(Easing.back(2)))} />
     </AbsoluteFill>
   );

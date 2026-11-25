@@ -1,4 +1,5 @@
 // Shared inputs (written by ../sync_assets.py) and the look of the pilot short.
+import { getInputProps } from "remotion";
 import raw from "./data.json";
 
 export type Word = { w: string; start: number; end: number };
@@ -35,6 +36,8 @@ export const C = {
   grey: "#3A3E46",
 };
 export const FONT = "NotoArm, sans-serif";
+// Caption-style test (2026-11-25): render with --props '{"captionStyle":"v2"}' for the lower, quieter captions and bigger visuals.
+export const V2 = (getInputProps() as { captionStyle?: string }).captionStyle === "v2";
 
 export const beat = (key: string): Beat => {
   const b = DATA.timeline.beats.find((x) => x.key === key);

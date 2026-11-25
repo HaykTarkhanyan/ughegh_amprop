@@ -5,7 +5,7 @@ import {
   AbsoluteFill, cancelRender, Composition, continueRender, delayRender, interpolate, Sequence, staticFile,
   useCurrentFrame, useVideoConfig,
 } from "remotion";
-import { C, DATA, FONT } from "./data";
+import { C, DATA, FONT, V2 } from "./data";
 import { BigKaraoke, Dropouts, Hook, More, Name, Outro, Reveal, Wald, WaldAnswer } from "./scenes";
 
 // Load the Armenian font before any frame is captured.
@@ -47,6 +47,22 @@ const Captions: React.FC = () => {
   if (idx < 0 || NO_CAPTIONS.has(PAGES[idx].beat)) return null;
   const page = PAGES[idx];
   const pop = interpolate(t, [page.start - 0.05, page.start + 0.08], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  if (V2) {
+    // v2 (2026-11-25, Hayk: captions too central): lower, smaller, lighter, a soft shadow instead of the outline
+    return (
+      <div style={{ position: "absolute", left: 130, width: 650, bottom: 1920 - 1245, textAlign: "center", opacity: pop, translate: `0px ${(1 - pop) * 10}px` }}>
+        {page.words.map((w, i) => {
+          const now = t >= w.start && t < w.end;
+          return (
+            <span key={i} style={{
+              display: "inline-block", margin: "0 10px", fontFamily: FONT, fontSize: Math.round(page.size * 0.82), fontWeight: 650, lineHeight: 1.2,
+              color: now ? C.orange : C.ink, textShadow: "0 2px 3px rgba(0,0,0,0.9), 0 4px 22px rgba(0,0,0,0.85)",
+            }}>{w.w}</span>
+          );
+        })}
+      </div>
+    );
+  }
   return (
     <div style={{ position: "absolute", left: 140, width: 640, bottom: 1920 - 1200, textAlign: "center", opacity: pop, scale: String(0.92 + 0.08 * pop) }}>
       {page.words.map((w, i) => {
