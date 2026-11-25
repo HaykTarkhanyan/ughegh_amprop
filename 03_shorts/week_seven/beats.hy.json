@@ -1,0 +1,45 @@
+[
+  {
+    "key": "hook",
+    "text": "Օրը, ամիսը և տարին գալիս են երկնքից։ Շաբաթը՝ ոչ։ Օրը Երկրի պտույտն է, ամիսը՝ Լուսնի, տարին՝ Արևի շուրջ պտույտը։ Իսկ յոթ օրը ոչ մի բանի պտույտ չէ։ Ուրեմն որտեղի՞ց է այն։",
+    "visual": "Frame 0: three orbits (Earth spinning, Moon, Earth around the Sun) labelled օր, ամիս, տարի; a fourth slot 'շաբաթ' with an empty orbit and a '?'."
+  },
+  {
+    "key": "moon",
+    "text": "Հաճախ ասում են՝ Լուսնի փուլերից է։ Բայց լուսնային ամիսը մոտ քսանինն ու կես օր է, և յոթի վրա չի բաժանվում։ Յոթը եկել է երկու այլ տեղից։",
+    "visual": "Moon phases on a 29.5-day strip; four 7-day blocks leave a 1.5-day remainder blinking red."
+  },
+  {
+    "key": "sabbath",
+    "text": "Առաջինը հրեական շաբաթն է՝ վեց օր աշխատանք, յոթերորդը՝ հանգիստ։ Այստեղից է մեր «շաբաթ» բառը։",
+    "visual": "Seven squares, six grey (work), the seventh orange 'Շաբաթ'."
+  },
+  {
+    "key": "planets",
+    "text": "Երկրորդը հին աստղագուշակությունն է։ Աչքով երկնքում երևում էր յոթ շարժվող լուսատու՝ Արևը, Լուսինը, Մերկուրին, Վեներան, Մարսը, Յուպիտերը և Սատուրնը։ Հռոմեական աշխարհում ամեն օրը նվիրեցին մեկին։ Անգլերենում շաբաթ օրը Սատուրնի օրն է, կիրակին՝ Արևի, երկուշաբթին՝ Լուսնի։",
+    "visual": "Seven dots cross a night sky; each docks on a day; on screen Saturday, Sunday, Monday and French mardi, mercredi, jeudi, vendredi with their planet symbols."
+  },
+  {
+    "key": "order",
+    "text": "Բայց ինչո՞ւ այս հերթով։ Հին աստղագետները լուսատուները դասավորում էին ըստ արագության՝ Սատուրն, Յուպիտեր, Մարս, Արև, Վեներա, Մերկուրի, Լուսին։ Ամեն ժամ ուներ իր տիրակալը՝ այս հերթով։ Օրն ունի քսանչորս ժամ, և քսանչորսը յոթի բաժանելիս մնում է երեք։ Դրա համար ամեն հաջորդ օր սկսվում է երեք քայլ առաջ՝ Սատուրնից Արև, Արևից Լուսին, Լուսնից Մարս։",
+    "pause_after": 2.5,
+    "screen_small": "Դիոն Կասիոս, մ.թ. III դար",
+    "visual": "The showcase: seven planets on a circle in the slow-to-fast order; a pointer ticks 24 hours (three full laps plus three steps) and lands on the next day's planet; the jumps draw a seven-pointed star whose path reads the days of the week in order."
+  },
+  {
+    "key": "armenian",
+    "text": "Հայերենը պահել է հրեական հաշիվը։ Երկուշաբթին բառացի շաբաթվա երկրորդ օրն է, երեքշաբթին՝ երրորդը, և այդպես մինչև հինգշաբթի։ Կիրակին հունարենից է՝ «Տիրոջ օր», իսկ ուրբաթը՝ ասորերենից, «նախօրյակ» իմաստով։",
+    "visual": "The Armenian day names split into number + շաբթի (երկու-, երեք-, չորեք-, հինգ-); կիրակի with Greek Κυριακή, ուրբաթ with Syriac."
+  },
+  {
+    "key": "soviet",
+    "text": "Յոթն այնքան ամուր է, որ փոխել չի հաջողվել։ Ֆրանսիական հեղափոխությունը մտցրեց տասնօրյա շաբաթ, Նապոլեոնը վերացրեց այն։ Իսկ Խորհրդային Միությունը, Հայաստանն էլ հետը, մոտ տասը տարի ապրեց հնգօրյա, հետո վեցօրյա շաբաթով։ Ամուսինները հաճախ տարբեր օրեր էին հանգստանում։ 1940 թվականին վերադարձան յոթին։",
+    "visual": "A 10-day French calendar strip crossed out; a Soviet 5-colour roster where two people's days off never meet; then the 7-day strip snaps back."
+  },
+  {
+    "key": "takeaway",
+    "text": "Յոթ օրը ոչ բնության օրենք է, ոչ մաթեմատիկա։ Դա երկու հին ավանդույթի հանդիպում է, որ այնքան սովորական դարձավ, որ այլևս չենք նկատում։",
+    "screen": "Շաբաթը երկնքից չէ, մարդկանցից է",
+    "visual": "The seven-pointed star from beat 5 over the empty fourth orbit from the hook; loops."
+  }
+]
