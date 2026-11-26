@@ -28,3 +28,20 @@ next = [
 files = ["03_shorts/CODEX_REVIEW.md", "03_shorts/tools/validate_episode.py", "03_shorts/tools/import_recording.py", "03_shorts/tools/episodes.py", "03_shorts/tools/runlog.py", "03_shorts/tests/test_tools.py", "03_shorts/render/src/zk/Short.tsx", "03_shorts/render/src/zk/timeline.ts", "03_shorts/ARMENIAN_DECISIONS.md", "03_shorts/episodes.json", "03_shorts/requirements.txt"]
 commits = ["e8e0da1 Codex review report", "(this session's fix commit)"]
 notes = "Codex was right on all six high findings checked; the you-should-know plugin asked for a per-ID list with disagreements marked before anything is voiced: given in the closing summary."
+
+[[later]]
+when = "2026-11-26 22:15 - 2026-11-27 00:50"
+done = [
+  "Hayk's wording answers U1-U4 (du, Valod, phul, practically impossible); guide voice remade; ZK re-rendered (v2) and shown on one review page",
+  "crypto_long: second long video (16:9) scripted and planned (20 beats, ~5:00); answers LQ1-LQ5 (TTS voice, all three limits, Short kept, later slot)",
+  "Publishing (DECISIONS #27): four platforms as Ughegh Amprop, handle ugheghamprop; Meta API; YouTube API; TikTok by hand in TikTok Studio (Q34, its guidelines exclude personal upload tools); Shorts point to their long video (pointer beat + per-platform links)",
+  "Two research agents: publishing mechanics (publishing_research_2026-11-26.md) and script sources (fact_sources_2026-11-26.md); EU age check, ING, GCHQ, load-carriage wording fixed",
+  "DECISIONS #28: scripts reviewed as full draft videos with the real voice, in publishing order; drafts done: own_voice (1:43), decoy_popcorn (2:14)",
+  "build_timeline: last-resort caption merge; snap guard against impossible word timing (17 tests pass)",
+  "Paid spend this session: $0.14 of TTS (39 clips)",
+]
+pending = [
+  "Hayk: review the own_voice and decoy_popcorn drafts, the ZK videos, the crypto_long script; 8 open Armenian questions (O2-O12)",
+  "Hayk: create the accounts (PUBLISHING.md steps 1-6); then tools/publish.py (Meta, YouTube) and the TikTok hand-off folders",
+  "Next drafts in publishing order: bayes_test, map_projection, friendship",
+]
