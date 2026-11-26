@@ -1,0 +1,381 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Codex fixes by finding ID</title><style>
+:root { color-scheme: light dark; --text: #1f2328; --muted: #59636e; --line: #d1d9e0; --soft: #f6f8fa; --link: #0033a0; }
+@media (prefers-color-scheme: dark) { :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --soft: #161b22; --link: #79a6ff; } }
+body { margin: 0 auto; max-width: 980px; padding: 24px 16px 64px; color: var(--text); background: Canvas;
+       font: 16px/1.6 system-ui, "Segoe UI", sans-serif; }
+a { color: var(--link); }
+nav { background: var(--soft); border: 1px solid var(--line); border-radius: 8px; padding: 10px 18px; margin: 16px 0 24px; }
+details { border-top: 1px solid var(--line); padding: 8px 0; }
+summary { cursor: pointer; font-size: 1.3em; font-weight: 650; padding: 4px 0; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .94em; }
+th, td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: var(--soft); }
+code { background: var(--soft); border-radius: 4px; padding: 1px 5px; font-size: .9em; }
+pre { background: var(--soft); border-radius: 6px; padding: 12px; overflow-x: auto; }
+pre code { padding: 0; }
+img { max-width: 100%; }
+</style></head><body><h1 id="codex-fixes-by-finding-id">Codex fixes by finding ID</h1>
+<p>What was changed for each of the 61 findings in <code>CODEX_REVIEW.md</code> (applied 2026-11-26, commit 2f332db), and my view of each finding. "Agree" means I checked the finding and think Codex was right. "Judgment call" means the fix needed an editorial choice, and that choice is yours to confirm. Nothing has been voiced except the temporary guide voice for the two zero-knowledge videos.</p>
+<nav><strong>Contents</strong><ul><li><a href="#needs-your-decision">Needs your decision</a></li><li><a href="#code-x1-x19">Code (X1-X19)</a></li><li><a href="#scripts-and-plans-x20-x51">Scripts and plans (X20-X51)</a></li><li><a href="#armenian-x52-x56">Armenian (X52-X56)</a></li><li><a href="#process-x57-x61">Process (X57-X61)</a></li></ul></nav><details open id="needs-your-decision"><summary>Needs your decision</summary>
+<ul>
+<li><strong>Script cuts (X51).</strong> The rule "one idea and one extension" removed beats from the older scripts. Every cut beat is kept word for word in its plan's "After the Codex review" section and can come back: Bayes (doctors training, symptoms), Simpson (COVID), regression (Galton, everyday examples, summary card), friendship (bus, formula card, comfort), yawning (dogs, summary card), own voice (mirror, summary card), crypto (GCHQ history), Petrov (biography), QWERTY (legend, contest, Dvorak, economists), waiting (everyday, queue maths, summary card).</li>
+<li><strong>Spines (X51).</strong> QWERTY now follows "a mechanical layout became inherited infrastructure"; waiting follows the psychology (the queue maths is parked as its own video).</li>
+<li><strong>The zero-knowledge rewrites (X20-X24).</strong> The card proof, "why zero knowledge", the Waldo set-up, the real systems and the Short's tease changed meaning, not just wording. Read them before you record.</li>
+<li><strong>Armenian wording.</strong> 12 open questions in <code>ARMENIAN_DECISIONS.md</code> (address, «կարեկցանք», «ռեգրեսիա դեպի միջինը», «ռաունդ», «Ուոլդո», «քվերթի», «ավելի ուժեղ ու թավ», «գործնականում անհնար», ...).</li>
+<li><strong>Re-approval.</strong> Every script changed, so every approval is open again; the review page's IDs now end in the script hash (<code>review_queue_picker.html</code>).</li>
+</ul>
+</details><details open id="code-x1-x19"><summary>Code (X1-X19)</summary>
+<div class="table"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>What changed</th>
+<th>My view</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X1</td>
+<td>TTS manifest keeps unvisited entries, written atomically after each clip; cached clips must be readable and audible; offline test of the interruption case</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X2</td>
+<td>A word wider than the caption box never "fits"; the build stops and names it; one long word may go down to 44 px in portrait; «բաժանորդագրություններում» reworded</td>
+<td>Agree; the 44 px floor instead of hyphenation is my call</td>
+</tr>
+<tr>
+<td>X3</td>
+<td>check_sync is called a pause-consistency diagnostic, reports coverage and unmatched breaks, has a pass/fail gate, and compares hand-marked word times from <code>checkpoints.json</code> when present</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X4</td>
+<td>Unmatched rows are logged as "no matching pause", no logging traceback; test added</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X5</td>
+<td>Silent or empty clips fail with the beat name; <code>tools/import_recording.py</code> (keep the original, convert, propose cuts, check, apply, narrator "hayk")</td>
+<td>Agree; not yet tried on a real phone take</td>
+</tr>
+<tr>
+<td>X6</td>
+<td>Decimals keep their places (0,05 and 0,005 differ); more than 3 places refused</td>
+<td>Agree; named units for 2-3 places is my call</td>
+</tr>
+<tr>
+<td>X7</td>
+<td>No style prompt by default; the lecturer prompt kept as a preset</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X8</td>
+<td>Logging is set up only when a tool runs, never on import (<code>tools/runlog.py</code>)</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X9</td>
+<td><code>tools/validate_episode.py</code> runs before paid TTS, timeline builds and syncs; the renderer checks the timeline when it loads</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X10</td>
+<td>Timeline carries script, clip and audio hashes and a build id; the render audio is named after the build</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X11</td>
+<td>Balls counter shows exactly 1, 2, 10, 20 rounds at the spoken numbers; a cue word must be unique or name its occurrence (caught «գտել» twice in the Short)</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X12</td>
+<td>Fast-round answers appear only once given; I also hid the coin's face (the friend's private choice)</td>
+<td>Agree; the coin is my addition</td>
+</tr>
+<tr>
+<td>X13</td>
+<td>Both film strips have six rounds</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X14</td>
+<td>Landscape caption profile (1500 px, up to 7 words, sizes used); pages merged by time on screen; 0 pages under 0.6 s (8 before)</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X15</td>
+<td>Commons original is optional; the credit is saved before it; bounded retries</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X16</td>
+<td>Credit lines carry the licence link, the Commons credit and the changes; pilot credits updated</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X17</td>
+<td><code>requirements.txt</code> pinned; the pilot declares <code>@remotion/media</code></td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X18</td>
+<td>Unused <code>dur</code> removed; ESLint exit 0</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X19</td>
+<td>Sheet drawn around its own origin; filter region 3000 x 1900 (was 12000 x 7000); the grain now moves with the board</td>
+<td>Agree</td>
+</tr>
+</tbody>
+</table></div>
+</details><details open id="scripts-and-plans-x20-x51"><summary>Scripts and plans (X20-X51)</summary>
+<div class="table"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>What changed</th>
+<th>My view</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X20</td>
+<td>Only the 26 black cards are shown; the reds stay face down; "complete deck"</td>
+<td>Agree: the old version gave the card away</td>
+</tr>
+<tr>
+<td>X21</td>
+<td>"Why zero" = he already knew every answer, so he learns only "they differ"; the faked video follows from that</td>
+<td>Agree: the old definition was wrong</td>
+</tr>
+<tr>
+<td>X22</td>
+<td>The friend turns away while you place the sheet; "only you see this"; the voice admits a sliver of surroundings</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X23</td>
+<td>"Have the same problem", not "solve it every day"; the EU proof is about a state-signed birth date; published / pilot / running tags; "a 'no' is information too"</td>
+<td>Agree; the EU roadmap is not re-checked</td>
+</tr>
+<tr>
+<td>X24</td>
+<td>The Short's tease answers the gossip question in one sentence, then points to the long video</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X25</td>
+<td>99% only if the two tests' errors are independent; the same test repeated stays at 50%</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X26</td>
+<td>"99% accurate" is an assumption of the example; the doctors claim narrowed to one session (21% of 160)</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X27</td>
+<td>No general "before/after treatment" rule; this example only; "not causal proof"</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X28</td>
+<td>Berkeley voice and picture both use the six departments (45% / 30%)</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X29</td>
+<td>Weighted card shows (81 + 192) / (87 + 263) = 78%</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X30</td>
+<td>The check is a randomised comparison of equally extreme cadets; "our model"; praise not proven useless</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X31</td>
+<td>Axis from the data (31-111); invented students; «մոդելավորում» tag</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X32</td>
+<td>The formula card is cut; one averaging story</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X33</td>
+<td>Popcorn sizes explicit (1x / 2x / 3x); the subscription is the clean decoy; limits narrowed; the close asks what you need</td>
+<td>Judgment call (Codex offered two options; I used both)</td>
+</tr>
+<tr>
+<td>X34</td>
+<td>Soft food, adaptation and help may all have contributed</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X35</td>
+<td>The hook traces the healed sockets; nothing circled that is not in the photo</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X36</td>
+<td>"One Greek letter per sound"; "as far as possible one sound, one letter" with «ու» as the exception</td>
+<td>Agree; the voice reading of «ճ»-ի is open</td>
+</tr>
+<tr>
+<td>X37</td>
+<td>Silent letters were once pronounced; knight vs house; borrowings and respellings; reform cost as an argument</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X38</td>
+<td>Work and energy separated: muscles spend energy just holding; the wheel saves that; "work is zero, energy is not"</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X39</td>
+<td>Visible light in, infrared out, seen by a camera</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X40</td>
+<td>Dog familiarity claim removed with the dog extension</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X41</td>
+<td>No sedentary screens under 2 (not under 1); 1 hour at 2-4</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X42</td>
+<td>Mechanisms hedged; later fantastical-content experiments cited (checked); no "not addicted" diagnosis</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X43</td>
+<td>"A good microphone barely distorts you"; surprise is part of it; "fades for many"</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X44</td>
+<td>"No known practical fast way on ordinary computers"; analogy flagged; padlock dropped</td>
+<td>Agree; «գործնականում անհնար» instead of Codex's «գործնականում դժվար» is my call</td>
+</tr>
+<tr>
+<td>X45</td>
+<td>Alarm weighed against prior, reliability and other sources; radar line qualified</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X46</td>
+<td>Decimal clock: short-lived, inherited, divisible kept apart; cause left open</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X47</td>
+<td>The continuous week does not follow the Moon; no "disproof"</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X48</td>
+<td>«մակերեսով»; re-project, do not scale; Web Mercator; switch on globe view</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X49</td>
+<td>"Maybe the same elsewhere"; ask someone who did not build it</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X50</td>
+<td>Survivors cannot tell which generation lasted longer; illustration tagged; «Հա» kept</td>
+<td>Agree; the pilot's voice and render are now outdated</td>
+</tr>
+<tr>
+<td>X51</td>
+<td>Pauses, one closing, no «Այնպես որ,», names and years on source lines, one extension, QWERTY and waiting restructured</td>
+<td>Agree with the rule; the cuts are judgment calls (top of the page)</td>
+</tr>
+</tbody>
+</table></div>
+</details><details open id="armenian-x52-x56"><summary>Armenian (X52-X56)</summary>
+<div class="table"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>What changed</th>
+<th>My view</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X52</td>
+<td>«չտեղի տվեց» removed with its claim</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X53</td>
+<td>«ավելի բարակ, պակաս թավ» / «ավելի ուժեղ ու թավ»</td>
+<td>Agree; wording for you to confirm</td>
+</tr>
+<tr>
+<td>X54</td>
+<td><code>ARMENIAN_DECISIONS.md</code> with 12 open questions</td>
+<td>Agree; only you can close them</td>
+</tr>
+<tr>
+<td>X55</td>
+<td>No Latin in the QWERTY voice: «քվերթի», Morse letters only on screen</td>
+<td>Agree; «քվերթի» for you to confirm</td>
+</tr>
+<tr>
+<td>X56</td>
+<td>Closing screen lines say what the voice says (statues, popcorn)</td>
+<td>Agree</td>
+</tr>
+</tbody>
+</table></div>
+</details><details open id="process-x57-x61"><summary>Process (X57-X61)</summary>
+<div class="table"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>What changed</th>
+<th>My view</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X57</td>
+<td>README is the current entry point; bake-off frozen; stale shot lists cleaned; publishing order fixed</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X58</td>
+<td><code>tools/episodes.py</code>: episode index and review IDs with the script hash; <code>--approve</code> records the approved hash</td>
+<td>Agree</td>
+</tr>
+<tr>
+<td>X59</td>
+<td><code>ZkShort</code> (1080 x 1920) with a guide voice; timeline JSONs tracked so a clean checkout type-checks</td>
+<td>Agree; first version, the Waldo labels are small at 0.7</td>
+</tr>
+<tr>
+<td>X60</td>
+<td>Evidence records in 5 plans (claim, source, kind, how far it was read)</td>
+<td>Partly done: several rows are honestly "unverified" and need a source read</td>
+</tr>
+<tr>
+<td>X61</td>
+<td>Estimate called a planning allowance (totals within 5%, beats up to 26% off); 1:60 bug fixed; old tables marked superseded</td>
+<td>Agree</td>
+</tr>
+</tbody>
+</table></div>
+</details></body></html>
