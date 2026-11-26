@@ -1,0 +1,118 @@
+[
+  {
+    "key": "hook",
+    "text": "Երբ բացեցիր այս տեսանյութը, քո հեռախոսն ու կայքը պայմանավորվեցին գաղտնի բանալու շուրջ, իսկ նրանց զրույցը կարող էր լսել ցանկացած մեկը։ Ինչպե՞ս կարելի է գաղտնիք ստեղծել՝ խոսելով բոլորի աչքի առաջ։",
+    "visual": "16:9. A phone and a server far apart; between them a stream of message cards flying back and forth, all readable, with eyes watching from the edges (an eavesdropper silhouette). A key icon forms on both ends at the same moment. Frame 0 shows the open stream and the question.",
+    "pause_after": 1.5
+  },
+  {
+    "key": "old_way",
+    "text": "Դարեր շարունակ գաղտնի նամակի համար նախ պետք էր գաղտնի փոխանցել բանալին։ Բանակներն ու բանկերը սուրհանդակներ էին ուղարկում՝ ծածկագրերի գրքերով, և եթե գիրքն ընկնում էր թշնամու ձեռքը, ամեն ինչ սկսվում էր նորից։",
+    "visual": "A courier with a locked case travels a map from one capital to another; the case holds a code book; an ambush grabs it and the book turns red: 'all over again'."
+  },
+  {
+    "key": "internet",
+    "text": "Իսկ համացանցում սուրհանդակ չկա։ Չես կարող ամեն կայքի հետ նախապես հանդիպել։ Բանալին պետք է ստեղծել հենց բաց զրույցում, որտեղ ամեն բառը լսում են։",
+    "visual": "The map fills with thousands of sites and phones; couriers multiply and give up; one open line remains between a phone and a site, with the eavesdropper's ear on it.",
+    "pause_after": 1
+  },
+  {
+    "key": "name",
+    "text": "Մաթեմատիկոսները ցույց տվեցին, որ դա հնարավոր է։ Սկզբում բացատրենք ներկերով, հետո՝ իսկական թվերով։",
+    "screen_small": "Diffie & Hellman, «New Directions in Cryptography», 1976",
+    "visual": "Title card: 'բանալու փոխանակում' with a paint can on one side and a clock dial on the other: the two halves of the video."
+  },
+  {
+    "key": "setup",
+    "text": "Անին և Արամն ուզում են ընդհանուր գաղտնի գույն ունենալ։ Եվան տեսնում է ամեն ինչ, ինչ նրանք ուղարկում են իրար։",
+    "visual": "Ani on the left, Aram on the right, each with a workbench of paint cans; Eva in the middle on a raised stand, seeing every can that crosses."
+  },
+  {
+    "key": "common",
+    "text": "Նախ բաց պայմանավորվում են ընդհանուր գույնի շուրջ՝ դեղին։ Եվան էլ գիտի։",
+    "visual": "A yellow can is shown publicly; copies appear at Ani, Aram and Eva."
+  },
+  {
+    "key": "secrets",
+    "text": "Հետո յուրաքանչյուրն ընտրում է իր գաղտնի գույնը և ոչ մեկին չի ասում՝ Անին կարմիր, Արամը կապույտ։",
+    "visual": "Ani picks red behind a screen, Aram picks blue behind a screen; Eva's view shows two locked cans."
+  },
+  {
+    "key": "mix_send",
+    "text": "Ամեն մեկն իր գաղտնի գույնը խառնում է դեղինի հետ և ուղարկում մյուսին։ Անին ուղարկում է նարնջագույն, Արամը՝ կանաչ։ Եվան տեսնում է երկուսն էլ։",
+    "visual": "Two swirling mixes: yellow + red = orange, yellow + blue = green; the orange and green cans cross the open line, Eva copies both.",
+    "pause_after": 1.5
+  },
+  {
+    "key": "final",
+    "text": "Հիմա ամեն մեկն ստացած խառնուրդին ավելացնում է իր գաղտնի գույնը։ Անին կանաչին ավելացնում է կարմիր, Արամը նարնջագույնին՝ կապույտ։ Եվ երկուսն էլ ստանում են նույն շագանակագույնը՝ դեղին, կարմիր և կապույտ միասին։",
+    "visual": "The showcase, part 1: Ani pours red into the green, Aram pours blue into the orange; both swirls settle to the same brown; the two brown cans glow and a check mark joins them.",
+    "pause_after": 2.5
+  },
+  {
+    "key": "eve",
+    "text": "Իսկ Եվա՞ն։ Նա ունի դեղին, նարնջագույն և կանաչ։ Եթե դրանք խառնի, կստանա ավելի դեղնավուն գույն, որովհետև դեղինն այնտեղ ավելի շատ է։ Նրան պետք է նարնջագույնից հետ հանել կարմիրը, իսկ ներկը խառնելը հեշտ է, բաժանելը՝ համարյա անհնար։",
+    "visual": "Eva mixes her three cans into a yellowish brown held next to the true brown: different. Then she tries to pull the orange swirl apart into yellow and red: it will not separate.",
+    "pause_after": 1.5
+  },
+  {
+    "key": "analogy_limit",
+    "text": "Ներկը, իհարկե, միայն համեմատություն է։ Իսկական փոխանակման մեջ գույների փոխարեն թվեր են, իսկ խառնելու փոխարեն՝ մի հաշվարկ, որն անել հեշտ է, իսկ հետ գնալը՝ շատ դժվար։ Դրա համար պետք է ժամացույցի թվաբանությունը։",
+    "visual": "The paint cans dissolve into numbers; a small 'համեմատություն' tag stays on the last can; a clock face fades in."
+  },
+  {
+    "key": "clock",
+    "text": "Ժամացույցի վրա 10-ին գումարած 5 ժամը 3-ն է, ոչ թե 15-ը։ Թվերը պտտվում են շրջանով, և մնում է միայն մնացորդը՝ 12-ի բաժանելիս։ Իսկական փոխանակման մեջ ժամացույցի վրա 12 չէ, այլ մի մեծ պարզ թիվ։",
+    "visual": "A 12-hour clock: the hand at 10 moves 5 steps and stops at 3; '15 = 12 + 3' with the 3 circled as the remainder; then the dial's 12 is replaced by a long prime number.",
+    "pause_after": 1.5
+  },
+  {
+    "key": "power",
+    "text": "Հիմա վերցնենք 23 ժամ ունեցող ժամացույց և 5 թիվը։ 5-ը բազմապատկում ենք իրենով մի քանի անգամ, այսինքն՝ աստիճան ենք բարձրացնում, և ամեն անգամ մնում ենք ժամացույցի վրա։ Առաջ գնալը հեշտ է։ Իսկ եթե ասեմ միայն վերջնական թիվը, դժվար է գուշակել, թե քանի անգամ ենք բազմապատկել, որովհետև թվերը ժամացույցի վրա ցատկոտում են առանց կարգի։",
+    "visual": "A 23-hour dial; the hand jumps 5, 2, 10, 4, 20, 8, ... as 5 is multiplied again and again (5¹ ... 5⁶), a trail of jumps crossing the dial with no visible order.",
+    "pause_after": 1.5
+  },
+  {
+    "key": "toy",
+    "text": "Փորձենք։ Ընդհանուր թվերը 5 և 23 են՝ դեղինի փոխարեն։ Անիի գաղտնիքը 6 է, Արամինը՝ 15։ Անին 5-ը բարձրացնում է 6-րդ աստիճանի 23-ժամանոց ժամացույցի վրա և ստանում 8։ Արամը նույնն անում է 15-ով և ստանում 19։ Նրանք ուղարկում են 8 և 19։ Հիմա Անին 19-ը բարձրացնում է իր 6-րդ աստիճանի, Արամը 8-ը՝ իր 15-րդ աստիճանի, և երկուսն էլ ստանում են 2։",
+    "screen": "5 և 23",
+    "visual": "The showcase, part 2: the paint layout returns with numbers: public 5 and 23 (yellow), secrets 6 and 15 behind screens (red, blue), 8 and 19 crossing the line (orange, green), and both benches computing the same 2 (brown), each step on its own small 23-hour dial.",
+    "pause_after": 3
+  },
+  {
+    "key": "backwards",
+    "text": "Եվան տեսնում է 5, 23, 8 և 19։ Գաղտնի 2-ը ստանալու համար նրան պետք է Անիի 6-ը, այսինքն՝ գտնել, թե քանի անգամ է 5-ը բազմապատկվել, որ ստացվի 8։ Փոքր թվերի դեպքում կարելի է փորձել բոլորը։ Բայց իսկական թվերն ունեն հարյուրավոր թվանշաններ, և ճիշտ ընտրված թվերի համար հետ գնալու գործնական արագ եղանակ սովորական համակարգիչներով հայտնի չէ։ Գործնականում դա անհնար է։",
+    "visual": "Eva tries every power on the small dial and finds 6 after a few jumps; then the dial explodes into a number with hundreds of digits scrolling past; a forward arrow 'հեշտ' and a dashed backward arrow 'գործնականում անհնար', with a small 'ճիշտ ընտրված պարամետրեր' tag.",
+    "pause_after": 1.5
+  },
+  {
+    "key": "history",
+    "text": "Հետաքրքիրն այն է, որ նույնը մի քանի տարի առաջ գտել էին բրիտանական գաղտնի ծառայությունում։ Երեք մաթեմատիկոս գրեթե նույն գաղափարներին հասել էին 1970-ականների սկզբին, բայց դա գաղտնի էր մինչև 1997 թվականը։ Գաղափարի հեղինակներից մեկը՝ Ջեյմս Էլիսը, մահացավ հրապարակումից մեկ ամիս առաջ։",
+    "screen_small": "Ellis 1970, Cocks 1973, Williamson 1974 (GCHQ); հրապարակվել է 1997-ին",
+    "visual": "A classified folder stamped 'ԳԱՂՏՆԻ' with three dated index cards (1970, 1973, 1974); a calendar runs to 1997 and the stamp is lifted; a small black ribbon on the first card."
+  },
+  {
+    "key": "mitm",
+    "text": "Բայց Եվան ունի ավելի պարզ հնարք։ Ներկը բաժանել չի կարողանում, բայց կարող է կանգնել մեջտեղում և Անիի հետ ձևանալ Արամ, իսկ Արամի հետ՝ Անի։ Երկու կողմն էլ կկարծեն, որ գաղտնիք ունեն միմյանց հետ, բայց երկուսն էլ խոսում են Եվայի հետ։",
+    "visual": "Eva steps down into the middle of the line, swaps the crossing cans for her own mixes and ends up with one brown matching Ani's and another matching Aram's; Ani and Aram each see a check mark that is wrong.",
+    "pause_after": 1.5
+  },
+  {
+    "key": "certificates",
+    "text": "Դրա համար փոխանակումից բացի պետք է համոզվել, թե ում հետ ես խոսում։ Կայքերն ունեն վկայականներ՝ թվային ստորագրություններ, որոնք հաստատում են վստահելի կազմակերպությունները, և քո բրաուզերը ստուգում է դրանք ամեն անգամ։",
+    "visual": "The site's card gets a signed seal from a trusted authority; the browser checks the seal before the exchange; Eva's fake card has no valid seal and is rejected."
+  },
+  {
+    "key": "quantum",
+    "text": "Եվ վերջին նախազգուշացումը։ Եթե երբևէ կառուցվի բավական մեծ քվանտային համակարգիչ, այն կկարողանա հետ գնալ այս հաշվարկում։ Դրա համար արդեն ստանդարտացվել է նոր փոխանակում, որը հիմնված է այլ խնդրի վրա, և շատ բրաուզերներ արդեն օգտագործում են հին ու նոր փոխանակումները միասին։",
+    "screen_small": "Shor, 1994; NIST FIPS 203 (ML-KEM), 2024",
+    "visual": "A glowing quantum chip turns the dashed backward arrow solid; then a second lock built from a grid pattern (a lattice) clicks onto the first, and the two locks stay on the line together."
+  },
+  {
+    "key": "takeaway",
+    "text": "Գաղտնիքը կարելի է ստեղծել բաց զրույցով։ Խառնելը՝ հեշտ, բաժանելը՝ գործնականում անհնար։",
+    "screen": "Խառնելը՝ հեշտ, բաժանելը՝ գործնականում անհնար",
+    "visual": "The two brown cans on the open line, Eva watching, the key icon from the hook glowing on both ends; loops to the hook.",
+    "pause_after": 1.5
+  }
+]

@@ -15,13 +15,28 @@
   "status": "script waiting for review"
  },
  {
+  "folder": "crypto_long",
+  "title": "Long video: How strangers agree on a secret in public (16:9, paint and clocks)",
+  "strand": "thinking error",
+  "layout": "landscape",
+  "beats": 20,
+  "planned_s": 301,
+  "script_sha": "e0eef296dead",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
   "folder": "crypto_paint",
   "title": "Showcase 1: Public-key crypto explained with paint mixing",
   "strand": "thinking error",
   "layout": "portrait",
   "beats": 13,
-  "planned_s": 156,
-  "script_sha": "42bf534f6012",
+  "planned_s": 155,
+  "script_sha": "777760802e7e",
   "approved_sha": null,
   "narration": {
    "narrator": null,

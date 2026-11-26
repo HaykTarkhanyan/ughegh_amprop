@@ -32,10 +32,10 @@ PICKER = Path.home() / ".claude/skills/html-review/scripts/picker.py"
 FIRST = ["zero_knowledge", "zero_knowledge_short"]
 # publishing order after the first video (README, Fable F233, pending Hayk)
 ORDER = ["own_voice", "decoy_popcorn", "bayes_test", "map_projection", "friendship", "painted_statues", "petrov",
-         "mashtots", "english_spelling", "crypto_paint", "yawning", "week_seven", "regression", "dmanisi",
+         "mashtots", "english_spelling", "crypto_paint", "crypto_long", "yawning", "week_seven", "regression", "dmanisi",
          "ikea_effect", "kids_tv", "simpson", "minute_60", "luggage_wheels", "waiting", "qwerty"]
 THINKING = {"pilot_survivorship", "bayes_test", "simpson", "regression", "decoy_popcorn", "ikea_effect", "dmanisi",
-            "painted_statues", "friendship", "petrov", "kids_tv", "crypto_paint", "zero_knowledge", "zero_knowledge_short"}
+            "painted_statues", "friendship", "petrov", "kids_tv", "crypto_paint", "crypto_long", "zero_knowledge", "zero_knowledge_short"}
 # what each script says now, and its open review points (U-ids from the plans); refreshed after the Codex review
 NOTES = {
     "zero_knowledge": ("Gossip hook; websites and banks have the same problem; Where's Waldo (placed while the friend looks away); "
@@ -62,6 +62,8 @@ NOTES = {
                          "printing froze spellings, borrowings and learned respellings too; Webster; 'not wrong, old'.", "Open: U-pp term, U-qq transliterations in the voice"),
     "crypto_paint": ("Agreeing a key in public: paint analogy (yellow + secret red / blue); Eva cannot unmix; numbers instead of "
                      "paint, no known practical fast way back; toy numbers; authentication still needed.", "Open: U-p terms, U-q discrete logarithm, «գործնականում անհնար» (X44)"),
+    "crypto_long": ("Second long video (16:9): how strangers agree a secret in public: paint first, then clock arithmetic and the real exchange with 5 and 23 (both get 2); GCHQ had it first; Eva in the middle and certificates; quantum computers and the new exchanges.",
+                    "Open: LQ1 narrator, LQ2 keep all three limits?, LQ3 the Short, LQ4 terms, LQ5 publishing slot"),
     "yawning": ("About half catch a yawn; the oxygen idea failed; cooling theory; kin > strangers vs the null result; honestly, "
                 "we do not know; how many times did you yawn?", "Open: U-dd «վարակվել», U-ee the comment call-to-action"),
     "week_seven": ("Sky gives day, month, year, not the week; the continuous week does not follow the Moon; Sabbath week (Armenian "

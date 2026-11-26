@@ -18,7 +18,7 @@ to be Aram.
 
 <!-- script:start -->
 
-13 beats, 2,080 characters (2,108 with numbers spelled out): ~144 s of speech, ~2:36 with pauses and the end tail, 8.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
+13 beats, 2,076 characters (2,104 with numbers spelled out): ~144 s of speech, ~2:35 with pauses and the end tail, 8.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Ինչպե՞ս պայմանավորվել գաղտնի բանալու շուրջ, եթե ձեր զրույցը լսում է ամբողջ աշխարհը։ Դու դա անում ես գրեթե ամեն անգամ, երբ կայք ես բացում ապահով կապով։
 
@@ -38,7 +38,7 @@ to be Aram.
 
 **9. eve.** Իսկ Եվա՞ն։ Նա ունի դեղին, նարնջագույն և կանաչ։ Եթե դրանք խառնի, կստանա ավելի դեղնավուն գույն, ոչ թե նույնը։ Նրան պետք է ներկը հետ բաժանել իր բաղադրիչների, իսկ ներկը խառնելը հեշտ է, բաժանելը՝ համարյա անհնար։ *[pause 1.5 s]*
 
-**10. math.** Իրականում ներկի փոխարեն թվեր են, և ներկը միայն համեմատություն է։ Խառնելը թիվն աստիճան բարձրացնելն է և մեծ պարզ թվի վրա բաժանելիս մնացորդը վերցնելը։ Դա անել հեշտ է, իսկ հետ գնալու, այսինքն՝ աստիճանը գտնելու գործնական արագ եղանակ ճիշտ ընտրված մեծ թվերի համար սովորական համակարգիչներով հայտնի չէ։
+**10. math.** Իրականում ներկի փոխարեն թվեր են, և ներկը միայն համեմատություն է։ Խառնելը թիվն աստիճան բարձրացնելն է և մեծ պարզ թվի բաժանելիս մնացորդը վերցնելը։ Դա անել հեշտ է, իսկ հետ գնալու, այսինքն՝ աստիճանը գտնելու գործնական արագ եղանակ ճիշտ ընտրված մեծ թվերի համար սովորական համակարգիչներով հայտնի չէ։
 
 **11. toy.** Փոքր օրինակ՝ ընդհանուր թվերը 5 և 23 են, Անիի գաղտնիքը՝ 6, Արամինը՝ 15։ Անին ուղարկում է 8, Արամը՝ 19, և երկուսն էլ հաշվում են նույն գաղտնի թիվը՝ 2։ *[pause 2 s]*
 

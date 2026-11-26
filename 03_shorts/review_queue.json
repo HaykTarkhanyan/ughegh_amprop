@@ -118,8 +118,8 @@
               ]
             },
             {
-              "id": "A11-42bf53",
-              "title": "Approve: Showcase 1: Public-key crypto explained with paint mixing (crypto_paint, 13 beats, ~2:36, script 42bf53)",
+              "id": "A11-777760",
+              "title": "Approve: Showcase 1: Public-key crypto explained with paint mixing (crypto_paint, 13 beats, ~2:35, script 777760)",
               "exclusive": "crypto_paint",
               "note": "Agreeing a key in public: paint analogy (yellow + secret red / blue); Eva cannot unmix; numbers instead of paint, no known practical fast way back; toy numbers; authentication still needed.",
               "detail": [
@@ -127,7 +127,16 @@
               ]
             },
             {
-              "id": "A12-7656ac",
+              "id": "A12-e0eef2",
+              "title": "Approve: Long video: How strangers agree on a secret in public (16:9, paint and clocks) (crypto_long, 20 beats, ~5:01, script e0eef2)",
+              "exclusive": "crypto_long",
+              "note": "Second long video (16:9): how strangers agree a secret in public: paint first, then clock arithmetic and the real exchange with 5 and 23 (both get 2); GCHQ had it first; Eva in the middle and certificates; quantum computers and the new exchanges.",
+              "detail": [
+                "Open: LQ1 narrator, LQ2 keep all three limits?, LQ3 the Short, LQ4 terms, LQ5 publishing slot"
+              ]
+            },
+            {
+              "id": "A13-7656ac",
               "title": "Approve: Why yawning is contagious (yawning, 9 beats, ~1:49, script 7656ac)",
               "exclusive": "yawning",
               "note": "About half catch a yawn; the oxygen idea failed; cooling theory; kin > strangers vs the null result; honestly, we do not know; how many times did you yawn?",
@@ -136,7 +145,7 @@
               ]
             },
             {
-              "id": "A13-f0aaab",
+              "id": "A14-f0aaab",
               "title": "Approve: Why the week has 7 days (week_seven, 9 beats, ~2:02, script f0aaab)",
               "exclusive": "week_seven",
               "note": "Sky gives day, month, year, not the week; the continuous week does not follow the Moon; Sabbath week (Armenian day names); planet days; 24 mod 7 draws the star; Soviet weeks failed.",
@@ -145,7 +154,7 @@
               ]
             },
             {
-              "id": "A14-489b49",
+              "id": "A15-489b49",
               "title": "Approve: Short 4: Regression to the mean (why praise seems to \"fail\" and punishment seems to \"work\") (regression, 11 beats, ~2:23, script 489b49)",
               "exclusive": "regression",
               "note": "Kahneman's flight instructors; 1,000 simulated students: best 92 -> 82, worst 47 -> 59, and backwards; regression to the mean; a randomised comparison is the check.",
@@ -154,7 +163,7 @@
               ]
             },
             {
-              "id": "A15-3e8edd",
+              "id": "A16-3e8edd",
               "title": "Approve: The toothless man from Dmanisi (the oldest evidence of compassion?) (dmanisi, 9 beats, ~1:47, script 3e8edd)",
               "exclusive": "dmanisi",
               "note": "Toothless man near Armenia; the 'someone fed him' story vs what the bone shows; a toothless bonobo; soft food, adaptation and help may all have played a part.",
@@ -163,7 +172,7 @@
               ]
             },
             {
-              "id": "A16-afa968",
+              "id": "A17-afa968",
               "title": "Approve: The IKEA effect (why you value furniture you built yourself more) (ikea_effect, 7 beats, ~1:23, script afa968)",
               "exclusive": "ikea_effect",
               "note": "Builders pay 63% more for their own box; crooked origami frogs; only if finished; it becomes 'my box'; maybe the same elsewhere (not measured); ask someone who did not build it.",
@@ -172,7 +181,7 @@
               ]
             },
             {
-              "id": "A17-f98ea2",
+              "id": "A18-f98ea2",
               "title": "Approve: Why small kids get glued to CoComelon-style TV (kids_tv, 11 beats, ~2:45, script f98ea2)",
               "exclusive": "kids_tv",
               "note": "Plausible mechanisms: the orienting reflex, bright fast shows, repetition; attention follows understanding; the 2011 study and the later fantastical-content experiments; WHO: no sedentary screens under 2, 1 hour at 2-4.",
@@ -181,7 +190,7 @@
               ]
             },
             {
-              "id": "A18-5b83ab",
+              "id": "A19-5b83ab",
               "title": "Approve: Short 3: Simpson's paradox (\"better in every group, worse overall\") (simpson, 12 beats, ~2:29, script 5b83ab)",
               "exclusive": "simpson",
               "note": "Kidney stones: 78% vs 83% overall, higher in both groups; who got which treatment; the weighted average with the division by 350; Berkeley's six departments; compare like with like, no causal proof.",
@@ -190,7 +199,7 @@
               ]
             },
             {
-              "id": "A19-2f3bd2",
+              "id": "A20-2f3bd2",
               "title": "Approve: Why a minute has 60 seconds (minute_60, 6 beats, ~1:38, script 2f3bd2)",
               "exclusive": "minute_60",
               "note": "A real 10-hour French clock; base 60 is ancient (why, unknown); count to 60 on your hands; 60 divides well; minuta / secunda; why decimal time failed, we do not know for sure.",
@@ -199,7 +208,7 @@
               ]
             },
             {
-              "id": "A20-10fa6a",
+              "id": "A21-10fa6a",
               "title": "Approve: Why a wheeled suitcase is easier than a backpack (luggage_wheels, 7 beats, ~1:40, script 10fa6a)",
               "exclusive": "luggage_wheels",
               "note": "Zero work on the load, yet you sweat: muscles use energy to hold a load, and walking lifts it each step; wheels take both away on a smooth floor; 'work is zero, energy is not'.",
@@ -208,7 +217,7 @@
               ]
             },
             {
-              "id": "A21-6cd7b0",
+              "id": "A22-6cd7b0",
               "title": "Approve: Short 5: Why waiting feels longer than it is, and how airports and Disney hide wait times (waiting, 8 beats, ~2:05, script 6cd7b0)",
               "exclusive": "waiting",
               "note": "The same 8 minutes feel long or short; the Houston story (unverified); Maister's rules; Disney's posted waits; waiting is partly the clock, partly the feeling.",
@@ -217,7 +226,7 @@
               ]
             },
             {
-              "id": "A22-ff2590",
+              "id": "A23-ff2590",
               "title": "Approve: Showcase 3: Why the QWERTY layout won (messier than the \"made to slow typists down\" myth) (qwerty, 8 beats, ~1:50, script ff2590)",
               "exclusive": "qwerty",
               "note": "Not made to slow typists: telegraph operators shaped it, Remington built it, every new machine inherited it, down to the Armenian phonetic layout.",
@@ -314,84 +323,91 @@
               "detail": []
             },
             {
-              "id": "C11-42bf53",
-              "title": "Needs changes: Showcase 1: Public-key crypto explained with paint mixing (crypto_paint, 13 beats, ~2:36, script 42bf53)",
+              "id": "C11-777760",
+              "title": "Needs changes: Showcase 1: Public-key crypto explained with paint mixing (crypto_paint, 13 beats, ~2:35, script 777760)",
               "exclusive": "crypto_paint",
               "note": "Leave comments on crypto_paint/PLAN.html",
               "detail": []
             },
             {
-              "id": "C12-7656ac",
+              "id": "C12-e0eef2",
+              "title": "Needs changes: Long video: How strangers agree on a secret in public (16:9, paint and clocks) (crypto_long, 20 beats, ~5:01, script e0eef2)",
+              "exclusive": "crypto_long",
+              "note": "Leave comments on crypto_long/PLAN.html",
+              "detail": []
+            },
+            {
+              "id": "C13-7656ac",
               "title": "Needs changes: Why yawning is contagious (yawning, 9 beats, ~1:49, script 7656ac)",
               "exclusive": "yawning",
               "note": "Leave comments on yawning/PLAN.html",
               "detail": []
             },
             {
-              "id": "C13-f0aaab",
+              "id": "C14-f0aaab",
               "title": "Needs changes: Why the week has 7 days (week_seven, 9 beats, ~2:02, script f0aaab)",
               "exclusive": "week_seven",
               "note": "Leave comments on week_seven/PLAN.html",
               "detail": []
             },
             {
-              "id": "C14-489b49",
+              "id": "C15-489b49",
               "title": "Needs changes: Short 4: Regression to the mean (why praise seems to \"fail\" and punishment seems to \"work\") (regression, 11 beats, ~2:23, script 489b49)",
               "exclusive": "regression",
               "note": "Leave comments on regression/PLAN.html",
               "detail": []
             },
             {
-              "id": "C15-3e8edd",
+              "id": "C16-3e8edd",
               "title": "Needs changes: The toothless man from Dmanisi (the oldest evidence of compassion?) (dmanisi, 9 beats, ~1:47, script 3e8edd)",
               "exclusive": "dmanisi",
               "note": "Leave comments on dmanisi/PLAN.html",
               "detail": []
             },
             {
-              "id": "C16-afa968",
+              "id": "C17-afa968",
               "title": "Needs changes: The IKEA effect (why you value furniture you built yourself more) (ikea_effect, 7 beats, ~1:23, script afa968)",
               "exclusive": "ikea_effect",
               "note": "Leave comments on ikea_effect/PLAN.html",
               "detail": []
             },
             {
-              "id": "C17-f98ea2",
+              "id": "C18-f98ea2",
               "title": "Needs changes: Why small kids get glued to CoComelon-style TV (kids_tv, 11 beats, ~2:45, script f98ea2)",
               "exclusive": "kids_tv",
               "note": "Leave comments on kids_tv/PLAN.html",
               "detail": []
             },
             {
-              "id": "C18-5b83ab",
+              "id": "C19-5b83ab",
               "title": "Needs changes: Short 3: Simpson's paradox (\"better in every group, worse overall\") (simpson, 12 beats, ~2:29, script 5b83ab)",
               "exclusive": "simpson",
               "note": "Leave comments on simpson/PLAN.html",
               "detail": []
             },
             {
-              "id": "C19-2f3bd2",
+              "id": "C20-2f3bd2",
               "title": "Needs changes: Why a minute has 60 seconds (minute_60, 6 beats, ~1:38, script 2f3bd2)",
               "exclusive": "minute_60",
               "note": "Leave comments on minute_60/PLAN.html",
               "detail": []
             },
             {
-              "id": "C20-10fa6a",
+              "id": "C21-10fa6a",
               "title": "Needs changes: Why a wheeled suitcase is easier than a backpack (luggage_wheels, 7 beats, ~1:40, script 10fa6a)",
               "exclusive": "luggage_wheels",
               "note": "Leave comments on luggage_wheels/PLAN.html",
               "detail": []
             },
             {
-              "id": "C21-6cd7b0",
+              "id": "C22-6cd7b0",
               "title": "Needs changes: Short 5: Why waiting feels longer than it is, and how airports and Disney hide wait times (waiting, 8 beats, ~2:05, script 6cd7b0)",
               "exclusive": "waiting",
               "note": "Leave comments on waiting/PLAN.html",
               "detail": []
             },
             {
-              "id": "C22-ff2590",
+              "id": "C23-ff2590",
               "title": "Needs changes: Showcase 3: Why the QWERTY layout won (messier than the \"made to slow typists down\" myth) (qwerty, 8 beats, ~1:50, script ff2590)",
               "exclusive": "qwerty",
               "note": "Leave comments on qwerty/PLAN.html",
