@@ -63,7 +63,7 @@ NOTES = {
     "crypto_paint": ("Agreeing a key in public: paint analogy (yellow + secret red / blue); Eva cannot unmix; numbers instead of "
                      "paint, no known practical fast way back; toy numbers; authentication still needed.", "Open: U-p terms, U-q discrete logarithm, «գործնականում անհնար» (X44)"),
     "crypto_long": ("Second long video (16:9): how strangers agree a secret in public: paint first, then clock arithmetic and the real exchange with 5 and 23 (both get 2); GCHQ had it first; Eva in the middle and certificates; quantum computers and the new exchanges.",
-                    "Open: LQ1 narrator, LQ2 keep all three limits?, LQ3 the Short, LQ4 terms, LQ5 publishing slot"),
+                    "Decided: TTS voice, all three limits, Short kept, later slot. Open: LQ4 terms"),
     "yawning": ("About half catch a yawn; the oxygen idea failed; cooling theory; kin > strangers vs the null result; honestly, "
                 "we do not know; how many times did you yawn?", "Open: U-dd «վարակվել», U-ee the comment call-to-action"),
     "week_seven": ("Sky gives day, month, year, not the week; the continuous week does not follow the Moon; Sabbath week (Armenian "

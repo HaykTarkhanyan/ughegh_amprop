@@ -136,6 +136,15 @@ Armenian lint: 0 errors, 0 hints (2026-11-26).
 - **Reused from the zero-knowledge video:** backdrop, labels, check marks, the landscape caption profile, the timeline
   loader and the cue checks (`render/src/zk/timeline.ts`).
 
+## Answers (Hayk, 2026-11-26)
+
+- **LQ1:** Sadaltager TTS narrates (not Hayk). Voicing waits for the script approval (Q17); about $0.07 for the
+  whole script.
+- **LQ2:** keep all three limits (history, man in the middle, quantum).
+- **LQ3:** `crypto_paint` stays as the Short and links to this video.
+- **LQ5:** published later, not straight after the zero-knowledge video.
+- Open: LQ4 (terms).
+
 ## Questions for Hayk
 
 - **LQ1, narrator:** you narrated the zero-knowledge long video. This one too (one take, free reading, through
