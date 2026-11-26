@@ -5,11 +5,12 @@
 // Hayk's recording (tools/import_recording.py).
 import React from "react";
 import { Audio } from "@remotion/media";
-import { AbsoluteFill, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import TL from "../data/zero_knowledge_short.json";
 import { C, FONT, easeInOut, lerp, pop, ramp } from "../theme";
 import { Backdrop, CheckMark } from "./common";
 import { Blur, CaseCard, Envelope, Phone, Row } from "./Story";
+import { PortraitCaptions } from "../series/captions";
 import { loadTimeline } from "./timeline";
 import { WALDO_T, WaldoScene, WaldoTimes } from "./Waldo";
 
@@ -137,23 +138,6 @@ const Takeaway9: React.FC<{ dur: number }> = ({ dur }) => {
   );
 };
 
-// captions in the portrait band (box x 200-880, bottom at y 1245; v2 style: size x 0.82, weight 650, soft shadow)
-const Captions9: React.FC = () => {
-  const t = useT();
-  const P = S.pages;
-  const i = P.findIndex((p, k) => t >= p.start - 0.05 && t < (P[k + 1] ? Math.min(P[k + 1].start - 0.05, p.end + 0.5) : S.duration + TAIL_S - 0.3));
-  if (i < 0) return null;
-  const page = P[i];
-  const pop9 = interpolate(t, [page.start - 0.05, page.start + 0.08], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  return (
-    <div style={{ position: "absolute", left: 200, width: 680, bottom: 1920 - 1245, textAlign: "center", opacity: pop9 }}>
-      {page.words.map((w, k) => (
-        <span key={k} style={{ display: "inline-block", margin: "0 12px", fontFamily: FONT, fontSize: page.size * 0.82, fontWeight: 650, lineHeight: 1.15, color: t >= w.start && t < w.end ? C.orange : C.ink, textShadow: "0 2px 3px rgba(0,0,0,0.9), 0 4px 20px rgba(0,0,0,0.85)" }}>{w.w}</span>
-      ))}
-    </div>
-  );
-};
-
 type G = { key: string; render: (dur: number) => React.ReactNode };
 const GROUPS: G[] = [
   { key: "gossip", render: () => {
@@ -193,7 +177,7 @@ export const ZkShort: React.FC = () => (
         </Sequence>
       );
     })}
-    <Captions9 />
+    <PortraitCaptions pages={S.pages} end={S.duration + TAIL_S} />
     <Audio src={staticFile(`zero_knowledge_short/${S.audio}`)} />
   </AbsoluteFill>
 );

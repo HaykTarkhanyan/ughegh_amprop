@@ -2,6 +2,14 @@
 
 Newest at the top.
 
+## 28. Scripts are reviewed as full draft videos, voiced with the real TTS voice, in publishing order
+
+- **Date / status:** 2026-11-27, active (replaces "the script is approved before the voice is made", Q17)
+- **Decision:** Each unapproved script gets a full draft video (Sadaltager voice, timeline, the full animation, a render) that Hayk reviews together with the script; after approval the final voice goes in (Hayk's own recording for the zero-knowledge pair, otherwise the same voice, so an unchanged script needs no second voice build) and the animation re-times itself to it. Drafts are made in the publishing order (own_voice first).
+- **Why:** Hayk, Q32-Q33: "it would be nice to kind of have the full video to review ... confirm the script and everything, animations and so on, and then we do the full build". The voice is the cheap part (about $0.02-0.05 per Short, own_voice cost $0.022); the cost of a build is the animation work and the render, so drafting with the real voice keeps the draft's pacing equal to the final one.
+- **Alternatives rejected:** a free voice for drafts (Azure's free Armenian neural voices, or the Gemini free tier one call per video): free, but a different voice mistimes every pause and would need a second build anyway; approving scripts as text first (the old Q17 rule): Hayk wants to judge script and picture together.
+- **What would change this:** drafts often being thrown away after review (then a cheaper animatic stage before the full animation); voice prices rising enough to matter.
+
 ## 27. Publishing: all four platforms as «Ուղեղ Ամպրոպ»; Meta through its API, TikTok and YouTube through a supervised Playwright co-pilot
 
 - **Date / status:** 2026-11-26, active, revisited the same day (supersedes "uploaded by hand" in #19)

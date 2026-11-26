@@ -28,3 +28,4 @@ node_modules/
 03_shorts/*/audio/original/
 03_shorts/*/audio/recording.wav
 03_shorts/zero_knowledge_short/audio/*.wav
+03_shorts/*/audio/*.wav

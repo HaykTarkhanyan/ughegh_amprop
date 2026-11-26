@@ -15,8 +15,8 @@ that led here: `../_knowledge/short_videos/lit_review.md`.
   all four voices tried; the "natural, over coffee" prompt was second). Test pages: `voice_test/`.
 - **Honesty:** say what is a story and what is data. The Wald bomber story is told as «Պատմում են, որ ...» and the
   red-dot plane carries «նկարազարդում» (it is a 2021 illustration, not wartime data).
-- **Script review:** Hayk did not need to see the first script; from the second short on, he checks the script
-  before the voice is made.
+- **Script review (DECISIONS #28):** each script is reviewed as a full draft video (real TTS voice, full animation);
+  after approval the final voice goes in and the animation re-times itself. Drafts follow the publishing order.
 
 ## Script rules (from the two Fable reviews, DECISIONS.md #22)
 
