@@ -72,3 +72,13 @@ datetime,model,voice,chars,tokens_in,tokens_audio,audio_s,usd_est,out
 2026-11-27T00:07:06,gemini-3.8-flash-tts,Sadaltager,140,59,208,8.3,0.00190,practice.wav
 2026-11-27T00:07:09,gemini-3.8-flash-tts,Sadaltager,93,46,149,5.9,0.00136,takeaway.wav
 2026-11-27T00:22:24,gemini-3.8-flash-tts,Sadaltager,620,342,958,38.3,0.00879,real.wav
+2026-11-27T00:23:14,gemini-3.8-flash-tts,Sadaltager,73,47,143,5.7,0.00131,hook.wav
+2026-11-27T00:23:18,gemini-3.8-flash-tts,Sadaltager,81,58,168,6.7,0.00154,choice.wav
+2026-11-27T00:23:21,gemini-3.8-flash-tts,Sadaltager,56,37,125,5.0,0.00114,medium.wav
+2026-11-27T00:23:25,gemini-3.8-flash-tts,Sadaltager,169,102,350,14.0,0.00320,gift.wav
+2026-11-27T00:23:30,gemini-3.8-flash-tts,Sadaltager,165,92,284,11.3,0.00260,name.wav
+2026-11-27T00:23:38,gemini-3.8-flash-tts,Sadaltager,270,159,638,25.5,0.00582,economist.wav
+2026-11-27T00:23:43,gemini-3.8-flash-tts,Sadaltager,226,138,444,17.7,0.00407,why.wav
+2026-11-27T00:23:47,gemini-3.8-flash-tts,Sadaltager,172,92,281,11.2,0.00258,everywhere.wav
+2026-11-27T00:23:53,gemini-3.8-flash-tts,Sadaltager,312,158,518,20.7,0.00474,limits.wav
+2026-11-27T00:23:57,gemini-3.8-flash-tts,Sadaltager,119,67,223,8.9,0.00204,takeaway.wav

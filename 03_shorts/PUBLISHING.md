@@ -9,12 +9,12 @@ group `t.me/ugheghamprop`. All four platforms at launch, with the zero-knowledge
 Official APIs everywhere, because they are free and reliable (Hayk, 2026-11-26: "APIs are also fine I don't care as
 long as its free and reliable"); the Playwright co-pilot is only a bridge while an API is not usable yet.
 
-| Platform | Route | Status |
+| Platform | Route | What the research found (2026-11-27, `../_knowledge/short_videos/publishing_research_2026-11-26.md`) |
 |---|---|---|
-| Instagram (Reels) | Meta Content Publishing API from a small Python tool (to build) | usable at once: own professional account, Standard Access, no app review |
-| Facebook Page (Reels and the long video) | Meta Graph API, same tool | usable at once |
-| YouTube (Shorts and the long video) | YouTube Data API upload (free; default 10,000 units a day, an upload costs 100 units by the current reference, older docs say 1600: either way enough) | test the first upload: older docs say uploads from an unaudited project stay private until a free compliance audit; if so, apply and bridge with the co-pilot |
-| TikTok | Content Posting API (free; no per-call price published) | posts stay private until TikTok's audit of the app; until then the co-pilot on TikTok Studio, or the API's upload-to-inbox flow if it is allowed before the audit (to check), with Hayk pressing post in the app |
+| Instagram (Reels) | Meta Content Publishing API from `tools/publish.py` (to build) | Reels 3 s to 15 min, at most 300 MB; `is_ai_generated=true` sets "AI info". **The Meta app must be switched to Live:** in Development mode, posts it makes are visible only to people with a role on the app (check from a logged-out browser). Keep captions to 5 hashtags (a cap is rolling out) |
+| Facebook Page | Meta Graph API, same tool | The Reels endpoint takes **3 to 90 s only**, with the AI flag. Longer Shorts (most of ours: 1:40-2:50) and the long videos go through `/{page-id}/videos`, which documents no AI flag: label them by hand in Business Suite, or test Instagram's "share to Facebook" (whether the shared copy keeps the label: unverified). How a `/videos` upload shows on the Page is undocumented: one test post |
+| YouTube | YouTube Data API from the same tool | Free; each upload is 1 unit in its own bucket (100 a day). **Since 2026-11-02 unaudited uploads are no longer forced private, and an omitted `status.privacyStatus` now means public**: the tool always sends it (`private` + `publishAt` to schedule). Since 2026-11-16 `hasPaidProductPlacement` must be sent (`false`). OAuth: the new "Personal" app audience avoids the 7-day token expiry of "Testing" (whether it works for a Brand Account channel: test). Shorts up to 3 min, but a Short over 1 min with any Content ID claim is blocked. The "Related video" link cannot be set by API (manual, needs advanced features) |
+| TikTok | **Not the official API**: TikTok's Content Sharing Guidelines say "Not acceptable: A utility tool to help upload contents to the account(s) you or your team manages", and App Review rejects apps "for private or personal use" (checked on TikTok's page 2026-11-27) | Route to choose (Q34): TikTok Studio's own scheduler by hand (up to 10 days ahead), the Playwright co-pilot on it, or a scheduler service whose public app TikTok approved. Every account can post 3 min; 5-10 min only for some (`max_video_post_duration_sec`) |
 
 The co-pilot (Playwright on TikTok Studio / YouTube Studio) fills the file, caption, AI label and schedule, then stops
 for Hayk to press the final button. Driving these websites by script is against the letter of their terms, so it
@@ -37,6 +37,11 @@ Every Short with a long companion says so in the video and links it on each plat
   bio link (or one of its link slots) points to it; the long video can also go up on Instagram itself.
 - **TikTok:** caption links are not clickable; a pinned comment and the profile link point to it, and TikTok also
   takes long horizontal uploads, so the long video can be posted there as well.
+
+**AI label rules found (2026-11-27):** Meta requires the label for "realistic-sounding audio that was digitally
+created" (high); YouTube does not require it for a voice that is not a real person's, and has `containsSyntheticMedia`
+if we want it (medium); TikTok's own text says realistic audio must be labelled, third-party guides say generic TTS is
+exempt (conflicting). Hayk's rule (Q31) labels every TTS video anyway.
 
 **AI label:** videos with the TTS narrator (`narrator: gemini-tts` in the manifest) get each platform's label
 (TikTok's AI-generated content toggle, Meta's `is_ai_generated` / "AI info", YouTube's altered or synthetic content
@@ -77,6 +82,15 @@ which `ugheghamprop` satisfies.
 4. Per video: Armenian caption, hashtags, the link to the long video for the Shorts, the photo credits
    (`<short>/assets/credits.txt`), chosen from one metadata file per episode.
 5. Apply for the TikTok Content Posting API audit (and the YouTube API audit) once the accounts are live.
+
+## Money and links (research, 2026-11-27)
+
+- **YouTube Partner Program:** available in Armenia since 2026-05-11, the full tier only (1,000 subscribers), not the
+  500-subscriber tier (high).
+- **TikTok Creator Rewards:** Armenia is not listed (medium-high). **Facebook / Instagram programs:** official lists
+  could not be loaded (low).
+- **Bio links:** TikTok needs 1,000 followers or a Business account for a clickable bio link; an Instagram bio holds 5
+  links; Instagram caption links are not clickable (outside a paid Meta Verified test).
 
 ## Open
 

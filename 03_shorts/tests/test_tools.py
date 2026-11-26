@@ -140,6 +140,22 @@ class Captions(unittest.TestCase):
         self.assertEqual(build_timeline.page_size(w), build_timeline.P["px"])
 
 
+class Snap(unittest.TestCase):
+    """A pause that would squeeze words into an impossible time is not used as an anchor (2026-11-27)."""
+
+    def test_squeezing_anchor_is_dropped(self):
+        words = build_timeline.word_times("մեկ երկու, և էֆեկտը չգտավ։ Այս փորձերում", 0.0, 6.0)
+        # a real pause after «երկու,» and a fake dip 0.15 s later, right after «չգտավ։»
+        out, n = build_timeline.snap(words, [(1.0, 1.6), (1.75, 1.8)])
+        squeezed = [w for w in out if w["w"] in ("և", "էֆեկտը", "չգտավ։")]
+        self.assertGreater(squeezed[-1]["end"] - squeezed[0]["start"], 0.5)
+
+    def test_good_anchors_kept(self):
+        words = build_timeline.word_times("մեկ երկու, երեք չորս։", 0.0, 3.0)
+        out, n = build_timeline.snap(words, [(1.2, 1.5)])
+        self.assertEqual(n, 1)
+
+
 class Numbers(unittest.TestCase):
     """X6: decimals keep their places."""
 

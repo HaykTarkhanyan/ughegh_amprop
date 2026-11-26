@@ -60,6 +60,7 @@ FPS = 30
 PAUSE_RMS = 10 ** (-35 / 20) * 32768        # -35 dBFS, as in ffmpeg silencedetect noise=-35dB
 MIN_PAUSE_S = 0.08                          # shorter dips are gaps between sounds, not pauses
 SNAP_TOL_S = 0.8                            # how far a predicted word boundary may move onto a real pause
+MIN_S_PER_UNIT = 0.035                      # half the normal pace (~0.07 s per spoken letter at 870 chars/min)
 
 
 class CaptionError(ValueError):
@@ -158,6 +159,19 @@ def snap(words, pauses):
         if anchors[i][0] > last_end:
             keep.append(i)
             last_end = anchors[i][1]
+    # An anchor that leaves the words before it less than MIN_S_PER_UNIT per spoken letter is a wrong match (a dip
+    # inside speech, not the pause after those words): drop it and re-check. 2026-11-27: «և էֆեկտը չգտավ։» got 0.17 s.
+    changed = True
+    while changed:
+        changed = False
+        a, t = 0, words[0]["start"]
+        for idx, i in enumerate(keep):
+            units = sum(weight(w["w"]) for w in words[a:i + 1])
+            if anchors[i][0] - t < MIN_S_PER_UNIT * units:
+                keep.pop(idx)
+                changed = True
+                break
+            t, a = anchors[i][1], i + 1
     out, a, t = [], 0, words[0]["start"]
     for i in keep + [n - 1]:
         seg_end = anchors[i][0] if i < n - 1 else words[-1]["end"]
