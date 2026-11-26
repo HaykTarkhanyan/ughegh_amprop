@@ -22,7 +22,7 @@ Yerevan pavements still favour the backpack. The close: the textbook says zero; 
 
 <!-- script:start -->
 
-7 beats, 1,270 characters (1,270 with numbers spelled out): ~88 s of speech, ~1:40 with pauses and the end tail, 10.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
+7 beats, 1,293 characters (1,293 with numbers spelled out): ~89 s of speech, ~1:42 with pauses and the end tail, 10.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Ըստ դասագրքի՝ հարթ ճանապարհին ուսապարկ տանելը զրո աշխատանք է։ Ուրեմն ինչո՞ւ ես քրտնում, իսկ անիվներով ճամպրուկը գրեթե չես զգում։ *[pause 1 s]*
 
@@ -30,7 +30,7 @@ Yerevan pavements still favour the backpack. The close: the textbook says zero; 
 
 **3. two_things.** Բայց դասագրքի «աշխատանքը» և մարմնի ծախսած էներգիան տարբեր բաներ են։ Մկաններն էներգիա են ծախսում, նույնիսկ երբ ուղղակի պահում են բեռը՝ առանց այն շարժելու։ Ծանր պայուսակը մեկնած ձեռքով մեկ րոպե պահիր, և կզգաս։ *[pause 1.5 s]*
 
-**4. body.** Իսկ քայլելիս ավելանում է ևս մեկ բան։ Ամեն քայլի ժամանակ մի փոքր իջնում ու բարձրանում ես, և ոտքերի մկաններն ամեն անգամ նորից բարձրացնում են քեզ ու ուսապարկը։ Չափումները ցույց են տալիս՝ բեռը մեծացնելիս էներգիայի ծախսն աճում է գրեթե համամասնորեն։ *[pause 3 s]*
+**4. body.** Իսկ քայլելիս ավելանում է ևս մեկ բան։ Ամեն քայլի ժամանակ մի փոքր իջնում ու բարձրանում ես, և ոտքերի մկաններն ամեն անգամ նորից բարձրացնում են քեզ ու ուսապարկը։ Չափումները ցույց են տալիս՝ ուսապարկի ամեն ավելորդ կիլոգրամն ավելացնում է մոտավորապես նույնքան լրացուցիչ ջանք։ *[pause 3 s]*
 
 **5. wheels.** Անիվը երկուսն էլ քեզնից վերցնում է։ Չորս անիվով ճամպրուկի ամբողջ քաշը պահում է հատակը, երկու անիվով թեքվածինը՝ մեծ մասը, և այն չի բարձրանում ու իջնում քո քայլերի հետ։ Հարթ հատակին այն քաշելու համար պետք է ուժ, որ նրա քաշի ընդամենը մի քանի տոկոսն է։ *[pause 1.5 s]*
 
@@ -98,3 +98,9 @@ Fixes by finding ID (CODEX_REVIEW.md):
   takes both away; "the floor carries the weight" is said for a four-wheel case, and a tilted two-wheel case only
   takes most of it. The closing says the screen line: «Աշխատանքը զրո է, էներգիան՝ ոչ».
 - Pauses now 10.5 s, the longest still on the walking showcase (`body`, 3 s).
+
+## Source check (2026-11-27, `../../_knowledge/short_videos/fact_sources_2026-11-26.md`)
+
+- **Load carriage (partly supported, fixed):** the extra energy rises roughly linearly with backpack load (about
+  7.6 W per kg, PMC3922835); the Army review says "increases progressively" and that where the load sits matters.
+  The voice now says each extra kilo adds about the same extra effort.

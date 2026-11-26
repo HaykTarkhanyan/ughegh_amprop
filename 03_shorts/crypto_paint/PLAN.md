@@ -18,7 +18,7 @@ to be Aram.
 
 <!-- script:start -->
 
-14 beats, 2,196 characters (2,226 with numbers spelled out): ~152 s of speech, ~2:45 with pauses and the end tail, 9.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
+14 beats, 2,214 characters (2,244 with numbers spelled out): ~154 s of speech, ~2:46 with pauses and the end tail, 9.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Ինչպե՞ս պայմանավորվել գաղտնի բանալու շուրջ, եթե ձեր զրույցը լսում է ամբողջ աշխարհը։ Դու դա անում ես գրեթե ամեն անգամ, երբ կայք ես բացում ապահով կապով։
 
@@ -44,7 +44,7 @@ to be Aram.
 
 **12. today.** Այսօր այս փոխանակման տարբերակներն օգտագործվում են կայքերի ապահով կապում և մեսենջերներում։ Մի կարևոր մանրուք՝ պետք է նաև համոզված լինես, որ խոսում ես իսկական Արամի հետ, ոչ թե Եվայի, որը ձևանում է նրան։ Դրա համար կայքերն ունեն վկայականներ։
 
-**13. long_pointer.** Իսկ ով էր սա գտել առաջինը և 20 տարուց ավելի գաղտնի պահել, և ինչ կանեն քվանտային համակարգիչները, տե՛ս երկար տեսանյութում։ *[pause 1 s]*
+**13. long_pointer.** Իսկ ով էր այս գաղափարին հասել ավելի վաղ և այն 20 տարուց ավելի գաղտնի պահել, և ինչ կանեն քվանտային համակարգիչները, տե՛ս երկար տեսանյութում։ *[pause 1 s]*
 
 **14. takeaway.** Բաց զրույցով կարելի է ստանալ ընդհանուր գաղտնիք, եթե կա գործողություն, որն անել հեշտ է, իսկ հետ դարձնել՝ գործնականում անհնար։ Ինչպես ներկը խառնելը։
 
@@ -57,7 +57,7 @@ classic Alice, Bob, Eve).
 
 - **Diffie & Hellman, 1976** ("New Directions in Cryptography", IEEE Trans. Information Theory).
 - **GCHQ first:** James Ellis proposed "non-secret encryption" in 1970 (some sources say 1969), Clifford Cocks
-  described what is essentially RSA in 1973, Malcolm Williamson a Diffie-Hellman-like key exchange in 1974; made public
+  described what is essentially RSA in 1973, Malcolm Williamson a three-pass scheme in 1974 and the Diffie-Hellman exchange itself in 1976 (source check 2026-11-27); made public
   in December 1997 (Cocks's talk on 18 Dec 1997). Ellis died on 25 Nov 1997, a month before the announcement. Sources:
   GCHQ biography of Williamson, Schneier's "The Secret Story of Nonsecret Encryption" (1998), NSA/defense.gov Diffie
   profile.
@@ -116,3 +116,8 @@ saying go watch long one here"): a new beat `long_pointer` before the closing na
 GCHQ secret history, quantum computers) and shows the '▶ երկար տեսանյութ' pill. The platform links are in
 `../PUBLISHING.md` ("Shorts point to their long video"). GCHQ: Ellis 1970 to publication in 1997 is 27 years,
 Williamson 1974 to 1997 is 23, so «20 տարուց ավելի».
+
+## Source check (2026-11-27, `../../_knowledge/short_videos/fact_sources_2026-11-26.md`)
+
+- **GCHQ:** the pointer now says the *idea* was reached earlier and kept secret for 20+ years (Ellis 1970 to 1997);
+  the exchange itself came at GCHQ about the same time as Diffie and Hellman (1976).

@@ -125,3 +125,7 @@ interpretation. *Checked*: what was actually read; "secondary" means a summary o
 | reform | Webster's dictionaries spread 'color' | general knowledge | data | unverified |
 | reform | old books becoming harder to read is one argument against reform | reform debate (no source recorded) | argument | voiced as an argument, not an outcome |
 | armenian | Armenian spelling is much closer to pronunciation, not fully | Wikipedia 'History of the Armenian alphabet' | data | secondary only |
+
+## Source check (2026-11-27, `../../_knowledge/short_videos/fact_sources_2026-11-26.md`)
+
+- **Webster (supported):** his dictionaries spread the shorter American spellings such as "color".

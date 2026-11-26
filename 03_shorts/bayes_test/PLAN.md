@@ -178,3 +178,7 @@ interpretation. *Checked*: what was actually read; "secondary" means a summary o
 | rarer | 1 in 1000 -> about 9% | own calculation | calculation | checked: 1 / (1 + 10) |
 | retest | about 99% after two positives if the errors are independent; 50% if the second test repeats the errors | own calculation (CODEX_REVIEW.md X25) | calculation | checked |
 | retest | HIV positives are confirmed by a set testing procedure | CDC / APHL laboratory algorithm; WHO HIV testing information note 2023 (URLs not recorded) | guideline | secondary; record the URLs |
+
+## Source check (2026-11-27, `../../_knowledge/short_videos/fact_sources_2026-11-26.md`)
+
+- **HIV testing (supported):** CDC / APHL laboratory algorithm (2014, updated 2018) and WHO's 2019 three-test strategy.

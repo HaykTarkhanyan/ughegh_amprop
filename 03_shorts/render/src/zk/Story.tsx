@@ -328,7 +328,7 @@ export const RealScene: React.FC<SceneProps> = ({ dur = 30, m }) => {
           <div style={{ position: "absolute", left: "35%", width: "40%", top: 0, bottom: 0, borderRadius: 20, background: "rgba(242,168,0,0.35)", border: `2px solid ${C.orange}` }} />
         </div>
         <div style={{ fontFamily: FONT, fontSize: 26, fontWeight: 600, color: C.dim, marginTop: 14 }}>միջակայքում է</div>
-        {tag("հրապարակված մեթոդ", bank)}
+        {tag("հրապարակված կոդ", bank)}
       </CaseCard>
       <CaseCard x={710} y={210} t={t} t0={eu} title="ԵՄ՝ տարիքի ստուգում" checked={ramp(t, eu + 2.0, 0.5)} locked>
         <svg width="104" height="104" viewBox="0 0 100 100" style={{ display: "block", margin: "0 auto" }}>
@@ -340,8 +340,8 @@ export const RealScene: React.FC<SceneProps> = ({ dur = 30, m }) => {
         </svg>
         <div style={{ textAlign: "center", fontFamily: FONT, fontSize: 48, fontWeight: 900, color: C.orange, marginTop: 4 }}>18+</div>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginTop: 10, opacity: ramp(t, signed, 0.5) }}>
-          <Blur text="14.03.2001" size={30} />
-          <div style={{ fontFamily: FONT, fontSize: 19, fontWeight: 800, color: C.blue, border: `3px solid ${C.blue}`, borderRadius: 10, padding: "3px 8px", transform: `rotate(-4deg) scale(${Math.min(1, pop(t, signed, 10, 0.5))})` }}>պետության ստորագրություն</div>
+          <span style={{ fontFamily: FONT, fontSize: 28, fontWeight: 800, color: C.ink }}>«18+: այո»</span>
+          <div style={{ fontFamily: FONT, fontSize: 19, fontWeight: 800, color: C.blue, border: `3px solid ${C.blue}`, borderRadius: 10, padding: "3px 8px", transform: `rotate(-4deg) scale(${Math.min(1, pop(t, signed, 10, 0.5))})` }}>ստորագրված</div>
         </div>
         {tag("փորձարկում", eu)}
       </CaseCard>

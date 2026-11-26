@@ -31,7 +31,7 @@ already add). The closing line is the one idea: mixing is easy, unmixing is prac
 
 <!-- script:start -->
 
-20 beats, 3,961 characters (4,143 with numbers spelled out): ~279 s of speech, ~5:01 with pauses and the end tail, 18.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
+20 beats, 3,988 characters (4,170 with numbers spelled out): ~281 s of speech, ~5:03 with pauses and the end tail, 18.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Երբ բացեցիր այս տեսանյութը, քո հեռախոսն ու կայքը պայմանավորվեցին գաղտնի բանալու շուրջ, իսկ նրանց զրույցը կարող էր լսել ցանկացած մեկը։ Ինչպե՞ս կարելի է գաղտնիք ստեղծել՝ խոսելով բոլորի աչքի առաջ։ *[pause 1.5 s]*
 
@@ -63,7 +63,7 @@ already add). The closing line is the one idea: mixing is easy, unmixing is prac
 
 **15. backwards.** Եվան տեսնում է 5, 23, 8 և 19։ Գաղտնի 2-ը ստանալու համար նրան պետք է Անիի 6-ը, այսինքն՝ գտնել, թե քանի անգամ է 5-ը բազմապատկվել, որ ստացվի 8։ Փոքր թվերի դեպքում կարելի է փորձել բոլորը։ Բայց իսկական թվերն ունեն հարյուրավոր թվանշաններ, և ճիշտ ընտրված թվերի համար հետ գնալու գործնական արագ եղանակ սովորական համակարգիչներով հայտնի չէ։ Գործնականում դա անհնար է։ *[pause 1.5 s]*
 
-**16. history.** Հետաքրքիրն այն է, որ նույնը մի քանի տարի առաջ գտել էին բրիտանական գաղտնի ծառայությունում։ Երեք մաթեմատիկոս գրեթե նույն գաղափարներին հասել էին 1970-ականների սկզբին, բայց դա գաղտնի էր մինչև 1997 թվականը։ Գաղափարի հեղինակներից մեկը՝ Ջեյմս Էլիսը, մահացավ հրապարակումից մեկ ամիս առաջ։
+**16. history.** Հետաքրքիրն այն է, որ բաց բանալու գաղափարը բրիտանական գաղտնի ծառայությունում ծնվել էր ավելի վաղ՝ 1970 թվականին, իսկ այս փոխանակումն այնտեղ գտել էին մոտավորապես նույն ժամանակ, ինչ ամերիկացիները։ Բայց այդ ամենը գաղտնի էր մինչև 1997 թվականը։ Գաղափարի հեղինակը՝ Ջեյմս Էլիսը, մահացավ հրապարակումից մեկ ամիս առաջ։
 
 **17. mitm.** Բայց Եվան ունի ավելի պարզ հնարք։ Ներկը բաժանել չի կարողանում, բայց կարող է կանգնել մեջտեղում և Անիի հետ ձևանալ Արամ, իսկ Արամի հետ՝ Անի։ Երկու կողմն էլ կկարծեն, որ գաղտնիք ունեն միմյանց հետ, բայց երկուսն էլ խոսում են Եվայի հետ։ *[pause 1.5 s]*
 
@@ -83,7 +83,7 @@ Armenian lint: 0 errors, 0 hints (2026-11-26).
   https://doi.org/10.1109/TIT.1976.1055638 (checked in OpenAlex). Named on the source line only; Merkle's related work
   could join the plan's notes if Hayk wants the "Diffie-Hellman-Merkle" credit.
 - **GCHQ first:** James Ellis, "non-secret encryption" (1970; some sources 1969); Clifford Cocks, essentially RSA
-  (1973); Malcolm Williamson, a Diffie-Hellman-like exchange (1974); made public in December 1997 (Cocks's talk on
+  (1973); Malcolm Williamson, a three-pass scheme (1974) and the Diffie-Hellman exchange itself (written up 10 Aug 1976); made public in December 1997 (Cocks's talk on
   18 Dec 1997); Ellis died on 25 Nov 1997. From the `crypto_paint` plan: GCHQ's Williamson biography, Schneier's "The
   Secret Story of Nonsecret Encryption" (1998), the NSA / defense.gov Diffie profile.
 - **Toy numbers (computed):** powers of 5 on a 23-hour clock: 5, 2, 10, 4, 20, 8; 5⁶ mod 23 = 8, 5¹⁵ mod 23 = 19,
@@ -156,3 +156,11 @@ Armenian lint: 0 errors, 0 hints (2026-11-26).
 - **LQ4, terms:** «ժամացույցի թվաբանություն» for modular arithmetic, «բրաուզեր» (or «դիտարկիչ»), «վկայական»,
   «քվանտային համակարգիչ»: natural in your mouth?
 - **LQ5, publishing slot:** right after the zero-knowledge video (the same theme twice), or later in the order?
+
+## Source check (2026-11-27, `../../_knowledge/short_videos/fact_sources_2026-11-26.md`)
+
+- **GCHQ (partly supported, fixed):** Ellis January 1970 (the idea), Cocks 20 November 1973, disclosure December 1997,
+  Ellis died 25 November 1997: all check out. Williamson's 1974 paper was a different three-pass scheme; the actual
+  Diffie-Hellman exchange came later at GCHQ (written up 10 August 1976, per Ellis's own history), about when the
+  Americans published it. The history beat now says the idea came earlier and the exchange about the same time.
+  Schneier's essay gives a wrong 1960 for Ellis; do not use it for that date.

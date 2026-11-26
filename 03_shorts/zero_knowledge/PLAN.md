@@ -35,7 +35,7 @@ recording. Script source: `beats.hy.json`. The earlier TTS version of this short
 
 <!-- script:start -->
 
-13 beats, 3,803 characters (3,813 with numbers spelled out): ~263 s of speech, ~4:44 with pauses and the end tail, 18.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
+13 beats, 3,825 characters (3,840 with numbers spelled out): ~264 s of speech, ~4:45 with pauses and the end tail, 18.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. gossip.** Ընկերուհիդ գրում է՝ «Լսե՞լ ես Անիի մասին»։ Դու մի գաղտնիք գիտես Անիի մասին։ Բայց չգիտես՝ ընկերուհիդ էլ գիտի՞ նույնը, թե ուզում է քեզնից իմանալ։ Եթե առաջինը դու պատմես, իսկ նա չգիտեր, գաղտնիքը դու ես տարածել։ Նա էլ նույն վախն ունի։ Ուրեմն ինչպե՞ս պարզել, որ երկուսդ էլ գիտեք, առանց որևէ մեկի բարձրաձայնելու։ *[pause 1.5 s]*
 
@@ -57,7 +57,7 @@ recording. Script source: `beats.hy.json`. The earlier TTS version of this short
 
 **10. why_zero.** Բայց ինչո՞ւ «զրոյական գիտելիք»։ Ամեն փուլում դու ասում ես միայն այն, ինչ ընկերդ արդեն գիտի՝ փոխե՞լ է, թե ոչ։ Ուրեմն զրույցից նա իմանում է միայն մի բան՝ դու գույները տարբերում ես։ Թե որ գնդակն է կարմիրը, զրույցում ոչ մի տեղ չկա։ Դրա համար էլ, եթե նա ամբողջը նկարի, տեսանյութն ուրիշին չի համոզի։ Այն կարելի է սարքել նախապես՝ պայմանավորվելով, թե երբ է փոխելու։ *[pause 2 s]*
 
-**11. real.** Իրական համակարգերում ստվարաթղթի ու գնդակների փոխարեն մաթեմատիկական խնդիրներ են, որոնց պատասխանը կարող է անընդհատ ճիշտ տալ միայն գաղտնիքն իմացողը։ Փուլերն էլ անում է համակարգիչը՝ վայրկյանի մի մասում։ Հոլանդական մի խոշոր բանկ, օրինակ, հրապարակեց մեթոդ, որով կարելի է ապացուցել, որ աշխատավարձդ որոշակի միջակայքում է՝ առանց ճշգրիտ թիվը ցույց տալու։ Եվրոպական միությունն այսպես տարիքի ստուգում է փորձարկում։ Այստեղ ապացույցը վերաբերում է ոչ թե ցանկացած թվի, այլ պետության ստորագրած ծննդյան ամսաթվին, այլապես կարելի էր սուտ ամսաթիվ գրել։ Իսկ որոշ կրիպտոարժույթներ թաքցնում են, թե ով ում որքան է փոխանցել։
+**11. real.** Իրական համակարգերում ստվարաթղթի ու գնդակների փոխարեն մաթեմատիկական խնդիրներ են, որոնց պատասխանը կարող է անընդհատ ճիշտ տալ միայն գաղտնիքն իմացողը։ Փուլերն էլ անում է համակարգիչը՝ վայրկյանի մի մասում։ Հոլանդական մի խոշոր բանկ, օրինակ, հրապարակեց անվճար կոդ, որով կարելի է ապացուցել, որ աշխատավարձդ որոշակի միջակայքում է՝ առանց ճշգրիտ թիվը ցույց տալու։ Եվրոպական միությունն այսպես տարիքի ստուգում է փորձարկում։ Այստեղ ապացույցը վերաբերում է ոչ թե քո գրած ամսաթվին, այլ «18-ից մեծ է» նշմանը, որը վստահելի կազմակերպությունն է ստորագրում՝ ստուգելով անձնագիրդ։ Իսկ որոշ կրիպտոարժույթներ թաքցնում են, թե ով ում որքան է փոխանցել։
 
 **12. gossip_close.** Իսկ ի՞նչ անի ընկերուհիդ։ Գաղտնիքներ համեմատելու համար էլ կա մեթոդ, և այն կա իրական ծրագրերում։ Որոշ գաղտնի չատերում երկուսդ էլ գրում եք նույն հարցի պատասխանը, և ծրագիրն ասում է միայն՝ համընկնում է, թե ոչ։ Պատասխանն ինքը ոչ ոք չի տեսնում։ Միայն թե «ոչ»-ն էլ է տեղեկություն, ուստի պատասխանը պետք է դժվար լինի գուշակել։ *[pause 1 s]*
 
@@ -209,3 +209,16 @@ interpretation. *Checked*: what was actually read; "secondary" means a summary o
 | gossip_close | some secure chats compare an answer and say only 'match or not' | OTR spec, Socialist Millionaires' Protocol, https://otr.uwaterloo.ca/Protocol-v3-4.1.1.html | data | cited by Codex |
 
 **Answered 2026-11-26 (ARMENIAN_DECISIONS.md):** U-sss: the character is «Վալոդ» («Որտե՞ղ է Վալոդը», U2); «ռաունդ» became «փուլ» in the voice and on the counter (U3); address stays «դու» (U1). Guide voice remade for the 4 changed beats ($0.028 with the Short's Waldo beat).
+
+## Source check (2026-11-27, `../../_knowledge/short_videos/fact_sources_2026-11-26.md`)
+
+- **EU age check (partly supported, fixed):** a real pilot since July 2025 (seven countries in 2026; ZKP on Android in
+  January 2026, iOS in July 2026, required from August 2026). The signed credential holds only "over 18: yes", issued by
+  a trusted issuer after an ID check, not a birth date signed by the state: the voice and the EU card now say so.
+- **ING (partly supported, fixed):** released free code in November 2017; never said it was used in production; the
+  first version was later found not to be zero-knowledge; the page and repository are gone (404). The voice says
+  «հրապարակեց անվճար կոդ», the tag «հրապարակված կոդ».
+- **Zcash, OTR (supported):** only fully shielded Zcash transactions hide sender, receiver and amount (launch 28 Oct 2016);
+  the OTR spec mirror at otr.cypherpunks.ca (the uwaterloo URL fails its certificate check).
+- **Waldo (supported, checked directly 2026-11-27):** https://www.wisdom.weizmann.ac.il/~naor/PUZZLES/waldo_sol.html:
+  "Both solutions are imperfect in that they reveal information about his immediate surrounding."

@@ -20,8 +20,8 @@
   "strand": "thinking error",
   "layout": "landscape",
   "beats": 20,
-  "planned_s": 301,
-  "script_sha": "e0eef296dead",
+  "planned_s": 303,
+  "script_sha": "bc50c2b5ec4b",
   "approved_sha": null,
   "narration": {
    "narrator": null,
@@ -35,8 +35,8 @@
   "strand": "thinking error",
   "layout": "portrait",
   "beats": 14,
-  "planned_s": 165,
-  "script_sha": "6099dbf75a4d",
+  "planned_s": 166,
+  "script_sha": "27e9d6571e27",
   "approved_sha": null,
   "narration": {
    "narrator": null,
@@ -140,8 +140,8 @@
   "strand": "why is it so",
   "layout": "portrait",
   "beats": 7,
-  "planned_s": 100,
-  "script_sha": "10fa6a2d291b",
+  "planned_s": 102,
+  "script_sha": "5f209c7d47ff",
   "approved_sha": null,
   "narration": {
    "narrator": null,
@@ -204,8 +204,8 @@
   "script_sha": "0f0462f5455a",
   "approved_sha": null,
   "narration": {
-   "narrator": null,
-   "matches_script": null
+   "narrator": "gemini-tts",
+   "matches_script": true
   },
   "status": "script waiting for review"
  },
@@ -350,8 +350,8 @@
   "strand": "thinking error",
   "layout": "landscape",
   "beats": 13,
-  "planned_s": 284,
-  "script_sha": "1695029a75dc",
+  "planned_s": 285,
+  "script_sha": "1aa1e2ac9a7e",
   "approved_sha": null,
   "narration": {
    "narrator": "gemini-tts",

@@ -1,7 +1,7 @@
 {
   "title": "Shorts: scripts waiting for review",
   "subtitle": "Tick 'approve' (voice + animation can start) or 'needs changes' for each script. Comment on details on that short's PLAN.html page. Every script was revised after the Codex review (2026-11-26); approvals name the script hash.",
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "warning": "Nothing is voiced or animated until approved here (Q17). Approving costs about $0.05 of TTS per short. After approving, run: python tools/episodes.py --approve <folder>.",
   "tags": {
     "ok": {
@@ -23,8 +23,8 @@
           "title": "First video",
           "items": [
             {
-              "id": "A1-4b745f",
-              "title": "Approve: FIRST VIDEO, zero-knowledge proofs (long 16:9, 13 beats, ~4:44 + Short 9:16, 5 beats, ~1:01, scripts 169502 / 4c38a0)",
+              "id": "A1-5336e4",
+              "title": "Approve: FIRST VIDEO, zero-knowledge proofs (long 16:9, 13 beats, ~4:45 + Short 9:16, 5 beats, ~1:01, scripts 1aa1e2 / 4c38a0)",
               "exclusive": "zero_knowledge",
               "note": "Gossip hook; websites and banks have the same problem; Where's Waldo (placed while the friend looks away); the red card (only the 26 black cards shown); the colour-blind balls; why 'zero knowledge' (he already knew every answer); real systems on signed data; the gossip answer. Long 16:9 + Short 9:16, your narration.",
               "detail": [
@@ -118,8 +118,8 @@
               ]
             },
             {
-              "id": "A11-6099db",
-              "title": "Approve: Showcase 1: Public-key crypto explained with paint mixing (crypto_paint, 14 beats, ~2:45, script 6099db)",
+              "id": "A11-27e9d6",
+              "title": "Approve: Showcase 1: Public-key crypto explained with paint mixing (crypto_paint, 14 beats, ~2:46, script 27e9d6)",
               "exclusive": "crypto_paint",
               "note": "Agreeing a key in public: paint analogy (yellow + secret red / blue); Eva cannot unmix; numbers instead of paint, no known practical fast way back; toy numbers; authentication still needed.",
               "detail": [
@@ -127,8 +127,8 @@
               ]
             },
             {
-              "id": "A12-e0eef2",
-              "title": "Approve: Long video: How strangers agree on a secret in public (16:9, paint and clocks) (crypto_long, 20 beats, ~5:01, script e0eef2)",
+              "id": "A12-bc50c2",
+              "title": "Approve: Long video: How strangers agree on a secret in public (16:9, paint and clocks) (crypto_long, 20 beats, ~5:03, script bc50c2)",
               "exclusive": "crypto_long",
               "note": "Second long video (16:9): how strangers agree a secret in public: paint first, then clock arithmetic and the real exchange with 5 and 23 (both get 2); GCHQ had it first; Eva in the middle and certificates; quantum computers and the new exchanges.",
               "detail": [
@@ -208,8 +208,8 @@
               ]
             },
             {
-              "id": "A21-10fa6a",
-              "title": "Approve: Why a wheeled suitcase is easier than a backpack (luggage_wheels, 7 beats, ~1:40, script 10fa6a)",
+              "id": "A21-5f209c",
+              "title": "Approve: Why a wheeled suitcase is easier than a backpack (luggage_wheels, 7 beats, ~1:42, script 5f209c)",
               "exclusive": "luggage_wheels",
               "note": "Zero work on the load, yet you sweat: muscles use energy to hold a load, and walking lifts it each step; wheels take both away on a smooth floor; 'work is zero, energy is not'.",
               "detail": [
@@ -248,8 +248,8 @@
           "title": "First video",
           "items": [
             {
-              "id": "C1-4b745f",
-              "title": "Needs changes: FIRST VIDEO, zero-knowledge proofs (long 16:9, 13 beats, ~4:44 + Short 9:16, 5 beats, ~1:01, scripts 169502 / 4c38a0)",
+              "id": "C1-5336e4",
+              "title": "Needs changes: FIRST VIDEO, zero-knowledge proofs (long 16:9, 13 beats, ~4:45 + Short 9:16, 5 beats, ~1:01, scripts 1aa1e2 / 4c38a0)",
               "exclusive": "zero_knowledge",
               "note": "Leave comments on zero_knowledge/PLAN.html",
               "detail": []
@@ -323,15 +323,15 @@
               "detail": []
             },
             {
-              "id": "C11-6099db",
-              "title": "Needs changes: Showcase 1: Public-key crypto explained with paint mixing (crypto_paint, 14 beats, ~2:45, script 6099db)",
+              "id": "C11-27e9d6",
+              "title": "Needs changes: Showcase 1: Public-key crypto explained with paint mixing (crypto_paint, 14 beats, ~2:46, script 27e9d6)",
               "exclusive": "crypto_paint",
               "note": "Leave comments on crypto_paint/PLAN.html",
               "detail": []
             },
             {
-              "id": "C12-e0eef2",
-              "title": "Needs changes: Long video: How strangers agree on a secret in public (16:9, paint and clocks) (crypto_long, 20 beats, ~5:01, script e0eef2)",
+              "id": "C12-bc50c2",
+              "title": "Needs changes: Long video: How strangers agree on a secret in public (16:9, paint and clocks) (crypto_long, 20 beats, ~5:03, script bc50c2)",
               "exclusive": "crypto_long",
               "note": "Leave comments on crypto_long/PLAN.html",
               "detail": []
@@ -393,8 +393,8 @@
               "detail": []
             },
             {
-              "id": "C21-10fa6a",
-              "title": "Needs changes: Why a wheeled suitcase is easier than a backpack (luggage_wheels, 7 beats, ~1:40, script 10fa6a)",
+              "id": "C21-5f209c",
+              "title": "Needs changes: Why a wheeled suitcase is easier than a backpack (luggage_wheels, 7 beats, ~1:42, script 5f209c)",
               "exclusive": "luggage_wheels",
               "note": "Leave comments on luggage_wheels/PLAN.html",
               "detail": []

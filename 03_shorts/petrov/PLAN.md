@@ -115,3 +115,9 @@ interpretation. *Checked*: what was actually read; "secondary" means a summary o
 | cause | sunlight on high clouds over North Dakota | Wikipedia, NTI | data | secondary only |
 | bayes | weigh the alarm against the prior, the system's reliability and other sources | the channel's reading of the story | interpretation | labelled as our framing |
 | honesty | historians debate his role | Wikipedia | interpretation | secondary only |
+
+## Source check (2026-11-27, `../../_knowledge/short_videos/fact_sources_2026-11-26.md`)
+
+- **Quotes (supported, second-hand):** "not to believe the computer" comes from a 2016 interview (reported by Al
+  Jazeera, 2017), not the 1999 Washington Post; in 2013 he was "never absolutely sure" and put it at "50-50". The
+  Post and BBC pages could not be opened, so the wording rests on reliable second-hand quotes.

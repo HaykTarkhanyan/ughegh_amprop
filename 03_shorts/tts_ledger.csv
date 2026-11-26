@@ -61,3 +61,14 @@ datetime,model,voice,chars,tokens_in,tokens_audio,audio_s,usd_est,out
 2026-11-26T22:12:14,gemini-3.8-flash-tts,Sadaltager,357,202,621,24.8,0.00569,why_zero.wav
 2026-11-26T22:12:25,gemini-3.8-flash-tts,Sadaltager,598,329,942,37.7,0.00864,real.wav
 2026-11-26T22:12:31,gemini-3.8-flash-tts,Sadaltager,235,144,407,16.3,0.00374,waldo.wav
+2026-11-27T00:06:34,gemini-3.8-flash-tts,Sadaltager,121,63,203,8.1,0.00186,hook.wav
+2026-11-27T00:06:38,gemini-3.8-flash-tts,Sadaltager,114,66,233,9.3,0.00213,two_paths.wav
+2026-11-27T00:06:41,gemini-3.8-flash-tts,Sadaltager,109,54,185,7.4,0.00169,bone_bass.wav
+2026-11-27T00:06:45,gemini-3.8-flash-tts,Sadaltager,116,65,219,8.7,0.00200,recording.wav
+2026-11-27T00:06:49,gemini-3.8-flash-tts,Sadaltager,129,74,299,11.9,0.00273,try.wav
+2026-11-27T00:06:53,gemini-3.8-flash-tts,Sadaltager,164,89,268,10.7,0.00246,used_to.wav
+2026-11-27T00:06:58,gemini-3.8-flash-tts,Sadaltager,219,103,345,13.8,0.00316,study.wav
+2026-11-27T00:07:02,gemini-3.8-flash-tts,Sadaltager,156,87,269,10.7,0.00246,why_cringe.wav
+2026-11-27T00:07:06,gemini-3.8-flash-tts,Sadaltager,140,59,208,8.3,0.00190,practice.wav
+2026-11-27T00:07:09,gemini-3.8-flash-tts,Sadaltager,93,46,149,5.9,0.00136,takeaway.wav
+2026-11-27T00:22:24,gemini-3.8-flash-tts,Sadaltager,620,342,958,38.3,0.00879,real.wav
