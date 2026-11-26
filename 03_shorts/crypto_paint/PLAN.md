@@ -18,7 +18,7 @@ to be Aram.
 
 <!-- script:start -->
 
-13 beats, 2,076 characters (2,104 with numbers spelled out): ~144 s of speech, ~2:35 with pauses and the end tail, 8.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
+14 beats, 2,196 characters (2,226 with numbers spelled out): ~152 s of speech, ~2:45 with pauses and the end tail, 9.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Ինչպե՞ս պայմանավորվել գաղտնի բանալու շուրջ, եթե ձեր զրույցը լսում է ամբողջ աշխարհը։ Դու դա անում ես գրեթե ամեն անգամ, երբ կայք ես բացում ապահով կապով։
 
@@ -44,7 +44,9 @@ to be Aram.
 
 **12. today.** Այսօր այս փոխանակման տարբերակներն օգտագործվում են կայքերի ապահով կապում և մեսենջերներում։ Մի կարևոր մանրուք՝ պետք է նաև համոզված լինես, որ խոսում ես իսկական Արամի հետ, ոչ թե Եվայի, որը ձևանում է նրան։ Դրա համար կայքերն ունեն վկայականներ։
 
-**13. takeaway.** Բաց զրույցով կարելի է ստանալ ընդհանուր գաղտնիք, եթե կա գործողություն, որն անել հեշտ է, իսկ հետ դարձնել՝ գործնականում անհնար։ Ինչպես ներկը խառնելը։
+**13. long_pointer.** Իսկ ով էր սա գտել առաջինը և 20 տարուց ավելի գաղտնի պահել, և ինչ կանեն քվանտային համակարգիչները, տե՛ս երկար տեսանյութում։ *[pause 1 s]*
+
+**14. takeaway.** Բաց զրույցով կարելի է ստանալ ընդհանուր գաղտնիք, եթե կա գործողություն, որն անել հեշտ է, իսկ հետ դարձնել՝ գործնականում անհնար։ Ինչպես ներկը խառնելը։
 
 <!-- script:end -->
 
@@ -106,3 +108,11 @@ Fixes by finding ID (CODEX_REVIEW.md):
 **Cut beats, kept here word for word so they can come back:**
 
 - `history`: Հետաքրքիրն այն է, որ բրիտանական գաղտնի ծառայությունում սա գտել էին ավելի վաղ՝ 1970-ականների սկզբին, բայց գաղտնի էին պահում մինչև 1997 թվականը։ Գաղափարի հեղինակներից մեկը՝ Ջեյմս Էլիսը, մահացավ դրա հրապարակումից մեկ ամիս առաջ։ (source line: Ellis 1970, Cocks 1973, Williamson 1974; հրապարակվել է 1997-ին)
+
+## After the Codex review (2026-11-26)
+
+Pointer to the long video (Hayk, 2026-11-26: "the short vids should link to long vid maybe even in video
+saying go watch long one here"): a new beat `long_pointer` before the closing names what only the long video has (the
+GCHQ secret history, quantum computers) and shows the '▶ երկար տեսանյութ' pill. The platform links are in
+`../PUBLISHING.md` ("Shorts point to their long video"). GCHQ: Ellis 1970 to publication in 1997 is 27 years,
+Williamson 1974 to 1997 is 23, so «20 տարուց ավելի».

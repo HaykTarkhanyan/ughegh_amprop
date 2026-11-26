@@ -6,16 +6,37 @@ group `t.me/ugheghamprop`. All four platforms at launch, with the zero-knowledge
 
 ## How videos get posted
 
-| Platform | Route | Who presses "post" |
-|---|---|---|
-| Instagram (Reels) | Meta's official Content Publishing API, from a small Python tool (to build) | Hayk confirms in the terminal; the tool posts |
-| Facebook Page (Reels) | Meta's official API, same tool | same |
-| TikTok | Playwright co-pilot on TikTok Studio's web uploader (to build): fills file, caption, AI label, schedule (up to 10 days ahead), then stops | Hayk clicks the final button |
-| YouTube | Playwright co-pilot on YouTube Studio, same pattern | Hayk clicks the final button |
+Official APIs everywhere, because they are free and reliable (Hayk, 2026-11-26: "APIs are also fine I don't care as
+long as its free and reliable"); the Playwright co-pilot is only a bridge while an API is not usable yet.
 
-Driving TikTok's and YouTube's websites by script is against the letter of their terms even with Hayk pressing the
-button; keep it supervised and low-volume, and move to the official APIs once their audits pass (TikTok Content
-Posting API, YouTube Data API). Meta's route needs no app review for our own accounts (Standard Access).
+| Platform | Route | Status |
+|---|---|---|
+| Instagram (Reels) | Meta Content Publishing API from a small Python tool (to build) | usable at once: own professional account, Standard Access, no app review |
+| Facebook Page (Reels and the long video) | Meta Graph API, same tool | usable at once |
+| YouTube (Shorts and the long video) | YouTube Data API upload (free; default 10,000 units a day, an upload costs 100 units by the current reference, older docs say 1600: either way enough) | test the first upload: older docs say uploads from an unaudited project stay private until a free compliance audit; if so, apply and bridge with the co-pilot |
+| TikTok | Content Posting API (free; no per-call price published) | posts stay private until TikTok's audit of the app; until then the co-pilot on TikTok Studio, or the API's upload-to-inbox flow if it is allowed before the audit (to check), with Hayk pressing post in the app |
+
+The co-pilot (Playwright on TikTok Studio / YouTube Studio) fills the file, caption, AI label and schedule, then stops
+for Hayk to press the final button. Driving these websites by script is against the letter of their terms, so it
+stays supervised, low-volume and temporary.
+
+## Shorts point to their long video
+
+Every Short with a long companion says so in the video and links it on each platform (Hayk, 2026-11-26):
+
+- **In the video:** one pointer beat right before the closing beat, naming what only the long video has, with the
+  orange pill «▶ երկար տեսանյութ» on screen (`zero_knowledge_short` beat `tease`, `crypto_paint` beat
+  `long_pointer`). The voice says «տե՛ս երկար տեսանյութում», not "below", because where the link sits differs per
+  platform.
+- **YouTube:** the Short's "Related video" set to the long video (YouTube Studio, desktop: Content -> the Short ->
+  Related video; one per Short, same channel; it shows as a link under the Short's title). The API does not appear to
+  set it, so it is one click per Short, done by hand or by the co-pilot. The long video's description links back.
+- **Facebook:** the long video is posted on the Page too, and the Short's post text links it (links in post text are
+  clickable).
+- **Instagram:** caption links are not clickable, so the caption says the long video is linked in the profile, and the
+  bio link (or one of its link slots) points to it; the long video can also go up on Instagram itself.
+- **TikTok:** caption links are not clickable; a pinned comment and the profile link point to it, and TikTok also
+  takes long horizontal uploads, so the long video can be posted there as well.
 
 **AI label:** videos with the TTS narrator (`narrator: gemini-tts` in the manifest) get each platform's label
 (TikTok's AI-generated content toggle, Meta's `is_ai_generated` / "AI info", YouTube's altered or synthetic content
@@ -47,10 +68,12 @@ which `ugheghamprop` satisfies.
 ## My steps
 
 1. Profile picture, banner and Armenian bios (made with the video code; bios through the style guide).
-2. Meta: a developer app with the Instagram product, the accounts added, a long-lived token in
-   `00_notes/.secrets/api_keys.env` (never printed); `tools/publish_meta.py` with a dry run, the AI label from the
-   manifest, and a confirmation before posting. Needs the accounts from Hayk's steps 3-4 first.
-3. `tools/upload_assist.py`: the Playwright co-pilot for TikTok Studio and YouTube Studio. Needs steps 5-6.
+2. `tools/publish.py`, one tool for the official APIs: Meta (a developer app with the Instagram product, a long-lived
+   token in `00_notes/.secrets/api_keys.env`, never printed), the YouTube Data API (a Google Cloud project with
+   OAuth), and TikTok's Content Posting API once audited. A dry run, the AI label from the manifest, the long-video
+   link from the episode metadata, and a confirmation before anything is posted. Meta first (Hayk's steps 3-4).
+3. `tools/upload_assist.py`: the Playwright co-pilot, only for what an API cannot do yet (TikTok before its audit,
+   YouTube if uploads stay private, the YouTube "Related video" field). Needs steps 5-6.
 4. Per video: Armenian caption, hashtags, the link to the long video for the Shorts, the photo credits
    (`<short>/assets/credits.txt`), chosen from one metadata file per episode.
 5. Apply for the TikTok Content Posting API audit (and the YouTube API audit) once the accounts are live.

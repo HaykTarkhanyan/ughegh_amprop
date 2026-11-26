@@ -67,6 +67,13 @@
     "visual": "Padlock and a messenger icon; then Eva in a fake 'Արամ' mask between them, stopped by a certificate badge."
   },
   {
+    "key": "long_pointer",
+    "text": "Իսկ ով էր սա գտել առաջինը և 20 տարուց ավելի գաղտնի պահել, և ինչ կանեն քվանտային համակարգիչները, տե՛ս երկար տեսանյութում։",
+    "screen": "▶ երկար տեսանյութ",
+    "visual": "Quick flashes of what the long video adds: a classified folder stamped «ԳԱՂՏՆԻ», a glowing quantum chip; then the orange pill '▶ երկար տեսանյութ' (the same pill as the zero-knowledge Short).",
+    "pause_after": 1
+  },
+  {
     "key": "takeaway",
     "text": "Բաց զրույցով կարելի է ստանալ ընդհանուր գաղտնիք, եթե կա գործողություն, որն անել հեշտ է, իսկ հետ դարձնել՝ գործնականում անհնար։ Ինչպես ներկը խառնելը։",
     "screen": "Անել՝ հեշտ, հետ դարձնել՝ գործնականում անհնար",

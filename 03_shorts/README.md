@@ -36,6 +36,8 @@ that led here: `../_knowledge/short_videos/lit_review.md`.
 - **Honesty:** say what is a story and what is data; tag every reconstruction, painting or drawn scene of a
   disputed story on screen («նկարազարդում», «նկարչի պատկերացում», «վերակազմություն») (F157, F212).
 - **Local anchor:** one per script, best inside the idea (Armenia in the map showcase, prices in drams).
+- **Long companion:** a Short with a long video gets one pointer beat right before the closing, naming what only
+  the long video has, with the «▶ երկար տեսանյութ» pill; the platform links are in `PUBLISHING.md`.
 
 **Two strands (F232):** the channel now has thinking-error shorts (survivorship, Bayes, Simpson, regression,
 decoy, IKEA, Dmanisi, statues, ...) and "why is this thing the way it is" shorts (alphabet, spelling, week,

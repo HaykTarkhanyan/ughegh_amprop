@@ -118,8 +118,8 @@
               ]
             },
             {
-              "id": "A11-777760",
-              "title": "Approve: Showcase 1: Public-key crypto explained with paint mixing (crypto_paint, 13 beats, ~2:35, script 777760)",
+              "id": "A11-6099db",
+              "title": "Approve: Showcase 1: Public-key crypto explained with paint mixing (crypto_paint, 14 beats, ~2:45, script 6099db)",
               "exclusive": "crypto_paint",
               "note": "Agreeing a key in public: paint analogy (yellow + secret red / blue); Eva cannot unmix; numbers instead of paint, no known practical fast way back; toy numbers; authentication still needed.",
               "detail": [
@@ -323,8 +323,8 @@
               "detail": []
             },
             {
-              "id": "C11-777760",
-              "title": "Needs changes: Showcase 1: Public-key crypto explained with paint mixing (crypto_paint, 13 beats, ~2:35, script 777760)",
+              "id": "C11-6099db",
+              "title": "Needs changes: Showcase 1: Public-key crypto explained with paint mixing (crypto_paint, 14 beats, ~2:45, script 6099db)",
               "exclusive": "crypto_paint",
               "note": "Leave comments on crypto_paint/PLAN.html",
               "detail": []
