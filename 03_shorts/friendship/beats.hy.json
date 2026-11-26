@@ -6,7 +6,7 @@
   },
   {
     "key": "name",
-    "text": "Սա կոչվում է ընկերության պարադոքս։ 1991 թվականին այն նկարագրեց սոցիոլոգ Սքոթ Ֆելդը՝ դպրոցականների ընկերությունների տվյալներով։",
+    "text": "Սա կոչվում է ընկերության պարադոքս։",
     "screen": "Ընկերության պարադոքս",
     "screen_small": "Feld, 1991",
     "visual": "Title card; the network starts drawing itself."
@@ -14,37 +14,37 @@
   {
     "key": "network",
     "text": "Նայենք քսան մարդու փոքր խմբի։ Գծերն ընկերություններն են։ Միջինում ամեն մեկն ունի չորսից քիչ ընկեր։",
-    "visual": "The 20-person network (friendship/build/network.json) draws in, node by node; each node shows its friend count; counter 'միջինը՝ 3,6'."
+    "visual": "The 20-person network (friendship/build/network.json) draws in, node by node; each node shows its friend count; counter 'միջինը՝ 3,6'.",
+    "pause_after": 2
   },
   {
     "key": "friends_avg",
     "text": "Հիմա ամեն մեկի համար հաշվենք՝ իր ընկերները միջինում քանի՞ ընկեր ունեն։ Ստացվում է մոտ հինգ։",
-    "visual": "One person at a time: their friends pulse, their counts fly in and average into a number next to the person; then all at once; counter 'ընկերների միջինը՝ ~5'."
+    "visual": "One person at a time: their friends pulse, their counts fly in and average into a number next to the person; then all at once; counter 'ընկերների միջինը՝ ~5'.",
+    "pause_after": 1.5
   },
   {
     "key": "count",
-    "text": "Քսանից տասնյոթն ավելի քիչ ընկեր ունի, քան իր ընկերները՝ միջինում։ Ավելի շատ ունեն միայն երեքը։",
-    "visual": "17 nodes turn red-ish ('ավելի քիչ'), 3 orange ('ավելի շատ'); tally '17 / 3'."
+    "text": "Այս խմբում քսանից տասնյոթն ավելի քիչ ընկեր ունի, քան իր ընկերները՝ միջինում։ Ավելի շատ ունեն միայն երեքը։",
+    "visual": "17 nodes turn red-ish ('ավելի քիչ'), 3 orange ('ավելի շատ'); tally '17 / 3'.",
+    "pause_after": 1.5
   },
   {
     "key": "why",
     "text": "Ինչո՞ւ։ Նայիր այս մարդուն՝ նա տասնմեկ ընկեր ունի և հայտնվում է տասնմեկ մարդու ընկերների ցուցակում։ Իսկ նա, ով երկու ընկեր ունի, հայտնվում է ընդամենը երկու ցուցակում։ Երբ հաշվում ես ընկերների ընկերները, շատ ընկերներ ունեցողներին հաշվում ես շատ անգամ։",
-    "visual": "The hub (11 friends) glows; 11 little copies of it fly into 11 friend lists; a 2-friend person appears in only 2 lists. A tally shows the hub counted 11 times."
-  },
-  {
-    "key": "bus",
-    "text": "Նույնն է ավտոբուսների հետ։ Եթե կեսը համարյա դատարկ է, իսկ կեսը՝ լեփ-լեցուն, ուղևորների մեծ մասը նստած կլինի լեցուն ավտոբուսում և կմտածի, թե ավտոբուսները միշտ լեցուն են։",
-    "visual": "Ten buses: five with 5 dots inside, five with 55; then the passengers' view: 275 of 300 dots sit in full buses (92%), a thought bubble 'միշտ լեցուն է'."
+    "visual": "The hub (11 friends) glows; 11 little copies of it fly into 11 friend lists; a 2-friend person appears in only 2 lists. A tally shows the hub counted 11 times.",
+    "pause_after": 2
   },
   {
     "key": "facebook",
-    "text": "Ֆեյսբուքում 2011 թվականին 721 միլիոն օգտատիրոջ ուսումնասիրությունը ցույց տվեց՝ օգտատերերի 93 տոկոսն ավելի քիչ ընկեր ուներ, քան իրենց ընկերները՝ միջինում։",
+    "text": "Ֆեյսբուքի 721 միլիոն օգտատիրոջ ուսումնասիրությունը ցույց տվեց՝ նրանց 93 տոկոսն ավելի քիչ ընկեր ուներ, քան իրենց ընկերները՝ միջինում։",
     "screen_small": "Ugander et al., 2011",
-    "visual": "A huge faint network zooms out; a big '93%' and a bar."
+    "visual": "A huge faint network zooms out; a big '93%' and a bar.",
+    "pause_after": 1
   },
   {
     "key": "flu",
-    "text": "Պարադոքսը նաև օգտակար է։ 2009 թվականին Հարվարդում հետազոտողները հետևում էին երկու խմբի՝ պատահական ուսանողների և նրանց նշած ընկերների։ Ընկերների խմբում գրիպն սկսվեց մոտ երկու շաբաթ ավելի շուտ։ Ընկերներն ավելի կապված են, ուստի ավելի շուտ են վարակվում։",
+    "text": "Պարադոքսը նաև օգտակար է։ Հարվարդում հետազոտողները հետևում էին երկու խմբի՝ պատահական ուսանողների և նրանց նշած ընկերների։ Ընկերների խմբում գրիպն սկսվեց մոտ երկու շաբաթ ավելի շուտ։ Ընկերներն ավելի կապված են, ուստի ավելի շուտ են վարակվում։",
     "screen_small": "Christakis & Fowler, 2010",
     "visual": "Two epidemic curves: 'ընկերներ' rising ~2 weeks before 'պատահական'; an arrow '~14 օր'."
   },
@@ -52,17 +52,6 @@
     "key": "vaccine",
     "text": "Նույն գաղափարով, երբ պատվաստանյութը քիչ է, կարելի է պատվաստել ոչ թե պատահական մարդկանց, այլ նրանց պատահական ընկերներին։ Այդպես ավելի հաճախ ես հասնում շատ կապեր ունեցողներին։",
     "visual": "In the network: random picks land on low-count nodes; 'a random friend of a random person' lands on the hubs more often; shields appear on hubs."
-  },
-  {
-    "key": "card",
-    "text": "Մաթեմատիկան պարզ է՝ պատահական ընկերը միջինում ունի սովորական միջինից ավելի շատ ընկեր, և տարբերությունն այնքան մեծ է, որքան մեծ է մարդկանց միջև եղած տարբերությունը։",
-    "screen": "միջին + դիսպերսիա / միջին",
-    "visual": "Card: 'պատահական ընկերոջ ընկերները = μ + D/μ' and under it '3,6 + 4,74 / 3,6 ≈ 4,9'; if everyone had the same count (D = 0) the paradox disappears."
-  },
-  {
-    "key": "comfort",
-    "text": "Այնպես որ, եթե թվում է, թե բոլորն ավելի շատ ընկերներ և ավելի ակտիվ կյանք ունեն, մասամբ դա նրանից է, թե ում ես ամենահաճախ տեսնում։ Ամենաշատ կապեր ունեցողները հենց նրանք են, ում բոլորը տեսնում են։",
-    "visual": "A phone feed full of the hub's posts; the hub node glowing in the network."
   },
   {
     "key": "takeaway",

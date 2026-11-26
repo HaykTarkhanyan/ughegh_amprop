@@ -5,25 +5,32 @@ import { interpolate, random, useCurrentFrame, useVideoConfig } from "remotion";
 import { C, FONT, easeInOut, lerp, pop, ramp } from "../theme";
 import { Backdrop, Bubble, CheckMark, EyeIcon, HalvingBar, Label } from "./common";
 
-export const BALLS_T = { intro: 0.2, r1: 2.8, fast: 8.4, firstFast: 0.95, minFast: 0.34, shrink: 0.86, end: 18.5 };
+// Checkpoints (Codex review X11, 2026-11-26): the narration says "one ... two ... ten ... twenty" times; the rounds are
+// scheduled piece by piece so the counter shows exactly 1, 2, 10 and 20 rounds at those words (fast, two, ten, twenty).
+export const BALLS_T = { intro: 0.2, r1: 2.8, fast: 8.4, two: 10.4, ten: 13.4, twenty: 15.6, end: 18.5 };
 export type BallsTimes = typeof BALLS_T;
+const MIN_ANIMATED = 0.4; // a round shorter than this keeps the curtain closed and just ticks (fast-forward)
 
 const ROUNDS = 20;
 // swap decisions, fixed so every render tells the same story; round 1 is a swap
 const SWAPS = Array.from({ length: ROUNDS }, (_, i) => (i === 0 ? true : random(`swap-${i}`) < 0.5));
 
-// start time and length of each round
+// start time and length of each round: round 1 told slowly (r1..fast), round 2 until "two", rounds 3-10 until "ten",
+// rounds 11-20 until "twenty"
 const schedule = (T: BallsTimes) => {
+  if (!(T.r1 < T.fast && T.fast < T.two && T.two < T.ten && T.ten < T.twenty)) {
+    throw new Error(`balls checkpoints out of order: ${JSON.stringify(T)}`);
+  }
   const starts: number[] = [T.r1];
   const lens: number[] = [T.fast - T.r1];
-  let s = T.fast;
-  for (let k = 1; k < ROUNDS; k++) {
-    const d = Math.max(T.minFast, T.firstFast * Math.pow(T.shrink, k - 1));
-    starts.push(s);
-    lens.push(d);
-    s += d;
+  const pieces: [number, number, number][] = [[T.fast, T.two, 1], [T.two, T.ten, 8], [T.ten, T.twenty, 10]];
+  for (const [a, b, n] of pieces) {
+    for (let k = 0; k < n; k++) {
+      starts.push(a + ((b - a) * k) / n);
+      lens.push((b - a) / n);
+    }
   }
-  return { starts, lens, done: s };
+  return { starts, lens, done: T.twenty };
 };
 
 const PANEL = { y: 120, w: 840, h: 520 };
@@ -100,14 +107,13 @@ const Coin: React.FC<{ t: number; t0: number; dur: number; swap: boolean }> = ({
   if (t < t0 - 0.2 || t > t0 + dur + 1.0) return null;
   const spins = 5 + (swap ? 0 : 0.5);
   const angle = p * spins * 360;
-  const showSwap = Math.cos((angle * Math.PI) / 180) >= 0 ? swap : !swap;
   const fade = interpolate(t, [t0 - 0.2, t0, t0 + dur + 0.6, t0 + dur + 1.0], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const y = 380 - Math.sin(p * Math.PI) * 170;
   return (
     <div style={{ position: "absolute", left: 960 - 75, top: y - 75, width: 150, height: 150, opacity: fade, perspective: 600 }}>
       <div style={{ width: 150, height: 150, borderRadius: "50%", transform: `rotateX(${angle}deg)`, background: "radial-gradient(circle at 35% 30%, #FFE08A, #F2A800 55%, #9A6A00)", border: "5px solid #FFD25A", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 0 40px rgba(242,168,0,0.5)" }}>
-        <div style={{ fontFamily: FONT, fontSize: 30, fontWeight: 800, color: "#3A2500", textAlign: "center", lineHeight: 1.05, transform: Math.cos((angle * Math.PI) / 180) < 0 ? "scaleY(-1)" : undefined }}>
-          {showSwap ? "փոխել" : "չփոխել"}
+        <div style={{ fontFamily: FONT, fontSize: 72, fontWeight: 800, color: "#3A2500", textAlign: "center", lineHeight: 1.05, transform: Math.cos((angle * Math.PI) / 180) < 0 ? "scaleY(-1)" : undefined }}>
+          ?
         </div>
       </div>
     </div>
@@ -140,10 +146,15 @@ export const BallsScene: React.FC<{ T?: BallsTimes }> = ({ T = BALLS_T }) => {
   } else if (inRound) {
     const s = starts[k], d = lens[k];
     const f = (t - s) / d;
-    cover = f < 0.25 ? easeInOut(f / 0.25) : f < 0.62 ? 1 : f < 0.85 ? 1 - easeInOut((f - 0.62) / 0.23) : 0;
-    swapping = SWAPS[k] && f >= 0.25 && f < 0.62;
-    swapK = Math.min(1, Math.max(0, (f - 0.25) / 0.37));
-    if (SWAPS[k] && f >= 0.62) redLeft = !redLeft;
+    if (d < MIN_ANIMATED) {
+      cover = 1; // fast-forward: behind the curtain, only the counter and the answers tick
+      if (SWAPS[k] && f >= 0.5) redLeft = !redLeft;
+    } else {
+      cover = f < 0.25 ? easeInOut(f / 0.25) : f < 0.62 ? 1 : f < 0.85 ? 1 - easeInOut((f - 0.62) / 0.23) : 0;
+      swapping = SWAPS[k] && f >= 0.25 && f < 0.62;
+      swapK = Math.min(1, Math.max(0, (f - 0.25) / 0.37));
+      if (SWAPS[k] && f >= 0.62) redLeft = !redLeft;
+    }
     answered = f >= 0.85;
     completed = k + (answered ? 1 : 0);
   } else if (t >= done) {
@@ -164,14 +175,15 @@ export const BallsScene: React.FC<{ T?: BallsTimes }> = ({ T = BALLS_T }) => {
 
       {/* round 1, told slowly */}
       <Coin t={t} t0={starts[0] + 0.6} dur={1.0} swap={SWAPS[0]} />
+      <Label text="ընկերդ է որոշում, դու չես տեսնում" x={960} y={PANEL.y + PANEL.h + 30} size={28} color={C.dim} width={700} opacity={ramp(t, starts[0] + 0.6, 0.3) * (1 - ramp(t, starts[0] + 2.0, 0.4))} />
       <Bubble text="Փոխեցի՞" x={RIGHT_X + 620} y={PANEL.y + PANEL.h + 10} t={t} t0={starts[0] + 3.2} tail="down" accent={C.blue} out={T.fast - 0.5} />
       <Bubble text="Այո, փոխեցիր" x={LEFT_X + 260} y={PANEL.y + PANEL.h + 10} t={t} t0={starts[0] + 4.0} tail="down" accent={C.orange} out={T.fast - 0.5} />
 
       {/* fast rounds: the answer under your panel */}
-      {inRound && k > 0 ? (
-        <div style={{ position: "absolute", left: LEFT_X, width: PANEL.w, top: PANEL.y + PANEL.h + 18, display: "flex", justifyContent: "center", alignItems: "center", gap: 14, fontFamily: FONT, fontSize: 34, fontWeight: 700, color: C.ink, opacity: answered ? 1 : 0.25 }}>
+      {inRound && k > 0 && answered ? (
+        <div style={{ position: "absolute", left: LEFT_X, width: PANEL.w, top: PANEL.y + PANEL.h + 18, display: "flex", justifyContent: "center", alignItems: "center", gap: 14, fontFamily: FONT, fontSize: 34, fontWeight: 700, color: C.ink }}>
           {lastSwap ? "փոխեցիր" : "չփոխեցիր"}
-          {answered ? <CheckMark size={44} /> : null}
+          <CheckMark size={44} />
         </div>
       ) : null}
 

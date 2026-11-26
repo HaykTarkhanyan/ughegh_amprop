@@ -1,13 +1,15 @@
 [
   {
     "key": "hook",
-    "text": "Յոթ րոպե կանգնած սպասելն ավելի երկար է թվում, քան վեց րոպե քայլելը։ Ու դա լավ գիտեն օդանավակայաններում, Դիսնեյում և ամեն խանութում։",
-    "visual": "Two clocks side by side: one person standing still with a slow, heavy clock; one walking with a light clock. Frame 0 shows '7 րոպե > 6 րոպե?'."
+    "text": "Նույն ութ րոպեն կարող է թվալ երկար կամ կարճ։ Կախված է նրանից, թե դրանից քանի րոպեն ես կանգնած սպասում։ Ու դա լավ գիտեն օդանավակայաններում, Դիսնեյում և ամեն խանութում։",
+    "visual": "Two clocks side by side: one person standing still with a slow, heavy clock; one walking with a light clock. Frame 0 shows '7 րոպե > 6 րոպե?'.",
+    "pause_after": 1.5
   },
   {
     "key": "houston",
-    "text": "Պատմում են, որ Հյուսթոնի օդանավակայանում ուղևորները բողոքում էին ուղեբեռի երկար սպասումից։ Ինքնաթիռից մինչև ուղեբեռի ժապավեն քայլում էին մեկ րոպե, հետո յոթ րոպե կանգնած սպասում։ Օդանավակայանն ուղեբեռն ավելի արագ չդարձրեց։ Այն ուղևորներին վեց անգամ ավելի երկար քայլեցրեց։ Եվ բողոքները համարյա դադարեցին։",
-    "visual": "Two timeline bars of the same total length: '1 րոպե քայլք + 7 րոպե սպասում' vs '6 րոպե քայլք + 2 րոպե սպասում'; a complaints counter drops to almost zero."
+    "text": "Պատմում են, որ Հյուսթոնի օդանավակայանում ուղևորները բողոքում էին ուղեբեռի երկար սպասումից։ Ինքնաթիռից մինչև ուղեբեռի ժապավեն քայլում էին մեկ րոպե, հետո յոթ րոպե կանգնած սպասում։ Օդանավակայանն ուղեբեռն ավելի արագ չդարձրեց։ Այն ուղևորներին վեց անգամ ավելի երկար քայլեցրեց, և կանգնած սպասելը դարձավ երկու րոպե։ Ընդհանուր ժամանակը նույնն էր, բայց բողոքները համարյա դադարեցին։",
+    "visual": "Two bars of equal length, 8 minutes each: before = 1 min walking + 7 min standing, after = 6 min walking + 2 min standing; a complaint counter drops. Tagged as a story.",
+    "pause_after": 2
   },
   {
     "key": "honest",
@@ -16,51 +18,33 @@
   },
   {
     "key": "empty",
-    "text": "1985 թվականին Դեյվիդ Մայստերը գրեց սպասման հոգեբանության մասին։ Նրա առաջին կանոնը՝ զբաղված ժամանակն ավելի կարճ է թվում, քան դատարկը։ Երբ ոչինչ չես անում, ուշադրությունդ ժամացույցի վրա է, և ամեն րոպե ձգվում է։ Հետազոտություններում մարդիկ սովորաբար գերագնահատում են, թե որքան են սպասել։",
+    "text": "Սպասման հոգեբանության առաջին կանոնը՝ զբաղված ժամանակն ավելի կարճ է թվում, քան դատարկը։ Երբ ոչինչ չես անում, ուշադրությունդ ժամացույցի վրա է, և ամեն րոպե ձգվում է։ Հետազոտություններում մարդիկ սովորաբար գերագնահատում են, թե որքան են սպասել։",
     "screen": "Դեյվիդ Մայստեր, 1985",
     "visual": "A clock whose minute hand drags while a person stares at it; the same clock spinning normally while the person reads. A 'felt' bar longer than the 'real' bar."
   },
   {
     "key": "rules",
     "text": "Մյուս կանոնները՝ անորոշ սպասումն ավելի երկար է թվում, քան հայտնի տևողությամբ սպասումը։ Չբացատրված սպասումն ավելի երկար է, քան բացատրվածը։ Անարդար սպասումը, երբ մեկը հերթից առաջ է անցնում, ավելի երկար է։ Իսկ մենակ սպասելն ավելի երկար է, քան ընկերների հետ։",
-    "visual": "Four quick icon pairs, each with a long and a short bar: unknown vs known, unexplained vs explained, someone cutting in vs a fair line, alone vs with friends."
+    "visual": "Four quick icon pairs, each with a long and a short bar: unknown vs known, unexplained vs explained, someone cutting in vs a fair line, alone vs with friends.",
+    "pause_after": 2
   },
   {
     "key": "disney_posted",
     "text": "Դիսնեյում հերթի մոտ գրված է սպասման ժամանակը։ Երկրպագուների հավաքած տվյալներով՝ իրականում սպասում ես ցուցադրվածի մոտ երկու երրորդը։ Թե ինչու, Դիսնեյը չի ասում, բայց արդյունքը պարզ է՝ հերթից դուրս ես գալիս ուրախ, որ ավելի արագ ստացվեց։",
     "screen_small": "TouringPlans",
-    "visual": "A sign '60 րոպե'; a real clock stops at about 40; a smiling face. Small bar: posted vs actual (about 2/3)."
+    "visual": "A sign '60 րոպե'; a real clock stops at about 40; a smiling face. Small bar: posted vs actual (about 2/3).",
+    "pause_after": 1.5
   },
   {
     "key": "disney_queue",
     "text": "Իսկ հերթն ինքը ոլորվում է այնպես, որ չտեսնես նրա ամբողջ երկարությունը, և զարդարված է, հաճախ նաև խաղերով, որ ժամանակդ զբաղված լինի։",
-    "visual": "Top view of a long line of dots folding into switchbacks behind walls; a 'you are here' dot sees only a short stretch. Then a few dots stop at game icons along the queue."
-  },
-  {
-    "key": "everyday",
-    "text": "Նույն հնարքներն ամենուր են՝ ներբեռնման շերտը, տաքսու մեքենան քարտեզի վրա, պիցցայի պատրաստման փուլերը։ Սպասումը չի կարճանում, բայց անորոշությունը վերանում է։",
-    "visual": "Three quick cards: a progress bar filling, a car icon moving on a map, a pizza tracker with steps."
-  },
-  {
-    "key": "lines",
-    "text": "Իսկ ինչո՞ւ է մյուս հերթը միշտ ավելի արագ շարժվում։ Եթե կա երեք նույնքան արագ հերթ, քոնն ամենաարագը կլինի երեք դեպքից միայն մեկում։ Երեսուն անգամ խանութ գնալով՝ մոտ քսան անգամ մյուս հերթերից մեկն ավելի արագ կլինի։ Ու հենց այդ դեպքերն ես հիշում։",
-    "visual": "Three checkout lines of dots, yours highlighted; 30 quick rounds (waiting/build/lines.json): a tally 'քոնը՝ 10, մյուսները՝ 20'; the 20 losses glow brighter as 'what you remember'."
-  },
-  {
-    "key": "snake",
-    "text": "Դրա համար էլ շատ օդանավակայաններ ու բանկեր անցել են մեկ ընդհանուր օձաձև հերթի, որից մարդիկ գնում են առաջին ազատ աշխատակցի մոտ։ Այդպես ոչ ոք քեզնից առաջ չի անցնում, և միջինում սպասումն էլ ավելի կարճ է։",
-    "visual": "The three lines merge into one snaking line feeding three counters; dots leave to whichever counter frees up first."
-  },
-  {
-    "key": "card",
-    "text": "Կարճ ասած՝ սպասման երկարությունը մասամբ ժամացույցն է, մասամբ՝ զգացողությունը։",
-    "screen": "զբաղված < դատարկ, հայտնի < անհայտ, արդար < անարդար, միասին < մենակ",
-    "visual": "Card with the four short rules as pairs, the shorter-feeling side highlighted."
+    "visual": "Top view of a long line of dots folding into switchbacks behind walls; a 'you are here' dot sees only a short stretch. Then a few dots stop at game icons along the queue.",
+    "pause_after": 1
   },
   {
     "key": "takeaway",
-    "text": "Այնպես որ, հաջորդ անգամ հերթում զբաղեցրու ժամանակդ, իմացիր, թե որքան է մնացել, և մի նախանձիր կողքի հերթին։ Միջինում այն քոնից արագ չէ։",
-    "screen": "Կողքի հերթը միջինում քոնից արագ չէ",
+    "text": "Սպասումը մասամբ ժամացույցն է, մասամբ՝ զգացողությունը։ Հաջորդ անգամ հերթում զբաղեցրու ժամանակդ և իմացիր, թե որքան է մնացել։",
+    "screen": "Սպասումը մասամբ ժամացույցն է, մասամբ՝ զգացողությունը",
     "visual": "Big karaoke text over the faint three lines; last frame close to the first for a loop."
   }
 ]

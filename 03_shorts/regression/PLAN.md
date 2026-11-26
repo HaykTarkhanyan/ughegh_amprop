@@ -21,6 +21,8 @@ no praise and no scolding.
 
 ~158 s of speech (2,294 characters at ~870 a minute), ~165 s with pauses.
 
+*Superseded (Codex review X61, 2026-11-26): this beat-by-beat table is the 2026-11-25 storyboard estimate, before the Codex cuts. The current beats and length are in the script section above; keep the table only for its visual notes.*
+
 | # | Beat | ~s | Said (in short) | Shown |
 |---|------|----|-----------------|-------|
 | 1 | hook | 9 | praise, and the next try is worse; scold, and it is better: so scolding works better? | thumbs-up -> falling arrow, frown -> rising arrow |
@@ -42,35 +44,29 @@ no praise and no scolding.
 
 <!-- script:start -->
 
-14 beats, 2,294 characters (2,392 with numbers spelled out): ~162 s of speech, ~2:44 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%).
+11 beats, 1,893 characters (1,947 with numbers spelled out): ~132 s of speech, ~2:23 with pauses and the end tail, 8 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Գովում ես՝ հաջորդ անգամ ավելի վատ է ստացվում։ Նախատում ես՝ ավելի լավ։ Ուրեմն նախատինքն ավելի արդյունավե՞տ է, քան գովասանքը։
 
-**2. kahneman.** 1960-ականներին հոգեբան Դանիել Քանեմանը դասախոսում էր իսրայելցի օդաչու-հրահանգիչների համար և ասում, որ գովասանքն ավելի արդյունավետ է, քան պատիժը։ Հրահանգիչներից մեկն առարկեց՝ երբ կուրսանտին գովում եմ լավ թռիչքի համար, հաջորդը սովորաբար ավելի վատ է լինում, իսկ երբ գոռում եմ վատ թռիչքից հետո, հաջորդն ավելի լավ է։
+**2. kahneman.** Հոգեբան Դանիել Քանեմանը մի անգամ դասախոսում էր իսրայելցի օդաչու-հրահանգիչների համար և ասում, որ գովասանքն ավելի արդյունավետ է, քան պատիժը։ Հրահանգիչներից մեկն առարկեց՝ երբ կուրսանտին գովում եմ լավ թռիչքի համար, հաջորդը սովորաբար ավելի վատ է լինում, իսկ երբ գոռում եմ վատ թռիչքից հետո, հաջորդն ավելի լավ է։
 
 **3. right.** Հրահանգիչը ճիշտ էր նկատել, բայց սխալ էր բացատրել։
 
 **4. luck.** Ամեն թռիչք կախված է երկու բանից՝ հմտությունից և բախտից։ Շատ լավ թռիչքը սովորաբար լավ հմտություն է՝ գումարած հաջողություն։ Հաջորդ անգամ հմտությունը մնում է, իսկ բախտը՝ ոչ։
 
-**5. setup.** Ստուգենք համակարգչով։ Հազար ուսանող նույն քննությունը գրում է երկու անգամ։ Ամեն գնահատական հմտություն է՝ գումարած պատահականություն, և ոչ ոքի չենք գովում ու չենք նախատում։
+**5. setup.** Ստուգենք համակարգչով։ 1000 հորինված ուսանող նույն քննությունը գրում է երկու անգամ։ Մեր մոդելում ամեն արդյունք հմտություն է՝ գումարած պատահականություն, և ոչ ոքի չենք գովում ու չենք նախատում։ *[pause 1 s]*
 
-**6. top.** Առաջին քննության լավագույն հիսունի միջինը 92 էր։ Երկրորդ անգամ՝ 82։ Նրանց մեծ մասն ավելի վատ գրեց, թեև ոչ ոք նրանց չգովեց։
+**6. top.** Առաջին քննության լավագույն հիսունի միջինը 92 էր։ Երկրորդ անգամ՝ 82։ Նրանց մեծ մասն ավելի վատ գրեց, թեև ոչ ոք նրանց չգովեց։ *[pause 1.5 s]*
 
-**7. bottom.** Իսկ ամենաթույլ հիսունը 47-ից բարձրացավ 59-ի, թեև ոչ ոք նրանց չնախատեց։
+**7. bottom.** Իսկ ամենաթույլ հիսունը 47-ից բարձրացավ 59-ի, թեև ոչ ոք նրանց չնախատեց։ *[pause 1.5 s]*
 
-**8. reverse.** Եվ ամենահետաքրքիրը։ Եթե ընտրենք երկրորդ քննության լավագույն հիսունին, նրանց միջինն այստեղ 93 է, իսկ առաջին քննությունում՝ ընդամենը 81։ Բախտը չգիտի, թե որն է առաջինը, որը՝ երկրորդը։
+**8. reverse.** Եվ ամենահետաքրքիրը։ Եթե ընտրենք երկրորդ քննության լավագույն հիսունին, նրանց միջինն այստեղ 93 է, իսկ առաջին քննությունում՝ ընդամենը 81։ Բախտը չգիտի, թե որն է առաջինը, որը՝ երկրորդը։ Սա կոչվում է ռեգրեսիա դեպի միջինը։ *[pause 2.5 s]*
 
-**9. praise.** Հիմա հրահանգչի պատմությունը պարզ է։ Գովասանքը գալիս էր ամենալավ թռիչքներից հետո, որոնց սովորաբար հաջորդում են ավելի միջինները։ Նախատինքը՝ ամենավատերից հետո, որոնց հաջորդում են ավելի լավերը։ Այսպես թվերը մեզ «պատժում» են բարի լինելու համար և «պարգևատրում»՝ խիստ լինելու համար։
+**9. praise.** Հիմա հրահանգչի պատմությունը պարզ է։ Գովասանքը գալիս էր ամենալավ թռիչքներից հետո, որոնց սովորաբար հաջորդում են ավելի միջինները։ Նախատինքը՝ ամենավատերից հետո, որոնց հաջորդում են ավելի լավերը։ Սա չի ապացուցում, որ գովասանքն անօգուտ է, միայն ցույց է տալիս, որ այս թվերով դա չես իմանա։
 
-**10. galton.** Երևույթն առաջինը նկարագրեց Ֆրենսիս Գալթոնը 1886 թվականին։ Բարձրահասակ ծնողների երեխաները նույնպես բարձր են, բայց սովորաբար ոչ այնքան, որքան ծնողները։ Կարճահասակներինը՝ կարճ, բայց ավելի մոտ միջինին։ Գալթոնը սա անվանեց ռեգրեսիա, այսինքն՝ հետ գնալ դեպի միջինը։
+**10. check.** Ինչպե՞ս իմանալ՝ իրո՞ք գովասանքն է, թե միայն միջինին վերադարձը։ Պետք է վերցնել նույնքան ծայրահեղ արդյունքով սկսած կուրսանտներ և պատահական ընտրել, թե ում գովել, ում՝ ոչ։ Խմբերի տարբերությունը ցույց կտա գովասանքի ազդեցությունը՝ այն փոփոխությունից ավել, որ առանց այդ էլ կլիներ։ *[pause 1.5 s]*
 
-**11. everyday.** Նույնը շատ տեղերում է։ Մարդը բժշկի է գնում, երբ ամենավատ վիճակում է, և ցանկացած միջոց կարող է թվալ, թե օգնեց։ Մարզչին փոխում են ամենավատ մրցաշրջանից հետո, և նոր մարզիչը հերոս է թվում։
-
-**12. check.** Ինչպե՞ս իմանալ՝ իրո՞ք գովասանքն է, թե միայն միջինին վերադարձը։ Պետք է համեմատել նրանց հետ, ում ոչ գովել են, ոչ նախատել։ Եթե նրանք էլ նույն կերպ են փոխվել, գործը բախտինն էր։
-
-**13. card.** Կարճ ասած՝ արդյունքը հմտություն է՝ գումարած բախտ։ Ծայրահեղ արդյունքից հետո սպասիր ավելի միջին արդյունքի։
-
-**14. takeaway.** Այնպես որ, երբ թվում է, թե նախատինքն օգնում է, իսկ գովասանքը՝ վնասում, հարցրու՝ իսկ առանց դրանց ի՞նչ կլիներ։
+**11. takeaway.** Երբ թվում է, թե նախատինքն օգնում է, իսկ գովասանքը՝ վնասում, հարցրու՝ իսկ առանց դրանց ի՞նչ կլիներ։
 
 <!-- script:end -->
 
@@ -111,7 +107,7 @@ lands about halfway back to the average, which is what the table shows.
 
 ## Visuals
 
-- **Histogram of dots:** 1,000 dots stacked by score (40-100) across x 140-860, columns up to y ~980 at most, above
+- **Histogram of dots:** 1,000 dots stacked by score (full data range, about 30-115; X31) across x 140-860, columns up to y ~980 at most, above
   the caption band (y ~1040-1200). Between tests the dots fly from their test-1 to their test-2 position (from
   `simulation.json`), so the orange (best) and red (worst) clouds visibly slide towards the middle. Group means as
   small triangles with numbers.
@@ -133,3 +129,27 @@ lands about halfway back to the average, which is what the table shows.
 
 Voice (14 beats, ~$0.05), timeline + sync check, scenes (new: the dot histogram with moving dots, the plane loops,
 the silhouettes), stills, one draft and one final render, contact sheet, Gemini review, review page.
+
+## After the Codex review (2026-11-26)
+
+Fixes by finding ID (CODEX_REVIEW.md):
+
+- **X30:** the check no longer says "if an unpraised group changed the same way, it was luck". It now says to take
+  cadets starting from equally extreme results and assign praise at random; the difference between the groups
+  estimates praise's effect beyond the change that happens anyway. Skill plus chance is presented as "our model", and
+  the praise beat says the pattern does not prove praise useless, only that these numbers cannot tell.
+- **X31:** the simulated scores run from 31.3 to 110.6 (test 1) and 34.6 to 103.0 (test 2), so a 40-100 axis would
+  hide 10 and 9 of the extremes this video is about. The axis now comes from the data, the students are called
+  invented, and the picture carries a «մոդելավորում» tag. The numbers are results of the model, not 0-100 exam marks.
+- **X51:** one extension (the check) kept; Galton, the everyday examples and the «Կարճ ասած» summary card are cut
+  (texts below); the name of the effect moved into the reverse beat; years off the voice; 8 s of pauses, the longest
+  on the reversed selection; no «Այնպես որ,». Open term question: «ռեգրեսիա դեպի միջինը» (glossary has only «գծային
+  ռեգրեսիա»).
+
+**Cut beats, kept here word for word so they can come back:**
+
+- `galton`: Երևույթն առաջինը նկարագրեց Ֆրենսիս Գալթոնը 1886 թվականին։ Բարձրահասակ ծնողների երեխաները նույնպես բարձր են, բայց սովորաբար ոչ այնքան, որքան ծնողները։ Կարճահասակներինը՝ կարճ, բայց ավելի մոտ միջինին։ Գալթոնը սա անվանեց ռեգրեսիա, այսինքն՝ հետ գնալ դեպի միջինը։ (screen: Ֆրենսիս Գալթոն, 1886)
+
+- `everyday`: Նույնը շատ տեղերում է։ Մարդը բժշկի է գնում, երբ ամենավատ վիճակում է, և ցանկացած միջոց կարող է թվալ, թե օգնեց։ Մարզչին փոխում են ամենավատ մրցաշրջանից հետո, և նոր մարզիչը հերոս է թվում։
+
+- `card`: Կարճ ասած՝ արդյունքը հմտություն է՝ գումարած բախտ։ Ծայրահեղ արդյունքից հետո սպասիր ավելի միջին արդյունքի։ (screen: արդյունք = հմտություն + բախտ)

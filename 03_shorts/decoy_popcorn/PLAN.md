@@ -19,27 +19,27 @@ medium appears.)
 
 <!-- script:start -->
 
-10 beats, 1,431 characters (1,532 with numbers spelled out): ~102 s of speech, ~1:52 with pauses and the end tail, 8 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
+10 beats, 1,643 characters (1,744 with numbers spelled out): ~117 s of speech, ~2:07 with pauses and the end tail, 8 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Միջին չափի ադիբուդին վաճառում է մեծը։ Նույնիսկ երբ միջինը ոչ ոք չի գնում։
 
-**2. choice.** Փոքրն արժի 1000 դրամ, մեծը՝ 2000։ Դու ո՞րը կվերցնես։ *[pause 1.5 s]*
+**2. choice.** Փոքրն արժի 1000 դրամ, մեծը՝ 2000, բայց երեք անգամ ավելի մեծ է։ Դու ո՞րը կվերցնես։ *[pause 1.5 s]*
 
-**3. medium.** Հիմա ավելացնենք միջինը՝ 1800 դրամ։ *[pause 1.5 s]*
+**3. medium.** Հիմա ավելացնենք միջինը՝ երկու անգամ մեծ, բայց 1800 դրամ։ *[pause 1.5 s]*
 
-**4. gift.** Մեծը հանկարծ ավելի գրավիչ դարձա՞վ։ Միջինի կողքին այն թվում է գրեթե նվեր՝ ընդամենը 200 դրամ ավելի։ Գները նույնն են, փոխվել է համեմատությունը։
+**4. gift.** Մեծը հանկարծ ավելի գրավիչ դարձա՞վ։ Միջինի կողքին այն թվում է գրեթե նվեր՝ ընդամենը 200 դրամ ավելի, և ևս մեկ փոքրի չափ ադիբուդի։ Գները նույնն են, փոխվել է համեմատությունը։
 
-**5. name.** Սա կոչվում է խայծի էֆեկտ։ Երրորդ տարբերակը, որ գրեթե ոչ ոք չի վերցնում, փոխում է, թե ինչպես ենք համեմատում մյուս երկուսը։
+**5. name.** Սա կոչվում է խայծի էֆեկտ։ Երրորդ տարբերակը, որ գրեթե ոչ ոք չի վերցնում, փոխում է, թե ինչպես ենք համեմատում մյուս երկուսը։ Ամենամաքուր դեպքում խայծը վատ է ամեն ինչով։
 
 **6. economist.** Ամենահայտնի ցուցադրումը մի ամսագրի բաժանորդագրությունն էր։ Միայն կայքը՝ 59 դոլար, միայն տպագիրը՝ 125, տպագիրն ու կայքը միասին՝ նույնպես 125։ Ուսանողների 84 տոկոսն ընտրեց միասինը։ Հետո հանեցին «միայն տպագիրը», որ ոչ ոք չէր ընտրել, և միասինն ընտրողները նվազեցին 32 տոկոսի։ *[pause 2.5 s]*
 
 **7. why.** Ինչո՞ւ է հնարքը գործում։ Գինն ինքնին գնահատելը դժվար է, իսկ համեմատելը՝ հեշտ։ «Տպագիրն ու կայքը» ակնհայտորեն լավն է «միայն տպագրից»։ Եվ այդ հեշտ համեմատությունը մոռացնել է տալիս դժվար հարցը՝ արժե՞ ընդհանրապես 125 դոլար վճարել։
 
-**8. everywhere.** Այս կառուցվածքը կտեսնես ամենուր՝ սուրճի բաժակներում, բջջային կապի փաթեթներում, բաժանորդագրություններում։ Երեք տարբերակ, որոնցից մեկը կարծես հատուկ վատն է։
+**8. everywhere.** Այս կառուցվածքը կտեսնես ամենուր՝ սուրճի բաժակներում, բջջային կապի փաթեթներում, ֆիլմերի ու երաժշտության ծառայություններում։ Երեք տարբերակ, որոնցից մեկը կարծես հատուկ վատն է։
 
-**9. limits.** Բայց էֆեկտն այնքան ամուր չէ, որքան պատմում են։ Հետազոտողների մի խումբ 19 փորձ արեց իրական ապրանքներով, որոնք մարդիկ տեսնում ու համտեսում էին, և էֆեկտը չգտավ։ Այն լավ է գործում, երբ ընտրությունը թվերի մեջ է՝ գներ, գիգաբայթեր, գրամներ։ Ադիբուդու գինը հենց այդպիսին է։ *[pause 1 s]*
+**9. limits.** Բայց էֆեկտն այնքան ամուր չէ, որքան պատմում են։ Հետազոտողների մի խումբ 19 փորձ արեց իրական ապրանքներով, որոնք մարդիկ տեսնում ու համտեսում էին, և էֆեկտը չգտավ։ Այս փորձերում այն ավելի կայուն էր, երբ տարբերակները նկարագրված էին թվերով՝ գներ, գիգաբայթեր, գրամներ։ Բայց դա չի նշանակում, որ ամեն թվային ցանկում կգործի։ *[pause 1 s]*
 
-**10. takeaway.** Հաջորդ անգամ, երբ երեք չափ տեսնես, մտքում ջնջիր այն մեկը, որ ոչ ոք չի վերցնում։ Հետո նոր ընտրիր։ *[pause 1.5 s]*
+**10. takeaway.** Հաջորդ անգամ, երբ երեք չափ տեսնես, մի համեմատիր դրանք իրար հետ։ Հարցրու՝ ինձ որքա՞ն է պետք, և որքա՞ն եմ պատրաստ վճարել։ *[pause 1.5 s]*
 
 <!-- script:end -->
 
@@ -87,3 +87,18 @@ Armenian lint: 0 errors, 0 hints (after «աշխատում» -> «գործում
 - **U-yy, Ariely:** keep his book on the source line, or leave him off given the retraction?
 - **U-zz, «ադիբուդի»** for popcorn: natural, or «պոպկորն»?
 - U-a («դու» vs «դուք») applies here too.
+
+## After the Codex review (2026-11-26)
+
+Fixes by finding ID (CODEX_REVIEW.md):
+
+- **X33:** with prices only, the 1800 medium is not dominated by the 2000 large (it is cheaper). The sizes are now
+  explicit (small 1x for 1000, medium 2x for 1800, large 3x for 2000), so the medium is relatively bad next to the
+  large; the name beat says the cleanest decoy is worse in every way, and the subscription (print only = print and
+  web, same price) is that clean demonstration. The limits beat says numerical options made the effect more robust
+  in those 19 experiments (Frederick, Lee & Baskin 2014), not that every numerical menu works. The closing no longer
+  tells the viewer to delete the option nobody buys (low popularity does not identify the decoy); it asks what they
+  need and what they will pay, independent of the other options.
+- **X56:** the closing screen line is now the spoken question itself.
+- **X2:** «բաժանորդագրություններում» could not fit the portrait caption box at any allowed size (774.8 px at 48 px
+  against a 608 px line); it is replaced by «ֆիլմերի ու երաժշտության ծառայություններում».

@@ -7,7 +7,7 @@ Draft for Hayk's review, 2026-11-25. Script first (Q17), rendered in Remotion (D
 
 Ancient Greek statues were not white: they were painted red, blue and gold (frame 0: a white original next to its
 tagged reconstruction). The paint left traces, sometimes visible, sometimes only under raking or UV light, and
-Egyptian blue glows in infrared. The Peplos Kore on the Acropolis still had paint when it was dug up; today only
+Egyptian blue, lit with visible light, gives off near-infrared light that a camera can see. The Peplos Kore on the Acropolis still had paint when it was dug up; today only
 dark patches remain. Why we thought otherwise: two thousand years washed the paint off, Renaissance sculptors
 copied the bare stone, white marble became the ideal and leftover paint was often cleaned away; in the 1930s the
 British Museum even scraped the Parthenon sculptures whiter with copper tools. Some of our own churches, bare stone
@@ -19,11 +19,11 @@ Greece comes from what time left, and for centuries we admired a beauty that was
 
 <!-- script:start -->
 
-9 beats, 1,560 characters (1,560 with numbers spelled out): ~108 s of speech, ~1:58 with pauses and the end tail, 8.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
+9 beats, 1,609 characters (1,609 with numbers spelled out): ~111 s of speech, ~2:02 with pauses and the end tail, 8.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Հին հունական արձանները սպիտակ չէին։ Դրանք ներկված էին՝ կարմիր, կապույտ, ոսկեգույն։ Ինչպե՞ս գիտենք, և ինչո՞ւ ենք դարեր շարունակ կարծել հակառակը։ *[pause 1 s]*
 
-**2. traces.** Ներկի հետքերը մնացել են։ Երբեմն դրանք երևում են աչքով, երբեմն՝ միայն թեք լույսի կամ ուլտրամանուշակագույն ճառագայթների տակ։ Իսկ եգիպտական կապույտ ներկն ինֆրակարմիր լույսի տակ փայլում է, և այդպես գտնում են նույնիսկ մանրադիտակային հետքերը։ *[pause 1.5 s]*
+**2. traces.** Ներկի հետքերը մնացել են։ Երբեմն դրանք երևում են աչքով, երբեմն՝ միայն թեք լույսի կամ ուլտրամանուշակագույն ճառագայթների տակ։ Իսկ եգիպտական կապույտ ներկը սովորական լույսի տակ ինֆրակարմիր լույս է արձակում, որը տեսնում է հատուկ տեսախցիկը, և այդպես գտնում են նույնիսկ մանրադիտակային հետքերը։ *[pause 1.5 s]*
 
 **3. kore.** Աթենքի Ակրոպոլիսում գտնված այս աղջկա արձանի վրա հայտնաբերման պահին դեռ ներկ կար։ Այսօր դրանից մնացել են միայն մուգ բծեր։ *[pause 1 s]*
 
@@ -74,7 +74,7 @@ Armenian lint: 0 errors, 0 hints (after dropping a redundant «մենք»).
   color reconstruction of the Kouros from Tenea.jpg` (CC BY-SA 4.0, Aquaplaning, Gods in Color); `File:Rekonstruction
   Aristion warrior by Aristokles - Bunte Götter in Berlin.jpg` (CC BY-SA 3.0, Marcus Cyron); `File:Tools used for the
   cleaning of the Elgin Marbles.JPG` (licence to check).
-- **Drawn:** the colour wash over a white head (hook and ending); the raking-light sweep and the infrared specks; the
+- **Drawn:** the colour wash over a white head (hook and ending); the raking-light sweep and the infrared specks (visible light in, infrared out, seen by a camera); the
   paint-flaking timeline; three versions of one face (flat, shaded, "?").
 
 ## After the Fable review (FABLE_REVIEW_2.md, applied 2026-11-25)
@@ -93,3 +93,16 @@ Armenian lint: 0 errors, 0 hints (after dropping a redundant «մենք»).
   Urartian wall paintings of Erebuni in Yerevan); only if you want it, it needs a source check.
 - **U-iii, «Պեպլոսով կորե»** on screen: or «Պեպլոսով աղջկա արձան»?
 - U-a («դու» vs «դուք») applies here too.
+
+## After the Codex review (2026-11-26)
+
+Fixes by finding ID (CODEX_REVIEW.md):
+
+- **X39:** the mechanism was reversed. Egyptian blue is lit with visible light and emits near-infrared light, which a
+  suitable camera records (University of Michigan imaging page, https://sites.lsa.umich.edu/color-roman-egypt/imaging/;
+  the Met's "luminesces strongly in the near-infrared" quoted above). The voice and the storyboard now say so, and the
+  camera view is tagged as a camera image.
+- **X56:** the closing screen line now says what the voice says («... որը վնասվածքի արդյունք էր»), not the stronger
+  «... որը վնասվածք էր».
+- **X2:** «ուլտրամանուշակագույն» is wider than the portrait caption box at 48 px; the caption tool now allows one long
+  word down to 44 px (it fits at 46 px), and stops the build for anything wider.

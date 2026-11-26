@@ -18,10 +18,8 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[2]
-(ROOT / "logs").mkdir(exist_ok=True)
-logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s",
-                    handlers=[logging.StreamHandler(sys.stdout),
-                              logging.FileHandler(ROOT / "logs" / "contact_sheet.log", encoding="utf-8")])
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from runlog import setup as setup_logging  # noqa: E402
 log = logging.getLogger("contact_sheet")
 
 # Safe area in 1080x1920 pixels: the right ~192 px is the widest button column (Shorts), the bottom ~670 px the title
@@ -31,6 +29,7 @@ SAFE = [(120, 288), (888, 288), (888, 1248), (120, 1248)]
 
 
 def main():
+    setup_logging("contact_sheet")
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("video", type=Path)
     ap.add_argument("--out", type=Path, required=True)

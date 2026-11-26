@@ -24,6 +24,8 @@ gets tested), the formula card, and the question to ask next time.
 
 ~150 s of speech (2,182 characters at the measured ~870 a minute), ~155 s with pauses.
 
+*Superseded (Codex review X61, 2026-11-26): this beat-by-beat table is the 2026-11-25 storyboard estimate, before the Codex cuts. The current beats and length are in the script section above; keep the table only for its visual notes.*
+
 | # | Beat | ~s | Said (in short) | Shown |
 |---|------|----|-----------------|-------|
 | 1 | hook | 6 | the test is 99% accurate, you are positive: what is the chance you are sick? | big "99%", a test card with "+" |
@@ -45,35 +47,31 @@ gets tested), the formula card, and the question to ask next time.
 
 <!-- script:start -->
 
-14 beats, 2,182 characters (2,315 with numbers spelled out): ~155 s of speech, ~2:38 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%).
+12 beats, 2,018 characters (2,118 with numbers spelled out): ~143 s of speech, ~2:34 with pauses and the end tail, 9 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Թեստը 99 տոկոսով ճշգրիտ է, և քո պատասխանը դրական է։ Ո՞րն է հավանականությունը, որ իսկապես հիվանդ ես։
 
-**2. guess.** Մեծ մասը կասի՝ 99 տոկոս։ Բժիշկների մեծ մասը նույնպես։ Իսկ ճիշտ պատասխանը կարող է լինել 50, կամ նույնիսկ 9 տոկոս։ Հաշվենք ոչ թե տոկոսներով, այլ մարդկանցով։
+**2. guess.** Մեծ մասը կասի՝ 99 տոկոս։ Նման հարցում սխալվում են նաև շատ բժիշկներ՝ մի դասընթացի 160 գինեկոլոգից ճիշտ է պատասխանել միայն ամեն հինգերորդը։ Իսկ ճիշտ պատասխանը կարող է լինել 50, կամ նույնիսկ 9 տոկոս։ Հաշվենք ոչ թե տոկոսներով, այլ մարդկանցով։
 
-**3. crowd.** Պատկերացրու հազար մարդ։ Հիվանդությունը հազվադեպ է՝ հարյուրից մեկն է հիվանդ։ Ուրեմն հազարից հիվանդ է տասը մարդ։
+**3. crowd.** Պատկերացրու հազար մարդ։ Հիվանդությունը հազվադեպ է՝ հարյուրից մեկն է հիվանդ։ Ուրեմն հազարից հիվանդ է տասը մարդ։ *[pause 1.5 s]*
 
-**4. meaning.** Ի՞նչ է նշանակում 99 տոկոս։ Թեստը հարյուր հիվանդից գտնում է 99-ին, իսկ հարյուր առողջից միայն մեկին է սխալմամբ դրական պատասխան տալիս։
+**4. meaning.** «Ճշգրիտը» կարող է տարբեր բաներ նշանակել։ Մեր օրինակում ենթադրենք՝ թեստը հարյուր հիվանդից գտնում է 99-ին, իսկ հարյուր առողջից միայն մեկին է սխալմամբ դրական պատասխան տալիս։
 
 **5. test_sick.** Ստուգենք բոլոր հազարին։ Տասը հիվանդին էլ թեստը գտնում է։
 
-**6. test_healthy.** Բայց կա նաև 990 առողջ մարդ։ Նրանց մեկ տոկոսը՝ մոտ տասը մարդ, նույնպես դրական պատասխան է ստանում։ Սրանք կեղծ դրական պատասխաններ են։
+**6. test_healthy.** Բայց կա նաև 990 առողջ մարդ։ Նրանց մեկ տոկոսը՝ մոտ տասը մարդ, նույնպես դրական պատասխան է ստանում։ Սրանք կեղծ դրական պատասխաններ են։ *[pause 1.5 s]*
 
-**7. reveal.** Հիմա հավաքենք դրական պատասխան ստացած բոլոր մարդկանց։ Քսան մարդ։ Նրանցից հիվանդ է միայն տասը։ Այսինքն՝ քո դրական պատասխանը նշանակում է ոչ թե 99, այլ 50 տոկոս։
+**7. reveal.** Հիմա հավաքենք դրական պատասխան ստացած բոլոր մարդկանց։ Քսան մարդ։ Նրանցից հիվանդ է միայն տասը։ Այսինքն՝ քո դրական պատասխանը նշանակում է ոչ թե 99, այլ 50 տոկոս։ *[pause 3 s]*
 
 **8. why.** Պատճառը պարզ է։ Առողջները 99 անգամ ավելի շատ են, քան հիվանդները։ Թեստի փոքր՝ մեկ տոկոս սխալը կիրառվում է հսկայական խմբի վրա։
 
-**9. rarer.** Իսկ եթե հիվանդությունն ավելի հազվադեպ է՝ հազարից մեկ։ Թեստը նույնն է։ Հիվանդ է մեկ մարդ, իսկ կեղծ դրական պատասխան ստանում է մոտ տասը առողջ։ Դրական պատասխանը ճիշտ է տասնմեկից մեկ անգամ՝ մոտ 9 տոկոս։
+**9. rarer.** Իսկ եթե հիվանդությունն ավելի հազվադեպ է՝ հազարից մեկ։ Թեստը նույնն է։ Հիվանդ է մեկ մարդ, իսկ կեղծ դրական պատասխան ստանում է մոտ տասը առողջ։ Դրական պատասխանը ճիշտ է տասնմեկից մեկ անգամ՝ մոտ 9 տոկոս։ *[pause 1.5 s]*
 
-**10. doctors.** Սա միայն տեսական խնդիր չէ։ 2007 թվականին 160 գինեկոլոգի տվել են նման հարց՝ կրծքագեղձի քաղցկեղի սկրինինգի մասին։ Ճիշտ է պատասխանել միայն ամեն հինգերորդը։ Իսկ մեկ ժամվա դասից հետո, երբ թվերը բացատրել են մարդկանց քանակով, ճիշտ են պատասխանել 87 տոկոսը։
+**10. retest.** Ի՞նչ անել։ Ստուգել ուրիշ թեստով, որը սխալվում է այլ պատճառներով։ Քսան դրականներին նորից ստուգենք։ Հիվանդները նորից դրական են։ Իսկ առողջներից յուրաքանչյուրը երկրորդ անգամ էլ դրական ստանալու շանս ունի ընդամենը մեկ տոկոս, ուստի տասից սովորաբար ոչ ոք չի ստանում։ Եթե երկու թեստի սխալներն իրարից անկախ են, երկու դրականից հետո հավանականությունը մոտ 99 տոկոս է։ Իսկ եթե երկրորդ թեստը սխալվում է նույն մարդկանց վրա, ոչինչ չի փոխվում՝ մնում է 50։ Դրա համար էլ բժիշկներն ունեն հաստատող թեստերի հատուկ կարգ, օրինակ՝ ՄԻԱՎ-ի դեպքում։ *[pause 1.5 s]*
 
-**11. retest.** Ի՞նչ անել։ Առաջինը՝ կրկնել թեստը, ավելի լավ է՝ ուրիշ մեթոդով։ Քսան դրականներին նորից ստուգենք։ Հիվանդները նորից դրական են, իսկ տասը առողջներից երկրորդ անգամ դրական պատասխան համարյա ոչ ոք չի ստանում։ Երկու դրական պատասխանից հետո հավանականությունը մոտ 99 տոկոս է։ Դրա համար էլ, օրինակ, ՄԻԱՎ-ի դրական թեստը միշտ հաստատում են ուրիշ թեստերով։
+**11. formula.** Այս ամենի հետևում Բայեսի բանաձևն է։ Սկսիր նրանից, թե որքան տարածված է հիվանդությունը, հետո թարմացրու այն թեստի պատասխանով։
 
-**12. symptoms.** Երկրորդը՝ կարևոր է, թե ով է թեստ անում։ Եթե ախտանիշներ ունես, դու այլևս «հարյուրից մեկը» չես։ Ասենք՝ ախտանիշներ ունեցողներից հիվանդ է ամեն տասներորդը։ Այդ դեպքում նույն դրական պատասխանը նշանակում է մոտ 92 տոկոս։
-
-**13. formula.** Այս ամենի հետևում Բայեսի բանաձևն է։ Սկսիր նրանից, թե որքան տարածված է հիվանդությունը, հետո թարմացրու այն թեստի պատասխանով։
-
-**14. takeaway.** Այնպես որ, երբ հաջորդ անգամ լսես «99 տոկոսով ճշգրիտ», հարցրու՝ իսկ որքա՞ն հազվադեպ է այն, ինչ փնտրում ենք։
+**12. takeaway.** Երբ հաջորդ անգամ լսես «99 տոկոսով ճշգրիտ», հարցրու՝ իսկ որքա՞ն հազվադեպ է այն, ինչ փնտրում ենք։
 
 <!-- script:end -->
 
@@ -145,3 +143,38 @@ error, so the script says "better with another method".
    later shorts can reuse (any "out of N people" story).
 4. Stills of each new scene, then one draft render, then the final: ~3-5 min per 155 s render.
 5. Reviews: contact sheet, then `gemini_review.py` (~$0.02 a pass), then the review page for Hayk.
+
+## After the Codex review (2026-11-26)
+
+Fixes by finding ID (CODEX_REVIEW.md):
+
+- **X25:** the retest beat now says the 99% holds only if the two tests' errors are independent, and that a test
+  repeating the same errors leaves it at 50%. The healthy group's second positives are shown as an expectation
+  (each has a 1% chance, so usually none of the 10), not as 10 guaranteed clearances. The clinical line points to
+  confirmatory testing rules (HIV as the example), not to repeating any test.
+- **X26:** "99% accurate" is now introduced as an assumption of this example (finds 99 of 100 sick, flags 1 of 100
+  healthy). The doctors claim is narrowed to one teaching session: 160 gynecologists, 21% right before training
+  (primary paper: Gigerenzer et al. 2007, Psychological Science in the Public Interest 8(2), p. 55, accessible copy
+  https://web.mit.edu/5.95/readings/gigerenzer.pdf). The before/after training result moved out with the doctors beat.
+- **X51:** one extension (the retest) kept; the doctors and symptoms extensions are cut (texts below); 9 s of marked
+  pauses, the longest (3 s) on the reveal where the viewer counts; the closing has no «Այնպես որ,».
+
+**Cut beats, kept here word for word so they can come back:**
+
+- `doctors`: Սա միայն տեսական խնդիր չէ։ 2007 թվականին 160 գինեկոլոգի տվել են նման հարց՝ կրծքագեղձի քաղցկեղի սկրինինգի մասին։ Ճիշտ է պատասխանել միայն ամեն հինգերորդը։ Իսկ մեկ ժամվա դասից հետո, երբ թվերը բացատրել են մարդկանց քանակով, ճիշտ են պատասխանել 87 տոկոսը։ (screen: 160 գինեկոլոգ) (source line: Gigerenzer et al., 2007)
+
+- `symptoms`: Երկրորդը՝ կարևոր է, թե ով է թեստ անում։ Եթե ախտանիշներ ունես, դու այլևս «հարյուրից մեկը» չես։ Ասենք՝ ախտանիշներ ունեցողներից հիվանդ է ամեն տասներորդը։ Այդ դեպքում նույն դրական պատասխանը նշանակում է մոտ 92 տոկոս։
+
+## Evidence record (Codex review X60, 2026-11-26)
+
+One row per consequential claim in the current script. *Kind*: data (observed), calculation, analogy, story or
+interpretation. *Checked*: what was actually read; "secondary" means a summary or encyclopedia, not the source;
+"unverified" means nobody has read a source for these exact words yet. Fix the unverified rows before the voice.
+
+| Beat | Claim (as voiced) | Source | Kind | Checked |
+|---|---|---|---|---|
+| guess | 160 gynecologists in one course; about 1 in 5 (21%) answered right | Gigerenzer et al. 2007, *PSPI* 8(2), p. 55, https://web.mit.edu/5.95/readings/gigerenzer.pdf | data | primary, p. 55, read by Codex; not re-read by Claude |
+| crowd-reveal | 1% prevalence, 99% / 99% -> a positive means 50% | own calculation, assumption of the example | calculation | checked: 10 / (10 + 9.9) |
+| rarer | 1 in 1000 -> about 9% | own calculation | calculation | checked: 1 / (1 + 10) |
+| retest | about 99% after two positives if the errors are independent; 50% if the second test repeats the errors | own calculation (CODEX_REVIEW.md X25) | calculation | checked |
+| retest | HIV positives are confirmed by a set testing procedure | CDC / APHL laboratory algorithm; WHO HIV testing information note 2023 (URLs not recorded) | guideline | secondary; record the URLs |

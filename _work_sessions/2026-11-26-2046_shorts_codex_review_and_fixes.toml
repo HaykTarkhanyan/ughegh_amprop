@@ -1,0 +1,30 @@
+title = "Shorts: independent Codex review, then all 61 findings applied"
+date = "2026-11-26"
+time = "20:46"
+areas = ["03_shorts/tools", "03_shorts/tests", "03_shorts/render", "03_shorts/*/beats.hy.json", "03_shorts/*/PLAN.md", "03_shorts/bakeoff/remotion", "DECISIONS.md", "_learnings"]
+
+done = [
+  "Codex CLI review (gpt-6.1-sol, xhigh, 26 min, neutral brief): CODEX_REVIEW.md, 61 findings (6 high); committed and opened via html-review",
+  "Q23: Hayk chose to fix everything, low included",
+  "Tools: shared logging only in entry points (runlog.py, X8); offline validator validate_episode.py (X9, X10); TTS cache keeps unvisited entries, atomic manifest, no style prompt by default, refuses a human-recording folder (X1, X7); import_recording.py for Hayk's take (X5); caption profiles portrait/landscape, words that cannot fit stop the build, 44 px floor for one long word (X2, X14); timeline build id + hashes, render copy with build-named audio (X10); check_sync is a pause-consistency diagnostic with a gate and hand checkpoints (X3, X4); decimals keep their places (X6); Commons fetcher: optional original, credits saved first, retries, licence links and changes (X15, X16); requirements.txt and the pilot's @remotion/media declared (X17); episodes.py episode index + hash-bound review queue (X57, X58); plan_script estimate wording and 1:60 fix (X61)",
+  "Tests: tests/test_tools.py, 15 offline unittest cases reproducing the Codex failures; all pass",
+  "Zero-knowledge long video: card proof shows only the 26 black cards (X20); 'why zero' explains the simulator idea (X21); Waldo placed while the friend looks away + the small leak voiced (X22); real systems on signed data, deployed vs pilot vs published (X23); balls counter matches the spoken 1/2/10/20, answers only when given, coin face hidden (X11, X12); equal film strips (X13); filter region 3000x1900 (X19); ESLint clean (X18)",
+  "Zero-knowledge Short: gossip payoff in the tease (X24); new 9:16 composition ZkShort (render/src/zk/Short.tsx) with guide voice; timeline JSONs tracked for a clean bootstrap (X59)",
+  "Scripts: Bayes, Simpson, suitcase, kids TV, statues, yawning, regression, friendship, popcorn, Dmanisi, Mashtots, English spelling, own voice, crypto, Petrov, QWERTY (spine + no Latin), waiting (psychology spine), minute, week, map, IKEA, pilot all revised; cut beats kept in each PLAN.md; all lint 0 errors",
+  "Docs: README as the current entry point, bake-off frozen, evidence records in 5 plans (X60), ARMENIAN_DECISIONS.md with 12 open questions (X54), DECISIONS #25 #26, learning 2210",
+  "Guide voice remade for 8 ZK beats ($0.040) and made for the Short ($0.013); session paid spend $0.053",
+]
+pending = [
+  "Hayk: answer the open Armenian questions (ARMENIAN_DECISIONS.md) and re-approve every script (review_queue_picker.html; IDs carry the script hash)",
+  "Hayk: check the Codex rewrites of the ZK card, 'why zero' and Waldo beats before recording",
+  "Re-check the EU age-verification roadmap URL and record the missing source URLs flagged 'unverified' in the evidence records",
+  "Pilot: script changed (X50); its voice and render are outdated",
+  "Full renders of ZkLong and ZkShort with the guide voice (started after this commit)",
+]
+next = [
+  "Hayk's recording -> tools/import_recording.py propose/apply -> build_timeline -> sync_short -> render",
+  "Hand-mark ~10 word checkpoints per video in <short>/checkpoints.json for the real sync check",
+]
+files = ["03_shorts/CODEX_REVIEW.md", "03_shorts/tools/validate_episode.py", "03_shorts/tools/import_recording.py", "03_shorts/tools/episodes.py", "03_shorts/tools/runlog.py", "03_shorts/tests/test_tools.py", "03_shorts/render/src/zk/Short.tsx", "03_shorts/render/src/zk/timeline.ts", "03_shorts/ARMENIAN_DECISIONS.md", "03_shorts/episodes.json", "03_shorts/requirements.txt"]
+commits = ["e8e0da1 Codex review report", "(this session's fix commit)"]
+notes = "Codex was right on all six high findings checked; the you-should-know plugin asked for a per-ID list with disagreements marked before anything is voiced: given in the closing summary."

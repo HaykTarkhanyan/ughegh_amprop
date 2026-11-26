@@ -21,11 +21,11 @@ Friday etymology cut.)
 
 <!-- script:start -->
 
-9 beats, 1,491 characters (1,503 with numbers spelled out): ~103 s of speech, ~1:54 with pauses and the end tail, 9 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
+9 beats, 1,594 characters (1,606 with numbers spelled out): ~110 s of speech, ~2:02 with pauses and the end tail, 9 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Օրը, ամիսը և տարին գալիս են երկնքից։ Շաբաթը՝ ոչ։ Օրը Երկրի պտույտն է, ամիսը՝ Լուսնի, տարին՝ Արևի շուրջ պտույտը։ Ուրեմն որտեղի՞ց է յոթը։ *[pause 1 s]*
 
-**2. moon.** Հաճախ ասում են՝ Լուսնի փուլերից է։ Բայց լուսնային ամիսը մոտ քսանինն ու կես օր է, և յոթի վրա չի բաժանվում։ Յոթը եկել է երկու այլ տեղից։
+**2. moon.** Հաճախ ասում են՝ Լուսնի փուլերից է։ Գուցե հնում այդպես էլ սկսվել է, բայց լուսնային ամիսը մոտ քսանինն ու կես օր է և յոթի վրա չի բաժանվում, ուստի մեր անընդհատ շաբաթը Լուսնին չի հետևում։ Մեզ ծանոթ յոթ օրը եկել է երկու փաստագրված ավանդույթից։
 
 **3. sabbath.** Առաջինը հրեական շաբաթն է՝ վեց օր աշխատանք, յոթերորդը՝ հանգիստ։ Այստեղից է մեր «շաբաթ» բառը։
 
@@ -95,3 +95,13 @@ Armenian lint: 0 errors, 0 hints (after «քսանինն ու կես» and dropp
 - **U-tt, terms:** «շարժվող լուսատու» for the classical planets, «տիրակալ» for the ruler of an hour: natural?
 - **U-uu, the Soviet detail:** «Հայաստանն էլ հետը» and the spouses with different days off: keep?
 - U-a («դու» vs «դուք») applies here too.
+
+## After the Codex review (2026-11-26)
+
+Fixes by finding ID (CODEX_REVIEW.md):
+
+- **X47:** 29.53 not dividing by 7 shows only that the continuous week does not track the lunar month; it does not
+  disprove that rough lunar quarters inspired an earlier convention (US Naval Observatory calendar chapter,
+  https://aa.usno.navy.mil/downloads/c15_usb_online.pdf). The moon beat now says "maybe it began that way, but our
+  uninterrupted week does not follow the Moon", and presents the Jewish and planetary traditions as the documented
+  route to the familiar week. The planetary-hour star keeps its long pause.

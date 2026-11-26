@@ -43,43 +43,58 @@ minute, suitcase, own voice, yawning, ...). Alternate them.
 
 **First video (Hayk, DECISIONS #23):** zero-knowledge proofs, narrated by Hayk: the Short `zero_knowledge_short/` and the long 16:9 explainer `zero_knowledge/`.
 
-**Publishing order after it (Fable F233, pending Hayk; zero_knowledge moves to the front):** own_voice, decoy_popcorn, bayes_test, map_projection, friendship,
-painted_statues, petrov, mashtots, english_spelling, crypto_paint, yawning, week_seven, regression, zero_knowledge,
-dmanisi, ikea_effect, kids_tv, simpson, minute_60, luggage_wheels, waiting (rework), qwerty (rework). Option:
+**Publishing order after it (Fable F233, pending Hayk; also in `tools/episodes.py`):** own_voice, decoy_popcorn, bayes_test, map_projection, friendship,
+painted_statues, petrov, mashtots, english_spelling, crypto_paint, yawning, week_seven, regression,
+dmanisi, ikea_effect, kids_tv, simpson, minute_60, luggage_wheels, waiting, qwerty (both restructured in the Codex pass). Option:
 mashtots and english_spelling around 21 February (International Mother Language Day).
 
 ## One short, end to end
 
-From `03_shorts/` (times measured on 2026-11-25):
+From `03_shorts/`. Setup once: Python 3.14 with `requirements.txt` (`uv pip install -r requirements.txt`), ffmpeg on
+PATH, and `npm ci` in `render/`. Offline tests: `python -m unittest discover -s tests` (about 1 s).
 
-1. Write `<short>/beats.hy.json`: `[{key, text, screen?, screen_small?, visual}]`, one or two sentences per beat.
-   Lint the Armenian (extract the texts to a .txt and run the style guide's `lint_armenian.py --style`).
-2. Voice, ~30 s for 9 beats, ~$0.02:
-   `python tools/tts_gemini.py --key-name GEMINI_API_KEY beats <short>/beats.hy.json <short>/audio --voice Sadaltager --style ""`
-   (unchanged beats are reused; spend goes to `tts_ledger.csv`; the default key's free tier allows ~10 calls a day).
-3. Timeline, ~1 s: `python tools/build_timeline.py <short>`: trims silence, joins the clips into
-   `<short>/build/narration.wav`, spreads word times by length and snaps them to the voice's real pauses, groups
-   caption pages (at most 2 lines, measured with the real font, each page with its own font size; no lone words,
-   no auxiliary or closing quote at a page start, no page under 0.6 s, no merge across a sentence end). Captions
-   live in the band y ~1040-1200: keep every scene's content above ~1030.
-   Then `python tools/check_sync.py <short>` (median error should be well under 0.1 s).
-4. Photos: `python tools/fetch_commons.py search "..."`, then `get "File:..." <short>/assets --name x`; licences and
-   authors go to `<short>/assets/credits.json` for the video description.
-5. Render: see `bakeoff/README.md` until the framework is chosen (Q7). Check stills of changed scenes first, render
-   in full last (`PROCESS_NOTES.md`).
+1. Write `<short>/beats.hy.json`: `[{key, text, screen?, screen_small?, visual, pause_after?}]`, following the script
+   rules above. Lint the Armenian (extract the texts to a .txt, run the style guide's `lint_armenian.py --style`), then
+   `python tools/plan_script.py <short>` (the length line is a planning estimate, not a measurement). A 16:9 episode
+   gets `<short>/episode.json` with `{"layout": "landscape"}`. `python tools/validate_episode.py <short> --stage
+   script` checks the file before anything is paid for.
+2. Voice. Hayk's own recording: `python tools/import_recording.py propose <take> <short>`, check the proposed cuts,
+   then `... apply <short>`. The TTS voice (~30 s for 9 beats, ~$0.02):
+   `python tools/tts_gemini.py --key-name GEMINI_API_KEY beats <short>/beats.hy.json <short>/audio` (Sadaltager, no
+   style prompt by default; unchanged clips are reused, an interrupted run keeps every paid clip; spend goes to
+   `tts_ledger.csv`).
+3. Timeline, ~2 s: `python tools/build_timeline.py <short>`: trims silence, joins the clips into
+   `<short>/build/narration.wav`, spreads word times by spoken length and snaps them to the voice's real pauses,
+   groups caption pages for the episode's layout (each page measured with the real font; a word that cannot fit
+   stops the build; pages shorter than 0.6 s on screen are merged, and any left are listed as warnings). The
+   timeline records hashes of the script, the clips and the audio.
+   Then `python tools/check_sync.py <short>`: a pause-consistency diagnostic with a pass/fail gate. It is not proof
+   of word accuracy: for that, mark about 10 word times by ear in `<short>/checkpoints.json` (see the tool).
+4. Photos: `python tools/fetch_commons.py search "..."`, then `get "File:..." <short>/assets --name x`; licence,
+   licence link, credit and changes go to `<short>/assets/credits.json` for the video description.
+5. Render (Remotion, DECISIONS #21, #24): `python render/sync_short.py <short>` copies the build into the render
+   project as a matched pair, then see `render/README.md`. `python tools/validate_episode.py <short> --stage render`
+   says whether the render copy is current. Check stills of changed scenes first, render in full last
+   (`PROCESS_NOTES.md`). The bake-off (`bakeoff/`) is frozen history.
 6. Review, in this order: `python tools/contact_sheet.py <mp4> --out sheet.png` (a frame per second with the safe
    area drawn; read it), then `python tools/gemini_review.py <540x960 preview> <short>/beats.hy.json --out
    <short>/review/gemini_review.json` (~$0.02; verify each finding), then
    `python tools/media_gallery.py <files> --out <page>.html` and open it with html-review for Hayk.
+7. Status: `python tools/episodes.py` rebuilds `episodes.json` (beats, planned length, script hash, narration,
+   approval) and the review page `review_queue_picker.html`; after Hayk approves a script,
+   `python tools/episodes.py --approve <short>` records the approved hash.
 
 ## Folders
 
 | Path | What |
 |------|------|
 | `pilot_survivorship/` | First short: survivorship bias (Yerevan Zoo ZIL fridge, Wald's bombers, old songs, a 90-year-old smoker, Jobs and Gates). `beats.hy.json`, `labels.hy.json`, `audio/`, `assets/` + `credits.json`, `build/` |
-| `tools/` | `tts_gemini.py` (copied from sample_problems_qysu/animations on 2026-11-25, unchanged), `build_timeline.py`, `check_sync.py`, `fetch_commons.py` (search, get, credits), `contact_sheet.py`, `gemini_review.py`, `media_gallery.py` |
+| `tools/` | `tts_gemini.py` (adapted for the series), `import_recording.py`, `validate_episode.py`, `build_timeline.py`, `check_sync.py`, `plan_script.py`, `hy_numbers.py`, `episodes.py`, `fetch_commons.py` (search, get, credits), `contact_sheet.py`, `gemini_review.py`, `media_gallery.py`, `runlog.py` (shared logging) |
+| `render/` | The series' Remotion project (`render/README.md`): the zero-knowledge long video (`ZkLong`) and Short (`ZkShort`) |
+| `tests/` | Offline tests of the tools (no network, no paid calls) |
+| `episodes.json` | Episode index, generated by `tools/episodes.py`; the place to read counts, lengths and status |
 | `PROCESS_NOTES.md` | What the pilot taught about the process: where the time went, improvements by payoff, the Gemini review |
-| `bakeoff/` | The same short rendered in Remotion and in HyperFrames, for Q7 |
+| `bakeoff/` | Frozen: the pilot rendered in Remotion and in HyperFrames for the framework choice (Q7, decided: Remotion) |
 | `voice_test/` | The two voice test pages (Q8) |
 | `assets/fonts/` | Noto Sans Armenian + its licence |
 
@@ -89,6 +104,5 @@ From `03_shorts/` (times measured on 2026-11-25):
   the bottleneck.
 - Word-exact captions if the length-based timing drifts visibly: MMS forced alignment (`ctc-forced-aligner`, model
   CC-BY-NC) or Azure hy-AM voices with native word boundaries.
-- A Gemini "first viewer" critique of each MP4 (hook, pacing), lit review section 9.
 - Music: not decided (in-app sounds at upload, a free library, or Lyria).
 - AI-disclosure tick: check YouTube's help page on synthetic narrator voices before the first upload.

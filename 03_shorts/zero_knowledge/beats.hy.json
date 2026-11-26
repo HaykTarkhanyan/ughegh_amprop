@@ -7,7 +7,7 @@
   },
   {
     "key": "same_problem",
-    "text": "Թվում է՝ բամբասանքի խնդիր է։ Բայց հենց նույն խնդիրն ամեն օր լուծում են կայքերն ու բանկերը։ Կայքը պետք է համոզվի, որ գիտես գաղտնաբառդ, բայց ավելի ապահով է, եթե գաղտնաբառն ինքը երբեք չուղարկես։ Բանկը պետք է իմանա, որ եկամուտդ բավական է վարկի համար, բայց պարտադիր չէ, որ իմանա ճշգրիտ թիվը։ Իսկ կայքը պետք է իմանա, որ 18 տարեկանից մեծ ես, բայց ոչ քո ծննդյան ամսաթիվը։",
+    "text": "Թվում է՝ բամբասանքի խնդիր է։ Բայց նույն խնդիրն ունեն կայքերն ու բանկերը։ Կայքը պետք է համոզվի, որ գիտես գաղտնաբառդ, բայց ավելի ապահով է, եթե գաղտնաբառն ինքը երբեք չուղարկես։ Բանկը պետք է իմանա, որ եկամուտդ բավական է վարկի համար, բայց պարտադիր չէ, որ իմանա ճշգրիտ թիվը։ Իսկ կայքը պետք է իմանա, որ 18 տարեկանից մեծ ես, բայց ոչ քո ծննդյան ամսաթիվը։",
     "visual": "Three cards slide in left to right: a login box (password dots never leave the phone), a loan form (salary blurred, a check mark 'բավական է'), a website age gate ('18+ ✓', birth date blurred)."
   },
   {
@@ -26,21 +26,21 @@
   },
   {
     "key": "waldo_trick",
-    "text": "Վերցնում ես մի մեծ ստվարաթուղթ՝ նկարից շատ ավելի մեծ, և մեջտեղում փոքրիկ անցք ես բացում։ Ստվարաթուղթը դնում ես նկարի վրա այնպես, որ անցքից երևա հենց նա։",
+    "text": "Ընկերդ շրջվում է, իսկ դու վերցնում ես մի մեծ ստվարաթուղթ՝ նկարից շատ ավելի մեծ, և մեջտեղում փոքրիկ անցք ես բացում։ Ստվարաթուղթը դնում ես նկարի վրա այնպես, որ անցքից երևա հենց նա։ Հիմա ընկերդ կարող է նայել։",
     "pause_after": 2,
-    "visual": "The showcase: a huge dark cardboard sheet (several times the page) slides in, see-through at first so the viewer sees the page underneath, its small round hole landing on the person; then the sheet turns opaque."
+    "visual": "The showcase, labelled as what only you see while the friend looks away: a huge dark cardboard sheet (several times the page) slides in, see-through at first so the viewer sees the page underneath, its small round hole landing on the person; then the sheet turns opaque and the friend turns back."
   },
   {
     "key": "waldo_zero",
-    "text": "Ընկերդ անցքից տեսնում է նրան և համոզվում, որ գտել ես։ Բայց ստվարաթուղթը ծածկում է ամբողջ նկարը, և նա չգիտի՝ էջի որ մասում է։ Էջը ստվարաթղթի տակ կարող էր լինել ցանկացած տեղ։",
+    "text": "Ընկերդ անցքից տեսնում է նրան և համոզվում, որ գտել ես։ Երևում է միայն նա ու մի փոքր կտոր շուրջը, իսկ ստվարաթուղթը ծածկում է ամբողջ էջը՝ մինչև եզրերը։ Էջը դրա տակ կարող էր լինել ցանկացած տեղ, ուստի ընկերդ չգիտի՝ էջի որ մասում է նա։",
     "pause_after": 2,
-    "visual": "The friend's view: only the hole with the person in it, black all around; dashed outlines of the page appear in several positions under the sheet (top left, centre, bottom right), each consistent with what the hole shows."
+    "visual": "The friend's view: only the hole with the person and a sliver of crowd around him, black all around (a small label: 'a little of the surroundings shows'); then the camera pulls out and dashed outlines of the page appear in several positions under the sheet, each consistent with what the hole shows."
   },
   {
     "key": "card",
-    "text": "Նույն սկզբունքը գործում է քարտերով։ Խառը կապոցից մի քարտ ես քաշում և առանց ցույց տալու ասում՝ «Կարմիր է»։ Ինչպե՞ս ապացուցել՝ առանց քարտը բացելու։ Կապոցի մնացած 51 քարտը շրջում ես և ցույց տալիս, որ բոլոր 26 սև քարտերը դեռ այնտեղ են։ Եթե բոլոր սևերը կապոցում են, ուրեմն ձեռքիդ քարտը կարմիր է։ Ընկերդ դա գիտի, բայց չգիտի՝ որ կարմիր քարտն է՝ յոթնո՞ց, թե՞ թագուհի։",
+    "text": "Նույն սկզբունքը գործում է քարտերով։ Լրիվ, խառը կապոցից մի քարտ ես քաշում և առանց ցույց տալու ասում՝ «Կարմիր է»։ Ինչպե՞ս ապացուցել՝ առանց քարտը բացելու։ Մնացած կապոցից հանում ես բոլոր սև քարտերը և ցույց տալիս՝ 26-ն էլ այնտեղ են։ Կարմիրները ցույց չես տալիս։ Եթե ոչ մի սև քարտ պակաս չէ, ուրեմն ձեռքիդ քարտը կարմիր է։ Ընկերդ դա գիտի, բայց չգիտի՝ որ կարմիր քարտն է՝ յոթնո՞ց, թե՞ թագուհի։",
     "pause_after": 1.5,
-    "visual": "A face-down card in your hand; the rest of the deck is turned face up and fanned out; the 26 black cards light up one by one inside the deck (a counter 26/26: all black cards are still there); your card stays face down with a red glow but no face."
+    "visual": "A complete deck ('52 cards'); you draw one face down. Going through the rest, every black card flies out face up into two rows of 13 (a counter 0/26 -> 26/26), every red card lands face down on a separate pile that is never turned over ('not shown'). Your card stays face down with a red glow but no face."
   },
   {
     "key": "balls",
@@ -56,26 +56,26 @@
   },
   {
     "key": "why_zero",
-    "text": "Բայց ինչո՞ւ «զրոյական գիտելիք»։ Եթե ընկերդ ամբողջը նկարի և տեսանյութը ցույց տա ուրիշին, ոչ ոք չի համոզվի։ Նույն տեսանյութը կարելի է սարքել՝ բավական է նախապես պայմանավորվել, թե երբ է փոխելու, կամ ուղղակի կտրել անհաջող փորձերը։ Նա մնում է միայն համոզմունքով, առանց որևէ տեղեկության, որ կարողանա ուրիշին տալ։",
+    "text": "Բայց ինչո՞ւ «զրոյական գիտելիք»։ Ամեն ռաունդում դու ասում ես միայն այն, ինչ ընկերդ արդեն գիտի՝ փոխե՞լ է, թե ոչ։ Ուրեմն զրույցից նա իմանում է միայն մի բան՝ դու գույները տարբերում ես։ Թե որ գնդակն է կարմիրը, զրույցում ոչ մի տեղ չկա։ Դրա համար էլ, եթե նա ամբողջը նկարի, տեսանյութն ուրիշին չի համոզի։ Այն կարելի է սարքել նախապես՝ պայմանավորվելով, թե երբ է փոխելու։",
     "pause_after": 2,
-    "visual": "The friend films the balls game on a phone; the real 20-round video plays next to a staged one (agreed swaps, cut failures: film strips and scissors); they look identical, 'նույնն են'; he walks away with a check mark in his head and nothing in his hands."
+    "visual": "Two columns side by side: what the friend did each round (swapped / kept) and what you answered; they match row by row, '= he already knew'. Then one line: 'new: only «they differ»', 'which is red: ?'. Then the film: a real 6-round strip next to one staged in advance by agreement, also 6 rounds, identical: 'նույնն են'."
   },
   {
     "key": "real",
-    "text": "Իրական համակարգերում ստվարաթղթի ու գնդակների փոխարեն մաթեմատիկական խնդիրներ են, որոնց պատասխանը կարող է անընդհատ ճիշտ տալ միայն գաղտնիքն իմացողը։ Ռաունդներն էլ անում է համակարգիչը՝ վայրկյանի մի մասում։ Հոլանդական մի խոշոր բանկ, օրինակ, հրապարակեց մեթոդ, որով կարելի է ապացուցել, որ աշխատավարձդ որոշակի միջակայքում է՝ առանց ճշգրիտ թիվը ցույց տալու։ Եվրոպական միությունն այսպես տարիքի ստուգում է փորձարկում, իսկ որոշ կրիպտոարժույթներ թաքցնում են, թե ով ում որքան է փոխանցել։",
-    "screen_small": "ING, Zero-Knowledge Range Proof, 2017; EU age verification app, 2025; Zcash, 2016",
-    "visual": "The balls morph into a grid of numbers answered in a blur of rounds; then the three cards from beat 2 return, each now with a lock and a check mark: salary in a range, '18+ ✓', a transaction with hidden fields marked valid."
+    "text": "Իրական համակարգերում ստվարաթղթի ու գնդակների փոխարեն մաթեմատիկական խնդիրներ են, որոնց պատասխանը կարող է անընդհատ ճիշտ տալ միայն գաղտնիքն իմացողը։ Ռաունդներն էլ անում է համակարգիչը՝ վայրկյանի մի մասում։ Հոլանդական մի խոշոր բանկ, օրինակ, հրապարակեց մեթոդ, որով կարելի է ապացուցել, որ աշխատավարձդ որոշակի միջակայքում է՝ առանց ճշգրիտ թիվը ցույց տալու։ Եվրոպական միությունն այսպես տարիքի ստուգում է փորձարկում։ Այստեղ ապացույցը վերաբերում է ոչ թե ցանկացած թվի, այլ պետության ստորագրած ծննդյան ամսաթվին, այլապես կարելի էր սուտ ամսաթիվ գրել։ Իսկ որոշ կրիպտոարժույթներ թաքցնում են, թե ով ում որքան է փոխանցել։",
+    "screen_small": "ING, Zero-Knowledge Range Proof, 2017; ԵՄ տարիքի ստուգման հավելված (փորձնական); Zcash, 2016",
+    "visual": "The balls morph into a grid of numbers answered in a blur of rounds; then the three cards from beat 2 return, each now with a lock and a check mark: salary in a range ('published method'), '18+ ✓' with a state signature stamp on the hidden birth date ('pilot'), a transaction with hidden fields marked valid."
   },
   {
     "key": "gossip_close",
-    "text": "Իսկ ի՞նչ անի ընկերուհիդ։ Գաղտնիքներ համեմատելու համար էլ կա մեթոդ, և այն կա իրական ծրագրերում։ Որոշ գաղտնի չատերում երկուսդ էլ գրում եք նույն հարցի պատասխանը, և ծրագիրն ասում է միայն՝ համընկնում է, թե ոչ։ Պատասխանն ինքը ոչ ոք չի տեսնում։",
+    "text": "Իսկ ի՞նչ անի ընկերուհիդ։ Գաղտնիքներ համեմատելու համար էլ կա մեթոդ, և այն կա իրական ծրագրերում։ Որոշ գաղտնի չատերում երկուսդ էլ գրում եք նույն հարցի պատասխանը, և ծրագիրն ասում է միայն՝ համընկնում է, թե ոչ։ Պատասխանն ինքը ոչ ոք չի տեսնում։ Միայն թե «ոչ»-ն էլ է տեղեկություն, ուստի պատասխանը պետք է դժվար լինի գուշակել։",
     "pause_after": 1,
     "screen_small": "Socialist Millionaires' Protocol, Off-the-Record Messaging",
-    "visual": "The chat from the hook returns: both type an answer into a locked box; the boxes meet and a single word appears, 'համընկնում է ✓'; the answers stay hidden."
+    "visual": "The chat from the hook returns: both type an answer to the same question into a locked box; the boxes meet and a single word appears, 'համընկնում է ✓'; the answers stay hidden. A last small line: a 'no' also tells something, so the answer must be hard to guess."
   },
   {
     "key": "takeaway",
-    "text": "Ապացուցելն ու բացահայտելը նույն բանը չեն։ Կարելի է համոզել՝ ոչինչ չտալով։",
+    "text": "Ապացուցելն ու բացահայտելը նույն բանը չեն։ Կարելի է համոզել՝ ոչինչ ավել չտալով։",
     "pause_after": 1.5,
     "screen": "Ապացուցել ≠ բացահայտել",
     "visual": "The locked envelope from the hook and a check mark joined by a dotted line that never opens it."

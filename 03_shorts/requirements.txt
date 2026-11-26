@@ -1,0 +1,7 @@
+# Python packages the 03_shorts tools need (Codex review X17, 2026-11-26); versions pinned to what is installed and
+# tested here (Python 3.14.10). Everything else they import is the standard library. ffmpeg must be on PATH
+# (build_timeline audio checks, check_sync, import_recording, contact_sheet).
+# Install: uv pip install -r requirements.txt
+Pillow==13.0.0      # caption widths (build_timeline), contact sheets, card cutting
+numpy==2.5.5        # card cutting (render/assets_src/cut_cards.py), regression simulation
+networkx==3.7       # friendship network (friendship/network.py)

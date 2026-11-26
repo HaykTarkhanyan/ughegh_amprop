@@ -12,28 +12,34 @@
     "visual": "The walker with an up arrow (the force) and a forward arrow (the motion) at right angles (F220); the formula appears last and resolves to 0."
   },
   {
+    "key": "two_things",
+    "text": "Բայց դասագրքի «աշխատանքը» և մարմնի ծախսած էներգիան տարբեր բաներ են։ Մկաններն էներգիա են ծախսում, նույնիսկ երբ ուղղակի պահում են բեռը՝ առանց այն շարժելու։ Ծանր պայուսակը մեկնած ձեռքով մեկ րոպե պահիր, և կզգաս։",
+    "visual": "Left: the textbook line 'W = F · d · cos 90° = 0'. Right: an arm holding a bag perfectly still, a muscle icon and an energy meter that keeps draining; between them 'աշխատանք ≠ էներգիա'.",
+    "pause_after": 1.5
+  },
+  {
     "key": "body",
-    "text": "Բայց մարմինը սայլ չէ։ Ամեն քայլի ժամանակ մի փոքր իջնում ու բարձրանում ես, և ոտքերի մկաններն ամեն անգամ նորից բարձրացնում են քեզ ու ուսապարկը։ Չափումները ցույց են տալիս՝ բեռը մեծացնելիս էներգիայի ծախսն աճում է գրեթե համամասնորեն։",
+    "text": "Իսկ քայլելիս ավելանում է ևս մեկ բան։ Ամեն քայլի ժամանակ մի փոքր իջնում ու բարձրանում ես, և ոտքերի մկաններն ամեն անգամ նորից բարձրացնում են քեզ ու ուսապարկը։ Չափումները ցույց են տալիս՝ բեռը մեծացնելիս էներգիայի ծախսն աճում է գրեթե համամասնորեն։",
     "pause_after": 3,
     "visual": "The showcase: the walker's centre of mass traced as a wavy line, the backpack riding the waves; each rise lights the knee and ankle; during the pause a cost-vs-load line rises straight."
   },
   {
     "key": "wheels",
-    "text": "Անիվը վերացնում է այդ խնդիրը։ Ճամպրուկի քաշը պահում է հատակը, ոչ թե դու, և այն չի բարձրանում ու իջնում քո քայլերի հետ։ Հարթ հատակին այն քաշելու համար պետք է ուժ, որ նրա քաշի ընդամենը մի քանի տոկոսն է։",
+    "text": "Անիվը երկուսն էլ քեզնից վերցնում է։ Չորս անիվով ճամպրուկի ամբողջ քաշը պահում է հատակը, երկու անիվով թեքվածինը՝ մեծ մասը, և այն չի բարձրանում ու իջնում քո քայլերի հետ։ Հարթ հատակին այն քաշելու համար պետք է ուժ, որ նրա քաշի ընդամենը մի քանի տոկոսն է։",
     "pause_after": 1.5,
-    "visual": "The same walker pulling a case: the case's path is a flat line while the walker still bobs; a small force arrow on the handle versus the big weight arrow carried by the floor."
+    "visual": "The same walker pulling a four-wheel case: the case's path is a flat line while the walker still bobs; the floor carries the big weight arrow, the handle only a small force arrow. A small inset: a tilted two-wheel case, where the hand also carries a short weight arrow."
   },
   {
     "key": "floor",
     "text": "Բայց անիվը մի պայման ունի՝ հարթ հատակ։ Աստիճաններին, ավազին կամ քարե սալահատակին այն ցատկում է ու խրվում, և բեռը նորից քո ձեռքերում է։ Երևանի որոշ մայթերին ուսապարկը մինչև հիմա հաղթում է։",
-    "pause_after": 1.5,
+    "pause_after": 1,
     "visual": "The flat line of the case turns jagged on steps, sand and cobbles; then a suitcase bouncing over an uneven Yerevan pavement while a backpacker strolls past."
   },
   {
     "key": "takeaway",
-    "text": "Դասագիրքն ասում է՝ զրո աշխատանք։ Ոտքերդ համաձայն չեն։",
+    "text": "Դասագիրքը ճիշտ է՝ բեռի վրա աշխատանք չկա։ Բայց աշխատանքը զրո է, էներգիան՝ ոչ։",
     "pause_after": 1,
-    "screen": "Դասագիրքն ասում է՝ զրո։ Ոտքերդ համաձայն չեն",
-    "visual": "The textbook page from the hook next to the walker's wavy path; loops."
+    "screen": "Աշխատանքը զրո է, էներգիան՝ ոչ",
+    "visual": "The textbook formula from the hook next to the muscle's energy meter, then the walker's wavy path; loops."
   }
 ]

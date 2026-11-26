@@ -1,22 +1,28 @@
-"""Gemini text-to-speech for narration tests (standard library only, no SDK).
+"""Gemini text-to-speech for the shorts' narration (standard library only, no SDK). Copied from
+sample_problems_qysu/animations on 2026-11-25 and adapted for 03_shorts.
 
-Usage (from animations/):
-    uv run python tools/tts_gemini.py say TEXT_FILE OUT.wav [--voice Sadaltager] [--model gemini-3.8-flash-tts]
-                                     [--style "calm university lecturer"]
-    uv run python tools/tts_gemini.py beats narration/<scene>.hy.json media/narration/<scene>/
-    uv run python tools/tts_gemini.py voices [--lang hy-AM]
+Usage (from 03_shorts/):
+    python tools/tts_gemini.py --key-name GEMINI_API_KEY beats <short>/beats.hy.json <short>/audio
+    python tools/tts_gemini.py say TEXT_FILE OUT.wav [--voice Sadaltager] [--style "..."]
+    python tools/tts_gemini.py voices [--lang hy-AM]
 
-`beats` synthesizes one clip per beat and writes manifest.json (text and duration per beat), which a scene
-based on scenes/narration.py (NarratedScene) reads to play each clip and wait until it has been spoken.
+`beats` checks the script first (tools/validate_episode.py) and stops before any paid call if it has problems.
+Then it makes one clip per beat, <short>/audio/<key>.wav, and keeps <short>/audio/manifest.json up to date: text,
+seconds, and the voice / model / style each clip was made with. A clip whose text, voice, model and style are
+unchanged, and whose WAV is still readable and audible, is reused without a call. The manifest is written
+atomically after every new clip and keeps the entries of beats not visited yet, so an interrupted run loses no
+paid clip (Codex review X1, 2026-11-26). Clips of beats no longer in the script move to "unused".
+Default voice: Sadaltager with no style prompt (DECISIONS.md #20; Codex review X7). LECTURER_STYLE is the old
+qysu prompt, kept as a preset to pass with --style.
 
 The API key is read from the environment variable named by --key-name (default GEMINI_API_KEY_VOICE) or, if
 unset, from the line KEY=... in ~/OneDrive/Desktop/00_notes/.secrets/api_keys.env. The key is never printed.
-Every synthesis call appends one row to animations/tts_ledger.csv (date, model, voice, characters, tokens, audio
+Every synthesis call appends one row to 03_shorts/tts_ledger.csv (date, model, voice, characters, tokens, audio
 seconds, estimated USD), so the spend is answerable from data.
 
-Runtime: about 5-20 s per clip of 20-40 s audio (network bound). Prices used for the estimate are the ones the
-research found on 2026-11-24 (_knowledge/manim_llm_video/research.md): Flash TTS $0.50 per 1M input tokens and
-$9 per 1M audio tokens, Flash-Lite TTS $6 per 1M audio tokens; they roughly double from 2027-01-01.
+Runtime: about 5-20 s per clip of 20-40 s audio (network bound). Prices used for the estimate are the ones found
+on 2026-11-24: Flash TTS $0.50 per 1M input tokens and $9 per 1M audio tokens, Flash-Lite TTS $6 per 1M audio
+tokens; they roughly double from 2027-01-01.
 """
 import argparse
 import base64
@@ -39,19 +45,18 @@ ROOT = Path(__file__).resolve().parents[2]
 ENV_FILE = Path.home() / "OneDrive/Desktop/00_notes/.secrets/api_keys.env"
 LEDGER = Path(__file__).resolve().parents[1] / "tts_ledger.csv"
 API = "https://generativelanguage.googleapis.com/v1beta"
-# Owner's choice after the listening test on 2026-11-24 (DECISIONS #29): Sadaltager on 3.8 Flash TTS
+# Hayk's choice for the shorts (DECISIONS.md #20): Sadaltager on 3.8 Flash TTS with no style prompt
 DEFAULT_VOICE = "Sadaltager"
 DEFAULT_MODEL = "gemini-3.8-flash-tts"
-DEFAULT_STYLE = "Calm, clear university lecturer explaining mathematics to students, moderate pace"
+DEFAULT_STYLE = ""
+LECTURER_STYLE = "Calm, clear university lecturer explaining mathematics to students, moderate pace"
 PRICES = {  # USD per 1M tokens: (text input, audio output)
     "gemini-3.8-flash-tts": (0.50, 9.0),
     "gemini-3.8-flash-lite-tts": (0.50, 6.0),
 }
 
-(ROOT / "logs").mkdir(exist_ok=True)
-logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s",
-                    handlers=[logging.StreamHandler(sys.stdout),
-                              logging.FileHandler(ROOT / "logs" / "tts_gemini.log", encoding="utf-8")])
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from runlog import setup as setup_logging  # noqa: E402
 log = logging.getLogger("tts_gemini")
 
 
@@ -142,36 +147,56 @@ def say(args):
                      f"{seconds:.1f}", f"{usd:.5f}", out.name])
 
 
+def write_json_atomic(path: Path, data) -> None:
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    os.replace(tmp, path)
+
+
 def beats(args):
-    """Synthesize every beat of a narration JSON ([{"key", "text"}, ...]) into OUT_DIR/<key>.wav and write
-    OUT_DIR/manifest.json with each beat's text and duration. A beat whose text, voice and model are unchanged
-    since the last run is reused (no API call)."""
-    spec = json.loads(Path(args.beats_file).read_text(encoding="utf-8"))
+    """One clip per beat of a beats JSON into OUT_DIR, with OUT_DIR/manifest.json (cache rules: module docstring)."""
+    from validate_episode import audible, check_script_file
+    spec, errs = check_script_file(Path(args.beats_file))
+    if errs:
+        for e in errs:
+            log.error("%s", e)
+        raise SystemExit(f"{args.beats_file}: {len(errs)} problem(s); nothing was synthesized")
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     man_path = out_dir / "manifest.json"
     old = json.loads(man_path.read_text(encoding="utf-8")) if man_path.exists() else {}
-    manifest = {"voice": args.voice, "model": args.model, "style": args.style, "beats": {}}
+    if old.get("narrator", "gemini-tts") != "gemini-tts":
+        raise SystemExit(f"{man_path} holds clips cut from a {old['narrator']} recording; use another out_dir")
+    # manifests before 2026-11-26 kept voice / model / style once at the top; every entry now carries its own
+    top = {k: old.get(k) for k in ("voice", "model", "style")}
+    entries = {k: {**top, **v} for k, v in {**old.get("unused", {}), **old.get("beats", {})}.items()}
+    want = {"voice": args.voice, "model": args.model, "style": args.style}
+    manifest = {"narrator": "gemini-tts", **want, "beats": entries}
     for b in spec:
         wav = out_dir / f"{b['key']}.wav"
-        prev = old.get("beats", {}).get(b["key"])
-        if (prev and prev["text"] == b["text"] and old.get("voice") == args.voice and old.get("model") == args.model
-                and old.get("style") == args.style and wav.exists()):
-            log.info("reuse %s (%.1f s)", b["key"], prev["seconds"])
-            manifest["beats"][b["key"]] = prev
-            continue
+        prev = entries.get(b["key"])
+        if prev and prev.get("text") == b["text"] and all(prev.get(k) == v for k, v in want.items()) and wav.exists():
+            ok, why = audible(wav)
+            if ok:
+                log.info("reuse %s (%.1f s)", b["key"], prev["seconds"])
+                continue
+            log.warning("cached clip unusable, making it again: %s", why)
         txt = out_dir / f"{b['key']}.txt"
         txt.write_text(b["text"], encoding="utf-8")
         say(argparse.Namespace(key_name=args.key_name, text_file=str(txt), out=str(wav), voice=args.voice,
                                model=args.model, style=args.style))
         with wave.open(str(wav), "rb") as w:
             seconds = w.getnframes() / w.getframerate()
-        manifest["beats"][b["key"]] = {"text": b["text"], "file": wav.name, "seconds": round(seconds, 3)}
-        # saved after every beat, so a failure later keeps the clips already paid for
-        man_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-    man_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+        entries[b["key"]] = {"text": b["text"], "file": wav.name, "seconds": round(seconds, 3), **want}
+        write_json_atomic(man_path, manifest)  # after every paid clip, with the unvisited entries still in it
+    keys = [b["key"] for b in spec]
+    manifest["beats"] = {k: entries[k] for k in keys}
+    unused = {k: v for k, v in entries.items() if k not in manifest["beats"]}
+    if unused:
+        manifest["unused"] = unused
+    write_json_atomic(man_path, manifest)
     total = sum(v["seconds"] for v in manifest["beats"].values())
-    log.info("manifest %s: %d beats, %.1f s of speech", man_path, len(manifest["beats"]), total)
+    log.info("manifest %s: %d beats, %.1f s of speech, %d unused clip(s) kept", man_path, len(keys), total, len(unused))
 
 
 def voices(args):
@@ -189,6 +214,7 @@ def voices(args):
 
 
 def main():
+    setup_logging("tts_gemini")
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--key-name", default="GEMINI_API_KEY_VOICE")
     sub = ap.add_subparsers(dest="cmd", required=True)

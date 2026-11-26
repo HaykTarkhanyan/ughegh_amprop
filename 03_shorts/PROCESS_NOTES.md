@@ -28,7 +28,10 @@ most of it to fix things a still frame or a check would have shown.
 3. **Hayk reviews the script before the voice** (from short 2 on, his rule). Changing a beat after the voice is
    made costs a TTS call and a re-render; changing it before costs nothing.
 4. **Caption timing snapped to real pauses** (done: `build_timeline.py`, checked by `check_sync.py`): median error
-   0.195 s -> 0.034 s. Run `check_sync.py` after every new narration.
+   0.195 s -> 0.034 s. Run `check_sync.py` after every new narration. Caveat (Codex review X3, 2026-11-26): that
+   median is measured against nearly the same pauses the snapping used, and the pilot also had 14 unmatched pauses
+   and a 0.928 s worst case; it is a pause-consistency diagnostic, not proof of word accuracy. Hand-marked word
+   times in `<short>/checkpoints.json` are the independent check.
 5. **Contact sheet with the safe area drawn** (done: `tools/contact_sheet.py`): one frame per second shows text
    leaving the safe area and words running together, which no automatic check caught. At 1 fps it can miss a
    moment (the grid overlap at 10.0-11.0 s showed only as a partial overlap); use `--every 0.5 --start --end` on
@@ -56,7 +59,7 @@ Each point checked against the frames and Hayk's decisions:
 
 | Gemini said | Verdict | Done |
 |---|---|---|
-| no pronunciation problems; no sync problems | weak evidence: it samples video at 1 fps, so it cannot judge sync finely; `check_sync.py` stays the sync test | - |
+| no pronunciation problems; no sync problems | weak evidence: it samples video at 1 fps, so it cannot judge sync finely; `check_sync.py` (pause consistency) plus hand-marked checkpoints stay the sync check | - |
 | hook strong, idea understood, no disputable facts | agrees with the frame review; the «Պատմում են» framing of Wald worked | - |
 | location pill text too small (0:00, 0:07) | valid: 28 px was exactly the phone floor | 34 px, may wrap to two lines |
 | «տարի» with its closing quote opens a caption page (0:41) | valid: a page break inside the quoted saying | page rule: a word that closes a quote stays on the previous page |

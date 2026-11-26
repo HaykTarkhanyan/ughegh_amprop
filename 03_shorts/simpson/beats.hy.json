@@ -6,13 +6,13 @@
   },
   {
     "key": "twist",
-    "text": "Իսկ հիմա՝ առաջին բուժումն ավելի լավն է և՛ փոքր, և՛ մեծ քարերի դեպքում։ Ավելի լավը՝ ամեն խմբում, բայց ավելի վատը՝ ընդհանուր։ Սա Սիմպսոնի պարադոքսն է։",
+    "text": "Իսկ հիմա՝ առաջին բուժման արդյունքն ավելի լավն է և՛ փոքր, և՛ մեծ քարերի դեպքում։ Ավելի լավը՝ ամեն խմբում, բայց ավելի վատը՝ ընդհանուր։ Սա Սիմպսոնի պարադոքսն է։",
     "screen": "Սիմպսոնի պարադոքս",
     "visual": "Under card A two small badges 'փոքր քարեր ✓' and 'մեծ քարեր ✓' pop in; B's glow fades; title card."
   },
   {
     "key": "study",
-    "text": "Թվերն իրական են՝ 1986 թվականի բրիտանական հետազոտությունից։ Քարերը հեռացնում էին կամ բաց վիրահատությամբ, կամ մաշկի փոքր անցքով։ Ամեն մեթոդով՝ 350 հիվանդ։",
+    "text": "Թվերն իրական են՝ բրիտանական մի հետազոտությունից։ Քարերը հեռացնում էին կամ բաց վիրահատությամբ, կամ մաշկի փոքր անցքով։ Ամեն մեթոդով՝ 350 հիվանդ։",
     "screen_small": "Charig et al., BMJ, 1986",
     "visual": "Two simple icons: an open-surgery scalpel line vs a small keyhole; labels 'Ա՝ բաց վիրահատություն', 'Բ՝ փոքր անցքով'."
   },
@@ -24,17 +24,20 @@
   {
     "key": "split",
     "text": "Հիմա բաժանենք նրանց ըստ քարի չափի։",
-    "visual": "Dots regroup inside each crowd into two bands: small stones on top, large stones below. A: 87 small / 263 large (heavy at the bottom); B: 270 small / 80 large (heavy at the top)."
+    "visual": "Dots regroup inside each crowd into two bands: small stones on top, large stones below. A: 87 small / 263 large (heavy at the bottom); B: 270 small / 80 large (heavy at the top).",
+    "pause_after": 1.5
   },
   {
     "key": "small",
     "text": "Փոքր քարեր՝ բաց վիրահատությունն օգնում է 93 տոկոսին, երկրորդ մեթոդը՝ 87 տոկոսին։",
-    "visual": "The two small-stone bands light up, others dim. Counters '81 / 87 = 93%' vs '234 / 270 = 87%'; a check mark on A."
+    "visual": "The two small-stone bands light up, others dim. Counters '81 / 87 = 93%' vs '234 / 270 = 87%'; a check mark on A.",
+    "pause_after": 1.5
   },
   {
     "key": "large",
-    "text": "Մեծ քարեր՝ 73 տոկոսն ընդդեմ 69-ի։ Բաց վիրահատությունը հաղթում է երկու խմբում էլ։",
-    "visual": "The large-stone bands light up: '192 / 263 = 73%' vs '55 / 80 = 69%'; check mark on A; both check marks stay."
+    "text": "Մեծ քարեր՝ 73 տոկոսն ընդդեմ 69-ի։ Բաց վիրահատության տոկոսն ավելի բարձր է երկու խմբում էլ։",
+    "visual": "The large-stone bands light up: '192 / 263 = 73%' vs '55 / 80 = 69%'; check mark on A; both check marks stay.",
+    "pause_after": 2
   },
   {
     "key": "why",
@@ -45,29 +48,25 @@
     "key": "weighted",
     "text": "Ընդհանուր տոկոսը խմբերի տոկոսների կշռավորված միջինն է։ Բաց վիրահատության հիվանդների երեք քառորդը մեծ քարերով էր, իսկ երկրորդ մեթոդի հիվանդների երեք քառորդը՝ փոքր քարերով։",
     "screen": "կշռավորված միջին",
-    "visual": "Card: 'Ա: 93% x 87 + 73% x 263 -> 78%' and 'Բ: 87% x 270 + 69% x 80 -> 83%', weights drawn as bar widths."
+    "visual": "Card: 'Ա: (81 + 192) / (87 + 263) = 273 / 350 = 78%' and 'Բ: (234 + 55) / (270 + 80) = 289 / 350 = 83%'; then the same with the weights shown as shares, 87/350 and 263/350, drawn as bar widths. Exact counts in the sums, rounded percentages only as labels.",
+    "pause_after": 2
   },
   {
     "key": "berkeley",
-    "text": "Նույնը եղավ 1973 թվականին Բերքլիի համալսարանում։ Ընդունվել էր տղամարդ դիմորդների 44 տոկոսը և կին դիմորդների միայն 35 տոկոսը։ Կարծես խտրականություն լինի։ Բայց վեց խոշոր ֆակուլտետներից չորսում կանայք ընդունվում էին ավելի բարձր տոկոսով։ Պարզվեց, որ կանայք ավելի հաճախ էին դիմում այն ֆակուլտետներ, որտեղ ընդունվում էին քչերը։",
-    "screen_small": "Bickel et al., Science, 1975",
-    "visual": "Two crowds of 100 applicants (men, women) from the six largest departments: each split into 'easy' (A, B) and 'hard' (C-F) departments: men 51 / 49, women 7 / 93; admitted ones light up."
-  },
-  {
-    "key": "covid",
-    "text": "Իսկ 2020 թվականի սկզբին Իտալիայում կորոնավիրուսով վարակվածների մեջ մահացածների բաժինն ընդհանուր առմամբ ավելի մեծ էր, քան Չինաստանում, թեև ամեն տարիքային խմբում ավելի փոքր էր։ Պատճառը՝ Իտալիայում վարակվածներն ավելի տարեց էին։",
-    "screen_small": "von Kügelgen et al., 2021",
-    "visual": "Schematic age-group bars (no exact rates): Italy's bar lower in every age group; then the case mix: Italy's crowd mostly older (darker dots), China's mostly younger."
+    "text": "Նույնը եղավ Բերքլիի համալսարանում։ Վեց խոշոր ֆակուլտետներում ընդունվել էր տղամարդ դիմորդների 45 տոկոսը և կին դիմորդների միայն 30 տոկոսը։ Կարծես խտրականություն լինի։ Բայց այդ վեցից չորսում կանայք ընդունվում էին ավելի բարձր տոկոսով։ Պարզվեց, որ կանայք ավելի հաճախ էին դիմում այն ֆակուլտետներ, որտեղ ընդունվում էին քչերը։",
+    "screen_small": "Bickel et al., Science, 1975: 1973, վեց խոշոր ֆակուլտետ",
+    "visual": "Two crowds of 100 applicants (men, women) from the six largest departments, '44,5%' and '30,4%' on top: each split into 'easy' (A, B) and 'hard' (C-F) departments: men 51 / 49, women 7 / 93; admitted ones light up.",
+    "pause_after": 1.5
   },
   {
     "key": "rule",
-    "text": "Ուրեմն ո՞ր թվին հավատալ։ Եթե խմբերը տարբերվում են մի բանով, որը կար մինչև բուժումը՝ քարի չափով, տարիքով, ֆակուլտետի ընտրությամբ, համեմատիր խմբերն առանձին՝ նմանը նմանի հետ։ Բայց եթե խմբերը բաժանում ես մի բանով, որը հենց բուժման հետևանքն է, ճիշտն ընդհանուր թիվն է։",
-    "visual": "Rule card: 'կար մինչև բուժումը -> համեմատիր խմբերով'; small second line 'բուժման հետևանքն է -> նայիր ընդհանուրին'."
+    "text": "Ուրեմն ո՞ր թվին հավատալ։ Այստեղ քարի չափն ազդել է և՛ բուժման ընտրության, և՛ արդյունքի վրա, ուստի ընդհանուր թիվը խառնում է հեշտ ու դժվար դեպքերը։ Ավելի ազնիվ է համեմատել նմանը նմանի հետ։ Բայց սա էլ չի ապացուցում, որ բաց վիրահատությունն ավելի լավն է՝ մեթոդները տարբեր տարիներին են կիրառվել, և հիվանդներին պատահական չեն բաժանել։",
+    "visual": "Card: 'քարի չափ -> ընտրություն' and 'քարի չափ -> արդյունք' as two arrows; 'համեմատիր նմանը նմանի հետ'; a small second line 'բայց պատահական բաժանում չի եղել'."
   },
   {
     "key": "takeaway",
-    "text": "Այնպես որ, երբ թվերն ասում են՝ «սա ավելի լավն է», հարցրու՝ իսկ նույն տեսակի դեպքե՞ր են համեմատում։",
-    "screen": "Նույն տեսակի դեպքե՞ր են համեմատում",
+    "text": "Երբ թվերն ասում են՝ «սա ավելի լավն է», հարցրու՝ իսկ ինչո՞վ են տարբերվում խմբերը։",
+    "screen": "Ինչո՞վ են տարբերվում խմբերը",
     "visual": "Big karaoke text over the faint two crowds; last frame close to the first (the two cards) for a loop."
   }
 ]

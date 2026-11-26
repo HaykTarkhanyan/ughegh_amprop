@@ -28,7 +28,7 @@ const Head: React.FC<{ x: number; y: number; color: string; size?: number; label
   </div>
 );
 
-const Envelope: React.FC<{ size: number; open?: number; color?: string }> = ({ size, open = 0, color = C.orange }) => (
+export const Envelope: React.FC<{ size: number; open?: number; color?: string }> = ({ size, open = 0, color = C.orange }) => (
   <svg width={size} height={size * 0.75} viewBox="0 0 100 75" style={{ overflow: "visible" }}>
     <rect x="4" y="12" width="92" height="60" rx="8" fill="#2A2117" stroke={color} strokeWidth="4" />
     <path d={`M 6 16 L 50 ${lerp(48, -10, open)} L 94 16`} fill="#2A2117" stroke={color} strokeWidth="4" strokeLinejoin="round" />
@@ -53,7 +53,7 @@ const Thought: React.FC<{ x: number; y: number; w: number; h: number; opacity: n
 );
 
 // a phone with a chat; `messages` appear at their times
-const Phone: React.FC<{ x: number; y: number; t: number; title: string; messages: { at: number; text: string; mine?: boolean; locked?: boolean }[]; typingAt?: number }> = ({ x, y, t, title, messages, typingAt }) => (
+export const Phone: React.FC<{ x: number; y: number; t: number; title: string; messages: { at: number; text: string; mine?: boolean; locked?: boolean }[]; typingAt?: number }> = ({ x, y, t, title, messages, typingAt }) => (
   <div style={{ position: "absolute", left: x, top: y, width: 430, height: 800, borderRadius: 56, background: "#0A0B0E", border: "10px solid #2B2F38", boxShadow: "0 40px 90px rgba(0,0,0,0.6)", overflow: "hidden" }}>
     <div style={{ height: 110, background: "#171A20", display: "flex", alignItems: "center", gap: 18, padding: "34px 28px 0" }}>
       <div style={{ width: 54, height: 54, borderRadius: "50%", background: C.blue, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT, fontWeight: 800, fontSize: 26, color: C.bg }}>Ը</div>
@@ -83,7 +83,7 @@ const Phone: React.FC<{ x: number; y: number; t: number; title: string; messages
 );
 
 // ---------- beat 1: the gossip ----------
-export const GossipScene: React.FC<SceneProps> = ({ dur = 22, m }) => {
+export const GossipScene: React.FC<SceneProps> = ({ m }) => {
   const t = useT();
   const secret = mk(m, "secret", 3.2);
   const doubt = mk(m, "doubt", 6.4);
@@ -133,7 +133,7 @@ export const GossipScene: React.FC<SceneProps> = ({ dur = 22, m }) => {
 };
 
 // ---------- the three everyday cases (beat 2) and the real systems (beat 11) ----------
-const CaseCard: React.FC<{ x: number; y: number; t: number; t0: number; title: string; children: React.ReactNode; checked?: number; locked?: boolean }> = ({ x, y, t, t0, title, children, checked = 0, locked }) => {
+export const CaseCard: React.FC<{ x: number; y: number; t: number; t0: number; title: string; children: React.ReactNode; checked?: number; locked?: boolean }> = ({ x, y, t, t0, title, children, checked = 0, locked }) => {
   const s = Math.min(1, pop(t, t0, 9, 0.6));
   if (t < t0) return null;
   return (
@@ -148,11 +148,11 @@ const CaseCard: React.FC<{ x: number; y: number; t: number; t0: number; title: s
   );
 };
 
-const Blur: React.FC<{ text: string; size?: number }> = ({ text, size = 40 }) => (
+export const Blur: React.FC<{ text: string; size?: number }> = ({ text, size = 40 }) => (
   <span style={{ fontFamily: FONT, fontSize: size, fontWeight: 700, color: C.ink, filter: "blur(9px)", opacity: 0.8 }}>{text}</span>
 );
 
-const Row: React.FC<{ label: string; children: React.ReactNode }> = ({ label, children }) => (
+export const Row: React.FC<{ label: string; children: React.ReactNode }> = ({ label, children }) => (
   <div style={{ marginBottom: 22 }}>
     <div style={{ fontFamily: FONT, fontSize: 26, fontWeight: 600, color: C.dim, marginBottom: 8 }}>{label}</div>
     <div style={{ height: 70, borderRadius: 16, background: "rgba(255,255,255,0.06)", display: "flex", alignItems: "center", padding: "0 22px", gap: 14 }}>{children}</div>
@@ -223,48 +223,77 @@ const Frame: React.FC<{ x: number; y: number; ok: boolean; cut?: number }> = ({ 
   </div>
 );
 
-export const FakeVideoScene: React.FC<SceneProps> = ({ dur = 22, m }) => {
+// What the friend saw: his own choices and your answers, which match row by row, so the conversation tells him only
+// that the balls differ (the simulator idea, Codex review X21). Then the film: a real run and one staged by agreement,
+// both six rounds, look the same (Codex review X13: the strips used to show six frames against five).
+const ROWS6 = [true, false, false, true, true, false];
+export const FakeVideoScene: React.FC<SceneProps> = ({ dur = 30, m }) => {
   const t = useT();
-  const film = mk(m, "film", dur * 0.15);
-  const fake = mk(m, "fake", dur * 0.4);
-  const same = mk(m, "same", dur * 0.62);
-  const leave = mk(m, "leave", dur * 0.75);
-  const realOK = [true, true, true, true, true, true];
-  const staged = [true, false, true, true, false, true, true, false];
+  const knew = mk(m, "knew", dur * 0.08);
+  const only = mk(m, "only", dur * 0.3);
+  const which = mk(m, "which", dur * 0.45);
+  const film = mk(m, "film", dur * 0.58);
+  const fake = mk(m, "fake", dur * 0.75);
+  const same = mk(m, "same", Math.min(dur - 1.5, fake + 3.0));
+  const tableOut = ramp(t, film - 0.5, 0.5);
+  const tableIn = ramp(t, knew, 0.5) * (1 - tableOut);
+  const eq = ramp(t, knew + 0.6 + ROWS6.length * 0.35, 0.5);
   const stripIn = ramp(t, film, 0.6);
   const fakeIn = ramp(t, fake, 0.6);
-  let kept = 0;
+  const cell = (text: string, color: string) => (
+    <div style={{ height: 58, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT, fontSize: 34, fontWeight: 700, color }}>{text}</div>
+  );
   return (
     <Backdrop>
       <div style={{ position: "absolute", left: 0, right: 0, top: 70, textAlign: "center", fontFamily: FONT, fontSize: 46, fontWeight: 800, color: C.ink, opacity: ramp(t, 0.2, 0.5) }}>
         Ինչո՞ւ <span style={{ color: C.orange }}>«զրոյական գիտելիք»</span>
       </div>
+
+      {/* his choices and your answers, round by round */}
+      <div style={{ position: "absolute", left: 360, top: 180, width: 1200, opacity: tableIn }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 160px 1fr", alignItems: "center" }}>
+          {cell("Ընկերդ արեց", C.blue)}
+          <div />
+          {cell("Դու ասացիր", C.ink)}
+          {ROWS6.map((sw, i) => {
+            const a = ramp(t, knew + 0.6 + i * 0.35, 0.3);
+            return (
+              <React.Fragment key={i}>
+                <div style={{ opacity: a }}>{cell(sw ? "փոխեց" : "չփոխեց", C.dim)}</div>
+                <div style={{ opacity: a * eq, textAlign: "center", fontFamily: FONT, fontSize: 40, fontWeight: 800, color: C.orange }}>=</div>
+                <div style={{ opacity: a }}>{cell(sw ? "«փոխեցիր»" : "«չփոխեցիր»", C.dim)}</div>
+              </React.Fragment>
+            );
+          })}
+        </div>
+        <div style={{ marginTop: 18, textAlign: "center", fontFamily: FONT, fontSize: 40, fontWeight: 800, color: C.orange, opacity: eq }}>
+          նա արդեն գիտեր ամեն պատասխանը
+        </div>
+      </div>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 800, display: "flex", justifyContent: "center", gap: 90, fontFamily: FONT, fontSize: 38, fontWeight: 700, opacity: 1 - tableOut }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 14, color: C.ink, opacity: ramp(t, only, 0.5) }}>
+          <CheckMark size={56} progress={ramp(t, only, 0.5)} /> նոր՝ միայն «տարբեր են»
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 14, color: C.dim, opacity: ramp(t, which, 0.5) }}>
+          որն է կարմիրը՝ <span style={{ color: C.red, fontSize: 52 }}>?</span>
+        </div>
+      </div>
+
+      {/* the film: a real run and a staged one */}
       <div style={{ position: "absolute", left: 140, top: 200, fontFamily: FONT, fontSize: 34, fontWeight: 700, color: C.ink, opacity: stripIn }}>Իսկական տեսանյութ</div>
       <div style={{ position: "absolute", left: 140, top: 250, width: 1640, height: 150, borderRadius: 16, background: "#101216", border: "2px solid #2B2F38", opacity: stripIn }}>
-        {realOK.map((ok, i) => <Frame key={i} x={30 + i * 200} y={22} ok={ok} />)}
+        {ROWS6.map((_, i) => <Frame key={i} x={230 + i * 200} y={22} ok />)}
       </div>
       <div style={{ position: "absolute", left: 140, top: 470, fontFamily: FONT, fontSize: 34, fontWeight: 700, color: C.ink, opacity: fakeIn }}>
-        Սարքված՝ <span style={{ color: C.dim, fontWeight: 600 }}>նախապես պայմանավորված, անհաջողները կտրված</span>
+        Սարքված՝ <span style={{ color: C.dim, fontWeight: 600 }}>նախապես պայմանավորված, թե երբ է փոխելու</span>
       </div>
       <div style={{ position: "absolute", left: 140, top: 520, width: 1640, height: 150, borderRadius: 16, background: "#101216", border: "2px solid #2B2F38", opacity: fakeIn }}>
-        {staged.map((ok, i) => {
-          const cut = ok ? 0 : ramp(t, fake + 1.2 + i * 0.25, 0.6);
-          const slot = ok ? kept++ : -1;
-          const xFinal = 30 + Math.max(0, slot) * 200;
-          const xStart = 30 + i * 200;
-          const close = ramp(t, fake + 3.6, 0.8, easeInOut);
-          return <Frame key={i} x={ok ? lerp(xStart, xFinal, close) : xStart} y={22} ok={ok} cut={cut} />;
-        })}
-        {t > fake + 1.0 && t < fake + 3.2 ? (
-          <div style={{ position: "absolute", left: 30 + (Math.floor((t - fake - 1.0) / 0.55) % staged.length) * 200 + 60, top: -46, }}><svg width="56" height="56" viewBox="0 0 56 56"><circle cx="14" cy="44" r="8" fill="none" stroke="#E8383D" strokeWidth="4" /><circle cx="42" cy="44" r="8" fill="none" stroke="#E8383D" strokeWidth="4" /><path d="M 19 38 L 40 6 M 37 38 L 16 6" stroke="#F4F1EA" strokeWidth="5" strokeLinecap="round" /></svg></div>
-        ) : null}
+        {ROWS6.map((_, i) => (
+          <div key={i} style={{ opacity: ramp(t, fake + 0.4 + i * 0.3, 0.3) }}><Frame x={230 + i * 200} y={22} ok /></div>
+        ))}
       </div>
       <div style={{ position: "absolute", left: 0, right: 0, top: 712, display: "flex", justifyContent: "center", alignItems: "center", gap: 18, opacity: ramp(t, same, 0.5), fontFamily: FONT, fontSize: 44, fontWeight: 800, color: C.orange }}>
-        <span style={{ fontSize: 60 }}>=</span> նույնն են. ոչ ոք չի համոզվի
-      </div>
-      <div style={{ position: "absolute", left: 0, right: 0, top: 800, display: "flex", justifyContent: "center", gap: 90, opacity: ramp(t, leave, 0.5), fontFamily: FONT, fontSize: 34, fontWeight: 700 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 14, color: C.ink }}><CheckMark size={58} progress={ramp(t, leave, 0.5)} /> համոզմունք</div>
-        <div style={{ display: "flex", alignItems: "center", gap: 14, color: C.dim }}>փոխանցվող տեղեկություն՝ <span style={{ color: C.red, fontSize: 48 }}>0</span></div>
+        <span style={{ fontSize: 60 }}>=</span> նույնն են, տեսանյութն ուրիշին չի համոզի
       </div>
     </Backdrop>
   );
@@ -274,7 +303,10 @@ export const FakeVideoScene: React.FC<SceneProps> = ({ dur = 22, m }) => {
 export const RealScene: React.FC<SceneProps> = ({ dur = 30, m }) => {
   const t = useT();
   const fast = mk(m, "fast", dur * 0.2);
-  const bank = mk(m, "bank", dur * 0.35), eu = mk(m, "eu", dur * 0.62), crypto = mk(m, "crypto", dur * 0.78);
+  const bank = mk(m, "bank", dur * 0.3), eu = mk(m, "eu", dur * 0.52), signed = mk(m, "signed", dur * 0.62), crypto = mk(m, "crypto", dur * 0.85);
+  const tag = (text: string, t0: number) => (
+    <div style={{ fontFamily: FONT, fontSize: 24, fontWeight: 600, color: C.dim, marginTop: 12, opacity: ramp(t, t0 + 0.8, 0.4) }}>{text}</div>
+  );
   const gridIn = ramp(t, 0.2, 0.6) * (1 - ramp(t, bank - 0.4, 0.5));
   const digits = Array.from({ length: 60 }, (_, i) => i);
   return (
@@ -296,20 +328,27 @@ export const RealScene: React.FC<SceneProps> = ({ dur = 30, m }) => {
           <div style={{ position: "absolute", left: "35%", width: "40%", top: 0, bottom: 0, borderRadius: 20, background: "rgba(242,168,0,0.35)", border: `2px solid ${C.orange}` }} />
         </div>
         <div style={{ fontFamily: FONT, fontSize: 26, fontWeight: 600, color: C.dim, marginTop: 14 }}>միջակայքում է</div>
+        {tag("հրապարակված մեթոդ", bank)}
       </CaseCard>
       <CaseCard x={710} y={210} t={t} t0={eu} title="ԵՄ՝ տարիքի ստուգում" checked={ramp(t, eu + 2.0, 0.5)} locked>
-        <svg width="160" height="160" viewBox="0 0 100 100" style={{ display: "block", margin: "0 auto" }}>
+        <svg width="104" height="104" viewBox="0 0 100 100" style={{ display: "block", margin: "0 auto" }}>
           <circle cx="50" cy="50" r="46" fill="#1A3A8A" />
           {Array.from({ length: 12 }, (_, k) => {
             const a = (k / 12) * Math.PI * 2;
             return <circle key={k} cx={50 + 30 * Math.cos(a)} cy={50 + 30 * Math.sin(a)} r="4" fill="#FFD25A" />;
           })}
         </svg>
-        <div style={{ textAlign: "center", fontFamily: FONT, fontSize: 52, fontWeight: 900, color: C.orange, marginTop: 14 }}>18+</div>
+        <div style={{ textAlign: "center", fontFamily: FONT, fontSize: 48, fontWeight: 900, color: C.orange, marginTop: 4 }}>18+</div>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginTop: 10, opacity: ramp(t, signed, 0.5) }}>
+          <Blur text="14.03.2001" size={30} />
+          <div style={{ fontFamily: FONT, fontSize: 19, fontWeight: 800, color: C.blue, border: `3px solid ${C.blue}`, borderRadius: 10, padding: "3px 8px", transform: `rotate(-4deg) scale(${Math.min(1, pop(t, signed, 10, 0.5))})` }}>պետության ստորագրություն</div>
+        </div>
+        {tag("փորձարկում", eu)}
       </CaseCard>
       <CaseCard x={1270} y={210} t={t} t0={crypto} title="Կրիպտոարժույթ" checked={ramp(t, crypto + 2.0, 0.5)} locked>
         <Row label="ով"><Blur text="Արամ → Անի" size={34} /></Row>
         <Row label="որքան"><Blur text="0,42 ZEC" size={34} /></Row>
+        {tag("գործում է 2016-ից", crypto)}
       </CaseCard>
     </Backdrop>
   );
@@ -320,6 +359,7 @@ export const GossipCloseScene: React.FC<SceneProps> = ({ dur = 16, m }) => {
   const t = useT();
   const type = mk(m, "type", dur * 0.35);
   const match = mk(m, "match", dur * 0.62);
+  const guess = mk(m, "guess", dur * 0.85);
   const merge = ramp(t, match - 0.4, 0.9, easeInOut);
   return (
     <Backdrop>
@@ -335,6 +375,9 @@ export const GossipCloseScene: React.FC<SceneProps> = ({ dur = 16, m }) => {
         </div>
         <div style={{ position: "absolute", left: 0, right: 0, top: 200, textAlign: "center", fontFamily: FONT, fontSize: 34, fontWeight: 600, color: C.dim, opacity: ramp(t, match + 1.4, 0.5) }}>
           պատասխանն ինքը ոչ ոք չի տեսնում
+        </div>
+        <div style={{ position: "absolute", left: 0, right: 0, top: 262, textAlign: "center", fontFamily: FONT, fontSize: 30, fontWeight: 600, color: C.khaki, opacity: ramp(t, guess, 0.5) }}>
+          բայց «ոչ»-ն էլ է տեղեկություն՝ պատասխանը պետք է դժվար գուշակվի
         </div>
       </div>
     </Backdrop>

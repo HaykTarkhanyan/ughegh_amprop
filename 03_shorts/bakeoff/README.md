@@ -1,5 +1,7 @@
 # Bake-off: Remotion vs HyperFrames (Q7)
 
+> **Frozen (2026-11-26).** Q7 is decided: Remotion (DECISIONS #21), and the series lives in `../render/` (#24). This folder is kept as the record of the bake-off; new work does not go here.
+
 The same pilot short (survivorship bias, 9 beats, ~71 s, Armenian) built twice from identical inputs, so Hayk can
 pick the rendering framework from the result, not from a description (Q7, 2026-11-25). Background:
 `../../_knowledge/short_videos/lit_review.md`, section 3.

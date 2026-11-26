@@ -3,7 +3,10 @@ import React from "react";
 import { AbsoluteFill } from "remotion";
 import { C, FONT, groupDigits, lerp, pop, ramp } from "../theme";
 
-export const Backdrop: React.FC<{ glow?: string; children?: React.ReactNode }> = ({ glow = "rgba(242,168,0,0.07)", children }) => (
+// plain: no fill and no vignette, for a scene drawn inside another frame (the 9:16 Short shows Waldo scaled)
+export const Backdrop: React.FC<{ glow?: string; plain?: boolean; children?: React.ReactNode }> = ({ glow = "rgba(242,168,0,0.07)", plain = false, children }) => plain ? (
+  <AbsoluteFill>{children}</AbsoluteFill>
+) : (
   <AbsoluteFill style={{ background: `radial-gradient(ellipse 70% 60% at 50% 42%, ${glow}, transparent 70%), linear-gradient(180deg, ${C.bg2}, ${C.bg})` }}>
     {children}
     {/* soft vignette */}

@@ -3,7 +3,7 @@
     "key": "hook",
     "text": "Գրեթե երկու միլիոն տարի առաջ մի տղամարդ կորցրեց բոլոր ատամները, բացի մեկից։ Եվ դրանից հետո ապրեց ևս մի քանի տարի։ Ինչպե՞ս։",
     "pause_after": 1,
-    "visual": "Close-up of the real D3444 skull photo (Commons), the single remaining tooth circled; a question mark. Frame 0 shows the skull and the question."
+    "visual": "Close-up of the real D3444 cranium photo (Commons): its upper jaw has no teeth; the healed-over tooth sockets are traced in orange; a question mark. The one surviving tooth is in the lower jaw (D3900), which this photo does not show, so nothing is circled that is not there. Frame 0 shows the skull and the question."
   },
   {
     "key": "find",
@@ -44,9 +44,9 @@
   },
   {
     "key": "both",
-    "text": "Դմանիսիի տղամարդը կամ ինքը հաղթահարեց ցավն ու դժվարությունները, կամ նրան օգնեցին մոտիկները։ Երկու պատմությունն էլ ուշագրավ են։ Իսկ թե որն է ճիշտ, չգիտենք։",
+    "text": "Գուցե նա փափուկ սնունդ էր ուտում, գուցե ինքն էր հարմարվել, գուցե նրան օգնում էին մոտիկները, կամ էլ՝ մի քիչ ամեն ինչից։ Ոսկորը դրանք չի տարբերում։ Նրա գոյատևելը միայն խնամքի ապացույց չէ։",
     "pause_after": 1.5,
-    "visual": "The two dashed entries glow equally; the solid column still says only 'lived without teeth'. No drawn scenes (F157)."
+    "visual": "Three dashed entries, 'փափուկ սնունդ', 'հարմարվել', 'օգնություն', glow together and overlap; the solid column still says only 'lived without teeth'. No drawn scenes (F157)."
   },
   {
     "key": "takeaway",

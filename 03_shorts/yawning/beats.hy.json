@@ -2,16 +2,19 @@
   {
     "key": "hook",
     "text": "Զգուշացում՝ այս տեսանյութը դիտելիս հավանաբար կհորանջես։ Եվ ահա թե ինչու։",
-    "visual": "A drawn face starts a slow, big yawn; a second face catches it. Frame 0 shows the warning."
+    "visual": "A drawn face starts a slow, big yawn; a second face catches it. Frame 0 shows the warning.",
+    "pause_after": 1.5
   },
   {
     "key": "contagious",
-    "text": "Հորանջը վարակիչ է։ Մարդկանց մոտ կեսը հորանջում է՝ տեսնելով, թե ինչպես է ուրիշը հորանջում։ Հոգեբան Ռոբերտ Փրովայնը ցույց տվեց, որ նույնիսկ հորանջի մասին կարդալը կամ մտածելը բավական է։",
-    "visual": "A crowd of 100 faces watching a screen with a yawn; about half of them yawn in a ripple; then a book with the word 'հորանջ' makes a reader yawn."
+    "text": "Հորանջը վարակիչ է։ Մարդկանց մոտ կեսը հորանջում է՝ տեսնելով, թե ինչպես է ուրիշը հորանջում։ Փորձերը ցույց են տալիս, որ նույնիսկ հորանջի մասին կարդալը կամ մտածելը բավական է։",
+    "visual": "A crowd of 100 faces watching a screen with a yawn; about half of them yawn in a ripple; then a book with the word 'հորանջ' makes a reader yawn.",
+    "screen_small": "Provine, 1986",
+    "pause_after": 1.5
   },
   {
     "key": "why_yawn",
-    "text": "Բայց ինչո՞ւ ենք ընդհանրապես հորանջում։ Երկար ժամանակ կարծում էին, թե ուղեղին թթվածին է պետք։ Այդ միտքը ստուգեցին դեռ 1980-ականներին, և այն չհաստատվեց։",
+    "text": "Բայց ինչո՞ւ ենք ընդհանրապես հորանջում։ Երկար ժամանակ կարծում էին, թե ուղեղին թթվածին է պետք։ Այդ միտքը ստուգեցին, և այն չհաստատվեց։",
     "visual": "An 'O₂' bubble floats into a head and pops; a 'չհաստատվեց' stamp."
   },
   {
@@ -27,37 +30,29 @@
   },
   {
     "key": "kin",
-    "text": "2011 թվականին իտալացի հետազոտողները մեկ տարի հետևում էին մարդկանց առօրյա կյանքում։ Հորանջն ամենից շատ փոխանցվում էր ազգականներից, հետո՝ ընկերներից, հետո՝ ծանոթներից, և ամենաքիչը՝ անծանոթներից։",
+    "text": "Իտալացի հետազոտողները մեկ տարի հետևում էին մարդկանց առօրյա կյանքում։ Հորանջն ամենից շատ փոխանցվում էր ազգականներից, հետո՝ ընկերներից, հետո՝ ծանոթներից, և ամենաքիչը՝ անծանոթներից։",
     "screen_small": "Norscia & Palagi, 2011",
-    "visual": "A network of faces with ties drawn thick (family) to thin (strangers); a yawn spreads fast along thick ties, slowly along thin ones; four bars kin > friends > acquaintances > strangers."
+    "visual": "A network of faces with ties drawn thick (family) to thin (strangers); a yawn spreads fast along thick ties, slowly along thin ones; four bars kin > friends > acquaintances > strangers.",
+    "pause_after": 1.5
   },
   {
     "key": "but",
-    "text": "Բայց ամեն ինչ այդքան պարզ չէ։ 2014 թվականին 328 մարդու մասնակցությամբ մի հետազոտությունում կարեկցանքի թեստերը չէին կանխատեսում, թե ով կհորանջի։ Մի փոքր կանխատեսում էր միայն տարիքը՝ տարեցներն ավելի քիչ էին «վարակվում»։ Իսկ 2018 թվականի մեկ այլ հետազոտություն նորից կապ գտավ կարեկցանքի հետ։",
+    "text": "Բայց ամեն ինչ այդքան պարզ չէ։ 328 մարդու մասնակցությամբ մի հետազոտությունում կարեկցանքի թեստերը չէին կանխատեսում, թե ով կհորանջի։ Մի փոքր կանխատեսում էր միայն տարիքը՝ տարեցներն ավելի քիչ էին «վարակվում»։ Իսկ մեկ այլ, ավելի ուշ հետազոտություն նորից կապ գտավ կարեկցանքի հետ։",
     "screen_small": "Bartholomew & Cirulli, 2014",
-    "visual": "328 dots; 'կարեկցանք' scores scattered with no pattern; an 'տարիք' axis showing a slight downward tilt; then a 2018 card with a link line drawn back in."
-  },
-  {
-    "key": "dogs",
-    "text": "Հետաքրքիրն այն է, որ շներն էլ են մեզնից հորանջ «վարակվում»։ Մի փորձում 29 շնից 21-ը հորանջեց՝ տեսնելով մարդու հորանջը։ Ավելի ուշ պարզվեց, որ շներն ավելի հաճախ են արձագանքում տիրոջ հորանջին, քան անծանոթի։",
-    "screen_small": "Joly-Mascheroni et al., 2008",
-    "visual": "A person yawns, a dog yawns back; a grid of 29 dog icons with 21 yawning; then 'տեր' vs 'անծանոթ' bars."
+    "visual": "328 dots; 'կարեկցանք' scores scattered with no pattern; an 'տարիք' axis showing a slight downward tilt; then a 2018 card with a link line drawn back in.",
+    "pause_after": 1.5
   },
   {
     "key": "unknown",
-    "text": "Այնպես որ, ազնիվ պատասխանն այսօր այն է, որ լիովին չգիտենք։ Հորանջը, որ անում ենք օրը մի քանի անգամ, դեռ գիտական հանելուկ է։",
-    "visual": "A puzzle with missing pieces labelled 'սառեցում', 'կարեկցանք', 'տարիք'."
-  },
-  {
-    "key": "card",
-    "text": "Ինչ գիտենք՝ հորանջը վարակիչ է, իսկ թթվածնի բացատրությունը սխալ էր։ Ինչ է վիճելի՝ ինչու ենք հորանջում և ինչու է այն փոխանցվում։",
-    "screen": "գիտենք՝ վարակիչ է, վիճելի՝ ինչու",
-    "visual": "Card with two columns: 'գիտենք' (contagious; not oxygen) and 'վիճելի' (cooling, empathy)."
+    "text": "Ազնիվ պատասխանն այսօր այն է, որ լիովին չգիտենք՝ ինչու ենք հորանջում և ինչու է այն փոխանցվում։ Հաստատ է միայն, որ հորանջը վարակիչ է, իսկ թթվածնի բացատրությունը սխալ էր։",
+    "visual": "A puzzle with missing pieces labelled 'սառեցում', 'կարեկցանք', 'տարիք'.",
+    "pause_after": 1.5
   },
   {
     "key": "takeaway",
-    "text": "Իսկ եթե այս տեսանյութի ընթացքում հորանջեցիր, ուրեմն դու էլ մասնակցեցիր փորձին։ Գրիր մեկնաբանություններում՝ քանի՞ անգամ։",
+    "text": "Իսկ եթե այս տեսանյութի ընթացքում հորանջեցիր, ուրեմն դու էլ մասնակցեցիր փորձին։ Քանի՞ անգամ հորանջեցիր։ Գրիր մեկնաբանություններում։",
     "screen": "Քանի՞ անգամ հորանջեցիր",
-    "visual": "Big karaoke text; the first face yawns again for the loop."
+    "visual": "Big karaoke text; the first face yawns again for the loop.",
+    "pause_after": 1
   }
 ]

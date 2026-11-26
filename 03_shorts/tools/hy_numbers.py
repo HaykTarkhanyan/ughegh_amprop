@@ -4,7 +4,8 @@ The scripts write numbers as digits («1983», «350», «92», «3,6»), but th
 հարյուր ութսուներեք»), which takes much longer than four characters suggest: on 2026-11-25 two digit-heavy beats
 ran 21-22% longer than the 870-characters-a-minute estimate (Fable review, then measured). `spoken(text)` returns
 the text with every number spelled out; use its length for timing. Integers up to 999,999,999 and decimals with a
-comma («3,6» -> «երեք ամբողջ վեց»). Ordinal endings and «-ը»/«-ին» suffixes after a digit stay as they are.
+comma and up to 3 places (see DECIMAL_UNIT). Ordinal endings and «-ը»/«-ին» suffixes after a digit stay as written
+(«5-րդ» -> «հինգ-րդ»), so for those the length is a little short of what the voice says.
 
 Usage:  python tools/hy_numbers.py "1983 թվականին 160 գինեկոլոգ"   (prints the spoken form)
 Runtime: instant. Standard library only.
@@ -54,13 +55,24 @@ def spell(n):
 NUMBER = re.compile(r"(?<![\w])(\d{1,3}(?:[  ]\d{3})+|\d+)(?:,(\d+))?")
 
 
+# Decimals (Codex review X6, 2026-11-26): one place is read the everyday way, «3,6» -> «երեք ամբողջ վեց»; two or
+# three places name the unit, «0,05» -> «զրո ամբողջ հինգ հարյուրերորդական», so 0,05 and 0,005 no longer read the
+# same. More places are refused: write such a number differently in the script.
+DECIMAL_UNIT = {2: "հարյուրերորդական", 3: "հազարերորդական"}
+
+
 def spoken(text):
-    """The text with digits replaced by the words the narrator says."""
+    """The text with digits replaced by the words the narrator says (an estimate for timing, not a transcript)."""
     def repl(m):
         whole = int(re.sub(r"[  ]", "", m.group(1)))
         out = spell(whole)
-        if m.group(2):
-            out += " ամբողջ " + spell(int(m.group(2)))
+        frac = m.group(2)
+        if frac:
+            if len(frac) > 3:
+                raise ValueError(f"{m.group(0)}: more than 3 decimal places; write it another way in the script")
+            out += " ամբողջ " + spell(int(frac))
+            if len(frac) > 1:
+                out += " " + DECIMAL_UNIT[len(frac)]
         return out
     return NUMBER.sub(repl, text)
 

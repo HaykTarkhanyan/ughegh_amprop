@@ -16,33 +16,31 @@ the story came out in 1998, and he died in 2017.
 
 <!-- script:start -->
 
-13 beats, 1,903 characters (2,004 with numbers spelled out): ~135 s of speech, ~2:17 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%).
+12 beats, 1,824 characters (1,824 with numbers spelled out): ~126 s of speech, ~2:16 with pauses and the end tail, 8 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
-**1. hook.** 1983 թվականի սեպտեմբերի 26-ի գիշերը խորհրդային համակարգը հայտնեց՝ ԱՄՆ-ից հրթիռներ են արձակվել։ Մարդը, որը պետք է զեկուցեր, որոշեց չհավատալ համակարգչին։
+**1. hook.** Խորհրդային համակարգը հայտնեց՝ ԱՄՆ-ից հրթիռներ են արձակվել։ Մարդը, որը պետք է զեկուցեր, որոշեց չհավատալ համակարգչին։
 
 **2. context.** Տարին ամենալարվածներից էր։ Մեկ ամիս էլ չէր անցել, ինչ ԽՍՀՄ-ը խոցել էր կորեական ուղևորատար ինքնաթիռ։ Երկու կողմն էլ սպասում էր հարձակման։
 
 **3. bunker.** Մոսկվայի մոտ գտնվող բունկերում հերթապահում էր փոխգնդապետ Ստանիսլավ Պետրովը։ Նրա գործը «Օկո»՝ «աչք» կոչվող արբանյակային համակարգի տվյալներին հետևելն էր։
 
-**4. alarm.** Կեսգիշերից քիչ անց ազդանշանը միացավ՝ մեկ հրթիռ։ Հետո ևս չորս։ Համակարգը հայտնում էր հրթիռային հարձակման մասին։
+**4. alarm.** Կեսգիշերից քիչ անց ազդանշանը միացավ՝ մեկ հրթիռ։ Հետո ևս չորս։ Համակարգը հայտնում էր հրթիռային հարձակման մասին։ *[pause 1.5 s]*
 
-**5. stakes.** Եթե Պետրովը զեկուցեր հարձակման մասին, ղեկավարությունն ընդամենը մի քանի րոպե կունենար որոշելու՝ պատասխանե՞լ, թե՞ ոչ։
+**5. stakes.** Եթե Պետրովը զեկուցեր հարձակման մասին, ղեկավարությունն ընդամենը մի քանի րոպե կունենար որոշելու՝ պատասխանե՞լ, թե՞ ոչ։ *[pause 2 s]*
 
-**6. reasoning.** Նա կշռադատեց։ Ավելի ուշ պատմել է՝ պատերազմը հինգ հրթիռով չեն սկսում։ Համակարգը նոր էր։ Իսկ ցամաքային ռադարները ոչինչ չէին տեսնում։
+**6. reasoning.** Նա կշռադատեց։ Ավելի ուշ պատմել է՝ պատերազմը հինգ հրթիռով չեն սկսում։ Համակարգը նոր էր։ Իսկ ցամաքային ռադարները, որոնք հրթիռները կտեսնեին ավելի ուշ, դեռ ոչինչ ցույց չէին տալիս։ *[pause 1.5 s]*
 
-**7. decision.** Նա զեկուցեց, որ դա համակարգի սխալ է։ Ավելի ուշ ասել է՝ «Որոշեցի չհավատալ համակարգչին»։ Եվ նա ճիշտ էր։
+**7. decision.** Նա զեկուցեց, որ դա համակարգի սխալ է։ Ավելի ուշ ասել է՝ «Որոշեցի չհավատալ համակարգչին»։ Եվ նա ճիշտ էր։ *[pause 1.5 s]*
 
-**8. unsure.** Բայց ինքն էլ վստահ չէր։ 2013 թվականին խոստովանել է, որ այդ պահին երբեք լիովին վստահ չի եղել։ Րոպեները, մինչև պարզ դարձավ, որ հրթիռներ չկան, նրա համար անվերջ էին թվում։
+**8. unsure.** Բայց ինքն էլ վստահ չէր։ Հետո խոստովանել է, որ այդ պահին երբեք լիովին վստահ չի եղել։ Րոպեները, մինչև պարզ դարձավ, որ հրթիռներ չկան, նրա համար անվերջ էին թվում։
 
-**9. cause.** Հետո պարզվեց պատճառը՝ արևի լույսն անդրադառնում էր բարձր ամպերից Հյուսիսային Դակոտայի վրա, և արբանյակները դա ընդունեցին հրթիռի կրակի տեղ։
+**9. cause.** Հետո պարզվեց պատճառը՝ արևի լույսն անդրադառնում էր բարձր ամպերից Հյուսիսային Դակոտայի վրա, և արբանյակները դա ընդունեցին հրթիռի կրակի տեղ։ *[pause 1.5 s]*
 
-**10. bayes.** Պետրովը մտածում էր այնպես, ինչպես Բայեսի մասին մեր տեսանյութում։ Հարցն այն չէ, թե ինչ է ասում ազդանշանը, այլ թե որն է ավելի հավանական՝ իրական պատերազմ, որը սկսվում է ընդամենը հինգ հրթիռով, թե՞ նոր համակարգի սխալ։
+**10. bayes.** Պետրովը մտածում էր այնպես, ինչպես Բայեսի մասին մեր տեսանյութում։ Ազդանշանը կարևոր է, բայց այն պետք է կշռել երեք բանի հետ՝ որքան հավանական էր հարձակումն առանց դրա, որքան վստահելի է համակարգը, և ինչ են ասում մյուս աղբյուրները։ Հինգ հրթիռով պատերազմը, նոր համակարգը և լուռ ռադարները միասին ասում էին՝ ավելի հավանական է սխալը։
 
 **11. honesty.** Արդյո՞ք նա միայնակ փրկեց աշխարհը։ Պատմաբանները վիճում են։ Նա ինքը հրթիռ արձակել չէր կարող, և հայտնի չէ, թե ինչ կորոշեր ղեկավարությունը։ Բայց վերև հասավ հենց նրա գնահատականը։
 
-**12. after.** Պետրովին չպարգևատրեցին, և պատմությունը հայտնի դարձավ միայն 1998 թվականին։ Հետագայում նա միջազգային մրցանակներ ստացավ, այդ թվում՝ Դրեզդենի խաղաղության մրցանակը 2013 թվականին։ Մահացավ 2017 թվականին։
-
-**13. takeaway.** Այնպես որ, երբ մեքենան ասում է՝ «հաստատ է», հարցրու՝ իսկ որքա՞ն հավանական է սա առանց մեքենայի։ Երբեմն սա ամենակարևոր հարցն է։
+**12. takeaway.** Երբ մեքենան ասում է՝ «հաստատ է», ստուգիր ազդանշանը մնացածի հետ՝ որքա՞ն հավանական էր սա առանց դրա, և ի՞նչ են ասում մյուս աղբյուրները։
 
 <!-- script:end -->
 
@@ -84,3 +82,36 @@ Armenian lint: 0 errors, 0 hints.
 - **U-aa, sensitivity:** the topic involves the USSR, the USA and nuclear war; the script stays factual and neutral.
   Any line you would phrase differently for an Armenian audience?
 - U-a («դու» vs «դուք») applies here too.
+
+## After the Codex review (2026-11-26)
+
+Fixes by finding ID (CODEX_REVIEW.md):
+
+- **X45:** the lesson no longer contrasts "what the alarm says" with "how likely war was without it" (that teaches
+  ignoring the evidence; a rare event can become likely after strong enough evidence). The Bayes beat now weighs the
+  alarm against three things: the prior, the system's reliability and the other sources; the closing says to check the
+  signal against the rest. The radar line now says the ground radars, which would see missiles later, showed nothing
+  yet (a negative observation is limited by detection range and timing).
+- **X51:** the date left the opening (source line), the award biography is cut (text below), 8 s of pauses, no
+  «Այնպես որ,».
+
+**Cut beats, kept here word for word so they can come back:**
+
+- `after`: Պետրովին չպարգևատրեցին, և պատմությունը հայտնի դարձավ միայն 1998 թվականին։ Հետագայում նա միջազգային մրցանակներ ստացավ, այդ թվում՝ Դրեզդենի խաղաղության մրցանակը 2013 թվականին։ Մահացավ 2017 թվականին։
+
+## Evidence record (Codex review X60, 2026-11-26)
+
+One row per consequential claim in the current script. *Kind*: data (observed), calculation, analogy, story or
+interpretation. *Checked*: what was actually read; "secondary" means a summary or encyclopedia, not the source;
+"unverified" means nobody has read a source for these exact words yet. Fix the unverified rows before the voice.
+
+| Beat | Claim (as voiced) | Source | Kind | Checked |
+|---|---|---|---|---|
+| hook, alarm | the system reported one launch, then four more | Wikipedia '1983 Soviet nuclear false alarm incident'; Britannica | data (historical) | secondary only |
+| reasoning | 'a war does not start with five missiles' (later interview) | attributed to his later interviews, e.g. Washington Post 1999 | quote, paraphrased | unverified: not found word for word |
+| reasoning | ground radars showed nothing yet | Wikipedia, Britannica | data | secondary only |
+| decision | 'I decided not to believe the computer' | his later interviews (cited by Wikipedia) | quote | secondary only |
+| unsure | he was never fully sure | 2013 interview (cited by Wikipedia) | quote | secondary only |
+| cause | sunlight on high clouds over North Dakota | Wikipedia, NTI | data | secondary only |
+| bayes | weigh the alarm against the prior, the system's reliability and other sources | the channel's reading of the story | interpretation | labelled as our framing |
+| honesty | historians debate his role | Wikipedia | interpretation | secondary only |

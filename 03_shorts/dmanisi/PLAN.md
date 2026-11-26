@@ -19,7 +19,7 @@ doubt is one turn and one piece of evidence.)
 
 <!-- script:start -->
 
-9 beats, 1,384 characters (1,384 with numbers spelled out): ~95 s of speech, ~1:45 with pauses and the end tail, 7.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
+9 beats, 1,415 characters (1,415 with numbers spelled out): ~98 s of speech, ~1:47 with pauses and the end tail, 7.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Գրեթե երկու միլիոն տարի առաջ մի տղամարդ կորցրեց բոլոր ատամները, բացի մեկից։ Եվ դրանից հետո ապրեց ևս մի քանի տարի։ Ինչպե՞ս։ *[pause 1 s]*
 
@@ -35,7 +35,7 @@ doubt is one turn and one piece of evidence.)
 
 **7. bonobo.** Եվ հարմարվելը հնարավոր է։ Վայրի բոնոբոներից մեկը նույնպես երկար ժամանակ ապրեց առանց ատամների։ Այսինքն՝ առանց ատամների գոյատևելը միշտ չէ, որ ուրիշի օգնություն է պահանջում։
 
-**8. both.** Դմանիսիի տղամարդը կամ ինքը հաղթահարեց ցավն ու դժվարությունները, կամ նրան օգնեցին մոտիկները։ Երկու պատմությունն էլ ուշագրավ են։ Իսկ թե որն է ճիշտ, չգիտենք։ *[pause 1.5 s]*
+**8. both.** Գուցե նա փափուկ սնունդ էր ուտում, գուցե ինքն էր հարմարվել, գուցե նրան օգնում էին մոտիկները, կամ էլ՝ մի քիչ ամեն ինչից։ Ոսկորը դրանք չի տարբերում։ Նրա գոյատևելը միայն խնամքի ապացույց չէ։ *[pause 1.5 s]*
 
 **9. takeaway.** Ամենագեղեցիկ պատմություններն ամենաշատն է պետք ստուգել։ Ոչ թե որովհետև դրանք սխալ են, այլ որովհետև շատ ենք ուզում, որ ճիշտ լինեն։
 
@@ -73,8 +73,8 @@ Armenian lint: 0 errors, 0 hints.
   and jaw as an inset. **Crop to the old man and the hand passing food:** the painting shows nude figures, which
   TikTok / Instagram moderation may flag.
 - **Drawn:** a South Caucasus map with Armenia and Dmanisi; a jaw whose sockets fill with bone on a time slider; a
-  two-path diagram (help / soft food); a bonobo silhouette; a viral quote card with a "not confirmed" stamp; a
-  Neanderthal skeleton with healed breaks; the two scenes (enduring alone / helped) side by side.
+  diagram of overlapping explanations (soft food / adaptation / help); a bonobo silhouette. (The Mead quote card,
+  the Neanderthal skeleton and the two side-by-side scenes were cut with their beats; X57.)
 - Credits for the description: `assets/credits.txt`.
 
 ## After the Fable review (FABLE_REVIEW_2.md, applied 2026-11-25)
@@ -96,3 +96,29 @@ Armenian lint: 0 errors, 0 hints.
 - **U-jj, terms:** «Դմանիսի գյուղի մոտ», «ազդրոսկր», «ծերացած ազգական», «Աֆրիկայից դուրս եկած առաջին մարդկանցից»: natural?
 - **U-kk, credit the video?** Mention exurb1a in the description as the inspiration, or not at all?
 - U-a («դու» vs «դուք») applies here too.
+
+## After the Codex review (2026-11-26)
+
+Fixes by finding ID (CODEX_REVIEW.md):
+
+- **X34:** the ending no longer offers an either/or (he coped alone or he was helped). Soft food, adaptation and help
+  may all have played a part, and the bone does not tell them apart; the point is that survival does not by itself
+  prove care. The bonobo still shows help is not always needed (Surbeck et al. 2020, primary paper checked by Codex:
+  https://kokolopori.hsites.harvard.edu/sites/g/files/omnuum5861/files/kokolopori/files/surbeck_2020.pdf).
+- **X35:** the hook photo is the cranium D3444, whose upper jaw has no teeth; the one remaining tooth is in the
+  mandible D3900. The storyboard now traces the healed sockets instead of circling a tooth that is not in the photo.
+- **X57:** cut scenes removed from the active drawn list.
+
+## Evidence record (Codex review X60, 2026-11-26)
+
+One row per consequential claim in the current script. *Kind*: data (observed), calculation, analogy, story or
+interpretation. *Checked*: what was actually read; "secondary" means a summary or encyclopedia, not the source;
+"unverified" means nobody has read a source for these exact words yet. Fix the unverified rows before the voice.
+
+| Beat | Claim (as voiced) | Source | Kind | Checked |
+|---|---|---|---|---|
+| hook, sockets | lost all but one tooth and lived several years more (resorbed sockets) | Lordkipanidze et al. 2005, *Nature* 434: 717-718, https://doi.org/10.1038/434717b | data (fossil) | DOI checked in OpenAlex; the paper (closed access) quoted from summaries |
+| find | about 1.77 million years old, Dmanisi, Georgia | same | data | as above |
+| authors | the authors suggested help and also alternative subsistence strategies | same | quote | quoted from summaries; read the paper |
+| bonobo | a wild toothless bonobo survived a long time | Surbeck et al. 2020, https://kokolopori.hsites.harvard.edu/sites/g/files/omnuum5861/files/kokolopori/files/surbeck_2020.pdf | data | primary read by Codex |
+| both | soft food, adaptation and help may all have played a part; the bone does not tell them apart | interpretation of the above | interpretation | said as possibilities |

@@ -1,14 +1,18 @@
 [
   {
     "key": "hook",
-    "text": "Լսե՞լ ես, որ QWERTY դասավորությունը հորինել են, որպեսզի մեքենագրողներին դանդաղեցնեն։ Սա ամենահայտնի առասպելներից է, իսկ իրական պատմությունը շատ ավելի խառն է։",
-    "visual": "A modern keyboard; the top row Q W E R T Y lights up letter by letter; a stamp 'առասպել' slams onto the 'made to slow you down' caption."
+    "text": "Ասում են՝ ստեղնաշարի քվերթի դասավորությունը հորինել են, որ մեքենագրողներին դանդաղեցնեն։ Սա առասպել է։ Իրական պատմությունը շատ ավելի խառն է։",
+    "visual": "A modern keyboard; the top row Q W E R T Y lights up letter by letter; a stamp 'առասպել' slams onto the 'made to slow you down' caption.",
+    "screen": "QWERTY",
+    "pause_after": 1
   },
   {
     "key": "sholes",
-    "text": "1860-70-ականներին ամերիկացի Քրիստոֆեր Շոուլզն ընկերների հետ գրամեքենա էր ստեղծում։ Ստեղնաշարը տարիների ընթացքում բազմիցս փոխվեց։ Առաջին տարբերակներում տառերը գրեթե այբբենական կարգով էին շարված։",
+    "text": "Ամերիկացի Քրիստոֆեր Շոուլզն ընկերների հետ գրամեքենա էր ստեղծում։ Ստեղնաշարը տարիների ընթացքում բազմիցս փոխվեց։ Առաջին տարբերակներում տառերը գրեթե այբբենական կարգով էին շարված։",
     "screen": "Քրիստոֆեր Շոուլզ",
-    "visual": "An early piano-key prototype with two alphabetical rows; the keys shuffle step by step through prototype layouts toward QWERTY."
+    "visual": "An early piano-key prototype with two alphabetical rows; the keys shuffle step by step through prototype layouts toward QWERTY.",
+    "screen_small": "1860-1870-ականներ",
+    "pause_after": 1.5
   },
   {
     "key": "jam",
@@ -17,50 +21,34 @@
   },
   {
     "key": "telegraph",
-    "text": "Ճապոնացի հետազոտողներ Յասուոկաներն այլ բան ցույց տվեցին։ Առաջին գրամեքենաների կարևոր օգտատերերը հեռագրիչներն էին, որոնք Մորզեի կոդով եկած հաղորդագրություններն արագ վերածում էին տեքստի։ Ստեղնաշարը փոխվում էր նրանց կարիքներով։ Օրինակ՝ ամերիկյան Մորզեի կոդում Z-ը հեշտությամբ շփոթվում է SE զույգի հետ, և Z-ը հայտնվեց S-ի ու E-ի մոտ։",
+    "text": "Երկու ճապոնացի հետազոտող այլ բան ցույց տվեցին։ Առաջին գրամեքենաների կարևոր օգտատերերը հեռագրիչներն էին, որոնք Մորզեի կոդով եկած հաղորդագրություններն արագ վերածում էին տեքստի։ Ստեղնաշարը փոխվում էր նրանց կարիքներով։ Օրինակ՝ ամերիկյան Մորզեի կոդում մի տառ հեշտությամբ շփոթվում էր երկու այլ տառերի զույգի հետ, և այդ տառը դրեցին հենց այդ երկուսի կողքին։",
     "screen_small": "Yasuoka & Yasuoka, 2011",
-    "visual": "A telegraph key clicking; Morse dots for 'Z' and for 'S E' look almost the same; on the keyboard Z, S and E light up as neighbours."
+    "visual": "A telegraph key ticks; the American Morse for Z and for the pair S E appear as identical dot rows; on the keyboard Z slides next to S and E, all three lit (the letters only on screen, the voice names none).",
+    "pause_after": 2.5
   },
   {
     "key": "remington",
-    "text": "1873 թվականին արտադրությունը վերցրեց Ռեմինգթոնը՝ զենք և կարի մեքենաներ արտադրող ընկերությունը։ Այդ ժամանակ ստեղնաշարն արդեն գրեթե այսպիսին էր։",
-    "visual": "A Remington-style typewriter (drawn, no logo) with an almost-QWERTY layout; a small rifle and a sewing machine icon fade in and out."
-  },
-  {
-    "key": "legend",
-    "text": "Ասում են նաև, որ վերին շարքում կան TYPEWRITER բառի բոլոր տառերը, որպեսզի վաճառողներն արագ տպեն այն ու տպավորեն գնորդներին։ Տառերն իսկապես այնտեղ են, բայց որ սա է եղել պատճառը, ոչ ոք չի ապացուցել։",
-    "visual": "T Y P E W R I T E R typed using only top-row keys, each key lighting up; a small 'լեգենդ' tag."
-  },
-  {
-    "key": "contest",
-    "text": "Իսկ ինչո՞ւ հաղթեց հենց այս դասավորությունը։ 1888 թվականին Ցինցինատիում արագ տպելու մրցույթում Ֆրենկ Մակգուրինը, որը կույր մեթոդով էր տպում QWERTY-ով Ռեմինգթոնի վրա, հաղթեց մրցակցին ու ստացավ 500 դոլար։ Մրցույթը մեծ աղմուկ բարձրացրեց, թեև հաջորդ ամիս նրան էլ հաղթեցին։",
-    "visual": "Two typists race; word counters climb; a '$500' banner; then a small second banner 'հաջորդ ամիս՝ պարտություն'."
+    "text": "Հետո արտադրությունը վերցրեց Ռեմինգթոնը՝ զենք և կարի մեքենաներ արտադրող ընկերությունը։ Այդ ժամանակ ստեղնաշարն արդեն գրեթե այսպիսին էր։",
+    "visual": "A Remington-style typewriter (drawn, no logo) with an almost-QWERTY layout; a small rifle and a sewing machine icon fade in and out.",
+    "screen_small": "1873"
   },
   {
     "key": "standard",
-    "text": "1893 թվականին ամերիկյան խոշոր արտադրողները միավորվեցին, և QWERTY-ն դարձավ ստանդարտ։ Հետո այն անցավ հեռատիպերին, իսկ նրանցից՝ համակարգիչներին ու հեռախոսներին։",
-    "visual": "Timeline: 1873 Remington -> 1888 contest -> 1893 merger -> 1910s teletype -> computer keyboard -> phone keyboard, the same top row each time."
-  },
-  {
-    "key": "dvorak",
-    "text": "1936 թվականին Օգոստ Դվորակը պատենտավորեց «ավելի արագ» դասավորություն։ Նրա ամենահայտնի ապացույցը՝ ռազմածովային ուժերի 1944 թվականի փորձը, անցկացրել էր հենց ինքը՝ Դվորակը, և այն հետագայում կասկածի տակ դրվեց։ 1956 թվականի ավելի խնամքով կազմակերպված փորձում վերապատրաստված մեքենագրողները Դվորակի ստեղնաշարով ավելի արագ չդարձան։",
-    "screen": "Դվորակ, 1936",
-    "visual": "The keyboard morphs into the Dvorak layout (vowels on the left home row); a 1944 report with a 'կասկածելի' stamp; a 1956 bar chart with equal bars."
-  },
-  {
-    "key": "path",
-    "text": "Այսինքն՝ նույնիսկ այն պնդումը, թե խրված ենք վատ դասավորության մեջ, վիճելի է։ Տնտեսագետները մինչ օրս վիճում են՝ QWERTY-ն սխալ ընտրության օրինա՞կ է, թե՞ բավականաչափ լավ լուծում, որը փոխելն ավելի թանկ կարժենա, քան կշահենք։",
-    "visual": "A balance: 'սովորել նորը' vs 'ստացվող արագություն'; then two economists' names on either side (David 1985, Liebowitz & Margolis 1990)."
+    "text": "Ամերիկյան խոշոր արտադրողները միավորվեցին, և քվերթին դարձավ ստանդարտ։ Հետո այն անցավ հեռատիպերին, իսկ նրանցից՝ համակարգիչներին ու հեռախոսներին։ Ամեն նոր մեքենա ժառանգեց նախորդի դասավորությունը, որ մարդիկ ստիպված չլինեն վերասովորել։",
+    "visual": "A chain: typewriter -> teletype -> computer keyboard -> phone keyboard, the same top row lit on each, passed along like a baton.",
+    "screen_small": "1893",
+    "pause_after": 2
   },
   {
     "key": "armenian",
-    "text": "Եվ այն հասել է նաև մեզ՝ հայերեն հնչյունային դասավորության մեջ տառերը դրված են QWERTY-ի նույնահնչյուն տառերի տեղում՝ Ա-ն A-ի վրա, Ս-ն S-ի։",
-    "visual": "The keyboard's keys flip to Armenian letters in place: Ա on A, Ս on S, Դ on D, the top row becoming Armenian."
+    "text": "Եվ այն հասել է նաև մեզ՝ հայերեն հնչյունային դասավորության մեջ տառերը դրված են անգլիական նույնահնչյուն տառերի տեղում, օրինակ՝ «Ա»-ն ու «Ս»-ն։",
+    "visual": "The keyboard's keys flip to Armenian letters in place: Ա on A, Ս on S, Դ on D, the top row becoming Armenian.",
+    "pause_after": 1.5
   },
   {
     "key": "takeaway",
-    "text": "Այնպես որ, երբ պատմությունը չափազանց կոկիկ է՝ «հորինեցին, որ դանդաղեցնեն», հավանաբար այն ճիշտ չէ։ Իրական պատմությունները սովորաբար ավելի խառն են։",
-    "screen": "Կոկիկ պատմությունը հաճախ սխալ է",
+    "text": "Կոկիկ պատմությունը՝ «հորինեցին, որ դանդաղեցնեն», սխալ էր։ Իսկ իրականը պարզ է՝ ամեն նոր մեքենա ժառանգեց նախորդի ստեղնաշարը։",
+    "screen": "Ամեն նոր մեքենա ժառանգեց նախորդի ստեղնաշարը",
     "visual": "Big karaoke text over the keyboard; loops back to the top row lighting up."
   }
 ]

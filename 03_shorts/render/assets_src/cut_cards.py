@@ -16,9 +16,8 @@ from PIL import Image
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-(ROOT / "logs").mkdir(exist_ok=True)
-logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s",
-                    handlers=[logging.StreamHandler(sys.stdout), logging.FileHandler(ROOT / "logs" / "cut_cards.log", encoding="utf-8")])
+sys.path.insert(0, str(HERE.parents[1] / "tools"))
+from runlog import setup as setup_logging  # noqa: E402
 log = logging.getLogger("cut_cards")
 
 ROWS = ["s", "h", "d", "c"]
@@ -39,6 +38,7 @@ def runs(mask: np.ndarray, min_len: int) -> list[tuple[int, int]]:
 
 
 def main():
+    setup_logging("cut_cards")
     im = Image.open(HERE / "deck_3840.png").convert("RGBA")
     a = np.asarray(im).astype(int)
     r, g, b = a[..., 0], a[..., 1], a[..., 2]

@@ -1,7 +1,7 @@
 [
   {
     "key": "hook",
-    "text": "Ինչպե՞ս պայմանավորվել գաղտնի բանալու շուրջ, եթե ձեր զրույցը լսում է ամբողջ աշխարհը։ Դու դա անում ես գրեթե ամեն անգամ, երբ կայք ես բացում կողպեքի նշանով։",
+    "text": "Ինչպե՞ս պայմանավորվել գաղտնի բանալու շուրջ, եթե ձեր զրույցը լսում է ամբողջ աշխարհը։ Դու դա անում ես գրեթե ամեն անգամ, երբ կայք ես բացում ապահով կապով։",
     "visual": "A browser address bar with a padlock; two people far apart, a crowd of ears listening in between."
   },
   {
@@ -11,7 +11,7 @@
   },
   {
     "key": "idea",
-    "text": "1976 թվականին Ուիթֆիլդ Դիֆին և Մարտին Հելմանը ցույց տվեցին, որ կարելի է ընդհանուր գաղտնիք ստանալ բաց զրույցով։ Ամենահեշտ է բացատրել ներկերով։",
+    "text": "Մաթեմատիկոսները ցույց տվեցին, որ կարելի է ընդհանուր գաղտնիք ստանալ բաց զրույցով։ Ամենահեշտ է բացատրել ներկերի համեմատությամբ։",
     "screen_small": "Diffie & Hellman, 1976",
     "visual": "Title card; three paint cans roll in."
   },
@@ -23,7 +23,8 @@
   {
     "key": "common",
     "text": "Նախ բաց պայմանավորվում են ընդհանուր գույնի շուրջ՝ դեղին։ Եվան էլ գիտի։",
-    "visual": "A yellow paint can appears for all three; a copy lands with Eva."
+    "visual": "A yellow paint can appears for all three; a copy lands with Eva.",
+    "pause_after": 1
   },
   {
     "key": "secrets",
@@ -33,44 +34,42 @@
   {
     "key": "mix_send",
     "text": "Ամեն մեկն իր գաղտնի գույնը խառնում է դեղինի հետ և ուղարկում մյուսին։ Անին ուղարկում է նարնջագույն, Արամը՝ կանաչ։ Եվան տեսնում է երկուսն էլ։",
-    "visual": "Paint swirls: yellow + red -> orange, yellow + blue -> green; the two mixed blobs fly across the public strip and Eva copies both."
+    "visual": "Paint swirls: yellow + red -> orange, yellow + blue -> green; the two mixed blobs fly across the public strip and Eva copies both.",
+    "pause_after": 1.5
   },
   {
     "key": "final",
     "text": "Հիմա ամեն մեկն ստացած խառնուրդին ավելացնում է իր գաղտնի գույնը։ Անին կանաչին ավելացնում է կարմիր, Արամը նարնջագույնին՝ կապույտ։ Եվ երկուսն էլ ստանում են նույն շագանակագույնը՝ դեղին, կարմիր և կապույտ միասին։",
-    "visual": "Green + red and orange + blue swirl into the same brown on both sides; a check mark between the two brown cans; a small recipe 'դեղին + կարմիր + կապույտ'."
+    "visual": "Green + red and orange + blue swirl into the same brown on both sides; a check mark between the two brown cans; a small recipe 'դեղին + կարմիր + կապույտ'.",
+    "pause_after": 2.5
   },
   {
     "key": "eve",
     "text": "Իսկ Եվա՞ն։ Նա ունի դեղին, նարնջագույն և կանաչ։ Եթե դրանք խառնի, կստանա ավելի դեղնավուն գույն, ոչ թե նույնը։ Նրան պետք է ներկը հետ բաժանել իր բաղադրիչների, իսկ ներկը խառնելը հեշտ է, բաժանելը՝ համարյա անհնար։",
-    "visual": "Eva mixes her three cans into a muddy yellow-brown, held next to the true brown: different. Then she tries to pull a swirl apart: it will not separate."
+    "visual": "Eva mixes her three cans into a muddy yellow-brown, held next to the true brown: different. Then she tries to pull a swirl apart: it will not separate.",
+    "pause_after": 1.5
   },
   {
     "key": "math",
-    "text": "Իրականում ներկի փոխարեն թվեր են։ Խառնելը թիվն աստիճան բարձրացնելն է և մեծ պարզ թվի վրա բաժանելիս մնացորդը վերցնելը։ Դա անել հեշտ է, իսկ հետ գնալը՝ գտնել աստիճանը, հարյուրավոր թվանշան ունեցող թվերի համար ոչ ոք արագ անել չգիտի։",
-    "visual": "The paint cans morph into numbers; an arrow 'հեշտ' forward, a broken arrow 'անհնար' backward; a 600-digit number scrolls past."
+    "text": "Իրականում ներկի փոխարեն թվեր են, և ներկը միայն համեմատություն է։ Խառնելը թիվն աստիճան բարձրացնելն է և մեծ պարզ թվի վրա բաժանելիս մնացորդը վերցնելը։ Դա անել հեշտ է, իսկ հետ գնալու, այսինքն՝ աստիճանը գտնելու գործնական արագ եղանակ ճիշտ ընտրված մեծ թվերի համար սովորական համակարգիչներով հայտնի չէ։",
+    "visual": "The paint cans morph into numbers; an arrow 'հեշտ' forward, a dashed arrow 'գործնականում անհնար' backward; a 600-digit number scrolls past with a small 'ճիշտ ընտրված պարամետրեր' tag."
   },
   {
     "key": "toy",
     "text": "Փոքր օրինակ՝ ընդհանուր թվերը 5 և 23 են, Անիի գաղտնիքը՝ 6, Արամինը՝ 15։ Անին ուղարկում է 8, Արամը՝ 19, և երկուսն էլ հաշվում են նույն գաղտնի թիվը՝ 2։",
     "screen": "5 և 23",
-    "visual": "Card: '5⁶ ÷ 23 -> մնացորդ 8', '5¹⁵ ÷ 23 -> մնացորդ 19', '19⁶ ÷ 23 -> 2', '8¹⁵ ÷ 23 -> 2', colour-coded like the paints."
-  },
-  {
-    "key": "history",
-    "text": "Հետաքրքիրն այն է, որ բրիտանական գաղտնի ծառայությունում սա գտել էին ավելի վաղ՝ 1970-ականների սկզբին, բայց գաղտնի էին պահում մինչև 1997 թվականը։ Գաղափարի հեղինակներից մեկը՝ Ջեյմս Էլիսը, մահացավ դրա հրապարակումից մեկ ամիս առաջ։",
-    "screen_small": "Ellis 1970, Cocks 1973, Williamson 1974; հրապարակվել է 1997-ին",
-    "visual": "A 'TOP SECRET' folder with a timeline 1970 -> 1997; the stamp lifts in 1997."
+    "visual": "Card: '5⁶ ÷ 23 -> մնացորդ 8', '5¹⁵ ÷ 23 -> մնացորդ 19', '19⁶ ÷ 23 -> 2', '8¹⁵ ÷ 23 -> 2', colour-coded like the paints.",
+    "pause_after": 2
   },
   {
     "key": "today",
-    "text": "Այսօր այս փոխանակման տարբերակներն օգտագործվում են գրեթե ամեն անգամ, երբ կայքը բացվում է կողպեքով, և մեսենջերներում։ Մի կարևոր մանրուք՝ պետք է նաև համոզված լինես, որ խոսում ես իսկական Արամի հետ, ոչ թե Եվայի, որը ձևանում է նրան։ Դրա համար կայքերն ունեն վկայականներ։",
+    "text": "Այսօր այս փոխանակման տարբերակներն օգտագործվում են կայքերի ապահով կապում և մեսենջերներում։ Մի կարևոր մանրուք՝ պետք է նաև համոզված լինես, որ խոսում ես իսկական Արամի հետ, ոչ թե Եվայի, որը ձևանում է նրան։ Դրա համար կայքերն ունեն վկայականներ։",
     "visual": "Padlock and a messenger icon; then Eva in a fake 'Արամ' mask between them, stopped by a certificate badge."
   },
   {
     "key": "takeaway",
-    "text": "Այնպես որ, համացանցի գաղտնիքները հիմնված են մի պարզ բանի վրա՝ կան գործողություններ, որոնք անել հեշտ է, իսկ հետ դարձնել՝ համարյա անհնար։ Ինչպես ներկը խառնելը։",
-    "screen": "Անել՝ հեշտ, հետ դարձնել՝ համարյա անհնար",
-    "visual": "Big karaoke text over a slow paint swirl; loops back to the padlock."
+    "text": "Բաց զրույցով կարելի է ստանալ ընդհանուր գաղտնիք, եթե կա գործողություն, որն անել հեշտ է, իսկ հետ դարձնել՝ գործնականում անհնար։ Ինչպես ներկը խառնելը։",
+    "screen": "Անել՝ հեշտ, հետ դարձնել՝ գործնականում անհնար",
+    "visual": "Big karaoke text over a slow paint swirl; loops back to the browser's secure-connection icon (not a padlock: Chrome replaced it in 2023)."
   }
 ]

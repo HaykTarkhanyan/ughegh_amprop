@@ -2,6 +2,22 @@
 
 Newest at the top.
 
+## 26. Every Codex finding applied; the scripts follow the rules, with cut beats kept in the plans
+
+- **Date / status:** 2026-11-26, active
+- **Decision:** All 61 findings of the independent Codex review (`03_shorts/CODEX_REVIEW.md`) were applied: the factual corrections (the zero-knowledge card proof and definition, Bayes's independence assumption, Simpson's rule, the suitcase's work versus energy, the WHO ages, Egyptian blue's mechanism and the rest), the script rules applied to the 11 older scripts (8-12 s of pauses, one closing beat without «Այնպես որ,», years and names on the source lines, one extension), QWERTY rebuilt around "a mechanical layout became inherited infrastructure" and waiting around psychology (the queue maths parked as its own video). Every cut beat is kept word for word in its `PLAN.md` ("After the Codex review").
+- **Why:** Hayk, Q23: "Everything, low included". The high findings were checked before applying (the card's elimination logic, Li et al. 2020 and two DOIs in OpenAlex, the Seymour abstract); each plan lists its fixes by finding ID.
+- **Alternatives rejected:** fixing only the high and medium findings (offered first); fixing only the zero-knowledge video; waiting for Hayk's comments on the report before changing anything.
+- **What would change this:** Hayk rejecting particular rewrites in review: every script waits for approval with its hash (`tools/episodes.py`), and cut beats can come back from the plans.
+
+## 25. Shorts tooling: validated, versioned builds, tracked timelines, caption profiles, hash-bound approvals
+
+- **Date / status:** 2026-11-26, active
+- **Decision:** (a) One offline validator (`tools/validate_episode.py`) runs before paid TTS, timeline builds and syncs. (b) The timeline records hashes of the script, the clips and the audio plus a build id, and the render copy's audio is named after the build, so a composition can only play the audio its timeline was built with. (c) `03_shorts/render/src/data/<short>.json` is tracked in git (the audio stays ignored), so a clean checkout type-checks and lists every composition. (d) Caption pages are grouped per layout profile (portrait, landscape); a word that cannot fit stops the build; one long word may shrink to 44 px in portrait. (e) `episodes.json` and the review-queue item IDs carry the script hash. (f) The tool tests use the standard library's `unittest`. (g) The Python packages are pinned in `03_shorts/requirements.txt`. (h) Hayk's recording comes in through `tools/import_recording.py` (propose cuts, check, apply), with `narrator: hayk` in the manifest.
+- **Why:** Codex X1-X10, X14, X17, X58, X59, each with a reproduction: an interrupted TTS run lost cache entries; copies could pair different versions; 8 landscape caption pages were under 0.6 s on screen (0 now); three real words could not fit any allowed size; approvals did not say which version; the type-check needed gitignored data.
+- **Alternatives rejected:** a forced aligner now (the checks do not need it, and the free MMS model is CC-BY-NC); Remotion `calculateMetadata` fetching the JSON at render time (a bigger refactor than tracking a small file); pytest (a test framework is Hayk's choice; `unittest` adds no dependency and pytest can still run the files); hyphenating Armenian captions (no approved break rules).
+- **What would change this:** timeline churn in git getting noisy (then move to `calculateMetadata`); Hayk choosing a test framework; 44 px captions proving hard to read on a phone.
+
 ## 24. Where's Waldo replaces the cave in the first video; the series renders from `03_shorts/render/`
 
 - **Date / status:** 2026-11-25, active (amends the structure in #23)

@@ -7,9 +7,9 @@
   },
   {
     "key": "traces",
-    "text": "Ներկի հետքերը մնացել են։ Երբեմն դրանք երևում են աչքով, երբեմն՝ միայն թեք լույսի կամ ուլտրամանուշակագույն ճառագայթների տակ։ Իսկ եգիպտական կապույտ ներկն ինֆրակարմիր լույսի տակ փայլում է, և այդպես գտնում են նույնիսկ մանրադիտակային հետքերը։",
+    "text": "Ներկի հետքերը մնացել են։ Երբեմն դրանք երևում են աչքով, երբեմն՝ միայն թեք լույսի կամ ուլտրամանուշակագույն ճառագայթների տակ։ Իսկ եգիպտական կապույտ ներկը սովորական լույսի տակ ինֆրակարմիր լույս է արձակում, որը տեսնում է հատուկ տեսախցիկը, և այդպես գտնում են նույնիսկ մանրադիտակային հետքերը։",
     "pause_after": 1.5,
-    "visual": "A raking light beam sweeps across a marble relief and 'colour shadows' appear; then an infrared view where tiny specks glow white (Egyptian blue). Drawn parts tagged «նկարազարդում»."
+    "visual": "A raking light beam sweeps across a marble relief and 'colour shadows' appear; then visible light (yellow arrows) falls on a relief and invisible infrared (red dashed arrows) comes back to a camera icon, whose screen shows tiny specks glowing white (Egyptian blue), tagged 'տեսախցիկի պատկեր'. Drawn parts tagged «նկարազարդում»."
   },
   {
     "key": "kore",
@@ -51,7 +51,7 @@
     "key": "takeaway",
     "text": "Մեր պատկերացումը Հին Հունաստանի մասին ոչ թե հույներից է, այլ նրանից, ինչ թողել է ժամանակը։ Եվ դարեր շարունակ հիացել ենք մի գեղեցկությամբ, որը վնասվածքի արդյունք էր։",
     "pause_after": 1.5,
-    "screen": "Հիացել ենք գեղեցկությամբ, որը վնասվածք էր",
+    "screen": "Հիացել ենք գեղեցկությամբ, որը վնասվածքի արդյունք էր",
     "visual": "The white original from frame 0 alone, then its tagged reconstruction beside it again; loops."
   }
 ]

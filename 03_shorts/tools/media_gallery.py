@@ -23,10 +23,8 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-(ROOT / "logs").mkdir(exist_ok=True)
-logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s",
-                    handlers=[logging.StreamHandler(sys.stdout),
-                              logging.FileHandler(ROOT / "logs" / "media_gallery.log", encoding="utf-8")])
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from runlog import setup as setup_logging  # noqa: E402
 log = logging.getLogger("media_gallery")
 
 MIME = {".wav": ("audio", "audio/wav"), ".mp3": ("audio", "audio/mpeg"), ".m4a": ("audio", "audio/mp4"),
@@ -76,6 +74,7 @@ def build(files, title, intro, notes):
 
 
 def main():
+    setup_logging("media_gallery")
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("files", nargs="+", type=Path)
     ap.add_argument("--out", type=Path, required=True)

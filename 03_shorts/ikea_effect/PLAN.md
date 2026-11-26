@@ -18,7 +18,7 @@ cake-mix legend is cut, the effect is named, one object from hook to close.)
 
 <!-- script:start -->
 
-7 beats, 1,032 characters (1,041 with numbers spelled out): ~71 s of speech, ~1:21 with pauses and the end tail, 7.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
+7 beats, 1,060 characters (1,069 with numbers spelled out): ~73 s of speech, ~1:23 with pauses and the end tail, 7.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Ինքդ հավաքած արկղը քո աչքում ավելի թանկ է, քան նույն արկղը՝ պատրաստի։ Եվ դա չափել են փողով։
 
@@ -30,9 +30,9 @@ cake-mix legend is cut, the effect is named, one object from hook to close.)
 
 **5. why.** Ինչո՞ւ է այդպես։ Ավարտած իրը դառնում է մի փոքր քո մասը։ Այն այլևս ուղղակի արկղ չէ, այլ քո արկղը։ *[pause 1 s]*
 
-**6. trap.** Այս միտումը գործում է ամենուր, որտեղ մեր ջանքն է՝ ձեռնարկատիրոջ բիզնես ծրագրում, ծրագրավորողի կոդում, պապի ձեռքով սարքած ցանկապատում, որը ծուռ է, բայց նրա կարծիքով հարևանինից լավն է։
+**6. trap.** Գուցե նույնն է լինում նաև այլ տեղերում՝ ձեռնարկատիրոջ բիզնես ծրագրում, ծրագրավորողի կոդում, պապի ձեռքով սարքած ցանկապատում, որը ծուռ է, բայց նրա կարծիքով հարևանինից լավն է։ Սա արդեն չափված չէ, միայն նման է։
 
-**7. takeaway.** Երբ քո ձեռքով արածը քեզ շատ լավն է թվում, դա ճիշտ է՝ քեզ համար։ Մյուսների համար այն ուղղակի արկղ է։ *[pause 1.5 s]*
+**7. takeaway.** Երբ քո ձեռքով արածը քեզ շատ լավն է թվում, հարցրու մեկին, ով այն չի սարքել։ Կամ տե՛ս՝ որքա՞ն կվճարեր նա։ *[pause 1.5 s]*
 
 <!-- script:end -->
 
@@ -61,8 +61,8 @@ Armenian lint: 0 errors, 0 hints.
 
 - **Drawn:** the two shelves; builders and receivers as dot groups with bid bars; the lopsided paper frog vs the
   expert crane (`File:Origami jumping frog.svg`, CC0, as a reference); the shrinking bar for unfinished boxes; the
-  mirror on the box; the 1950s cake box with a "լեգենդ" stamp; the three vignettes, ending on the crooked village
-  fence (the local anchor).
+  mirror on the box; the three vignettes, ending on the crooked village fence (the local anchor). (The cake-mix
+  legend was cut with its beat; X57.)
 
 ## After the Fable review (FABLE_REVIEW_2.md, applied 2026-11-25)
 
@@ -81,3 +81,14 @@ Armenian lint: 0 errors, 0 hints.
 - **U-bbb, the grandfather's fence:** the local touch; keep, or swap for something you like better (a dacha table,
   a self-made khorovats grill)?
 - U-a («դու» vs «դուք») applies here too.
+
+## After the Codex review (2026-11-26)
+
+Fixes by finding ID (CODEX_REVIEW.md):
+
+- **X49:** "this tendency works everywhere our effort is" became "maybe the same happens elsewhere ... this is not
+  measured, only similar": the studies measured valuation under particular assembly and completion conditions. The
+  closing no longer tells the maker their judgment is "true for them" while others see "just a box" (self-built work
+  can be genuinely valuable); it ends on an independent check: ask someone who did not build it, or see what they
+  would pay.
+- **X57:** the cut cake-mix scene removed from the active visual list.

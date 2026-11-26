@@ -21,17 +21,17 @@ stayed.
 
 <!-- script:start -->
 
-10 beats, 1,398 characters (1,428 with numbers spelled out): ~97 s of speech, ~1:49 with pauses and the end tail, 9.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
+10 beats, 1,546 characters (1,576 with numbers spelled out): ~108 s of speech, ~1:59 with pauses and the end tail, 9.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
-**1. challenge.** Փորձիր հունական տառերով գրել «ճնճղուկ» բառը։ *[pause 2 s]*
+**1. challenge.** Փորձիր «ճնճղուկ» բառը գրել հունական տառերով՝ ամեն հնչյունի համար մեկ տառ։ *[pause 2 s]*
 
-**2. no_letters.** Չի ստացվի՝ հունարենը չունի ծա, ձա, ճե, ջե, ղատ, ռա հնչյունները։ Մաշտոցն ուներ հենց այս խնդիրը։
+**2. no_letters.** Չի ստացվի՝ հունական այբուբենում առանձին տառ չկար, օրինակ, ճնճղուկի «ճ»-ի և «ղ»-ի համար։ Մաշտոցն ուներ հենց այս խնդիրը։
 
 **3. author.** Աշխարհի այբուբենների մեծ մասը հեղինակ չունի։ Մերն ունի հեղինակ, տարեթիվ և նույնիսկ առաջին նախադասություն։ Եվ Մաշտոցը զրոյից չսկսեց՝ մի բան վերցրեց հույներից, մի բան հորինեց ինքը։
 
 **4. problem.** Հինգերորդ դարի սկիզբն էր։ Հայաստանը բաժանված էր Բյուզանդիայի և Պարսկաստանի միջև։ Եկեղեցում կարդում էին հունարեն ու ասորերեն գրքեր, և մարդիկ չէին հասկանում։ Մաշտոց վարդապետը քարոզում էր գավառներում և ամեն օր տեսնում էր դա։
 
-**5. rule.** 405 թվականին Մաշտոցը ստեղծեց 36 տառ։ Սկզբունքը մեկն էր՝ մեկ հնչյուն, մեկ տառ։
+**5. rule.** 405 թվականին Մաշտոցը ստեղծեց 36 տառ։ Գլխավոր սկզբունքը՝ հնարավորինս մեկ հնչյուն, մեկ տառ։ Բայց ոչ ամենուր՝ «ու» հնչյունը, օրինակ, գրվում էր երկու տառով, ինչպես հունարենում։
 
 **6. greek_order.** Որտեղ հունարենն ուներ նույն հնչյունը, նա պահեց հունական հերթականությունը՝ այբ, բեն, գիմ, դա, ինչպես ալֆա, բետա, գամմա, դելտա։ Իսկ նոր հնչյունների համար հորինեց նոր տառեր և տեղավորեց դրանք արանքներում։ *[pause 2.5 s]*
 
@@ -83,10 +83,10 @@ Armenian lint: 0 errors, 0 hints (the Proverbs line is a quotation in classical 
 
 - **Real photos (Commons):** `File:Mesrop Mashtots statue at Matenadaran Yerevan 2026.jpg` (CC BY-SA 4.0, Furkan
   Akkurt), `File:Armenian manuscript fragment (5th century).jpg` (public domain), `File:Erkatagir manuscript.jpg`
-  (public domain), `File:Sequoyah painting.jpg` (public domain, Henry Inman after Charles Bird King).
+  (public domain). (The Sequoyah painting went with the cut extension; X57.)
 - **Drawn:** the alphabets-without-author hook; the split map; «ճնճղուկ» failing in Greek letters; the Greek and
   Armenian rows with matching letters linked and the new letters dropping in (the showcase moment); letters flipping
-  to numbers; the first sentence written in erkatagir; the mouth profile turning into ㄱ and ㄴ.
+  to numbers; the first sentence written in erkatagir. (The Hangul mouth profile was cut with its beat; X57.)
 - **Font for erkatagir:** needs a free font with old-style capitals; otherwise draw the first sentence from the
   manuscript photo.
 
@@ -112,3 +112,16 @@ Armenian lint: 0 errors, 0 hints (the Proverbs line is a quotation in classical 
 - **U-nn, the extension:** Korea and the Cherokee as "others did the same" (my pick), or end on Armenian alone?
 - **U-oo, Georgian alphabet claim:** leave it out (my pick), or mention it as a tradition?
 - U-a («դու» vs «դուք») applies here too.
+
+## After the Codex review (2026-11-26)
+
+Fixes by finding ID (CODEX_REVIEW.md):
+
+- **X36:** the challenge is now "one Greek letter per Armenian sound" (a word can be approximated with letter
+  combinations, so "cannot write it" was too strong), and the missing items are sounds, not the letter names «ծա,
+  ձա, ճե ...». The principle is "as far as possible one sound, one letter", with «ու» (two letters for one sound,
+  as in Greek ου) as the exception, per a scholarly grammar of Classical Armenian
+  (https://mudrac.ffzg.hr/~rmatasov/ARMENIAN2.pdf). The English spelling video uses the same qualified wording.
+- **X57:** cut scenes removed from the active visual list.
+- Open voice question: how the voice reads «ճ»-ի and «ղ»-ի (letter names or sounds); check in the voice test before
+  paying for the full script.

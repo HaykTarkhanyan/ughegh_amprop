@@ -6,25 +6,25 @@
   },
   {
     "key": "choice",
-    "text": "Փոքրն արժի 1000 դրամ, մեծը՝ 2000։ Դու ո՞րը կվերցնես։",
+    "text": "Փոքրն արժի 1000 դրամ, մեծը՝ 2000, բայց երեք անգամ ավելի մեծ է։ Դու ո՞րը կվերցնես։",
     "pause_after": 1.5,
     "screen_small": "օրինակ, գները հորինված են",
-    "visual": "Two buckets with price tags 1000 / 2000 dram and a pointer hovering between them during the pause (the viewer chooses, F191)."
+    "visual": "Two buckets: small '1000 դրամ', large three times its size '2000 դրամ', sizes drawn to scale; a pointer hovers between them during the pause (the viewer chooses, F191)."
   },
   {
     "key": "medium",
-    "text": "Հիմա ավելացնենք միջինը՝ 1800 դրամ։",
+    "text": "Հիմա ավելացնենք միջինը՝ երկու անգամ մեծ, բայց 1800 դրամ։",
     "pause_after": 1.5,
-    "visual": "The medium bucket drops in between at 1800; hold."
+    "visual": "The medium bucket, twice the small's size, drops in between at 1800; hold."
   },
   {
     "key": "gift",
-    "text": "Մեծը հանկարծ ավելի գրավիչ դարձա՞վ։ Միջինի կողքին այն թվում է գրեթե նվեր՝ ընդամենը 200 դրամ ավելի։ Գները նույնն են, փոխվել է համեմատությունը։",
+    "text": "Մեծը հանկարծ ավելի գրավիչ դարձա՞վ։ Միջինի կողքին այն թվում է գրեթե նվեր՝ ընդամենը 200 դրամ ավելի, և ևս մեկ փոքրի չափ ադիբուդի։ Գները նույնն են, փոխվել է համեմատությունը։",
     "visual": "A '+200' arrow points from the medium to the large; a crowd of dots drifts from small to large."
   },
   {
     "key": "name",
-    "text": "Սա կոչվում է խայծի էֆեկտ։ Երրորդ տարբերակը, որ գրեթե ոչ ոք չի վերցնում, փոխում է, թե ինչպես ենք համեմատում մյուս երկուսը։",
+    "text": "Սա կոչվում է խայծի էֆեկտ։ Երրորդ տարբերակը, որ գրեթե ոչ ոք չի վերցնում, փոխում է, թե ինչպես ենք համեմատում մյուս երկուսը։ Ամենամաքուր դեպքում խայծը վատ է ամեն ինչով։",
     "visual": "The medium bucket gets a fishing-hook icon and the label 'խայծ'."
   },
   {
@@ -41,21 +41,21 @@
   },
   {
     "key": "everywhere",
-    "text": "Այս կառուցվածքը կտեսնես ամենուր՝ սուրճի բաժակներում, բջջային կապի փաթեթներում, բաժանորդագրություններում։ Երեք տարբերակ, որոնցից մեկը կարծես հատուկ վատն է։",
+    "text": "Այս կառուցվածքը կտեսնես ամենուր՝ սուրճի բաժակներում, բջջային կապի փաթեթներում, ֆիլմերի ու երաժշտության ծառայություններում։ Երեք տարբերակ, որոնցից մեկը կարծես հատուկ վատն է։",
     "visual": "Three quick rows: coffee S/M/L, phone plans 10 / 50 / 60 GB, three subscription tiers; in each, one option is visibly dominated."
   },
   {
     "key": "limits",
-    "text": "Բայց էֆեկտն այնքան ամուր չէ, որքան պատմում են։ Հետազոտողների մի խումբ 19 փորձ արեց իրական ապրանքներով, որոնք մարդիկ տեսնում ու համտեսում էին, և էֆեկտը չգտավ։ Այն լավ է գործում, երբ ընտրությունը թվերի մեջ է՝ գներ, գիգաբայթեր, գրամներ։ Ադիբուդու գինը հենց այդպիսին է։",
+    "text": "Բայց էֆեկտն այնքան ամուր չէ, որքան պատմում են։ Հետազոտողների մի խումբ 19 փորձ արեց իրական ապրանքներով, որոնք մարդիկ տեսնում ու համտեսում էին, և էֆեկտը չգտավ։ Այս փորձերում այն ավելի կայուն էր, երբ տարբերակները նկարագրված էին թվերով՝ գներ, գիգաբայթեր, գրամներ։ Բայց դա չի նշանակում, որ ամեն թվային ցանկում կգործի։",
     "pause_after": 1,
     "screen_small": "Frederick, Lee & Baskin, 2014",
     "visual": "Two panels: real products (tasting cups) with the effect at zero; numeric tags (prices, GB, grams) with the effect clearly present; the popcorn price tag slides into the numeric panel."
   },
   {
     "key": "takeaway",
-    "text": "Հաջորդ անգամ, երբ երեք չափ տեսնես, մտքում ջնջիր այն մեկը, որ ոչ ոք չի վերցնում։ Հետո նոր ընտրիր։",
+    "text": "Հաջորդ անգամ, երբ երեք չափ տեսնես, մի համեմատիր դրանք իրար հետ։ Հարցրու՝ ինձ որքա՞ն է պետք, և որքա՞ն եմ պատրաստ վճարել։",
     "pause_after": 1.5,
-    "screen": "Ջնջիր խայծը, հետո ընտրիր",
-    "visual": "A finger swipes the medium bucket away; small and large stand alone; loops to the hook."
+    "screen": "Ինձ որքա՞ն է պետք, և որքա՞ն եմ պատրաստ վճարել",
+    "visual": "The three buckets fade; one bucket and a wallet stand alone with the question; loops to the hook."
   }
 ]

@@ -1,8 +1,8 @@
 {
   "title": "Shorts: scripts waiting for review",
-  "subtitle": "Tick 'approve' (voice + animation can start) or 'needs changes' for each script. Comment on details on that short's PLAN.html page (03_shorts/<folder>/PLAN.html). Showcases get the full animation first (Q16).",
-  "date": "2026-11-25",
-  "warning": "Nothing is voiced or animated until approved here (Q17). Shorts must be 3:00 or less with pauses, so treat ~2:45 of speech as the ceiling; QWERTY (~2:47) is over it and needs a cut. Approving costs about $0.05 of TTS per short.",
+  "subtitle": "Tick 'approve' (voice + animation can start) or 'needs changes' for each script. Comment on details on that short's PLAN.html page. Every script was revised after the Codex review (2026-11-26); approvals name the script hash.",
+  "date": "2026-11-26",
+  "warning": "Nothing is voiced or animated until approved here (Q17). Approving costs about $0.05 of TTS per short. After approving, run: python tools/episodes.py --approve <folder>.",
   "tags": {
     "ok": {
       "label": "approve",
@@ -18,367 +18,389 @@
       "id": "approve",
       "title": "Approve (voice + animation can start)",
       "tag": "ok",
-      "intro": "Showcases first (Q16). Each row: what the short says, then its open review points.",
       "groups": [
         {
-          "title": "Showcases",
+          "title": "First video",
           "items": [
             {
-              "id": "A1",
-              "title": "Approve: showcase: Public-key crypto with paint (crypto_paint, 14 beats, ~158 s)",
-              "exclusive": "crypto",
-              "note": "Diffie-Hellman with paint: yellow + secret red / blue, Eva cannot unmix; toy numbers 5, 23 -> 2; GCHQ kept it secret until 1997.",
+              "id": "A1-2799d1",
+              "title": "Approve: FIRST VIDEO, zero-knowledge proofs (long 16:9, 13 beats, ~4:44 + Short 9:16, 5 beats, ~1:01, scripts ccae08 / d9dc2f)",
+              "exclusive": "zero_knowledge",
+              "note": "Gossip hook; websites and banks have the same problem; Where's Waldo (placed while the friend looks away); the red card (only the 26 black cards shown); the colour-blind balls; why 'zero knowledge' (he already knew every answer); real systems on signed data; the gossip answer. Long 16:9 + Short 9:16, your narration.",
               "detail": [
-                "Open: U-p terms, U-q name the discrete logarithm?, U-r keep the GCHQ beat?"
-              ]
-            },
-            {
-              "id": "A2",
-              "title": "Approve: showcase: Friendship paradox (friendship, 13 beats, ~135 s)",
-              "exclusive": "friend",
-              "note": "20-person network: 17 have fewer friends than their friends; Facebook 92.7%; buses feel full; flu sensors 2 weeks early; vaccinate random friends.",
-              "detail": [
-                "Open: U-s term, U-t hook wording, U-u keep the μ + D/μ card?"
-              ]
-            },
-            {
-              "id": "A3",
-              "title": "Approve: showcase: QWERTY (qwerty, 12 beats, ~167 s)",
-              "exclusive": "qwerty",
-              "note": "Not made to slow typists: telegraph operators (Yasuoka), 1888 contest, 1893 standard, Dvorak's own doubtful study, Armenian phonetic layout.",
-              "detail": [
-                "Open: U-v terms, U-w how the voice says QWERTY / Z / SE, U-x cut beats 5 or 10?"
-              ]
-            },
-            {
-              "id": "A4",
-              "title": "Approve: showcase: Stanislav Petrov (petrov, 13 beats, ~131 s)",
-              "exclusive": "petrov",
-              "note": "26 Sep 1983: 5 missiles on screen, 'not believing the computer', sun glint on clouds, the Bayes link, role debated.",
-              "detail": [
-                "Open: U-y terms, U-z keep the Bayes link?, U-aa sensitivity"
+                "Open: U-ooo gossip set-up, U-ppp terms in your mouth, U-sss «Ուոլդո» or «Ուոլի», U-a դու/դուք; re-check the Codex rewrites of the card, 'why zero' and Waldo beats"
               ]
             }
           ]
         },
         {
-          "title": "Other scripts",
+          "title": "In publishing order",
           "items": [
             {
-              "id": "A5",
-              "title": "Approve: Bayes: the 99% test (bayes_test, 14 beats, ~150 s)",
-              "exclusive": "bayes",
-              "note": "1,000 dots: a positive means 50%, 9% for a rarer disease; gynecologists 1 in 5 right; retest, symptoms; formula card.",
+              "id": "A2-0f0462",
+              "title": "Approve: Why your own voice sounds strange on a recording (own_voice, 10 beats, ~1:45, script 0f0462)",
+              "exclusive": "own_voice",
+              "note": "Air + bone conduction; the recording is thinner, less bass; plug your ears (louder and bassier); people rated their own unlabelled voice higher; part of the cringe is probably surprise.",
               "detail": [
-                "Open: U-a address, U-b «սկրինինգ», U-c cut?, U-d HIV line"
+                "Open: U-bb terms, «ավելի ուժեղ ու թավ» (X53)"
               ]
             },
             {
-              "id": "A6",
-              "title": "Approve: Simpson's paradox (simpson, 13 beats, ~145 s)",
-              "exclusive": "simpson",
-              "note": "Kidney stones 78 vs 83 but better in both groups; Berkeley 1973; COVID Italy vs China; compare like with like.",
+              "id": "A3-689bc1",
+              "title": "Approve: The decoy effect (why a medium popcorn exists mainly to sell you the large) (decoy_popcorn, 10 beats, ~2:07, script 689bc1)",
+              "exclusive": "decoy_popcorn",
+              "note": "Small 1x / medium 2x / large 3x popcorn; the subscription decoy (84% vs 32%) as the clean case; the effect is weaker than told; ask what you need and what you will pay.",
               "detail": [
-                "Open: U-e «ֆակուլտետ», U-f method names, U-g keep COVID?, U-h keep the exception?"
+                "Open: U-xx «խայծի էֆեկտ», U-zz «ադիբուդի»"
               ]
             },
             {
-              "id": "A7",
-              "title": "Approve: Regression to the mean (regression, 14 beats, ~158 s)",
-              "exclusive": "regr",
-              "note": "Kahneman's flight instructors; 1,000 students: best 92 -> 82, worst 47 -> 59, and backwards; Galton 1886.",
+              "id": "A4-573c56",
+              "title": "Approve: Short 2: \"The test is 99% accurate\" (Bayes) (bayes_test, 12 beats, ~2:34, script 573c56)",
+              "exclusive": "bayes_test",
+              "note": "1,000 dots: a positive means 50%, 9% for a rarer disease; many doctors miss it too; a second, independent test gives ~99%, the same test repeated stays at 50%.",
               "detail": [
-                "Open: U-i term, U-j «նախատինք», U-k keep the backwards beat?, U-l trim?"
+                "Open: U-a address, U-b «սկրինինգ» (now only on the source line), U-d HIV line"
               ]
             },
             {
-              "id": "A8",
-              "title": "Approve: Why waiting feels longer (waiting, 12 beats, ~159 s)",
-              "exclusive": "wait",
-              "note": "Houston story (told as unverified), Maister's rules, Disney's posted waits ~2/3 real, the other line wins 2 of 3 times, the snake line.",
+              "id": "A5-5d5ccb",
+              "title": "Approve: Map projections (why Greenland looks as big as Africa) (map_projection, 9 beats, ~1:52, script 5d5ccb)",
+              "exclusive": "map_projection",
+              "note": "Africa is 14x Greenland; drag Greenland south, lift Armenia north (area x6); orange peel and Gauss; why Mercator stretched; Web Mercator cut at 85°; switch on globe view in Google Maps.",
               "detail": [
-                "Open: U-m «Մայստեր», U-n keep Houston?, U-o «ուղեբեռի ժապավեն»"
+                "Open: U-ccc «պրոյեկցիա», U-ddd «Գուգլ քարտեզները»"
               ]
             },
             {
-              "id": "A9",
-              "title": "Approve: Your own voice on a recording (own_voice, 12 beats, ~115 s)",
-              "exclusive": "voice",
-              "note": "Air + bone conduction; plug your ears; mirror faces (1977); own voice rated more attractive (2013).",
+              "id": "A6-f02fa1",
+              "title": "Approve: Showcase 2: Friendship paradox (on average, your friends really do have more friends than you) (friendship, 10 beats, ~1:42, script f02fa1)",
+              "exclusive": "friendship",
+              "note": "20-person network: friends' friends average ~5 vs 3.6; 17 of 20 here have fewer friends than their friends; popular people sit on many lists; Facebook 93%; flu and vaccination use.",
               "detail": [
-                "Open: U-bb terms, U-cc add a beat?"
+                "Open: U-s term, U-t hook wording"
               ]
             },
             {
-              "id": "A10",
-              "title": "Approve: Contagious yawning (yawning, 11 beats, ~120 s)",
-              "exclusive": "yawn",
-              "note": "About half catch a yawn; oxygen idea falsified; cooling theory; kin > strangers vs the 2014 null result; dogs 21 of 29.",
+              "id": "A7-9f8fdd",
+              "title": "Approve: Greek statues were originally painted in bright colours (painted_statues, 9 beats, ~2:02, script 9f8fdd)",
+              "exclusive": "painted_statues",
+              "note": "Statues were painted; traces under raking light, UV, and Egyptian blue's infrared glow seen by a camera; the Peplos Kore; why we thought white; Akhtamar; copies are hypotheses.",
+              "detail": [
+                "Open: U-hhh local anchor, U-iii «Պեպլոսով կորե»"
+              ]
+            },
+            {
+              "id": "A8-e33c62",
+              "title": "Approve: Showcase 4: Stanislav Petrov, the Soviet officer who treated a 1983 nuclear alarm as false, and was right (petrov, 12 beats, ~2:16, script e33c62)",
+              "exclusive": "petrov",
+              "note": "5 missiles on screen; Petrov weighed the alarm against the prior, the new system's reliability and the silent radars; sun glint on clouds; his role debated; check the signal against the rest.",
+              "detail": [
+                "Open: U-y terms, U-aa sensitivity"
+              ]
+            },
+            {
+              "id": "A9-f34e45",
+              "title": "Approve: How Mashtots designed the Armenian alphabet, and why anyone builds an alphabet from scratch (mashtots, 10 beats, ~1:59, script f34e45)",
+              "exclusive": "mashtots",
+              "note": "Write «ճնճղուկ» with one Greek letter per sound; author, year, first sentence; as far as possible one sound one letter (ու is two); the Greek order kept; letters as numbers; the script stayed.",
+              "detail": [
+                "Open: U-ll wording, U-mm the classical sentence, how the voice reads «ճ»-ի / «ղ»-ի"
+              ]
+            },
+            {
+              "id": "A10-abd4a4",
+              "title": "Approve: Why English spelling is a mess (the Great Vowel Shift) (english_spelling, 8 beats, ~1:51, script abd4a4)",
+              "exclusive": "english_spelling",
+              "note": "-ough read five ways; many silent letters were once pronounced; knight (consonants), house (vowel shift); printing froze spellings, borrowings and learned respellings too; Webster; 'not wrong, old'.",
+              "detail": [
+                "Open: U-pp term, U-qq transliterations in the voice"
+              ]
+            },
+            {
+              "id": "A11-42bf53",
+              "title": "Approve: Showcase 1: Public-key crypto explained with paint mixing (crypto_paint, 13 beats, ~2:36, script 42bf53)",
+              "exclusive": "crypto_paint",
+              "note": "Agreeing a key in public: paint analogy (yellow + secret red / blue); Eva cannot unmix; numbers instead of paint, no known practical fast way back; toy numbers; authentication still needed.",
+              "detail": [
+                "Open: U-p terms, U-q discrete logarithm, «գործնականում անհնար» (X44)"
+              ]
+            },
+            {
+              "id": "A12-7656ac",
+              "title": "Approve: Why yawning is contagious (yawning, 9 beats, ~1:49, script 7656ac)",
+              "exclusive": "yawning",
+              "note": "About half catch a yawn; the oxygen idea failed; cooling theory; kin > strangers vs the null result; honestly, we do not know; how many times did you yawn?",
               "detail": [
                 "Open: U-dd «վարակվել», U-ee the comment call-to-action"
               ]
             },
             {
-              "id": "A11",
-              "title": "Approve: Kids glued to CoComelon-style TV (kids_tv, 11 beats, ~154 s)",
-              "exclusive": "kids",
-              "note": "Orienting reflex + bright fast shows + repetition; not hypnosis (Anderson 1981); the 2011 fast-cartoon study and its limits; WHO limits; tips.",
-              "detail": [
-                "Open: U-ff was CoComelon meant?, U-gg names, U-hh terms"
-              ]
-            },
-            {
-              "id": "A12",
-              "title": "Approve: The toothless man from Dmanisi (dmanisi, 9 beats, ~1:45)",
-              "exclusive": "dmanisi",
-              "note": "Toothless man near Armenia; the 'someone fed him' story (painting tagged as an artist's picture) vs what the bone shows; a toothless bonobo; 'we do not know which'. Mead and Neanderthal beats cut. Fable review applied.",
-              "detail": [
-                "Open: U-ii keep the honest angle?, U-jj terms, U-kk credit exurb1a?"
-              ]
-            },
-            {
-              "id": "A13",
-              "title": "Approve: How Mashtots designed the Armenian alphabet (mashtots, 10 beats, ~1:49)",
-              "exclusive": "mashtots",
-              "note": "Hook = try writing «ճնճղուկ» in Greek letters; author, year, first sentence; one sound one letter, the Greek order kept, the 36 letters as a 4 x 9 number grid; closes on 'the kingdom was lost, the script stayed'. Fable review applied.",
-              "detail": [
-                "Open: U-ll wording, U-mm classical sentence in the voice, U-nn Korea/Cherokee extension, U-oo Georgian claim left out"
-              ]
-            },
-            {
-              "id": "A14",
-              "title": "Approve: Why English spelling is a mess (english_spelling, 8 beats, ~1:43)",
-              "exclusive": "english_spelling",
-              "note": "Hook = the five -ough words read aloud; knight was «քնիխտ»; the vowel shift + printing froze old spellings; Armenian started from the opposite rule; Webster; 'not wrong, old'. Fable review applied.",
-              "detail": [
-                "Open: U-pp term, U-qq transliterations in the voice, U-rr «պարտք»/«կղզի»"
-              ]
-            },
-            {
-              "id": "A15",
-              "title": "Approve: Why the week has 7 days (week_seven, 9 beats, ~1:54)",
+              "id": "A13-f0aaab",
+              "title": "Approve: Why the week has 7 days (week_seven, 9 beats, ~2:02, script f0aaab)",
               "exclusive": "week_seven",
-              "note": "Sky gives day, month, year, not the week; Jewish Sabbath week (Armenian names count from it); Roman planet days; named after the first hour + 24 mod 7 = 3 draws a seven-pointed star; Soviet weeks failed. Fable review applied.",
+              "note": "Sky gives day, month, year, not the week; the continuous week does not follow the Moon; Sabbath week (Armenian day names); planet days; 24 mod 7 draws the star; Soviet weeks failed.",
               "detail": [
                 "Open: U-ss ուրբաթ etymology, U-tt terms, U-uu Soviet detail"
               ]
             },
             {
-              "id": "A16",
-              "title": "Approve: Why a minute has 60 seconds (minute_60, 6 beats, ~1:40)",
-              "exclusive": "minute_60",
-              "note": "Hook = a real 10-hour French clock (the metre stayed, decimal time did not); count to 60 on your hands; 60 divides well (a third of 100 never ends); minuta / secunda; 'sixty divides well, ten comes from our fingers'. Fable review applied.",
+              "id": "A14-489b49",
+              "title": "Approve: Short 4: Regression to the mean (why praise seems to \"fail\" and punishment seems to \"work\") (regression, 11 beats, ~2:23, script 489b49)",
+              "exclusive": "regression",
+              "note": "Kahneman's flight instructors; 1,000 simulated students: best 92 -> 82, worst 47 -> 59, and backwards; regression to the mean; a randomised comparison is the check.",
               "detail": [
-                "Open: U-vv the Russian link, U-ww closing line too strong?"
+                "Open: «ռեգրեսիա դեպի միջինը», U-j «նախատինք»"
               ]
             },
             {
-              "id": "A17",
-              "title": "Approve: The decoy effect (medium popcorn) (decoy_popcorn, 10 beats, ~1:52)",
-              "exclusive": "decoy_popcorn",
-              "note": "The medium sells the large; the viewer chooses before the medium appears; the 84% vs 32% magazine demo; comparing is easy, pricing is hard; no effect with real products, it holds for numbers. Fable review applied.",
+              "id": "A15-3e8edd",
+              "title": "Approve: The toothless man from Dmanisi (the oldest evidence of compassion?) (dmanisi, 9 beats, ~1:47, script 3e8edd)",
+              "exclusive": "dmanisi",
+              "note": "Toothless man near Armenia; the 'someone fed him' story vs what the bone shows; a toothless bonobo; soft food, adaptation and help may all have played a part.",
               "detail": [
-                "Open: U-xx term «խայծի էֆեկտ», U-yy Ariely on the source line, U-zz «ադիբուդի»"
+                "Open: U-jj terms, «կարեկցանք» here vs in yawning (X54)"
               ]
             },
             {
-              "id": "A18",
-              "title": "Approve: The IKEA effect (ikea_effect, 7 beats, ~1:21)",
+              "id": "A16-afa968",
+              "title": "Approve: The IKEA effect (why you value furniture you built yourself more) (ikea_effect, 7 beats, ~1:23, script afa968)",
               "exclusive": "ikea_effect",
-              "note": "Builders pay 63% more for their own box; named IKEA effect; crooked origami frogs; only if finished; it becomes 'my box'; grandfather's fence. Cake-mix legend cut. ~1:20. Fable review applied.",
+              "note": "Builders pay 63% more for their own box; crooked origami frogs; only if finished; it becomes 'my box'; maybe the same elsewhere (not measured); ask someone who did not build it.",
               "detail": [
                 "Open: U-aaa brand in the voice, U-bbb local touch"
               ]
             },
             {
-              "id": "A19",
-              "title": "Approve: Map projections (Greenland vs Africa) (map_projection, 9 beats, ~1:46)",
-              "exclusive": "map_projection",
-              "note": "Africa is 14x Greenland; drag Greenland south, lift Armenia north (x6); orange peel and Gauss; why Mercator stretched (sailors); every map sacrifices something; try zooming out in Google Maps. Fable review applied.",
+              "id": "A17-f98ea2",
+              "title": "Approve: Why small kids get glued to CoComelon-style TV (kids_tv, 11 beats, ~2:45, script f98ea2)",
+              "exclusive": "kids_tv",
+              "note": "Plausible mechanisms: the orienting reflex, bright fast shows, repetition; attention follows understanding; the 2011 study and the later fantastical-content experiments; WHO: no sedentary screens under 2, 1 hour at 2-4.",
               "detail": [
-                "Open: U-ccc «պրոյեկցիա» once?, U-ddd «Գուգլ քարտեզները»"
+                "Open: U-ff CoComelon meant?, U-hh terms"
               ]
             },
             {
-              "id": "A20",
-              "title": "Approve: FIRST VIDEO, zero-knowledge proofs (long 16:9 ~4:40 + short 9:16 ~1:04, your narration)",
-              "exclusive": "zero_knowledge",
-              "note": "Your structure: gossip hook, websites and banks, the cave, why 'zero knowledge' (a video of it convinces nobody), the red card (all 26 black cards still in the deck), the colour-blind balls, real systems, back to the gossip. Approve = you record.",
+              "id": "A18-5b83ab",
+              "title": "Approve: Short 3: Simpson's paradox (\"better in every group, worse overall\") (simpson, 12 beats, ~2:29, script 5b83ab)",
+              "exclusive": "simpson",
+              "note": "Kidney stones: 78% vs 83% overall, higher in both groups; who got which treatment; the weighted average with the division by 350; Berkeley's six departments; compare like with like, no causal proof.",
               "detail": [
-                "Open: U-ooo gossip set-up, U-ppp terms in your mouth, U-qqq keep the faked-video beat, U-rrr the Short's tease line, U-a դու/դուք"
+                "Open: U-e «ֆակուլտետ», U-f method names"
               ]
             },
             {
-              "id": "A21",
-              "title": "Approve: Greek statues were painted (painted_statues, 9 beats, ~1:58)",
-              "exclusive": "painted_statues",
-              "note": "Frame 0 = white original next to its tagged reconstruction; traces under UV / infrared; the Peplos Kore; why we thought white, the 1930s scraping; our churches had frescoes (Akhtamar); the copies are hypotheses. Fable review applied.",
+              "id": "A19-2f3bd2",
+              "title": "Approve: Why a minute has 60 seconds (minute_60, 6 beats, ~1:38, script 2f3bd2)",
+              "exclusive": "minute_60",
+              "note": "A real 10-hour French clock; base 60 is ancient (why, unknown); count to 60 on your hands; 60 divides well; minuta / secunda; why decimal time failed, we do not know for sure.",
               "detail": [
-                "Open: U-hhh local anchor?, U-iii «Պեպլոսով կորե»"
+                "Open: U-vv the Russian link"
               ]
             },
             {
-              "id": "A22",
-              "title": "Approve: Wheeled suitcase vs backpack (luggage_wheels, 6 beats, ~1:19)",
+              "id": "A20-10fa6a",
+              "title": "Approve: Why a wheeled suitcase is easier than a backpack (luggage_wheels, 7 beats, ~1:40, script 10fa6a)",
               "exclusive": "luggage_wheels",
-              "note": "Physics only (Fable's option a, U-jjj default): textbook says zero work, yet you sweat (your body lifts the load each step); wheels give it to the floor, if the floor is smooth (Yerevan pavements). ~1:20. Fable review applied.",
+              "note": "Zero work on the load, yet you sweat: muscles use energy to hold a load, and walking lifts it each step; wheels take both away on a smooth floor; 'work is zero, energy is not'.",
               "detail": [
-                "Open: U-jjj is this the topic you meant?, U-kkk Yerevan pavement joke, U-lll «բորտուղեկցորդ»"
+                "Open: U-kkk Yerevan pavement joke, U-lll «բորտուղեկցորդ»"
+              ]
+            },
+            {
+              "id": "A21-6cd7b0",
+              "title": "Approve: Short 5: Why waiting feels longer than it is, and how airports and Disney hide wait times (waiting, 8 beats, ~2:05, script 6cd7b0)",
+              "exclusive": "waiting",
+              "note": "The same 8 minutes feel long or short; the Houston story (unverified); Maister's rules; Disney's posted waits; waiting is partly the clock, partly the feeling.",
+              "detail": [
+                "Open: U-m «Մայստեր», U-o «ուղեբեռի ժապավեն»; queue maths parked as its own video"
+              ]
+            },
+            {
+              "id": "A22-ff2590",
+              "title": "Approve: Showcase 3: Why the QWERTY layout won (messier than the \"made to slow typists down\" myth) (qwerty, 8 beats, ~1:50, script ff2590)",
+              "exclusive": "qwerty",
+              "note": "Not made to slow typists: telegraph operators shaped it, Remington built it, every new machine inherited it, down to the Armenian phonetic layout.",
+              "detail": [
+                "Open: the spoken form «քվերթի» (X55), U-v terms"
               ]
             }
           ]
         }
-      ]
+      ],
+      "intro": "Each item ID ends in the script's hash: an approval covers exactly that version."
     },
     {
       "id": "fix",
       "title": "Needs changes (comment on that short's PLAN.html)",
       "tag": "fix",
-      "intro": "Tick here instead of approve when a script needs edits; the details go as comments on its plan page.",
       "groups": [
         {
-          "title": "Showcases",
+          "title": "First video",
           "items": [
             {
-              "id": "C1",
-              "title": "Needs changes: showcase: Public-key crypto with paint (crypto_paint, 14 beats, ~158 s)",
-              "exclusive": "crypto",
-              "note": "Leave comments on crypto_paint/PLAN.html"
-            },
-            {
-              "id": "C2",
-              "title": "Needs changes: showcase: Friendship paradox (friendship, 13 beats, ~135 s)",
-              "exclusive": "friend",
-              "note": "Leave comments on friendship/PLAN.html"
-            },
-            {
-              "id": "C3",
-              "title": "Needs changes: showcase: QWERTY (qwerty, 12 beats, ~167 s)",
-              "exclusive": "qwerty",
-              "note": "Leave comments on qwerty/PLAN.html"
-            },
-            {
-              "id": "C4",
-              "title": "Needs changes: showcase: Stanislav Petrov (petrov, 13 beats, ~131 s)",
-              "exclusive": "petrov",
-              "note": "Leave comments on petrov/PLAN.html"
+              "id": "C1-2799d1",
+              "title": "Needs changes: FIRST VIDEO, zero-knowledge proofs (long 16:9, 13 beats, ~4:44 + Short 9:16, 5 beats, ~1:01, scripts ccae08 / d9dc2f)",
+              "exclusive": "zero_knowledge",
+              "note": "Leave comments on zero_knowledge/PLAN.html",
+              "detail": []
             }
           ]
         },
         {
-          "title": "Other scripts",
+          "title": "In publishing order",
           "items": [
             {
-              "id": "C5",
-              "title": "Needs changes: Bayes: the 99% test (bayes_test, 14 beats, ~150 s)",
-              "exclusive": "bayes",
-              "note": "Leave comments on bayes_test/PLAN.html"
+              "id": "C2-0f0462",
+              "title": "Needs changes: Why your own voice sounds strange on a recording (own_voice, 10 beats, ~1:45, script 0f0462)",
+              "exclusive": "own_voice",
+              "note": "Leave comments on own_voice/PLAN.html",
+              "detail": []
             },
             {
-              "id": "C6",
-              "title": "Needs changes: Simpson's paradox (simpson, 13 beats, ~145 s)",
-              "exclusive": "simpson",
-              "note": "Leave comments on simpson/PLAN.html"
-            },
-            {
-              "id": "C7",
-              "title": "Needs changes: Regression to the mean (regression, 14 beats, ~158 s)",
-              "exclusive": "regr",
-              "note": "Leave comments on regression/PLAN.html"
-            },
-            {
-              "id": "C8",
-              "title": "Needs changes: Why waiting feels longer (waiting, 12 beats, ~159 s)",
-              "exclusive": "wait",
-              "note": "Leave comments on waiting/PLAN.html"
-            },
-            {
-              "id": "C9",
-              "title": "Needs changes: Your own voice on a recording (own_voice, 12 beats, ~115 s)",
-              "exclusive": "voice",
-              "note": "Leave comments on own_voice/PLAN.html"
-            },
-            {
-              "id": "C10",
-              "title": "Needs changes: Contagious yawning (yawning, 11 beats, ~120 s)",
-              "exclusive": "yawn",
-              "note": "Leave comments on yawning/PLAN.html"
-            },
-            {
-              "id": "C11",
-              "title": "Needs changes: Kids glued to CoComelon-style TV (kids_tv)",
-              "exclusive": "kids",
-              "note": "Leave comments on kids_tv/PLAN.html"
-            },
-            {
-              "id": "C12",
-              "title": "Needs changes: The toothless man from Dmanisi (dmanisi)",
-              "exclusive": "dmanisi",
-              "note": "Leave comments on dmanisi/PLAN.html"
-            },
-            {
-              "id": "C13",
-              "title": "Needs changes: How Mashtots designed the Armenian alphabet (mashtots)",
-              "exclusive": "mashtots",
-              "note": "Leave comments on mashtots/PLAN.html"
-            },
-            {
-              "id": "C14",
-              "title": "Needs changes: Why English spelling is a mess (english_spelling)",
-              "exclusive": "english_spelling",
-              "note": "Leave comments on english_spelling/PLAN.html"
-            },
-            {
-              "id": "C15",
-              "title": "Needs changes: Why the week has 7 days (week_seven)",
-              "exclusive": "week_seven",
-              "note": "Leave comments on week_seven/PLAN.html"
-            },
-            {
-              "id": "C16",
-              "title": "Needs changes: Why a minute has 60 seconds (minute_60)",
-              "exclusive": "minute_60",
-              "note": "Leave comments on minute_60/PLAN.html"
-            },
-            {
-              "id": "C17",
-              "title": "Needs changes: The decoy effect (medium popcorn) (decoy_popcorn)",
+              "id": "C3-689bc1",
+              "title": "Needs changes: The decoy effect (why a medium popcorn exists mainly to sell you the large) (decoy_popcorn, 10 beats, ~2:07, script 689bc1)",
               "exclusive": "decoy_popcorn",
-              "note": "Leave comments on decoy_popcorn/PLAN.html"
+              "note": "Leave comments on decoy_popcorn/PLAN.html",
+              "detail": []
             },
             {
-              "id": "C18",
-              "title": "Needs changes: The IKEA effect (ikea_effect)",
-              "exclusive": "ikea_effect",
-              "note": "Leave comments on ikea_effect/PLAN.html"
+              "id": "C4-573c56",
+              "title": "Needs changes: Short 2: \"The test is 99% accurate\" (Bayes) (bayes_test, 12 beats, ~2:34, script 573c56)",
+              "exclusive": "bayes_test",
+              "note": "Leave comments on bayes_test/PLAN.html",
+              "detail": []
             },
             {
-              "id": "C19",
-              "title": "Needs changes: Map projections (Greenland vs Africa) (map_projection)",
+              "id": "C5-5d5ccb",
+              "title": "Needs changes: Map projections (why Greenland looks as big as Africa) (map_projection, 9 beats, ~1:52, script 5d5ccb)",
               "exclusive": "map_projection",
-              "note": "Leave comments on map_projection/PLAN.html"
+              "note": "Leave comments on map_projection/PLAN.html",
+              "detail": []
             },
             {
-              "id": "C20",
-              "title": "Needs changes: Zero-knowledge proofs (zero_knowledge)",
-              "exclusive": "zero_knowledge",
-              "note": "Leave comments on zero_knowledge/PLAN.html and zero_knowledge_short/PLAN.html"
+              "id": "C6-f02fa1",
+              "title": "Needs changes: Showcase 2: Friendship paradox (on average, your friends really do have more friends than you) (friendship, 10 beats, ~1:42, script f02fa1)",
+              "exclusive": "friendship",
+              "note": "Leave comments on friendship/PLAN.html",
+              "detail": []
             },
             {
-              "id": "C21",
-              "title": "Needs changes: Greek statues were painted (painted_statues)",
+              "id": "C7-9f8fdd",
+              "title": "Needs changes: Greek statues were originally painted in bright colours (painted_statues, 9 beats, ~2:02, script 9f8fdd)",
               "exclusive": "painted_statues",
-              "note": "Leave comments on painted_statues/PLAN.html"
+              "note": "Leave comments on painted_statues/PLAN.html",
+              "detail": []
             },
             {
-              "id": "C22",
-              "title": "Needs changes: Wheeled suitcase vs backpack (luggage_wheels)",
+              "id": "C8-e33c62",
+              "title": "Needs changes: Showcase 4: Stanislav Petrov, the Soviet officer who treated a 1983 nuclear alarm as false, and was right (petrov, 12 beats, ~2:16, script e33c62)",
+              "exclusive": "petrov",
+              "note": "Leave comments on petrov/PLAN.html",
+              "detail": []
+            },
+            {
+              "id": "C9-f34e45",
+              "title": "Needs changes: How Mashtots designed the Armenian alphabet, and why anyone builds an alphabet from scratch (mashtots, 10 beats, ~1:59, script f34e45)",
+              "exclusive": "mashtots",
+              "note": "Leave comments on mashtots/PLAN.html",
+              "detail": []
+            },
+            {
+              "id": "C10-abd4a4",
+              "title": "Needs changes: Why English spelling is a mess (the Great Vowel Shift) (english_spelling, 8 beats, ~1:51, script abd4a4)",
+              "exclusive": "english_spelling",
+              "note": "Leave comments on english_spelling/PLAN.html",
+              "detail": []
+            },
+            {
+              "id": "C11-42bf53",
+              "title": "Needs changes: Showcase 1: Public-key crypto explained with paint mixing (crypto_paint, 13 beats, ~2:36, script 42bf53)",
+              "exclusive": "crypto_paint",
+              "note": "Leave comments on crypto_paint/PLAN.html",
+              "detail": []
+            },
+            {
+              "id": "C12-7656ac",
+              "title": "Needs changes: Why yawning is contagious (yawning, 9 beats, ~1:49, script 7656ac)",
+              "exclusive": "yawning",
+              "note": "Leave comments on yawning/PLAN.html",
+              "detail": []
+            },
+            {
+              "id": "C13-f0aaab",
+              "title": "Needs changes: Why the week has 7 days (week_seven, 9 beats, ~2:02, script f0aaab)",
+              "exclusive": "week_seven",
+              "note": "Leave comments on week_seven/PLAN.html",
+              "detail": []
+            },
+            {
+              "id": "C14-489b49",
+              "title": "Needs changes: Short 4: Regression to the mean (why praise seems to \"fail\" and punishment seems to \"work\") (regression, 11 beats, ~2:23, script 489b49)",
+              "exclusive": "regression",
+              "note": "Leave comments on regression/PLAN.html",
+              "detail": []
+            },
+            {
+              "id": "C15-3e8edd",
+              "title": "Needs changes: The toothless man from Dmanisi (the oldest evidence of compassion?) (dmanisi, 9 beats, ~1:47, script 3e8edd)",
+              "exclusive": "dmanisi",
+              "note": "Leave comments on dmanisi/PLAN.html",
+              "detail": []
+            },
+            {
+              "id": "C16-afa968",
+              "title": "Needs changes: The IKEA effect (why you value furniture you built yourself more) (ikea_effect, 7 beats, ~1:23, script afa968)",
+              "exclusive": "ikea_effect",
+              "note": "Leave comments on ikea_effect/PLAN.html",
+              "detail": []
+            },
+            {
+              "id": "C17-f98ea2",
+              "title": "Needs changes: Why small kids get glued to CoComelon-style TV (kids_tv, 11 beats, ~2:45, script f98ea2)",
+              "exclusive": "kids_tv",
+              "note": "Leave comments on kids_tv/PLAN.html",
+              "detail": []
+            },
+            {
+              "id": "C18-5b83ab",
+              "title": "Needs changes: Short 3: Simpson's paradox (\"better in every group, worse overall\") (simpson, 12 beats, ~2:29, script 5b83ab)",
+              "exclusive": "simpson",
+              "note": "Leave comments on simpson/PLAN.html",
+              "detail": []
+            },
+            {
+              "id": "C19-2f3bd2",
+              "title": "Needs changes: Why a minute has 60 seconds (minute_60, 6 beats, ~1:38, script 2f3bd2)",
+              "exclusive": "minute_60",
+              "note": "Leave comments on minute_60/PLAN.html",
+              "detail": []
+            },
+            {
+              "id": "C20-10fa6a",
+              "title": "Needs changes: Why a wheeled suitcase is easier than a backpack (luggage_wheels, 7 beats, ~1:40, script 10fa6a)",
               "exclusive": "luggage_wheels",
-              "note": "Leave comments on luggage_wheels/PLAN.html"
+              "note": "Leave comments on luggage_wheels/PLAN.html",
+              "detail": []
+            },
+            {
+              "id": "C21-6cd7b0",
+              "title": "Needs changes: Short 5: Why waiting feels longer than it is, and how airports and Disney hide wait times (waiting, 8 beats, ~2:05, script 6cd7b0)",
+              "exclusive": "waiting",
+              "note": "Leave comments on waiting/PLAN.html",
+              "detail": []
+            },
+            {
+              "id": "C22-ff2590",
+              "title": "Needs changes: Showcase 3: Why the QWERTY layout won (messier than the \"made to slow typists down\" myth) (qwerty, 8 beats, ~1:50, script ff2590)",
+              "exclusive": "qwerty",
+              "note": "Leave comments on qwerty/PLAN.html",
+              "detail": []
             }
           ]
         }
-      ]
+      ],
+      "intro": "Each item ID ends in the script's hash: an approval covers exactly that version."
     }
   ],
   "choices": [
@@ -388,16 +410,6 @@
       "options": [
         "«դու» (as now)",
         "«դուք»"
-      ]
-    },
-    {
-      "name": "first",
-      "label": "Which approved showcase to animate first",
-      "options": [
-        "crypto_paint",
-        "friendship",
-        "qwerty",
-        "petrov"
       ]
     }
   ],

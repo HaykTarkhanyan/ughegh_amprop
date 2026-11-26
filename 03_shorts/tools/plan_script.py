@@ -3,7 +3,9 @@
 PLAN.md must contain the two marker lines `<!-- script:start -->` and `<!-- script:end -->`; everything between
 them is replaced by the beats (numbered, key in bold, then the Armenian text) and a length line (characters and
 seconds: the midpoint of the estimate from the text as written and with numbers spelled out (tools/hy_numbers.py),
-at ~870 characters per minute, calibrated on two measured digit-heavy beats on 2026-11-25). Run it after every script edit,
+at ~870 characters per minute, calibrated on two measured digit-heavy beats on 2026-11-25; checked on 2026-11-26 against
+the two voiced scripts: totals +4.4% (pilot, 6 beats) and -0.7% (zero_knowledge, 13 beats), single beats -26% to +20%,
+so it is a planning allowance, not a validated accuracy band, and not calibrated for Hayk's own reading). Run it after every script edit,
 then rerun the html-review converter so the HTML page (and its comments) stays attached.
 
 Usage (from 03_shorts/):  python tools/plan_script.py crypto_paint
@@ -19,10 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from hy_numbers import spoken  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
-(ROOT / "logs").mkdir(exist_ok=True)
-logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s",
-                    handlers=[logging.StreamHandler(sys.stdout),
-                              logging.FileHandler(ROOT / "logs" / "plan_script.log", encoding="utf-8")])
+from runlog import setup as setup_logging  # noqa: E402
 log = logging.getLogger("plan_script")
 
 START, END = "<!-- script:start -->", "<!-- script:end -->"
@@ -32,6 +31,7 @@ CEILING_S = 165                 # 2:45 of speech keeps a Short under 3:00 (YouTu
 
 
 def main():
+    setup_logging("plan_script")
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("short", type=Path)
     ap.add_argument("--ceiling", type=float, default=CEILING_S,
@@ -50,9 +50,11 @@ def main():
     over = args.ceiling and est + silent > args.ceiling
     flag = f" **Over the {int(args.ceiling // 60)}:{int(args.ceiling % 60):02d} speech ceiling: cut a beat.**" if over else ""
     pauses = f", {silent:g} s of them marked silent pauses" if silent else ""
+    secs = round(total)  # round first, then split, so 59.6 s prints 1:00, not 0:60 (Codex review X61)
     lines = [START, "", f"{len(beats)} beats, {chars:,} characters ({spoken_chars:,} with numbers spelled out): "
-             f"~{round(est)} s of speech, ~{int(total // 60)}:{round(total % 60):02d} with pauses and the end tail"
-             f"{pauses} (estimate, calibrated on 2 measured beats, about +-10%).{flag}", ""]
+             f"~{round(est)} s of speech, ~{secs // 60}:{secs % 60:02d} with pauses and the end tail"
+             f"{pauses} (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to "
+             f"26% off; a human reading can differ more; the timeline gives the real length).{flag}", ""]
     for i, b in enumerate(beats, 1):
         pause = f" *[pause {b['pause_after']:g} s]*" if b.get("pause_after") else ""
         lines += [f"**{i}. {b['key']}.** {b['text']}{pause}", ""]

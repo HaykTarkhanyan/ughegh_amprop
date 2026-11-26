@@ -20,21 +20,21 @@ review: the debt / island beat is cut.)
 
 <!-- script:start -->
 
-8 beats, 1,338 characters (1,338 with numbers spelled out): ~92 s of speech, ~1:43 with pauses and the end tail, 8.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
+8 beats, 1,452 characters (1,452 with numbers spelled out): ~100 s of speech, ~1:51 with pauses and the end tail, 8.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Դոու, թրու, թաֆ, քոֆ, բաու։ Նույն չորս տառը՝ հինգ տարբեր արտասանությամբ։ *[pause 1.5 s]*
 
-**2. cost.** Դրա համար անգլիացի երեխաները կարդալ սովորում են երկու անգամ ավելի դանդաղ, քան իտալացի կամ ֆին երեխաները։ Բայց մի ժամանակ անգլերենը գրվում էր այնպես, ինչպես կարդացվում էր։
+**2. cost.** Դրա համար անգլիացի երեխաները կարդալ սովորում են երկու անգամ ավելի դանդաղ, քան իտալացի կամ ֆին երեխաները։ Բայց անգլերենի շատ «լուռ» տառեր ժամանակին կարդացվում էին։
 
 **3. knight.** Վեց հարյուր տարի առաջ «ասպետ» բառը կարդում էին «քնիխտ»՝ ճիշտ այնպես, ինչպես գրված է։ Հետո հնչյունները փոխվեցին, իսկ գրությունը՝ ոչ։ Այսօր ասում են «նայթ»։ *[pause 1 s]*
 
 **4. shift.** Մոտ երեք հարյուր տարում անգլերենի երկար ձայնավորները տեղաշարժվեցին։ «Տուն» բառը, որ կարդացվում էր «հուս», դարձավ «հաուս»։ Սա կոչվում է ձայնավորների մեծ տեղաշարժ, և ճշգրիտ պատճառը մինչ օրս չգիտենք։ *[pause 1.5 s]*
 
-**5. print.** Եվ հենց այդ ժամանակ Անգլիա հասավ տպագրությունը։ Գրքերը տպվեցին հազարներով, և բառերի գրությունը սկսեց քարանալ, մինչդեռ արտասանությունը դեռ շարժվում էր։ Ստացվեց հին արտասանության լուսանկար։ *[pause 2 s]*
+**5. print.** Եվ հենց այդ ժամանակ Անգլիա հասավ տպագրությունը։ Գրքերը տպվեցին հազարներով, և բառերի գրությունը սկսեց քարանալ, մինչդեռ արտասանությունը դեռ շարժվում էր։ Ստացվեց հին արտասանության լուսանկար։ Սա շատ բան է բացատրում, բայց ոչ ամեն ինչ։ Որոշ տարօրինակ գրություններ փոխառություններից են, որոշները՝ հետագա «գիտական» ուղղումներից։ *[pause 2 s]*
 
-**6. armenian.** Հայերենը սկսվեց հակառակ սկզբունքով։ Մաշտոցը յուրաքանչյուր հնչյունի համար տառ ստեղծեց, և հայերենի ուղղագրությունն այսօր էլ մոտ է արտասանությանը, թեև ոչ ամբողջությամբ։ *[pause 1 s]*
+**6. armenian.** Հայերենի տառերը Մաշտոցը ստեղծեց հենց հայերենի հնչյունների համար, և մեր ուղղագրությունն այսօր էլ շատ ավելի մոտ է արտասանությանը, թեև ոչ ամբողջությամբ։ *[pause 1 s]*
 
-**7. reform.** Իսկ ինչո՞ւ անգլիացիները չեն ուղղում։ Փորձել են դարեր շարունակ։ Ամենահաջողը Նոյ Վեբստերն էր, որի բառարաններն ամերիկյան անգլերենում տարածեցին «գույն» բառի ավելի կարճ գրությունը։ Բայց անգլերենի ամբողջական ռեֆորմը կնշանակեր, որ հին գրքերը հանկարծ դժվար կարդացվեն։
+**7. reform.** Իսկ ինչո՞ւ անգլիացիները չեն ուղղում։ Փորձել են դարեր շարունակ։ Ամենահաջողը Նոյ Վեբստերն էր, որի բառարաններն ամերիկյան անգլերենում տարածեցին «գույն» բառի ավելի կարճ գրությունը։ Ամբողջական ռեֆորմի դեմ փաստարկներից մեկն այն է, որ հին գրքերը հանկարծ դժվար կկարդացվեին։
 
 **8. takeaway.** Անգլերենի ուղղագրությունը սխալ չէ՝ այն հին է։ Նրա տարօրինակ տառերից շատերը ցույց են տալիս, թե ինչպես էին խոսում հինգ հարյուր տարի առաջ։ *[pause 1.5 s]*
 
@@ -70,8 +70,9 @@ says them in Armenian letters («քնիխտ», «նայթ», «բայթ», «բ�
 ## Visuals
 
 - **Drawn, mostly:** the two reading bars; the five -ough words with their readings (the 2 s pause); knight lit
-  letter by letter; a vowel chart where the long vowels slide up like a chain (the showcase moment); a press
-  stamping a frozen word while the sound keeps moving; letters dropping into debt and island; colour -> color.
+  letter by letter (consonant loss); house with its vowel sliding from 'hoos' to 'house' (vowel change); a press
+  stamping a frozen word while the sound keeps moving (the showcase moment); colour -> color. (The vowel chart and
+  the debt / island letters were cut with their beats; X37, X57.)
 - **Real image:** `File:The Caxton Celebration - William Caxton showing specimens of his printing to King Edward IV
   and his Queen.jpg` (public domain, William Small).
 
@@ -95,3 +96,32 @@ says them in Armenian letters («քնիխտ», «նայթ», «բայթ», «բ�
   should the voice say the English words (risk: the Armenian voice mangles them)?
 - **U-rr, «պարտք» and «կղզի» in quotes** for debt and island, with the English on screen: clear?
 - U-a («դու» vs «դուք») applies here too.
+
+## After the Codex review (2026-11-26)
+
+Fixes by finding ID (CODEX_REVIEW.md):
+
+- **X37:** "English was once written exactly as read" is now "many silent letters were once pronounced"; knight
+  stands for consonant loss and house for the vowel shift; the print beat says sound change and printing explain much
+  but not all, naming borrowings and later learned respellings; "Armenian started from the opposite principle" is
+  gone (early English spelling did try to follow speech); the old-books point is one argument against a full reform,
+  not a settled outcome. Stale shot instructions (vowel chart, debt / island) removed.
+- **X36:** the Armenian beat says Mashtots made the letters for Armenian's sounds and today's spelling is much closer
+  to pronunciation, not a perfect one-to-one encoding.
+
+## Evidence record (Codex review X60, 2026-11-26)
+
+One row per consequential claim in the current script. *Kind*: data (observed), calculation, analogy, story or
+interpretation. *Checked*: what was actually read; "secondary" means a summary or encyclopedia, not the source;
+"unverified" means nobody has read a source for these exact words yet. Fix the unverified rows before the voice.
+
+| Beat | Claim (as voiced) | Source | Kind | Checked |
+|---|---|---|---|---|
+| cost | English children learn to read more than twice as slowly as Italian or Finnish ones | Seymour, Aro & Erskine 2003, *Br J Psychol* 94: 143-174, https://doi.org/10.1348/000712603321661859 (abstract) | data | abstract checked in OpenAlex ("more than twice as slow"); English sample Scottish |
+| knight | k and gh were pronounced in Middle English | standard histories of English (no page recorded) | data (historical) | general knowledge; add a page |
+| shift | long vowels moved over about 300 years; house 'hoos' -> 'house'; cause unknown | Wikipedia 'Great Vowel Shift' | data | secondary only |
+| print | Caxton's press (1476); spelling fixed while pronunciation still moved | Dictionary.com article | data | secondary only |
+| print | some odd spellings are borrowings or later learned respellings (debt, island) | Upward & Davidson 2011, as cited by a blog | data | secondary citation; read the book |
+| reform | Webster's dictionaries spread 'color' | general knowledge | data | unverified |
+| reform | old books becoming harder to read is one argument against reform | reform debate (no source recorded) | argument | voiced as an argument, not an outcome |
+| armenian | Armenian spelling is much closer to pronunciation, not fully | Wikipedia 'History of the Armenian alphabet' | data | secondary only |

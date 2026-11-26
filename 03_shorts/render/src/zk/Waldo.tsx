@@ -4,11 +4,10 @@
 import React, { useMemo } from "react";
 import { random, useCurrentFrame, useVideoConfig } from "remotion";
 import { C, FONT, easeInOut, lerp, pop, ramp } from "../theme";
-import { Backdrop, Bubble, CheckMark } from "./common";
+import { Backdrop, Bubble, CheckMark, Label } from "./common";
 
 export const WALDO_T = {
-  page: 0.2, ref: 1.8, search: 2.8, found: 5.2, sheet: 7.2, sheetDur: 1.9, opaque: 9.2, zoom: 10.0, anywhere: 11.8, verdict: 15.6, end: 19,
-};
+  page: 0.2, ref: 1.8, search: 2.8, found: 5.2, sheet: 7.2, sheetDur: 1.9, opaque: 9.2, zoom: 10.0, anywhere: 11.8, verdict: 15.6, end: 19, look: 0, leak: 0 };
 export type WaldoTimes = typeof WALDO_T;
 
 const PAGE = { x: 250, y: 96, w: 1420, h: 850 };
@@ -98,7 +97,10 @@ const Avatar: React.FC<{ x: number; y: number; color: string; label: string }> =
   </div>
 );
 
-export const WaldoScene: React.FC<{ T?: WaldoTimes }> = ({ T = WALDO_T }) => {
+// portrait: the 9:16 Short shows this 16:9 scene scaled 0.75 around the page, so the people, bubbles and reference
+// card move inward to stay inside a 1080-wide frame (ZkShort.tsx)
+export const WaldoScene: React.FC<{ T?: WaldoTimes; portrait?: boolean }> = ({ T = WALDO_T, portrait = false }) => {
+  const AL = portrait ? 380 : 125, AR = portrait ? 1560 : 1795;
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
@@ -123,7 +125,10 @@ export const WaldoScene: React.FC<{ T?: WaldoTimes }> = ({ T = WALDO_T }) => {
   const holeY = lerp(TARGET.y + 120, TARGET.y, sh);
   const sheetOpacity = t < T.sheet ? 0 : lerp(0.6, 1, ramp(t, T.opaque, 0.7));
   const SW = 3000, SH = 1900; // covers the screen and every page position in `ghosts`; the hole sits in its middle
-  const sheetPath = `M ${holeX - SW / 2} ${holeY - SH / 2} h ${SW} v ${SH} h ${-SW} Z M ${holeX - HOLE_R} ${holeY} a ${HOLE_R} ${HOLE_R} 0 1 0 ${HOLE_R * 2} 0 a ${HOLE_R} ${HOLE_R} 0 1 0 ${-HOLE_R * 2} 0 Z`;
+  const sheetPath = `M ${-SW / 2} ${-SH / 2} h ${SW} v ${SH} h ${-SW} Z M ${-HOLE_R} 0 a ${HOLE_R} ${HOLE_R} 0 1 0 ${HOLE_R * 2} 0 a ${HOLE_R} ${HOLE_R} 0 1 0 ${-HOLE_R * 2} 0 Z`;
+  // the friend looks away while you place the sheet (Codex review X22): until `look` this is your view only
+  const look = T.look > 0 ? T.look : T.opaque + 0.6;
+  const away = ramp(t, T.sheet - 0.3, 0.4) * (1 - ramp(t, look, 0.4));
 
   // camera: push in on the hole for the friend's view
   // camera: push in on the hole (the friend's view), then pull far out to show how big the sheet is
@@ -145,13 +150,13 @@ export const WaldoScene: React.FC<{ T?: WaldoTimes }> = ({ T = WALDO_T }) => {
   const found = ramp(t, T.found, 0.4);
 
   return (
-    <Backdrop>
+    <Backdrop plain={portrait}>
       <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080, transform: `translate(${camX}px, ${camY}px) scale(${camS})`, transformOrigin: `${TARGET.x}px ${TARGET.y}px` }}>
         <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
           <defs>
             <clipPath id="pageClip"><rect x={PAGE.x} y={PAGE.y} width={PAGE.w} height={PAGE.h} rx="14" /></clipPath>
             <clipPath id="lensClip"><circle cx={lens.x} cy={lens.y} r={LR} /></clipPath>
-            <filter id="board" x="-6000" y="-3000" width="12000" height="7000" filterUnits="userSpaceOnUse">
+            <filter id="board" x={-SW / 2} y={-SH / 2} width={SW} height={SH} filterUnits="userSpaceOnUse">
               <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="5" result="n" />
               <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.36  0 0 0 0 0.28  0 0 0 0 0.20  0 0 0 0.35 0" result="nt" />
               <feComposite in="nt" in2="SourceGraphic" operator="in" result="tex" />
@@ -194,7 +199,9 @@ export const WaldoScene: React.FC<{ T?: WaldoTimes }> = ({ T = WALDO_T }) => {
           {/* the cardboard sheet with its hole */}
           {sheetOpacity > 0 ? (
             <g>
-              <path d={sheetPath} fillRule="evenodd" fill="#4A3A2C" opacity={sheetOpacity} filter="url(#board)" />
+              <g transform={`translate(${holeX} ${holeY})`}>
+                <path d={sheetPath} fillRule="evenodd" fill="#4A3A2C" opacity={sheetOpacity} filter="url(#board)" />
+              </g>
               <circle cx={holeX} cy={holeY} r={HOLE_R} fill="none" stroke="#7A6248" strokeWidth="7" opacity={Math.min(1, sheetOpacity + 0.2)} />
               <circle cx={holeX} cy={holeY} r={HOLE_R + 5} fill="none" stroke="rgba(0,0,0,0.5)" strokeWidth="4" opacity={sheetOpacity} />
             </g>
@@ -215,13 +222,17 @@ export const WaldoScene: React.FC<{ T?: WaldoTimes }> = ({ T = WALDO_T }) => {
       </div>
 
       {/* who is who, and what they say (outside the camera move) */}
-      <Avatar x={125} y={170} color={C.ink} label="Դու" />
-      <Avatar x={1795} y={170} color={C.blue} label="Ընկերդ" />
-      <Bubble text="Գտա" x={190} y={110} t={t} t0={T.found + 0.2} tail="left" accent={C.orange} out={T.sheet + 0.4} />
-      <Bubble text="Ապացուցի՛ր" x={1730} y={110} t={t} t0={T.found + 0.8} tail="right" accent={C.blue} out={T.sheet + 0.4} />
+      <Avatar x={AL} y={170} color={C.ink} label="Դու" />
+      <Avatar x={AR} y={170} color={C.blue} label="Ընկերդ" />
+      <Label text="չի նայում" x={AR} y={262} size={26} color={C.khaki} width={260} opacity={away} />
+      <div style={{ position: "absolute", left: 0, right: 0, top: 24, textAlign: "center", fontFamily: FONT, fontSize: 34, fontWeight: 700, color: C.khaki, opacity: away * (1 - ramp(t, T.opaque, 0.4)) }}>
+        Սա միայն դու ես տեսնում
+      </div>
+      <Bubble text="Գտա" x={AL + 65} y={110} t={t} t0={T.found + 0.2} tail="left" accent={C.orange} out={T.sheet + 0.4} />
+      <Bubble text="Ապացուցի՛ր" x={AR - 65} y={110} t={t} t0={T.found + 0.8} tail="right" accent={C.blue} out={T.sheet + 0.4} />
 
       {/* the person to find (our own character) */}
-      <div style={{ position: "absolute", left: 1500, top: 64, width: 210, height: 240, borderRadius: 18, background: "#F7F0DE", boxShadow: "0 18px 40px rgba(0,0,0,0.5)", border: `4px solid ${C.orange}`, opacity: ramp(t, T.ref, 0.5) * (1 - ramp(t, T.sheet, 0.4)), transform: `scale(${Math.min(1, pop(t, T.ref, 10, 0.5))}) rotate(3deg)` }}>
+      <div style={{ position: "absolute", left: portrait ? 1330 : 1500, top: 64, width: 210, height: 240, borderRadius: 18, background: "#F7F0DE", boxShadow: "0 18px 40px rgba(0,0,0,0.5)", border: `4px solid ${C.orange}`, opacity: ramp(t, T.ref, 0.5) * (1 - ramp(t, T.sheet, 0.4)), transform: `scale(${Math.min(1, pop(t, T.ref, 10, 0.5))}) rotate(3deg)` }}>
         <svg width="210" height="190" viewBox="0 0 210 190">
           <g transform="translate(105 112) scale(4.6)"><Figure p={{ ...HIDDEN, x: 0, y: 0, s: 1 }} target /></g>
         </svg>
@@ -231,6 +242,11 @@ export const WaldoScene: React.FC<{ T?: WaldoTimes }> = ({ T = WALDO_T }) => {
       <div style={{ position: "absolute", left: 0, right: 0, top: 24, textAlign: "center", fontFamily: FONT, fontSize: 36, fontWeight: 700, color: C.ink, opacity: ramp(t, T.opaque + 0.3, 0.5) * (1 - ramp(t, T.anywhere, 0.4)) }}>
         Ընկերդ տեսնում է միայն սա
       </div>
+      {T.leak > 0 ? (
+        <div style={{ position: "absolute", left: portrait ? 1000 : 1180, top: 700, width: 520, fontFamily: FONT, fontSize: 28, fontWeight: 600, color: C.dim, opacity: ramp(t, T.leak, 0.5) * (1 - ramp(t, T.anywhere, 0.4)) }}>
+          միայն նա ու մի փոքր կտոր շուրջը
+        </div>
+      ) : null}
       <div style={{ position: "absolute", left: 0, right: 0, top: 24, textAlign: "center", fontFamily: FONT, fontSize: 36, fontWeight: 700, color: C.ink, opacity: anyIn * (1 - verdict) }}>
         Էջը տակը կարող է լինել <span style={{ color: C.orange }}>ցանկացած տեղ</span>
       </div>

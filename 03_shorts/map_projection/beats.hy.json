@@ -13,9 +13,9 @@
   },
   {
     "key": "drag_armenia",
-    "text": "Իսկ եթե Հայաստանը բարձրացնենք Գրենլանդիայի տեղը, քարտեզին այն կերևա մոտ վեց անգամ ավելի մեծ, քան հիմա։",
+    "text": "Իսկ եթե Հայաստանը բարձրացնենք Գրենլանդիայի տեղը, քարտեզին այն կերևա մակերեսով մոտ վեց անգամ ավելի մեծ, քան հիմա։",
     "pause_after": 2,
-    "visual": "The showcase, part 2: Armenia slides north and swells about six times; hold."
+    "visual": "The showcase, part 2: Armenia slides north; its outline is re-projected from its real coordinates moved to Greenland's latitude (not scaled by a factor). Its area grows about 6.1x, its width and height each about 2.5x; a small 'մակերես ×6' tag; hold."
   },
   {
     "key": "orange",
@@ -32,8 +32,8 @@
   },
   {
     "key": "stretch",
-    "text": "Ձգումն աճում է բևեռին մոտենալով, իսկ բևեռն ինքը քարտեզի վրա անվերջ հեռու է։ Դրա համար Մերկատորի քարտեզները կտրում են մոտ 85 աստիճանում։",
-    "visual": "Equal circles drawn on a globe (Tissot's circles) are projected onto the map and swell towards the top; labels ×1 at the equator, ×4 at 60° on screen only; the top edge cut at 85°."
+    "text": "Ձգումն աճում է բևեռին մոտենալով, իսկ բևեռն ինքը քարտեզի վրա անվերջ հեռու է։ Դրա համար համացանցի քառակուսի քարտեզները կտրում են մոտ 85 աստիճանում։",
+    "visual": "Equal circles drawn on a globe (Tissot's circles) are projected onto the map and swell towards the top; labels 'մակերես ×1' at the equator, 'մակերես ×4' at 60° on screen only; the top edge cut at 85° with a small 'Web Mercator' tag."
   },
   {
     "key": "others",
@@ -44,8 +44,8 @@
   },
   {
     "key": "google",
-    "text": "Ստուգիր ինքդ՝ բաց Գուգլ քարտեզները համակարգչում և հեռացիր մինչև վերջ։ Քարտեզը կդառնա գլոբուս։ Գուգլն այդպես արեց, որ Գրենլանդիան այլևս Աֆրիկայի չափ չերևա։",
-    "visual": "A browser map zooms out and curls into a globe; Greenland shrinks to its true size."
+    "text": "Ստուգիր ինքդ՝ համակարգչում Գուգլ քարտեզներում միացրու գլոբուսի տեսքը և հեռացիր մինչև վերջ։ Քարտեզը կդառնա գլոբուս, և Գրենլանդիան կստանա իր իսկական չափը։ Գուգլն այդ տեսքն ավելացրեց, որ Գրենլանդիան այլևս Աֆրիկայի չափ չերևա։",
+    "visual": "A browser map: the Layers menu, 'Globe view' switched on (as in Google's help page), then zoom out until it curls into a globe; Greenland shrinks to its true size."
   },
   {
     "key": "takeaway",

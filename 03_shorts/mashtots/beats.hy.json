@@ -1,14 +1,14 @@
 [
   {
     "key": "challenge",
-    "text": "Փորձիր հունական տառերով գրել «ճնճղուկ» բառը։",
+    "text": "Փորձիր «ճնճղուկ» բառը գրել հունական տառերով՝ ամեն հնչյունի համար մեկ տառ։",
     "pause_after": 2,
     "visual": "Frame 0: the word «ճնճղուկ» with empty slots under it and a Greek letter tray; the viewer tries during the pause; ν and ου fit, the ճ and ղ slots blink red."
   },
   {
     "key": "no_letters",
-    "text": "Չի ստացվի՝ հունարենը չունի ծա, ձա, ճե, ջե, ղատ, ռա հնչյունները։ Մաշտոցն ուներ հենց այս խնդիրը։",
-    "visual": "The six missing sounds pop out as red letters beside the Greek tray; the Mashtots statue photo fades in."
+    "text": "Չի ստացվի՝ հունական այբուբենում առանձին տառ չկար, օրինակ, ճնճղուկի «ճ»-ի և «ղ»-ի համար։ Մաշտոցն ուներ հենց այս խնդիրը։",
+    "visual": "The sounds with no single Greek letter pop out in red beside the Greek tray (ճ, ղ, and the others the word needs); the Mashtots statue photo fades in."
   },
   {
     "key": "author",
@@ -22,9 +22,9 @@
   },
   {
     "key": "rule",
-    "text": "405 թվականին Մաշտոցը ստեղծեց 36 տառ։ Սկզբունքը մեկն էր՝ մեկ հնչյուն, մեկ տառ։",
+    "text": "405 թվականին Մաշտոցը ստեղծեց 36 տառ։ Գլխավոր սկզբունքը՝ հնարավորինս մեկ հնչյուն, մեկ տառ։ Բայց ոչ ամենուր՝ «ու» հնչյունը, օրինակ, գրվում էր երկու տառով, ինչպես հունարենում։",
     "screen_small": "Եդեսիա և Սամոսատ, գրիչ Հռոփանոսի օգնությամբ (Կորյուն, «Վարք Մաշտոցի»)",
-    "visual": "A counter runs to 36; each new letter appears next to one sound wave, one to one."
+    "visual": "A counter runs to 36; each new letter appears next to one sound wave; then 'ու' lights up as two letters for one sound, with the Greek 'ου' beside it."
   },
   {
     "key": "greek_order",

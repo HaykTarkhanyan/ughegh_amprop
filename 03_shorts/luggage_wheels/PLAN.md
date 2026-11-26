@@ -22,19 +22,21 @@ Yerevan pavements still favour the backpack. The close: the textbook says zero; 
 
 <!-- script:start -->
 
-6 beats, 977 characters (977 with numbers spelled out): ~67 s of speech, ~1:19 with pauses and the end tail, 9.5 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
+7 beats, 1,270 characters (1,270 with numbers spelled out): ~88 s of speech, ~1:40 with pauses and the end tail, 10.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Ըստ դասագրքի՝ հարթ ճանապարհին ուսապարկ տանելը զրո աշխատանք է։ Ուրեմն ինչո՞ւ ես քրտնում, իսկ անիվներով ճամպրուկը գրեթե չես զգում։ *[pause 1 s]*
 
 **2. arrows.** Ուսապարկը պահում ես դեպի վեր։ Քայլում ես դեպի առաջ։ Ֆիզիկայում աշխատանքն ուժ է՝ բազմապատկած ուժի ուղղությամբ անցած ճանապարհով։ Իսկ դեպի վեր դու չես շարժվում։ Ուրեմն աշխատանքը զրո է։ *[pause 1.5 s]*
 
-**3. body.** Բայց մարմինը սայլ չէ։ Ամեն քայլի ժամանակ մի փոքր իջնում ու բարձրանում ես, և ոտքերի մկաններն ամեն անգամ նորից բարձրացնում են քեզ ու ուսապարկը։ Չափումները ցույց են տալիս՝ բեռը մեծացնելիս էներգիայի ծախսն աճում է գրեթե համամասնորեն։ *[pause 3 s]*
+**3. two_things.** Բայց դասագրքի «աշխատանքը» և մարմնի ծախսած էներգիան տարբեր բաներ են։ Մկաններն էներգիա են ծախսում, նույնիսկ երբ ուղղակի պահում են բեռը՝ առանց այն շարժելու։ Ծանր պայուսակը մեկնած ձեռքով մեկ րոպե պահիր, և կզգաս։ *[pause 1.5 s]*
 
-**4. wheels.** Անիվը վերացնում է այդ խնդիրը։ Ճամպրուկի քաշը պահում է հատակը, ոչ թե դու, և այն չի բարձրանում ու իջնում քո քայլերի հետ։ Հարթ հատակին այն քաշելու համար պետք է ուժ, որ նրա քաշի ընդամենը մի քանի տոկոսն է։ *[pause 1.5 s]*
+**4. body.** Իսկ քայլելիս ավելանում է ևս մեկ բան։ Ամեն քայլի ժամանակ մի փոքր իջնում ու բարձրանում ես, և ոտքերի մկաններն ամեն անգամ նորից բարձրացնում են քեզ ու ուսապարկը։ Չափումները ցույց են տալիս՝ բեռը մեծացնելիս էներգիայի ծախսն աճում է գրեթե համամասնորեն։ *[pause 3 s]*
 
-**5. floor.** Բայց անիվը մի պայման ունի՝ հարթ հատակ։ Աստիճաններին, ավազին կամ քարե սալահատակին այն ցատկում է ու խրվում, և բեռը նորից քո ձեռքերում է։ Երևանի որոշ մայթերին ուսապարկը մինչև հիմա հաղթում է։ *[pause 1.5 s]*
+**5. wheels.** Անիվը երկուսն էլ քեզնից վերցնում է։ Չորս անիվով ճամպրուկի ամբողջ քաշը պահում է հատակը, երկու անիվով թեքվածինը՝ մեծ մասը, և այն չի բարձրանում ու իջնում քո քայլերի հետ։ Հարթ հատակին այն քաշելու համար պետք է ուժ, որ նրա քաշի ընդամենը մի քանի տոկոսն է։ *[pause 1.5 s]*
 
-**6. takeaway.** Դասագիրքն ասում է՝ զրո աշխատանք։ Ոտքերդ համաձայն չեն։ *[pause 1 s]*
+**6. floor.** Բայց անիվը մի պայման ունի՝ հարթ հատակ։ Աստիճաններին, ավազին կամ քարե սալահատակին այն ցատկում է ու խրվում, և բեռը նորից քո ձեռքերում է։ Երևանի որոշ մայթերին ուսապարկը մինչև հիմա հաղթում է։ *[pause 1 s]*
+
+**7. takeaway.** Դասագիրքը ճիշտ է՝ բեռի վրա աշխատանք չկա։ Բայց աշխատանքը զրո է, էներգիան՝ ոչ։ *[pause 1 s]*
 
 <!-- script:end -->
 
@@ -84,3 +86,15 @@ Taleb's use of the story (both unconfirmed).
 - **U-kkk, the Yerevan pavement line:** kept; in option (a) it carries the "smooth floor" condition.
 - **U-nnn, «սալահատակ»** for cobbles, and the closing «Ոտքերդ համաձայն չեն»: natural?
 - U-a («դու» vs «դուք») applies here too.
+
+## After the Codex review (2026-11-26)
+
+Fixes by finding ID (CODEX_REVIEW.md):
+
+- **X38:** the video no longer ends with the textbook and the legs "disagreeing": zero mechanical work on the load
+  and the body's energy use are different quantities, and they do not contradict each other. A new beat
+  (`two_things`) names both and adds the isometric point: muscles use energy just to hold a load still (load-carriage
+  study PMC3922835 separates mechanical work from metabolic cost). Walking then adds the repeated lifting. The wheel
+  takes both away; "the floor carries the weight" is said for a four-wheel case, and a tilted two-wheel case only
+  takes most of it. The closing says the screen line: «Աշխատանքը զրո է, էներգիան՝ ոչ».
+- Pauses now 10.5 s, the longest still on the walking showcase (`body`, 3 s).

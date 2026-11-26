@@ -16,29 +16,25 @@ their owners. The honest answer: we do not fully know, and that is the point of 
 
 <!-- script:start -->
 
-11 beats, 1,747 characters (1,841 with numbers spelled out): ~124 s of speech, ~2:06 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%).
+9 beats, 1,412 characters (1,429 with numbers spelled out): ~98 s of speech, ~1:49 with pauses and the end tail, 8.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
-**1. hook.** Զգուշացում՝ այս տեսանյութը դիտելիս հավանաբար կհորանջես։ Եվ ահա թե ինչու։
+**1. hook.** Զգուշացում՝ այս տեսանյութը դիտելիս հավանաբար կհորանջես։ Եվ ահա թե ինչու։ *[pause 1.5 s]*
 
-**2. contagious.** Հորանջը վարակիչ է։ Մարդկանց մոտ կեսը հորանջում է՝ տեսնելով, թե ինչպես է ուրիշը հորանջում։ Հոգեբան Ռոբերտ Փրովայնը ցույց տվեց, որ նույնիսկ հորանջի մասին կարդալը կամ մտածելը բավական է։
+**2. contagious.** Հորանջը վարակիչ է։ Մարդկանց մոտ կեսը հորանջում է՝ տեսնելով, թե ինչպես է ուրիշը հորանջում։ Փորձերը ցույց են տալիս, որ նույնիսկ հորանջի մասին կարդալը կամ մտածելը բավական է։ *[pause 1.5 s]*
 
-**3. why_yawn.** Բայց ինչո՞ւ ենք ընդհանրապես հորանջում։ Երկար ժամանակ կարծում էին, թե ուղեղին թթվածին է պետք։ Այդ միտքը ստուգեցին դեռ 1980-ականներին, և այն չհաստատվեց։
+**3. why_yawn.** Բայց ինչո՞ւ ենք ընդհանրապես հորանջում։ Երկար ժամանակ կարծում էին, թե ուղեղին թթվածին է պետք։ Այդ միտքը ստուգեցին, և այն չհաստատվեց։
 
 **4. cooling.** Ավելի նոր տեսություններից մեկն ասում է, որ հորանջը սառեցնում է ուղեղը՝ խորը շունչ ես քաշում, ծնոտը ձգվում է, և գլխում արյան հոսքն ուժեղանում է։ Բայց այս տեսությունն էլ կասկածողներ ունի։
 
 **5. empathy.** Իսկ ինչո՞ւ է վարակիչ։ Ամենահայտնի բացատրությունը կարեկցանքն է՝ ակամա կրկնում ենք նրանց, ում հետ կապված ենք։
 
-**6. kin.** 2011 թվականին իտալացի հետազոտողները մեկ տարի հետևում էին մարդկանց առօրյա կյանքում։ Հորանջն ամենից շատ փոխանցվում էր ազգականներից, հետո՝ ընկերներից, հետո՝ ծանոթներից, և ամենաքիչը՝ անծանոթներից։
+**6. kin.** Իտալացի հետազոտողները մեկ տարի հետևում էին մարդկանց առօրյա կյանքում։ Հորանջն ամենից շատ փոխանցվում էր ազգականներից, հետո՝ ընկերներից, հետո՝ ծանոթներից, և ամենաքիչը՝ անծանոթներից։ *[pause 1.5 s]*
 
-**7. but.** Բայց ամեն ինչ այդքան պարզ չէ։ 2014 թվականին 328 մարդու մասնակցությամբ մի հետազոտությունում կարեկցանքի թեստերը չէին կանխատեսում, թե ով կհորանջի։ Մի փոքր կանխատեսում էր միայն տարիքը՝ տարեցներն ավելի քիչ էին «վարակվում»։ Իսկ 2018 թվականի մեկ այլ հետազոտություն նորից կապ գտավ կարեկցանքի հետ։
+**7. but.** Բայց ամեն ինչ այդքան պարզ չէ։ 328 մարդու մասնակցությամբ մի հետազոտությունում կարեկցանքի թեստերը չէին կանխատեսում, թե ով կհորանջի։ Մի փոքր կանխատեսում էր միայն տարիքը՝ տարեցներն ավելի քիչ էին «վարակվում»։ Իսկ մեկ այլ, ավելի ուշ հետազոտություն նորից կապ գտավ կարեկցանքի հետ։ *[pause 1.5 s]*
 
-**8. dogs.** Հետաքրքիրն այն է, որ շներն էլ են մեզնից հորանջ «վարակվում»։ Մի փորձում 29 շնից 21-ը հորանջեց՝ տեսնելով մարդու հորանջը։ Ավելի ուշ պարզվեց, որ շներն ավելի հաճախ են արձագանքում տիրոջ հորանջին, քան անծանոթի։
+**8. unknown.** Ազնիվ պատասխանն այսօր այն է, որ լիովին չգիտենք՝ ինչու ենք հորանջում և ինչու է այն փոխանցվում։ Հաստատ է միայն, որ հորանջը վարակիչ է, իսկ թթվածնի բացատրությունը սխալ էր։ *[pause 1.5 s]*
 
-**9. unknown.** Այնպես որ, ազնիվ պատասխանն այսօր այն է, որ լիովին չգիտենք։ Հորանջը, որ անում ենք օրը մի քանի անգամ, դեռ գիտական հանելուկ է։
-
-**10. card.** Ինչ գիտենք՝ հորանջը վարակիչ է, իսկ թթվածնի բացատրությունը սխալ էր։ Ինչ է վիճելի՝ ինչու ենք հորանջում և ինչու է այն փոխանցվում։
-
-**11. takeaway.** Իսկ եթե այս տեսանյութի ընթացքում հորանջեցիր, ուրեմն դու էլ մասնակցեցիր փորձին։ Գրիր մեկնաբանություններում՝ քանի՞ անգամ։
+**9. takeaway.** Իսկ եթե այս տեսանյութի ընթացքում հորանջեցիր, ուրեմն դու էլ մասնակցեցիր փորձին։ Քանի՞ անգամ հորանջեցիր։ Գրիր մեկնաբանություններում։ *[pause 1 s]*
 
 <!-- script:end -->
 
@@ -75,3 +71,23 @@ icons, a puzzle with missing pieces.
 - **U-dd, «վարակվել» in quotes** for catching a yawn: natural, or another verb?
 - **U-ee, the comment call-to-action** at the end («Գրիր մեկնաբանություններում՝ քանի՞ անգամ»): fine for the channel?
 - U-a («դու» vs «դուք») applies here too.
+
+## After the Codex review (2026-11-26)
+
+Fixes by finding ID (CODEX_REVIEW.md):
+
+- **X40:** the dog extension said it was "later established" that dogs respond more to their owner's yawn; a 2020
+  reanalysis of six studies (https://pubmed.ncbi.nlm.nih.gov/32075525/) supported contagious yawning in dogs but found
+  no familiarity bias. The extension was optional and the human studies carry the turn, so it is cut (text below);
+  if it comes back, keep 21 of 29 as one experiment and drop the owner/stranger clause.
+- **X51:** the summary card beat is cut (its two facts are folded into `unknown`), «Այնպես որ,» is gone, the closing
+  says its screen line («Քանի՞ անգամ հորանջեցիր»), researchers' names and years moved to the source lines (Provine
+  added for the reading/thinking claim), 9 s of pauses with time to yawn after the hook.
+- **X2:** «մեկնաբանություններում» now fits the portrait caption at 44 px (one-long-word floor).
+- Note for X54: here «կարեկցանք» means the psychological construct empathy; in Dmanisi it means compassion/care.
+
+**Cut beats, kept here word for word so they can come back:**
+
+- `dogs`: Հետաքրքիրն այն է, որ շներն էլ են մեզնից հորանջ «վարակվում»։ Մի փորձում 29 շնից 21-ը հորանջեց՝ տեսնելով մարդու հորանջը։ Ավելի ուշ պարզվեց, որ շներն ավելի հաճախ են արձագանքում տիրոջ հորանջին, քան անծանոթի։ (source line: Joly-Mascheroni et al., 2008)
+
+- `card`: Ինչ գիտենք՝ հորանջը վարակիչ է, իսկ թթվածնի բացատրությունը սխալ էր։ Ինչ է վիճելի՝ ինչու ենք հորանջում և ինչու է այն փոխանցվում։ (screen: գիտենք՝ վարակիչ է, վիճելի՝ ինչու)

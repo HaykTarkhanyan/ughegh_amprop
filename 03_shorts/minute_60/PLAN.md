@@ -20,11 +20,11 @@ changed measures and weights but not the clock; sixty divides well, ten comes fr
 
 <!-- script:start -->
 
-6 beats, 1,300 characters (1,300 with numbers spelled out): ~90 s of speech, ~1:40 with pauses and the end tail, 9 s of them marked silent pauses (estimate, calibrated on 2 measured beats, about +-10%).
+6 beats, 1,271 characters (1,271 with numbers spelled out): ~88 s of speech, ~1:38 with pauses and the end tail, 9 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Այս ժամացույցն ունի տասը ժամ, իսկ ամեն ժամը՝ հարյուր րոպե։ Այն ստեղծեց Ֆրանսիական հեղափոխությունը, նույնը, որ աշխարհին տվեց մետրն ու կիլոգրամը։ Մետրը մնաց։ Տասնորդական ժամը երկու տարի էլ չդիմացավ։ *[pause 1 s]*
 
-**2. old.** Ժամանակը չտեղի տվեց, որովհետև վաթսունը շատ ավելի հին է՝ մոտ չորս հազար տարեկան։ Շումերները, հետո բաբելոնացիները հաշվում էին վաթսունով։ Ինչո՞ւ, հստակ չգիտենք։
+**2. old.** Վաթսունը շատ ավելի հին է՝ մոտ չորս հազար տարեկան։ Շումերները, հետո բաբելոնացիները հաշվում էին վաթսունով։ Ինչո՞ւ, հստակ չգիտենք։
 
 **3. fingers.** Բայց վաթսունով հաշվելը հեշտ է հենց ձեռքերով։ Փորձիր՝ բութ մատով հաշվիր նույն ձեռքի մյուս չորս մատների տասներկու հոդը։ Ամեն անգամ, երբ հասնես տասներկուսի, մյուս ձեռքի մի մատը ծալիր։ Հինգ մատ, հինգ անգամ տասներկու՝ վաթսուն։ *[pause 3 s]*
 
@@ -32,7 +32,7 @@ changed measures and weights but not the clock; sixty divides well, ten comes fr
 
 **5. names.** Վաթսունը հույն աստղագետները վերցրին Բաբելոնից՝ աստիճանը բաժանելու համար, հետո նույն կերպ բաժանեցին ժամը։ Լատիներենում առաջին բաժանումը կոչվեց «մինուտա», այսինքն՝ «փոքր», իսկ երկրորդը՝ «սեկունդա», այսինքն՝ «երկրորդ»։ Այստեղից են «մինուտ» և «սեկունդ» բառերը, որ գիտենք ռուսերենից։ Իսկ ժամացույցների վրա րոպեի սլաքը հայտնվեց միայն տասնվեցերորդ դարի վերջից։ *[pause 1.5 s]*
 
-**6. takeaway.** Ֆրանսիան փոխեց չափերն ու կշիռները, բայց ոչ ժամացույցը։ Ժամանակն անընդհատ կիսում ենք, երեքի ու չորսի բաժանում։ Վաթսունը լավ է բաժանվում, տասը՝ մատներից է։ *[pause 1.5 s]*
+**6. takeaway.** Թե ինչու տասնորդական ժամը չընդունվեց, հաստատ չգիտենք։ Բայց երբ ժամը կիսում ես, երեքի կամ չորսի բաժանում, տե՛ս՝ վաթսունը լավ է բաժանվում, տասը՝ մատներից է։ *[pause 1.5 s]*
 
 <!-- script:end -->
 
@@ -82,5 +82,16 @@ performance); see the digits rule in `../README.md`.
 
 - **U-vv, the Russian link:** kept, with the English pun on screen (Fable's pick).
 - **U-ww, the closing line:** now "sixty divides well, ten comes from our fingers", without "only".
-- **U-mmm, «Ժամանակը չտեղի տվեց»** for "time held out": natural?
+- **U-mmm (closed by the Codex review, X52):** «Ժամանակը չտեղի տվեց» put «չ-» on a noun (correct form «տեղի չտվեց»);
+  the phrase is gone together with the causal claim (X46).
 - U-a («դու» vs «դուք») applies here too.
+
+## After the Codex review (2026-11-26)
+
+Fixes by finding ID (CODEX_REVIEW.md):
+
+- **X46:** three claims are now kept apart: the decimal clock was short-lived (hook), base 60 is inherited and very
+  old (`old`, with "why, we do not know"), and 60 divides well (the fraction demonstration). The script no longer says
+  time "held out because sixty is much older"; the closing says we do not know for sure why decimal time failed and
+  lets the fractions be the payoff.
+- **X52:** «Ժամանակը չտեղի տվեց» (negation on the noun) is removed with that claim.

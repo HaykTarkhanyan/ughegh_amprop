@@ -17,31 +17,27 @@ listening.
 
 <!-- script:start -->
 
-12 beats, 1,663 characters (1,706 with numbers spelled out): ~116 s of speech, ~1:59 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%).
+10 beats, 1,361 characters (1,361 with numbers spelled out): ~94 s of speech, ~1:45 with pauses and the end tail, 8.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Լսում ես քո ձայնը ձայնագրության մեջ և մտածում՝ իսկապե՞ս այսպես եմ խոսում։ Այո, մոտավորապես այդպես են քեզ լսում մյուսները։
 
-**2. two_paths.** Երբ խոսում ես, ձայնդ ականջիդ հասնում է երկու ճանապարհով՝ օդով, ինչպես մյուսների ձայնը, և ներսից՝ գանգի ոսկորներով։
+**2. two_paths.** Երբ խոսում ես, ձայնդ ականջիդ հասնում է երկու ճանապարհով՝ օդով, ինչպես մյուսների ձայնը, և ներսից՝ գանգի ոսկորներով։ *[pause 1.5 s]*
 
 **3. bone_bass.** Ոսկորները լավ են հաղորդում ցածր հաճախությունները՝ բասը։ Դրա համար ներսից լսած ձայնդ ավելի խոր ու թավ է թվում։
 
-**4. recording.** Իսկ միկրոֆոնը լսում է միայն օդով եկող ձայնը։ Ոսկորների ճանապարհը վերանում է, և ձայնը թվում է ավելի բարակ ու բարձր։
+**4. recording.** Իսկ միկրոֆոնը լսում է միայն օդով եկող ձայնը։ Ոսկորների ճանապարհը վերանում է, և ձայնը թվում է ավելի բարակ, պակաս թավ։ *[pause 1.5 s]*
 
-**5. try.** Փորձիր հիմա՝ մատներով փակիր ականջներդ և խոսիր։ Ձայնդ կդառնա ավելի բարձր ու թավ, որովհետև հիմա այն լսում ես հիմնականում ոսկորներով։
+**5. try.** Փորձիր հիմա՝ մատներով փակիր ականջներդ և խոսիր։ Ձայնդ կհնչի ավելի ուժեղ ու թավ, որովհետև հիմա այն լսում ես հիմնականում ոսկորներով։ *[pause 3 s]*
 
-**6. used_to.** Այսինքն՝ ամբողջ կյանքում լսել ես քո ձայնի մի տարբերակ, որը ոչ ոք չի լսում, բացի քեզնից։ Ձայնագրությունը քեզ համար անծանոթ է, իսկ մյուսների համար դա հենց քո ձայնն է։
+**6. used_to.** Այսինքն՝ ամբողջ կյանքում լսել ես քո ձայնի մի տարբերակ, որը ոչ ոք չի լսում, բացի քեզնից։ Ձայնագրությունը քեզ համար անծանոթ է, իսկ մյուսների համար դա հենց քո ձայնն է։ *[pause 1 s]*
 
-**7. mirror.** Նույնը դեմքի հետ է։ Հայելում տեսնում ենք մեր դեմքը շրջված։ 1977 թվականի հետազոտությունում մարդիկ իրենց շրջված լուսանկարն էին ավելի շատ հավանում, իսկ ընկերները՝ իսկականը։ Հավանում ենք այն, ինչին սովոր ենք։
+**7. study.** Եվ մի լավ լուր։ Մի հետազոտությունում մարդիկ գնահատում էին տարբեր ձայների գրավչությունը, և նրանց մեջ առանց զգուշացնելու խառնել էին իրենց ձայնը։ Մարդիկ իրենց ձայնն ավելի գրավիչ գնահատեցին, քան այն գնահատում էին ուրիշները։ *[pause 1.5 s]*
 
-**8. study.** Եվ մի լավ լուր։ 2013 թվականի մի հետազոտությունում մարդիկ գնահատում էին տարբեր ձայների գրավչությունը, և նրանց մեջ առանց զգուշացնելու խառնել էին իրենց ձայնը։ Մարդիկ իրենց ձայնն ավելի գրավիչ գնահատեցին, քան այն գնահատում էին ուրիշները։
+**8. why_cringe.** Ուրեմն խնդրի մի մասը, հավանաբար, անակնկալն է։ Ձայնը մեր պատկերացման կարևոր մասն է ինքներս մեզ մասին, և երբ այն ուրիշ է հնչում, թվում է, թե օտարին ենք լսում։
 
-**9. why_cringe.** Ուրեմն խնդիրը ձայնը չէ, այլ անակնկալը։ Ձայնը մեր պատկերացման կարևոր մասն է ինքներս մեզ մասին, և երբ այն ուրիշ է հնչում, թվում է, թե օտարին ենք լսում։
+**9. practice.** Դրա համար էլ հաղորդավարներն ու երգիչները հաճախ են լսում իրենց ձայնագրությունները, և շատերի համար ժամանակի հետ տարօրինակությունը թուլանում է։
 
-**10. practice.** Դրա համար էլ հաղորդավարներն ու երգիչները հաճախ են լսում իրենց ձայնագրությունները։ Սովորաբար մի քանի անգամ լսելուց հետո տարօրինակությունն անցնում է։
-
-**11. card.** Կարճ ասած՝ ներսից լսածդ ձայնն օդ է՝ գումարած ոսկոր, իսկ ձայնագրությունը՝ միայն օդ։
-
-**12. takeaway.** Այնպես որ, ձայնագրությունը քեզ չի աղավաղում։ Այն միայն հանում է այն մասը, որը լսում ես միայն դու։
+**10. takeaway.** Լավ միկրոֆոնը քեզ համարյա չի աղավաղում։ Ձայնագրությունը հանում է այն, ինչ լսում ես միայն դու։
 
 <!-- script:end -->
 
@@ -76,3 +72,24 @@ mirror image, anonymous voice cards with star ratings, a "cringe meter". Simple 
 - **U-cc, length:** ~2 min, the shortest of the batch; fine, or add a beat (for example, why singers wear in-ear
   monitors)?
 - U-a («դու» vs «դուք») applies here too.
+
+## After the Codex review (2026-11-26)
+
+Fixes by finding ID (CODEX_REVIEW.md):
+
+- **X43:** the closing keeps the approximation from the hook: a good microphone barely distorts you, and the
+  recording removes the part only you hear (real recordings also depend on the microphone, its position, the room and
+  processing). "The problem is not the voice but the surprise" is now "part of it is probably the surprise", and
+  "after a few listens it passes" is now "for many people it fades with time" (self-voice research,
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC9929504/, names further factors such as vibration felt while speaking).
+- **X53:** «բարձր» meant pitch in one line and loudness in the next. The recording is now «ավելի բարակ, պակաս թավ»
+  (thinner, less bass) and the plugged-ears voice «ավելի ուժեղ ու թավ» (louder and bassier, the occlusion effect).
+  Codex's candidate wording, to confirm with Hayk.
+- **X51:** the «Կարճ ասած» summary card and the mirror extension are cut (texts below), years off the voice, 8.5 s of
+  pauses with the longest (3 s) on the try-it-now moment, no «Այնպես որ,».
+
+**Cut beats, kept here word for word so they can come back:**
+
+- `mirror`: Նույնը դեմքի հետ է։ Հայելում տեսնում ենք մեր դեմքը շրջված։ 1977 թվականի հետազոտությունում մարդիկ իրենց շրջված լուսանկարն էին ավելի շատ հավանում, իսկ ընկերները՝ իսկականը։ Հավանում ենք այն, ինչին սովոր ենք։ (source line: Mita, Dermer & Knight, 1977)
+
+- `card`: Կարճ ասած՝ ներսից լսածդ ձայնն օդ է՝ գումարած ոսկոր, իսկ ձայնագրությունը՝ միայն օդ։ (screen: ներսից՝ օդ + ոսկոր, ձայնագրություն՝ միայն օդ)

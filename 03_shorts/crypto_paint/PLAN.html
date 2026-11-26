@@ -17,26 +17,25 @@ pre code { padding: 0; }
 img { max-width: 100%; }
 </style></head><body><h1 id="showcase-1-public-key-crypto-explained-with-paint-mixing---script-and-plan">Showcase 1: Public-key crypto explained with paint mixing - script and plan</h1>
 <p>Draft for Hayk's review, 2026-11-25. Script first (Q17); after approval this one gets the full animation treatment (Q16, showcase) in Remotion (DECISIONS.md #21). Script source: <code>beats.hy.json</code>.</p>
-<nav><strong>Contents</strong><ul><li><a href="#the-idea-in-one-paragraph">The idea in one paragraph</a></li><li><a href="#the-script-armenian">The script (Armenian)</a></li><li><a href="#facts-and-numbers-checked">Facts and numbers (checked)</a></li><li><a href="#animation-plan-showcase">Animation plan (showcase)</a></li><li><a href="#questions-for-hayk-review-points">Questions for Hayk (review points)</a></li></ul></nav><details open id="the-idea-in-one-paragraph"><summary>The idea in one paragraph</summary>
+<nav><strong>Contents</strong><ul><li><a href="#the-idea-in-one-paragraph">The idea in one paragraph</a></li><li><a href="#the-script-armenian">The script (Armenian)</a></li><li><a href="#facts-and-numbers-checked">Facts and numbers (checked)</a></li><li><a href="#animation-plan-showcase">Animation plan (showcase)</a></li><li><a href="#questions-for-hayk-review-points">Questions for Hayk (review points)</a></li><li><a href="#after-the-codex-review-2026-11-26">After the Codex review (2026-11-26)</a></li></ul></nav><details open id="the-idea-in-one-paragraph"><summary>The idea in one paragraph</summary>
 <p>How do two people agree on a secret when everyone hears everything they send? Diffie and Hellman (1976): agree publicly on a common colour (yellow), each keeps a secret colour (Ani red, Aram blue), each sends "common + own secret" (orange, green), each adds their own secret to what they received: both end with the same brown, while the eavesdropper Eva, who saw yellow, orange and green, can only make a yellower mix, because paint is easy to mix and practically impossible to unmix. In reality the paints are numbers (a power, then the remainder after dividing by a big prime), shown with a toy example (5 and 23 -&gt; both get 2). British GCHQ found it first and kept it secret until 1997. Today a version of it runs almost every time a site opens with a padlock; certificates stop Eva from pretending to be Aram.</p>
 </details><details open id="the-script-armenian"><summary>The script (Armenian)</summary>
 <!-- script:start -->
 
-<p>14 beats, 2,291 characters (2,394 with numbers spelled out): ~162 s of speech, ~2:44 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%).</p>
-<p><strong>1. hook.</strong> Ինչպե՞ս պայմանավորվել գաղտնի բանալու շուրջ, եթե ձեր զրույցը լսում է ամբողջ աշխարհը։ Դու դա անում ես գրեթե ամեն անգամ, երբ կայք ես բացում կողպեքի նշանով։</p>
+<p>13 beats, 2,080 characters (2,108 with numbers spelled out): ~144 s of speech, ~2:36 with pauses and the end tail, 8.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).</p>
+<p><strong>1. hook.</strong> Ինչպե՞ս պայմանավորվել գաղտնի բանալու շուրջ, եթե ձեր զրույցը լսում է ամբողջ աշխարհը։ Դու դա անում ես գրեթե ամեն անգամ, երբ կայք ես բացում ապահով կապով։</p>
 <p><strong>2. problem.</strong> Դարեր շարունակ գաղտնի հաղորդագրության համար նախ պետք էր գաղտնի հանդիպել և փոխանցել բանալին։ Բանակներն ու բանկերը սուրհանդակներ էին ուղարկում։ Համացանցում դա անհնար է։</p>
-<p><strong>3. idea.</strong> 1976 թվականին Ուիթֆիլդ Դիֆին և Մարտին Հելմանը ցույց տվեցին, որ կարելի է ընդհանուր գաղտնիք ստանալ բաց զրույցով։ Ամենահեշտ է բացատրել ներկերով։</p>
+<p><strong>3. idea.</strong> Մաթեմատիկոսները ցույց տվեցին, որ կարելի է ընդհանուր գաղտնիք ստանալ բաց զրույցով։ Ամենահեշտ է բացատրել ներկերի համեմատությամբ։</p>
 <p><strong>4. setup.</strong> Անին և Արամն ուզում են ընդհանուր գաղտնի գույն։ Եվան տեսնում է ամեն ինչ, ինչ նրանք ուղարկում են իրար։</p>
-<p><strong>5. common.</strong> Նախ բաց պայմանավորվում են ընդհանուր գույնի շուրջ՝ դեղին։ Եվան էլ գիտի։</p>
+<p><strong>5. common.</strong> Նախ բաց պայմանավորվում են ընդհանուր գույնի շուրջ՝ դեղին։ Եվան էլ գիտի։ <em>[pause 1 s]</em></p>
 <p><strong>6. secrets.</strong> Հետո յուրաքանչյուրն ընտրում է իր գաղտնի գույնը և ոչ մեկին չի ասում՝ Անին կարմիր, Արամը կապույտ։</p>
-<p><strong>7. mix_send.</strong> Ամեն մեկն իր գաղտնի գույնը խառնում է դեղինի հետ և ուղարկում մյուսին։ Անին ուղարկում է նարնջագույն, Արամը՝ կանաչ։ Եվան տեսնում է երկուսն էլ։</p>
-<p><strong>8. final.</strong> Հիմա ամեն մեկն ստացած խառնուրդին ավելացնում է իր գաղտնի գույնը։ Անին կանաչին ավելացնում է կարմիր, Արամը նարնջագույնին՝ կապույտ։ Եվ երկուսն էլ ստանում են նույն շագանակագույնը՝ դեղին, կարմիր և կապույտ միասին։</p>
-<p><strong>9. eve.</strong> Իսկ Եվա՞ն։ Նա ունի դեղին, նարնջագույն և կանաչ։ Եթե դրանք խառնի, կստանա ավելի դեղնավուն գույն, ոչ թե նույնը։ Նրան պետք է ներկը հետ բաժանել իր բաղադրիչների, իսկ ներկը խառնելը հեշտ է, բաժանելը՝ համարյա անհնար։</p>
-<p><strong>10. math.</strong> Իրականում ներկի փոխարեն թվեր են։ Խառնելը թիվն աստիճան բարձրացնելն է և մեծ պարզ թվի վրա բաժանելիս մնացորդը վերցնելը։ Դա անել հեշտ է, իսկ հետ գնալը՝ գտնել աստիճանը, հարյուրավոր թվանշան ունեցող թվերի համար ոչ ոք արագ անել չգիտի։</p>
-<p><strong>11. toy.</strong> Փոքր օրինակ՝ ընդհանուր թվերը 5 և 23 են, Անիի գաղտնիքը՝ 6, Արամինը՝ 15։ Անին ուղարկում է 8, Արամը՝ 19, և երկուսն էլ հաշվում են նույն գաղտնի թիվը՝ 2։</p>
-<p><strong>12. history.</strong> Հետաքրքիրն այն է, որ բրիտանական գաղտնի ծառայությունում սա գտել էին ավելի վաղ՝ 1970-ականների սկզբին, բայց գաղտնի էին պահում մինչև 1997 թվականը։ Գաղափարի հեղինակներից մեկը՝ Ջեյմս Էլիսը, մահացավ դրա հրապարակումից մեկ ամիս առաջ։</p>
-<p><strong>13. today.</strong> Այսօր այս փոխանակման տարբերակներն օգտագործվում են գրեթե ամեն անգամ, երբ կայքը բացվում է կողպեքով, և մեսենջերներում։ Մի կարևոր մանրուք՝ պետք է նաև համոզված լինես, որ խոսում ես իսկական Արամի հետ, ոչ թե Եվայի, որը ձևանում է նրան։ Դրա համար կայքերն ունեն վկայականներ։</p>
-<p><strong>14. takeaway.</strong> Այնպես որ, համացանցի գաղտնիքները հիմնված են մի պարզ բանի վրա՝ կան գործողություններ, որոնք անել հեշտ է, իսկ հետ դարձնել՝ համարյա անհնար։ Ինչպես ներկը խառնելը։</p>
+<p><strong>7. mix_send.</strong> Ամեն մեկն իր գաղտնի գույնը խառնում է դեղինի հետ և ուղարկում մյուսին։ Անին ուղարկում է նարնջագույն, Արամը՝ կանաչ։ Եվան տեսնում է երկուսն էլ։ <em>[pause 1.5 s]</em></p>
+<p><strong>8. final.</strong> Հիմա ամեն մեկն ստացած խառնուրդին ավելացնում է իր գաղտնի գույնը։ Անին կանաչին ավելացնում է կարմիր, Արամը նարնջագույնին՝ կապույտ։ Եվ երկուսն էլ ստանում են նույն շագանակագույնը՝ դեղին, կարմիր և կապույտ միասին։ <em>[pause 2.5 s]</em></p>
+<p><strong>9. eve.</strong> Իսկ Եվա՞ն։ Նա ունի դեղին, նարնջագույն և կանաչ։ Եթե դրանք խառնի, կստանա ավելի դեղնավուն գույն, ոչ թե նույնը։ Նրան պետք է ներկը հետ բաժանել իր բաղադրիչների, իսկ ներկը խառնելը հեշտ է, բաժանելը՝ համարյա անհնար։ <em>[pause 1.5 s]</em></p>
+<p><strong>10. math.</strong> Իրականում ներկի փոխարեն թվեր են, և ներկը միայն համեմատություն է։ Խառնելը թիվն աստիճան բարձրացնելն է և մեծ պարզ թվի վրա բաժանելիս մնացորդը վերցնելը։ Դա անել հեշտ է, իսկ հետ գնալու, այսինքն՝ աստիճանը գտնելու գործնական արագ եղանակ ճիշտ ընտրված մեծ թվերի համար սովորական համակարգիչներով հայտնի չէ։</p>
+<p><strong>11. toy.</strong> Փոքր օրինակ՝ ընդհանուր թվերը 5 և 23 են, Անիի գաղտնիքը՝ 6, Արամինը՝ 15։ Անին ուղարկում է 8, Արամը՝ 19, և երկուսն էլ հաշվում են նույն գաղտնի թիվը՝ 2։ <em>[pause 2 s]</em></p>
+<p><strong>12. today.</strong> Այսօր այս փոխանակման տարբերակներն օգտագործվում են կայքերի ապահով կապում և մեսենջերներում։ Մի կարևոր մանրուք՝ պետք է նաև համոզված լինես, որ խոսում ես իսկական Արամի հետ, ոչ թե Եվայի, որը ձևանում է նրան։ Դրա համար կայքերն ունեն վկայականներ։</p>
+<p><strong>13. takeaway.</strong> Բաց զրույցով կարելի է ստանալ ընդհանուր գաղտնիք, եթե կա գործողություն, որն անել հեշտ է, իսկ հետ դարձնել՝ գործնականում անհնար։ Ինչպես ներկը խառնելը։</p>
 <!-- script:end -->
 
 <p>Armenian lint: 0 errors after two article fixes («Արամն ուզում», «թիվն աստիճան»). Names: Անի, Արամ, Եվա (the classic Alice, Bob, Eve).</p>
@@ -66,5 +65,15 @@ img { max-width: 100%; }
 <li><strong>U-q, the maths beat (10):</strong> «աստիճան բարձրացնել ... մնացորդը վերցնել» is the plain version; name «դիսկրետ լոգարիթմ» too, or not?</li>
 <li><strong>U-r, the GCHQ beat:</strong> keep (a good story) or cut to stay under 2.5 min?</li>
 <li>U-a («դու» vs «դուք») applies here too.</li>
+</ul>
+</details><details open id="after-the-codex-review-2026-11-26"><summary>After the Codex review (2026-11-26)</summary>
+<p>Fixes by finding ID (CODEX_REVIEW.md):</p>
+<ul>
+<li><strong>X44:</strong> the reverse direction is now "no known practical fast method on ordinary (classical) computers, for properly chosen large numbers", and the arrow says «գործնականում անհնար» instead of «անհնար» (wording to confirm with Hayk; Codex suggested «գործնականում դժվար»). "Hundreds of digits" alone is dropped: the group and sizes matter (RFC 9325, <a href="https://www.rfc-editor.org/info/rfc9325/">https://www.rfc-editor.org/info/rfc9325/</a>). The paint is said to be only an analogy. The closing is about agreeing a secret over a public channel, and the today beat keeps authentication (certificates). The padlock is gone from the voice and the ending visual (Chrome replaced the lock icon in 2023, <a href="https://blog.chromium.org/2023/05/an-update-on-lock-icon.html">https://blog.chromium.org/2023/05/an-update-on-lock-icon.html</a>); the voice says «ապահով կապով».</li>
+<li><strong>X51:</strong> the GCHQ history extension is cut (text below), the founders' names and year moved to the source line, 8.5 s of pauses with the longest on the final mix, no «Այնպես որ,».</li>
+</ul>
+<p><strong>Cut beats, kept here word for word so they can come back:</strong></p>
+<ul>
+<li><code>history</code>: Հետաքրքիրն այն է, որ բրիտանական գաղտնի ծառայությունում սա գտել էին ավելի վաղ՝ 1970-ականների սկզբին, բայց գաղտնի էին պահում մինչև 1997 թվականը։ Գաղափարի հեղինակներից մեկը՝ Ջեյմս Էլիսը, մահացավ դրա հրապարակումից մեկ ամիս առաջ։ (source line: Ellis 1970, Cocks 1973, Williamson 1974; հրապարակվել է 1997-ին)</li>
 </ul>
 </details></body></html>

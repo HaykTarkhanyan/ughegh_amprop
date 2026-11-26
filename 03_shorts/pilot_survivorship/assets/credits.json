@@ -9,7 +9,8 @@
     "date": "2021-11-29 12:33:30",
     "files": [
       "zil_yerevan_zoo.jpg"
-    ]
+    ],
+    "changes": "cropped, slow zoom"
   },
   {
     "title": "File:Malnova fridujo ZIL en la Zoo en Erevano 02.jpg",
@@ -21,7 +22,8 @@
     "date": "2021-11-29 12:33:48",
     "files": [
       "zil_yerevan_zoo_2.jpg"
-    ]
+    ],
+    "changes": "not used in the pilot video"
   },
   {
     "title": "File:New ZIL fridges 1966.jpg",
@@ -33,7 +35,8 @@
     "date": "1966-07",
     "files": [
       "zil_factory_1966.jpg"
-    ]
+    ],
+    "changes": "cropped, slow pan"
   },
   {
     "title": "File:Abraham Wald.jpg",
@@ -45,7 +48,8 @@
     "date": "",
     "files": [
       "wald.jpg"
-    ]
+    ],
+    "changes": "cropped to a circle"
   },
   {
     "title": "File:Survivorship-bias.svg",
@@ -58,6 +62,7 @@
     "files": [
       "bomber.png",
       "bomber.svg"
-    ]
+    ],
+    "changes": "red dots removed from the drawing and animated separately; recoloured for the video"
   }
 ]

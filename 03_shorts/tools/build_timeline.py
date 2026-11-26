@@ -1,19 +1,28 @@
 """Join a short's narration clips into one WAV and write timeline.json (beats, words, caption pages) for any renderer.
 
-Reads <short>/beats.hy.json (key, text, optional screen / screen_small / visual) and <short>/audio/manifest.json
-(written by tools/tts_gemini.py beats). Each clip's leading and trailing silence is cut down to LEAD_S / TAIL_S,
-the clips are joined with GAP_S between them, and every word gets a start and end time spread over its beat in
-proportion to its length, with extra weight after punctuation (method B in _knowledge/short_videos/lit_review.md,
-section 5.1). Then the pauses the voice really makes (-35 dB for 80 ms or more) are snapped onto the nearest word
-boundaries and the words between them re-spread (on 2026-11-25 length-only timing was off by 0.2 s median, ~1 s at
-worst; tools/check_sync.py measures it). Words are grouped into caption pages of at most PAGE_WORDS words.
+Reads <short>/beats.hy.json (key, text, optional screen / screen_small / visual / pause_after) and
+<short>/audio/manifest.json (from tools/tts_gemini.py beats, or tools/import_recording.py for Hayk's own voice).
+Everything is checked first (tools/validate_episode.py, stage "audio"), so nothing is built from a changed script.
+Each clip's leading and trailing silence is cut down to LEAD_S / TAIL_S, the clips are joined with GAP_S (plus the
+beat's pause_after) between them, and every word gets a start and end time spread over its beat in proportion to its
+spoken length, with extra weight after punctuation (method B in _knowledge/short_videos/lit_review.md, section 5.1).
+Then the pauses the voice really makes (-35 dB for 80 ms or more) are snapped onto the nearest word boundaries and
+the words between them re-spread. Words are grouped into caption pages for the episode's layout (PROFILES):
+portrait (the Shorts) or landscape (the 16:9 long video), chosen by <short>/episode.json {"layout": "landscape"}.
+
+Caption guarantees (Codex review X2, X14, 2026-11-26): every page fits its box in at most max_lines lines at a size
+no smaller than min_px, or the build stops and names the word (reword it in the script); pages are merged until each
+is on screen for MIN_PAGE_S, and any that still are not are listed as warnings in the log and in the timeline.
+The timeline's "build" block holds hashes of the script, the manifest and the joined audio plus a build id, so the
+renderer copy can be checked for staleness (render/sync_short.py, tools/validate_episode.py --stage render).
 
 Usage (from 03_shorts/):
     python tools/build_timeline.py pilot_survivorship
 Output: <short>/build/narration.wav and <short>/build/timeline.json (times in seconds).
-Runtime: about 2-4 s for 70 s of speech (the pause scan is plain Python). Standard library only.
+Runtime: about 2-4 s for 70 s of speech (the pause scan is plain Python). Needs Pillow (caption widths).
 """
 import argparse
+import hashlib
 import json
 import logging
 import re
@@ -21,48 +30,66 @@ import sys
 import time
 import wave
 from array import array
+from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from hy_numbers import spoken  # noqa: E402
+from runlog import setup as setup_logging  # noqa: E402
+from validate_episode import sha256, validate  # noqa: E402
 
-ROOT = Path(__file__).resolve().parents[2]
-(ROOT / "logs").mkdir(exist_ok=True)
-logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s",
-                    handlers=[logging.StreamHandler(sys.stdout),
-                              logging.FileHandler(ROOT / "logs" / "build_timeline.log", encoding="utf-8")])
 log = logging.getLogger("build_timeline")
 
 LEAD_S, TAIL_S, GAP_S = 0.05, 0.10, 0.12   # silence kept before / after each clip, and added between clips
 THRESHOLD = 0.02                            # fraction of the clip's peak that counts as sound
 PAUSE_WEIGHT = {"։": 4, ".": 4, "՝": 2, ",": 2, "»": 0, "«": 0}  # extra "characters" of time after punctuation
-PAGE_WORDS = 3
-MIN_PAGE_S = 0.6                            # a caption page shorter than this is merged with a neighbour
-MAX_MERGED_WORDS = 5
+MIN_PAGE_S = 0.6                            # a caption page on screen shorter than this cannot be read
+HOLD_S = 0.5                                # renderers keep a page up to this long after its last word
 CAPTION_FONT = Path(__file__).resolve().parents[1] / "assets" / "fonts" / "NotoSansArmenian-Variable.ttf"
-CAPTION_PX = 68                             # caption font size the renderers use (weight 800)
-WORD_GAP_PX = 32                            # 2 x 16 px margin around each caption word (inline-block)
-BOX_PX = 640                                # caption box width in both renderers (x 140-780, the TikTok-safe band)
-MAX_LINES = 2                               # two lines end at y ~1040; pictures stay above that
-MIN_CAPTION_PX = 48
+# Caption layouts, matching the renderers: portrait = the Shorts (pilot Composition.tsx, box x 140-780, 68 px weight
+# 800, two lines end at y ~1040); landscape = render/src/zk/Long.tsx Captions16 (box 1500 px, 46 px weight 650,
+# 9 px margins). Landscape pages hold a phrase, not three words: the wide box was showing portrait-sized pages.
+PROFILES = {
+    "portrait": {"width": 1080, "height": 1920, "box": 640, "px": 68, "weight": 800, "gap": 32, "max_lines": 2,
+                 "page_words": 3, "max_merged": 5, "min_px": 44},  # 44: one long word (X2)
+    "landscape": {"width": 1920, "height": 1080, "box": 1500, "px": 46, "weight": 650, "gap": 18, "max_lines": 2,
+                  "page_words": 7, "max_merged": 10, "min_px": 38},
+}
+P = dict(PROFILES["portrait"])               # the active profile; main() switches it
 FPS = 30
 PAUSE_RMS = 10 ** (-35 / 20) * 32768        # -35 dBFS, as in ffmpeg silencedetect noise=-35dB
 MIN_PAUSE_S = 0.08                          # shorter dips are gaps between sounds, not pauses
 SNAP_TOL_S = 0.8                            # how far a predicted word boundary may move onto a real pause
 
 
+class CaptionError(ValueError):
+    """A caption page that cannot fit its box at any allowed size."""
+
+
+def use_profile(name):
+    global _FONT
+    P.clear()
+    P.update(PROFILES[name])
+    _FONT = None
+
+
 def read_wav(path):
     with wave.open(str(path), "rb") as w:
         if w.getsampwidth() != 2 or w.getnchannels() != 1:
-            raise SystemExit(f"{path}: expected 16-bit mono, got {w.getsampwidth() * 8}-bit x{w.getnchannels()}")
+            raise SystemExit(f"{path}: expected 16-bit mono, got {w.getsampwidth() * 8}-bit x{w.getnchannels()} "
+                             "(convert it with tools/import_recording.py)")
         sr = w.getframerate()
         samples = array("h", w.readframes(w.getnframes()))
     return sr, samples
 
 
-def trim(samples, sr):
+def trim(samples, sr, key="?"):
     """Return (trimmed samples, seconds of speech start inside them, seconds of speech end inside them)."""
+    if not samples:
+        raise SystemExit(f"beat {key}: the clip has no samples")
     peak = max(abs(s) for s in samples)
+    if peak < 330:  # about -40 dBFS: nothing was said
+        raise SystemExit(f"beat {key}: the clip is silent (peak {peak})")
     thr = THRESHOLD * peak
     first = next(i for i, s in enumerate(samples) if abs(s) > thr)
     last = len(samples) - 1 - next(i for i, s in enumerate(reversed(samples)) if abs(s) > thr)
@@ -149,42 +176,74 @@ _FONT = None
 
 
 def word_px(w):
-    """Width in pixels of one caption word at CAPTION_PX in Noto Sans Armenian weight 800 (outline and zoom excluded)."""
+    """Width in pixels of one caption word at the profile's size and weight (outline and zoom excluded)."""
     global _FONT
     if _FONT is None:
-        from PIL import ImageFont  # only needed here; Pillow 13.0 on this machine
+        from PIL import ImageFont
         if not CAPTION_FONT.exists():
             raise SystemExit(f"caption font missing: {CAPTION_FONT}")
-        _FONT = ImageFont.truetype(str(CAPTION_FONT), CAPTION_PX)
-        _FONT.set_variation_by_axes([800, 100])  # wght, wdth
+        _FONT = ImageFont.truetype(str(CAPTION_FONT), P["px"])
+        _FONT.set_variation_by_axes([P["weight"], 100])  # wght, wdth
     return _FONT.getlength(w["w"])
 
 
 def n_lines(words, size=None):
-    """How many lines the browser makes of these words in a BOX_PX box: greedy wrapping, each inline-block word
-    taking its width (at font size `size`, default CAPTION_PX) plus WORD_GAP_PX of margin, as the renderers do."""
-    scale = (size or CAPTION_PX) / CAPTION_PX
+    """How many lines the browser makes of these words in the profile's box: greedy wrapping, each inline-block word
+    taking its width (at font size `size`, default the profile's) plus its margin, as the renderers do. A word wider
+    than the box on its own counts as an overflow line, so it can never pass as fitting (X2)."""
+    scale = (size or P["px"]) / P["px"]
     lines, cur = 1, 0.0
     for w in words:
-        need = word_px(w) * scale + WORD_GAP_PX
-        if cur > 0 and cur + need > BOX_PX:
+        need = word_px(w) * scale + P["gap"]
+        if need > P["box"]:
+            return 99  # wider than the box on its own: never fits
+        if cur > 0 and cur + need > P["box"]:
             lines, cur = lines + 1, need
         else:
             cur += need
     return lines
 
 
-def fits(words):
-    return n_lines(words) <= MAX_LINES
+def fits(words, size=None):
+    return n_lines(words, size) <= P["max_lines"]
 
 
-def pages(words):
-    """Group words into caption pages of at most MAX_LINES lines (wrapping simulated with the real font): a page
-    closes when the next word would make a third line, after PAGE_WORDS words, after a full stop, or after a comma
-    once the page has two words. An auxiliary verb or a word that closes a quotation never opens a page, and a page
-    never ends on a conjunction such as «որ». Pages grouped by word count alone wrapped to 3-5 lines (Armenian words
-    are long) and rose into the picture; strictly one line split most pages into single words that flashed for
-    0.1-0.3 s (both 2026-11-25)."""
+def page_size(words):
+    """The profile's size, or the largest smaller one (2 px steps, down to min_px) at which the page fits. Raises
+    CaptionError when even min_px does not fit: reword the script (split the long word) instead of overflowing."""
+    size = P["px"]
+    while not fits(words, size):
+        if size - 2 < P["min_px"]:
+            widest = max(words, key=word_px)["w"]
+            raise CaptionError(f"caption page «{' '.join(x['w'] for x in words)}» does not fit at {P['min_px']} px "
+                               f"(widest word «{widest}»); reword it in beats.hy.json")
+        size -= 2
+    return size
+
+
+def ends_sentence(page):
+    return bool(re.search(r"[։.?!]»?$", page[-1]["w"]))
+
+
+def shown_s(out, k, tail_hold):
+    """Seconds page k is on screen with the renderers' rule: from its first word until the next page starts, but no
+    longer than HOLD_S after its last word; the beat's last page holds over the gap after the beat (tail_hold)."""
+    p = out[k]
+    if k + 1 < len(out):
+        end = min(out[k + 1][0]["start"], p[-1]["end"] + HOLD_S)
+    else:
+        end = p[-1]["end"] + tail_hold
+    return end - p[0]["start"]
+
+
+def pages(words, tail_hold=HOLD_S, key="?"):
+    """Group words into caption pages of at most max_lines lines (wrapping simulated with the real font): a page
+    closes when the next word would not fit, after page_words words, after a full stop, or after a comma once the
+    page has two words. An auxiliary verb or a word that closes a quotation never opens a page, and a page never ends
+    on a conjunction such as «որ». Then short pages are merged with a neighbour until each is on screen MIN_PAGE_S:
+    first never across a sentence end (that made pages that read badly), then, for pages still too short, across one.
+    Pages grouped by word count alone wrapped to 3-5 lines in portrait; strictly one line split most pages into
+    single words that flashed for 0.1-0.3 s (both 2026-11-25)."""
     out, cur = [], []
     for i, w in enumerate(words):
         cur.append(w)
@@ -197,78 +256,86 @@ def pages(words):
         punct = end_mark or (comma and len(cur) >= 2)  # a lone "Հա," would flash for 0.3 s
         may_break = nxt not in AUXILIARY and not closes_quote and bare not in NO_BREAK_AFTER
         too_wide = bool(nxt_raw) and not fits(cur + [words[i + 1]])
-        full = (len(cur) >= PAGE_WORDS or too_wide) and may_break
-        if punct or full or len(cur) > PAGE_WORDS + 1:
+        full = (len(cur) >= P["page_words"] or too_wide) and may_break
+        if punct or full or len(cur) > P["page_words"] + 1:
             out.append(cur)
             cur = []
     if cur:
         out.append(cur)
-    # A page the voice gets through in under MIN_PAGE_S cannot be read (HyperFrames check, 2026-11-25: «իսկ ո՞ւր
-    # են» for 0.34 s after pause snapping): merge it into the next page, or the previous one, if the result stays
-    # within MAX_MERGED_WORDS. Never across a sentence end: «աղբանոցում են։ Տեսնում ենք միայն» made a 3-line page
-    # that rose into the picture (Gemini review v2, confirmed on frames).
-    def ends_sentence(page):
-        return bool(re.search(r"[։.?!]»?$", page[-1]["w"]))
 
-    merged = True
-    while merged:
-        merged = False
-        for k, p in enumerate(out):
-            if p[-1]["end"] - p[0]["start"] >= MIN_PAGE_S:
-                continue
-            can_next = (k + 1 < len(out) and not ends_sentence(p) and len(p) + len(out[k + 1]) <= MAX_MERGED_WORDS
-                        and fits(p + out[k + 1]))
-            can_prev = (k > 0 and not ends_sentence(out[k - 1]) and len(out[k - 1]) + len(p) <= MAX_MERGED_WORDS
-                        and fits(out[k - 1] + p))
-            if can_prev and (ends_sentence(p) or not can_next):
-                out[k - 1:k + 1] = [out[k - 1] + p]
-            elif can_next:
-                out[k:k + 2] = [p + out[k + 1]]
-            else:
-                continue
-            merged = True
-            break
-    return [{"text": " ".join(x["w"] for x in p), "start": p[0]["start"], "end": p[-1]["end"], "words": p,
-             "size": page_size(p)} for p in out]
+    def merge_pass(across_sentences):
+        merged = True
+        while merged:
+            merged = False
+            for k in range(len(out)):
+                if shown_s(out, k, tail_hold) >= MIN_PAGE_S:
+                    continue
+                p = out[k]
+                ok_end = lambda q: across_sentences or not ends_sentence(q)  # noqa: E731
+                can_next = (k + 1 < len(out) and ok_end(p) and len(p) + len(out[k + 1]) <= P["max_merged"]
+                            and fits(p + out[k + 1]))
+                can_prev = (k > 0 and ok_end(out[k - 1]) and len(out[k - 1]) + len(p) <= P["max_merged"]
+                            and fits(out[k - 1] + p))
+                if can_prev and (ends_sentence(p) or not can_next):
+                    out[k - 1:k + 1] = [out[k - 1] + p]
+                elif can_next:
+                    out[k:k + 2] = [p + out[k + 1]]
+                else:
+                    continue
+                merged = True
+                break
 
-
-def page_size(words):
-    """CAPTION_PX, or the largest smaller size (2 px steps, not under MIN_CAPTION_PX) at which the page fits in
-    MAX_LINES lines and no single word is wider than the box. A page kept long by the auxiliary / quote rules can
-    otherwise wrap to 3 lines."""
-    size = CAPTION_PX
-    while size > MIN_CAPTION_PX and (n_lines(words, size) > MAX_LINES
-                                     or max(word_px(x) * size / CAPTION_PX for x in words) + WORD_GAP_PX > BOX_PX):
-        size -= 2
-    return size
+    merge_pass(across_sentences=False)
+    merge_pass(across_sentences=True)
+    result, short = [], []
+    for k, p in enumerate(out):
+        try:
+            size = page_size(p)
+        except CaptionError as e:
+            raise SystemExit(f"beat {key}: {e}") from None
+        shown = shown_s(out, k, tail_hold)
+        if shown < MIN_PAGE_S:
+            short.append({"beat": key, "text": " ".join(x["w"] for x in p), "shown_s": round(shown, 3)})
+        result.append({"text": " ".join(x["w"] for x in p), "start": p[0]["start"], "end": p[-1]["end"], "words": p,
+                       "size": size})
+    return result, short
 
 
 def main():
+    setup_logging("build_timeline")
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("short", type=Path, help="folder of the short, e.g. pilot_survivorship")
     ap.add_argument("--no-snap", action="store_true", help="length-only word times, no snapping to real pauses")
     args = ap.parse_args()
     t_start = time.time()
+    errs = validate(args.short, "audio")
+    if errs:
+        for e in errs:
+            log.error("%s", e)
+        raise SystemExit(f"{args.short.name}: {len(errs)} problem(s); nothing was built")
+    ep_path = args.short / "episode.json"
+    layout = json.loads(ep_path.read_text(encoding="utf-8")).get("layout", "portrait") if ep_path.exists() else "portrait"
+    if layout not in PROFILES:
+        raise SystemExit(f"{ep_path}: layout {layout!r} is not one of {sorted(PROFILES)}")
+    use_profile(layout)
     beats = json.loads((args.short / "beats.hy.json").read_text(encoding="utf-8"))
-    manifest = json.loads((args.short / "audio" / "manifest.json").read_text(encoding="utf-8"))
+    man_path = args.short / "audio" / "manifest.json"
+    manifest = json.loads(man_path.read_text(encoding="utf-8"))
     out_dir = args.short / "build"
     out_dir.mkdir(exist_ok=True)
 
-    joined, sr_all, t, snapped = array("h"), None, 0.0, 0
-    timeline = {"fps": FPS, "width": 1080, "height": 1920, "voice": manifest["voice"], "model": manifest["model"],
-                "audio": "narration.wav", "beats": []}
+    joined, sr_all, t, snapped, short_pages = array("h"), None, 0.0, 0, []
+    timeline = {"fps": FPS, "width": P["width"], "height": P["height"], "layout": layout,
+                "narrator": manifest.get("narrator", "gemini-tts"), "voice": manifest.get("voice"),
+                "model": manifest.get("model"), "audio": "narration.wav", "beats": []}
     for b in beats:
-        m = manifest["beats"].get(b["key"])
-        if m is None:
-            raise SystemExit(f"beat {b['key']} has no clip in the manifest; run tts_gemini.py beats first")
-        if m["text"] != b["text"]:
-            raise SystemExit(f"beat {b['key']}: text changed since the clip was made; rerun tts_gemini.py beats")
+        m = manifest["beats"][b["key"]]
         sr, samples = read_wav(args.short / "audio" / m["file"])
         if sr_all is None:
             sr_all = sr
         elif sr != sr_all:
             raise SystemExit(f"{m['file']}: sample rate {sr} differs from {sr_all}")
-        clip, s0, s1 = trim(samples, sr)
+        clip, s0, s1 = trim(samples, sr, b["key"])
         start = t
         joined.extend(clip)
         t += len(clip) / sr
@@ -277,25 +344,36 @@ def main():
             found = [(start + a, start + z) for a, z in pauses_in(clip, sr, s0 + 0.05, s1 - 0.05)]
             words, n = snap(words, found)
             snapped += n
-        entry = {k: b[k] for k in ("key", "text", "screen", "screen_small", "visual", "pause_after") if k in b}
-        entry.update({"start": round(start, 3), "end": round(t, 3), "words": words, "pages": pages(words)})
-        timeline["beats"].append(entry)
         # pause_after: seconds of silence for the picture after this beat (Fable review F122, 2026-11-25)
-        gap = int((GAP_S + b.get("pause_after", 0)) * sr)
+        gap_s = GAP_S + b.get("pause_after", 0)
+        pg, short = pages(words, tail_hold=min(HOLD_S, (t - (start + s1)) + gap_s), key=b["key"])
+        short_pages += short
+        entry = {k: b[k] for k in ("key", "text", "screen", "screen_small", "visual", "pause_after") if k in b}
+        entry.update({"start": round(start, 3), "end": round(t, 3), "words": words, "pages": pg})
+        timeline["beats"].append(entry)
+        gap = int(gap_s * sr)
         joined.extend(array("h", [0]) * gap)
         t += gap / sr
     timeline["duration"] = round(t, 3)
+    timeline["warnings"] = {"short_pages": short_pages}
 
     with wave.open(str(out_dir / "narration.wav"), "wb") as w:
         w.setnchannels(1)
         w.setsampwidth(2)
         w.setframerate(sr_all)
         w.writeframes(joined.tobytes())
+    audio_sha = sha256(out_dir / "narration.wav")
+    timeline["build"] = {"id": f"{datetime.now():%Y%m%d-%H%M%S}-{audio_sha[:8]}",
+                         "script_sha": sha256(args.short / "beats.hy.json"), "manifest_sha": sha256(man_path),
+                         "audio_sha": audio_sha}
     (out_dir / "timeline.json").write_text(json.dumps(timeline, ensure_ascii=False, indent=1), encoding="utf-8")
+    for s in short_pages:
+        log.warning("caption page on screen only %.2f s (under %.1f s): %s «%s»", s["shown_s"], MIN_PAGE_S, s["beat"], s["text"])
     raw = sum(v["seconds"] for v in manifest["beats"].values())
-    log.info("%s: %d beats, %.1f s (clips were %.1f s before trimming), %d caption pages, %d word boundaries snapped "
-             "to real pauses, %.2f s", out_dir, len(beats), t, raw, sum(len(b["pages"]) for b in timeline["beats"]),
-             snapped, time.time() - t_start)
+    log.info("%s (%s): %d beats, %.1f s (clips were %.1f s before trimming), %d caption pages, %d short, %d word "
+             "boundaries snapped to real pauses, build %s, %.2f s", out_dir, layout, len(beats), t, raw,
+             sum(len(b["pages"]) for b in timeline["beats"]), len(short_pages), snapped, timeline["build"]["id"],
+             time.time() - t_start)
 
 
 if __name__ == "__main__":

@@ -7,7 +7,8 @@
   {
     "key": "reveal",
     "text": "Մի շտապիր։ Փչացած սառնարանները վաղուց աղբանոցում են։ Տեսնում ենք միայն ողջ մնացածներին։",
-    "visual": "A grid of 20 fridge icons; 19 turn grey and fall away, 1 stays lit."
+    "visual": "A grid of 20 fridge icons; 19 turn grey and fall away, 1 stays lit; tagged as an illustration (the 1 in 20 is invented, not a measured survival rate).",
+    "screen_small": "նկարազարդում, ոչ իրական թվեր"
   },
   {
     "key": "name",
@@ -35,18 +36,18 @@
   },
   {
     "key": "dropouts",
-    "text": "Սթիվ Ջոբսն ու Բիլ Գեյթսը թողել են համալսարանն ու հարստացել։ Բայց համալսարանը թողած ու ոչնչի չհասած հազարավոր մարդկանց մասին ոչ ոք գիրք չի գրում։",
+    "text": "Սթիվ Ջոբսն ու Բիլ Գեյթսը թողել են համալսարանն ու հարստացել։ Բայց համալսարանը թողած ու չհարստացած հազարավոր մարդկանց մասին ոչ ոք գիրք չի գրում։",
     "visual": "Two silhouettes lit, a crowd of hundreds of grey silhouettes behind them fades in."
   },
   {
     "key": "lesson",
-    "text": "Այնպես որ, երբ լսում ես հաջողության պատմություն, հարցրու՝ իսկ քանի՞ հոգի փորձեց, ու չստացվեց։",
+    "text": "Երբ լսում ես հաջողության պատմություն, հարցրու՝ իսկ քանի՞ հոգի փորձեց, ու չստացվեց։",
     "screen": "Իսկ քանի՞ հոգի փորձեց, ու չստացվեց",
     "visual": "The question as big text, one word at a time."
   },
   {
     "key": "outro",
-    "text": "Հա, սովետական սառնարանները պարզ ու ամուր էին։ Բայց հարցը միշտ նույնն է՝ իսկ ո՞ւր են նրանք, որոնք չդիմացան։",
+    "text": "Հա, գուցե սովետական սառնարաններն իսկապես ամուր էին։ Բայց ողջ մնացածներից դա չես իմանա՝ պետք է իմանալ, թե քանիսն էին փչանում։",
     "visual": "Back to the fridge photo; the question as big text; the last frame matches the first for a loop."
   }
 ]

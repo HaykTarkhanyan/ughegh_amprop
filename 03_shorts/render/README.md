@@ -21,15 +21,27 @@ stays in `../bakeoff/remotion/` as a record.
 | Id | File | Size | What |
 |----|------|------|------|
 | `ZkWaldo` | `src/zk/Waldo.tsx` | 1920 x 1080 | Where's Waldo as a zero-knowledge proof: crowd page, magnifier, the big sheet with a hole, "the page could be anywhere" |
-| `ZkDeck` | `src/zk/Deck.tsx` | 1920 x 1080 | The red card: all 26 black cards are still in the rest of the deck |
+| `ZkDeck` | `src/zk/Deck.tsx` | 1920 x 1080 | The red card: only the 26 black cards are taken out and shown; the reds stay face down |
 | `ZkBalls` | `src/zk/Balls.tsx` | 1920 x 1080 | The colour-blind friend: two balls, swap or not, 20 rounds, the halving bar |
 | `ZkLong` | `src/zk/Long.tsx` | 1920 x 1080 | The whole long video: all 13 beats on the narration's timeline (scenes from `Story.tsx`, `Waldo.tsx`, `Deck.tsx`, `Balls.tsx`), key moments tied to spoken words, centred captions, the narration |
+| `ZkShort` | `src/zk/Short.tsx` | 1080 x 1920 | The 5-beat Short, laid out for 9:16 (chat, two cards, Waldo at 0.7 with its overlays moved inward, the gossip answer and the pointer to the long video, the takeaway), portrait captions |
 
-**Rebuilding the long video after the narration changes** (from `03_shorts/`): `python tools/build_timeline.py
-zero_knowledge`, then `python render/sync_short.py zero_knowledge`, then render `ZkLong`. `Long.tsx` finds the key
-moments by the first words of sentences (e.g. the sheet sweeps in on «Ստվարաթուղթը»); if the script's wording
-changes, it stops with "no word starting with ...", and the prefix in `Long.tsx` needs updating. The narration now is
-a temporary Gemini guide voice (`zero_knowledge/audio/README.md`); Hayk's recording replaces it.
+**Rebuilding after the narration changes** (from `03_shorts/`; `<short>` is `zero_knowledge` or
+`zero_knowledge_short`):
+
+1. Narration: Hayk's take with `python tools/import_recording.py propose <take> <short>`, check the cuts, then
+   `... apply <short>`; or the temporary guide voice with `python tools/tts_gemini.py --key-name GEMINI_API_KEY beats
+   <short>/beats.hy.json <short>/audio` (paid, about $0.01 for the Short, $0.07 for the long video from scratch).
+2. `python tools/build_timeline.py <short>`, then `python render/sync_short.py <short>`: the timeline goes to
+   `src/data/<short>.json` (tracked in git, so a clean checkout type-checks and lists every composition) and the
+   audio to `public/<short>/narration_<build id>.wav` (gitignored), the file the timeline names.
+3. `python tools/validate_episode.py <short> --stage render` before rendering: it stops with a clear message when
+   the audio is missing or the copy is stale (a clean checkout has no audio until step 1).
+
+`timeline.ts` checks the copied timeline when the composition loads (beats in order, words inside their beats, the
+right caption layout, a synced audio name) and finds key moments by the first words of sentences (e.g. the sheet
+sweeps in on «Ստվարաթուղթը»). A cue word that is missing, or that matches several words without saying which, stops
+the render with a message, and the prefix in `Long.tsx` / `Short.tsx` needs updating.
 
 Each scene takes its phase times as a prop (`DECK_T`, `BALLS_T`, `WALDO_T` are the defaults). When the narration
 is recorded, the beat times from `tools/build_timeline.py` set these, so a faster or slower reading only changes the

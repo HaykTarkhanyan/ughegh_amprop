@@ -1,0 +1,362 @@
+[
+ {
+  "folder": "bayes_test",
+  "title": "Short 2: \"The test is 99% accurate\" (Bayes)",
+  "strand": "thinking error",
+  "layout": "portrait",
+  "beats": 12,
+  "planned_s": 154,
+  "script_sha": "573c5677fe22",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "crypto_paint",
+  "title": "Showcase 1: Public-key crypto explained with paint mixing",
+  "strand": "thinking error",
+  "layout": "portrait",
+  "beats": 13,
+  "planned_s": 156,
+  "script_sha": "42bf534f6012",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "decoy_popcorn",
+  "title": "The decoy effect (why a medium popcorn exists mainly to sell you the large)",
+  "strand": "thinking error",
+  "layout": "portrait",
+  "beats": 10,
+  "planned_s": 127,
+  "script_sha": "689bc1bd2650",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "dmanisi",
+  "title": "The toothless man from Dmanisi (the oldest evidence of compassion?)",
+  "strand": "thinking error",
+  "layout": "portrait",
+  "beats": 9,
+  "planned_s": 107,
+  "script_sha": "3e8edddfb190",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "english_spelling",
+  "title": "Why English spelling is a mess (the Great Vowel Shift)",
+  "strand": "why is it so",
+  "layout": "portrait",
+  "beats": 8,
+  "planned_s": 111,
+  "script_sha": "abd4a4083cbd",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "friendship",
+  "title": "Showcase 2: Friendship paradox (on average, your friends really do have more friends than you)",
+  "strand": "thinking error",
+  "layout": "portrait",
+  "beats": 10,
+  "planned_s": 102,
+  "script_sha": "f02fa1672fa2",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "ikea_effect",
+  "title": "The IKEA effect (why you value furniture you built yourself more)",
+  "strand": "thinking error",
+  "layout": "portrait",
+  "beats": 7,
+  "planned_s": 83,
+  "script_sha": "afa968d714ec",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "kids_tv",
+  "title": "Why small kids get glued to CoComelon-style TV",
+  "strand": "thinking error",
+  "layout": "portrait",
+  "beats": 11,
+  "planned_s": 165,
+  "script_sha": "f98ea20b684a",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "luggage_wheels",
+  "title": "Why a wheeled suitcase is easier than a backpack",
+  "strand": "why is it so",
+  "layout": "portrait",
+  "beats": 7,
+  "planned_s": 100,
+  "script_sha": "10fa6a2d291b",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "map_projection",
+  "title": "Map projections (why Greenland looks as big as Africa)",
+  "strand": "why is it so",
+  "layout": "portrait",
+  "beats": 9,
+  "planned_s": 112,
+  "script_sha": "5d5ccb5694df",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "mashtots",
+  "title": "How Mashtots designed the Armenian alphabet, and why anyone builds an alphabet from scratch",
+  "strand": "why is it so",
+  "layout": "portrait",
+  "beats": 10,
+  "planned_s": 119,
+  "script_sha": "f34e4533742b",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "minute_60",
+  "title": "Why a minute has 60 seconds",
+  "strand": "why is it so",
+  "layout": "portrait",
+  "beats": 6,
+  "planned_s": 98,
+  "script_sha": "2f3bd21fba60",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "own_voice",
+  "title": "Why your own voice sounds strange on a recording",
+  "strand": "why is it so",
+  "layout": "portrait",
+  "beats": 10,
+  "planned_s": 105,
+  "script_sha": "0f0462f5455a",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "painted_statues",
+  "title": "Greek statues were originally painted in bright colours",
+  "strand": "thinking error",
+  "layout": "portrait",
+  "beats": 9,
+  "planned_s": 122,
+  "script_sha": "9f8fdd2f14b1",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "petrov",
+  "title": "Showcase 4: Stanislav Petrov, the Soviet officer who treated a 1983 nuclear alarm as false, and was right",
+  "strand": "thinking error",
+  "layout": "portrait",
+  "beats": 12,
+  "planned_s": 136,
+  "script_sha": "e33c62be2eaf",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "pilot_survivorship",
+  "title": "pilot_survivorship",
+  "strand": "thinking error",
+  "layout": "portrait",
+  "beats": 9,
+  "planned_s": null,
+  "script_sha": "b8be1fb992f7",
+  "approved_sha": null,
+  "narration": {
+   "narrator": "gemini-tts",
+   "matches_script": false
+  },
+  "status": "pilot (rendered; script changed by the Codex review, voice and render outdated)"
+ },
+ {
+  "folder": "qwerty",
+  "title": "Showcase 3: Why the QWERTY layout won (messier than the \"made to slow typists down\" myth)",
+  "strand": "why is it so",
+  "layout": "portrait",
+  "beats": 8,
+  "planned_s": 110,
+  "script_sha": "ff2590e50a8e",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "regression",
+  "title": "Short 4: Regression to the mean (why praise seems to \"fail\" and punishment seems to \"work\")",
+  "strand": "thinking error",
+  "layout": "portrait",
+  "beats": 11,
+  "planned_s": 143,
+  "script_sha": "489b496d7d54",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "simpson",
+  "title": "Short 3: Simpson's paradox (\"better in every group, worse overall\")",
+  "strand": "thinking error",
+  "layout": "portrait",
+  "beats": 12,
+  "planned_s": 149,
+  "script_sha": "5b83ab4c69ec",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "waiting",
+  "title": "Short 5: Why waiting feels longer than it is, and how airports and Disney hide wait times",
+  "strand": "why is it so",
+  "layout": "portrait",
+  "beats": 8,
+  "planned_s": 125,
+  "script_sha": "6cd7b0204937",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "week_seven",
+  "title": "Why the week has 7 days",
+  "strand": "why is it so",
+  "layout": "portrait",
+  "beats": 9,
+  "planned_s": 122,
+  "script_sha": "f0aaab72d5fa",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "yawning",
+  "title": "Why yawning is contagious",
+  "strand": "why is it so",
+  "layout": "portrait",
+  "beats": 9,
+  "planned_s": 109,
+  "script_sha": "7656acfe3656",
+  "approved_sha": null,
+  "narration": {
+   "narrator": null,
+   "matches_script": null
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "zero_knowledge",
+  "title": "Long video: Zero-knowledge proofs (horizontal 16:9, narrated by Hayk)",
+  "strand": "thinking error",
+  "layout": "landscape",
+  "beats": 13,
+  "planned_s": 284,
+  "script_sha": "ccae085af604",
+  "approved_sha": null,
+  "narration": {
+   "narrator": "gemini-tts",
+   "matches_script": true
+  },
+  "status": "script waiting for review"
+ },
+ {
+  "folder": "zero_knowledge_short",
+  "title": "Zero-knowledge proofs, the intro (vertical 9:16, narrated by Hayk)",
+  "strand": "thinking error",
+  "layout": "portrait",
+  "beats": 5,
+  "planned_s": 61,
+  "script_sha": "d9dc2f7ec68d",
+  "approved_sha": null,
+  "narration": {
+   "narrator": "gemini-tts",
+   "matches_script": true
+  },
+  "status": "script waiting for review"
+ }
+]

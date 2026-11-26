@@ -26,10 +26,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from tts_gemini import API, api_key, request  # noqa: E402  (same key handling and retries as the TTS script)
 
 ROOT = Path(__file__).resolve().parents[2]
-(ROOT / "logs").mkdir(exist_ok=True)
-logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s",
-                    handlers=[logging.StreamHandler(sys.stdout),
-                              logging.FileHandler(ROOT / "logs" / "gemini_review.log", encoding="utf-8")])
+from runlog import setup as setup_logging  # noqa: E402
 log = logging.getLogger("gemini_review")
 LEDGER = Path(__file__).resolve().parents[1] / "gemini_ledger.csv"
 # USD per 1M tokens (input, output incl. thinking). Search on 2026-11-25: $0.75 / $3.75 through 2026-12-31, then
@@ -59,6 +56,7 @@ Be specific and critical; do not praise. If something is fine, leave its list em
 
 
 def main():
+    setup_logging("gemini_review")
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("video", type=Path)
     ap.add_argument("beats", type=Path)

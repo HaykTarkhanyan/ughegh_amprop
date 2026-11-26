@@ -1,7 +1,10 @@
-// The red-card proof: draw a card, say "red", show that all 26 black cards are still in the rest of the deck.
+// The red-card proof: draw a card from a complete deck, say "red", then take every black card out of the rest and
+// show it, while the red ones go face down onto a pile that is never turned over. Showing all 51 would reveal the
+// missing card by elimination (Codex review X20, 2026-11-26); showing only the 26 blacks proves "not black" and
+// nothing about which red card it is.
 // Cards: Dmitry Fomin's English pattern deck (CC0, Wikimedia Commons), in public/cards/<suit><rank>.png (cut from one thumbnail by assets_src/cut_cards.py).
 import React from "react";
-import { Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { Img, interpolate, random, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { C, FONT, easeInOut, lerp, pop, ramp, shuffled } from "../theme";
 import { Backdrop, Bubble, CheckMark, Label } from "./common";
 
@@ -11,23 +14,21 @@ const ALL = SUITS.flatMap((s) => RANKS.map((r) => `${s}${r}`));
 const isBlack = (id: string) => id[0] === "c" || id[0] === "s";
 const HIDDEN = "hQ"; // never shown
 const REST = shuffled(ALL.filter((id) => id !== HIDDEN), "deck-v1");
-const BLACK_ORDER = REST.filter(isBlack); // highlight order = reading order of the grid
 const REDS = ALL.filter((id) => !isBlack(id));
 
-// Default phase times (seconds); a narrated cut passes its own.
-export const DECK_T = {
-  stackIn: 0.2, draw: 1.3, claim: 2.6, deal: 3.9, dealStep: 0.034, flip: 6.1, flipStep: 0.018,
-  scan: 7.6, scanStep: 0.13, gather: 11.4, verdict: 12.9, which: 14.4, end: 18.5,
-};
+// Default phase times (seconds); a narrated cut passes its own. deal..deal + 51 * dealStep: the rest goes card by card.
+export const DECK_T = { stackIn: 0.2, full: 0.4, draw: 1.3, claim: 2.6, deal: 3.9, dealStep: 0.12, hide: 8.0, verdict: 11.0, which: 13.0, end: 17.0 };
 export type DeckTimes = typeof DECK_T;
 
-const CW = 84, CH = 126, GAP = 8, COLS = 17;
-const GX = (1920 - (COLS * CW + (COLS - 1) * GAP)) / 2;
-const GY = [400, 534, 668];
-const STACK = { x: 960 - CW / 2, y: 520 };
+const CW = 84, CH = 126, GAP = 8;
+const BIG = 2.1;                                 // stack scale before the deal
+const STACK0 = { x: 960 - CW / 2, y: 520 };      // the big stack in the middle, before the deal
+const STACK1 = { x: 150, y: 600 };               // where it sits while you deal
+const PILE = { x: 1650, y: 520 };                // the red cards, face down
 const HAND = { x: 210, y: 92, s: 1.75 };
 const BLOCK_X = (1920 - (13 * CW + 12 * GAP)) / 2;
 const BLOCK_Y = [455, 589];
+const FLY = 0.55;
 
 const CardBack: React.FC<{ w: number; h: number }> = ({ w, h }) => (
   <svg width={w} height={h} viewBox="0 0 84 126" style={{ display: "block" }}>
@@ -77,24 +78,27 @@ export const DeckScene: React.FC<{ T?: DeckTimes }> = ({ T = DECK_T }) => {
   const t = frame / fps;
 
   const stackIn = pop(t, T.stackIn, 8, 0.6);
-  const big = lerp(2.1, 1, ramp(t, T.deal - 0.6, 0.6, easeInOut)); // stack scale before the deal
-  const blackFound = Math.max(0, Math.min(26, Math.floor((t - T.scan) / T.scanStep) + 1));
-  const gathered = ramp(t, T.gather, 1.3);
+  const move = ramp(t, T.deal - 0.6, 0.6, easeInOut); // the stack shrinks and moves aside before the deal
+  const big = lerp(BIG, 1, move);
+  const ox = lerp(STACK0.x - (CW * (BIG - 1)) / 2, STACK1.x, move);
+  const oy = lerp(STACK0.y - (CH * (BIG - 1)) / 2, STACK1.y, move);
+  const landed = (i: number) => t >= T.deal + i * T.dealStep + FLY;
+  const blackShown = REST.filter((id, i) => isBlack(id) && landed(i)).length;
+  const redsDown = REST.filter((id, i) => !isBlack(id) && landed(i)).length;
   const verdict = ramp(t, T.verdict, 0.6);
-  const redDim = ramp(t, T.scan - 0.2, 0.6);
 
   // your card: the top of the stack, flown to the hand
   const draw = ramp(t, T.draw, 1.0);
-  const big0 = 2.1;
-  const handX = lerp(STACK.x - (CW * (big0 - 1)) / 2, HAND.x, draw);
-  const handY = lerp(STACK.y - (CH * (big0 - 1)) / 2 - 30, HAND.y, draw) - Math.sin(draw * Math.PI) * 120;
-  const handS = lerp(big0, HAND.s, draw);
+  const handX = lerp(STACK0.x - (CW * (BIG - 1)) / 2, HAND.x, draw);
+  const handY = lerp(STACK0.y - (CH * (BIG - 1)) / 2 - 30, HAND.y, draw) - Math.sin(draw * Math.PI) * 120;
+  const handS = lerp(BIG, HAND.s, draw);
   const handRot = lerp(0, -6, draw);
   const redPulse = verdict * (0.6 + 0.4 * Math.sin((t - T.verdict) * 4));
 
-  const counterIn = ramp(t, T.scan - 0.4, 0.5);
+  const counterIn = ramp(t, T.deal - 0.2, 0.5);
   const which = ramp(t, T.which + 0.15, 0.5); // starts after the verdict line has gone
   const ghostId = REDS[Math.floor((t - T.which) * 7) % REDS.length] ?? REDS[0];
+  let reds = 0, blacks = 0;
 
   return (
     <Backdrop>
@@ -103,42 +107,26 @@ export const DeckScene: React.FC<{ T?: DeckTimes }> = ({ T = DECK_T }) => {
       <Label text="Դու" x={150} y={196} size={26} color={C.dim} width={200} />
       <Person x={1770} y={150} color={C.blue} />
       <Label text="Ընկերդ" x={1770} y={196} size={26} color={C.dim} width={200} />
+      <Label text="Լրիվ կապոց՝ 52 քարտ" x={960} y={STACK0.y + CH * BIG / 2 + 92} size={34} color={C.ink} weight={700} width={600} opacity={ramp(t, T.full, 0.4) * (1 - ramp(t, T.draw, 0.4))} />
 
-      {/* the rest of the deck: stack -> grid -> black block */}
+      {/* the rest of the deck: black cards fly out face up into two rows, red ones go face down onto a pile */}
       {REST.map((id, i) => {
         const depth = REST.length - i;
-        const d0 = T.deal + i * T.dealStep;
-        const fly = ramp(t, d0, 0.55);
-        const r = Math.floor(i / COLS), c = i % COLS;
-        const gx = GX + c * (CW + GAP), gy = GY[r];
-        const sx = STACK.x - (CW * (big - 1)) / 2 + depth * 0.15 * big, sy = STACK.y - (CH * (big - 1)) / 2 - depth * 0.55 * big;
-        let x = lerp(sx, gx, fly);
-        let y = lerp(sy, gy, fly) - Math.sin(fly * Math.PI) * 60;
-        const rot = interpolate(fly, [0, 0.5, 1], [0, (c % 2 ? 6 : -6), 0]);
-        const flip = 180 - 180 * ramp(t, T.flip + (c + r * 2) * T.flipStep, 0.45);
+        const fly = ramp(t, T.deal + i * T.dealStep, FLY);
+        const sx = ox + depth * 0.15 * big, sy = oy - depth * 0.55 * big;
         const black = isBlack(id);
-        let glow: string | undefined;
-        let lift = 0;
-        let opacity = stackIn;
-        let grey = 0;
-        if (black) {
-          const j = BLACK_ORDER.indexOf(id);
-          const h0 = T.scan + j * T.scanStep;
-          const hl = ramp(t, h0, 0.25);
-          if (t >= h0) {
-            glow = `rgba(242,168,0,${0.9 * hl})`;
-            lift = 10 * pop(t, h0, 14, 0.4) * (1 - gathered);
-          }
-          const bx = BLOCK_X + (j % 13) * (CW + GAP), by = BLOCK_Y[Math.floor(j / 13)];
-          const g = ramp(t, T.gather + j * 0.012, 1.2);
-          x = lerp(x, bx, g);
-          y = lerp(y, by, g) - Math.sin(g * Math.PI) * 40;
-        } else {
-          opacity *= lerp(1, 0.28, redDim) * lerp(1, 0.4, gathered);
-          grey = 0.7 * redDim;
-        }
-        return <Card key={id} id={id} x={x} y={y} scale={lerp(big, 1, fly)} rot={rot} flip={flip} glow={glow} lift={lift} opacity={opacity} grey={grey} />;
+        const j = black ? blacks++ : reds++;
+        const tx = black ? BLOCK_X + (j % 13) * (CW + GAP) : PILE.x + (random(`px${id}`) - 0.5) * 18;
+        const ty = black ? BLOCK_Y[Math.floor(j / 13)] : PILE.y - j * 0.9;
+        const x = lerp(sx, tx, fly);
+        const y = lerp(sy, ty, fly) - Math.sin(fly * Math.PI) * (black ? 70 : 40);
+        const rot = black ? interpolate(fly, [0, 0.5, 1], [0, j % 2 ? 6 : -6, 0]) : lerp(0, (random(`pr${id}`) - 0.5) * 16, fly);
+        const flip = black ? 180 - 180 * ramp(t, T.deal + i * T.dealStep + 0.1, 0.4) : 180; // reds never turn over
+        const lift = black ? 10 * pop(t, T.deal + i * T.dealStep + FLY, 14, 0.4) : 0;
+        const glow = black && fly >= 1 ? `rgba(242,168,0,${0.9 * (1 - ramp(t, T.verdict + 1, 0.6) * 0.5)})` : undefined;
+        return <Card key={id} id={id} x={x} y={y} scale={lerp(big, 1, fly)} rot={rot} flip={flip} glow={glow} lift={lift} opacity={stackIn} />;
       })}
+      <Label text={`${redsDown} քարտ՝ ցույց չտրված`} x={PILE.x + CW / 2} y={BLOCK_Y[1] + CH + 24} size={26} color={C.dim} width={320} opacity={ramp(t, T.hide, 0.5)} />
 
       {/* your card stays face down for the whole video */}
       <div style={{ position: "absolute", left: 0, top: 0, filter: redPulse > 0 ? `drop-shadow(0 0 ${22 * redPulse}px rgba(232,56,61,${0.95 * redPulse}))` : undefined }}>
@@ -146,20 +134,20 @@ export const DeckScene: React.FC<{ T?: DeckTimes }> = ({ T = DECK_T }) => {
       </div>
       <Label text="Քո քարտը" x={HAND.x + CW * HAND.s / 2} y={HAND.y + CH * HAND.s + 18} size={26} color={C.dim} width={260} opacity={ramp(t, T.draw + 0.8, 0.4)} />
       <Bubble text="Կարմիր է" x={HAND.x + CW * HAND.s + 120} y={HAND.y + 60} t={t} t0={T.claim} tail="left" accent={C.red} out={T.verdict - 0.4} />
-      <Bubble text="Ապացուցի՛ր" x={1640} y={108} t={t} t0={T.claim + 0.7} tail="right" accent={C.blue} out={T.scan} />
-      <Label text="առանց քարտը բացելու" x={1640} y={250} size={26} color={C.dim} width={420} opacity={ramp(t, T.claim + 1.1, 0.4) * (1 - ramp(t, T.scan, 0.3))} />
+      <Bubble text="Ապացուցի՛ր" x={1640} y={108} t={t} t0={T.claim + 0.7} tail="right" accent={C.blue} out={T.deal} />
+      <Label text="առանց քարտը բացելու" x={1640} y={250} size={26} color={C.dim} width={420} opacity={ramp(t, T.claim + 1.1, 0.4) * (1 - ramp(t, T.deal, 0.3))} />
 
-      {/* counter */}
+      {/* counter of the black cards shown */}
       <div style={{ position: "absolute", left: 0, right: 0, top: 268, display: "flex", justifyContent: "center", opacity: counterIn }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 18, fontFamily: FONT, fontSize: 46, fontWeight: 700, color: blackFound >= 26 && t > T.gather + 0.9 ? C.orange : C.ink, fontVariantNumeric: "tabular-nums" }}>
-          <span>Սև քարտեր՝ {t < T.scan ? 0 : blackFound} / 26</span>
-          {t > T.gather + 0.9 ? <CheckMark size={58} progress={ramp(t, T.gather + 0.9, 0.5)} /> : null}
+        <div style={{ display: "flex", alignItems: "center", gap: 18, fontFamily: FONT, fontSize: 46, fontWeight: 700, color: blackShown >= 26 ? C.orange : C.ink, fontVariantNumeric: "tabular-nums" }}>
+          <span>Սև քարտեր՝ {blackShown} / 26</span>
+          {blackShown >= 26 ? <CheckMark size={58} progress={ramp(t, T.deal + 51 * T.dealStep + FLY, 0.5)} /> : null}
         </div>
       </div>
 
       {/* verdict, then "which red card? unknown" */}
       <div style={{ position: "absolute", left: 470, top: 120, opacity: verdict * (1 - ramp(t, T.which - 0.45, 0.45)), fontFamily: FONT, fontSize: 44, fontWeight: 700, color: C.ink, transform: `translateY(${(1 - verdict) * 12}px)` }}>
-        Բոլոր սևերն այստեղ են, ուրեմն քոնը <span style={{ color: C.red }}>կարմիր է</span>
+        Ոչ մի սև պակաս չէ, ուրեմն քոնը <span style={{ color: C.red }}>կարմիր է</span>
       </div>
       <div style={{ position: "absolute", left: 470, top: 92, opacity: which, display: "flex", alignItems: "center", gap: 26 }}>
         <div style={{ position: "relative", width: CW * 1.25, height: CH * 1.25 }}>

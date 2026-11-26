@@ -1,8 +1,9 @@
 [
   {
     "key": "hook",
-    "text": "1983 թվականի սեպտեմբերի 26-ի գիշերը խորհրդային համակարգը հայտնեց՝ ԱՄՆ-ից հրթիռներ են արձակվել։ Մարդը, որը պետք է զեկուցեր, որոշեց չհավատալ համակարգչին։",
-    "visual": "A dark bunker; a red warning light blinking; a radar-style screen with a blip over North America. Frame 0 shows the date."
+    "text": "Խորհրդային համակարգը հայտնեց՝ ԱՄՆ-ից հրթիռներ են արձակվել։ Մարդը, որը պետք է զեկուցեր, որոշեց չհավատալ համակարգչին։",
+    "visual": "A dark bunker; a red warning light blinking; a radar-style screen with a blip over North America; the date only on the small source line.",
+    "screen_small": "26 սեպտեմբերի 1983"
   },
   {
     "key": "context",
@@ -18,37 +19,42 @@
   {
     "key": "alarm",
     "text": "Կեսգիշերից քիչ անց ազդանշանը միացավ՝ մեկ հրթիռ։ Հետո ևս չորս։ Համակարգը հայտնում էր հրթիռային հարձակման մասին։",
-    "visual": "The screen shows 1 launch, then counts up to 5; a siren pulse; the word 'ՀԱՐՁԱԿՈՒՄ' flashes."
+    "visual": "The screen shows 1 launch, then counts up to 5; a siren pulse; the word 'ՀԱՐՁԱԿՈՒՄ' flashes.",
+    "pause_after": 1.5
   },
   {
     "key": "stakes",
     "text": "Եթե Պետրովը զեկուցեր հարձակման մասին, ղեկավարությունն ընդամենը մի քանի րոպե կունենար որոշելու՝ պատասխանե՞լ, թե՞ ոչ։",
-    "visual": "A countdown clock; a chain of command drawn as boxes from the bunker upward."
+    "visual": "A countdown clock; a chain of command drawn as boxes from the bunker upward.",
+    "pause_after": 2
   },
   {
     "key": "reasoning",
-    "text": "Նա կշռադատեց։ Ավելի ուշ պատմել է՝ պատերազմը հինգ հրթիռով չեն սկսում։ Համակարգը նոր էր։ Իսկ ցամաքային ռադարները ոչինչ չէին տեսնում։",
-    "visual": "Three reasons pop in as cards: '5 հրթիռ, ոչ թե հարյուրներ', 'նոր համակարգ', 'ռադարները՝ ոչինչ'."
+    "text": "Նա կշռադատեց։ Ավելի ուշ պատմել է՝ պատերազմը հինգ հրթիռով չեն սկսում։ Համակարգը նոր էր։ Իսկ ցամաքային ռադարները, որոնք հրթիռները կտեսնեին ավելի ուշ, դեռ ոչինչ ցույց չէին տալիս։",
+    "visual": "Three reasons pop in as cards: '5 հրթիռ, ոչ թե հարյուրներ', 'նոր համակարգ', 'ռադարները՝ ոչինչ'.",
+    "pause_after": 1.5
   },
   {
     "key": "decision",
     "text": "Նա զեկուցեց, որ դա համակարգի սխալ է։ Ավելի ուշ ասել է՝ «Որոշեցի չհավատալ համակարգչին»։ Եվ նա ճիշտ էր։",
-    "visual": "A telephone; a 'սխալ ազդանշան' stamp; the blips fade off the screen."
+    "visual": "A telephone; a 'սխալ ազդանշան' stamp; the blips fade off the screen.",
+    "pause_after": 1.5
   },
   {
     "key": "unsure",
-    "text": "Բայց ինքն էլ վստահ չէր։ 2013 թվականին խոստովանել է, որ այդ պահին երբեք լիովին վստահ չի եղել։ Րոպեները, մինչև պարզ դարձավ, որ հրթիռներ չկան, նրա համար անվերջ էին թվում։",
+    "text": "Բայց ինքն էլ վստահ չէր։ Հետո խոստովանել է, որ այդ պահին երբեք լիովին վստահ չի եղել։ Րոպեները, մինչև պարզ դարձավ, որ հրթիռներ չկան, նրա համար անվերջ էին թվում։",
     "visual": "A clock ticking slowly; the screen stays empty; his silhouette waiting."
   },
   {
     "key": "cause",
     "text": "Հետո պարզվեց պատճառը՝ արևի լույսն անդրադառնում էր բարձր ամպերից Հյուսիսային Դակոտայի վրա, և արբանյակները դա ընդունեցին հրթիռի կրակի տեղ։",
-    "visual": "A diagram: the sun low on the horizon, light bouncing off high clouds into a satellite's sensor, which marks it as a launch flare."
+    "visual": "A diagram: the sun low on the horizon, light bouncing off high clouds into a satellite's sensor, which marks it as a launch flare.",
+    "pause_after": 1.5
   },
   {
     "key": "bayes",
-    "text": "Պետրովը մտածում էր այնպես, ինչպես Բայեսի մասին մեր տեսանյութում։ Հարցն այն չէ, թե ինչ է ասում ազդանշանը, այլ թե որն է ավելի հավանական՝ իրական պատերազմ, որը սկսվում է ընդամենը հինգ հրթիռով, թե՞ նոր համակարգի սխալ։",
-    "visual": "A balance scale: 'պատերազմ՝ 5 հրթիռով' (tiny) vs 'նոր համակարգի սխալ' (heavy); a small link to the Bayes video's crowd of dots."
+    "text": "Պետրովը մտածում էր այնպես, ինչպես Բայեսի մասին մեր տեսանյութում։ Ազդանշանը կարևոր է, բայց այն պետք է կշռել երեք բանի հետ՝ որքան հավանական էր հարձակումն առանց դրա, որքան վստահելի է համակարգը, և ինչ են ասում մյուս աղբյուրները։ Հինգ հրթիռով պատերազմը, նոր համակարգը և լուռ ռադարները միասին ասում էին՝ ավելի հավանական է սխալը։",
+    "visual": "Three weights on a balance against the alarm: 'հինգ հրթիռով պատերազմ՝ քիչ հավանական', 'նոր համակարգ՝ քիչ ստուգված', 'ռադարներ՝ դեռ լուռ'; the alarm itself has real weight too, the scale tips towards 'սխալ'; a small link to the Bayes video's crowd of dots."
   },
   {
     "key": "honesty",
@@ -56,14 +62,9 @@
     "visual": "The chain of command again, with question marks at the top; Petrov's box highlighted at the bottom."
   },
   {
-    "key": "after",
-    "text": "Պետրովին չպարգևատրեցին, և պատմությունը հայտնի դարձավ միայն 1998 թվականին։ Հետագայում նա միջազգային մրցանակներ ստացավ, այդ թվում՝ Դրեզդենի խաղաղության մրցանակը 2013 թվականին։ Մահացավ 2017 թվականին։",
-    "visual": "Timeline 1983 -> 1998 (a memoir book) -> 2013 (a prize) -> 2017."
-  },
-  {
     "key": "takeaway",
-    "text": "Այնպես որ, երբ մեքենան ասում է՝ «հաստատ է», հարցրու՝ իսկ որքա՞ն հավանական է սա առանց մեքենայի։ Երբեմն սա ամենակարևոր հարցն է։",
-    "screen": "Որքա՞ն հավանական է սա առանց մեքենայի",
+    "text": "Երբ մեքենան ասում է՝ «հաստատ է», ստուգիր ազդանշանը մնացածի հետ՝ որքա՞ն հավանական էր սա առանց դրա, և ի՞նչ են ասում մյուս աղբյուրները։",
+    "screen": "Ստուգիր ազդանշանը մնացածի հետ",
     "visual": "Big karaoke text over the dark radar screen; loops back to the blinking light."
   }
 ]

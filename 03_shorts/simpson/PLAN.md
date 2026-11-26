@@ -21,6 +21,8 @@ treatment, compare like with like; when the split is itself a result of the trea
 
 ~145 s of speech (2,101 characters at ~870 a minute), ~150 s with pauses.
 
+*Superseded (Codex review X61, 2026-11-26): this beat-by-beat table is the 2026-11-25 storyboard estimate, before the Codex cuts. The current beats and length are in the script section above; keep the table only for its visual notes.*
+
 | # | Beat | ~s | Said (in short) | Shown |
 |---|------|----|-----------------|-------|
 | 1 | hook | 9 | two kidney-stone treatments, 78% vs 83%: which do you pick? | two cards "Ա 78%" / "Բ 83%", B glows |
@@ -41,33 +43,31 @@ treatment, compare like with like; when the split is itself a result of the trea
 
 <!-- script:start -->
 
-13 beats, 2,101 characters (2,319 with numbers spelled out): ~152 s of speech, ~2:35 with pauses and the end tail (estimate, calibrated on 2 measured beats, about +-10%).
+12 beats, 1,927 characters (2,077 with numbers spelled out): ~138 s of speech, ~2:29 with pauses and the end tail, 8.5 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. hook.** Երկու բուժում երիկամի քարերի համար։ Առաջինից հետո քարից ազատվում է հիվանդների 78 տոկոսը, երկրորդից հետո՝ 83 տոկոսը։ Ո՞րը կընտրես։
 
-**2. twist.** Իսկ հիմա՝ առաջին բուժումն ավելի լավն է և՛ փոքր, և՛ մեծ քարերի դեպքում։ Ավելի լավը՝ ամեն խմբում, բայց ավելի վատը՝ ընդհանուր։ Սա Սիմպսոնի պարադոքսն է։
+**2. twist.** Իսկ հիմա՝ առաջին բուժման արդյունքն ավելի լավն է և՛ փոքր, և՛ մեծ քարերի դեպքում։ Ավելի լավը՝ ամեն խմբում, բայց ավելի վատը՝ ընդհանուր։ Սա Սիմպսոնի պարադոքսն է։
 
-**3. study.** Թվերն իրական են՝ 1986 թվականի բրիտանական հետազոտությունից։ Քարերը հեռացնում էին կամ բաց վիրահատությամբ, կամ մաշկի փոքր անցքով։ Ամեն մեթոդով՝ 350 հիվանդ։
+**3. study.** Թվերն իրական են՝ բրիտանական մի հետազոտությունից։ Քարերը հեռացնում էին կամ բաց վիրահատությամբ, կամ մաշկի փոքր անցքով։ Ամեն մեթոդով՝ 350 հիվանդ։
 
 **4. crowd.** Պատկերացրու 350 մարդ ամեն կողմում։ Բաց վիրահատությունից հետո քարից ազատվել է 273-ը, երկրորդ մեթոդից հետո՝ 289-ը։ Երկրորդն ավելի լավն է թվում։
 
-**5. split.** Հիմա բաժանենք նրանց ըստ քարի չափի։
+**5. split.** Հիմա բաժանենք նրանց ըստ քարի չափի։ *[pause 1.5 s]*
 
-**6. small.** Փոքր քարեր՝ բաց վիրահատությունն օգնում է 93 տոկոսին, երկրորդ մեթոդը՝ 87 տոկոսին։
+**6. small.** Փոքր քարեր՝ բաց վիրահատությունն օգնում է 93 տոկոսին, երկրորդ մեթոդը՝ 87 տոկոսին։ *[pause 1.5 s]*
 
-**7. large.** Մեծ քարեր՝ 73 տոկոսն ընդդեմ 69-ի։ Բաց վիրահատությունը հաղթում է երկու խմբում էլ։
+**7. large.** Մեծ քարեր՝ 73 տոկոսն ընդդեմ 69-ի։ Բաց վիրահատության տոկոսն ավելի բարձր է երկու խմբում էլ։ *[pause 2 s]*
 
 **8. why.** Ինչպե՞ս։ Նայիր, թե ով ինչ բուժում է ստացել։ Մեծ, դժվար քարերով հիվանդների մեծ մասին արել են բաց վիրահատություն, իսկ փոքր, հեշտ քարերով հիվանդների մեծ մասին՝ երկրորդ մեթոդը։ Բաց վիրահատությանը բաժին են ընկել դժվար դեպքերը, և դրա համար ընդհանուր թիվը վատ է երևում։
 
-**9. weighted.** Ընդհանուր տոկոսը խմբերի տոկոսների կշռավորված միջինն է։ Բաց վիրահատության հիվանդների երեք քառորդը մեծ քարերով էր, իսկ երկրորդ մեթոդի հիվանդների երեք քառորդը՝ փոքր քարերով։
+**9. weighted.** Ընդհանուր տոկոսը խմբերի տոկոսների կշռավորված միջինն է։ Բաց վիրահատության հիվանդների երեք քառորդը մեծ քարերով էր, իսկ երկրորդ մեթոդի հիվանդների երեք քառորդը՝ փոքր քարերով։ *[pause 2 s]*
 
-**10. berkeley.** Նույնը եղավ 1973 թվականին Բերքլիի համալսարանում։ Ընդունվել էր տղամարդ դիմորդների 44 տոկոսը և կին դիմորդների միայն 35 տոկոսը։ Կարծես խտրականություն լինի։ Բայց վեց խոշոր ֆակուլտետներից չորսում կանայք ընդունվում էին ավելի բարձր տոկոսով։ Պարզվեց, որ կանայք ավելի հաճախ էին դիմում այն ֆակուլտետներ, որտեղ ընդունվում էին քչերը։
+**10. berkeley.** Նույնը եղավ Բերքլիի համալսարանում։ Վեց խոշոր ֆակուլտետներում ընդունվել էր տղամարդ դիմորդների 45 տոկոսը և կին դիմորդների միայն 30 տոկոսը։ Կարծես խտրականություն լինի։ Բայց այդ վեցից չորսում կանայք ընդունվում էին ավելի բարձր տոկոսով։ Պարզվեց, որ կանայք ավելի հաճախ էին դիմում այն ֆակուլտետներ, որտեղ ընդունվում էին քչերը։ *[pause 1.5 s]*
 
-**11. covid.** Իսկ 2020 թվականի սկզբին Իտալիայում կորոնավիրուսով վարակվածների մեջ մահացածների բաժինն ընդհանուր առմամբ ավելի մեծ էր, քան Չինաստանում, թեև ամեն տարիքային խմբում ավելի փոքր էր։ Պատճառը՝ Իտալիայում վարակվածներն ավելի տարեց էին։
+**11. rule.** Ուրեմն ո՞ր թվին հավատալ։ Այստեղ քարի չափն ազդել է և՛ բուժման ընտրության, և՛ արդյունքի վրա, ուստի ընդհանուր թիվը խառնում է հեշտ ու դժվար դեպքերը։ Ավելի ազնիվ է համեմատել նմանը նմանի հետ։ Բայց սա էլ չի ապացուցում, որ բաց վիրահատությունն ավելի լավն է՝ մեթոդները տարբեր տարիներին են կիրառվել, և հիվանդներին պատահական չեն բաժանել։
 
-**12. rule.** Ուրեմն ո՞ր թվին հավատալ։ Եթե խմբերը տարբերվում են մի բանով, որը կար մինչև բուժումը՝ քարի չափով, տարիքով, ֆակուլտետի ընտրությամբ, համեմատիր խմբերն առանձին՝ նմանը նմանի հետ։ Բայց եթե խմբերը բաժանում ես մի բանով, որը հենց բուժման հետևանքն է, ճիշտն ընդհանուր թիվն է։
-
-**13. takeaway.** Այնպես որ, երբ թվերն ասում են՝ «սա ավելի լավն է», հարցրու՝ իսկ նույն տեսակի դեպքե՞ր են համեմատում։
+**12. takeaway.** Երբ թվերն ասում են՝ «սա ավելի լավն է», հարցրու՝ իսկ ինչո՞վ են տարբերվում խմբերը։
 
 <!-- script:end -->
 
@@ -89,7 +89,7 @@ Sums check: 81 + 192 = 273, 234 + 55 = 289; 263 of the 343 large-stone patients 
 patients got B.
 
 **Berkeley, fall 1973** (Bickel, Hammel & O'Connell, Science 187, 1975): campus-wide 44% of 8,442 men and 35% of
-4,321 women admitted (spoken). Six largest departments (applicants, admission rate):
+4,321 women admitted (no longer spoken: the voice and the picture both use the six largest departments, X28). Six largest departments (applicants, admission rate):
 
 | Dept | Men | Women |
 |---|---|---|
@@ -130,7 +130,8 @@ rendering if exact bars are wanted.
   = dark orange, small = light. Results and check marks in orange `#F2A800`.
 - **Split:** the dots move (not fade) into a small-stone band and a large-stone band per crowd, so it is visible that
   A's crowd is mostly large stones and B's mostly small.
-- **Weighted card:** each treatment's rate drawn as two bar segments whose widths are the group sizes.
+- **Weighted card:** `(81 + 192) / (87 + 263) = 78%` first, then the same rate as two bar segments whose widths are
+  the shares 87/350 and 263/350 (X29).
 - **Berkeley:** 100 men vs 100 women, each split easy / hard (51 / 49 and 7 / 93), admitted ones lit.
 - **Reused:** the crowd-grid component planned for the Bayes short (this short needs the same grid with a "move into
   bands" state), captions, karaoke ending, palette, font.
@@ -149,3 +150,22 @@ rendering if exact bars are wanted.
 Same as the Bayes short: voice (13 beats, ~$0.05), timeline + sync check, scenes (the crowd-grid component is
 shared, so this short is mostly new states: bands, recolouring, the weighted card), stills, one draft and one final
 render, contact sheet, Gemini review, review page.
+
+## After the Codex review (2026-11-26)
+
+Fixes by finding ID (CODEX_REVIEW.md):
+
+- **X27:** the general rule ("before treatment -> compare groups, caused by treatment -> use the total") is gone: it
+  is not a valid general adjustment rule (a pre-treatment variable can be a collider, Cinelli, Forney & Pearl 2022,
+  https://doi.org/10.1177/00491241221099552). The rule beat now explains this example only: stone size drove both
+  the choice of treatment and the outcome, so compare like with like; and it says this still does not prove open
+  surgery better (different periods, no random assignment). "Better" is now "the recorded rate is higher".
+- **X28:** the voice uses the six-department rates (44.5% / 30.4%, rounded 45 / 30), the same population as the
+  pictured crowds; the campus-wide 44% / 35% is no longer spoken.
+- **X29:** the weighted card shows the division by 350 with exact counts.
+- **X51:** one extension (Berkeley) kept, the COVID extension cut (text below); year off the voice (source lines);
+  8.5 s of pauses, the longest on the two-group reveal; the closing asks why the groups differ, no «Այնպես որ,».
+
+**Cut beats, kept here word for word so they can come back:**
+
+- `covid`: Իսկ 2020 թվականի սկզբին Իտալիայում կորոնավիրուսով վարակվածների մեջ մահացածների բաժինն ընդհանուր առմամբ ավելի մեծ էր, քան Չինաստանում, թեև ամեն տարիքային խմբում ավելի փոքր էր։ Պատճառը՝ Իտալիայում վարակվածներն ավելի տարեց էին։ (source line: von Kügelgen et al., 2021)

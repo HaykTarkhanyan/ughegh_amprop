@@ -33,14 +33,14 @@
   },
   {
     "key": "trap",
-    "text": "Այս միտումը գործում է ամենուր, որտեղ մեր ջանքն է՝ ձեռնարկատիրոջ բիզնես ծրագրում, ծրագրավորողի կոդում, պապի ձեռքով սարքած ցանկապատում, որը ծուռ է, բայց նրա կարծիքով հարևանինից լավն է։",
-    "visual": "Three quick vignettes with the same rising price tag: a pitch deck, a screen of code, and a crooked village fence with a proud grandfather beside it."
+    "text": "Գուցե նույնն է լինում նաև այլ տեղերում՝ ձեռնարկատիրոջ բիզնես ծրագրում, ծրագրավորողի կոդում, պապի ձեռքով սարքած ցանկապատում, որը ծուռ է, բայց նրա կարծիքով հարևանինից լավն է։ Սա արդեն չափված չէ, միայն նման է։",
+    "visual": "Three quick vignettes with the same rising price tag and a small '?' on each (not measured): a pitch deck, a screen of code, and a crooked village fence with a proud grandfather beside it."
   },
   {
     "key": "takeaway",
-    "text": "Երբ քո ձեռքով արածը քեզ շատ լավն է թվում, դա ճիշտ է՝ քեզ համար։ Մյուսների համար այն ուղղակի արկղ է։",
+    "text": "Երբ քո ձեռքով արածը քեզ շատ լավն է թվում, հարցրու մեկին, ով այն չի սարքել։ Կամ տե՛ս՝ որքա՞ն կվճարեր նա։",
     "pause_after": 1.5,
-    "screen": "Մյուսների համար այն ուղղակի արկղ է",
-    "visual": "The self-built box from the hook, glowing for its maker; to an onlooker's eyes it turns plain; loops."
+    "screen": "Հարցրու մեկին, ով այն չի սարքել",
+    "visual": "The self-built box from the hook, glowing for its maker; an onlooker holds a price tag and writes their own number; loops."
   }
 ]
