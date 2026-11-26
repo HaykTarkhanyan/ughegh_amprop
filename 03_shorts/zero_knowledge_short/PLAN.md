@@ -16,13 +16,13 @@ is possible, the cards, the balls and why it is called "zero knowledge" are in t
 
 <!-- script:start -->
 
-5 beats, 804 characters (809 with numbers spelled out): ~56 s of speech, ~1:01 with pauses and the end tail, 4 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
+5 beats, 803 characters (808 with numbers spelled out): ~56 s of speech, ~1:01 with pauses and the end tail, 4 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
 **1. gossip.** Ընկերուհիդ գրում է՝ «Լսե՞լ ես Անիի մասին»։ Դու գաղտնիքը գիտես, բայց չգիտես՝ նա էլ գիտի՞, թե ուզում է քեզնից իմանալ։ Ինչպե՞ս ստուգել՝ առանց գաղտնիքը բարձրաձայնելու։ *[pause 1 s]*
 
 **2. same_problem.** Նույն խնդիրն ունեն կայքերն ու բանկերը՝ համոզվել, որ գիտես գաղտնաբառդ, կամ որ 18 տարեկանից մեծ ես, առանց ավելորդ բան իմանալու։ Լուծումը կոչվում է զրոյական գիտելիքով ապացույց։
 
-**3. waldo.** Ինչպես «Որտե՞ղ է Ուոլդոն» գրքում՝ գտել ես նրան, բայց չես ուզում ցույց տալ՝ որտեղ։ Ընկերդ շրջվում է, իսկ դու էջը ծածկում ես մեծ ստվարաթղթով, որի փոքրիկ անցքից երևում է միայն նա։ Ընկերդ համոզված է, որ գտել ես, բայց չգիտի՝ էջի որ մասում է։ *[pause 2 s]*
+**3. waldo.** Ինչպես «Որտե՞ղ է Վալոդը» գրքում՝ գտել ես նրան, բայց չես ուզում ցույց տալ՝ որտեղ։ Ընկերդ շրջվում է, իսկ դու էջը ծածկում ես մեծ ստվարաթղթով, որի փոքրիկ անցքից երևում է միայն նա։ Ընկերդ համոզված է, որ գտել ես, բայց չգիտի՝ էջի որ մասում է։ *[pause 2 s]*
 
 **4. tease.** Իսկ բամբասանքի համար կա ծրագիր՝ երկուսդ էլ գրում եք պատասխանը, և այն ասում է միայն՝ համընկնում է, թե ոչ։ Ինչպե՞ս է դա հնարավոր, և ի՞նչ կապ ունեն քարտերն ու գնդակները, տե՛ս երկար տեսանյութում։
 

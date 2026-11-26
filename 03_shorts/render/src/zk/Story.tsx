@@ -320,7 +320,7 @@ export const RealScene: React.FC<SceneProps> = ({ dur = 30, m }) => {
         })}
       </div>
       <div style={{ position: "absolute", left: 0, right: 0, top: 690, textAlign: "center", fontFamily: FONT, fontSize: 40, fontWeight: 700, color: C.ink, opacity: ramp(t, fast, 0.5) * gridIn }}>
-        հազարավոր ռաունդ՝ <span style={{ color: C.orange }}>վայրկյանի մի մասում</span>
+        հազարավոր փուլ՝ <span style={{ color: C.orange }}>վայրկյանի մի մասում</span>
       </div>
       <CaseCard x={150} y={210} t={t} t0={bank} title="Բանկ" checked={ramp(t, bank + 2.5, 0.5)} locked>
         <Row label="աշխատավարձ"><Blur text="612 000 ֏" /></Row>

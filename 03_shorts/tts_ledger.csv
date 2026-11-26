@@ -56,3 +56,8 @@ datetime,model,voice,chars,tokens_in,tokens_audio,audio_s,usd_est,out
 2026-11-26T21:58:38,gemini-3.8-flash-tts,Sadaltager,236,145,405,16.2,0.00372,waldo.wav
 2026-11-26T21:58:43,gemini-3.8-flash-tts,Sadaltager,191,111,310,12.4,0.00285,tease.wav
 2026-11-26T21:58:45,gemini-3.8-flash-tts,Sadaltager,41,25,80,3.2,0.00073,takeaway.wav
+2026-11-26T22:11:59,gemini-3.8-flash-tts,Sadaltager,218,129,386,15.4,0.00354,waldo_setup.wav
+2026-11-26T22:12:07,gemini-3.8-flash-tts,Sadaltager,328,189,655,26.2,0.00599,balls_logic.wav
+2026-11-26T22:12:14,gemini-3.8-flash-tts,Sadaltager,357,202,621,24.8,0.00569,why_zero.wav
+2026-11-26T22:12:25,gemini-3.8-flash-tts,Sadaltager,598,329,942,37.7,0.00864,real.wav
+2026-11-26T22:12:31,gemini-3.8-flash-tts,Sadaltager,235,144,407,16.3,0.00374,waldo.wav

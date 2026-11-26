@@ -23,12 +23,12 @@
           "title": "First video",
           "items": [
             {
-              "id": "A1-2799d1",
-              "title": "Approve: FIRST VIDEO, zero-knowledge proofs (long 16:9, 13 beats, ~4:44 + Short 9:16, 5 beats, ~1:01, scripts ccae08 / d9dc2f)",
+              "id": "A1-4b745f",
+              "title": "Approve: FIRST VIDEO, zero-knowledge proofs (long 16:9, 13 beats, ~4:44 + Short 9:16, 5 beats, ~1:01, scripts 169502 / 4c38a0)",
               "exclusive": "zero_knowledge",
               "note": "Gossip hook; websites and banks have the same problem; Where's Waldo (placed while the friend looks away); the red card (only the 26 black cards shown); the colour-blind balls; why 'zero knowledge' (he already knew every answer); real systems on signed data; the gossip answer. Long 16:9 + Short 9:16, your narration.",
               "detail": [
-                "Open: U-ooo gossip set-up, U-ppp terms in your mouth, U-sss «Ուոլդո» or «Ուոլի», U-a դու/դուք; re-check the Codex rewrites of the card, 'why zero' and Waldo beats"
+                "Open: U-ooo gossip set-up, U-ppp terms in your mouth, re-check the Codex rewrites of the card, 'why zero' and Waldo beats"
               ]
             }
           ]
@@ -239,8 +239,8 @@
           "title": "First video",
           "items": [
             {
-              "id": "C1-2799d1",
-              "title": "Needs changes: FIRST VIDEO, zero-knowledge proofs (long 16:9, 13 beats, ~4:44 + Short 9:16, 5 beats, ~1:01, scripts ccae08 / d9dc2f)",
+              "id": "C1-4b745f",
+              "title": "Needs changes: FIRST VIDEO, zero-knowledge proofs (long 16:9, 13 beats, ~4:44 + Short 9:16, 5 beats, ~1:01, scripts 169502 / 4c38a0)",
               "exclusive": "zero_knowledge",
               "note": "Leave comments on zero_knowledge/PLAN.html",
               "detail": []

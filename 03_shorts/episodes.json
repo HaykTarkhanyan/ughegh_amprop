@@ -336,7 +336,7 @@
   "layout": "landscape",
   "beats": 13,
   "planned_s": 284,
-  "script_sha": "ccae085af604",
+  "script_sha": "1695029a75dc",
   "approved_sha": null,
   "narration": {
    "narrator": "gemini-tts",
@@ -351,7 +351,7 @@
   "layout": "portrait",
   "beats": 5,
   "planned_s": 61,
-  "script_sha": "d9dc2f7ec68d",
+  "script_sha": "4c38a097ed6b",
   "approved_sha": null,
   "narration": {
    "narrator": "gemini-tts",

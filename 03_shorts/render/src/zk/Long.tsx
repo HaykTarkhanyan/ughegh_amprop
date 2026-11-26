@@ -98,7 +98,7 @@ const GROUPS: Group[] = [
   {
     keys: ["real"], render: (dur) => {
       const g0 = beat("real").start;
-      return <RealScene dur={dur} m={{ fast: rel(g0, at("real", "Ռաունդներն")), bank: rel(g0, at("real", "Հոլանդական")), eu: rel(g0, at("real", "Եվրոպական")), signed: rel(g0, at("real", "Այստեղ")), crypto: rel(g0, at("real", "Իսկ")) }} />;
+      return <RealScene dur={dur} m={{ fast: rel(g0, at("real", "Փուլերն")), bank: rel(g0, at("real", "Հոլանդական")), eu: rel(g0, at("real", "Եվրոպական")), signed: rel(g0, at("real", "Այստեղ")), crypto: rel(g0, at("real", "Իսկ")) }} />;
     },
   },
   {

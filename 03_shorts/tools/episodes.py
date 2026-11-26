@@ -41,7 +41,7 @@ NOTES = {
     "zero_knowledge": ("Gossip hook; websites and banks have the same problem; Where's Waldo (placed while the friend looks away); "
                        "the red card (only the 26 black cards shown); the colour-blind balls; why 'zero knowledge' (he already "
                        "knew every answer); real systems on signed data; the gossip answer. Long 16:9 + Short 9:16, your narration.",
-                       "Open: U-ooo gossip set-up, U-ppp terms in your mouth, U-sss «Ուոլդո» or «Ուոլի», U-a դու/դուք; re-check the Codex rewrites of the card, 'why zero' and Waldo beats"),
+                       "Open: U-ooo gossip set-up, U-ppp terms in your mouth, re-check the Codex rewrites of the card, 'why zero' and Waldo beats"),
     "own_voice": ("Air + bone conduction; the recording is thinner, less bass; plug your ears (louder and bassier); people rated "
                   "their own unlabelled voice higher; part of the cringe is probably surprise.", "Open: U-bb terms, «ավելի ուժեղ ու թավ» (X53)"),
     "decoy_popcorn": ("Small 1x / medium 2x / large 3x popcorn; the subscription decoy (84% vs 32%) as the clean case; the effect "

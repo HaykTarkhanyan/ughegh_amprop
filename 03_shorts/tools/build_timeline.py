@@ -263,7 +263,7 @@ def pages(words, tail_hold=HOLD_S, key="?"):
     if cur:
         out.append(cur)
 
-    def merge_pass(across_sentences):
+    def merge_pass(across_sentences, extra=0):
         merged = True
         while merged:
             merged = False
@@ -272,9 +272,10 @@ def pages(words, tail_hold=HOLD_S, key="?"):
                     continue
                 p = out[k]
                 ok_end = lambda q: across_sentences or not ends_sentence(q)  # noqa: E731
-                can_next = (k + 1 < len(out) and ok_end(p) and len(p) + len(out[k + 1]) <= P["max_merged"]
+                limit = P["max_merged"] + extra
+                can_next = (k + 1 < len(out) and ok_end(p) and len(p) + len(out[k + 1]) <= limit
                             and fits(p + out[k + 1]))
-                can_prev = (k > 0 and ok_end(out[k - 1]) and len(out[k - 1]) + len(p) <= P["max_merged"]
+                can_prev = (k > 0 and ok_end(out[k - 1]) and len(out[k - 1]) + len(p) <= limit
                             and fits(out[k - 1] + p))
                 if can_prev and (ends_sentence(p) or not can_next):
                     out[k - 1:k + 1] = [out[k - 1] + p]
@@ -287,6 +288,7 @@ def pages(words, tail_hold=HOLD_S, key="?"):
 
     merge_pass(across_sentences=False)
     merge_pass(across_sentences=True)
+    merge_pass(across_sentences=False, extra=1)  # last resort: one word over the limit, if it still fits (X14)
     result, short = [], []
     for k, p in enumerate(out):
         try:
