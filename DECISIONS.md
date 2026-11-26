@@ -2,6 +2,14 @@
 
 Newest at the top.
 
+## 27. Publishing: all four platforms as «Ուղեղ Ամպրոպ»; Meta through its API, TikTok and YouTube through a supervised Playwright co-pilot
+
+- **Date / status:** 2026-11-26, active (supersedes "uploaded by hand" in #19)
+- **Decision:** The channel launches on YouTube, TikTok, Instagram and Facebook at once, named «Ուղեղ Ամպրոպ» with the handle `ugheghamprop` (as the Telegram group). Instagram and Facebook Reels are posted through Meta's official Content Publishing API from a small Python tool; TikTok and YouTube through a Playwright co-pilot on their own web uploaders that fills everything and stops for Hayk to press the final button, while the TikTok and YouTube API audits are applied for. Videos with the TTS narrator carry each platform's AI label; videos Hayk narrates do not. Checklist: `03_shorts/PUBLISHING.md`.
+- **Why:** Hayk, Q28-Q31 (2026-11-26). Meta's API needs only Standard Access for one's own professional accounts and can set the "AI info" label (`is_ai_generated`, Sep 2026); TikTok's API keeps posts private until an audit; TikTok's terms bar automated scripts that interact with the service, so the automation stays supervised and small. Handle checks on 2026-11-26: free on YouTube and TikTok, very likely on Instagram, Facebook confirmed at setup.
+- **Alternatives rejected:** Playwright for all four (against all three platforms' terms, fragile, risks the new accounts); a scheduler service such as Buffer or Metricool (a third party with access to every account); YouTube and TikTok only at first; manual uploads (the #19 plan, kept as the fallback).
+- **What would change this:** a TikTok or YouTube API audit passing (then their co-pilot is replaced by the API); any account warning about automation (then that platform goes back to manual uploads at once); Meta changing Standard Access for own accounts.
+
 ## 26. Every Codex finding applied; the scripts follow the rules, with cut beats kept in the plans
 
 - **Date / status:** 2026-11-26, active
@@ -60,7 +68,7 @@ Newest at the top.
 
 ## 19. Short videos (Shorts, Reels, TikTok): Armenian, code-drawn animation + real photos, made in session, uploaded by hand
 
-- **Date / status:** 2026-11-25, active (tools review done; rendering framework still open)
+- **Date / status:** 2026-11-25, active (tools review done; rendering framework still open); "uploaded by hand" superseded by #27 on 2026-11-26
 - **Decision:** Short vertical videos on thinking errors (first: survivorship bias, Soviet fridges) are Armenian only, drawn by code (animation mixed with real photos that the code zooms, pans and highlights), made by Claude Code in session (topic in, script and scene code written, rendered, checked, Hayk reviews), and uploaded by hand. They get a new look, not the webinar branding. The tools review lives in `_knowledge/short_videos/lit_review.md`; production will go to `03_shorts/`.
 - **Why:** Hayk's answers Q1-Q6 in the 2026-11-25 session, plus "when I say AI generated ... it will be programmatically made with help of AI ... It's not gonna be Gemini or something images". The Armenian voice already works in sample_problems_qysu (Gemini TTS, voice Sadaltager, ~$0.01 per 45 s), so the open choice is the renderer.
 - **Alternatives rejected:** AI video or AI images (Hayk); stock footage under big captions (the generic faceless-channel look); a one-command pipeline from day one (more upfront work before knowing what a good short looks like); posting by API (YouTube and TikTok keep uploads from unaudited apps private, see the review section 10.3); Armenian + English versions; the webinar mascot and palette; a separate repo or the qysu repo.

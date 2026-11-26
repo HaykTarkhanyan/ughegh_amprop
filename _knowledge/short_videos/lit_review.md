@@ -278,6 +278,24 @@ All four frameworks above can do the first three; HTML-based ones do it with a f
 | Instagram Graph API | Professional account needed; 50 API posts per rolling 24 h; Reels via container then publish | **[S]** |
 | Postiz | Open-source scheduler (AGPL-3.0, 42k stars) **[L]**; self-hosting still needs our own app approvals on each platform **[S]**; its cloud version uses its approved apps **[U]** | |
 
+**Update 2026-11-26 (posting to Facebook, Instagram and TikTok; Hayk: "we'll drive from playwright i guess"):**
+
+- **Instagram / Facebook, official:** an app that serves only your own professional account needs Standard Access,
+  no App Review or Business Verification (Meta's Instagram Platform overview and App Review pages) **[S]**. Reels go
+  through the Content Publishing API with resumable upload; a 28 Sep 2026 changelog entry adds `is_ai_generated`,
+  which applies the "AI info" label **[S]**. A personal Instagram account cannot publish by API; it must be a
+  Business or Creator account linked to a Facebook Page **[S]**.
+- **Meta Business Suite** (free, Meta's own web dashboard) schedules one Reel to both Facebook and Instagram, about
+  29-30 days ahead (vendor guides disagree by a day) **[S]**.
+- **TikTok Studio web uploader** schedules 15 minutes to 10 days ahead, for Business / Creator accounts, not Personal
+  (TikTok's 2021 announcement, 2026 guides) **[S]**.
+- **Driving the web uploaders with Playwright:** TikTok's terms (rest-of-world, 2024 copy) bar "automated scripts"
+  that collect information from or "otherwise interact with" the Services, and allow termination at TikTok's
+  discretion; a 2026 report says the US terms bar bots without written approval **[S]**. Meta's terms likewise bar
+  automated access without permission **[U, not re-read]**. So a Playwright uploader is against the letter of the
+  terms on TikTok; a human pressing the final button lowers the risk but does not make it compliant **[U]**.
+  Sources: TikTok terms (law-school copy, Aug 2024), conductatlas.com clause records, instantdm.com (2026).
+
 ---
 
 ## 11. Ruled out and why
