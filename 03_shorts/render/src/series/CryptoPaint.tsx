@@ -248,7 +248,7 @@ const MathScene: React.FC<{ m: Record<string, number> }> = ({ m }) => {
     <Backdrop>
       {[P.yellow, P.red, P.blue].map((c, i) => <Can key={i} x={330 + i * 175} y={420} color={c} on={1 - nums} s={1.2} />)}
       {["5", "6", "15"].map((n, i) => <Tag key={i} text={n} x={330 + i * 175} y={420} size={80} weight={900} color={[P.yellow, P.red, P.blue][i]} opacity={nums * (1 - formula)} width={200} />)}
-      <div style={{ position: "absolute", left: 0, width: 1080, top: 560, textAlign: "center", fontFamily: FONT, fontSize: 78, fontWeight: 800, color: C.ink, opacity: formula }}>
+      <div style={{ position: "absolute", left: 0, width: 1080, top: 560, textAlign: "center", fontFamily: FONT, fontSize: 62, fontWeight: 800, color: C.ink, opacity: formula }}>
         g<sup style={{ fontSize: 48 }}>a</sup> ÷ p → մնացորդ
       </div>
       <svg width={1080} height={1920} style={{ position: "absolute", left: 0, top: 0 }}>
@@ -316,14 +316,14 @@ const Today: React.FC<{ m: Record<string, number> }> = ({ m }) => {
 // ---------- long pointer ----------
 const Pointer: React.FC<{ m: Record<string, number>; dur: number }> = ({ m, dur }) => {
   const t = useT();
-  const folder = ramp(t, m.secret, 0.4) * (1 - ramp(t, m.quantum, 0.3));
+  const folder = ramp(t, 0.2, 0.4) * (1 - ramp(t, m.quantum, 0.3)); // up from the first frame; the stamp lands on the word
   const chip = ramp(t, m.quantum, 0.4) * (1 - ramp(t, m.see, 0.3));
   return (
     <Backdrop>
       <svg width={1080} height={1920} style={{ position: "absolute", left: 0, top: 0, opacity: folder }}>
         <path d="M 300 420 h 160 l 30 40 h 290 v 340 h -480 z" fill="#C9A35A" stroke="#8A6A2A" strokeWidth={4} />
       </svg>
-      <div style={{ position: "absolute", left: 330, top: 560, width: 420, padding: "10px 0", border: `6px solid ${C.red}`, borderRadius: 12, textAlign: "center", fontFamily: FONT, fontSize: 56, fontWeight: 900, color: C.red, transform: "rotate(-10deg)", opacity: folder }}>ԳԱՂՏՆԻ</div>
+      <div style={{ position: "absolute", left: 330, top: 560, width: 420, padding: "10px 0", border: `6px solid ${C.red}`, borderRadius: 12, textAlign: "center", fontFamily: FONT, fontSize: 56, fontWeight: 900, color: C.red, transform: `rotate(-10deg) scale(${2 - Math.min(1, pop(t, m.secret, 12, 0.5))})`, opacity: folder * Math.min(1, pop(t, m.secret, 12, 0.5)) }}>ԳԱՂՏՆԻ</div>
       <svg width={1080} height={1920} style={{ position: "absolute", left: 0, top: 0, opacity: chip }}>
         <rect x={384} y={500} width={240} height={240} rx={20} fill="#1B2A44" stroke="#6FA8FF" strokeWidth={4} style={{ filter: `drop-shadow(0 0 ${20 + 10 * Math.sin(t * 6)}px #6FA8FF)` }} />
         {Array.from({ length: 6 }, (_, i) => <g key={i}><line x1={414 + i * 36} y1={470} x2={414 + i * 36} y2={500} stroke="#6FA8FF" strokeWidth={6} /><line x1={414 + i * 36} y1={740} x2={414 + i * 36} y2={770} stroke="#6FA8FF" strokeWidth={6} /></g>)}

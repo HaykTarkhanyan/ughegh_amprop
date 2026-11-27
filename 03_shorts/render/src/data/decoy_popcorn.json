@@ -6,7 +6,7 @@
  "narrator": "gemini-tts",
  "voice": "Sadaltager",
  "model": "gemini-3.8-flash-tts",
- "audio": "narration_20261127-002559-54160a7d.wav",
+ "audio": "narration_20261127-234557-91f8e5c8.wav",
  "beats": [
   {
    "key": "hook",
@@ -3477,9 +3477,25 @@
   ]
  },
  "build": {
-  "id": "20261127-002559-54160a7d",
+  "id": "20261127-234557-91f8e5c8",
   "script_sha": "689bc1bd2650d742124da43eb544645cfe86f02f10a4eab7f5bb2bc11b1bd7f2",
   "manifest_sha": "74090dec38b7014bfe7f1e987f6f9396f1c8c7ddce762e99ac30259599982400",
-  "audio_sha": "54160a7d0242b61fe8f02ff45c703e220f51f48b555f13280149337dfde4c5ed"
+  "audio_sha": "91f8e5c84812450d6459f13555cafbbb0fcda8fb36278c0115c6cab943e752bf",
+  "loudness": {
+   "target_lufs": -17.0,
+   "limit_dbfs": -1.0,
+   "gains_db": {
+    "hook": -0.2,
+    "choice": 1.6,
+    "medium": 0.3,
+    "gift": 1.0,
+    "name": -1.0,
+    "economist": 0.0,
+    "why": 1.2,
+    "everywhere": 0.6,
+    "limits": 0.1,
+    "takeaway": 0.6
+   }
+  }
  }
 }

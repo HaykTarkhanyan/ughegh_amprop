@@ -3,7 +3,8 @@
 Reads <short>/beats.hy.json (key, text, optional screen / screen_small / visual / pause_after) and
 <short>/audio/manifest.json (from tools/tts_gemini.py beats, or tools/import_recording.py for Hayk's own voice).
 Everything is checked first (tools/validate_episode.py, stage "audio"), so nothing is built from a changed script.
-Each clip's leading and trailing silence is cut down to LEAD_S / TAIL_S, the clips are joined with GAP_S (plus the
+Each clip's leading and trailing silence is cut down to LEAD_S / TAIL_S, its loudness is brought to TARGET_LUFS (gain
+plus a look-ahead limiter, after the pause scan, so timing is untouched), the clips are joined with GAP_S (plus the
 beat's pause_after) between them, and every word gets a start and end time spread over its beat in proportion to its
 spoken length, with extra weight after punctuation (method B in _knowledge/short_videos/lit_review.md, section 5.1).
 Then the pauses the voice really makes (-35 dB for 80 ms or more) are snapped onto the nearest word boundaries and
@@ -26,6 +27,7 @@ import hashlib
 import json
 import logging
 import re
+import subprocess
 import sys
 import time
 import wave
@@ -61,6 +63,12 @@ PAUSE_RMS = 10 ** (-35 / 20) * 32768        # -35 dBFS, as in ffmpeg silencedete
 MIN_PAUSE_S = 0.08                          # shorter dips are gaps between sounds, not pauses
 SNAP_TOL_S = 0.8                            # how far a predicted word boundary may move onto a real pause
 MIN_S_PER_UNIT = 0.035                      # half the normal pace (~0.07 s per spoken letter at 870 chars/min)
+# Loudness (Hayk, 2026-11-27: "different audio segments come in different audio gains from gemini"). Measured: clips
+# of one draft spread 1.7-5.4 LU (-20.8 to -14.4 LUFS) while Gemini already peaks every clip near -1 dBFS, so plain
+# gain cannot lift the quiet ones. Each clip is brought to TARGET_LUFS with ffmpeg volume + a look-ahead limiter at
+# LIMIT_DBFS (delay compensated, so the length and word times do not move). Applied after the pause scan.
+TARGET_LUFS = -17.0
+LIMIT_DBFS = -1.0
 
 
 class CaptionError(ValueError):
@@ -97,6 +105,30 @@ def trim(samples, sr, key="?"):
     a = max(0, first - int(LEAD_S * sr))
     b = min(len(samples), last + int(TAIL_S * sr))
     return samples[a:b], (first - a) / sr, (last - a) / sr
+
+
+def loudness_lufs(path):
+    """Integrated loudness of a WAV file (EBU R128, ffmpeg ebur128). Fails loudly if ffmpeg cannot measure it."""
+    r = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(path), "-af", "ebur128", "-f", "null", "-"],
+                       capture_output=True, text=True, encoding="utf-8")
+    vals = re.findall(r"I:\s+(-?[\d.]+) LUFS", r.stderr)
+    if r.returncode or not vals:
+        raise SystemExit(f"{path}: ffmpeg could not measure loudness ({r.stderr[-300:]})")
+    return float(vals[-1])
+
+
+def level(samples, sr, gain_db, key="?"):
+    """The clip with gain_db applied and peaks held under LIMIT_DBFS by ffmpeg's look-ahead limiter, same length."""
+    limit = 10 ** (LIMIT_DBFS / 20)
+    r = subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-f", "s16le", "-ar", str(sr), "-ac", "1", "-i", "-",
+                        "-af", f"volume={gain_db:.2f}dB,alimiter=limit={limit:.4f}:attack=5:release=60:level=false:latency=true",
+                        "-f", "s16le", "-ar", str(sr), "-ac", "1", "-"], input=samples.tobytes(), capture_output=True)
+    if r.returncode:
+        raise SystemExit(f"beat {key}: ffmpeg could not level the clip ({r.stderr.decode(errors='replace')[-300:]})")
+    out = array("h", r.stdout)
+    if len(out) != len(samples):
+        raise SystemExit(f"beat {key}: levelling changed the clip length ({len(samples)} -> {len(out)} samples)")
+    return out
 
 
 def weight(w, with_pause=True):
@@ -345,7 +377,7 @@ def main():
     out_dir = args.short / "build"
     out_dir.mkdir(exist_ok=True)
 
-    joined, sr_all, t, snapped, short_pages = array("h"), None, 0.0, 0, []
+    joined, sr_all, t, snapped, short_pages, gains = array("h"), None, 0.0, 0, [], {}
     timeline = {"fps": FPS, "width": P["width"], "height": P["height"], "layout": layout,
                 "narrator": manifest.get("narrator", "gemini-tts"), "voice": manifest.get("voice"),
                 "model": manifest.get("model"), "audio": "narration.wav", "beats": []}
@@ -358,7 +390,9 @@ def main():
             raise SystemExit(f"{m['file']}: sample rate {sr} differs from {sr_all}")
         clip, s0, s1 = trim(samples, sr, b["key"])
         start = t
-        joined.extend(clip)
+        measured = loudness_lufs(args.short / "audio" / m["file"])  # the gate ignores silence, so trimming does not matter
+        gains[b["key"]] = round(TARGET_LUFS - measured, 2)
+        joined.extend(level(clip, sr, TARGET_LUFS - measured, b["key"]))
         t += len(clip) / sr
         words = word_times(b["text"], start + s0, start + s1)
         if not args.no_snap:
@@ -386,7 +420,8 @@ def main():
     audio_sha = sha256(out_dir / "narration.wav")
     timeline["build"] = {"id": f"{datetime.now():%Y%m%d-%H%M%S}-{audio_sha[:8]}",
                          "script_sha": sha256(args.short / "beats.hy.json"), "manifest_sha": sha256(man_path),
-                         "audio_sha": audio_sha}
+                         "audio_sha": audio_sha,
+                         "loudness": {"target_lufs": TARGET_LUFS, "limit_dbfs": LIMIT_DBFS, "gains_db": gains}}
     (out_dir / "timeline.json").write_text(json.dumps(timeline, ensure_ascii=False, indent=1), encoding="utf-8")
     for s in short_pages:
         log.warning("caption page on screen only %.2f s (under %.1f s): %s «%s»", s["shown_s"], MIN_PAGE_S, s["beat"], s["text"])

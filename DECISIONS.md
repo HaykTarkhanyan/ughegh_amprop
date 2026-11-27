@@ -2,6 +2,14 @@
 
 Newest at the top.
 
+## 29. Every narration clip is levelled to -17 LUFS (gain plus a look-ahead limiter at -1 dBFS) before the clips are joined
+
+- **Date / status:** 2026-11-27, active
+- **Decision:** `tools/build_timeline.py` measures each clip's integrated loudness (EBU R128, ffmpeg `ebur128`) and brings it to TARGET_LUFS = -17 with ffmpeg `volume` + `alimiter` (limit -1 dBFS, attack 5 ms, release 60 ms, auto-level off, delay compensated). It runs after the pause scan, so word times do not move; the gains are stored in the timeline's build block. Existing drafts got the new narration swapped into their rendered videos (video stream copied), no re-render.
+- **Why:** Hayk, 2026-11-27: "different audio segments come in different audio gains from gemini". Measured on the 13 voiced drafts: the clips of one video spread 1.7-5.4 LU (painted_statues -19.8 to -14.4 LUFS, week_seven -20.8 to -16.4) while Gemini already peaks every clip near -1 dBFS, so plain gain could not lift the quiet clips without clipping. After levelling, Petrov's 12 beats measure -16.9 to -17.1 LUFS with peaks at -1.0 dBFS; sample count and every word time identical, envelope lag 0; 2 new unit tests (19 pass).
+- **Alternatives rejected:** gain only to the quietest clip's level (about -20 LUFS, too quiet on phone speakers, still uneven where a clip has no headroom); ffmpeg `loudnorm` per clip (dynamic mode reshapes speech more than a limiter on a few peaks); normalising the joined narration as a whole (fixes the average, not the jumps between beats); a new Python dependency such as pyloudnorm (ffmpeg is already required by the tools).
+- **What would change this:** music under the voice (then the mix target is set for voice plus bed, likely -14 to -16 LUFS for the platforms); audible pumping on a clip that needs much more than ~4 dB of gain; Hayk's own recording, which gets the same levelling.
+
 ## 28. Scripts are reviewed as full draft videos, voiced with the real TTS voice, in publishing order
 
 - **Date / status:** 2026-11-27, active (replaces "the script is approved before the voice is made", Q17)

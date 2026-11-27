@@ -6,7 +6,7 @@
  "narrator": "gemini-tts",
  "voice": "Sadaltager",
  "model": "gemini-3.8-flash-tts",
- "audio": "narration_20261127-201123-e09b316e.wav",
+ "audio": "narration_20261127-234627-1d1fdfc8.wav",
  "beats": [
   {
    "key": "hook",
@@ -2981,9 +2981,24 @@
   ]
  },
  "build": {
-  "id": "20261127-201123-e09b316e",
+  "id": "20261127-234627-1d1fdfc8",
   "script_sha": "5d5ccb5694dfafcb93cb8467eb96cdde1b07b0f06a9f49dc4a0eb5b48bb90c7a",
   "manifest_sha": "b979b645d9de226aa1d22403425b3647f4d337e1f26dec9a0d3de7eb498abb55",
-  "audio_sha": "e09b316e1894376e46d795756cbda01ade9c1a82ff3e1589d72db8b2482aa454"
+  "audio_sha": "1d1fdfc804d98d2e985e63697140a7d55da5f3dc3abce570850d12a22ef097b6",
+  "loudness": {
+   "target_lufs": -17.0,
+   "limit_dbfs": -1.0,
+   "gains_db": {
+    "hook": 1.4,
+    "drag_greenland": 1.7,
+    "drag_armenia": 0.2,
+    "orange": 0.3,
+    "mercator": 1.0,
+    "stretch": -0.8,
+    "others": 2.1,
+    "google": 2.2,
+    "takeaway": 0.0
+   }
+  }
  }
 }

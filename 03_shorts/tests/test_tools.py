@@ -167,6 +167,25 @@ class Numbers(unittest.TestCase):
         self.assertEqual(hy_numbers.spoken("1983"), "հազար ինը հարյուր ութսուներեք")
 
 
+class Loudness(unittest.TestCase):
+    """2026-11-27: clips are levelled with gain + a look-ahead limiter; length must not change, peaks stay under the limit."""
+
+    def test_level_keeps_length_and_limits_peaks(self):
+        sr = 24000
+        tone = array("h", (int(29000 * math.sin(2 * math.pi * 220 * i / sr)) for i in range(sr)))  # ~ -1 dBFS peak
+        out = build_timeline.level(tone, sr, 6.0, "test")  # +6 dB would clip without the limiter
+        self.assertEqual(len(out), len(tone))
+        limit = 32768 * 10 ** (build_timeline.LIMIT_DBFS / 20)
+        self.assertLessEqual(max(abs(s) for s in out[sr // 10:]), limit * 1.02)
+
+    def test_level_turns_down(self):
+        sr = 24000
+        tone = array("h", (int(20000 * math.sin(2 * math.pi * 220 * i / sr)) for i in range(sr)))
+        out = build_timeline.level(tone, sr, -6.0, "test")
+        ratio = max(abs(s) for s in out[sr // 10:]) / 20000
+        self.assertAlmostEqual(ratio, 10 ** (-6 / 20), delta=0.03)
+
+
 class SyncCheck(unittest.TestCase):
     """X4: an unmatched comma is logged without a logging traceback."""
 

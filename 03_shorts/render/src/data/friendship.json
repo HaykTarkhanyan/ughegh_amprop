@@ -6,7 +6,7 @@
  "narrator": "gemini-tts",
  "voice": "Sadaltager",
  "model": "gemini-3.8-flash-tts",
- "audio": "narration_20261127-201124-074e2371.wav",
+ "audio": "narration_20261127-234640-ea7f6632.wav",
  "beats": [
   {
    "key": "hook",
@@ -2710,9 +2710,25 @@
   "short_pages": []
  },
  "build": {
-  "id": "20261127-201124-074e2371",
+  "id": "20261127-234640-ea7f6632",
   "script_sha": "f02fa1672fa22d0f782c7f9ff42c3fb19b7d80f2d011ca2ed15f34abae79c2c4",
   "manifest_sha": "656175fbae4f2265a56e16e72b9162446782df1be05aca5b94ea1e5dc7e09763",
-  "audio_sha": "074e2371602056e3dff0c4969c596ba9d226aab6ba0be6c582cb9fa624906294"
+  "audio_sha": "ea7f6632ce1d3a5eced13d5652ed5f573cb61b66d66be098f1102e74213788c6",
+  "loudness": {
+   "target_lufs": -17.0,
+   "limit_dbfs": -1.0,
+   "gains_db": {
+    "hook": 1.0,
+    "name": 2.2,
+    "network": 0.3,
+    "friends_avg": -0.2,
+    "count": 1.7,
+    "why": 1.0,
+    "facebook": 2.5,
+    "flu": -0.7,
+    "vaccine": 0.0,
+    "takeaway": -1.1
+   }
+  }
  }
 }

@@ -6,7 +6,7 @@
  "narrator": "gemini-tts",
  "voice": "Sadaltager",
  "model": "gemini-3.8-flash-tts",
- "audio": "narration_20261127-220103-a7b6556e.wav",
+ "audio": "narration_20261127-234733-dd90add8.wav",
  "beats": [
   {
    "key": "hook",
@@ -4766,9 +4766,29 @@
   ]
  },
  "build": {
-  "id": "20261127-220103-a7b6556e",
+  "id": "20261127-234733-dd90add8",
   "script_sha": "27e9d6571e27ce1d482d31c46b93041dc1dc07222ff4372ffa33c38c7435dcf3",
   "manifest_sha": "7f7ce816f8ad83861e74810ae7d0cdfb1d49b082929e7c562ebf5f27346ea404",
-  "audio_sha": "a7b6556e08db3b77a6a374944de263a8a0df5158b2f2fb48b560ad68c3dc55ec"
+  "audio_sha": "dd90add87308ba03b364f92c690cfbe08fe855bcdeae070567ba5e964b3d7fb2",
+  "loudness": {
+   "target_lufs": -17.0,
+   "limit_dbfs": -1.0,
+   "gains_db": {
+    "hook": 0.1,
+    "problem": -0.2,
+    "idea": 0.7,
+    "setup": 0.2,
+    "common": -0.1,
+    "secrets": -0.4,
+    "mix_send": -1.2,
+    "final": 1.5,
+    "eve": -1.4,
+    "math": -1.1,
+    "toy": -0.4,
+    "today": 0.1,
+    "long_pointer": -0.2,
+    "takeaway": -1.0
+   }
+  }
  }
 }

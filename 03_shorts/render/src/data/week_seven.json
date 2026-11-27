@@ -6,7 +6,7 @@
  "narrator": "gemini-tts",
  "voice": "Sadaltager",
  "model": "gemini-3.8-flash-tts",
- "audio": "narration_20261127-220236-169318af.wav",
+ "audio": "narration_20261127-234803-0d701ce4.wav",
  "beats": [
   {
    "key": "hook",
@@ -3433,9 +3433,24 @@
   ]
  },
  "build": {
-  "id": "20261127-220236-169318af",
+  "id": "20261127-234803-0d701ce4",
   "script_sha": "f0aaab72d5fa588dbf82cf775226beabebba13e6c32b6aaebb97f8d4ea9ff920",
   "manifest_sha": "c659b8190b3e345af47db77cddd721c42217826a2d8a89e7537a64af47294ebe",
-  "audio_sha": "169318af98348d86e3e8e50588757a8f2b5beba256c2401e404580c5c58e3070"
+  "audio_sha": "0d701ce490459a233da92a743d2dc09913022b08b811c5c1e67fdf9864f8228c",
+  "loudness": {
+   "target_lufs": -17.0,
+   "limit_dbfs": -1.0,
+   "gains_db": {
+    "hook": 3.3,
+    "moon": 0.8,
+    "sabbath": 1.5,
+    "armenian": 3.8,
+    "planets": -0.3,
+    "order_setup": 0.0,
+    "order_count": 0.2,
+    "soviet": 1.3,
+    "takeaway": -0.6
+   }
+  }
  }
 }
