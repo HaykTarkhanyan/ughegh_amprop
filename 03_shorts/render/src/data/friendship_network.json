@@ -1,0 +1,322 @@
+{
+ "summary": {
+  "people": 20,
+  "friendships": 36,
+  "mean_friends": 3.6,
+  "mean_of_friends_means": 5.18,
+  "random_friend_mean": 4.92,
+  "variance": 4.74,
+  "mu_plus_var_over_mu": 4.92,
+  "fewer_than_friends": 17,
+  "more_than_friends": 3,
+  "max_degree": 11
+ },
+ "nodes": [
+  {
+   "id": 0,
+   "degree": 6,
+   "friends_mean": 4.67,
+   "fewer": false,
+   "x": 370.6,
+   "y": 581.2
+  },
+  {
+   "id": 1,
+   "degree": 4,
+   "friends_mean": 5.5,
+   "fewer": true,
+   "x": 594.1,
+   "y": 841.2
+  },
+  {
+   "id": 2,
+   "degree": 11,
+   "friends_mean": 3.91,
+   "fewer": false,
+   "x": 577.6,
+   "y": 714.5
+  },
+  {
+   "id": 3,
+   "degree": 3,
+   "friends_mean": 6.33,
+   "fewer": true,
+   "x": 581.6,
+   "y": 917.1
+  },
+  {
+   "id": 4,
+   "degree": 4,
+   "friends_mean": 4.5,
+   "fewer": true,
+   "x": 469.1,
+   "y": 857.3
+  },
+  {
+   "id": 5,
+   "degree": 7,
+   "friends_mean": 4.29,
+   "fewer": false,
+   "x": 608.4,
+   "y": 527.5
+  },
+  {
+   "id": 6,
+   "degree": 4,
+   "friends_mean": 4.75,
+   "fewer": true,
+   "x": 384.6,
+   "y": 839.0
+  },
+  {
+   "id": 7,
+   "degree": 4,
+   "friends_mean": 5,
+   "fewer": true,
+   "x": 746.8,
+   "y": 761.4
+  },
+  {
+   "id": 8,
+   "degree": 2,
+   "friends_mean": 7.5,
+   "fewer": true,
+   "x": 779.8,
+   "y": 848.0
+  },
+  {
+   "id": 9,
+   "degree": 3,
+   "friends_mean": 7,
+   "fewer": true,
+   "x": 705.8,
+   "y": 526.2
+  },
+  {
+   "id": 10,
+   "degree": 3,
+   "friends_mean": 4,
+   "fewer": true,
+   "x": 734.8,
+   "y": 395.9
+  },
+  {
+   "id": 11,
+   "degree": 2,
+   "friends_mean": 5.5,
+   "fewer": true,
+   "x": 492.7,
+   "y": 675.2
+  },
+  {
+   "id": 12,
+   "degree": 2,
+   "friends_mean": 5,
+   "fewer": true,
+   "x": 234.9,
+   "y": 733.0
+  },
+  {
+   "id": 13,
+   "degree": 2,
+   "friends_mean": 4,
+   "fewer": true,
+   "x": 333.8,
+   "y": 980.0
+  },
+  {
+   "id": 14,
+   "degree": 3,
+   "friends_mean": 4.33,
+   "fewer": true,
+   "x": 816.1,
+   "y": 610.7
+  },
+  {
+   "id": 15,
+   "degree": 4,
+   "friends_mean": 5.25,
+   "fewer": true,
+   "x": 306.4,
+   "y": 576.7
+  },
+  {
+   "id": 16,
+   "degree": 2,
+   "friends_mean": 5,
+   "fewer": true,
+   "x": 160.0,
+   "y": 535.7
+  },
+  {
+   "id": 17,
+   "degree": 2,
+   "friends_mean": 5,
+   "fewer": true,
+   "x": 659.0,
+   "y": 330.0
+  },
+  {
+   "id": 18,
+   "degree": 2,
+   "friends_mean": 7,
+   "fewer": true,
+   "x": 840.0,
+   "y": 698.9
+  },
+  {
+   "id": 19,
+   "degree": 2,
+   "friends_mean": 5,
+   "fewer": true,
+   "x": 239.9,
+   "y": 452.8
+  }
+ ],
+ "edges": [
+  [
+   0,
+   2
+  ],
+  [
+   0,
+   5
+  ],
+  [
+   0,
+   12
+  ],
+  [
+   0,
+   15
+  ],
+  [
+   0,
+   16
+  ],
+  [
+   0,
+   19
+  ],
+  [
+   1,
+   2
+  ],
+  [
+   1,
+   3
+  ],
+  [
+   1,
+   6
+  ],
+  [
+   1,
+   7
+  ],
+  [
+   2,
+   3
+  ],
+  [
+   2,
+   4
+  ],
+  [
+   2,
+   5
+  ],
+  [
+   2,
+   6
+  ],
+  [
+   2,
+   7
+  ],
+  [
+   2,
+   8
+  ],
+  [
+   2,
+   9
+  ],
+  [
+   2,
+   15
+  ],
+  [
+   2,
+   18
+  ],
+  [
+   3,
+   4
+  ],
+  [
+   4,
+   11
+  ],
+  [
+   4,
+   13
+  ],
+  [
+   5,
+   9
+  ],
+  [
+   5,
+   10
+  ],
+  [
+   5,
+   11
+  ],
+  [
+   5,
+   14
+  ],
+  [
+   5,
+   17
+  ],
+  [
+   6,
+   12
+  ],
+  [
+   6,
+   13
+  ],
+  [
+   7,
+   8
+  ],
+  [
+   7,
+   14
+  ],
+  [
+   9,
+   10
+  ],
+  [
+   10,
+   17
+  ],
+  [
+   14,
+   18
+  ],
+  [
+   15,
+   16
+  ],
+  [
+   15,
+   19
+  ]
+ ]
+}
