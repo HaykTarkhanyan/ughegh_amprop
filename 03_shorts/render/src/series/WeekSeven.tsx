@@ -179,7 +179,7 @@ const Planets: React.FC<{ m: Record<string, number> }> = ({ m }) => {
       <Svg>
         {Array.from({ length: 60 }, (_, i) => <circle key={i} cx={random(`st-x-${i}`) * 1080} cy={220 + random(`st-y-${i}`) * 860} r={1.5 + random(`st-r-${i}`) * 2} fill="#FFFFFF" opacity={0.5} />)}
         {LIGHTS.map((l, i) => {
-          const sx = lerp(-80, 1160, Math.min(1, cross * 1.1 - i * 0.03)), sy = 300 + 60 * Math.sin(i * 1.3 + cross * 3);
+          const sx = lerp(-60, 860 - i * 90, Math.max(0, Math.min(1, cross * 1.1 - i * 0.03))), sy = 470 + 70 * Math.sin(i * 1.3 + cross * 3); // across the middle of the sky, ending inside the frame
           const dx = 150 + (i % 7) * 130, dy = 760;
           return <circle key={i} cx={lerp(sx, dx, dock)} cy={lerp(sy, dy, dock)} r={22} fill={l.c} style={{ filter: `drop-shadow(0 0 10px ${l.c})` }} opacity={1 - 0.6 * eng * (ENG.some((e) => e.i === i) ? 0 : 1)} />;
         })}
