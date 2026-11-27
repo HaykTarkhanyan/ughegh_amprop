@@ -63,3 +63,22 @@ pending = [
   "Next drafts in publishing order: petrov, mashtots, english_spelling",
   "Music files are 128 kbps Bandcamp stream copies (gitignored scratchpad); take the WAVs from the StreamBeats Drive folder for final renders",
 ]
+
+[[later]]
+when = "2026-11-27 21:55 - 2026-11-28 00:30"
+done = [
+  "Hayk: 'skip mashtots, do the other one and do overall 5 more', then 'ALL the stuff ready for review' while away",
+  "Five more drafts rendered with review pages: petrov (2:20), english_spelling (1:53), crypto_paint (2:58), yawning (1:46), week_seven (2:15); shared series/parts.tsx",
+  "Every contact sheet checked for empty beat openings; 12 such gaps found and fixed (rule: every beat shows something from its first frame)",
+  "Nine more compositions written and parked in the scratchpad (regression, dmanisi, ikea_effect, kids_tv, simpson, minute_60, luggage_wheels, waiting, qwerty), labels linted (0 errors); photos fetched for dmanisi and minute_60",
+  "Gemini TTS daily quota on GEMINI_API_KEY hit at 22:39 after ~100 calls (retry ~10 h); a session cron resumes at 09:07",
+  "Audio levelling (Hayk: clips come at different gains): build_timeline levels each clip to -17 LUFS with volume + alimiter after the pause scan; all 11 voiced drafts re-levelled and swapped into the rendered videos; DECISIONS #29; 2 new tests (19 pass)",
+  "Breaths (Hayk dislikes Gemini's breath catches): measured detector (quiet, unvoiced, noise-like, silence before and after); A/B page render/out/drafts/audio_ab/breaths_ab.html for Hayk's ear, not applied yet",
+  "On-screen labels page for all 20 drafts: render/out/drafts/labels_review.html (new text vs script text)",
+  "Paid spend: TTS $0.166 tonight ($0.272 today in total)",
+]
+pending = [
+  "Hayk: listen to breaths_ab.html (B better?), pick music (music_audition.html), review drafts and the labels page",
+  "09:07 cron: TTS for the 9 parked drafts, then timelines, cue-word check, stills, renders, review pages",
+  "own_voice: re-render to show the caption fixes made after it was first built (8 word times)",
+]
