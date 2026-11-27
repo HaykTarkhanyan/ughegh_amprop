@@ -3,10 +3,12 @@
     "title": "File:Dmanisi-D3444. Homo erectus or Homo georgicus.jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Dmanisi-D3444._Homo_erectus_or_Homo_georgicus.jpg",
     "author": "Ryan Somma from Occoquan, USA",
+    "credit": "Homo erectus",
     "license": "CC BY-SA 2.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
     "description": "Dmanisi skull 4, D 3444. Taken at the David H. Koch Hall of Human Origins at the Smithsonian Natural History Museum. www.ideonexus.com",
     "date": "Unknown dateDate, time or both in the file Exif metadata are incorrect/invalid.",
+    "changes": "cropped, sockets traced",
     "files": [
       "d3444_skull.jpg"
     ]
@@ -15,10 +17,12 @@
     "title": "File:Altruistic behaviour of Homo erectus.jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Altruistic_behaviour_of_Homo_erectus.jpg",
     "author": "Mauricio Antón. Published by Bartolini-Lucenti, S et al.",
+    "credit": "The early hunting dog from Dmanisi with comments on the social behaviour in Canidae and hominins",
     "license": "CC BY 4.0",
     "license_url": "https://creativecommons.org/licenses/by/4.0",
     "description": "Altruistic behaviour of a group of Homo erectus sharing food with an individual who lived several years without teeth (as evidenced by edentulous skull D3444 and associated mandible D3900). This severe masticatory impairment would limit the diet of the individual to foodstuffs that did not require heavy chewing (e.g., soft plants, animal brain and marrow) or that were orally processed before by ot",
     "date": "2021-07-29",
+    "changes": "cropped to the old man and the food, tagged as an artist's impression",
     "files": [
       "homo_erectus_care_anton.jpg"
     ]

@@ -13,6 +13,11 @@ import { FR_FPS, FR_FRAMES, Friendship } from "./series/Friendship";
 import { MAP_FPS, MAP_FRAMES, MapProjection } from "./series/MapProjection";
 import { OV_FPS, OV_FRAMES, OwnVoice } from "./series/OwnVoice";
 import { PS_FPS, PS_FRAMES, PaintedStatues } from "./series/PaintedStatues";
+import { PETROV_FPS, PETROV_FRAMES, Petrov } from "./series/Petrov";
+import { ES_FPS, ES_FRAMES, EnglishSpelling } from "./series/EnglishSpelling";
+import { CP_FPS, CP_FRAMES, CryptoPaint } from "./series/CryptoPaint";
+import { YAWN_FPS, YAWN_FRAMES, Yawning } from "./series/Yawning";
+import { WEEK_FPS, WEEK_FRAMES, WeekSeven } from "./series/WeekSeven";
 import { SHORT_FPS, SHORT_FRAMES, ZkShort } from "./zk/Short";
 import { WALDO_T, WaldoScene } from "./zk/Waldo";
 
@@ -30,6 +35,11 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="MapProjection" component={MapProjection} durationInFrames={MAP_FRAMES} fps={MAP_FPS} width={1080} height={1920} />
     <Composition id="Friendship" component={Friendship} durationInFrames={FR_FRAMES} fps={FR_FPS} width={1080} height={1920} />
     <Composition id="PaintedStatues" component={PaintedStatues} durationInFrames={PS_FRAMES} fps={PS_FPS} width={1080} height={1920} />
+    <Composition id="Petrov" component={Petrov} durationInFrames={PETROV_FRAMES} fps={PETROV_FPS} width={1080} height={1920} />
+    <Composition id="EnglishSpelling" component={EnglishSpelling} durationInFrames={ES_FRAMES} fps={ES_FPS} width={1080} height={1920} />
+    <Composition id="CryptoPaint" component={CryptoPaint} durationInFrames={CP_FRAMES} fps={CP_FPS} width={1080} height={1920} />
+    <Composition id="Yawning" component={Yawning} durationInFrames={YAWN_FRAMES} fps={YAWN_FPS} width={1080} height={1920} />
+    <Composition id="WeekSeven" component={WeekSeven} durationInFrames={WEEK_FRAMES} fps={WEEK_FPS} width={1080} height={1920} />
     <Composition id="Bayes" component={Bayes} durationInFrames={BAYES_FRAMES} fps={BAYES_FPS} width={1080} height={1920} />
   </>
 );

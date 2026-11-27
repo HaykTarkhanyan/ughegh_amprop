@@ -1,0 +1,16 @@
+{
+  "narrator": "gemini-tts",
+  "voice": "Sadaltager",
+  "model": "gemini-3.8-flash-tts",
+  "style": "",
+  "beats": {
+    "hook": {
+      "text": "Գրեթե երկու միլիոն տարի առաջ մի տղամարդ կորցրեց բոլոր ատամները, բացի մեկից։ Եվ դրանից հետո ապրեց ևս մի քանի տարի։ Ինչպե՞ս։",
+      "file": "hook.wav",
+      "seconds": 8.3,
+      "voice": "Sadaltager",
+      "model": "gemini-3.8-flash-tts",
+      "style": ""
+    }
+  }
+}
