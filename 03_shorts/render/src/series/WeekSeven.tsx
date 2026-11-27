@@ -150,11 +150,11 @@ const Sabbath: React.FC<{ m: Record<string, number> }> = ({ m }) => {
     <Backdrop>
       {NAMES.map((d, i) => {
         const y = 330 + i * 98;
-        const on = ramp(t, i < 6 ? m.six + i * 0.12 : m.seventh, 0.3);
+        const on = i < 6 ? Math.max(0.5 * ramp(t, 0.2, 0.4), ramp(t, m.six + i * 0.12, 0.3)) : Math.max(0.5 * ramp(t, 0.2, 0.4), ramp(t, m.seventh, 0.3));
         const nOn = d.n ? ramp(t, m.second + (d.n - 2) * 0.7, 0.3) : 0;
         return (
           <React.Fragment key={i}>
-            <div style={{ position: "absolute", left: 200, top: y - 38, width: 620, height: 76, borderRadius: 16, background: i === 6 ? C.orange : "#2E333B", opacity: on }} />
+            <div style={{ position: "absolute", left: 200, top: y - 38, width: 620, height: 76, borderRadius: 16, background: i === 6 && t >= m.seventh ? C.orange : "#2E333B", opacity: on }} />
             <Tag text={i === 6 ? "Շաբաթ՝ հանգիստ" : "աշխատանք"} x={510} y={y} size={32} color={i === 6 ? C.bg : C.dim} weight={i === 6 ? 900 : 650} opacity={on * (1 - names)} width={600} />
             <Tag text={<><span style={{ color: nOn > 0.5 ? C.orange : C.ink }}>{d.a}</span>{d.b}</>} x={510} y={y} size={38} color={i === 6 ? C.bg : C.ink} opacity={names} width={600} />
             <Tag text={`${i + 1}`} x={150} y={y} size={36} weight={900} color={nOn > 0.5 ? C.orange : C.dim} opacity={names} width={80} />
@@ -169,7 +169,7 @@ const Sabbath: React.FC<{ m: Record<string, number> }> = ({ m }) => {
 // ---------- planets: seven moving lights dock on the days ----------
 const Planets: React.FC<{ m: Record<string, number> }> = ({ m }) => {
   const t = useT();
-  const cross = ramp(t, m.seven - 0.4, 2.5, easeInOut);
+  const cross = ramp(t, 0.3, Math.max(2.5, m.dedicated - 0.5), easeInOut);
   const dock = ramp(t, m.dedicated, 1.2, easeInOut);
   const eng = ramp(t, m.english, 0.5);
   const lit = [m.saturn, m.sun, m.moon];
@@ -241,7 +241,8 @@ const Hours: React.FC<{ m: Record<string, number> }> = ({ m }) => {
 const ROSTER = ["#D9573F", "#F2C81B", "#3E9B3A", "#C084FC", "#4A90E2"];
 const Soviet: React.FC<{ m: Record<string, number> }> = ({ m }) => {
   const t = useT();
-  const five = ramp(t, m.five, 0.5) * (1 - ramp(t, m.back - 0.2, 0.4));
+  const five = ramp(t, m.soviet, 0.5) * (1 - ramp(t, m.back - 0.2, 0.4));
+  const strip = ramp(t, 0.2, 0.4) * (1 - ramp(t, m.soviet - 0.3, 0.4));
   const couple = ramp(t, m.couple, 0.5);
   const back = ramp(t, m.back, 0.6);
   return (
@@ -256,14 +257,14 @@ const Soviet: React.FC<{ m: Record<string, number> }> = ({ m }) => {
           </g>
         ))}
       </Svg>
-      <Tag text="հնգօրյա" x={504} y={360} size={40} opacity={five * (1 - ramp(t, m.six, 0.3))} />
+      <Tag text="հնգօրյա" x={504} y={360} size={40} opacity={ramp(t, m.five, 0.4) * five * (1 - ramp(t, m.six, 0.3))} />
       <Tag text="վեցօրյա" x={504} y={360} size={40} opacity={five * ramp(t, m.six, 0.3)} />
       <Tag text="ամուսին" x={504} y={610} size={30} color={C.dim} opacity={five * couple} width={300} />
       <Tag text="կին" x={504} y={810} size={30} color={C.dim} opacity={five * couple} width={300} />
-      <Svg opacity={back}>
-        {Array.from({ length: 7 }, (_, i) => <rect key={i} x={140 + i * 112 + (1 - back) * 40 * (i - 3)} y={600} width={100} height={120} rx={14} fill={i === 6 ? C.orange : "#2E333B"} />)}
+      <Svg opacity={Math.max(back, strip)}>
+        {Array.from({ length: 7 }, (_, i) => <rect key={i} x={140 + i * 112 + (1 - Math.max(back, strip)) * 40 * (i - 3)} y={600} width={100} height={120} rx={14} fill={i === 6 ? C.orange : "#2E333B"} />)}
       </Svg>
-      <Tag text="7" x={504} y={820} size={90} weight={900} color={C.orange} opacity={back} width={160} />
+      <Tag text="7" x={504} y={820} size={90} weight={900} color={C.orange} opacity={Math.max(back, strip)} width={160} />
     </Backdrop>
   );
 };
@@ -300,7 +301,7 @@ const GROUPS: G[] = [
       sunLand: r("order_count", "Արև,"), moonLand: r("order_count", "Լուսին"), marsLand: r("order_count", "Մարս"),
     }} />;
   } },
-  { keys: ["soviet"], render: () => <Soviet m={{ five: at("soviet", "հնգօրյա"), six: at("soviet", "վեցօրյա"), couple: at("soviet", "Ամուսինները"), back: at("soviet", "վերադարձան") }} /> },
+  { keys: ["soviet"], render: () => <Soviet m={{ soviet: at("soviet", "Խորհրդային"), five: at("soviet", "հնգօրյա"), six: at("soviet", "վեցօրյա"), couple: at("soviet", "Ամուսինները"), back: at("soviet", "վերադարձան") }} /> },
   { keys: ["takeaway"], render: () => <Takeaway /> },
 ];
 

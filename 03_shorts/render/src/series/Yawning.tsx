@@ -200,7 +200,7 @@ const Kin: React.FC<{ m: Record<string, number> }> = ({ m }) => {
 const DOTS = Array.from({ length: 328 }, (_, i) => ({ gx: 160 + (i % 20) * 38, gy: 330 + Math.floor(i / 20) * 38, e: random(`em-${i}`), y: random(`yw-${i}`), a: random(`ag-${i}`) }));
 const But: React.FC<{ m: Record<string, number> }> = ({ m }) => {
   const t = useT();
-  const show = ramp(t, m.n, 0.6);
+  const show = ramp(t, 0.2, 0.6); // the 328 dots are up from the beat's first frame
   const scatter = ramp(t, m.empathy, 1.2, easeInOut);
   const age = ramp(t, m.age, 1.2, easeInOut);
   const card = ramp(t, m.later, 0.5);
@@ -221,7 +221,7 @@ const But: React.FC<{ m: Record<string, number> }> = ({ m }) => {
           return <circle key={i} cx={lerp(d.gx, lerp(X0 + 20, X1 - 20, sx), scatter)} cy={lerp(d.gy, lerp(Y0 - 20, Y1 + 20, sy), scatter)} r={8} fill={C.orange} opacity={0.8} />;
         })}
       </Svg>
-      <Tag text="328 մարդ" x={504} y={1060} size={38} opacity={show * (1 - scatter)} />
+      <Tag text="328 մարդ" x={504} y={1060} size={38} opacity={ramp(t, m.n, 0.4) * (1 - scatter)} />
       <Tag text="կարեկցանք" x={(X0 + X1) / 2} y={Y0 + 44} size={30} color={C.dim} opacity={scatter * (1 - age) * (1 - card)} width={400} />
       <Tag text="տարիք" x={(X0 + X1) / 2} y={Y0 + 44} size={30} color={C.dim} opacity={age * (1 - card)} width={400} />
       <Tag text="հորանջ" x={X0 - 10} y={Y1 - 30} size={28} color={C.dim} opacity={scatter * (1 - card)} width={200} />
@@ -239,7 +239,7 @@ const Unknown: React.FC<{ m: Record<string, number> }> = ({ m }) => {
   return (
     <Backdrop>
       {pieces.map((p, i) => (
-        <div key={i} style={{ position: "absolute", left: p.x, top: p.y, width: 360, height: 180, borderRadius: 18, border: "4px dashed #8A8F99", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 36, fontWeight: 750, color: C.dim, fontFamily: "NotoArm, sans-serif", opacity: ramp(t, m.dontKnow + i * 0.3, 0.4) }}>{p.n}</div>
+        <div key={i} style={{ position: "absolute", left: p.x, top: p.y, width: 360, height: 180, borderRadius: 18, border: "4px dashed #8A8F99", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 36, fontWeight: 750, color: `rgba(138,143,153,${ramp(t, m.dontKnow + i * 0.3, 0.4)})`, fontFamily: "NotoArm, sans-serif", opacity: ramp(t, 0.2, 0.4) }}>{p.n}</div>
       ))}
       <Card text="վարակիչ է ✓" x={560} y={600} w={360} on={pop(t, m.sure)} color={C.green} size={36} />
       <Card text="թթվածին ✗" x={360} y={820} w={360} on={pop(t, m.oxygen)} color={C.red} size={36} />
