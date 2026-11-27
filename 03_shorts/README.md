@@ -106,8 +106,8 @@ PATH, and `npm ci` in `render/`. Offline tests: `python -m unittest discover -s 
   the bottleneck.
 - Word-exact captions if the length-based timing drifts visibly: MMS forced alignment (`ctc-forced-aligner`, model
   CC-BY-NC) or Azure hy-AM voices with native word boundaries.
-- Music: not decided. Candidates auditioned 2026-11-27 (StreamBeats, HoliznaCC0 CC0; ranking and licence notes in the
-  session log of 2026-11-26-2046), waiting for Hayk's pick; only YouTube's own Audio Library guarantees no Content ID claim.
+- Music: not decided. Candidates auditioned 2026-11-27 (StreamBeats, HoliznaCC0 CC0; ranking and licence notes in
+  `../_knowledge/short_videos/music_research_2026-11-27.md`), waiting for Hayk's pick; only YouTube's own Audio Library guarantees no Content ID claim.
   Whatever is chosen must be claim-free (own, licensed, or none): YouTube blocks worldwide any Short over 1 minute
   that gets a Content ID claim (publishing research 2026-11-27), and most of our Shorts run 1:40-2:50.
 - AI-disclosure tick: check YouTube's help page on synthetic narrator voices before the first upload.
