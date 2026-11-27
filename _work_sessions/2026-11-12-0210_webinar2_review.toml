@@ -1,0 +1,50 @@
+title = "Idiot Brain webinar 2 (memory): review, date off the title banner, fixes, rebuild"
+date = "2026-11-12"
+time = "02:10"
+areas = ["01_idiot_brain/slides/webinar02/", "01_idiot_brain/banner/", "DEFERRED_TODO.md"]
+
+done = [
+  "Hayk: webinar 2 is his next webinar (it did not happen on 30 Oct); asked for a review and the PDF in the browser",
+  "Review (inline, no subagents): read the 4 part files, NOTES.md, the whole book chapter 2; fresh contact sheets of all 56 frames from the 2026-10-26 build; checked numbers against sources (Loftus & Palmer speeds 66/63/61/55/51 km/h and 32%/14%, H.M. 1953 at 27 and died at 82, Murre 2021 with 16 divers: all right)",
+  "Found: title banner still dated Friday 30 Oct 18:30; the Telegram frame in all 8 committed PDFs says 02_idiot_brain (built 26 Oct, folder renamed 27 Oct); frame 24 bar labels collided; book claims worth correcting (blackouts only in alcoholics, Alzheimer's as tangles only, John Dean a 'bit player'); deck looseness (H.M. 'both hippocampi', taxi drivers 'bigger hippocampus')",
+  "Hayk: Q1 'remove date'; Q2 must-fix 1-3 + parked layout, science fixes 4-8, teaching tweaks 9-11, park the rebuild of the other decks",
+  "build_banner.py: show_date key (False drops date and time, not even NO_DATE); webinar 2 uses it; webinar 3 SVG rebuilt byte-identical; webinar 2 banner rebuilt and copied to webinar02/images/title_banner.png",
+  "Slides: frame 5 opener title at 33 pt (\\texorpdfstring keeps the bookmark clean); frame 13 neuron labels off the dendrites; frame 14 taxi drivers' posterior hippocampus; frame 24 bar pitch 1.3 cm + two-line label; frame 30 'Գրքի խոսքով'; NEW frame 31 myth-or-fact on blackouts (White et al. 2002: 51% / 40% of students who drank; NIAAA: fast BAC rise); frame 35 hand-raise poll on group projects; frame 36 John Dean reworded; frame 38 own-race bias explained by experience (the book's own alternative); frame 42 sleep-word test asks three words (բարձ, քուն, մեքենա); frame 45 H.M. 'about half of both hippocampi' (Corkin 1997); frame 48 Alzheimer's first, tau + amyloid, drugs since 2023 (van Dyck 2023, Sims 2023); frame 43 chart numbers in the text font (assume math mode=true)",
+  "Appendix: corrections split over two frames (6 rows, \\scriptsize), additions and sources updated; now 53 presented frames + 4 appendix",
+  "Six --full builds: the first had 8 frames running off the bottom (new text too long); fixed by shortening, a 2x2 grid on frame 48 with the science box and Burnett's quote sharing one slot (\\only), and a one-line science box on frame 31 (51%/40% and the risk line moved to NOTES). The cause on frame 48 was the 3-line Korsakoff card plus the scienceupdate title tab, not the Alzheimer text",
+  "Final build: OK in 104 s, 58 frames, 153 pages, 0 errors, 0 overfull vbox, 0 missing chars; all 58 contact sheets looked at, plus first overlays of frames 31, 35, 42 and overlay 2 of 48; NOTES headers 1-53 match the PDF",
+  "PDF copied to slides/pdf/ and the Desktop (md5 identical, CONVENTIONS rule); opened in Edge",
+  "Round 2 (Hayk's list, then 'don't ask questions, I'll be away'; Q5: break slide -> questions pause, Q6: cat TikTok chunking example): hook chat prompt removed; plan frame without the break; break frame -> «Դադար» questions pause; computer frame without Care Bears, reworded, with a line saying what the chapter will show; frame 10 clarifies 'up to ~1 min without rehearsal' and the cappuccino foam; digits 093 182 509 and the '509th commute'; chunking frame: cat example + the point + the book's translator; Aram -> Babken; leg quote frame spells out the depressant paradox; «անցք» -> «խոռոչ»; blackout split into two frames (definition + timeline picture; alcoholics + clarified video-game card); myth frame says «բլեքաութ»; amnesia labels as filled two-line nodes",
+  "Veritasium 'Why Being Delusional is a Superpower' (2020, 3LopI4YeC4I): transcript via yt-dlp subs (scratchpad); first minute: co-authors' self-estimates sum to ~140%, couples' housework >100%, also fights/mess >100%, cause = you remember all of what you do. New frame 39 with a QR to the video (Ross & Sicoly 1979; Caruso et al. 2006)",
+  "Four transition frames (\\bigquestion): 13 (where is memory written), 16 (why do we forget, the book's own question), 49 (healthy -> damaged brain, the book's * * * break), 52 (H.M. -> amnesia types)",
+  "Alcohol appendix (Hayk asked; broad search after he said not to search what I already know): 8 cards on 4 pages, each with its source: GABA/NMDA (Lovinger 1989, White 2003), sleep (Ebrahim 2013), drinking after learning helps recall (Carlyle 2017), placebo 'beer goggles' for yourself (Begue 2013), neurogenesis -40% in rats (Anderson 2012), UK Biobank brain volume (Daviet 2022), dementia by genetics (Topiwala 2025), withdrawal (Littleton 1998, Becker 1998)",
+  "Round 2 builds: the first had 6 frames off the bottom (frame 10, chunking, Veritasium, appendix B, both alcohol pages 70-95 pt); fixed by shortening, the alcohol cards regrouped onto 4 pages (scratchpad regroup_alcohol.py), and finding the real tallest column each time (computer frame: the popup; Veritasium: its first card, then the right column). Final: OK in 50 s, 68 frames, 171 pages, 0 errors, 0 overfull vbox, 0 missing chars; all 68 contact sheets looked at; PDF copied to slides/pdf/ and the Desktop (cmp identical), opened in Edge",
+  "Quick review round (Hayk: 'quickly review', then 'check misc/sample_problems_qysu, do the fixes'): found the Armenian style kit in ~/OneDrive/Desktop/misc/sample_problems_qysu/armenian_style/ (GUIDE.md, OWNER_ANSWERS.md, lint_armenian.py). Lint on webinar 2: 34 errors, 30 genuine (article -ը/-ն before a vowel sound incl. «ու», ՞ on the auxiliary: «մոտ է՞ր» -> «մո՞տ էր», «ռասիզմ է՞» -> «ռասի՞զմ է»), fixed by scratchpad armenian_lint_fixes.py (exact matches); 4 left are false positives (two macro arguments read as one sentence); my next NOTES edit brought 1 new slip, fixed. CONVENTIONS.md: lint rule",
+  "Review fixes: myth frame states the book's own claim («Բլեքաութի ժամանակ մարդը հազիվ է կանգնում») with «Մարդը խոսում ու քայլում է։ Խմող ուսանողների կեսն այն ունեցել է»; hippocampus diagram «չկրկնվածը՝ թույլ է պահվում» (was «մնացածը մոռացվում է», contradicting the next frame); wrap-up ideas 3-4 mention blackouts and the 140%; Ebrahim 2013 (faster sleep onset at all doses) and Anderson et al. 2012 (Neuroscience 224) verified. Build OK in 50 s, 68 frames, 0 errors, 0 overfull vbox, 0 missing chars; PDF copied (cmp identical), opened in Edge",
+  "Webinar 3 (fear), same round (Hayk: 'apply similar changes to slideset 3, also the non-Armenian stuff'): lint 35 errors, 34 genuine fixed (scratchpad armenian_lint_fixes_w03.py; «ծաղիկ է՞» -> «ծաղի՞կ է»), 1 false positive left; hook chat prompt removed; plan frame without the break; break -> «Դադար» questions pause; «ընդմիջումից հետո» line changed; 5 transitions (new 22, 27, 50, 54, 77: where beliefs come from, can you see superstition in a scan, why fear is not unlearned, simple -> complex phobias, why some seek thrills more); Illuminati bake sale 509 dram; appendix sources page 2/2 letter Դ -> Գ. Read all four section files: the frames already state their points, so no rewording beyond that. NOTES.md: headers renumbered (scratchpad renumber_notes_w03.py), 28 checked edits (notes_w03_edits.py: table, skip/interactive/meme lists, hook/plan/pause notes, transition notes, in-text and appendix references). 100 presented + 5 appendix frames",
+  "NOTES.md rewritten for 59 presented + 8 appendix frames (headers renumbered by scratchpad renumber_notes2.py first, then the whole file written); CONVENTIONS.md: slides carry the point, transition frames, no breaks, 509; DEFERRED_TODO.md: carry the rules to webinars 3-8",
+  "NOTES.md: headers 31-52 shifted to 32-53 by a checked script (scratchpad renumber_notes.py), counts, timing table, skip list, interactive list, new frame 31 notes, notes for every changed frame",
+  "DEFERRED_TODO.md: new 2026-11-12 section (rebuild webinars 1 and 3-8, old date in the post text and Desktop banners, one meme only, skipped chapter material); three webinar 2 items marked done",
+]
+
+pending = [
+  "Hayk to proofread the Armenian I wrote (final numbering): 4, 7, 10, 12, 13, 15 (taxi), 16, 28, 30, 32, 33, 34, 38, 39, 40, 42, 46, 49, 50, 52, 53, 54, appendix 60-67, and NOTES.md",
+  "Rebuild the PDFs of webinars 1 and 3-8 (folder line), parked by Hayk",
+  "Webinar 2 date for the post text, if it is reposted",
+]
+
+next = []
+
+files = [
+  "01_idiot_brain/banner/build_banner.py",
+  "01_idiot_brain/banner/out/webinar02/ (banner_1920x1080, banner_1600x640)",
+  "01_idiot_brain/slides/webinar02/images/title_banner.png",
+  "01_idiot_brain/slides/webinar02/parts/01_memory.tex, 03_appendix.tex",
+  "01_idiot_brain/slides/webinar02/NOTES.md, webinar02.tex",
+  "01_idiot_brain/slides/pdf/idiot_brain_webinar2_ch2.pdf",
+  "DEFERRED_TODO.md",
+]
+
+commits = []
+
+notes = "Nothing committed (Hayk did not ask). Other sessions' uncommitted changes in build_banner.py (thumbnails), build_deck.py, DECISIONS.md, CONVENTIONS.md and the Power of Habit files were left as they were."

@@ -3,17 +3,33 @@
 \partaccent{lavender}\gdef\idiottopicemoji{books}\gdef\idiottopicname{Հավելված}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
-\begin{frame}{Հավելված Ա. Ուղղումներ գրքի նկատմամբ}
-  \footnotesize
+% Corrections in deck order, split over two frames since 2026-11-12 (six rows did not fit one)
+\begin{frame}{Հավելված Ա. Ուղղումներ գրքի նկատմամբ (1/2)}
+  \scriptsize % not presented; at \footnotesize the longer rows ran off the bottom
   \setlength{\tabcolsep}{4pt}
-  \renewcommand{\arraystretch}{1.35}
+  \renewcommand{\arraystretch}{1.25}
   \begin{tabular}{@{}L{2.4cm}L{3.5cm}L{4.45cm}L{3.2cm}@{}}
     \toprule
     \textbf{Թեմա} & \textbf{Գրքում (2016)} & \textbf{Այսօր} & \textbf{Աղբյուր}\\
     \midrule
-    Սուզորդների փորձը & Նույն միջավայրը լավացնում է վերհիշումը & 16 սուզորդով կրկնությունը էֆեկտը չգտավ & Murre, R. Soc. Open Sci., 2021\\
-    Պացիենտ Հ.Մ. & Մահացել է 78 տարեկանում & 82 տարեկանում (1926-2008) & Squire, Neuron, 2009\\
     «Flashbulb» հիշողություններ & Տրավմայի վառ, կրկնվող հիշողություններ & Տերմինը ցնցող լուրն իմանալու պահի վառ հիշողությունն է, որը ճշգրիտ չէ. տրավմայի կրկնվողները՝ ինտրուզիվ հիշողություններ (PTSD) & Brown \& Kulik, 1977; Talarico \& Rubin, 2003\\
+    Սուզորդների փորձը & Նույն միջավայրը լավացնում է վերհիշումը & 16 սուզորդով կրկնությունն էֆեկտը չգտավ & Murre, R. Soc. Open Sci., 2021\\
+    Բլեքաութ (blackout) & Լրիվ բլեքաութը մեծ մասի մոտ լինում է, երբ հազիվ է կանգնում. նորմալ խոսելով՝ միայն կախվածություն ունեցողների մոտ & Խմող ուսանողների կեսը գոնե մեկ անգամ բլեքաութ է ունեցել. դրսից համարյա չի երևում & White et al., J. Am. Coll. Health, 2002; NIAAA\\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Հավելված Ա. Ուղղումներ գրքի նկատմամբ (2/2)}
+  \scriptsize % not presented; at \footnotesize the longer rows ran off the bottom
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.25}
+  \begin{tabular}{@{}L{2.4cm}L{3.5cm}L{4.45cm}L{3.2cm}@{}}
+    \toprule
+    \textbf{Թեմա} & \textbf{Գրքում (2016)} & \textbf{Այսօր} & \textbf{Աղբյուր}\\
+    \midrule
+    Ջոն Դին & Ձայնագրությունները ցույց տվեցին, որ նա «լավագույն դեպքում երկրորդական» դեր ուներ & Դինը քողարկման կենտրոնում էր ու մեղավորությունն ընդունեց. այդ զրույցներում իր դերը հիշում էր ավելի կենտրոնական, քան էր & Neisser, Cognition, 1981\\
+    Պացիենտ Հ.Մ. & Մահացել է 78 տարեկանում & 82 տարեկանում (1926-2008) & Squire, Neuron, 2009\\
+    Ալցհեյմեր & Գլխավոր տեսությունը՝ նեյրոֆիբրիլների խճճվածքները & Ամիլոիդի սալիկներ (դրսում) ու tau-ի խճճվածքներ (ներսում). 2023-ից ամիլոիդը մաքրող դեղերը մի քիչ դանդաղեցնում են հիվանդությունը & van Dyck et al., NEJM, 2023; Sims et al., JAMA, 2023\\
     \bottomrule
   \end{tabular}
 \end{frame}
@@ -26,7 +42,11 @@
         \begin{itemize}\setlength{\itemsep}{0.5mm}
           \item «Քուն» բառի թեստը (DRM)՝ Roediger \& McDermott, 1995
           \item Լոֆթուսի թվերը՝ Loftus \& Palmer, 1974
-          \item Տաքսու վարորդների հիպոկամպը՝ Maguire et al., 2000
+          \item Տաքսու վարորդների հիպոկամպը (հետին մասը)՝ Maguire et al., 2000
+          \item Հ.Մ.-ի հիպոկամպերի մոտ կեսը՝ Corkin et al., J. Neurosci., 1997
+          \item Ուսանողների բլեքաութները՝ White et al., 2002; NIAAA
+          \item Ալցհեյմերի դեղերը՝ van Dyck et al., 2023; Sims et al., 2023
+          \item 140\%-ն ու զույգերը՝ Veritasium, 2020
         \end{itemize}
       \end{card}
     \end{column}
@@ -35,9 +55,10 @@
         {\blackfont Մերն է, ոչ թե գրքից}\par\smallskip
         \begin{itemize}\setlength{\itemsep}{0.5mm}
           \item Անուն հիշելու 2-րդ ու 3-րդ խորհուրդները
-          \item Թվերի խմբավորման (chunking) օրինակը
+          \item Chunking-ի օրինակները (թվերն ու կատուն). գրքում՝ մեկ այլ նախադասություն
           \item Հ.Մ.-ի հայելու փորձի մանրամասները (Բրենդա Միլներ). գրքում՝ «նկարչական հմտություններ»
           \item Մեմը. բովանդակությունը գրքից է
+          \item Խմբային նախագծի հարցումը, «Առասպել, թե՞ փաստ»-ը, անցումային հարցերը
         \end{itemize}
       \end{card}
     \end{column}
@@ -69,6 +90,59 @@
         \item Loftus E. F. The price of bad memories. 1998 (Նադին Քուլի դեպքը)
         \item Squire L. R. The legacy of patient H.M. for neuroscience. Neuron, 2009
       \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Alcohol and the brain (Hayk asked, 2026-11-12): beyond the book, checked against the sources named on each card
+\newcommand{\alccard}[4]{% {colour}{title}{text}{source}
+  \begin{card}[colback=#1!35!cardwhite, fontupper=\footnotesize]
+    {\blackfont\small #2}\par\smallskip
+    #3\par\smallskip
+    {\color{plum!65}#4}
+  \end{card}}
+
+% four pages of two cards (2026-11-12): eight cards on two pages ran 70-95 pt off the bottom
+\begin{frame}{Հավելված Դ. Ալկոհոլն ու ուղեղը (1/4)}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \alccard{mint}{Արգելակն ու գազը}{Ալկոհոլը ուժեղացնում է GABA-ն՝ ուղեղի գլխավոր «արգելակը», ու թուլացնում գլուտամատը՝ գլխավոր «գազը»։ Հիպոկամպում գլուտամատի NMDA ընկալիչները պետք են նոր հիշողություն գրանցելու համար, ու ալկոհոլն արգելափակում է հենց դրանք։}{Lovinger et al., Science, 1989; White, Alcohol Res. Health, 2003}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \alccard{butter}{Քունը}{Ալկոհոլով ավելի արագ ես քնում, ու գիշերվա առաջին կեսն ավելի խորն է։ Բայց REM քունն ուշանում է, իսկ երկրորդ կեսն ավելի անհանգիստ է։ Իսկ քնի ժամանակ է ուղեղն ամրացնում օրվա հիշողությունները։}{Ebrahim et al., Alcohol Clin. Exp. Res., 2013}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Հավելված Դ. Ալկոհոլն ու ուղեղը (2/4)}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \alccard{lavender}{Խմել սովորելուց հետո}{88 մարդ սովորել է բառեր, հետո կեսը խմել է, կեսը՝ ոչ։ Հաջորդ առավոտ խմածներն ավելի լավ էին հիշում, ու ինչքան շատ էին խմել, այնքան լավ։ Հավանական պատճառը՝ ալկոհոլը փակում է նոր տեղեկության մուտքը, ու հինն ամրանում է առանց «խանգարողների»։ Մեկ փոքր հետազոտություն է, ու քունն էլ կարող էր ազդել։}{Carlyle et al., Sci. Rep., 2017}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \alccard{peach}{Կարծում ես՝ խմել ես, ուրեմն գեղեցիկ ես}{Տղամարդիկ, որոնք կարծում էին, թե ալկոհոլ են խմել, իրենց ավելի գրավիչ էին գնահատում, նույնիսկ եթե իրականում պլացեբո էր։ Անկախ գնահատողները տարբերություն չտեսան։ Ազդում էր ոչ թե դոզան, այլ սպասելիքը։}{Bègue et al., Br. J. Psychol., 2013}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Հավելված Դ. Ալկոհոլն ու ուղեղը (3/4)}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \alccard{mint}{Նեյրոնները չի «սպանում», բայց...}{Ալկոհոլը, հավանաբար, ուղղակիորեն չի սպանում նեյրոնները։ Բայց առնետների մոտ երկու շաբաթ արյան մոտ 0.08\% ալկոհոլով (ԱՄՆ-ում մեքենա վարելու սահմանը) հիպոկամպում նոր նեյրոնների ստեղծումը մոտ 40\%-ով պակասեց։}{Anderson et al., Neuroscience, 2012; The Conversation}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \alccard{lavender}{Ուղեղի ծավալը}{36\,678 չափահասի ուղեղի MRI (Մեծ Բրիտանիա). ծավալն ավելի փոքր էր արդեն օրական 1-2 միավորի դեպքում (1 միավոր = 8 գ ալկոհոլ, մոտ 250 մլ գարեջուր)։ Հեղինակների հաշվով՝ օրական 2-ից 3 միավորի անցնելը նման է 3.5 տարով ծերանալուն։ Կապ է, ոչ ապացուցված պատճառ։}{Daviet et al., Nat. Commun., 2022}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Հավելված Դ. Ալկոհոլն ու ուղեղը (4/4)}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \alccard{peach}{Թեթև խմելն էլ չի պաշտպանում}{Դիտարկումներում թվում էր, թե քիչ խմողների մոտ դեմենցիան ավելի հազվադեպ է։ 2025-ին 2.4 մլն մարդու գենետիկ տվյալները ցույց տվեցին՝ ռիսկն աճում է խմածի հետ միասին։ «Պաշտպանությունը», հավանաբար, հակառակ կապ էր. դեմենցիան սկսվելիս մարդիկ ավելի քիչ են խմում։}{Topiwala et al., BMJ Evid. Based Med., 2025}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \alccard{butter}{Ինչու է վտանգավոր հանկարծ թողնելը}{Երկար ու շատ խմելիս ուղեղը հարմարվում է. ուժեղացնում է «գազը» (գլուտամատ), որ ալկոհոլին հակակշռի։ Հանկարծ թողնելիս հակակշիռը մնում է՝ դող, անհանգստություն, ծանր դեպքում ցնցումներ։ Դրա համար ծանր կախվածությունից դուրս են գալիս բժշկի հսկողությամբ։}{Littleton, Alcohol Health Res. World, 1998; Becker, 1998}
     \end{column}
   \end{columns}
 \end{frame}

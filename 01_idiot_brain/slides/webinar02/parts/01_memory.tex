@@ -1,5 +1,6 @@
 % ===== Chapter 2, The gift of memory (~40 min; part 2 of webinar 1 until the 2026-10-23 split) =====
-\partopener{Գլուխ 2}{Հիշողություն}{Հիշողության նվերը (պահեք կտրոնը)}{thinking}{lavender}
+% 33 pt instead of the macro's 38 (2026-11-12): at 38 the one-word title ran into the mascot circle
+\partopener{Գլուխ 2}{\texorpdfstring{\fontsize{33}{35}\selectfont Հիշողություն}{Հիշողություն}}{Հիշողության նվերը (պահեք կտրոնը)}{thinking}{lavender}
 
 % DRM word list: shown now, tested at the start of "when memory fails"
 \begin{frame}{Հիշողության փոքրիկ թեստ}
@@ -24,27 +25,30 @@
   \end{columns}
 \end{frame}
 
+% Reworded 2026-11-12 (Hayk: no Care Bears, clearer); the bottom line says what the chapter will show
 \begin{frame}{Հիշողությունը համակարգիչ չէ}
   \begin{columns}[c]
-    \begin{column}{0.64\textwidth}
+    \begin{column}{0.6\textwidth}
       \begin{popup}{հիշողություն.exe}
         Պատկերացրու համակարգիչ, որը...
         \begin{enumerate}
-          \item<2-> որոշ ֆայլեր կարևոր է համարում, ու չի ասում՝ ինչու
-          \item<3-> ֆայլերը դասավորում է առանց տրամաբանության
-          \item<4-> \textbf{ինքն է բացում} ամենաամոթալի ֆայլերդ («Care Bears»-ի էրոտիկ ֆանֆիկդ)
-          \item<5-> \textbf{խմբագրում է} իրեն դուր չեկած ֆայլերը
+          \item<2-> \textbf{ինքն է որոշում}՝ ինչն է կարևոր
+          \item<3-> ֆայլերը \textbf{խառնում է} իրար
+          \item<4-> ամոթալի ֆայլերդ \textbf{ինքն է բացում}
+          \item<5-> չհավանածը \textbf{փոխում է} իր ճաշակով
         \end{enumerate}
       \end{popup}
     \end{column}
-    \begin{column}{0.31\textwidth}
+    \begin{column}{0.36\textwidth}
       \onslide<6->{%
       \begin{card}[colback=brainpink!30!cardwhite]
-        Նման համակարգիչը կես ժամից պատուհանից դուրս կթռչեր \emoji{computer}\par\medskip
-        Իսկ ուղեղդ \textbf{հենց այդպես է} աշխատում։ Ու նույնիսկ անջատել-միացնել չես կարող։
+        Նման համակարգիչը կես ժամից կնետեիր պատուհանից \emoji{computer}\par\smallskip
+        Իսկ ուղեղդ \textbf{հենց այսպես է} աշխատում, ու ոչ փոխել ես կարող, ոչ անջատել-միացնել։
       \end{card}}
     \end{column}
   \end{columns}
+  \vspace{1mm}
+  \onslide<7->{\centering\small Այսօր կտեսնենք՝ ինչու է ուղեղն այսպես անում, ու ինչու է այն, միևնույն է, աշխատում։\par}
 \end{frame}
 
 % ---------------------------------------------------------------- short-term vs long-term
@@ -82,9 +86,9 @@
         {\blackfont\large Կարճաժամկետ} \emoji{coffee}\par
         short-term / working memory\par
         \begin{itemize}
-          \item Տևում է \textbf{մինչև մոտ 1 րոպե}
-          \item Տեղավորում է \textbf{մոտ 4} միավոր
-          \item Ակտիվության նախշ՝ «ցուցակ կապուչինոյի փրփուրի վրա»
+          \item Առանց կրկնելու՝ \textbf{մինչև 1 րոպե}
+          \item \textbf{Մոտ 4} միավոր
+          \item Նեյրոնների \textbf{ակտիվություն}. ցուցակ կապուչինոյի փրփուրի վրա՝ մի պահ կա, հետո չկա
           \item Հենց սրանով ենք \textbf{մտածում}
         \end{itemize}
       \end{card}
@@ -103,7 +107,7 @@
       \end{card}}
     \end{column}
   \end{columns}
-  \vspace{2mm}
+  \vspace{1mm}
   \onslide<3->{\centering Երեկվա դասախոսությունն արդեն \textbf{երկարաժամկետ} հիշողություն է։\par}
 \end{frame}
 
@@ -119,8 +123,8 @@
     \begin{column}{0.48\textwidth}
       \begin{tryit}
         Հիշիր այս թվերը.\par\smallskip
-        {\blackfont\Large 0 9 3 1 8 2 7 4 5}\par\smallskip
-        \onslide<2->{Իսկ հիմա՝\par\smallskip {\blackfont\Large 093 \quad 182 \quad 745}\par\smallskip
+        {\blackfont\Large 0 9 3 1 8 2 5 0 9}\par\smallskip
+        \onslide<2->{Իսկ հիմա՝\par\smallskip {\blackfont\Large 093 \quad 182 \quad 509}\par\smallskip
         Նույն 9 թվանշանն են, բայց հիմա ընդամենը 3 միավոր։}
       \end{tryit}
     \end{column}
@@ -128,17 +132,27 @@
   \source{Miller, 1956; Cowan, 2010}
 \end{frame}
 
-\begin{frame}{Chunking. Բըրնեթի օրինակը}
+% Our example since 2026-11-12 (Hayk: not family-related; the book's is "your mum smells of cheese"),
+% plus the point of chunking and the book's translator example, so the slide says why it matters
+\begin{frame}{Chunking. ինչու է «միավորը» կարևոր}
   \centering
-  \chip{}{պանրի}\quad\chip{}{մայրիկիցդ}\quad\chip{}{հոտ}\quad\chip{}{է}\quad\chip{}{գալիս}\par\smallskip
-  {\small 5 միավոր}\par\bigskip
+  \chip{}{բլոգեր}\quad\chip{}{կատուդ}\quad\chip{}{է}\quad\chip{}{TikTok}\quad\chip{}{գաղտնի}\quad{\small $\rightarrow$ 5 միավոր}\par\smallskip
   \onslide<2->{%
-  \chip[butter]{cheese}{Մայրիկիցդ պանրի հոտ է գալիս}\par\smallskip
-  {\small 1 միավոր}\par\bigskip}
+  \chip[butter]{blackcat}{Կատուդ գաղտնի TikTok բլոգեր է}\quad{\small $\rightarrow$ 1 միավոր}\par\smallskip
+  {\small ...ու մեկ կասկածելի հայացք կատվիդ կողմը}\par\smallskip}
   \onslide<3->{%
-  \begin{card}[width=0.6\textwidth, colback=brainpink!25!cardwhite]
-    \centering ...ու մեկ հնարավոր կռիվ փորձարարի հետ \emoji{boxing}
+  \begin{card}[width=0.92\textwidth, colback=lavender!35!cardwhite]
+    \raggedright\textbf{Իմաստը}. կարճաժամկետը փոքր է, բայց \textbf{երկարաժամկետը} նրան պատրաստի «բլոկներ» է տալիս՝ բառեր, արտահայտություններ, թվեր։ Ինչքան շատ ես գիտես, այնքան մեծ են բլոկները։
   \end{card}}
+  \onslide<4->{%
+  \begin{card}[width=0.92\textwidth, colback=mint!35!cardwhite]
+    \raggedright\emoji{speech}\ Սինխրոն թարգմանիչն ամեն բառ առանձին չի պահում. բառերն ու քերականությունը երկարաժամկետում են, իսկ կարճաժամկետը միայն հերթականությունն ու իմաստն է «շարում»։
+  \end{card}}
+\end{frame}
+
+% Transition (2026-11-12, Hayk: no abrupt topic changes)
+\begin{frame}
+  \bigquestion{Լավ, իսկ ֆիզիկապես որտե՞ղ է «գրված» հիշողությունը}{Նեյրոններ, սինապսներ ու հիպոկամպ}
 \end{frame}
 
 \begin{frame}{Որտեղ է «գրված» հիշողությունը}
@@ -149,8 +163,9 @@
     \filldraw[fill=brainpink, draw=plum, line width=1.2pt] (-5.2,0) circle (0.55);
     \draw[plum, line width=2.2pt] (-4.65,0) -- (-1.05,0);
     \filldraw[fill=brainpink, draw=plum, line width=1.2pt] (-0.75,0) ellipse (0.35 and 0.55);
-    \node[lbl] at (-5.2,-1.25) {նեյրոն};
-    \draw[-{Stealth}, amOrange!85!black, line width=1.4pt] (-4.3,0.35) -- node[above, lbl] {էլեկտրական ազդանշան (action potential)} (-1.5,0.35);
+    % labels kept clear of the dendrites (2026-11-12): "neuron" right of the lowest one, the signal label on two lines
+    \node[lbl] at (-4.6,-1.0) {նեյրոն};
+    \draw[-{Stealth}, amOrange!85!black, line width=1.4pt] (-4.3,0.35) -- node[above, lbl] {էլեկտրական ազդանշան\\ (action potential)} (-1.5,0.35);
     % synapse gap with neurotransmitters
     \foreach \y/\x in {0.3/-0.2, 0/0.0, -0.25/-0.15, 0.15/0.15, -0.4/0.1}{\fill[amBlue, visible on=<2->] (\x,\y) circle (0.06);}
     % neuron 2 with receptors
@@ -162,7 +177,6 @@
     \node[lbl, visible on=<2->] (syn) at (0,-1.45) {\textbf{սինապս}՝ նեղ ճեղք\\ նեյրոմեդիատորներ \emoji{key} ու ընկալիչներ \emoji{lock}};
     \draw[plum, line width=0.8pt, visible on=<2->] (syn.north) -- (0,-0.6);
   \end{tikzpicture}
-  \vspace{2mm}
   \begin{columns}[T]
     \begin{column}{0.47\textwidth}
       \onslide<3->{%
@@ -195,18 +209,23 @@
     \node[arlbl, visible on=<2->] at (-0.1,1.35) {կրկնություն \emoji{cyclone}\\ զգացմունք \emoji{heart}};
     \draw[ar, visible on=<3->] (hip) -- (ctx);
     \node[arlbl, visible on=<3->] at (3.7,1.35) {կամաց «տեղափոխվում» է\\ (consolidation)};
-    \draw[ar, dashed, plum!60] (stm.south) -- ++(0,-0.75) node[below, font=\scriptsize, text=plum!80] {մնացածը մոռացվում է \emoji{wastebasket}};
+    \draw[ar, dashed, plum!60] (stm.south) -- ++(0,-0.75) node[below, font=\scriptsize, text=plum!80] {չկրկնվածը՝ թույլ է պահվում}; % was «մնացածը մոռացվում է», which contradicted the next frame (2026-11-12)
   \end{tikzpicture}
   \begin{columns}[T]
     \begin{column}{0.47\textwidth}
       \onslide<4->{%
-      \begin{card}\emoji{taxi}\ Լոնդոնի տաքսու վարորդները ունեն ավելի \textbf{մեծ հիպոկամպ}\end{card}}
+      \begin{card}\emoji{taxi}\ Լոնդոնի տաքսու վարորդների \textbf{հետին հիպոկամպն} է մեծ\end{card}}
     \end{column}
     \begin{column}{0.47\textwidth}
       \onslide<5->{%
       \begin{card}\emoji{pin}\ Համարը կրկնելը «Շտապ» պիտակ է. «Սա պահիր առանձին»\end{card}}
     \end{column}
   \end{columns}
+\end{frame}
+
+% Transition (2026-11-12): the book's own question at this point
+\begin{frame}
+  \bigquestion{Եթե երկարաժամկետը գրեթե ամեն ինչ պահում է, ինչո՞ւ ենք մոռանում}{«Լավ հարց է»՝ Բըրնեթ}
 \end{frame}
 
 \begin{frame}{Ինչու ենք մոռանում}
@@ -240,7 +259,7 @@
       \begin{card}[colback=lavender!35!cardwhite]
         {\blackfont Դժվար է}\par\smallskip
         Ինչը ոչ մի բանի հետ կապված չէ։\par\smallskip
-        Դասի գնալու 473-րդ ձանձրալի ճանապարհը
+        Դասի գնալու 509-րդ ձանձրալի ճանապարհը
       \end{card}}
     \end{column}
   \end{columns}
@@ -379,12 +398,13 @@
     \begin{column}{0.46\textwidth}
       \centering
       \begin{tikzpicture}
-        \draw[plum, line width=0.8pt] (0,0) -- (5.2,0);
-        \foreach \i/\h/\t in {1/1.0/դեմք, 2/1.6/{+ որտեղ}, 3/2.2/{+ ում հետ}, 4/3.0/{+ «Ար...»}}{
-          \fill[amBlue, visible on=<\i->] (\i*1.15-0.75,0) rectangle ++(0.75,\h);
-          \node[font=\scriptsize, text=plum, below, visible on=<\i->] at (\i*1.15-0.375,0) {\t};}
-        \draw[amRed, dashed, line width=1.2pt] (0,2.6) -- (5.2,2.6) node[right, font=\scriptsize, text=amRed] {շեմ};
-        \node[visible on=<5->, font=\blackfont, text=amRed] at (4.0,3.45) {«Արամ»};
+        % wider bar pitch and a two-line label (2026-11-12): the four labels ran into each other at 1.15 cm
+        \draw[plum, line width=0.8pt] (0,0) -- (5.6,0);
+        \foreach \i/\h/\t in {1/1.0/դեմք, 2/1.6/{+ որտեղ}, 3/2.2/{+ ում\\ հետ}, 4/3.0/{+ «Բա...»}}{
+          \fill[amBlue, visible on=<\i->] (\i*1.3-0.85,0) rectangle ++(0.75,\h);
+          \node[font=\scriptsize, text=plum, below, align=center, visible on=<\i->] at (\i*1.3-0.475,0) {\t};}
+        \draw[amRed, dashed, line width=1.2pt] (0,2.6) -- (5.6,2.6) node[right, font=\scriptsize, text=amRed] {շեմ};
+        \node[visible on=<5->, font=\blackfont, text=amRed] at (4.7,3.45) {«Բաբկեն»};
       \end{tikzpicture}
     \end{column}
     \begin{column}{0.48\textwidth}
@@ -394,7 +414,7 @@
       \end{itemize}
       \onslide<5->{%
       \begin{bookquote}
-        Հարևանի հրավառությունը լուսավորում է մութ տունը, մինչև ներսինները արթնանում են ու վառում բոլոր լույսերը։
+        Հարևանի հրավառությունը լուսավորում է մութ տունը, մինչև ներսիններն արթնանում են ու վառում բոլոր լույսերը։
       \end{bookquote}}
     \end{column}
   \end{columns}
@@ -404,7 +424,7 @@
   \begin{columns}[c]
     \begin{column}{0.58\textwidth}
       \begin{enumerate}
-        \item Լսելուն պես \textbf{կրկնիր}. «Ուրախ եմ, Արամ»
+        \item Լսելուն պես \textbf{կրկնիր}. «Ուրախ եմ, Բաբկեն»
         \item Մի քանի անգամ \textbf{օգտագործիր} զրույցում
         \item Կապիր \textbf{պատկերի} հետ, որ անունն էլ դառնա «նկար»
       \end{enumerate}
@@ -420,14 +440,17 @@
   \end{columns}
 \end{frame}
 
-% ---------------------------------------------------------------- break
+% ---------------------------------------------------------------- questions pause
+% Was the break slide; no break since 2026-11-12 (Hayk), he asks for questions here. Glazz has letters only: no ՞ in the title
 \begin{frame}[plain]
   \begin{tikzpicture}[remember picture, overlay]
     \fill[butter!60!cream] (current page.south west) rectangle (current page.north east);
-    \node at ([yshift=8mm]current page.center) {\mascot[4cm]{sleepy}};
-    \node[anchor=north, font=\titlefont\fontsize{30}{32}\selectfont, text=plum] at ([yshift=-17mm]current page.center) {Ընդմիջում};
+    \node at ([yshift=8mm]current page.center) {\mascot[4cm]{thinking}};
+    \node[anchor=north, font=\titlefont\fontsize{30}{32}\selectfont, text=plum] at ([yshift=-17mm]current page.center) {Դադար};
     \node[anchor=north, font=\mediumfont\large, text=plum] at ([yshift=-31mm]current page.center)
-      {5 րոպե \emoji{coffee}\quad Կանգնիր, ձգվիր, ջուր խմիր};
+      {Հարցե՞ր կան մինչև հիմա ասածի մասին \emoji{speech}};
+    \node[anchor=north, font=\mediumfont, text=plum!70!cream] at ([yshift=-39mm]current page.center)
+      {Գրեք չաթում կամ միացրեք խոսափողը};
   \end{tikzpicture}
 \end{frame}
 
@@ -437,17 +460,19 @@
 \begin{frame}{Ալկոհոլն անջատում է «կարմիր լույսերը»}
   \begin{columns}[c]
     \begin{column}{0.56\textwidth}
+      % 2026-11-12: the paradox spelled out (Hayk did not get the leg quote's point)
       \begin{itemize}
-        \item Էթանոլը փոքր է ու լուծվում է ջրում. անցնում է մարմնի բոլոր պաշտպանություններով, մինչև ուղեղ
-        \item Այն \textbf{դեպրեսանտ} է. ճնշում է նեյրոնների ակտիվությունը, ինչպես ձայնը իջեցնելը \emoji{mute}
-        \item<2-> Բայց ուղեղի մեծ մասը զբաղված է \textbf{արգելելով} (inhibition), ինչպես լուսացույցները մեծ քաղաքում \emoji{trafficlight}
-        \item<3-> Կարմիր լույսերը մարում են, ու մարդն անում է այն, ինչ սովորաբար չէր անի
+        \item Էթանոլը փոքր է ու լուծվում է ջրում. հեշտությամբ հասնում է ուղեղ
+        \item Այն \textbf{դեպրեսանտ} է. ճնշում է նեյրոնների ակտիվությունը, ինչպես ձայնն իջեցնելը \emoji{mute}
+        \item<2-> Ուրեմն խմածը պետք է հանգիստ նստի՞։ Ոչ. ուղեղի մեծ մասը զբաղված է \textbf{արգելակելով} (inhibition), ինչպես կարմիր լույսերը մեծ քաղաքում \emoji{trafficlight}
+        \item<4-> Ալկոհոլը նախ թուլացնում է հենց այդ \textbf{«արգելակները»}, ու մարդն անում է այն, ինչ սովորաբար զսպում էր
       \end{itemize}
     \end{column}
     \begin{column}{0.38\textwidth}
-      \onslide<2->{%
+      \onslide<3->{%
+      {\blackfont\small Արգելակման օրինակ}\par\smallskip
       \begin{bookquote}
-        Ոտքդ շարժող ուղեղի մասը շատ կարևոր է, բայց ոչ հանդիպման ժամանակ։ Դրա համար մեկ այլ մաս նրան ասում է՝ «Հիմա պետք չէ, ախպեր»։
+        Ոտքդ շարժող մասը կարևոր է, բայց ոչ հանդիպման ժամանակ, երբ պետք է հանգիստ նստես։ Դրա համար մեկ այլ մաս նրան արգելակում է. «Հիմա պետք չէ, ախպեր»։
       \end{bookquote}}
     \end{column}
   \end{columns}
@@ -475,24 +500,63 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Հիշողության «սև անցքեր»}
+% Split in two on 2026-11-12 (Hayk: «խոռոչ», not «անցք»; what «անջատվել» means; the video-game point):
+% this frame defines gaps vs a full blackout, the next one is the book's alcoholics with the game analogy
+\begin{frame}{Հիշողության «սև խոռոչներ»}
   \begin{columns}[c]
-    \begin{column}{0.56\textwidth}
+    \begin{column}{0.52\textwidth}
       \begin{itemize}
-        \item Ալկոհոլը հատկապես խանգարում է \textbf{հիպոկամպին}
-        \item Հիշողությունները դեռ գրանցվում են, բայց վատ ու պատահական, դրա համար էլ առավոտյան «անցքեր» են լինում
-        \item<2-> Մարդկանց մեծ մասը լրիվ «անջատման» (blackout) հասնելու համար այնքան պետք է խմի, որ հազիվ կանգնի
-        \item<3-> Ալկոհոլից կախվածություն ունեցողների ուղեղը հարմարվել է. նրանք կարող են նորմալ խոսել ու շարժվել, բայց \textbf{ոչինչ չհիշել}
+        \item Ալկոհոլը հատկապես խանգարում է \textbf{հիպոկամպին}՝ նոր հիշողությունների «գործարանին»
+        \item<2-> Հաճախ հիշողությունները դեռ գրանցվում են, բայց վատ ու պատահական. առավոտյան՝ «խոռոչներ»
+        \item<3-> Ավելի շատ խմելիս՝ \textbf{լրիվ բլեքաութ} (blackout). մարդն արթուն է, խոսում ու քայլում է, բայց ոչինչ չի գրանցվում։ Հաջորդ օրն այդ ժամերը \textbf{չկան}
       \end{itemize}
     \end{column}
-    \begin{column}{0.38\textwidth}
-      \onslide<3->{%
+    \begin{column}{0.44\textwidth}
+      \centering
+      \begin{tikzpicture}[lbl/.style={font=\small, text=plum, anchor=south west, inner sep=1pt}]
+        \node[lbl, font=\blackfont\small] at (0,2.75) {Երեկոն, ինչպես հիշում ես առավոտյան};
+        \node[lbl, visible on=<2->] at (0,1.9) {«Խոռոչներ»};
+        \fill[mint, visible on=<2->] (0,1.4) rectangle (5.6,1.85);
+        \foreach \a/\b in {1.0/1.5, 2.5/2.8, 3.7/4.5}{\fill[plum, visible on=<2->] (\a,1.4) rectangle (\b,1.85);}
+        \node[lbl, visible on=<3->] at (0,0.75) {Լրիվ բլեքաութ};
+        \fill[mint, visible on=<3->] (0,0.25) rectangle (5.6,0.7);
+        \fill[plum, visible on=<3->] (1.8,0.25) rectangle (5.6,0.7);
+        \node[font=\scriptsize, text=plum!75, anchor=north west, visible on=<2->] at (0,0.1) {կանաչ՝ հիշում ես, մուգ՝ դատարկ};
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Բլեքաութ, որ դրսից չի երևում}
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Գրքի խոսքով՝ մարդկանց մեծ մասը լրիվ բլեքաութի հասնելու համար այնքան պետք է խմի, որ հազիվ կանգնի
+        \item<2-> Ալկոհոլից կախվածություն ունեցողների ուղեղը \textbf{հարմարվել} է. նրանք նորմալ խոսում ու շարժվում են
+        \item<3-> Բայց հիշողություն չի գրանցվում. 10 րոպե անց չեն հիշում՝ ինչ ասացին կամ արեցին
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \onslide<4->{%
       \begin{card}[colback=lavender!35!cardwhite]
-        \centering\bigemoji[1.1cm]{videogame}\par\smallskip
-        \raggedright Ինչպես համակարգչային խաղ, որ ուրիշը շարունակեց խաղալ, մինչ դու զուգարանում էիր։ Դրսից նույնն է երևում, բայց դու չգիտես՝ ինչ է եղել։
+        \centering\bigemoji[1cm]{videogame}\par\smallskip
+        \raggedright Խաղում ես համակարգչային խաղ, գնում ես զուգարան, ու ընկերդ շարունակում է քո փոխարեն։ Կողքից նայողը տարբերություն չի տեսնում, բայց վերադառնալիս \textbf{չգիտես՝ ինչ եղավ}։\par\smallskip
+        Բլեքաութի ժամանակ էլ մարմինը «խաղում» է, իսկ հիշողությունը «դուրս է եկել»։
       \end{card}}
     \end{column}
   \end{columns}
+\end{frame}
+
+% Myth or fact (2026-11-12): the book implies only alcoholics black out while still talking; students do too
+\begin{frame}{Առասպել, թե՞ փաստ}
+  % statement = the book's own claim (frame before), since 2026-11-12 review: "during a blackout you can barely stand"
+  \mythorfact{Բլեքաութի ժամանակ մարդը հազիվ է կանգնում}{ԱՌԱՍՊԵԼ}{pinkdark}{%
+    % one line only: longer text ran off the frame (the statement box and stamp leave no room); the rest is in NOTES
+    \vspace{-4mm}
+    \begin{scienceupdate}[fontupper=\footnotesize]
+      Մարդը խոսում ու քայլում է։ Խմող ուսանողների \textbf{կեսն} այն ունեցել է
+    \end{scienceupdate}}
+  \source{White et al., J. Am. Coll. Health, 2002; NIAAA}
 \end{frame}
 
 \begin{frame}{Երբ «վիճակն» է օգնում հիշել}
@@ -500,8 +564,8 @@
     \begin{column}{0.54\textwidth}
       \begin{itemize}
         \item Ոչ միայն միջավայրը, այլև \textbf{ներքին վիճակն} է համատեքստ. ալկոհոլ, կոֆեին, տրամադրություն (state-dependent recall)
-        \item<2-> Վատ տրամադրությամբ սովորածը ավելի հեշտ ես հիշում նորից վատ տրամադրությամբ
-        \item<3-> Երկու բաժակ գինուց հետո լսած բամբասանքը ավելի լավ կհիշես մեկ այլ երեկո, նորից երկու բաժակից հետո։ Այդ դեպքում գինին իսկապես «թարմացնում է հիշողությունը»
+        \item<2-> Վատ տրամադրությամբ սովորածն ավելի հեշտ ես հիշում նորից վատ տրամադրությամբ
+        \item<3-> Երկու բաժակ գինուց հետո լսած բամբասանքն ավելի լավ կհիշես մեկ այլ երեկո, նորից երկու բաժակից հետո։ Այդ դեպքում գինին իսկապես «թարմացնում է հիշողությունը»
       \end{itemize}
     \end{column}
     \begin{column}{0.4\textwidth}
@@ -546,9 +610,52 @@
       \end{itemize}
     \end{column}
     \begin{column}{0.36\textwidth}
-      \centering\mascot[2.8cm]{smug}
+      % hand-raise first (2026-11-12): the egocentric bias, live
+      \begin{poll}
+        Վերջին խմբային նախագծում \textbf{դու} արել ես քո բաժնից ավելի՞ն։ Բարձրացրու ձեռքդ։
+      \end{poll}
+      \onslide<2->{%
+      \begin{card}[colback=brainpink!25!cardwhite]
+        \centering Բոլորը չեն կարող իրենց բաժնից ավելին անել \emoji{thinking}
+      \end{card}}
     \end{column}
   \end{columns}
+\end{frame}
+
+% Veritasium (Hayk asked, 2026-11-12): "Why Being Delusional is a Superpower" (2020), its first minute;
+% numbers checked against the video's own transcript. Answers the poll on the previous frame.
+\begin{frame}{Ո՞վ արեց աշխատանքի մեծ մասը}
+  \begin{columns}[T]
+    \begin{column}{0.58\textwidth}
+      \begin{card}[colback=mint!30!cardwhite]
+        \textbf{Համահեղինակներ}. «Քանի՞ տոկոսն է քոնը»\par\smallskip
+        \centering
+        \begin{tikzpicture}
+          \fill[amBlue] (0,0) rectangle (3.4,0.42);
+          \fill[amRed] (3.4,0) rectangle (4.76,0.42);
+          \draw[plum, dashed, line width=0.9pt] (3.4,-0.15) -- (3.4,0.58) node[above, font=\scriptsize, text=plum, inner sep=1pt] {100\%};
+          \node[right, font=\blackfont, text=amRed] at (4.76,0.21) {գումարը՝ 140\%};
+        \end{tikzpicture}
+      \end{card}
+      \onslide<2->{%
+      \begin{card}[colback=lavender!35!cardwhite]
+        \textbf{Զույգեր}, տնային գործը. համարյա միշտ \textbf{100\%-ից ավելի}
+      \end{card}}
+      \onslide<3->{%
+      \begin{card}[colback=brainpink!25!cardwhite]
+        Պարծենալ չէ. «ո՞վ է սկսում վեճերը», «ո՞ւմ թափթփածն է»՝ նորից \textbf{100\%-ից ավելի}
+      \end{card}}
+    \end{column}
+    \begin{column}{0.36\textwidth}
+      \onslide<4->{%
+      \begin{card}[colback=butter!45!cream]
+        Քո արածը հիշում ես \textbf{ամբողջությամբ ու վառ}, ուրիշներինը՝ միայն տեսածդ մասը։ Դրա համար քո բաժինը մեծ է թվում՝ ու լավում, ու վատում։
+      \end{card}
+      \centering\href{https://youtu.be/3LopI4YeC4I}{\qrcode[height=1.05cm]{https://youtu.be/3LopI4YeC4I}}\par
+      {\scriptsize Veritasium-ի վիդեոն}}
+    \end{column}
+  \end{columns}
+  \source{Veritasium, 2020; Ross \& Sicoly, 1979; Caruso et al., 2006}
 \end{frame}
 
 \begin{frame}{Ջոն Դինի հիշողությունը}
@@ -557,7 +664,7 @@
       \begin{itemize}
         \item 1973, Ուոթերգեյթ. Նիքսոնի խորհրդական Ջոն Դինը մանրամասն պատմեց գաղտնի հանդիպումների մասին
         \item<2-> Հետո գտնվեցին այդ հանդիպումների \textbf{ձայնագրությունները} \emoji{musical}
-        \item<3-> Ընդհանուր իմաստը ճիշտ էր, բայց իրեն նկարագրել էր որպես գլխավոր դերակատար։ Իրականում \textbf{երկրորդական} դեր ուներ
+        \item<3-> Ընդհանուր իմաստը ճիշտ էր, մանրամասները՝ հաճախ ոչ։ Ու այդ զրույցներում իր դերը հիշում էր \textbf{ավելի կենտրոնական}, քան էր
       \end{itemize}
     \end{column}
     \begin{column}{0.38\textwidth}
@@ -606,7 +713,7 @@
       \begin{card}[colback=mint!30!cardwhite]
         \centering\bigemoji[0.75cm]{people}\par\smallskip
         {\blackfont «Սեփական ռասայի» էֆեկտ}\par
-        \raggedright own-race bias. այլ ռասայի մարդկանց դեմքերը ավելի դժվար ես տարբերում
+        \raggedright own-race bias. այլ ռասայի դեմքերն ավելի դժվար ես տարբերում։ Հիմնական պատճառը՝ \textbf{փորձը}
       \end{card}
     \end{column}
     \begin{column}{0.31\textwidth}
@@ -614,7 +721,7 @@
       \begin{card}[colback=lavender!35!cardwhite]
         \centering\bigemoji[0.75cm]{sun}\par\smallskip
         {\blackfont Վատը մարում է}\par
-        \raggedright fading affect bias. վատ հիշողությունների ցավը ավելի արագ է մարում, քան լավերի ուրախությունը
+        \raggedright fading affect bias. վատ հիշողությունների ցավն ավելի արագ է մարում, քան լավերի ուրախությունը
       \end{card}}
     \end{column}
     \begin{column}{0.31\textwidth}
@@ -671,17 +778,18 @@
 % DRM reveal
 \begin{frame}{Հիշողության թեստ. պատասխանը}
   \begin{columns}[c]
-    \begin{column}{0.4\textwidth}
+    \begin{column}{0.45\textwidth}
+      % three words, not one (2026-11-12): asking only about «քուն» gave the trick away
       \begin{chatbox}
-        Ցուցակում կա՞ր \textbf{«քուն»} բառը։ Գրիր \textbf{այո} կամ \textbf{ոչ}։
+        Կայի՞ն ցուցակում. \textbf{«բարձ»}, \textbf{«քուն»}, \textbf{«մեքենա»}։ Ամեն մեկին գրիր \textbf{այո} կամ \textbf{ոչ}։
       \end{chatbox}
-      \vspace{3mm}
+      \vspace{1mm}
       \onslide<3->{%
       \begin{card}[colback=brainpink!25!cardwhite]
-        Չկար։ Բայց շատերը վստահ «հիշում» են այն։ Ուղեղն ինքն է \textbf{ավելացրել} ամենահավանական բառը։
+        «Բարձ»՝ կար, «մեքենա»՝ չկար։ «Քուն»՝ \textbf{չկար}, բայց շատերը վստահ «հիշում» են այն։ Ուղեղն ինքն է \textbf{ավելացրել} ամենահավանական բառը։
       \end{card}}
     \end{column}
-    \begin{column}{0.56\textwidth}
+    \begin{column}{0.51\textwidth}
       \onslide<2->{%
       \begin{card}
         \begin{tabular}{@{}lll@{}}
@@ -710,7 +818,7 @@
             yticklabels={հպվեցին, խփվեցին, դեմ առան, բախվեցին, ջախջախվեցին},
             tick label style={font=\small, text=plum}, axis line style={plum},
             axis x line*=bottom, axis y line*=left, xtick=\empty,
-            nodes near coords={\pgfmathprintnumber{\pgfplotspointmeta}\,կմ/ժ},
+            nodes near coords={\pgfmathprintnumber[assume math mode=true]{\pgfplotspointmeta}\,կմ/ժ}, % text font, not serif math digits
             nodes near coords style={font=\blackfont\small, text=plum, anchor=west},
             point meta=x, clip=false,
           ]
@@ -738,7 +846,7 @@
     \begin{column}{0.48\textwidth}
       \begin{card}[colback=butter!45!cream]
         \emoji[1.3em]{cheese}\ {\blackfont Մեծ չեդեր-կողոպուտը}\par\smallskip
-        «Ամբաստանյալը խանութի \textbf{մոտ} է՞ր»։\par
+        «Ամբաստանյալը խանութի \textbf{մո՞տ} էր»։\par
         \onslide<2->{Թե՞ «Խանութի \textbf{որ մասում} էր նա»։ Երկրորդից հետո վկան «հիշում է». «Գորգոնզոլայի կողքին էր»։}
       \end{card}
     \end{column}
@@ -757,12 +865,17 @@
   \end{card}}
 \end{frame}
 
+% Transition (2026-11-12): the book's "* * *" break, from false memories in healthy brains to damaged ones
+\begin{frame}
+  \bigquestion{Մինչև հիմա ուղեղն առողջ էր, ու միևնույն է սխալվում էր։ Իսկ եթե վնասվի հենց ուղե՞ղը}{Վիրահատություն, վնասվածք, հիվանդություն}
+\end{frame}
+
 \begin{frame}{Պացիենտ Հ.Մ.}
   \begin{columns}[c]
     \begin{column}{0.58\textwidth}
       \begin{itemize}
         \item Հենրի Մոլեյսոն. ծանր էպիլեպսիա
-        \item 1953-ին, 27 տարեկանում, հեռացրին քունքային բլթերի մի մասը՝ \textbf{երկու հիպոկամպերով}
+        \item 1953-ին, 27 տարեկանում, հեռացրին քունքային բլթերի մի մասը՝ \textbf{երկու հիպոկամպերի} մոտ կեսի հետ
         \item<2-> Նոպաները դադարեցին։ Դադարեց նաև \textbf{նոր հիշողությունների} ստեղծումը
         \item<3-> Զրուցում էր նորմալ, բայց մի քանի րոպեից ամեն ինչ մոռանում էր
         \item<4-> Մինչև 2008-ը տասնամյակներ շարունակ օգնեց գիտնականներին հասկանալ հիշողությունը
@@ -787,7 +900,7 @@
     \end{column}
     \begin{column}{0.54\textwidth}
       \begin{itemize}
-        \item Հ.Մ.-ը աստղ էր գծում՝ նայելով միայն \textbf{հայելուն}
+        \item Հ.Մ.-ն աստղ էր գծում՝ նայելով միայն \textbf{հայելուն}
         \item<2-> Ամեն օր \textbf{ավելի լավ} էր ստացվում
         \item<3-> Բայց ամեն անգամ վստահ էր, որ \textbf{առաջին անգամն} է անում
       \end{itemize}
@@ -800,16 +913,21 @@
   \end{columns}
 \end{frame}
 
+% Transition (2026-11-12, Hayk's example: from H.M. to the amnesia types)
+\begin{frame}
+  \bigquestion{Հ.Մ.-ը չէր կարողանում նորը գրանցել։ Իսկ կարելի՞ է կորցնել հինը}{Ամնեզիայի երկու տեսակ}
+\end{frame}
+
 \begin{frame}{Ամնեզիայի երկու տեսակ}
   \centering
-  \begin{tikzpicture}
+  % labels are filled nodes on two lines since 2026-11-12: the fixed rectangles were narrower than the text
+  \begin{tikzpicture}[amn/.style={font=\blackfont\small, align=center, rounded corners=1.5mm, inner sep=4pt,
+      minimum width=4.6cm, anchor=south}]
     \draw[-{Stealth[length=3mm]}, plum, line width=1.6pt] (-6.4,0) -- (5.6,0) node[right, font=\small] {ժամանակ};
     \node at (0,0.05) {\emoji[1.6em]{cyclone}};
     \node[font=\blackfont\small, text=plum, below=3mm] at (0,0) {վնասվածք};
-    \fill[lavender, opacity=0.8, visible on=<2->] (-6.3,0.3) rectangle (-0.6,0.95);
-    \node[font=\blackfont\small, text=lavenderdark, visible on=<2->] at (-3.45,0.625) {Ռետրոգրադ՝ կորցնում ես \textbf{անցյալը}};
-    \fill[brainpink, opacity=0.8, visible on=<3->] (0.6,0.3) rectangle (5.6,0.95);
-    \node[font=\blackfont\small, text=pinkdark, visible on=<3->] at (3.1,0.625) {Անտերոգրադ՝ չես գրանցում \textbf{նորը}};
+    \node[amn, fill=lavender, text=lavenderdark, visible on=<2->] at (-3.4,0.3) {Ռետրոգրադ\\ կորցնում ես \textbf{անցյալը}};
+    \node[amn, fill=brainpink, text=pinkdark, visible on=<3->] at (3.0,0.3) {Անտերոգրադ\\ չես գրանցում \textbf{նորը}};
   \end{tikzpicture}
   \vspace{3mm}
   \begin{columns}[T]
@@ -830,20 +948,27 @@
 
 \begin{frame}{Ինչն է վնասում հիպոկամպին}
   \begin{columns}[T]
+    % Alzheimer's first, as in the book, with today's science (2026-11-12): the book has tangles only, no amyloid.
+    % Same 2x2 grid as before; the science box and Burnett's quote share the bottom slot (\only), so nothing grows
     \begin{column}{0.47\textwidth}
-      \begin{card}\emoji{hospital}\ \textbf{Ինսուլտ}. արյան կարճ ընդհատումն էլ բավական է\end{card}
-      \begin{card}\emoji{brain}\ \textbf{Ալցհեյմեր}. նեյրոնների «կմախքը» խճճվում է, ինչպես այգու ճկուն խողովակը\end{card}
+      \begin{card}\emoji{brain}\ \textbf{Ալցհեյմեր}. \textbf{tau} սպիտակուցը խճճվում է այգու խողովակի պես\end{card}
+      \onslide<3->{\begin{card}\emoji{hospital}\ \textbf{Ինսուլտ}. արյան կարճ ընդհատումն էլ բավական է\end{card}}
     \end{column}
     \begin{column}{0.47\textwidth}
-      \onslide<2->{%
+      \onslide<3->{%
       \begin{card}\emoji{pill}\ \textbf{Հերպեսի վիրուսը} (շրթունքի «մրսածությունը»), հազվադեպ\end{card}
-      \begin{card}\emoji{wine}\ \textbf{Կորսակովի համախտանիշ}. ալկոհոլիզմ ու B1 վիտամինի պակաս\end{card}}
+      \begin{card}\emoji{wine}\ \textbf{Կորսակովի համախտանիշ}. ալկոհոլիզմ, B1-ի պակաս\end{card}}
     \end{column}
   \end{columns}
-  \onslide<3->{%
+  \only<1-3>{\onslide<2->{%
+  \begin{scienceupdate}
+    Նաև \textbf{ամիլոիդ}. 2023-ից այն մաքրող դեղերը մի քիչ օգնում են
+  \end{scienceupdate}}}
+  \only<4->{%
   \begin{card}[borderline west={1.4mm}{0pt}{accent}, fontupper=\mediumfont\small]
     \emoji{book}\ Բըրնեթ. «Մի պացիենտի ուղեղը վնասել էր քթի միջով խրված բիլիարդի փայտը։ Ոչ կոնտակտային սպորտ գոյություն չունի»։
   \end{card}}
+  \source{van Dyck et al., NEJM, 2023; Sims et al., JAMA, 2023}
 \end{frame}
 
 \begin{frame}{Եվ այնուամենայնիվ...}
