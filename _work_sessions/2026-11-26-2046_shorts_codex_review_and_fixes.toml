@@ -45,3 +45,21 @@ pending = [
   "Hayk: create the accounts (PUBLISHING.md steps 1-6); then tools/publish.py (Meta, YouTube) and the TikTok hand-off folders",
   "Next drafts in publishing order: bayes_test, map_projection, friendship",
 ]
+
+[[later]]
+when = "2026-11-27 19:00 - 21:30"
+done = [
+  "bayes_test draft video (2:40; cf2e02a); captions may share the smaller size when merging",
+  "Three more drafts in publishing order (Hayk: 'work on 3 more videos, in sequence'): map_projection (1:51), friendship (1:41), painted_statues (2:03); review pages opened; 112a4a7",
+  "map_projection: real Natural Earth outlines via d3-geo (new pinned deps d3-geo, d3-geo-projection, topojson-client, world-atlas); countries moved by rotating the sphere, so sizes are Mercator's own (checked: Africa/Greenland 13.9, Armenia at 72N x6.1 area)",
+  "friendship: all numbers from friendship/network.py; vaccine beat shows the exact random-friend odds (hub 16% vs 5%, expected 5.18 friends)",
+  "painted_statues: 10 Commons photos with credits (archer pair for the hook, Peplos Kore + Gillieron cast, Akhtamar frescoes, Saghmosavank); reconstructions and drawings tagged",
+  "Music (Q35, Hayk: 'search for some nice copyright free stuff'): one research agent ranked libraries by claim safety; 10 candidates (8 StreamBeats, 2 HoliznaCC0) mixed 20 LU under the map narration on one audition page",
+  "Paid spend: TTS $0.035 (bayes) + $0.071 (three drafts, 28 clips)",
+]
+pending = [
+  "Hayk: pick music on render/out/drafts/music/music_audition.html (or none); then a DECISIONS entry and a music layer in the compositions",
+  "Hayk: review the drafts: own_voice, decoy_popcorn, bayes_test, map_projection, friendship, painted_statues",
+  "Next drafts in publishing order: petrov, mashtots, english_spelling",
+  "Music files are 128 kbps Bandcamp stream copies (gitignored scratchpad); take the WAVs from the StreamBeats Drive folder for final renders",
+]
