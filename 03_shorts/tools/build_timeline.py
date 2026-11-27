@@ -287,10 +287,12 @@ def pages(words, tail_hold=HOLD_S, key="?"):
                 p = out[k]
                 ok_end = lambda q: across_sentences or not ends_sentence(q)  # noqa: E731
                 limit = P["max_merged"] + extra
+                # a merged page may use the smaller of the two pages' sizes: next to a word that already forces a
+                # small size («հավանականությունը» at 52 px), a short page can join it (2026-11-27: «հետո» was 0.26 s)
                 can_next = (k + 1 < len(out) and ok_end(p) and len(p) + len(out[k + 1]) <= limit
-                            and fits(p + out[k + 1]))
+                            and fits(p + out[k + 1], min(page_size(p), page_size(out[k + 1]))))
                 can_prev = (k > 0 and ok_end(out[k - 1]) and len(out[k - 1]) + len(p) <= limit
-                            and fits(out[k - 1] + p))
+                            and fits(out[k - 1] + p, min(page_size(out[k - 1]), page_size(p))))
                 if can_prev and (ends_sentence(p) or not can_next):
                     out[k - 1:k + 1] = [out[k - 1] + p]
                 elif can_next:
@@ -300,9 +302,12 @@ def pages(words, tail_hold=HOLD_S, key="?"):
                 merged = True
                 break
 
-    merge_pass(across_sentences=False)
-    merge_pass(across_sentences=True)
-    merge_pass(across_sentences=False, extra=1)  # last resort: one word over the limit, if it still fits (X14)
+    try:
+        merge_pass(across_sentences=False)
+        merge_pass(across_sentences=True)
+        merge_pass(across_sentences=False, extra=1)  # last resort: one word over the limit, if it still fits (X14)
+    except CaptionError as e:
+        raise SystemExit(f"beat {key}: {e}") from None
     result, short = [], []
     for k, p in enumerate(out):
         try:

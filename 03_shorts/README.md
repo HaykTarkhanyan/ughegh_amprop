@@ -107,4 +107,6 @@ PATH, and `npm ci` in `render/`. Offline tests: `python -m unittest discover -s 
 - Word-exact captions if the length-based timing drifts visibly: MMS forced alignment (`ctc-forced-aligner`, model
   CC-BY-NC) or Azure hy-AM voices with native word boundaries.
 - Music: not decided (in-app sounds at upload, a free library, or Lyria).
+  Whatever is chosen must be claim-free (own, licensed, or none): YouTube blocks worldwide any Short over 1 minute
+  that gets a Content ID claim (publishing research 2026-11-27), and most of our Shorts run 1:40-2:50.
 - AI-disclosure tick: check YouTube's help page on synthetic narrator voices before the first upload.

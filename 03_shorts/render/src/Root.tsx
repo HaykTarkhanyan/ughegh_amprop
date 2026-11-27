@@ -7,6 +7,7 @@ import "./theme";
 import { BALLS_T, BallsScene } from "./zk/Balls";
 import { DECK_T, DeckScene } from "./zk/Deck";
 import { LONG_FPS, LONG_FRAMES, ZkLong } from "./zk/Long";
+import { BAYES_FPS, BAYES_FRAMES, Bayes } from "./series/Bayes";
 import { DECOY_FPS, DECOY_FRAMES, Decoy } from "./series/Decoy";
 import { OV_FPS, OV_FRAMES, OwnVoice } from "./series/OwnVoice";
 import { SHORT_FPS, SHORT_FRAMES, ZkShort } from "./zk/Short";
@@ -23,5 +24,6 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="ZkShort" component={ZkShort} durationInFrames={SHORT_FRAMES} fps={SHORT_FPS} width={1080} height={1920} />
     <Composition id="OwnVoice" component={OwnVoice} durationInFrames={OV_FRAMES} fps={OV_FPS} width={1080} height={1920} />
     <Composition id="Decoy" component={Decoy} durationInFrames={DECOY_FRAMES} fps={DECOY_FPS} width={1080} height={1920} />
+    <Composition id="Bayes" component={Bayes} durationInFrames={BAYES_FRAMES} fps={BAYES_FPS} width={1080} height={1920} />
   </>
 );
