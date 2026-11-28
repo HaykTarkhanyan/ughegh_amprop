@@ -27,8 +27,12 @@ Total picked: 31. Round 2 picker: `topic_picker_round2_picker.html`.
 From round 2 (9 more, 2026-11-28; IDs from `topic_picker_round2.json`): I10 how a phone reads a fingerprint, I12
 how sites store passwords without knowing them, O2 faces in sockets and clouds, O5 two squares of the same grey, X13
 how a computer makes a random number, U2 why forecasts stop at about 10 days, Q3 why planes leave white trails, Z1 why
-CAPTCHAs ask for traffic lights, M8 the card digit that checks the others. Total picked: 40. Codex's suggestions
-come next as a third picker.
+CAPTCHAs ask for traffic lights, M8 the card digit that checks the others. Total picked: 40.
+
+From Codex's suggestions (6 more, 2026-11-28; IDs from `topic_picker_codex.json`): CX11 the blind spot, a hole in
+what you see; CX40 how ships climb a hill (locks and ship lifts); CX42 why a computer gets 0.1 + 0.2 wrong; CX43
+delete does not erase a file; CX47 the one-sided surface (Möbius strip); CX75 the theremin, played without touching.
+Total picked: 46.
 
 ## Chosen on 2026-11-28 (Q39, Q40)
 
