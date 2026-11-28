@@ -24,6 +24,12 @@ needs Einstein, I3 a torn QR code still works, I4 batteries in the cold, I6 nois
 notes in an octave, X2 folding paper, X4 six degrees of separation, K2 the Areni-1 shoe, K3 the Areni-1 winery.
 Total picked: 31. Round 2 picker: `topic_picker_round2_picker.html`.
 
+From round 2 (9 more, 2026-11-28; IDs from `topic_picker_round2.json`): I10 how a phone reads a fingerprint, I12
+how sites store passwords without knowing them, O2 faces in sockets and clouds, O5 two squares of the same grey, X13
+how a computer makes a random number, U2 why forecasts stop at about 10 days, Q3 why planes leave white trails, Z1 why
+CAPTCHAs ask for traffic lights, M8 the card digit that checks the others. Total picked: 40. Codex's suggestions
+come next as a third picker.
+
 ## Chosen on 2026-11-28 (Q39, Q40)
 
 - **C1. The healthiest places are tiny, and so are the sickest** (thinking error). The lowest and highest cancer
