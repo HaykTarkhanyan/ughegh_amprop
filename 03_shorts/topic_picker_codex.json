@@ -1,0 +1,987 @@
+{
+ "title": "Topic picker: Codex's suggestions",
+ "subtitle": "90 ideas from Codex (gpt-6.1-sol, asked for broad variety and no repeats of our lists; it checked some facts on the web while writing). Not yet fact-checked by us: each picked topic gets a full check before any script. Already picked: 40. You can still select any text and press C to comment.",
+ "date": "2026-11-28",
+ "tags": {
+  "pick": {
+   "label": "pick",
+   "color": "#0033A0"
+  }
+ },
+ "sections": [
+  {
+   "id": "plants",
+   "title": "Plants and living systems",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "Plants and living systems",
+     "items": [
+      {
+       "id": "CX1",
+       "title": "Grown sunflowers stop following the Sun",
+       "note": "Young sunflowers track daylight, but mature heads generally settle facing east, which can help attract pollinators. Animate a growing stem through several days, then freeze its orientation at flowering.",
+       "detail": [
+        "to verify: developmental stage when tracking stops, differential stem growth, and pollinator results in Atamian et al. 2016, confidence: high",
+        "source: https://pubmed.ncbi.nlm.nih.gov/27493185/"
+       ]
+      },
+      {
+       "id": "CX2",
+       "title": "This plant counts before eating",
+       "note": "Venus flytraps respond to successive electrical signals, with different thresholds for closing and activating digestion. Animate touches becoming pulses on a counter, showing why one accidental disturbance need not trigger a meal.",
+       "detail": [
+        "to verify: pulse counts and timing windows for closure versus digestive responses in Böhm et al. 2016, confidence: high",
+        "source: https://pubmed.ncbi.nlm.nih.gov/26804557/"
+       ]
+      },
+      {
+       "id": "CX3",
+       "title": "How does water climb a tree without a pump?",
+       "note": "Evaporation from leaves pulls a connected water column through xylem under tension; capillary action alone cannot explain tall trees. Animate water being pulled up a transparent tree, then show how drought can break the column with an air bubble.",
+       "detail": [
+        "to verify: cohesion–tension mechanism, representative xylem pressures, and how embolisms interrupt transport, confidence: high"
+       ]
+      },
+      {
+       "id": "CX4",
+       "title": "A seed waited 2,000 years to grow",
+       "note": "Researchers germinated ancient date seeds recovered from archaeological sites, with dating and contamination checks supporting their extraordinary age. Animate a seed crossing a historical timeline before sprouting, then show how dry storage slows deterioration.",
+       "detail": [
+        "to verify: individual seeds' calibrated ages, excavation provenance, germination dates, and modern-carbon corrections, confidence: high",
+        "source: https://pmc.ncbi.nlm.nih.gov/articles/PMC8126781/"
+       ]
+      },
+      {
+       "id": "CX5",
+       "title": "The carbon in this tree came from the air",
+       "note": "A tree builds wood using carbon captured from atmospheric carbon dioxide, rather than simply turning soil into timber. Grow an apricot tree while tracking carbon atoms from air into its trunk, then reveal why the soil loses so little mass.",
+       "detail": [
+        "to verify: carbon pathways in photosynthesis, typical dry-wood carbon fraction, and distinction between carbon origin and total biomass mass, confidence: high"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "animals",
+   "title": "Animals",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "Animals",
+     "items": [
+      {
+       "id": "CX6",
+       "title": "Why does a wombat produce cubes?",
+       "note": "Different stiffnesses around the intestine help shape cubelike droppings inside a soft tube. Animate a flexible intestinal cross-section squeezing material, then distinguish the measured mechanism from guesses about why cubes evolved.",
+       "detail": [
+        "to verify: studied wombat species, measured intestinal stiffness differences, model assumptions, and evidence for proposed evolutionary benefits, confidence: high",
+        "source: https://pubmed.ncbi.nlm.nih.gov/33289747/"
+       ]
+      },
+      {
+       "id": "CX7",
+       "title": "How do owls turn down their wing noise?",
+       "note": "Feather fringes, leading-edge structures, and soft surfaces can reduce different sources of flight noise, although their precise roles vary. Animate a wing generating sound, then progressively add an owl's feather features and compare the resulting noise.",
+       "detail": [
+        "to verify: experimental evidence for each feather feature, species differences, and limits of claims that owl flight is silent, confidence: medium",
+        "source: https://academic.oup.com/iob/article/2/1/obaa001/5709817"
+       ]
+      },
+      {
+       "id": "CX8",
+       "title": "A gecko sticks without glue or suction",
+       "note": "Tiny branching structures on gecko toes create enormous contact area, allowing weak molecular attractions to add up. Zoom from a foot to its microscopic tips, then animate how changing the pulling angle releases the grip.",
+       "detail": [
+        "to verify: setae and spatula dimensions, evidence for van der Waals adhesion, and directional attachment and release mechanics, confidence: high",
+        "source: https://doi.org/10.1073/pnas.192252799"
+       ]
+      },
+      {
+       "id": "CX9",
+       "title": "An electric eel is a stack of living batteries",
+       "note": "Specialized cells produce small voltages that combine when thousands discharge together. Build an animated series circuit inside an eel, then contrast stacking cells for voltage with arranging them in parallel for current.",
+       "detail": [
+        "to verify: electrocyte voltage, species-specific cell arrangements, synchronization, and any maximum-voltage figure against newer research, confidence: high",
+        "source: https://www.uwa.edu.au/science/-/media/Faculties/Science/Docs/Electric-eels.pdf"
+       ]
+      },
+      {
+       "id": "CX10",
+       "title": "This frog survives ice forming inside its body",
+       "note": "Wood frogs tolerate substantial freezing outside their cells while protective chemistry helps keep the cells alive. Animate extracellular ice spreading and stopping in spring, with a magnified cell showing why freezing location matters.",
+       "detail": [
+        "to verify: extracellular versus intracellular freezing, glucose and urea roles, and population-specific temperature and survival limits, confidence: high",
+        "source: https://cpw.state.co.us/species/wood-frog"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "human-body",
+   "title": "The human body",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "The human body",
+     "items": [
+      {
+       "id": "CX11",
+       "title": "There is a hole in what you see",
+       "note": "Each retina has a blind spot where the optic nerve exits, but ordinary vision conceals it through both-eye coverage and perceptual filling. Make a dot disappear in a guided screen demonstration, then reveal the corresponding gap on a retinal diagram.",
+       "detail": [
+        "to verify: optic-disc anatomy, blind-spot location and angular size, and viewing geometry for a vertical-phone demonstration, confidence: high"
+       ]
+      },
+      {
+       "id": "CX12",
+       "title": "Your nostrils take turns doing more work",
+       "note": "In many healthy people, swelling and shrinking nasal tissue alternates which side carries more airflow. Animate two airflow channels changing over a day, then show how posture can influence the pattern.",
+       "detail": [
+        "to verify: prevalence, variability in cycle duration, tissue mechanism, and posture findings in the 33-participant study, confidence: high",
+        "source: https://pubmed.ncbi.nlm.nih.gov/27711189/"
+       ]
+      },
+      {
+       "id": "CX13",
+       "title": "Your skeleton is a construction site",
+       "note": "Bone is living tissue continually removed and rebuilt by different cell teams, with turnover varying across the skeleton. Animate a microscopic demolition-and-building crew, then show how loading helps influence where bone is maintained.",
+       "detail": [
+        "to verify: osteoclast and osteoblast functions, cortical versus trabecular turnover, and evidence for mechanical adaptation without claiming a universal replacement cycle, confidence: high"
+       ]
+      },
+      {
+       "id": "CX14",
+       "title": "How does your cornea live without blood vessels?",
+       "note": "The normally vessel-free central cornea stays transparent while receiving support from tears, surrounding tissues, and fluid inside the eye. Animate these supply routes through a transparent eye, then show why transparency matters for focusing light.",
+       "detail": [
+        "to verify: oxygen versus nutrient supply routes, open-eye and closed-eye differences, and the cornea's contribution to focusing power, confidence: high",
+        "source: https://www.nei.nih.gov/sites/default/files/2021-10/NEI-StrategicPlan-VisionForTheFuture.pdf"
+       ]
+      },
+      {
+       "id": "CX15",
+       "title": "Tiny sugar structures help decide your blood type",
+       "note": "The ABO system depends on molecular decorations on cell surfaces, with A and B differing in their terminal sugars. Animate identical red cells receiving different sugar tips, then show how immune recognition distinguishes those labels.",
+       "detail": [
+        "to verify: A and B terminal sugars, the H antigen, common O-allele mechanism, and distinction between ABO sugars and Rh proteins, confidence: high"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chemistry-materials",
+   "title": "Chemistry and materials",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "Chemistry and materials",
+     "items": [
+      {
+       "id": "CX16",
+       "title": "Stainless steel protects itself with an invisible skin",
+       "note": "Chromium helps form a thin passive surface film that can reform after damage when conditions allow. Animate a scratch healing at molecular scale, then show how chloride-rich conditions can locally defeat that protection.",
+       "detail": [
+        "to verify: chromium's role, representative passive-film thickness, oxygen requirements for repassivation, and chloride-induced pitting mechanism, confidence: high"
+       ]
+      },
+      {
+       "id": "CX17",
+       "title": "Why was ordinary aluminium once a luxury?",
+       "note": "Aluminium is abundant in minerals but was costly to extract before economical electrolysis transformed production. Turn an ore-to-metal animation into a falling cost curve, anchored by the aluminium cap placed on the Washington Monument in 1884.",
+       "detail": [
+        "to verify: 1884 cap composition and mass, Hall–Héroult discovery dates, process chemistry, and any historical price comparisons, confidence: high",
+        "source: https://www.acs.org/education/whatischemistry/landmarks/aluminumprocess.html"
+       ]
+      },
+      {
+       "id": "CX18",
+       "title": "A pencil and a diamond share the same element",
+       "note": "Graphite and diamond behave differently because their carbon atoms connect in different structures. Rearrange the same animated atoms from sliding sheets into a rigid network, then explain why graphite conducts electricity while ordinary diamond does not.",
+       "detail": [
+        "to verify: bonding structures, electrical-conduction explanation, and distinction between pencil-core graphite mixtures and pure graphite, confidence: high"
+       ]
+      },
+      {
+       "id": "CX19",
+       "title": "How does soap persuade oil to leave?",
+       "note": "Soap molecules have water-friendly and oil-friendly parts that help detach and disperse greasy material. Animate a greasy plate at molecular scale, then show how hard-water ions can interfere by forming soap scum.",
+       "detail": [
+        "to verify: roles of interfacial tension and aggregation during cleaning, micelle depiction, and calcium and magnesium soap formation, confidence: high"
+       ]
+      },
+      {
+       "id": "CX20",
+       "title": "This bent metal remembers its old shape",
+       "note": "Shape-memory alloys such as nitinol can recover a trained shape when heating changes their crystal structure. Morph a bent wire alongside its changing lattice, then distinguish this effect from ordinary springiness.",
+       "detail": [
+        "to verify: martensite–austenite transformation, shape-training requirements, composition-dependent transition temperatures, and difference from superelasticity, confidence: high",
+        "source: https://www.nature.com/articles/nmat884"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "physics",
+   "title": "Physics in motion",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "Physics in motion",
+     "items": [
+      {
+       "id": "CX21",
+       "title": "Copper can slow a magnet without touching it",
+       "note": "A falling magnet induces currents in a copper tube, and their magnetic field resists its motion. Race a magnet and a nonmagnetic object through matching tubes, then reveal the induced current loops and where the energy becomes heat.",
+       "detail": [
+        "to verify: Lenz's-law direction, tube geometry effects, terminal-speed assumptions, and energy accounting for the chosen demonstration, confidence: high"
+       ]
+      },
+      {
+       "id": "CX22",
+       "title": "This spinning toy changes direction by itself",
+       "note": "A rattleback couples rotation with rocking because its shape and mass distribution are misaligned. Animate spin energy moving into a wobble and back into opposite rotation, then reveal why the table supplies an external torque.",
+       "detail": [
+        "to verify: required geometric asymmetry, contact and friction assumptions, and which initial spin directions reverse for the chosen model, confidence: high",
+        "source: https://learning.physics.iastate.edu/rattleback"
+       ]
+      },
+      {
+       "id": "CX23",
+       "title": "Drop a spring: its bottom waits before falling",
+       "note": "When a hanging slinky is released, its lower end can remain nearly stationary while the collapsing region travels downward. Animate the spring beside a tension-wave diagram, then track its falling centre of mass.",
+       "detail": [
+        "to verify: ideal-model assumptions, real-slinky deviations, collapse-wave behavior, and centre-of-mass trajectory, confidence: high",
+        "source: https://instructional-resources.physics.uiowa.edu/1g2045-dropped-slinky"
+       ]
+      },
+      {
+       "id": "CX24",
+       "title": "On the Moon, a feather raced a hammer",
+       "note": "Apollo 15 astronaut David Scott demonstrated that a feather and hammer fall together when atmospheric drag is absent. Recreate the drop beside an Earth version, then remove the air while keeping gravity unchanged to isolate the cause.",
+       "detail": [
+        "to verify: demonstration date and objects, release-height uncertainty, and distinction between changing gravity and removing air resistance, confidence: high",
+        "source: https://science.nasa.gov/resource/the-apollo-15-hammer-feather-drop/"
+       ]
+      },
+      {
+       "id": "CX25",
+       "title": "How can a sailboat travel against the wind?",
+       "note": "A sail and underwater keel redirect forces so a boat can make progress upwind by tacking. Animate force arrows on a boat, then compare its zigzag path with the direction it cannot sail directly.",
+       "detail": [
+        "to verify: apparent-wind geometry, sail and keel force directions, and realistic upwind angles for a specified boat type, confidence: high"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "astronomy",
+   "title": "Astronomy and spaceflight",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "Astronomy and spaceflight",
+     "items": [
+      {
+       "id": "CX26",
+       "title": "Why does Webb orbit a place with nothing there?",
+       "note": "Webb travels around the Sun near the Sun–Earth L2 region, where combined gravity permits it to keep pace with Earth. Animate the moving three-body geometry, then show why small corrections are needed around this unstable region.",
+       "detail": [
+        "to verify: L2 distance, Webb's halo-orbit depiction, rotating-frame explanation, and stationkeeping requirements, confidence: high",
+        "source: https://science.nasa.gov/learn/basics-of-space-flight/chapter5-1/"
+       ]
+      },
+      {
+       "id": "CX27",
+       "title": "A tiny dip in starlight can reveal a planet",
+       "note": "A planet crossing its star blocks a small fraction of the light, producing a repeatable dip. Animate a transit synchronized with its light curve, then resize the planet to reveal how transit depth encodes relative size.",
+       "detail": [
+        "to verify: squared-radius transit-depth approximation, limb-darkening caveats, and how repeated events distinguish candidates from false positives, confidence: high",
+        "source: https://science.nasa.gov/exoplanets/whats-a-transit/"
+       ]
+      },
+      {
+       "id": "CX28",
+       "title": "A dead star can flash like a lighthouse",
+       "note": "A pulsar is a rotating neutron star whose radiation beams can sweep past Earth, creating regular pulses. Turn a star model beside its observed pulse train, then tilt the beam to show why many neutron stars are invisible as pulsars.",
+       "detail": [
+        "to verify: magnetic-axis versus rotation-axis geometry, beam simplifications, and periods for any named example, confidence: high"
+       ]
+      },
+      {
+       "id": "CX29",
+       "title": "The Sun loses mass by shining",
+       "note": "Fusion releases energy because the final products have less total rest mass than the starting particles. Animate hydrogen becoming helium with a mass ledger, then translate the Sun's luminosity into mass converted to energy per second.",
+       "detail": [
+        "to verify: proton–proton chain bookkeeping, neutrino contribution, luminosity value, and distinction between fusion mass loss and solar-wind loss, confidence: high"
+       ]
+      },
+      {
+       "id": "CX30",
+       "title": "Astronauts float where gravity is still strong",
+       "note": "An orbiting spacecraft and everything inside continuously fall together around Earth. Animate a projectile launched progressively faster until it keeps missing the ground, then compare gravity at the surface and at a representative station altitude.",
+       "detail": [
+        "to verify: altitude used, inverse-square gravity calculation, orbital speed, and distinction between free fall and zero gravitational field, confidence: high"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "earth",
+   "title": "Earth science and landscapes",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "Earth science and landscapes",
+     "items": [
+      {
+       "id": "CX31",
+       "title": "Your compass does not point at geographic north",
+       "note": "A compass follows the local horizontal magnetic field, whose direction differs from the geographic meridian. Animate both north directions on a globe, then show a dated declination example for Yerevan.",
+       "detail": [
+        "to verify: compass behavior, magnetic declination terminology, and Yerevan's value for a specified date using an official geomagnetic model, confidence: high"
+       ]
+      },
+      {
+       "id": "CX32",
+       "title": "Most of this continent is underwater",
+       "note": "Geologists identify Zealandia as a large region of continental crust, about 94% of it submerged. Drain the surrounding ocean in animation, then compare continental crust with neighboring oceanic crust.",
+       "detail": [
+        "to verify: area and submerged fraction, geological criteria for continental classification, and distinction from school continent-count conventions, confidence: high",
+        "source: https://www.gns.cri.nz/research-projects/crustal-structure-of-zealandia/"
+       ]
+      },
+      {
+       "id": "CX33",
+       "title": "Who carved Garni's giant stone columns?",
+       "note": "Columnar joints form as cooling lava contracts and cracks, producing the striking geometry seen in Garni Gorge. Animate a cooling rock slab developing a crack network, then explain why real columns have varying numbers of sides.",
+       "detail": [
+        "to verify: Garni formation's rock identification and geological context, cooling-contraction mechanism, and distinction between local evidence and laboratory temperature results, confidence: high",
+        "source: https://www.nature.com/articles/s41467-018-03842-4"
+       ]
+      },
+      {
+       "id": "CX34",
+       "title": "A river can abandon its own bend",
+       "note": "Erosion and sediment deposition can enlarge river meanders until a shortcut cuts off a loop, leaving an oxbow lake. Animate a river's channel over decades, then separate natural cutoff from human-made straightening.",
+       "detail": [
+        "to verify: migration mechanisms, cutoff conditions, and dates and scale if using a real satellite-image sequence, confidence: high"
+       ]
+      },
+      {
+       "id": "CX35",
+       "title": "How can solid ice flow like a river?",
+       "note": "Glaciers move through deformation within ice and, in suitable conditions, sliding at their base. Animate a buried marker grid stretching downstream, then show why the surface and centre can move faster than the bottom and edges.",
+       "detail": [
+        "to verify: deformation and basal-sliding contributions, temperature dependence, and velocity profile for a selected glacier example, confidence: high"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "engineering",
+   "title": "Engineering and infrastructure",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "Engineering and infrastructure",
+     "items": [
+      {
+       "id": "CX36",
+       "title": "Why must a car's wheels turn at different speeds?",
+       "note": "During a turn, outer wheels travel farther than inner wheels, and a differential allows driven wheels to rotate at different speeds. Animate wheel tracks and transparent gears together, then show why an open differential can struggle when one wheel loses grip.",
+       "detail": [
+        "to verify: turn-radius distance calculations, open-differential kinematics, and torque behavior under unequal traction, confidence: high"
+       ]
+      },
+      {
+       "id": "CX37",
+       "title": "An elevator usually lifts less than you think",
+       "note": "In a traction elevator, a counterweight balances much of the car's load, reducing the imbalance the motor must overcome. Animate a transparent shaft as passengers enter, then reverse the trip to show how the energy balance changes.",
+       "detail": [
+        "to verify: counterweight sizing for a representative system, friction and acceleration losses, and limits of the explanation for other elevator types, confidence: high"
+       ]
+      },
+      {
+       "id": "CX38",
+       "title": "A giant pendulum helps calm a skyscraper",
+       "note": "Taipei 101 uses a tuned mass damper to reduce wind-driven motion and improve comfort. Animate two otherwise identical towers with and without a damper, then shift the forcing frequency to show why tuning matters.",
+       "detail": [
+        "to verify: damper mass and configuration if stated, target vibration modes, damping mechanism, and realistic performance limits, confidence: high",
+        "source: https://www.taipei-101.com.tw/tw/observatory/feature/damper"
+       ]
+      },
+      {
+       "id": "CX39",
+       "title": "Why do runaway trucks get their own uphill road?",
+       "note": "Escape ramps remove a truck's kinetic energy through climbing and rolling resistance in specially prepared beds. Animate an energy ledger as a truck enters a ramp, then show why doubling speed demands much more stopping capacity.",
+       "detail": [
+        "to verify: ramp types, kinetic-energy scaling, representative gradients and bed materials, and any stopping-distance example, confidence: high"
+       ]
+      },
+      {
+       "id": "CX40",
+       "title": "How do ships climb a hill?",
+       "note": "Canal locks raise or lower floating ships by changing the water level inside a gated chamber. Animate a ship ascending a staircase of locks, then track the water used during a complete cycle.",
+       "detail": [
+        "to verify: gate and valve sequence, water-volume calculation, and distinction between gravity-fed locks and systems with pumps or water-saving basins, confidence: high"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "computing",
+   "title": "Computing and the internet",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "Computing and the internet",
+     "items": [
+      {
+       "id": "CX41",
+       "title": "Who tells your browser where a website lives?",
+       "note": "DNS translates domain names into records that help locate services, using a distributed hierarchy rather than one master address book. Animate a lookup moving through that hierarchy, then show how caching saves repeated trips.",
+       "detail": [
+        "to verify: recursive versus authoritative roles, root and top-level delegation, address-record handling, and cache-expiration behavior, confidence: high"
+       ]
+      },
+      {
+       "id": "CX42",
+       "title": "Why can a computer get 0.1 plus 0.2 wrong?",
+       "note": "Many decimal fractions cannot be stored exactly in binary floating point, so arithmetic can expose tiny rounding errors. Animate 0.1 expanding into repeating binary digits, then compare ordinary floating point with exact decimal accounting.",
+       "detail": [
+        "to verify: IEEE 754 binary64 representations, displayed result in the chosen language, rounding explanation, and behavior of the decimal alternative, confidence: high"
+       ]
+      },
+      {
+       "id": "CX43",
+       "title": "Delete does not always erase your file",
+       "note": "On some storage systems, deleting a file first removes its references while its old data may persist until reclaimed. Animate a file directory and storage blocks separately, then show why SSD TRIM and encryption change the recovery story.",
+       "detail": [
+        "to verify: selected filesystem's deletion behavior, SSD TRIM caveats, encryption-key destruction, and limits of any recoverability claim, confidence: high"
+       ]
+      },
+      {
+       "id": "CX44",
+       "title": "How can two people buy the same last ticket?",
+       "note": "If two processes check availability before either finishes updating it, both can act on the same old value. Animate their operations interleaving on a timeline, then replay the transaction with an atomic reservation.",
+       "detail": [
+        "to verify: a minimal reproducible race-condition example, assumptions about isolation, and correctness of the proposed atomic solution, confidence: high"
+       ]
+      },
+      {
+       "id": "CX45",
+       "title": "These computers sort the same list at wildly different speeds",
+       "note": "Different sorting strategies can require radically different amounts of work as the list grows. Race animated sorting bars using counted comparisons, then enlarge the list to reveal quadratic versus n-log-n growth.",
+       "detail": [
+        "to verify: chosen algorithms' average and worst cases, input-generation method, operation counts, and distinction between animation time and measured runtime, confidence: high"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mathematics",
+   "title": "Mathematics and puzzles",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "Mathematics and puzzles",
+     "items": [
+      {
+       "id": "CX46",
+       "title": "0.999… is exactly 1",
+       "note": "An infinite repeating decimal is a limit, and there is no positive gap between 0.999… and 1. Animate successive approximations on a number line, then give a short algebraic proof while distinguishing infinite repetition from a finite display.",
+       "detail": [
+        "to verify: limit argument, algebraic proof assumptions, and precise notation separating finite strings of nines from the infinite decimal, confidence: high"
+       ]
+      },
+      {
+       "id": "CX47",
+       "title": "This surface has only one side",
+       "note": "A Möbius strip turns a two-sided ribbon into a one-sided surface with a half twist. Send a colored ant around it without crossing an edge, then animate the surprising result of cutting along its centre.",
+       "detail": [
+        "to verify: one-sidedness and boundary count, centre-cut result, and twist count in the resulting band, confidence: high"
+       ]
+      },
+      {
+       "id": "CX48",
+       "title": "A group can prefer A, B, and C in circles",
+       "note": "Three individually consistent rankings can produce a majority that prefers A over B, B over C, and C over A. Animate friends choosing among three foods, then show how changing the order of pairwise choices changes the outcome.",
+       "detail": [
+        "to verify: preference table and pairwise totals, agenda-dependent outcome, and distinction between a possible voting cycle and an inevitable one, confidence: high"
+       ]
+      },
+      {
+       "id": "CX49",
+       "title": "This sliding puzzle is mathematically impossible",
+       "note": "Some arrangements of the fifteen puzzle cannot be reached by legal moves because a parity constraint is preserved. Animate every attempted fix undoing another, then reveal a compact invariant that proves the impossibility.",
+       "detail": [
+        "to verify: inversion-count rule for a four-by-four board, blank-row convention, and unsolvability of the exact displayed arrangement, confidence: high"
+       ]
+      },
+      {
+       "id": "CX50",
+       "title": "The fastest slide is longer than the straight one",
+       "note": "A steeper initial descent can build speed fast enough to beat a shorter straight track between the same endpoints. Race frictionless beads along several curves, then reveal the cycloid that solves the ideal brachistochrone problem.",
+       "detail": [
+        "to verify: cycloid parameterization, matched endpoints and starting conditions, numerical travel times, and frictionless constant-gravity assumptions, confidence: high"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "economics",
+   "title": "Economics and business",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "Economics and business",
+     "items": [
+      {
+       "id": "CX51",
+       "title": "Why can bad used cars drive good ones away?",
+       "note": "When sellers know quality but buyers cannot distinguish it, average offers can make owners of good cars withdraw. Animate Akerlof's simplified market with prices in drams, then introduce credible inspection information and show how the outcome changes.",
+       "detail": [
+        "to verify: Akerlof's model assumptions, numerical consistency of the toy market, and distinction between a theoretical mechanism and every real used-car market, confidence: high"
+       ]
+      },
+      {
+       "id": "CX52",
+       "title": "Oil once had a price below zero",
+       "note": "The expiring May 2020 WTI futures contract settled below zero amid collapsing demand and storage constraints; this was a specific contract rather than a universal price for oil. Animate its delivery deadline approaching while available storage disappears.",
+       "detail": [
+        "to verify: April 20 settlement of minus $37.63 per barrel, delivery obligations, storage availability, and comparison with other contracts and benchmarks, confidence: high",
+        "source: https://www.eia.gov/TODAYinENERGY/detail.php?id=43495"
+       ]
+      },
+      {
+       "id": "CX53",
+       "title": "Why trade with someone who is worse at everything?",
+       "note": "Two people can both gain from specialization even when one is faster at both tasks, because their opportunity costs differ. Animate two workshops swapping production, then count their combined output before and after trade.",
+       "detail": [
+        "to verify: productivity table, opportunity-cost ratios, feasible exchange rate, and explicit assumptions about transport costs and resource use, confidence: high"
+       ]
+      },
+      {
+       "id": "CX54",
+       "title": "In this auction, the price falls",
+       "note": "A Dutch auction starts high and descends until a buyer accepts, creating tension between waiting for a bargain and losing the lot. Animate a flower-auction clock alongside competing buyers' thresholds, then compare it with an ascending auction.",
+       "detail": [
+        "to verify: descending-auction rules, Royal FloraHolland's lot and quantity procedures if used, and distinction between traditional and current digital interfaces, confidence: high"
+       ]
+      },
+      {
+       "id": "CX55",
+       "title": "How can a sold-out restaurant lose money?",
+       "note": "Revenue is not profit: each meal must cover its variable costs and contribute enough toward rent, staffing, and other fixed costs. Animate a full dining room and a dram ledger, then move the break-even point as the cost assumptions change.",
+       "detail": [
+        "to verify: internally consistent illustrative prices and costs, contribution-margin calculation, and explicit labeling of the example as fictional, confidence: high"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "language",
+   "title": "Language and writing",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "Language and writing",
+     "items": [
+      {
+       "id": "CX56",
+       "title": "Your eyebrows can carry grammar",
+       "note": "In sign languages, facial movements and spatial arrangements can have grammatical roles alongside hand movements. Animate one carefully verified example with a fluent signer, then show why sign languages are distinct languages rather than a universal gesture code.",
+       "detail": [
+        "to verify: exact grammatical example with a fluent signer, language-specific facial markers, and differences between sign languages, confidence: high",
+        "source: https://www.nidcd.nih.gov/health/american-sign-language"
+       ]
+      },
+      {
+       "id": "CX57",
+       "title": "Books once made readers find the spaces",
+       "note": "Many ancient Greek and Latin texts were written with little or no separation between words, requiring readers to infer boundaries. Animate an ambiguous continuous string splitting into alternative readings, then show how spacing changes the reading task.",
+       "detail": [
+        "to verify: dated manuscript examples, variation in ancient spacing practices, and evidence about reading without asserting that silent reading was impossible, confidence: high"
+       ]
+      },
+      {
+       "id": "CX58",
+       "title": "Some Korean letters are diagrams of speech",
+       "note": "Hangul's basic consonant shapes were designed with reference to the speech organs used to produce their sounds. Morph mouth cross-sections into selected letters, then show how related sounds receive related letter forms.",
+       "detail": [
+        "to verify: historically documented shape explanations for each selected consonant and which later forms derive from added strokes, confidence: high",
+        "source: https://www.korean.go.kr/eng_hangeul/principle/002.html"
+       ]
+      },
+      {
+       "id": "CX59",
+       "title": "How can six dots hold a writing system?",
+       "note": "A six-dot braille cell offers 64 configurations including the blank, while context and indicator cells expand what those patterns can represent. Animate all combinations, then transform a short word into numbers or capitals using the appropriate indicators.",
+       "detail": [
+        "to verify: 63 nonblank patterns versus 64 total configurations, rules for the chosen braille code, and any Armenian braille example with a specialist, confidence: high",
+        "source: https://www.loc.gov/nls/services-and-resources/informational-publications/about-braille/"
+       ]
+      },
+      {
+       "id": "CX60",
+       "title": "Faster speech may carry no more information",
+       "note": "A study of 17 languages found that faster syllable rates tended to accompany less information per syllable, yielding more similar information rates. Animate languages as conveyor belts with differently sized information parcels, while making clear that this is a corpus finding rather than a universal speed limit.",
+       "detail": [
+        "to verify: languages and reading-task design, approximately 39 bits per second estimate, information metric, and limits on generalizing to spontaneous speech or Armenian, confidence: medium",
+        "source: https://pubmed.ncbi.nlm.nih.gov/32047854/"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "history-archaeology",
+   "title": "History and archaeology",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "History and archaeology",
+     "items": [
+      {
+       "id": "CX61",
+       "title": "The fax idea came before the telephone",
+       "note": "Alexander Bain experimented with electrical facsimile transmission decades before Bell's telephone patent, using synchronized scanning rather than modern digital files. Animate two pendulums reproducing a picture line by line, then distinguish an early prototype from a practical office fax.",
+       "detail": [
+        "to verify: Bain's patent scope and dates, 1843–1846 experimental work, scanning mechanism, and comparison with Bell's 1876 patent, confidence: high",
+        "source: https://www.highlifehighland.com/nucleus-nuclear-caithness-archives/wp-content/uploads/sites/121/2020/05/P238-Alexander-Bain-Papers.pdf"
+       ]
+      },
+      {
+       "id": "CX62",
+       "title": "An ancient text describes a coin-operated water dispenser",
+       "note": "Hero of Alexandria described a mechanism in which a coin's weight opens a valve and releases water. Animate the mechanism directly from the historical description, then separate evidence for the written design from claims about how widely it was actually used.",
+       "detail": [
+        "to verify: passage in Hero's Pneumatica, reliable translation and dating, valve geometry, and archaeological evidence for actual installations, confidence: high"
+       ]
+      },
+      {
+       "id": "CX63",
+       "title": "The Rosetta Stone has three scripts, not three languages",
+       "note": "Its decree appears in Egyptian written in two scripts and in Greek, providing a crucial bridge for decipherment. Animate matching names across the inscriptions, then show why identifying sounds mattered as much as matching pictures.",
+       "detail": [
+        "to verify: language and script distinctions, decree date, exact name correspondences, and roles of Champollion, Young, and other contributors, confidence: high",
+        "source: https://www.britishmuseum.org/sites/default/files/2022-10/Hieroglyphs_unlocking_ancient_Egypt_large_print_guide_The_British_Museum.pdf"
+       ]
+      },
+      {
+       "id": "CX64",
+       "title": "An empire kept records in knots",
+       "note": "Many Inka khipu encode numerical records through knot types and decimal positions on hanging cords. Animate a number becoming knots, then mark the boundary between understood numerical conventions and debated nonnumerical meanings.",
+       "detail": [
+        "to verify: knot conventions for units and higher places, zero representation, provenance of the displayed khipu, and limits of current decipherment, confidence: high",
+        "source: https://www.nist.gov/nist-museum/standardizing-empire"
+       ]
+      },
+      {
+       "id": "CX65",
+       "title": "How do you read a scroll you cannot open?",
+       "note": "Researchers recover writing from carbonized Herculaneum scrolls by mapping their internal layers and detecting ink in scan data. Animate a scanned layer flattening into a page, then distinguish recovered ink evidence from a language model guessing text.",
+       "detail": [
+        "to verify: scan method, ink-detection evidence, exact scroll and passage selected, recovery extent, and peer-reviewed versus preprint status of supporting work, confidence: high",
+        "source: https://arxiv.org/abs/2304.02084"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "art",
+   "title": "Art and image-making",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "Art and image-making",
+     "items": [
+      {
+       "id": "CX66",
+       "title": "This colorful print was built one block at a time",
+       "note": "Japanese multicolor woodblock prints combine impressions from separately carved blocks aligned using registration marks. Animate a recognizable public-domain print appearing layer by layer, then deliberately misalign one block to expose the craft.",
+       "detail": [
+        "to verify: block sequence for the selected print or reconstruction, registration method, and division of work among designer, carver, printer, and publisher, confidence: high",
+        "source: https://www.vam.ac.uk/articles/japanese-woodblock-prints-ukiyo-e"
+       ]
+      },
+      {
+       "id": "CX67",
+       "title": "Why were blueprints actually blue?",
+       "note": "Cyanotype chemistry creates a blue image where treated paper receives light, leaving covered areas pale. Animate a fern's shadow becoming a print, then connect Anna Atkins's botanical images with later engineering copies.",
+       "detail": [
+        "to verify: cyanotype photochemistry, washing and exposure stages, Anna Atkins publication dates, and chronology of engineering blueprint use, confidence: high",
+        "source: https://collection.sciencemuseumgroup.org.uk/objects/co416960"
+       ]
+      },
+      {
+       "id": "CX68",
+       "title": "A fresco becomes part of the wall",
+       "note": "In true fresco, pigments are applied to wet lime plaster and become fixed as the surface carbonates. Animate the chemistry through a wall cross-section, then show how daily plaster sections reveal the painter's working schedule.",
+       "detail": [
+        "to verify: carbonation reaction, pigment compatibility, identification of giornate, and distinction between buon fresco and painting on dry plaster, confidence: high"
+       ]
+      },
+      {
+       "id": "CX69",
+       "title": "Armenia's famous red came from an insect",
+       "note": "Armenian cochineal supplied red colorants used in historical artworks, including illuminated manuscripts. Zoom from an Ararat plain scale insect to extracted dye and a painted detail, then explain why appearance alone cannot identify a manuscript's pigment.",
+       "detail": [
+        "to verify: Porphyrophora hamelii identification, colorant chemistry, documented Armenian manuscript examples, and distinction from American cochineal and other red dyes, confidence: high",
+        "source: https://resources.metmuseum.org/resources/metpublications/pdf/Cochineal_Red_the_art_history_of_a_color.pdf"
+       ]
+      },
+      {
+       "id": "CX70",
+       "title": "A painting can hide an abandoned first draft",
+       "note": "Infrared imaging can reveal some underdrawings because certain paint layers transmit infrared while carbon-based marks absorb it. Slide from a painting into a documented reflectogram, then show why other pigments and drawing materials keep their secrets.",
+       "detail": [
+        "to verify: imaging method and wavelength, attribution of the chosen underdrawing, material-dependent visibility, and reproduction rights for comparison images, confidence: high"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "music",
+   "title": "Music and sound",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "Music and sound",
+     "items": [
+      {
+       "id": "CX71",
+       "title": "This sound climbs forever without getting higher",
+       "note": "A Shepard-scale illusion layers octave-related tones whose volumes fade in and out, making a repeating sequence seem endlessly ascending. Animate the layers as a circular staircase, then separate them so the trick becomes audible.",
+       "detail": [
+        "to verify: synthesis frequencies, loudness envelope, seamless loop construction, and perceptual reliability on phone speakers, confidence: high",
+        "source: https://www.illusionsindex.org/i/shepard-scale-illusions"
+       ]
+      },
+      {
+       "id": "CX72",
+       "title": "You can hear a pitch that is missing",
+       "note": "A set of harmonics can evoke the pitch of a fundamental frequency even when that component is absent from the signal. Remove the fundamental while an animated spectrum updates, then connect the effect to recognizing voices through restricted audio bandwidth.",
+       "detail": [
+        "to verify: harmonic frequencies and amplitudes, playback distortion that might recreate the fundamental, and listener variability in the demonstration, confidence: high"
+       ]
+      },
+      {
+       "id": "CX73",
+       "title": "A violin bow grips and slips hundreds of times",
+       "note": "A bowed string alternates between sticking to the moving bow and slipping back, sustaining a rich vibration. Slow this cycle beside a waveform, then contrast the sustained bowed note with a plucked string's decay.",
+       "detail": [
+        "to verify: Helmholtz-motion depiction, relation between cycle rate and pitch, rosin's frictional role, and limits of the simplified string model, confidence: high",
+        "source: https://phys.unsw.edu.au/jw/Bows.html"
+       ]
+      },
+      {
+       "id": "CX74",
+       "title": "How can one singer seem to sing two notes?",
+       "note": "Overtone singers reshape vocal-tract resonances to emphasize selected harmonics above a continuing fundamental. Animate a moving filter over the voice's harmonic spectrum, then compare the filtered melody with the unfiltered sound.",
+       "detail": [
+        "to verify: selected overtone-singing technique, measured formant behavior, distinction between harmonics and independent vocal sources, and audio-use permissions, confidence: high"
+       ]
+      },
+      {
+       "id": "CX75",
+       "title": "This instrument is played without being touched",
+       "note": "A theremin turns changes in hand position into changes in electronic oscillation, producing an audible difference frequency. Animate its two high-frequency signals becoming a musical tone, then show how the second control shapes loudness.",
+       "detail": [
+        "to verify: circuit architecture of the chosen theremin, capacitive pitch control, heterodyne explanation, and volume-control mechanism, confidence: high",
+        "source: https://www.mim.be/en/collection-piece/theremin-0"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sport",
+   "title": "Sport and games",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "Sport and games",
+     "items": [
+      {
+       "id": "CX76",
+       "title": "A high jumper's body can clear its own centre",
+       "note": "By arching around the bar, a jumper can place the body's centre of mass below the bar even while every body part passes over it. Animate a segmented athlete with a visible centre-of-mass marker, then compare different jumping postures.",
+       "detail": [
+        "to verify: centre-of-mass calculations for realistic body segments, conditions permitting a below-bar trajectory, and distinction between possible geometry and every actual jump, confidence: high"
+       ]
+      },
+      {
+       "id": "CX77",
+       "title": "Why do skaters spin faster with arms tucked?",
+       "note": "Pulling mass inward reduces rotational inertia, so angular speed rises when external torque is small. Animate a skater beside an angular-momentum ledger, then reveal why rotational kinetic energy increases through muscular work.",
+       "detail": [
+        "to verify: inertia model, angular-momentum conservation assumptions, energy calculation, and contribution of ice friction, confidence: high"
+       ]
+      },
+      {
+       "id": "CX78",
+       "title": "Why do runners start in different places?",
+       "note": "Outer track lanes have longer bends, so staggered starts compensate for the extra distance. Unroll each lane into a straight strip to make the difference visible, then distinguish races run entirely in lanes from those with a break line.",
+       "detail": [
+        "to verify: track dimensions, lane-width and measurement-line rules, stagger calculation, and rules for the exact race illustrated, confidence: high"
+       ]
+      },
+      {
+       "id": "CX79",
+       "title": "Why does a cue ball reverse after impact?",
+       "note": "A backspinning cue ball can retain spin after colliding with another ball, and friction then pulls it backward. Animate translation and rotation separately through the collision, then compare draw, stun, and follow shots.",
+       "detail": [
+        "to verify: rigid-body collision assumptions, sliding-to-rolling transitions, cue-contact offsets, and realistic friction values if simulated numerically, confidence: high"
+       ]
+      },
+      {
+       "id": "CX80",
+       "title": "Why does a shuttlecock slow down so dramatically?",
+       "note": "A shuttlecock's large drag relative to its mass makes its speed fall rapidly after a powerful hit. Animate its speed graph beside a ball's under matched initial conditions, then show how its shape helps it turn cork-first.",
+       "detail": [
+        "to verify: aerodynamic drag measurements, feather versus synthetic differences, speed-decay model, and stability mechanism, confidence: high"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "food",
+   "title": "Food science",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "Food science",
+     "items": [
+      {
+       "id": "CX81",
+       "title": "Cutting an onion starts a chemical chain reaction",
+       "note": "Damaged onion cells bring chemicals and enzymes together, ultimately producing a volatile tear-triggering compound. Animate the separated cell compartments breaking open, then branch the reaction to distinguish the irritant from other flavor compounds.",
+       "detail": [
+        "to verify: alliinase and lachrymatory-factor synthase roles, propanethial S-oxide formation, and distinction between established chemistry and disputed kitchen remedies, confidence: high",
+        "source: https://www.nature.com/articles/419685a"
+       ]
+      },
+      {
+       "id": "CX82",
+       "title": "Why does a cut apple turn brown?",
+       "note": "Cutting allows enzymes, phenolic compounds, and oxygen to interact, eventually producing brown materials. Animate the reaction starting at a cut surface, then compare normal air with a controlled low-oxygen example.",
+       "detail": [
+        "to verify: polyphenol oxidase pathway, oxygen requirement, cultivar variation, and conditions for the chosen time-lapse comparison, confidence: high"
+       ]
+      },
+      {
+       "id": "CX83",
+       "title": "Chocolate can contain the right ingredients but wrong crystals",
+       "note": "Cocoa butter can crystallize in different forms, changing chocolate's gloss, snap, and melting behavior. Animate competing crystal structures through tempering, then distinguish fat bloom from sugar bloom.",
+       "detail": [
+        "to verify: cocoa-butter polymorph terminology, desired crystal form, formulation-dependent tempering temperatures, and separate bloom mechanisms, confidence: high"
+       ]
+      },
+      {
+       "id": "CX84",
+       "title": "How can melting ice help freeze ice cream?",
+       "note": "Salt lowers the freezing point of water, allowing an ice-and-brine mixture to become colder than ordinary melting ice while absorbing heat. Animate heat leaving an ice-cream container, then track the salt, liquid water, and remaining ice on a temperature diagram.",
+       "detail": [
+        "to verify: salt–water phase behavior, energy balance, attainable temperatures for the chosen proportions, and distinction between freezing-point depression and melting alone, confidence: high"
+       ]
+      },
+      {
+       "id": "CX85",
+       "title": "How do you remove caffeine before roasting coffee?",
+       "note": "Decaffeination uses extraction methods that move caffeine out of green beans, including processes using pressurized carbon dioxide. Animate molecules crossing from bean into solvent, then show why selective extraction still does not mean perfectly preserving every flavor precursor.",
+       "detail": [
+        "to verify: stages and operating conditions of one documented process, caffeine selectivity, residual-caffeine wording, and distinction between different decaffeination methods, confidence: high"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "everyday-design",
+   "title": "Everyday objects and design",
+   "tag": "pick",
+   "groups": [
+    {
+     "title": "Everyday objects and design",
+     "items": [
+      {
+       "id": "CX86",
+       "title": "A round lid cannot fall through its matching opening",
+       "note": "A circular cover wider than its circular opening cannot slip through merely by rotating, unlike some other shapes. Animate several lids tipping above their openings, then reveal why this useful property is only one consideration in manhole design.",
+       "detail": [
+        "to verify: geometric assumptions about cover and opening dimensions, square-lid counterexample, and documented practical reasons without claiming a single universal origin, confidence: high"
+       ]
+      },
+      {
+       "id": "CX87",
+       "title": "Some receipts are printed without ink",
+       "note": "Direct thermal printers darken a chemically treated paper surface by heating selected points. Animate a row of heating elements writing a receipt, then show how later heat exposure can darken or damage the stored image.",
+       "detail": [
+        "to verify: direct-thermal coating chemistry, distinction from thermal-transfer printing, and documented heat and aging behavior for the paper type shown, confidence: high"
+       ]
+      },
+      {
+       "id": "CX88",
+       "title": "Why does tempered glass break into many small pieces?",
+       "note": "Rapid cooling locks compressive stress into the surface and balancing tension inside, storing energy that changes how failure spreads. Animate the stress layers and a propagating fracture, then compare tempered glass with laminated glass.",
+       "detail": [
+        "to verify: thermal-tempering stress profile, fracture mechanism, fragment-size wording, and distinction between tempered and laminated glazing, confidence: high",
+        "source: https://www.glass.org/sites/default/files/2021-08/FB45-14_2019_Recommended_Applications_for_Heat-Treated_Glass_0521_0.pdf"
+       ]
+      },
+      {
+       "id": "CX89",
+       "title": "How does a tiny ball stop a pen leaking?",
+       "note": "A ballpoint's fitted rolling ball transfers viscous ink while helping regulate its escape from the reservoir. Animate a magnified pen tip rotating across paper, then compare its ink behavior with a fountain pen's capillary feed.",
+       "detail": [
+        "to verify: ball-and-socket geometry, ink rheology, reservoir venting, and limits of saying the ball alone prevents leakage, confidence: high"
+       ]
+      },
+      {
+       "id": "CX90",
+       "title": "Why do some doors make everyone look confused?",
+       "note": "A handle can visually invite pulling even when a door requires pushing, creating a conflict between appearance and operation. Animate the same doorway with misleading and clear hardware, then remove the instruction label to test whether the design explains itself.",
+       "detail": [
+        "to verify: affordance versus signifier terminology, documented examples from Don Norman, and any user-test claims rather than inventing failure percentages, confidence: high"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "note_prompt": "Anything else? New ideas, topics to drop, or which to do first."
+}
