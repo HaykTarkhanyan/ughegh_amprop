@@ -94,6 +94,6 @@ done = [
 pending = [
   "20 picks not fact-checked: B1 B2 P2 P4 I4 L1 L4 F3 A3 A5 X4 I10 O5 X13 Q3 M8 CX40 CX43 CX47 CX75",
   "Scripts and plans for the 26 checked topics, written by me from the sheets (Armenian via style guide + lint), only after Hayk says go",
-  "09:07 cron 5c941b45 still set: TTS for the 9 parked drafts, timelines, renders, review pages",
+  "9 parked drafts (regression, dmanisi, ikea_effect, kids_tv, simpson, minute_60, luggage_wheels, waiting, qwerty) stay unvoiced until Hayk says go; the 09:07 cron 5c941b45 was cancelled at his request (Q42, 2026-11-28 03:05)",
   "Hayk: breaths A/B, music pick, review of the 11 drafts and the labels page",
 ]
