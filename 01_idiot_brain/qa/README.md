@@ -4,6 +4,6 @@ One Markdown file per webinar, `webinarNN.md`, in Armenian: the questions Hayk c
 
 | File | Webinar | Added |
 |---|---|---|
-| `webinar02.md` | 2 (chapter 2, «Հիշողություն», https://youtu.be/snuVWhMQwX8) | 2026-11-28, 4 questions, 22 sources checked against OpenAlex |
+| `webinar02.md` | 2 (chapter 2, «Հիշողություն», https://youtu.be/snuVWhMQwX8) | 2026-11-28, 4 questions, 23 sources checked against OpenAlex, claims against their abstracts (Europe PMC / OpenAlex) |
 
 Webinar 1's answers are only in its YouTube description (`vkrjiV7SZ08`).
