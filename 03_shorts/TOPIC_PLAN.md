@@ -9,6 +9,14 @@ Already made or drafted (not repeated here): survivorship (pilot), Bayes, Simpso
 IKEA effect, friendship paradox, Dmanisi, painted statues, Petrov, crypto paint, zero-knowledge, own voice, week,
 minute, QWERTY, map projections, luggage wheels, yawning, English spelling, kids TV, waiting, Mashtots (on hold).
 
+## Picked so far (11 topics, 2026-11-28)
+
+C1 small places at both extremes, C2 London's V-1 bombs, C3 Monty Hall, C4 the anchoring wheel, C5 leap years, C6
+why the sky is blue (Q39, Q40); T1 birthday paradox, T5 the chocolate weight-loss hoax, T13 Hanoi's rats and the
+cobra effect, W3 seasons come from the tilt, W6 why you cannot tickle yourself (Hayk's comments on this page). Next
+step for each: fact check, then script and plan. A broader picker with many more topics:
+`topic_picker_broad_picker.html`.
+
 ## Chosen on 2026-11-28 (Q39, Q40)
 
 - **C1. The healthiest places are tiny, and so are the sickest** (thinking error). The lowest and highest cancer

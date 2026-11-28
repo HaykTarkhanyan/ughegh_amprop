@@ -1,0 +1,148 @@
+{
+  "title": "Topic picker: a broad list",
+  "subtitle": "Tick the topics you want (Hayk, 2026-11-28: \"a lot more various topics, I don't want such narrow concentration\"). Hooks are from memory, not yet fact-checked: each picked topic gets a full check before any script. Already picked (11): small places at both extremes, London's V-1 bombs, Monty Hall, the anchoring wheel, leap years, why the sky is blue, birthday paradox, the chocolate hoax, Hanoi's rats, seasons and the tilt, tickling yourself. You can still select any text and press C to comment.",
+  "date": "2026-11-28",
+  "tags": {"pick": {"label": "pick", "color": "#F2A800"}},
+  "sections": [
+    {"id": "body", "title": "Body and brain", "tag": "pick", "groups": [{"title": "Body and brain", "items": [
+      {"id": "B1", "title": "Why we get goosebumps", "note": "A leftover reflex from furry ancestors: hair standing up to look bigger or keep warm."},
+      {"id": "B2", "title": "Why fingers wrinkle in water", "note": "Not soaking: nerves shrink the blood vessels, maybe for grip on wet things (still debated)."},
+      {"id": "B3", "title": "Why nobody remembers being a baby", "note": "Childhood amnesia: memories form, but the brain's indexing is not ready to keep them."},
+      {"id": "B4", "title": "Why time speeds up as we age", "note": "Fewer new memories make years feel shorter; a year is also a smaller share of your life."},
+      {"id": "B5", "title": "How much of your body is bacteria?", "note": "The old '10 bacteria per human cell' was wrong: closer to 1 to 1."},
+      {"id": "B6", "title": "Why the appendix is not useless", "note": "It seems to store good gut bacteria for after an illness."},
+      {"id": "B7", "title": "Why about 1 in 10 people is left-handed", "note": "The ratio is old and stable across cultures; what genes and the womb do."}
+    ]}]},
+    {"id": "animals", "title": "Animals and nature", "tag": "pick", "groups": [{"title": "Animals and nature", "items": [
+      {"id": "N1", "title": "Why zebras have stripes", "note": "Experiments with horses in striped coats: biting flies fail to land."},
+      {"id": "N2", "title": "Why flamingos are pink", "note": "Their food: chicks are grey; no shrimp, no pink."},
+      {"id": "N3", "title": "Does a goldfish remember only 3 seconds?", "note": "A myth: they remember for months and can be trained."},
+      {"id": "N4", "title": "How birds find their way south", "note": "A magnetic sense in the eye, the stars, smell: still being worked out."},
+      {"id": "N5", "title": "Octopus: three hearts and blue blood", "note": "And most of its neurons are in its arms."},
+      {"id": "N6", "title": "Why leaves turn yellow and red", "note": "The yellow was there all summer under the green; the red is made fresh."},
+      {"id": "N7", "title": "Tardigrades: the animal that survived space", "note": "Dried out, they survive vacuum, radiation and freezing."},
+      {"id": "N8", "title": "Why cats purr", "note": "We know how, roughly, but not fully why: it is not only happiness."}
+    ]}]},
+    {"id": "space", "title": "Space and Earth", "tag": "pick", "groups": [{"title": "Space and Earth", "items": [
+      {"id": "S1", "title": "Why the night sky is dark", "note": "Olbers' paradox: an endless, eternal universe would glow everywhere; the dark sky says it had a beginning."},
+      {"id": "S2", "title": "If the Sun vanished, we would notice 8 minutes later", "note": "Light and gravity travel at the same speed."},
+      {"id": "S3", "title": "Why Pluto stopped being a planet", "note": "The 2006 vote and the three-rule definition."},
+      {"id": "S4", "title": "Why Venus is hotter than Mercury", "note": "Farther from the Sun but wrapped in CO2: a greenhouse gone wild."},
+      {"id": "S5", "title": "How we know the Earth is 4.5 billion years old", "note": "Radioactive clocks in rocks and meteorites."},
+      {"id": "S6", "title": "Why the sea has two tides a day", "note": "The Moon pulls the near side and leaves the far side behind."},
+      {"id": "S7", "title": "Why the ocean is blue", "note": "Not only the sky's reflection: water itself absorbs red light."},
+      {"id": "S8", "title": "Why Armenia has earthquakes", "note": "The Arabian plate pushing north; how the land moves each year (careful framing around 1988)."}
+    ]}]},
+    {"id": "physics", "title": "Everyday physics and chemistry", "tag": "pick", "groups": [{"title": "Everyday physics and chemistry", "items": [
+      {"id": "P1", "title": "Why metal feels colder than wood at the same temperature", "note": "Your hand senses heat flow, not temperature."},
+      {"id": "P2", "title": "Do mirrors flip left and right?", "note": "No: they flip front and back. Why it looks like left-right."},
+      {"id": "P3", "title": "Why a coffee stain dries as a ring", "note": "The edge holds and liquid flows outwards carrying the grains (a 1997 Nature paper)."},
+      {"id": "P4", "title": "How a microwave heats food", "note": "Water molecules spinning; why the middle stays cold; the myths."},
+      {"id": "P5", "title": "Why popcorn pops", "note": "Water inside each kernel becomes steam until the shell bursts at about 180 °C."},
+      {"id": "P6", "title": "Why glass is transparent", "note": "Visible light has the wrong energy for glass's electrons to absorb."},
+      {"id": "P7", "title": "Why ice is slippery", "note": "Still debated: the old pressure explanation is wrong."}
+    ]}]},
+    {"id": "tech", "title": "Technology and inventions", "tag": "pick", "groups": [{"title": "Technology and inventions", "items": [
+      {"id": "I1", "title": "How GPS knows where you are, and needs Einstein", "note": "Satellite clocks run fast by about 38 microseconds a day; uncorrected, maps would drift about 10 km a day."},
+      {"id": "I2", "title": "The internet lives on the sea floor", "note": "Almost all traffic between continents runs through undersea cables."},
+      {"id": "I3", "title": "Why a torn QR code still works", "note": "Error correction: up to about 30% can be missing."},
+      {"id": "I4", "title": "Why phone batteries die in the cold", "note": "Chemistry slows down; the charge is still there."},
+      {"id": "I5", "title": "Why 'Save' is a floppy disk", "note": "Icons outliving their objects (skeuomorphs): the phone handset, the envelope."},
+      {"id": "I6", "title": "How noise-cancelling headphones work", "note": "They play the noise back upside down."},
+      {"id": "I7", "title": "Why airliners fly at 10-12 km", "note": "Thin air means less drag; too high and the engines starve."},
+      {"id": "I8", "title": "How a touchscreen feels your finger", "note": "Your body is part of an electric circuit; why gloves don't work."}
+    ]}]},
+    {"id": "history", "title": "History", "tag": "pick", "groups": [{"title": "History", "items": [
+      {"id": "H1", "title": "The Great Emu War, 1932", "note": "The Australian army went after emus with machine guns, and the emus won."},
+      {"id": "H2", "title": "The dancing plague of 1518", "note": "People in Strasbourg danced for days; what historians think happened."},
+      {"id": "H3", "title": "Cleopatra lived closer to the Moon landing than to the pyramids", "note": "Time perspective: deep time drawn to scale."},
+      {"id": "H4", "title": "The Library of Alexandria did not burn in one fire", "note": "It faded over centuries; the single fire is a myth."},
+      {"id": "H5", "title": "Napoleon was not short", "note": "French vs English inches, and British cartoons."},
+      {"id": "H6", "title": "Vikings never wore horned helmets", "note": "The horns come from 19th-century opera costumes."},
+      {"id": "H7", "title": "1816, the year without a summer", "note": "A volcano in Indonesia, famine in Europe, and Frankenstein."},
+      {"id": "H8", "title": "The shortest war: about 40 minutes", "note": "Britain vs Zanzibar, 1896."}
+    ]}]},
+    {"id": "language", "title": "Language and words", "tag": "pick", "groups": [{"title": "Language and words", "items": [
+      {"id": "L1", "title": "Why 'mama' sounds alike in many languages", "note": "The easiest sounds a baby makes, and parents claiming them."},
+      {"id": "L2", "title": "How 'OK' took over the world", "note": "An 1830s newspaper joke ('oll korrect') that survived."},
+      {"id": "L3", "title": "How many words do you know?", "note": "Adults know tens of thousands; how researchers count them."},
+      {"id": "L4", "title": "Why some scripts run right to left", "note": "Carving, ink, and habit: the history behind the direction."},
+      {"id": "L5", "title": "Words Armenian lent to the world, and borrowed", "note": "From Persian, Greek, Russian; and the few going the other way."},
+      {"id": "L6", "title": "Why every language has filler words", "note": "'Um' and 'eh' are signals, not mistakes (research on fillers)."}
+    ]}]},
+    {"id": "money", "title": "Money and economics", "tag": "pick", "groups": [{"title": "Money and economics", "items": [
+      {"id": "M1", "title": "Why paper money is worth anything", "note": "Trust; the giant stone money of Yap, where stones never moved."},
+      {"id": "M2", "title": "Why prices end in 990", "note": "The left-digit effect: 9,990 dram feels like 9 thousand."},
+      {"id": "M3", "title": "Why the milk is at the back of the shop", "note": "You walk past everything else (and the cold-room story)."},
+      {"id": "M4", "title": "Inflation: a wheelbarrow of money for bread", "note": "Germany 1923 and Zimbabwe; how prices run away."},
+      {"id": "M5", "title": "The tragedy of the commons", "note": "Why shared things get used up, and how communities avoid it (Ostrom)."},
+      {"id": "M6", "title": "Why the dram is called the dram", "note": "From the Greek drachma; Armenia's 1993 currency."}
+    ]}]},
+    {"id": "food", "title": "Food", "tag": "pick", "groups": [{"title": "Food", "items": [
+      {"id": "F1", "title": "Why chilli burns", "note": "It switches on your heat sensor (a 2021 Nobel prize)."},
+      {"id": "F2", "title": "Why bread goes stale", "note": "Not drying out: the starch recrystallises; a toaster reverses it."},
+      {"id": "F3", "title": "Why honey never goes bad", "note": "Too little water and too acidic for microbes."},
+      {"id": "F4", "title": "Is the 5-second rule real?", "note": "Bacteria jump on in under a second; wet food picks up more."},
+      {"id": "F5", "title": "Why coriander tastes of soap to some people", "note": "A smell gene; how common it is."},
+      {"id": "F6", "title": "Lavash and the tonir", "note": "How the oven works and why it is on UNESCO's list (local)."}
+    ]}]},
+    {"id": "art", "title": "Art and music", "tag": "pick", "groups": [{"title": "Art and music", "items": [
+      {"id": "A1", "title": "The Mona Lisa became famous because it was stolen", "note": "1911: the empty wall drew crowds."},
+      {"id": "A2", "title": "Ultramarine: a blue dearer than gold", "note": "Ground lapis from Afghanistan, saved for the Virgin's robe."},
+      {"id": "A3", "title": "Why songs get stuck in your head", "note": "Earworms: what research says and how to stop one."},
+      {"id": "A4", "title": "Why music gives you chills", "note": "Dopamine at the moment the brain's prediction resolves."},
+      {"id": "A5", "title": "Why there are 12 notes in an octave", "note": "Frequency ratios, Pythagoras, and the compromise of equal temperament."},
+      {"id": "A6", "title": "Komitas and the songs he saved", "note": "Recording village songs before they were lost (local)."}
+    ]}]},
+    {"id": "math", "title": "Maths and numbers", "tag": "pick", "groups": [{"title": "Maths and numbers", "items": [
+      {"id": "X1", "title": "How zero became a number", "note": "From an empty place in Babylonian numbers to India's 'shunya'."},
+      {"id": "X2", "title": "How many times can you fold paper?", "note": "The '7 times' myth; a student folded it 12 times in 2002."},
+      {"id": "X3", "title": "Some infinities are bigger than others", "note": "Hilbert's hotel, and Cantor's diagonal."},
+      {"id": "X4", "title": "Six degrees of separation", "note": "Milgram's letters and Facebook's 3.5."},
+      {"id": "X5", "title": "How many piano tuners are in Yerevan?", "note": "Fermi estimates: getting close with rough guesses."},
+      {"id": "X6", "title": "The wheat and the chessboard", "note": "Doubling 64 times: more grain than the world has ever grown."},
+      {"id": "X7", "title": "Benford's law: why 1 is the commonest first digit", "note": "About 30% of real numbers start with 1; it catches fraud."}
+    ]}]},
+    {"id": "psych", "title": "Psychology and society", "tag": "pick", "groups": [{"title": "Psychology and society", "items": [
+      {"id": "Y1", "title": "The ox and the crowd", "note": "1906: the average of 787 guesses hit an ox's weight almost exactly (wisdom of crowds)."},
+      {"id": "Y2", "title": "The Stanford prison experiment, re-checked", "note": "Guards were coached; what it really shows."},
+      {"id": "Y3", "title": "Milgram's shocks: what actually happened", "note": "Many participants doubted it was real; the variations matter."},
+      {"id": "Y4", "title": "Why we procrastinate", "note": "Mood repair, not laziness; what helps."},
+      {"id": "Y5", "title": "Why we like what we have heard before", "note": "The mere-exposure effect: familiar feels good."},
+      {"id": "Y6", "title": "Why confident people get believed", "note": "Confidence as a signal, and when it misleads."}
+    ]}]},
+    {"id": "health", "title": "Health and medicine", "tag": "pick", "groups": [{"title": "Health and medicine", "items": [
+      {"id": "D1", "title": "Why antibiotics do nothing against a cold", "note": "Viruses vs bacteria, and resistance."},
+      {"id": "D2", "title": "The milkmaid and the first vaccine", "note": "Jenner, cowpox, and where the word 'vaccine' comes from (vacca, cow)."},
+      {"id": "D3", "title": "Penicillin: a mouldy dish from a holiday", "note": "Fleming 1928, and the 12 years before it could be made."},
+      {"id": "D4", "title": "Semmelweis: wash your hands", "note": "He cut deaths with handwashing and was mocked."},
+      {"id": "D5", "title": "Do we use only 10% of the brain?", "note": "No: scans show all of it working; where the myth came from."},
+      {"id": "D6", "title": "What happens after a night without sleep", "note": "Reaction time like being drunk; what sleep does."}
+    ]}]},
+    {"id": "sport", "title": "Sports and games", "tag": "pick", "groups": [{"title": "Sports and games", "items": [
+      {"id": "G1", "title": "Why golf balls have dimples", "note": "Dimples make it fly about twice as far."},
+      {"id": "G2", "title": "How a ball curves (Magnus effect)", "note": "Roberto Carlos's 1997 free kick."},
+      {"id": "G3", "title": "Penalty kicks: the goalkeeper should stay put", "note": "Keepers dive because doing nothing looks worse (2007 study)."},
+      {"id": "G4", "title": "Home advantage and empty stadiums", "note": "COVID games without crowds as a natural experiment."},
+      {"id": "G5", "title": "Why a marathon is 42.195 km", "note": "The 1908 London route and the royal box."},
+      {"id": "G6", "title": "Why chess players' brains get tired", "note": "Hours of thinking burn real energy; what studies measured."}
+    ]}]},
+    {"id": "geo", "title": "Geography and places", "tag": "pick", "groups": [{"title": "Geography and places", "items": [
+      {"id": "R1", "title": "Why African borders are straight lines", "note": "Drawn on maps in Berlin, 1884."},
+      {"id": "R2", "title": "Why the Dead Sea is dead", "note": "Ten times saltier than the ocean, and shrinking."},
+      {"id": "R3", "title": "Why the capital is often not the biggest city", "note": "Canberra, Ottawa, Washington: compromise capitals."},
+      {"id": "R4", "title": "Lake Sevan lost 20 metres", "note": "The Soviet irrigation plan and the tunnel that saved it (local)."},
+      {"id": "R5", "title": "Why Russia has 11 time zones but China one", "note": "Clocks as politics."},
+      {"id": "R6", "title": "Why the Equator is not the hottest place", "note": "Clouds and rain; the hottest places are deserts near 25-30°."}
+    ]}]},
+    {"id": "armenia", "title": "Armenia (local anchors)", "tag": "pick", "groups": [{"title": "Armenia", "items": [
+      {"id": "K1", "title": "Why Armenian apricot wood makes the duduk", "note": "Density and resonance of the wood."},
+      {"id": "K2", "title": "The oldest leather shoe: Areni-1", "note": "A 5,500-year-old shoe from a cave in Vayots Dzor; how it survived."},
+      {"id": "K3", "title": "The oldest winery: Areni-1", "note": "6,100-year-old wine-making equipment from the same cave."},
+      {"id": "K4", "title": "Why Ararat is in Turkey but on our coat of arms", "note": "Borders of 1921 and a mountain as a symbol (careful framing)."},
+      {"id": "K5", "title": "Carahunge (Zorats Karer): an ancient observatory?", "note": "Holes in the stones and what archaeologists actually conclude."},
+      {"id": "K6", "title": "Why Armenian has 'ու' as one letter made of two", "note": "Mashtots borrowing the Greek habit (could join the Mashtots video)."}
+    ]}]}
+  ],
+  "note_prompt": "Anything else? New ideas, topics to drop, or which to do first."
+}
