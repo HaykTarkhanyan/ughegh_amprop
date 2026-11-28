@@ -34,12 +34,17 @@ what you see; CX40 how ships climb a hill (locks and ship lifts); CX42 why a com
 delete does not erase a file; CX47 the one-sided surface (Möbius strip); CX75 the theremin, played without touching.
 Total picked: 46.
 
-**Fact-checked (26, 2026-11-28, Codex sheets in `_knowledge/short_videos/facts_codex_*_2026-11-28.md`):** C1-C6, T1,
-T5, T13, W3, W6, S1, U2, I1, I3, I12, O2, CX11, CX42, Z1, A1, K2, K3, B4, X2, I6. Hooks to reword: C1 (small places
-swing both ways, not "the healthiest are tiny"), C2 (London was targeted; within the area the hits matched chance),
-W6 ("usually much less ticklish"), U2 (detail fades, no hard 10-day wall), I1 (no "10 km a day" drift), Z1 (the
-self-driving training claim is unverified), A1 (already admired before 1911). Not checked yet (20): B1, B2, P2, P4,
-I4, L1, L4, F3, A3, A5, X4, I10, O5, X13, Q3, M8, CX40, CX43, CX47, CX75.
+**Fact-checked: all 46 (2026-11-28, Codex sheets in `_knowledge/short_videos/facts_codex_*_2026-11-28.md`, runs 1-10).**
+Hooks to reword before scripting: C1 (small places swing both ways, not "the healthiest are tiny"), C2 (London was
+targeted; within the area the hits matched chance), W6 ("usually much less ticklish"), U2 (detail fades, no hard
+10-day wall), I1 (no "10 km a day" drift), Z1 (the self-driving training claim is unverified), A1 (already admired
+before 1911), F3 (honey can ferment; the edible Tutankhamun honey is unsupported), CX43 (true for hard drives; SSDs
+usually clear deleted data themselves), X4 (short chains were found, but many failed; not a universal rule), A5 (12 is
+a useful choice, not nature's). Details to get right: B2 (the "rain tread" purpose is a theory), I10 (Apple keeps a
+ridge-flow map, not minutiae; 1 in 50,000 is a random match, not a fake finger), L1 (not every "mama" arose
+independently), L4 (no single physical cause; Thaana and N'Ko are not Phoenician descendants). Solid local anchors:
+C5 (1923, 6 / 19 January), W3 (Yerevan 40 N), K2, K3 (Areni-1), L1 (Georgian "mama" = father; Armenian mayr/hayr),
+L4 (Mashtots's left-to-right alphabet, likely Greek influence), A5 (Komitas on tetrachords).
 
 ## Chosen on 2026-11-28 (Q39, Q40)
 
