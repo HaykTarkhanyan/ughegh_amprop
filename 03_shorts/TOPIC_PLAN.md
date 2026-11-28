@@ -34,6 +34,13 @@ what you see; CX40 how ships climb a hill (locks and ship lifts); CX42 why a com
 delete does not erase a file; CX47 the one-sided surface (Möbius strip); CX75 the theremin, played without touching.
 Total picked: 46.
 
+**Fact-checked (26, 2026-11-28, Codex sheets in `_knowledge/short_videos/facts_codex_*_2026-11-28.md`):** C1-C6, T1,
+T5, T13, W3, W6, S1, U2, I1, I3, I12, O2, CX11, CX42, Z1, A1, K2, K3, B4, X2, I6. Hooks to reword: C1 (small places
+swing both ways, not "the healthiest are tiny"), C2 (London was targeted; within the area the hits matched chance),
+W6 ("usually much less ticklish"), U2 (detail fades, no hard 10-day wall), I1 (no "10 km a day" drift), Z1 (the
+self-driving training claim is unverified), A1 (already admired before 1911). Not checked yet (20): B1, B2, P2, P4,
+I4, L1, L4, F3, A3, A5, X4, I10, O5, X13, Q3, M8, CX40, CX43, CX47, CX75.
+
 ## Chosen on 2026-11-28 (Q39, Q40)
 
 - **C1. The healthiest places are tiny, and so are the sickest** (thinking error). The lowest and highest cancer

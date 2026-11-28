@@ -82,3 +82,18 @@ pending = [
   "09:07 cron: TTS for the 9 parked drafts, then timelines, cue-word check, stills, renders, review pages",
   "own_voice: re-render to show the caption fixes made after it was first built (8 word times)",
 ]
+
+[[later]]
+when = "2026-11-28 00:30 - 02:40"
+done = [
+  "Topic picking with Hayk: 3 tick pages in dark mode (broad 107, round 2 96, Codex 90); picker.py got a dark default + Light/Dark toggle (notes repo debbe18d)",
+  "46 topics picked, all in 03_shorts/TOPIC_PLAN.md (C1-C6, T1 T5 T13, W3 W6, 20 from broad, 9 from round 2, 6 from Codex)",
+  "Codex (gpt-6.1-sol) suggested 90 topics (topic_picker_codex.json); then 5 read-only xhigh fact-check runs on 26 of the picks, 9-16 min each",
+  "Fact sheets: _knowledge/short_videos/facts_codex_{1_statistics,2_mind,3_physics_earth,4_technology,5_mixed}_2026-11-28.md; no premise false, 7 hooks need rewording (small places, London bombs, tickling, forecasts, GPS 10 km, CAPTCHA training claim, Mona Lisa 'only after')",
+]
+pending = [
+  "20 picks not fact-checked: B1 B2 P2 P4 I4 L1 L4 F3 A3 A5 X4 I10 O5 X13 Q3 M8 CX40 CX43 CX47 CX75",
+  "Scripts and plans for the 26 checked topics, written by me from the sheets (Armenian via style guide + lint), only after Hayk says go",
+  "09:07 cron 5c941b45 still set: TTS for the 9 parked drafts, timelines, renders, review pages",
+  "Hayk: breaths A/B, music pick, review of the 11 drafts and the labels page",
+]
