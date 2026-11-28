@@ -1,60 +1,60 @@
 [
   {
     "key": "hook",
-    "text": "Ինչո՞ւ է ափսեդ պտտվում։ Պատկերացրո՛ւ՝ տոլմա ես տաքացնում միկրոալիքային վառարանում։ Պտույտը ճաշդ անտեսանելի ալիքների տարբեր մասերով է անցկացնում։",
-    "screen": "նկարազարդում · Ինչո՞ւ է ափսեդ պտտվում",
-    "screen_small": "Michael Vollmer, 2004",
-    "visual": "Frame 0 shows a drawn plate of tolma on a rotating microwave turntable, tagged 'նկարազարդում'. This is an imagined kitchen scene, not a recorded experiment. Reveal a faint field overlay without a measured temperature pattern."
+    "text": "Ինչո՞ւ է շոկոլադը կետերով հալվում։ Վառարանում այն տեղից չի շարժվում, իսկ որոշ տեղեր ավելի շուտ են տաքանում։ Այդպես անտեսանելի ալիքը հետք է թողնում։",
+    "screen": "մոդելավորում · անշարժ շոկոլադ",
+    "screen_small": "Jefferson Lab · շոկոլադի փորձ · Vollmer, 2004",
+    "visual": "Frame 0 shows stationary chocolate with separate softened patches over a simple standing-field slice. Persistent 'մոդելավորում' makes clear this is a planned explanatory model, not a kitchen experiment we performed. No measured spacing is claimed in the hook."
   },
   {
     "key": "field",
-    "text": "Ներսում միկրոալիքներ են՝ էլեկտրամագնիսական ալիքներ։ Դրանց էլեկտրական դաշտն անընդհատ փոխում է ուղղությունը։ Սովորական կենցաղային վառարանների հաճախությունը մոտ 2,45 գիգահերց է։",
-    "screen": "Մոտ 2,45 գիգահերց",
-    "screen_small": "Michael Vollmer, 2004 · CCOHS, 2024",
-    "visual": "Frame 0 shows electric-field arrows inside the cavity. Reverse them in an explicitly slowed schematic, not at an allegedly observable real rate. Keep the nominal 2.45 GHz value separate from the animation speed.",
-    "pause_after": 1
+    "text": "Միկրոալիքները մետաղական պատերից անդրադառնում ու իրար են գումարվում։ Տեղեր կան, որտեղ էլեկտրական դաշտի տատանումն ուժեղ է, տեղեր՝ թույլ։ Անշարժ շոկոլադի ուժեղ դաշտում ընկած մասերն ավելի արագ են տաքանում։",
+    "screen": "մոդելավորում · ուժեղ / թույլ դաշտ",
+    "screen_small": "Michael Vollmer, 2004 · Jefferson Lab",
+    "visual": "Frame 0 retains the chocolate, cavity and reflected arrows. Build an ideal one-dimensional standing electric field. Show attempted field oscillation at both positive and negative antinodes and heating under both. The simplified heating tint has no measured temperature scale."
+  },
+  {
+    "key": "spacing",
+    "text": "Հետևի՛ր երկու հարևան տաք կետերին։ Պարզ կանգուն ալիքի մոդելում նրանց միջև կես ալիքի երկարություն է՝ մոտ 6 սանտիմետր։ Մեկ ամբողջ ալիքը մոտ 12 սանտիմետր է։ Աչքով միացրո՛ւ այդ երկու կեսերը։",
+    "screen": "մոդելավորում · կես ալիք՝ մոտ 6 սմ · ամբողջ ալիք՝ մոտ 12 սմ",
+    "screen_small": "Jefferson Lab · NIST, 2022 · հաշվարկ՝ 2,45 գիգահերցի համար, օդում մոտավոր",
+    "visual": "Continuous showcase: frame 0 contains adjacent heating antinodes and a half-wave bracket. Add the next half-wave to show a full wavelength. Values are rounded theoretical free-space values from 6.12 and 12.24 cm at 2.45 GHz, not a wavelength in food or a measurement from this oven. During the longest 4 s pause the viewer traces two half-waves. Do not use opposite field signs as hot/cold.",
+    "pause_after": 4
   },
   {
     "key": "water",
-    "text": "Ճաշի ջրի մոլեկուլները դրան արձագանքում են։ Էլեկտրական լիցքը նրանց մեջ անհավասար է բաշխված, և դաշտը փորձում է դրանք շրջել իր ուղղությամբ։ Բայց հեղուկի մեջ մոլեկուլները մենակ չեն՝ հարևանների հետ փոխազդում են։",
+    "text": "Բայց ինչո՞ւ է ուտելիքն ընդհանրապես տաքանում։ Փոփոխվող դաշտը ջրի մոլեկուլներին փորձում է իր ուղղությամբ շրջել։ Դրանք փոխազդում են հարևանների հետ, և ստացած էներգիայի մի մասը ջերմություն է դառնում։ Լուծված աղերի իոններն էլ կարող են մասնակցել։",
     "screen": "Պարզեցված պատկեր",
     "screen_small": "Michael Vollmer, 2004 · Christopher S. Baird, 2014",
-    "visual": "Frame 0 shows a crowded schematic liquid with molecular dipoles and electric-field arrows. Mark opposite partial-charge ends without pretending each molecule is a free propeller. Neighbours interact and orientations lag behind the changing field."
+    "visual": "Frame 0 zooms from the chocolate to a crowded schematic liquid. Show dipole alignment attempts, lag and neighbour interactions, then dissolved-ion motion. No free propeller molecules or full rotations counted at the field frequency."
   },
   {
-    "key": "heat",
-    "text": "Դաշտից ստացած էներգիայի մի մասը վերածվում է ջերմության։ Այդպես ճաշը տաքանում է։ Ջուրը մեծ դեր ունի, բայց միակ նյութը չէ, որ կարող է կլանել էներգիան։ Լուծված աղերի իոններն էլ կարող են մասնակցել տաքացմանը։",
-    "screen_small": "Michael Vollmer, 2004 · Christopher S. Baird, 2014",
-    "visual": "Frame 0 continues the interacting liquid diagram; energy arrows become a qualitative heat tint. Include dissolved-ion symbols beside water dipoles, without fabricated absorption percentages or counts."
+    "key": "frequency",
+    "text": "Սովորական վառարանի հաճախությունը մոտ 2,45 գիգահերց է։ Դա ջրի հատուկ ռեզոնանսը չէ։ Այդ ընտրությունը թույլ է տալիս էներգիային օգտակար խորությամբ ներթափանցել սննդի մեջ։",
+    "screen": "Մոտ 2,45 գիգահերց · ջրի հատուկ ռեզոնանսը չէ",
+    "screen_small": "CCOHS, 2024 · Baird, 2014 · Vollmer, 2004 · նաև ISM հատկացված տիրույթ",
+    "visual": "Frame 0 shows the nominal frequency beside changing-field arrows and a qualitative penetration slice. The direct factual correction rejects the water-resonance myth without first presenting it as true. Source line also notes the allocated ISM band; do not claim one exclusive historical reason for the frequency."
   },
   {
-    "key": "hot_spots",
-    "text": "Հիմա նայի՛ր ամբողջ վառարանին։ Ալիքները մետաղական պատերից անդրադառնում ու իրար են գումարվում։ Տեղեր կան, որտեղ դաշտի տատանումն ուժեղ է, տեղեր՝ թույլ։ Դրա համար նույն ճաշի տարբեր մասերը կարող են տարբեր չափով տաքանալ։",
-    "screen": "Պարզեցված պատկեր · ուժեղ / թույլ դաշտ",
-    "screen_small": "Michael Vollmer, 2004",
-    "visual": "Frame 0 shows the metal cavity and opposed reflected-wave arrows. Showcase begins: build a simple standing-field section with strong and weak oscillation regions, then show an illustrative plate intersecting them. Both positive and negative antinode regions produce heating. No universal hot-spot spacing or invented temperature scale.",
+    "key": "doubt",
+    "text": "Ուրեմն ամեն վառարանում կետերի միջև հենց 6 սանտիմե՞տր է։ Ոչ։ Իրական ցուցադրության մեջ չափել են 7,1 սանտիմետր։ Վառարանի ձևը, ուտելիքն ու ջերմության տարածումը բարդացնում են պատկերը։ Հալման կետերը ցույց են տալիս դաշտի անհավասարությունը։",
+    "screen": "Մոդելի մոտ 6 սմ ≠ փորձի չափում · փորձ՝ 7,1 սմ",
+    "screen_small": "Jefferson Lab · ցուցադրության չափում · մոտավոր խոհանոցային փորձ",
+    "visual": "Frame 0 separates the theoretical bracket from a clearly attributed Jefferson Lab result card, 7.1 cm. It is their published demonstration, not our own experiment. During the 2 s pause the viewer compares prediction and observation. No speed-of-light calculation or precision claim; end on the observed uneven heating.",
     "pause_after": 2
   },
   {
     "key": "turntable",
-    "text": "Պտտվող ափսեն ճաշը տեղափոխում է այդ տարբեր տեղերով։ Հետևի՛ր տոլմայի մի կտորին՝ հիմա ուժեղ դաշտում է, հետո՝ ավելի թույլ։ Պտույտն օգնում է, որ ճաշի նույն մասը միշտ նույն տեղում չմնա։",
-    "screen": "Պարզեցված պատկեր · հետևի՛ր նշված կտորին",
+    "text": "Հիմա շոկոլադի փոխարեն տոլմա պատկերացրո՛ւ։ Ափսեն պտտվում է։ Հետևի՛ր նշված կտորին՝ ուժեղ դաշտից անցնում է ավելի թույլ դաշտի մեջ։ Պտույտը մեղմում է անհավասար տաքացումը, թեև ամեն տեղ նույն ջերմաստիճանը չի ապահովում։",
+    "screen": "նկարազարդում · հետևի՛ր նշված կտորին",
     "screen_small": "Michael Vollmer, 2004",
-    "visual": "Frame 0 retains the field map and highlights a tolma piece already on a non-central circular path. Continue the same showcase by rotating it through stronger and weaker regions. Use a schematic nonuniform field map and label it simplified; never imply every piece samples identical fields. Hold motion through the longest pause so the viewer tracks the marked piece.",
+    "visual": "Continue the showcase from stationary chocolate to an illustrative tolma plate. Frame 0 contains one highlighted non-central piece on a circular path through a visibly nonuniform schematic field. During the 4 s pause the viewer tracks it. No concentric uniform rings, identical sampling claim or measured tolma experiment.",
     "pause_after": 4
   },
   {
-    "key": "doubt",
-    "text": "Ուրեմն պտտվելուց հետո ամեն տեղ նույնքան տա՞ք է։ Պարտադիր չէ։ Իրական վառարանի դաշտն ավելի բարդ է, և ճաշի ձևն ու բաղադրությունն էլ են ազդում։ Պտույտը մեղմում է անհավասար տաքացումը, բայց լիովին չի վերացնում։",
-    "screen_small": "Michael Vollmer, 2004",
-    "visual": "Frame 0 shows the rotating plate with a still-uneven qualitative heat tint. Dissolve the simple field map into a more complex schematic pattern, not simulated or measured data. Keep the claim limited to improved averaging.",
-    "pause_after": 2
-  },
-  {
     "key": "closing",
-    "text": "Հաջորդ անգամ ափսեի պտույտին նայելիս հիշի՛ր՝ ճաշդ անցնում է անտեսանելի ալիքների միջով։",
-    "screen": "նկարազարդում · Ճաշդ անցնում է անտեսանելի ալիքների միջով",
-    "visual": "Frame 0 returns to the drawn tolma plate from the opening, retaining 'նկարազարդում'. Fade the field overlay while the plate continues turning and the narrator says the closing screen line; no summary card.",
-    "pause_after": 1
+    "text": "Ափսեդ պտտվում է, որ ճաշիդ նույն կտորը միշտ նույն տաք կետում չմնա։",
+    "screen": "Նույն կտորը միշտ նույն տաք կետում չմնա",
+    "visual": "Frame 0 continues the tolma piece on its path with the illustration tag retained. The voice says the screen line within the closing sentence. No summary card."
   }
 ]

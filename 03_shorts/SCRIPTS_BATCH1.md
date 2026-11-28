@@ -1,25 +1,47 @@
-# Scripts, batch 1: eight drafts by Codex, with Claude's review notes
+# Scripts, batch 1: eight drafts by Codex, revised once, with Claude's review notes
 
 2026-11-28. Written by two Codex agents (gpt-6.1-sol, xhigh) from the fact sheets in
-`../_knowledge/short_videos/facts_codex_*_2026-11-28.md`, following `README.md`'s script rules. Not voiced, not
-animated. Each plan has the script, the facts with sources, the showcase plan and Codex's own questions (S1, S2, ...).
+`../_knowledge/short_videos/facts_codex_*_2026-11-28.md`, following `README.md`'s script rules, then revised by the
+same agents against Claude's first-pass notes (kept below). Not voiced, not animated. Each plan has the script, a
+"Revision" section (what changed and why), the facts with sources, the showcase plan and the open questions (S1, ...).
 
-## The eight
+## The eight, after revision
 
 | Folder | Hook (gloss) | Beats | Length (estimate) | Lint | Check |
 |---|---|---|---|---|---|
-| [monty_hall](monty_hall/PLAN.html) | «Կփոխե՞ս դուռը։» (Would you switch doors?) | 10 | ~1:59 | 0 errors | pass |
-| [london_bombs](london_bombs/PLAN.html) | «Պատահականն էլ է կուտակվում։» (Chance clusters too.) | 10 | ~2:00 | 0 errors | pass |
-| [anchoring_wheel](anchoring_wheel/PLAN.html) | «Անիվը փոխեց գուշակությունները։» (The wheel changed the guesses.) | 10 | ~1:53 | 0 errors | pass |
-| [blind_spot](blind_spot/PLAN.html) | «Կարո՞ղ ես կորցնել այս կետը։» (Can you lose this dot?) | 10 | ~1:58 | 0 errors, 1 hint kept | pass |
-| [leap_years](leap_years/PLAN.html) | «Օրացույցից 10 ամսաթիվ ջնջեցին։» (10 dates were deleted.) | 9 | ~1:59 | 0 errors | pass |
-| [areni_shoe](areni_shoe/PLAN.html) | «Կոշիկը մոտ 5500 տարեկան է։» (The shoe is ~5,500 years old.) | 8 | ~1:53 | 0 errors | pass |
-| [microwave](microwave/PLAN.html) | «Ինչո՞ւ է ափսեդ պտտվում։» (Why does your plate turn?) | 8 | ~1:51 | 0 errors | pass |
-| [gps_einstein](gps_einstein/PLAN.html) | «Տեղդ գտնում են ժամացույցով։» (They find you with a clock.) | 9 | ~2:08 | 0 errors | pass |
+| [monty_hall](monty_hall/PLAN.html) | «Ճիշտ պատասխանը բողոքի նամակներ բերեց։» (The right answer brought letters of complaint.) | 9 | ~1:59 | 0 errors | pass |
+| [london_bombs](london_bombs/PLAN.html) | «Մի քառակուսում՝ 3 ռումբ։ Մյուսում՝ ոչ մեկը։» (One square: 3 bombs. Another: none.) | 8 | ~1:59 | 0 errors | pass |
+| [anchoring_wheel](anchoring_wheel/PLAN.html) | «Անիվը փոխեց ՄԱԿ-ի մասին պատասխանները։» (A wheel changed answers about the UN.) | 9 | ~1:58 | 0 errors | pass |
+| [blind_spot](blind_spot/PLAN.html) | «Աչքիդ մի հատվածը լույս չի զգում։» (Part of your eye senses no light.) | 9 | ~1:51 | 0 errors, 1 hint kept | pass |
+| [leap_years](leap_years/PLAN.html) | «Հոկտեմբերի 4-ից հետո՝ 15-ը։» (After 4 October came the 15th.) | 9 | ~1:52 | 0 errors | pass |
+| [areni_shoe](areni_shoe/PLAN.html) | «Գոմաղբի տակ՝ կաշվե կոշիկ։» (Under the dung, a leather shoe.) | 8 | ~1:40 | 0 errors | pass |
+| [microwave](microwave/PLAN.html) | «Ինչո՞ւ է շոկոլադը կետերով հալվում։» (Why does chocolate melt in spots?) | 8 | ~1:54 | 0 errors | pass |
+| [gps_einstein](gps_einstein/PLAN.html) | «Լույսը՝ մոտ 300 մետր մեկ միկրովայրկյանում։» (Light: ~300 m per microsecond.) | 8 | ~1:56 | 0 errors | pass |
 
-Lint and the script check rerun by Claude, same results. Pauses 9-10 s in each.
+Lint, the script check and the length estimate rerun by Claude after the revision. Pauses 9-10 s in each. One
+house-style article fixed by Claude in anchoring_wheel («տոկոսն այդ»).
 
-## Claude's review notes
+## Claude's notes on the revision
+
+Every first-pass note was addressed, and every newly used fact was checked against its sheet: vos Savant's letters
+said as "many had degrees" (the count is only medium confidence), V-1s in 1944-1945 and Shaw & Shaw 2019 (hits skewed
+south, high), the dice study (5.28 vs 7.81 months, high), the Julian drift (about 11 minutes a year, a day in ~128
+years, high), the Areni eyelets (4 pairs at the back, 15 across the top) and Ötzi comparison (high), the chocolate
+spacing (about 6 cm in the model, 7.1 cm measured) and "not water's resonance" (high), light's 300 m per microsecond.
+
+Still open, for Hayk:
+- **london_bombs:** «Լոնդոնցիները նկատում էին հարվածների կուտակումները» says Londoners noticed clusters; the sheet
+  only documents that clustering was alleged (Clarke), not by whom. A softer «Խոսում էին, որ հարվածները կուտակվում են»
+  would match the source. «ֆաու-1» is the voiced spelling of V-1: check how it should sound.
+- **gps_einstein:** the doubt beat is still abstract for a general viewer («Արբանյակների ընդհանուր ժամի սխալը կարող
+  է անցնել հեռախոսի ժամացույցի հաշվարկի մեջ»). «ջիփիէս» is the voiced spelling of GPS.
+- **areni_shoe:** at 1:40 it sits on the lower edge of the length range; fine if it feels complete.
+- **microwave:** «հաճախություն» (the style guide's glossary, statistics sense) vs «հաճախականություն» (the usual
+  physics word for Hz) is still open.
+- **blind_spot:** «կույր բիծ» vs «կույր կետ».
+- Codex's own questions (S1, S2, ...) in each plan.
+
+## First-pass notes (addressed in the revision)
 
 Overall: the facts are careful and match the sheets; no flagged myth is repeated, the reworded hooks are respected,
 the London numbers match Clarke's table (229 empty squares, 35 with 3 hits). The weak side is the writing: dry, with

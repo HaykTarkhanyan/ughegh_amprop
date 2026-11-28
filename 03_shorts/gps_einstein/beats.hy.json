@@ -1,67 +1,58 @@
 [
   {
     "key": "hook",
-    "text": "Տեղդ գտնում են ժամացույցով։ Հեռախոսիդ ջիփիէսի համար կարևոր է, թե երբ է արբանյակն ազդանշանն ուղարկել, ու երբ ես այն ստացել։",
-    "screen": "Տեղդ գտնում են ժամացույցով",
-    "screen_small": "Էյնշտեյնի հարաբերականության տեսություն · Neil Ashby, 2003",
-    "visual": "Frame 0 shows a phone location marker beside a satellite clock and an arriving signal. This is a timing diagram; no invented map route or numerical travel time."
+    "text": "Լույսը՝ մոտ 300 մետր մեկ միկրովայրկյանում։ Դա վայրկյանի միլիոնական մասն է։ Հեռախոսիդ ջիփիէսի համար այդ փոքր ժամանակն էլ նշանակություն ունի։",
+    "screen": "Լույսը · մոտ 300 մ / միկրովայրկյան",
+    "screen_small": "IS-GPS-200N, 2022 · հաշվարկ՝ լույսի արագությունից",
+    "visual": "Frame 0 shows a signal and a 300 m scale beside a one-microsecond timing bracket, explicitly 'մոտ'. This is propagation distance, never a predicted position-error arrow. No invented route or building dimensions."
   },
   {
     "key": "travel_time",
-    "text": "Ազդանշանի ճանապարհի ժամանակից կարելի է հաշվել հեռավորությունը։ Մի քանի արբանյակից ստացած տվյալներով ընդունիչը որոշում է տեղդ։ Բայց այստեղ մի անակնկալ կա՝ ուղեծրում ժամացույցը նույն տեմպով չի գնում, ինչ Երկրի վրա։",
-    "screen_small": "Neil Ashby, 2003",
-    "visual": "Frame 0 shows a signal path and its departure/arrival clock symbols. Add other satellite paths, then enlarge the orbit and Earth reference clocks. Distances remain schematic and have no invented scale."
+    "text": "Պատկերացրո՛ւ՝ Երևանում կանգնած հեռախոսիդ քարտեզին ես նայում։ Տեղդ գտնելու համար հեռախոսը համեմատում է՝ արբանյակը երբ է ազդանշանն ուղարկել, ու այն երբ է հասել։ Ճանապարհի ժամանակից հաշվում է հեռավորությունը։",
+    "screen": "նկարազարդում · Երևան · ազդանշանի ճանապարհի ժամանակ",
+    "screen_small": "Neil Ashby, 2003 · ժամանակի ու դիրքի համատեղ հաշվարկ",
+    "visual": "Frame 0 shows a schematic phone marker labelled Yerevan, with send/receive clock icons and satellite signal paths. Local anchor sits inside the timing explanation. No measured location, accuracy, travel time or invented surveyed coordinates."
   },
   {
-    "key": "motion",
-    "text": "Շարժման պատճառով արբանյակի ժամացույցը Երկրի վրա հենակետային ժամացույցի համեմատ դանդաղում է։ Ջիփիէսի սովորական ուղեծրի համար դա օրական մոտ 7 միկրովայրկյան է։ Միկրովայրկյանը վայրկյանի միլիոնական մասն է։",
-    "screen": "Շարժում՝ մոտ -7 միկրովայրկյան / օր",
-    "screen_small": "NIST, 2025 · կլորացված թվեր",
-    "visual": "Frame 0 shows a moving satellite clock and the Earth reference clock, then a rounded -7 microseconds/day contribution. Do not use an orbit with invented altitude or speed.",
-    "pause_after": 1
-  },
-  {
-    "key": "gravity",
-    "text": "Իսկ ձգողության պայմանների տարբերությունը հակառակ ազդեցությունն ունի։ Երկրի մակերևույթից բարձր՝ արբանյակի ուղեծրում, ժամացույցն ավելի արագ է գնում։ Այս ներդրումն օրական մոտ 45 միկրովայրկյան է։",
-    "screen": "Ձգողություն՝ մոտ +45 միկրովայրկյան / օր",
-    "screen_small": "NIST, 2025 · կլորացված թվեր",
-    "visual": "Frame 0 shows the same Earth and orbital reference levels connected by a qualitative gravitational-potential gradient. Add the rounded +45 microseconds/day contribution; gravity remains present in orbit."
+    "key": "orbit",
+    "text": "Բայց արբանյակի ժամացույցը Երկրի ժամացույցի տեմպով չի գնում։ Շարժումն այն դանդաղեցնում է, իսկ ուղեծրի ու Երկրի մակերևույթի ձգողության պայմանների տարբերությունն արագացնում է։ Երկու ազդեցությունները հակառակ են։",
+    "screen": "Շարժում՝ դանդաղ · ձգողության տարբերություն՝ արագ",
+    "screen_small": "Էյնշտեյնի հարաբերականության տեսություն · Neil Ashby, 2003 · NIST, 2025",
+    "visual": "Frame 0 shows an Earth reference clock and an unadjusted orbital clock, with opposing contribution arrows. Retain gravity in orbit; no invented altitude, speed or actual clock footage."
   },
   {
     "key": "clock_showcase",
-    "text": "Հիմա համեմատի՛ր՝ 7-ով հետ, 45-ով առաջ։ Ո՞րն է մեծ։ Չուղղված ժամացույցը գումարային հաշվով օրական մոտ 38 միկրովայրկյան առաջ կընկներ։ Սա ժամացույցի տարբերություն է, որը համակարգը պետք է հաշվի առնի։",
+    "text": "Օրական մոտ 7 միկրովայրկյան հետ՝ շարժումից, մոտ 45 առաջ՝ ձգողության տարբերությունից։ Մեծ սլաքին նայի՛ր։ Չուղղված արբանյակային ժամացույցը վերջում օրական մոտ 38 միկրովայրկյան առաջ կընկներ։ Այդ տարբերությունն ազդանշանի ճանապարհի ժամանակի հաշվարկում անտեսել չես կարող։",
     "screen": "Մոտ -7 + 45 = +38 միկրովայրկյան / օր",
-    "screen_small": "NIST, 2025 · կլորացված թվեր",
-    "visual": "Frame 0 already shows the negative and positive clock-offset bars. Showcase: animate a notional day, combine rounded -7 and +45 into net +38 microseconds, then compare Earth reference time with unadjusted orbital time. Keep 'կլորացված թվեր' visible. During the pause let the viewer compare the bars and read the sum. Never translate the clock offset into map-marker drift.",
+    "screen_small": "NIST, 2025 · կլորացված թվեր · չուղղված ժամացույց",
+    "visual": "Showcase starts with opposing -7 and +45 microseconds/day bars. Combine into +38 for a notional day against Earth reference time; retain the opening 1 microsecond / about 300 m signal-propagation ruler in a separate panel. During the longest 5 s pause the viewer traces the opposing arrows and the remaining +38. No map marker displacement, distance-error multiplication or universal position-error prediction.",
+    "pause_after": 5
+  },
+  {
+    "key": "receiver",
+    "text": "Հեռախոսի ժամացույցն էլ կատարյալ չէ։ Հիմնական հաշվարկում 4 արբանյակի տվյալներով միաժամանակ գտնում են թե՛ տեղդ, թե՛ այդ ժամացույցի շեղումը։ Այսինքն՝ համակարգը միայն քարտեզի կետը չի հաշվում։",
+    "screen": "4 արբանյակ → տեղիդ 3 կոորդինատ + ժամացույցիդ շեղում",
+    "screen_small": "Neil Ashby, 2003 · հիմնական հաշվարկ",
+    "visual": "Frame 0 shows four satellite paths feeding two outputs: a fixed Yerevan position marker with three coordinate slots, and a receiver-clock offset. During the 3 s pause the viewer follows the paths to the two outputs. No claim every receiver always uses exactly four satellites.",
     "pause_after": 4
   },
   {
     "key": "doubt",
-    "text": "Այդ 38-ից կարո՞ղ ենք ասել, թե տեղդ քանի մետրով կսխալվի։ Ոչ։ Ընդունիչը հաշվում է նաև իր ժամացույցի շեղումը։ Մի քանի արբանյակի համար ընդհանուր ժամանակային սխալը կարող է արտահայտվել հենց այդ հաշվարկում։ Ժամի սխալը դեռ տեղիդ սխալի չափը չէ։",
-    "screen": "Իդեալականացված օրինակ",
-    "screen_small": "Pratap Misra, 2023 · Neil Ashby, 2003",
-    "visual": "Frame 0 separates a clock-offset readout from the fixed location marker. In an explicitly idealised common-bias diagram, move the receiver-clock estimate while leaving the position point fixed. Label the idealisation; no claim that all relativistic effects cancel.",
-    "pause_after": 2
+    "text": "Ուրեմն 38-ը տեղիդ սխալի պատրաստի չա՞փն է։ Ոչ։ Արբանյակների ընդհանուր ժամի սխալը կարող է անցնել հեռախոսի ժամացույցի հաշվարկի մեջ։ Տեղիդ սխալը միայն այդ թվով չես որոշի։ Ճշգրիտ ժամանակի ու տեղորոշման համար հարաբերականության ուղղումները պետք են։",
+    "screen": "Ժամացույցի սխալը ≠ տեղիդ սխալի պատրաստի չափ",
+    "screen_small": "Pratap Misra, 2023 · ընդհանուր սխալի պարզեցված դեպք · Neil Ashby, 2003",
+    "visual": "Frame 0 retains the two outputs. A shared timing component changes the receiver-clock estimate, leaving the position marker fixed in an explicitly simplified common-bias model. This illustrates what the rounded drift alone cannot predict; it does not claim all real relativistic effects cancel."
   },
   {
-    "key": "receiver",
-    "text": "Հիմնական հաշվարկում պետք են 4 արբանյակի տվյալներ՝ տեղիդ 3 կոորդինատն ու ժամացույցիդ շեղումը գտնելու համար։ Իրական ուղեծրերն էլ կատարյալ շրջաններ չեն, և դրանց հետ կապված լրացուցիչ ժամանակային ուղղումներ են պետք։",
-    "screen_small": "Neil Ashby, 2003 · IS-GPS-200N, 2022",
-    "visual": "Frame 0 shows four satellite paths and four unknown slots: three position coordinates and one receiver clock bias. Then make one schematic orbit slightly elliptical and show a qualitative periodic clock correction without invented amplitudes."
-  },
-  {
-    "key": "armenia",
-    "text": "Հայաստանում էլ արբանյակային չափումները կապվում են հենակետային կայանների ցանցի հետ։ Կադաստրի կոմիտեն նկարագրում է ամբողջ երկրի համար ստեղծված այդ ցանցը։ Ճշգրիտ տեղը որոշելու համար ճշգրիտ ժամանակի հաշվարկ է պետք։",
-    "screen": "Հենակետային կայաններ · սխեմա",
-    "screen_small": "ՀՀ կադաստրի կոմիտե, 2026 · հենակետային ցանց՝ 2013",
-    "visual": "Frame 0 shows an outline of Armenia with a reference-station symbol and satellite signals. Any station nodes are visibly schematic, not actual surveyed locations. Do not imply the national network invented relativity corrections or uses GPS alone.",
-    "pause_after": 2
+    "key": "corrections",
+    "text": "Իրական ուղեծրերում ժամանակային տարբերությունները նաև պարբերաբար փոխվում են։ Համակարգը հաշվի է առնում և՛ ընդհանուր տեմպը, և՛ այդ փոփոխությունները։ Քարտեզի կետի հետևում այս ամբողջ հաշվարկն է։",
+    "screen_small": "IS-GPS-200N, 2022 · ESA Navipedia, 2011 · ուղեծրի պարբերական ուղղում",
+    "visual": "Frame 0 shows a slightly noncircular schematic orbit, an ongoing rate correction and a separate periodic correction entering the same timing calculation. No amplitudes, factory-setting universal claim or extra numerical error example."
   },
   {
     "key": "closing",
-    "text": "Քարտեզի կետի հետևում ժամանակի հաշվարկ կա։ Նույնիսկ երբ դու տեղում կանգնած ես։",
-    "screen": "Քարտեզի կետի հետևում ժամանակի հաշվարկ կա",
-    "visual": "Frame 0 returns to the stationary phone marker with the clock still advancing beside it. The narrator says the screen line in this moving scene; no summary card.",
-    "pause_after": 1
+    "text": "Քարտեզում տեղդ պահելու համար նույնիսկ ժամանակի տեմպն են հաշվում։",
+    "screen": "Նույնիսկ ժամանակի տեմպն են հաշվում",
+    "visual": "Frame 0 returns to the stationary Yerevan phone marker with the Earth and satellite clock symbols still active. The voice says the closing screen line within its sentence. No summary card."
   }
 ]

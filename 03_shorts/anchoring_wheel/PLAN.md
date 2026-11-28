@@ -1,117 +1,122 @@
-# Short: Anchoring - a wheel moves the groups' guesses - script and plan
+# Short: Anchoring - from a wheel to proposed sentences - script and plan
 
-Draft for Hayk's review, 2026-11-28. Thinking-error strand. Script source: `beats.hy.json`.
-The famous outcomes are group medians, not individual changes. No voice or render made.
+Revised for Hayk's review, 2026-11-28. Script source: `beats.hy.json`. No voice or render made.
 
 ## The idea in one paragraph
 
-An irrelevant starting number can pull subsequent numerical estimates toward it. Participants saw a wheel number,
-compared a historical UN-membership percentage with it, then estimated that percentage. The groups shown 10 and 65
-had median estimates of 25% and 45%. The showcase puts these two reported group results on identical scales without
-inventing individual responses. The doubt beat limits the claim to the measured groups. The one extension is a
-dram-denominated price tag, explicitly an everyday illustration rather than an Armenian experiment; unlike the
-wheel, a price tag may contain relevant product information.
+An irrelevant first number can influence estimates. A wheel stopping at 10 or 65 preceded a historical question
+about the African share of UN members; groups' median estimates were 25% and 45%. The showcase compares fixed
+group medians on identical scales and briefly defines median without a second group/individual disclaimer.
+The sole extension gives the stakes a sourced form: 52 junior legal professionals rolled loaded dice yielding
+3 or 9, used the total as a hypothetical prosecutor's demand, then proposed a sentence. Mean proposed sentences
+were 5.28 and 7.81 months on probation. One doubt limits individual prediction and ends on observed differences.
+The closing question about estimating a price in drams supplies a local anchor without an invented purchase
+or a claimed Armenian study.
 
 ## The script (Armenian)
 
 <!-- script:start -->
 
-10 beats, 1,458 characters (1,502 with numbers spelled out): ~102 s of speech, ~1:53 with pauses and the end tail, 9 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
+9 beats, 1,487 characters (1,616 with numbers spelled out): ~107 s of speech, ~1:58 with pauses and the end tail, 9 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
-**1. hook.** Անիվը փոխեց գուշակությունները։
+**1. hook.** Անիվը փոխեց ՄԱԿ-ի մասին պատասխանները։
 
-**2. question.** Փորձի հարցը սա էր՝ ՄԱԿ-ի անդամ երկրների քանի՞ տոկոսն են աֆրիկյան երկրները։ Նախքան պատասխանելը մասնակիցներն անիվի պտույտ էին տեսնում։ Անիվը երկրների մասին ոչինչ չէր հայտնում։
+**2. question.** Փորձի հարցը սա էր՝ ՄԱԿ-ի անդամ երկրների քանի՞ տոկոսն են աֆրիկյան երկրները։ Մասնակիցները պատասխանից առաջ անիվ էին պտտեցնում։ Անիվը երկրների մասին ոչինչ չէր հայտնում։
 
-**3. wheel.** Անիվը համարակալված էր 0-ից 100։ Բայց այն այնպես էին սարքել, որ խմբից կախված՝ կանգ առներ 10-ի կամ 65-ի վրա։ Թիվը թվում էր պատահական, իսկ հետազոտողները նախապես որոշել էին այն։
+**3. wheel.** Անիվը համարակալված էր 0-ից 100, բայց սարքած էր՝ կանգ առնելու 10-ի կամ 65-ի վրա։ Մասնակիցները նախ ասում էին՝ փնտրած տոկոսն այդ թվից բա՞րձր է, թե՞ ցածր։ Հետո տալիս էին իրենց գնահատականը։ Հարցը նույնն էր, անիվի թիվը՝ տարբեր։
 
-**4. procedure.** Մարդիկ նախ ասում էին՝ իրենց փնտրած տոկոսը ցուցադրված թվից բա՞րձր է, թե՞ ցածր։ Հետո տալիս էին իրենց գնահատականը։ Հարցը նույնն էր, անիվի թիվը՝ տարբեր։
+**4. showcase.** 10 տեսած խմբի պատասխանների մեդիանը 25 տոկոս էր։ 65 տեսած խմբինը՝ 45 տոկոս։ Մեդիանը պատասխանները փոքրից մեծ դասավորելիս կենտրոնը ցույց տվող թիվն է։ Համեմատի՛ր երկու զույգը՝ անիվի թիվն ու խմբի պատասխանը։ *[pause 5 s]*
 
-**5. showcase.** 10 տեսած խմբի պատասխանների մեդիանը 25 տոկոս էր։ 65 տեսած խմբինը՝ 45 տոկոս։ Կողք կողքի նայիր՝ անիվի ավելի մեծ թվին հետևում էր նաև ավելի մեծ գնահատականը։ *[pause 5 s]*
+**5. anchor.** Սա խարսխման ազդեցությունն է։ Առաջին թիվը կարող է խարսխի պես պահել հետագա գնահատականդ իր մոտ, նույնիսկ երբ պատասխանի մասին տեղեկություն չի տալիս։ Իսկ եթե գնահատականից շատ բան կախված լինի՞։
 
-**6. median.** Մեդիանը պատասխանները փոքրից մեծ դասավորելիս կենտրոնը ցույց տվող թիվն է։ Այսինքն՝ այստեղ համեմատում ենք խմբերը։ Չենք չափել, թե նույն մարդն անիվից առաջ ու հետո որքան փոխեց իր կարծիքը։
+**6. dice.** Մեկ այլ փորձի 52 սկսնակ իրավաբան զառեր էր գցում, հետո առաջարկում պատժաչափը։ Զառերը սարքած էին՝ գումարով տալու 3 կամ 9։ Այդ թիվը գրում էին որպես դատախազի պահանջ՝ պայմանական պատժի ամիսներով։ Հետո իրավաբանն իր որոշումն էր գրում։
 
-**7. anchor.** Սա խարսխման ազդեցությունն է։ Առաջին թիվը կարող է խարսխի պես պահել հետագա գնահատականդ իր մոտ, նույնիսկ երբ հարցի պատասխանի մասին տեղեկություն չի տալիս։ *[pause 1 s]*
+**7. dice_results.** 3 ստացած խմբի առաջարկած պատժաչափը միջինում 5,28 ամիս էր։ 9 ստացած խմբինը՝ 7,81 ամիս։ Գործի նյութերը նույնն էին, զառերի թիվը՝ տարբեր։ Համեմատի՛ր՝ ավելի մեծ թվից հետո նաև ավելի երկար պատիժ էին առաջարկում։ *[pause 4 s]*
 
-**8. doubt.** Բայց այս թվերից չես իմանա՝ կոնկրետ դու որքան կազդվես։ Դրանք չեն նշանակում, թե ամեն մարդ նույնքան փոխեց պատասխանը։ Չափվածը տարբեր թվեր տեսած խմբերի պատասխանների տարբերությունն է։
+**8. doubt.** Քեզ հետ էլ նույնը կլինի՞։ Այս փորձերը քո պատասխանը չեն կանխատեսում։ Գիտենք՝ տարբեր մեկնարկային թվեր տեսած խմբերը տարբեր գնահատականներ են տվել, նույնիսկ երբ առաջին թիվը հարցի հետ կապ չուներ։
 
-**9. local_price.** Հիմա պատկերացրու դրամով գնապիտակ։ Մինչ քո գնահատականը տալը, արդեն վաճառողի թիվն ես տեսել։ Սա առօրյա օրինակ է, ոչ Հայաստանում արված փորձի արդյունք։ Գնապիտակն էլ, ի տարբերություն անիվի, կարող է ապրանքի մասին տեղեկություն տալ։ *[pause 2 s]*
-
-**10. takeaway.** Թիվը գնահատելիս հարցրո՛ւ՝ առաջին թիվը որտեղի՞ց եկավ։ *[pause 1 s]*
+**9. takeaway.** Դրամով գին գնահատելիս էլ հարցրո՛ւ՝ առաջին թիվը որտեղի՞ց եկավ։
 
 <!-- script:end -->
 
-Armenian lint: **0 errors, 0 hints**, initial and final runs. All `text`, `screen` and `screen_small` strings were
-extracted into `%TEMP%/ughegh_anchoring_wheel_script_review.txt` outside the repository and checked with `--style`.
-No hints retained. Manual polish followed the checklist; U1 singular address is retained. «մեդիան» and
-«գնահատական» follow the glossary; the missing anchoring term is left as S1, not recorded as an owner decision.
+CHECK_RECORD_PLACEHOLDER
 
-`plan_script.py anchoring_wheel`: generated length line above, under the default ceiling.
-`validate_episode.py anchoring_wheel --stage script`: **PASS**. The unchanged tool entry points ran through `runpy`
-with console-only logging and bytecode disabled, avoiding their default writes to repository-level `logs/`.
-Only files in the four authorized episode folders were written inside the repository.
+## Revision (2026-11-28)
+
+- **Median/doubt repetition:** delete the separate median beat; keep a short statistic definition with the wheel
+  results. The sole doubt addresses predicting the viewer's answer and ends on the measured group difference.
+- **Missing real-world evidence:** replace the separate price illustration with the legal experiment: 52 junior
+  professionals, loaded dice totals 3/9, hypothetical prosecutor demand, and mean proposed sentences 5.28/7.81
+  months on probation. Do not call them veteran judges or show real prisoners.
+- **Invented drams example/spoken label:** remove the shop scene and sentence announcing it is invented.
+  Currency now appears only in the closing question about the viewer's estimate; no effect size or Armenian
+  result is claimed. Illustration/reconstruction tags remain on screen.
+- **Abstract hook/dry pace:** name wheel and UN in the first sentence; combine setup/procedure, then move from
+  the wheel to consequential professional judgment. Nine beats, one extension.
+- **Interaction/closing:** 5 s to compare wheel/median pairs, 4 s to compare dice/mean-sentence pairs, 9 s total.
+  No closing pause or extra recap; final voice says the screen question.
+- **Questions:** keep S1 for anchoring terminology and S3 for the median definition. S2 concerned words removed
+  with the former hook; it is obsolete, not answered. New S4 covers legal wording, using the next free ID.
+  No phrasing was rewritten merely because it sounded unusual.
 
 ## Facts (checked)
 
-Fact-sheet basis: `_knowledge/short_videos/facts_codex_2_mind_2026-11-28.md`, C4. All sheet-rated facts used are
-**high confidence**; no medium- or low-confidence claims are used. The 1974 paper's procedure and medians were also
-read directly on the web on 2026-11-28. No direct replication of the full wheel procedure is claimed.
+Basis: `_knowledge/short_videos/facts_codex_2_mind_2026-11-28.md`, **C4**. Used published results are **high
+confidence**. Broad legal generalization is only medium confidence in the sheet and is not made. Study 3's
+participants, procedure and outcomes were reopened in the original paper for this revision.
 
-- **`question`, `procedure`:** the task involved a wheel-generated number, a higher/lower comparison, then a
-  percentage estimate. The intended denominator is all UN member countries: what percentage were African? The
-  Armenian wording makes this explicit. It does not ask what percentage of African countries belonged to the UN.
-  The question is historical; the video supplies no present-day membership count or correct percentage.
+- **High — `question`, `wheel`:** wheel number, higher/lower comparison, then estimate. Denominator: all UN
+  members, not all African countries. No present-day correct percentage.
   [Tversky & Kahneman, 1974, p. 1128](https://pages.ucsd.edu/~mckenzie/TverskyKahneman1974Science.pdf).
-- **`wheel`:** the 0-100 wheel and conditions 10/65 are sheet-rated high. The deliberate stopping arrangement is
-  documented in Shleifer's review of Kahneman's retrospective; the original short article gives less apparatus
-  detail. This is a secondary procedural account, not a newly recovered lab protocol. The drawn stop mechanism is
-  explanatory only. [Shleifer, 2012](https://shleifer.scholars.harvard.edu/sites/g/files/omnuum10626/files/shleifer/files/kahneman_review_jel_final.pdf);
-  [original paper, p. 1128](https://pages.ucsd.edu/~mckenzie/TverskyKahneman1974Science.pdf).
-- **`showcase`, `median`, `doubt`:** median estimates were 25% for the group given 10 and 45% for the group given 65.
-  These are between-group results, not a 20-point change measured within every individual. No participant count,
-  dispersion, individual trajectories or raw response distribution is provided or invented.
+- **High — `wheel`:** wheel marked **0-100**, arranged to stop at **10 or 65**. Apparatus detail is from a
+  scholarly review of a retrospective, not a fully preserved modern protocol.
+  [Shleifer, 2012](https://shleifer.scholars.harvard.edu/sites/g/files/omnuum10626/files/shleifer/files/kahneman_review_jel_final.pdf).
+- **High — `hook`, `showcase`:** **10** group's median **25%**; **65** group's median **45%**. Group medians,
+  not a within-person 20-point change. No invented wheel sample size or response distribution.
   [Tversky & Kahneman, p. 1128](https://pages.ucsd.edu/~mckenzie/TverskyKahneman1974Science.pdf).
-- **`median`, explanatory definition:** a median describes the centre of observations sorted by value. This plain
-  wording does not substitute the arithmetic mean; for an even number of observations the conventional median
-  averages the central pair. The narration does not introduce a numerical example. This definition was independently
-  verified in the [NIST handbook, Measures of Location](https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm).
-- **`hook`, `anchor`:** the original paper identifies anchoring as estimates biased toward initial values. The voice
-  says it **can** influence later estimates, not that any number always controls every person. The anchor image is
-  a metaphor, not a demonstrated mechanism in the brain.
-  [Tversky & Kahneman, p. 1128](https://pages.ucsd.edu/~mckenzie/TverskyKahneman1974Science.pdf).
-- **`local_price`:** an original illustration, not a claim of a tested Armenian price effect. No amount, discount,
-  effect size, actual purchase or domestic study is asserted. The caveat that prices can be informative follows the
-  sheet's distinction between the irrelevant wheel and listing-price anchors.
-  [Northcraft & Neale, 1987, house-information/listing-price task](https://www.smallprojectsbureau.com/wp-content/uploads/2020/01/northcraft_neale.pdf).
-  Only the currency identity is independently checked: [Central Bank of Armenia, banknotes](https://www.cba.am/en/banknotes-in-circulation).
-- **`takeaway`:** asking where the first number came from is the video's practical reflection. It is not presented
-  as an experimentally established cure for anchoring.
-  [Conceptual basis: Tversky & Kahneman](https://pages.ucsd.edu/~mckenzie/TverskyKahneman1974Science.pdf).
+- **Retained explanatory definition — `showcase`:** median describes the centre of observations sorted by value;
+  for even counts the usual convention averages the central pair. Not the arithmetic mean. This definition was
+  already independently sourced in the previous plan, not newly introduced experimental evidence.
+  [NIST, Measures of Location](https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm).
+- **High — `anchor`:** initial values can bias estimates toward them even when irrelevant. Voice says "can";
+  the anchor is a metaphor, not an asserted neural mechanism.
+  [Tversky & Kahneman](https://pages.ucsd.edu/~mckenzie/TverskyKahneman1974Science.pdf).
+- **NEW, high — `dice`:** Study 3 recruited **52 junior legal professionals** with early judicial experience.
+  Loaded dice yielded **3 or 9**, used as a hypothetical prosecutor demand of months on probation, followed by
+  participants' proposed sentences. These were experimental judgments, not real sentences.
+  [Englich, Mussweiler & Strack, 2006, Study 3, p. 194](https://www.hf.uni-koeln.de/data/dppsenglich/File/PDFSStudien/PSPB_32.pdf).
+- **NEW, high for reported result — `dice_results`:** identical case materials; mean proposed sentences **5.28
+  months** after low anchor and **7.81 months** after high. Means, distinct from wheel medians. Reported p < .01
+  is not voiced. Broad extrapolation is medium confidence in the sheet; no claim about an actual defendant or
+  a specific viewer. [Englich et al., Study 3 results](https://www.hf.uni-koeln.de/data/dppsenglich/File/PDFSStudien/PSPB_32.pdf).
+- **Scope/practical reflection — `doubt`, `takeaway`:** group findings do not predict an individual's response
+  size. Asking where a starting price came from is a reflection, not a proven cure or a measured Armenian effect.
+  No price, discount or sale invented. Retained currency reference:
+  [Central Bank of Armenia](https://www.cba.am/en/banknotes-in-circulation).
 
-Excluded: loaded-dice sentencing results, house-price outcome figures and Many Labs statistics. Many Labs used
-different anchoring tasks, not this wheel/UN procedure; it cannot fill the fact sheet's wheel-specific replication
-gap. The original report's limited methodological detail remains a limitation, not a reason to invent it.
+Excluded: house-price outcomes, Many Labs results, veteran-judge/real-prisoner retellings. Many Labs used other
+anchoring tasks, so it cannot fill the gap in a full wheel-procedure replication.
 
 ## Animation plan (showcase)
 
-**Showcase: two wheel conditions, two group medians (`wheel` through `median`).** From the first wheel frame, keep
-«վերակազմություն» visible. Separate the 10 and 65 conditions, ask the same comparison question and then reveal the
-25% and 45% median markers on identical 0-100 percentage scales. Call them **group medians** in the graphic as well
-as the voice. Do not slide one person's answer from low to high; do not create fake response dots, sample sizes,
-means or error bars. Keep the markers fixed during the **5 s** silent showcase hold so the viewer can compare the
-input/output pairs. The counts and values all come from the sheet; no simulation is needed.
+**Showcase: wheel conditions and group medians (`wheel`, `showcase`).** Keep the historical question beside the
+wheel. Split the 10/65 conditions; show comparison before estimation. Reveal fixed 25%/45% group-median markers
+on identical 0-100 scales. Hold **5 s**, longest pause, for input/result comparison. No invented sample size,
+response array, distribution, error bars or individual before/after shift. Reconstruction tags stay on drawn
+scenes; names and dates stay in source lines.
 
-- **`hook`, `question`:** wheel and empty group-result space already visible; the historical question has the correct
-  UN-member denominator. No claim that the wheel informs the answer.
-- **`procedure`:** higher/lower comparison precedes the estimate. The stop mechanism is a conceptual reconstruction
-  with no assertion about the historical machinery's design.
-- **`median`, `anchor`:** retain the reported group results, emphasize their group labels, then add the anchor
-  metaphor. No invented ordered list of individual responses. A **1 s** pause lets the metaphor settle.
-- **`doubt`:** an empty viewer-answer card appears beside the group markers, with no predicted individual effect.
-  Finish on what was measured: a difference between groups exposed to different starting numbers.
-- **`local_price`:** original price tag says «գին՝ … դրամ», explicitly an everyday illustration. Hold **2 s** for
-  the viewer to consider their own estimate. The ellipsis avoids inventing a price or implying a measured effect.
-- **`takeaway`:** stay on the tag and trace it to its source; voice says the closing screen phrase. **1 s** of silent
-  pause here makes **9 s** total. No recap card. Every beat starts on an object or result it discusses.
+**Sole extension: loaded dice and hypothetical proposed sentences (`dice`, `dice_results`).** Pair dice with a
+hypothetical case file, never a prisoner or real sentence. Totals 3/9 enter prosecutor-request fields; then
+show fixed **mean** result bars at 5.28/7.81 months on a shared zero baseline. Render Armenian decimal commas.
+The measure is months on probation, not actual imprisonment. Keep `պայմանական գործ`, experiment and reconstruction
+labels visible. Hold **4 s**; total silence **9 s**. No invented individual decisions or real-world effect size.
+
+- **Hook:** wheel, UN question and group panels visible from frame 0. No current membership numbers.
+- **Median definition:** retain measured group markers; no fake sorted observations to illustrate the definition.
+- **Transition:** conceptual anchor connects number/estimate; legal folder introduces the one extension.
+- **Doubt:** blank viewer-answer card beside group results; finish on the supported difference.
+- **Closing/local anchor:** source-of-first-number card and small unpriced dram tag. No invented shop, sale or
+  third experiment. Voice says the screen question. No recap or closing silent hold. Each beat starts on a named object.
 
 ## Images
 
@@ -120,10 +125,10 @@ with no store logo, amount or banknote. No assets downloaded.
 
 ## Questions for Hayk
 
-- **S1, missing glossary term:** «խարսխման ազդեցություն» for anchoring is not in the supplied glossary or owner
-  answers. Keep it, or prefer «խարսխում»? The current term remains provisional in `anchor`.
-- **S2, hook:** «գուշակությունները» or «գնահատականները» for the hook? The former is currently used for the viewer's
-  first encounter; the measured answers are called «գնահատական» in the explanation.
-- **S3, median explanation:** keep «կենտրոնը ցույց տվող թիվն է», or prefer a different spoken explanation of
-  «մեդիան»? The term itself matches glossary row 616; the source uses medians, so it must not become «միջին».
-
+- **S1, missing glossary term (still open):** keep «խարսխման ազդեցություն» for anchoring, or prefer «խարսխում»?
+  Current term remains provisional; no matching glossary/owner-answer entry was found.
+- **S3, median explanation (still open):** keep «կենտրոնը ցույց տվող թիվն է», or prefer another spoken
+  explanation? «մեդիան» follows glossary row 616 and must not become «միջին» for the wheel results.
+- **S4, new legal wording:** is «պայմանական պատիժ» the right rendering for the paper's months on probation,
+  and is «սկսնակ իրավաբան» clear for junior professionals with early judicial experience? These terms are
+  absent from the glossary. The hypothetical task is labelled on screen.

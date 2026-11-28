@@ -1,72 +1,57 @@
 [
   {
     "key": "hook",
-    "text": "Պատահականն էլ է կուտակվում։",
-    "screen": "Պատահականն էլ է կուտակվում",
-    "screen_small": "մոդելավորում",
-    "visual": "From frame 0, show a schematic scatter with conspicuous nearby dots and empty patches. Keep a modelling label visible; these are not recovered London impact coordinates."
+    "text": "Մի քառակուսում՝ 3 ռումբ։ Մյուսում՝ ոչ մեկը։ Հատո՞ւկ էին նշան բռնում։",
+    "screen": "3 հարված · 0 հարված",
+    "screen_small": "R. D. Clarke, 1946 · տվյալների սխեմա",
+    "visual": "From frame 0, show a three-hit tile and a zero-hit tile as separate frequency-category examples. Do not imply geographical adjacency or recovered coordinates. The puzzle concerns particular places inside a deliberately targeted city."
   },
   {
     "key": "target",
-    "text": "Լոնդոնը ռմբակոծում էին դիտմամբ։ Հարցն ուրիշ էր՝ քաղաքի ներսում հարվածների կուտակումները պատահականությա՞ն արդյունք էին, թե՞ առանձին վայրերի հատուկ թիրախավորման նշան։ Այդ կուտակումների մասին պնդումներ կային։",
-    "screen_small": "R. D. Clarke, 1946 · նկարազարդում",
-    "visual": "From frame 0, show an abstract London city label under an incoming V-1 silhouette, with an illustration tag. Zoom toward an unlocated study-area box; do not invent neighbourhoods, impact locations, spies or protected buildings."
+    "text": "Երկրորդ համաշխարհային պատերազմի ժամանակ Լոնդոնին հարվածում էին գերմանական «ֆաու-1» թռչող ռումբերը։ Քաղաքը միտումնավոր էր ընտրված։ Լոնդոնցիները նկատում էին հարվածների կուտակումները։ Առանձին վայրե՞րն էին թիրախավորում, թե՞ այդ պատկերը կարող էր պատահական առաջանալ։",
+    "screen_small": "V-1 · 1944-1945 · Evans & Delaney, 2018 · Shaw & Shaw, 2019 · նկարազարդում",
+    "visual": "From frame 0, a drawn V-1 silhouette heads toward a London label. Attack years are on the source line. The historical question is targeting versus chance. No spies, protected houses, individual civilian dialogue or precise study dates are invented. Keep the illustration tag."
   },
   {
     "key": "study",
-    "text": "Հարավային Լոնդոնում ընտրեցին 144 քառակուսի կիլոմետր տարածք և բաժանեցին 576 հավասար քառակուսու։ Դրանցում հաշվեցին 537 հարված։ Ամեն քառակուսու կողմը 500 մետր էր։",
-    "screen": "537 հարված · 576 քառակուսի",
-    "screen_small": "R. D. Clarke, 1946 · տվյալների սխեմա",
-    "visual": "From frame 0, the selected-area box becomes an abstract collection of equal tiles, explicitly a data schematic rather than a geographic map. Display the verified area, tile count and impact count; a separate dimension bracket shows the 500 m side."
+    "text": "Հարավային Լոնդոնում ընտրեցին 144 քառակուսի կիլոմետր տարածք և բաժանեցին 576 հավասար քառակուսու։ Դրանցում հաշվեցին 537 հարված։ Ամեն քառակուսու կողմը 500 մետր էր։ Երևանի քո թաղամասում պատկերացրու այդ չափի քառակուսի՝ նույնքան երկար ու լայն։",
+    "screen": "537 հարված · 576 քառակուսի · կողմը՝ 500 մ",
+    "screen_small": "R. D. Clarke, 1946 · չափի համեմատություն · տվյալների սխեմա",
+    "visual": "From frame 0, show an abstract study-area frame and equal tiles, not invented geographic boundaries. Use a 500 m side bracket. The Yerevan reference is only a mental size comparison inside the grid explanation: no local map, impact dots, event counts or dataset."
   },
   {
     "key": "counts",
-    "text": "229 քառակուսի դատարկ էր։ Իսկ 35 քառակուսուց յուրաքանչյուրում 3 հարված կար։ Նույն տվյալներում կային թե՛ դատարկ բջիջներ, թե՛ բազմակի հարվածներ ստացած բջիջներ։",
+    "text": "229 քառակուսի դատարկ էր։ Իսկ 35 քառակուսուց յուրաքանչյուրում 3 հարված կար։ Նայի՛ր այս երկու խմբին։ Քեզ համար ո՞րն է ավելի զարմանալի՝ դատարկ տեղե՞րը, թե՞ կրկնվող հարվածները։",
     "screen": "229 դատարկ · 35-ը՝ 3 հարվածով",
     "screen_small": "R. D. Clarke, 1946 · տվյալների սխեմա",
-    "visual": "From frame 0, show the empty-square category and the three-hit category side by side as grouped tiles. This is a comparison of counts, not evidence of geographical adjacency. Begin assembling all six observed histogram bars."
+    "visual": "From frame 0, show the two reported frequency categories as grouped tiles. Let the viewer choose which seems surprising during the three-second hold. Assemble all six observed histogram bars. No map of neighbouring squares.",
+    "pause_after": 3
   },
   {
     "key": "model",
-    "text": "Հաշվարկի համար վերցրին Պուասոնի բաշխումը։ Այս մոդելում հարվածներն անկախ են, իսկ միջին խտությունը նույնն է ամբողջ ընտրված տարածքում։ Պատահականն այստեղ չի նշանակում՝ կետերը հավասար հեռավորությամբ են։",
+    "text": "Հաշվարկի համար վերցրին Պուասոնի բաշխումը։ Այս մոդելում հարվածներն անկախ են, իսկ միջին խտությունը նույնն է ամբողջ ընտրված տարածքում։ Հաշվեցին՝ մոդելը քանի դատարկ քառակուսի է կանխատեսում, քանի քառակուսի՝ 1, 2 կամ ավելի հարվածով։ Պատահականը չի նշանակում՝ ամեն տեղ նույն քանակը։",
     "screen": "Պուասոնի բաշխում",
     "screen_small": "R. D. Clarke, 1946",
     "visual": "From frame 0, show the observed histogram and a small independent-arrivals schematic. Introduce the fitted Poisson comparison; do not claim that the model's assumptions were proved for every real impact. No bomb-accuracy statistic is shown."
   },
   {
     "key": "showcase",
-    "text": "Նայիր սյուներին։ Իրական քանակների կողքին մոդելի կանխատեսած քանակներն են։ Դրանք շատ մոտ են։ Մոդելն էլ է կանխատեսում դատարկ բջիջներ և նույն բջիջն ընկած մի քանի հարված։ Համեմատի՛ր։",
+    "text": "Նայի՛ր զույգ սյուներին։ Սպիտակները դիտված քանակներն են, նարնջագույնները՝ մոդելի կանխատեսումը։ Շատ մոտ են։ Մոդելն էլ է տալիս դատարկ տեղեր ու բազմակի հարվածներ։ Համեմատի՛ր հատկապես 0 և 3 հարվածի սյուները։",
     "screen": "Դիտվածը և մոդելի կանխատեսումը",
     "screen_small": "R. D. Clarke, 1946",
     "visual": "From frame 0, all six observed bars are visible. Overlay the expected bars from Clarke's exact table on the same zero baseline: categories 0,1,2,3,4,5+; observed 229,211,93,35,7,1; expected 226.74,211.39,98.54,30.62,7.14,1.57. Display Armenian decimal commas. Keep paired labels and category names stationary for comparison throughout the pause.",
-    "pause_after": 5
+    "pause_after": 6
   },
   {
     "key": "doubt",
-    "text": "Ուրեմն ամբողջ Լոնդոնո՞ւմ ամեն հարված պատահական էր։ Այդպիսի բան այս ստուգումը չի ապացուցում։ Այն վերաբերում էր ընտրված տարածքին ու այս չափի բջիջներին։ Այդտեղ տվյալները լրացուցիչ կուտակումների վարկածը չէին հաստատում։",
-    "screen_small": "R. D. Clarke, 1946",
-    "visual": "From frame 0, retain the histogram inside the study-area frame; outside the frame put question marks instead of invented data. Emphasize the selected area and cell size, then return to the supported local fit."
-  },
-  {
-    "key": "local",
-    "text": "Նույն միտքը փորձիր Երևանի քարտեզով։ Պատկերացրու՝ վրան պատահական նշումներ ես դնում։ Սա մտավոր փորձ է, ոչ քաղաքի մասին տվյալ։ Նշումների մի մասը կարող է իրար մոտ ընկնել՝ առանց հատուկ պատճառի։",
-    "screen": "Երևան · մտավոր փորձ",
-    "screen_small": "մոդելավորում · իրական դեպքերի տվյալներ չեն",
-    "visual": "From frame 0, show a schematic card labelled Yerevan, thought experiment and modelling. Add unlocated random dots with no street, neighbourhood, casualty or incident labels. Maintain the hypothetical label on every frame; never transform London observations into Yerevan observations.",
-    "pause_after": 2
-  },
-  {
-    "key": "compare",
-    "text": "Ուրեմն հարցը միայն այն չէ՝ կուտակում կա՞։ Պետք է նաև հարցնել՝ այս պայմաններում պատահական բաշխումն ինչպիսի՞ կուտակումներ կտար։ Դրա հետ է պետք համեմատել տեսածդ։",
-    "screen_small": "մոդելավորում",
-    "visual": "From frame 0, keep the hypothetical dot field beside the model's histogram, clearly separated from the historical data. Let the viewer compare clumps and empty patches with the model rather than judging the scatter by appearance alone.",
-    "pause_after": 2
+    "text": "Բայց սա ամբողջ Լոնդոնի պատկե՞րն է։ Ոչ։ Ավելի լայն ուսումնասիրությունը հարավում ավելի մեծ խտություն գտավ։ Մեր սյուներն ասում են՝ ընտրված տարածքում, այս չափի քառակուսիներով դիտվածը մոտ էր պատահական մոդելին։ Այստեղ լրացուցիչ կուտակումների նշան չգտան։",
+    "screen_small": "R. D. Clarke, 1946 · Shaw & Shaw, 2019 · սխեմա",
+    "visual": "From frame 0, contain the histogram inside its selected-area frame. A separate qualitative scheme indicates greater density toward the south in the wider analysis; no invented coordinates, boundaries or numerical density gradient. Finish on the actual local histogram fit."
   },
   {
     "key": "takeaway",
     "text": "Կուտակումը դեռ հատուկ պատճառի ապացույց չէ։",
     "screen": "Կուտակումը դեռ հատուկ պատճառի ապացույց չէ",
-    "screen_small": "մոդելավորում",
-    "visual": "From frame 0, stay close on a clump in the hypothetical dot field with a small question mark beside it. Speak the closing screen line verbatim and finish on the same field, without a summary card."
+    "visual": "From frame 0, stay on the paired zero-hit and three-hit histogram categories. Speak the closing screen line verbatim and finish in the data scene, with no extra comparison beat or summary card."
   }
 ]

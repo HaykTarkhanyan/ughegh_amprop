@@ -1,13 +1,14 @@
 [
   {
     "key": "hook",
-    "text": "Կարո՞ղ ես կորցնել այս կետը։",
-    "screen": "Կարո՞ղ ես կորցնել այս կետը",
-    "visual": "From frame 0, show a black dot on the left and a cross on the right on a light stationary field. Never erase the dot digitally. The hook text sits outside the horizontal test strip."
+    "text": "Աչքիդ մի հատվածը լույս չի զգում։",
+    "screen": "Աչքիդ մի հատվածը լույս չի զգում",
+    "visual": "From frame 0, show the complete stationary dot-left/cross-right field, with the anatomical claim outside the test strip. Never digitally erase the dot. Keep the same phone layout through setup, showcase and notice.",
+    "screen_small": "Meermeier et al., 2023 · փորձը՝ Exploratorium"
   },
   {
     "key": "local_setup",
-    "text": "Երևանում ես, թե հեռու՝ փորձիր հենց հեռախոսիդ էկրանին։ Ձախում կետն է, աջում՝ խաչը։ Հեռախոսը պահի՛ր աչքերիդ բարձրությամբ՝ մոտավորապես պարզած ձեռքիդ հեռավորության վրա։",
+    "text": "Երևանում ես, թե հեռու՝ փորձի՛ր հենց հեռախոսիդ էկրանին։ Ձախում կետն է, աջում՝ խաչը։ Հեռախոսը պահի՛ր աչքերիդ բարձրությամբ՝ մոտավորապես պարզած ձեռքիդ հեռավորության վրա։",
     "screen_small": "Փորձը՝ Exploratorium",
     "visual": "From frame 0, keep the dot-left/cross-right test field stationary, with a small phone-at-eye-level diagram outside it. The local reference is the viewer's hypothetical setting, not a study in Yerevan. Keep the symbols well inside the usable width of a portrait phone."
   },
@@ -21,7 +22,7 @@
   },
   {
     "key": "notice",
-    "text": "Եթե կետը կորավ, մի՛ փնտրիր այն հայացքով։ Շարունակի՛ր նայել խաչին։ Էկրանի կետը չենք ջնջում։ Հեռավորությունը փոխելիս այն կարող է նորից երևալ։ Պետք եղած հեռավորությունը կախված է էկրանից, նշանների հեռավորությունից ու քեզնից։",
+    "text": "Եթե կետը կորավ, մի՛ փնտրիր այն հայացքով։ Շարունակի՛ր նայել խաչին։ Հեռավորությունը փոխելիս այն կարող է նորից երևալ։ Պետք եղած հեռավորությունը կախված է էկրանից, նշանների հեռավորությունից ու քեզնից։",
     "screen_small": "Փորձը՝ Exploratorium",
     "visual": "From frame 0, retain the identical physical test image, with any explanatory labels outside the strip. Never hide or fade the dot to mimic what the viewer might perceive. Do not prescribe one universal working distance."
   },
@@ -34,15 +35,9 @@
   },
   {
     "key": "filling",
-    "text": "Բայց սովորաբար այդ տեղում սև բիծ չես տեսնում։ Ուղեղը կարող է շրջապատի պատկերով լրացնել բացակայող մասը։ Եվ դա անում է նաև այն ժամանակ, երբ միայն 1 աչքով ես նայում։",
-    "screen_small": "He & Davis, 2001 · սխեմա",
-    "visual": "From frame 0, show the one-eye viewing condition beside a separate conceptual diagram of a plain surrounding field continuing across the blind spot. Label the diagram as a scheme; it is not a recording of the viewer's experience."
-  },
-  {
-    "key": "other_eye",
-    "text": "Երբ նայում ես 2 աչքով, մյուս աչքն էլ կարող է տեսնել այդ շրջանը։ Բայց մեր փորձի ժամանակ աջ աչքդ փակ էր։ Ուրեմն բացը չնկատելը միայն մյուս աչքի օգնությամբ չի բացատրվում։",
+    "text": "2 աչքով նայելիս մյուս աչքն էլ կարող է տեսնել այդ շրջանը։ Բայց մեր փորձի ժամանակ աջ աչքդ փակ էր։ Ուրեմն բացը չնկատելը միայն մյուս աչքի օգնությամբ չի բացատրվում։ Ուղեղը կարող է շրջապատի պատկերով լրացնել բացակայող մասը՝ նույնիսկ 1 աչքով նայելիս։",
     "screen_small": "Magnussen et al., 2007 · He & Davis, 2001 · սխեմա",
-    "visual": "From frame 0, show the two-eye view as a schematic pair of fields, then return to the already established closed-right-eye condition. Keep binocular coverage and monocular filling-in as distinct mechanisms."
+    "visual": "From frame 0, show two distinct labelled schemes: fellow-eye coverage during binocular viewing and contextual filling-in with the right eye closed. The separate conceptual panel is not a recording of the viewer's experience. No changes to the live test dot."
   },
   {
     "key": "line_test",

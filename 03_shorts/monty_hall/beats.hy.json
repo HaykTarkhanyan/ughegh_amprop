@@ -1,10 +1,16 @@
 [
   {
     "key": "hook",
-    "text": "Կփոխե՞ս դուռը։",
-    "screen": "Կփոխե՞ս դուռը",
-    "screen_small": "մտավոր խաղ",
-    "visual": "From frame 0, three closed doors and a hand hovering between stay and switch. No winning probabilities appear yet; keep the thought-game label visible throughout the door demonstration."
+    "text": "Ճիշտ պատասխանը բողոքի նամակներ բերեց։",
+    "screen": "Ճիշտ պատասխանին՝ բողոքի նամակներ",
+    "screen_small": "Marilyn vos Savant, Parade, 1990 · Tierney, 1991 · վերակազմություն",
+    "visual": "From frame 0, an original schematic column page stands beside three doors as critical envelopes arrive. These are not archival scans, quotations or a counted pile of real letters. Keep the reconstruction tag on drawn historical scenes."
+  },
+  {
+    "key": "letters",
+    "text": "Մի սյունակագիր գրեց՝ 3 դռան խաղում ընտրությունդ փոխելն ավելի շահավետ է։ Բողոքող նամակագիրներից շատերը գիտական աստիճան ունեին։ Տե՛ս՝ դու ո՞ր պատասխանը կտաս։",
+    "screen_small": "vos Savant, 9.09.1990 · Tierney, 21.07.1991 · վերակազմություն",
+    "visual": "From frame 0, keep the columnist page and critical envelopes beside the doors. Name and date only on the source line. No invented quotation, exact letter or PhD count, or claim that all writers were mathematicians. Move into a mathematical puzzle, not an actual TV episode."
   },
   {
     "key": "game",
@@ -27,40 +33,26 @@
     "pause_after": 5
   },
   {
-    "key": "answer",
-    "text": "Այս կանոններով փոխելիս շահելու հավանականությունը 2/3 է, մնալիս՝ 1/3։ Փոխելը կրկնապատկում է հնարավորությունդ։ Բայց ինչո՞ւ, եթե փակ դռները հիմա 2-ն են։",
-    "screen": "Մնալ՝ 1/3 · փոխել՝ 2/3",
-    "screen_small": "մտավոր խաղ · Rosenthal, 2008",
-    "visual": "From frame 0, keep the two remaining doors visible and introduce the probability labels only now, after the previous pause. Expand the single game into the possible starting placements.",
-    "pause_after": 1
-  },
-  {
     "key": "three_cases",
-    "text": "Նայիր բոլոր 3 հավասարահավանական դեպքերին։ Սկզբում միշտ ընտրում ես 1-ին դուռը։ Եթե մրցանակն այնտեղ է, փոխելիս պարտվում ես։ Եթե մրցանակը մյուս դռներից որևէ մեկի հետևում է, հաղորդավարը բացում է մնացած այծով դուռը։ Փոխելիս շահում ես։",
+    "text": "Նայի՛ր բոլոր 3 հավասարահավանական դեպքերին։ Սկզբում միշտ ընտրում ես 1-ին դուռը։ Եթե մրցանակն այնտեղ է, փոխելիս պարտվում ես։ Եթե մրցանակը մյուս դռներից որևէ մեկի հետևում է, հաղորդավարը բացում է մնացած այծով դուռը։ Փոխելիս շահում ես։",
     "screen_small": "մտավոր խաղ · Rosenthal, 2008",
     "visual": "From frame 0, show three rows with the prize behind door 1, door 2 and door 3 respectively; the initial selection stays on door 1. In the first row show both equally likely goat-reveal branches as alternatives. In the other rows the host has only one legal reveal. Trace the switch to its outcome in every row."
   },
   {
     "key": "count",
-    "text": "Այս 3 դեպքից 2-ում սկզբում սխալ դուռ էիր ընտրել, և փոխելը փրկում է ընտրությունդ։ Մնալը շահում է միայն այն դեպքում, երբ հենց սկզբից գտել էիր մրցանակը։ Հաշվի՛ր սլաքները։",
-    "screen": "Փոխելը շահում է՝ 3 դեպքից 2-ում",
-    "screen_small": "մտավոր խաղ",
-    "visual": "From frame 0, the full three-case diagram remains visible. Highlight the two winning switch paths and the single winning stay path; let the viewer count, without implying that each block of three actual games has these exact outcomes.",
-    "pause_after": 2.5
+    "text": "3 դեպքից 2-ում սկզբում սխալ դուռ էիր ընտրել, և փոխելը փրկում է ընտրությունդ։ Փոխելիս շահելու հավանականությունը 2/3 է, մնալիս՝ 1/3։ Հնարավորությունդ կրկնապատկվեց։ Հաշվի՛ր շահող սլաքները։",
+    "screen": "Մնալ՝ 1/3 · փոխել՝ 2/3",
+    "screen_small": "մտավոր խաղ · Rosenthal, 2008",
+    "visual": "From frame 0, retain all three possible placements and reveal probability labels. Let the viewer count the two winning switch paths and one winning stay path. The first row has two legal reveal branches, not two additional equally likely placements. No promise of two wins in every three actual rounds.",
+    "pause_after": 3
   },
   {
     "key": "doubt",
-    "text": "Բայց այծ տեսնելը մի՞շտ է փոխելու պատճառ։ Ոչ։ Պատասխանը կախված է բացելու կանոնից։ Մեր հաշվարկում հաղորդավարն իմանալով է բացում այծով դուռը։",
-    "screen_small": "Rosenthal, 2008",
-    "visual": "From frame 0, the host's knowledge card and the goat door are visible beside a question mark. Keep the established informed-host rules legible while preparing a clearly separate hypothetical procedure."
-  },
-  {
-    "key": "random_host",
-    "text": "Իսկ եթե նա մրցանակի տեղը չգիտի, պատահական բացում է քո չընտրած դռներից մեկը, և պատահմամբ այծ է դուրս գալիս, արդեն հավանականությունները հավասար են՝ 1/2 ու 1/2։ Նույն տեսարանը, ուրիշ կանոն։",
-    "screen": "Պատահական բացում, այծ է երևում՝ 1/2 ու 1/2",
+    "text": "Բայց այծ տեսնելը մի՞շտ է փոխելու պատճառ։ Եթե հաղորդավարը մրցանակի տեղը չգիտի, քո չընտրած դռներից մեկը պատահական է բացում ու պատահմամբ այծ է ցույց տալիս, մնում է 1/2 ու 1/2։ Նույն այծը, ուրիշ կանոն։ Մեր խաղում փոխելն օգնում է, որովհետև հաղորդավարն իմանալով է բացում դուռը։",
     "screen_small": "մտավոր խաղ · Rosenthal, 2008",
-    "visual": "From frame 0, a different host has no knowledge card. Show equally likely random openings of the two unchosen doors, including prize-reveal branches; condition explicitly on retaining only goat-reveal branches. Then show equal winning weights for stay and switch.",
-    "pause_after": 1.5
+    "visual": "From frame 0, distinguish the informed host from a new host without a knowledge card. Enumerate uniformly random openings of unchosen doors, including prize reveals; condition explicitly on retaining goat reveals before showing half and half. During the two-second hold compare procedures. Finish on the original informed host and compulsory reveal, ending on the supported result.",
+    "screen": "Պատահական բացում, այծ է երևում՝ 1/2 ու 1/2",
+    "pause_after": 2
   },
   {
     "key": "takeaway",

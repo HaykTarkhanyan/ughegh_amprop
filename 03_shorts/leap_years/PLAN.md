@@ -1,123 +1,141 @@
-# Short: Leap years and the 10 skipped dates of 1582 - script and plan
+# Short: Leap years and the 10 skipped dates - revised script and plan
 
-Draft for Hayk's review, 2026-11-28. Why-is-it-so strand. Script source: `beats.hy.json`. One calendar showcase;
-one extension, the Armenian Apostolic Church's calendars. No voice or animation generated.
+Revised for Hayk's review, 2026-11-28. Why-is-it-so strand. Script source: `beats.hy.json`.
+One idea: calendar drift and its repair. One extension: Armenian Apostolic feast calendars.
+No voice or animation generated.
 
 ## The idea in one paragraph
 
-Ten date labels were omitted where the Gregorian reform first took effect: Thursday 4 October was followed by
-Friday 15 October 1582. The continuous clock and weekday sequence make the distinction visible before the doubt
-beat asks whether anyone lost lived time. The cause is a small difference between the Julian calendar's average
-year and the seasonal year; the repair includes a different leap-year rule, illustrated by 1900 and 2000. The single
-extension is local: the Armenian Apostolic Church's 1923 adoption, Jerusalem's Julian exception, and the present
-January 6/19 correspondence. This concerns the combined Nativity and Theophany feast.
+Thursday October 4 turns into Friday October 15 in the first Gregorian-adopting jurisdictions. The opening
+makes that concrete puzzle visible at once; one continuous-day ribbon settles the date/time distinction without
+a second spoken recap. The missing cause now has scale: Julian excess is about 11 minutes per year, roughly one
+day in 128 years. The reform's ten-day adjustment has its own Nicaea reference, rather than being presented as an
+exact multiplication of a modern rounded rate. The leap-year rule and a viewer choice between 1900 and 2000 show
+the ongoing repair. The single doubt asks whether the new rule is perfect, ending with its much slower approximate
+26-second annual excess. The local extension retains the Church's 1923 adoption, Jerusalem's exception and the
+present January 6/19 correspondence for Nativity and Theophany.
 
 ## The script (Armenian)
 
 <!-- script:start -->
 
-9 beats, 1,465 characters (1,643 with numbers spelled out): ~107 s of speech, ~1:59 with pauses and the end tail, 10 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
+9 beats, 1,374 characters (1,510 with numbers spelled out): ~99 s of speech, ~1:52 with pauses and the end tail, 10 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
-**1. hook.** Օրացույցից 10 ամսաթիվ ջնջեցին։ Բայց շաբաթվա օրերը շարքով շարունակվեցին։ *[pause 1 s]*
+**1. hook.** Հոկտեմբերի 4-ից հետո՝ 15-ը։ Հինգշաբթիից հետո սովորական ուրբաթ էր։ Օրացույցից 10 ամսաթիվ էր անհետացել։
 
-**2. calendar_jump.** 1582 թվականին նոր օրացույցին անցած երկրներում հոկտեմբերի 4-ին հաջորդեց հոկտեմբերի 15-ը։ Հետևի՛ր նաև շաբաթվա օրերին՝ հինգշաբթիից հետո ուրբաթ է։ Ժամացույցը շարունակում է գնալ։ *[pause 4 s]*
+**2. calendar_jump.** Նոր տոմարին անցած երկրներում հոկտեմբերի 4-ի հաջորդ օրը գրեցին 15։ Հետևի՛ր ներքևի շարքին՝ շաբաթվա օրերն իրար են հաջորդում։ Փոխվել են ամսաթվերը, ժամացույցը շարունակում է գնալ։ *[pause 4 s]*
 
-**3. doubt.** Բայց մարդիկ 10 օր պակա՞ս ապրեցին։ Ոչ։ Փոխվեցին ամսաթվերի անունները։ Ժամանակը չթռավ, և ամբողջ աշխարհը միաժամանակ չանցավ նոր օրացույցին։ Բաց էին թողել ամսաթվերը, իսկ շաբաթվա հերթականությունը շարունակվել էր։
+**3. drift.** Ինչո՞ւ այդպես արեցին։ Հուլյան օրացույցի տարին եղանակների շրջանից տարեկան մոտ 11 րոպե երկար էր։ Մեկ տարում քիչ է թվում։ Բայց մոտ 128 տարում մի ամբողջ օր է կուտակվում։ Ուղղման պահին վերացնում էին մոտ 10 օրվա շեղում։
 
-**4. drift.** Ինչո՞ւ էր պետք այդ ուղղումը։ Հին՝ հուլյան օրացույցի տարին միջինում 365,25 օր էր։ Իսկ եղանակների շրջանը դրանից մի քիչ կարճ է։ Տարբերությունը փոքր է, բայց ամեն տարի կուտակվում է։ Օրացույցը կամաց շեղվում էր եղանակներից։
+**4. new_rule.** Մի անգամ ամսաթվերը փոխելը բավարար չէր։ Նոր՝ գրիգորյան օրացույցը փոխեց նաև նահանջ տարվա կանոնը։ 4-ի բաժանվող տարին սովորաբար նահանջ է։ Բայց 100-ի բաժանվող տարին նահանջ է միայն այն դեպքում, երբ բաժանվում է նաև 400-ի։
 
-**5. new_rule.** Նոր՝ գրիգորյան օրացույցը փոխեց նաև նահանջ տարվա կանոնը։ Տարին 4-ի բաժանվո՞ւմ է՝ սովորաբար նահանջ է։ Բայց 100-ի բաժանվող տարին նահանջ է միայն այն դեպքում, երբ բաժանվում է նաև 400-ի։
+**5. centuries.** Փորձի՛ր այս երկուսը՝ 1900-ը և 2000-ը։ Ո՞րն է նահանջ։ *[pause 3 s]*
 
-**6. centuries.** Փորձի՛ր՝ 1900-ը նահա՞նջ էր։ Իսկ 2000-ը նահա՞նջ էր։ 1900-ը՝ ոչ, 2000-ը՝ այո։ Այդպես օրացույցն ավելի մոտ է մնում եղանակների շրջանին։ Բայց սա էլ կատարյալ համընկնում չէ։ *[pause 2 s]*
+**6. doubt.** 1900-ը՝ ոչ, 2000-ը՝ այո։ Ուրեմն օրացույցն արդեն կատարյա՞լ է։ Դեռ տարեկան մոտ 26 վայրկյանի տարբերություն կա։ Նախկին մոտ 11 րոպեի համեմատ շեղումը շատ ավելի դանդաղ է կուտակվում։
 
-**7. armenian_calendar.** Մեզ ծանոթ մի օրինակ էլ կա։ Հայ առաքելական եկեղեցին նոր օրացույցն ընդունել է 1923 թվականին։ Երուսաղեմի Հայոց պատրիարքությունը պահել է հուլյան օրացույցը։
+**7. armenian_calendar.** Նույն տարբերությունն այսօր էլ մեր տոների մեջ է երևում։ Հայ առաքելական եկեղեցին նոր տոմարն ընդունել է 1923-ին, իսկ Երուսաղեմի Հայոց պատրիարքությունը պահել է հուլյան օրացույցը։
 
-**8. christmas.** Էջմիածնում Սուրբ Ծնունդն ու Աստվածահայտնությունը հունվարի 6-ին են։ Երուսաղեմում էլ տոնի օրը հին տոմարով հունվարի 6-ն է, որը մեր օրացույցով հիմա հունվարի 19-ն է։ Նույն ամսաթիվը տարբեր օրացույցներում տարբեր օրերի է հասնում։ *[pause 2 s]*
+**8. christmas.** Էջմիածնում Սուրբ Ծնունդն ու Աստվածահայտնությունը հունվարի 6-ին են։ Երուսաղեմում էլ տոնի օրը հին տոմարով հունվարի 6-ն է։ Մեր օրացույցով հիմա դա հունվարի 19-ն է։ Երկու օրացույցները կողք կողքի կարդա՛։ *[pause 3 s]*
 
-**9. closing.** Երբ ամսաթիվը փոխվում է, ժամանակը չի ցատկում։ Օրացույցն է փորձում հասնել եղանակներին։ *[pause 1 s]*
+**9. closing.** Օրացույցն ուղղում ենք, որ եղանակներից հետ չմնա։ Ժամանակը շարունակում է գնալ։
 
 <!-- script:end -->
 
-Armenian lint: **0 errors, 0 hints** on the final UTF-8 extraction of every `text`, `screen` and `screen_small`
-string. No hints retained. Rule-backed fix: moved the question off the final «ը» by writing «Իսկ 2000-ը նահա՞նջ
-էր։» (P2). Read through the polish checklist and reran `--style` after the final narration edit.
+Armenian lint: **0 errors, 0 hints**, on both final `--style` runs over a temporary UTF-8 `.txt` outside
+the repository containing every `text`, `screen` and `screen_small` string. No hints retained. Checked
+terms against the glossary/owner decisions and read through the polish checklist. U1 singular address is retained;
+unanswered wording choices remain below. No rule-backed lint correction was needed in the revised text.
 
-Length: **9 beats, 1,465 characters; ~107 s speech; ~1:59 total; 10 s marked pauses**, as generated above. Under
-the tool's speech-plus-pauses ceiling. The full 365,2422 value stays on screen; the voice uses a comparative phrase
-because the existing number-expansion tool rejects more than 3 decimal places. No rounding or tool modification.
+Length: **9 beats, 1,374 characters (1,510 with numbers spelled out): ~99 s of speech, ~1:52 with pauses and the end tail, 10 s of them marked silent pauses.** This is the tool's planning estimate, not measured audio.
 
-Validation: **PASS**, `tools/validate_episode.py leap_years --stage script`, final exit code 0. The original
-`plan_script.py` and validator entry points ran from `03_shorts/` through a Python launcher with bytecode disabled
-and `runlog.REPO` redirected to this episode folder, keeping tool logs inside the permitted write scope. Lint
-inputs are in the system temporary directory outside the repository. Wording questions remain below.
+Validation: **PASS**, `python tools/validate_episode.py leap_years --stage script`, exit 0.
+`python tools/plan_script.py leap_years` ran first from `03_shorts/`; the generated length line is above.
+Both unchanged tool entry points ran through a Python launcher with bytecode disabled and logging sent only
+to the console, so they created no log/cache files in the repository. No check was skipped or changed.
+
+## Revision (2026-11-28)
+
+- **Abstract opening / hook:** replaced the date-deletion headline with October 4 → 15 and Thursday → Friday.
+  The initial-adopter qualification is visible from frame 0; the date is the puzzle itself.
+- **Repeated doubt:** removed the second explanation that people did not lose lived time. The calendar
+  showcase handles that once. The one doubt now tests the script's repair claim: is the new calendar perfect?
+- **Drift without a number:** added about 11 minutes/year and one day/128 years. These make accumulated drift
+  tangible; the reform's ten-day correction is separately tied to its stated Nicaea reference on screen.
+- **Timid wording / repeated caveats:** states the well-supported calendar change and rule plainly. The
+  remaining-error comparison is qualified once, with approximate values also on screen.
+- **Good Armenian anchor:** retained the Church's 1923 adoption and current January 6/19 alignment; did not turn
+  a church-adoption source into a civil-calendar claim.
+- **Viewer action / closing:** answers to the century-year choice now follow its pause. All 10 seconds of
+  marked pauses have a task; the longest is on the calendar showcase. One spoken closing, on the moving clock.
+- **Terms:** preserves singular address (U1), established draft calendar words and unresolved S1-S3. No owner
+  wording choice was silently marked answered.
 
 ## Facts (checked)
 
-Evidence base: `_knowledge/short_videos/facts_codex_3_physics_earth_2026-11-28.md`, C5. All used sheet claims are
-**high confidence**. Facts below also cover the screen labels and animation. No new historical reconstruction or
-quote is asserted.
+Evidence base: `_knowledge/short_videos/facts_codex_3_physics_earth_2026-11-28.md`, C5.
+All claims used below are **high confidence as qualified**. Sources are those in the sheet; no extra research,
+quotation, exact historical equinox simulation or invented adoption map is used.
 
-- **The skipped dates and uninterrupted weekdays** (`hook`, `calendar_jump`, `doubt`): Thursday 4 October was followed
-  by Friday 15 October 1582, in the initial adopting jurisdictions. Ten intervening date labels were omitted; this
-  was not a worldwide simultaneous change or a loss of lived time. [USNO, Julian Date explanatory notes](https://aa.usno.navy.mil/data/JulianDate),
+- **Date change and continuing weekdays** (`hook`, `calendar_jump`): Thursday 4 October → Friday 15 October
+  1582 in initial adopting jurisdictions. Ten date labels were skipped, with ordinary time and weekdays
+  continuing. [USNO, Julian Date explanatory notes](https://aa.usno.navy.mil/data/JulianDate),
   [Gregory XIII, Inter gravissimas, 1582](https://en.wikisource.org/wiki/Translation:Inter_gravissimas).
-- **Year lengths and drift** (`drift`): the Julian average is 365.25 days; a modern approximate mean tropical year is
-  365.2422 days. The narration uses the plain phrase «եղանակների շրջանը» for the latter. These are a calendar average
-  and an astronomical approximation, not two exact universal constants. [USNO, Leap Years](https://aa.usno.navy.mil/faq/leap_years).
-  The sheet's checked values are the evidence here; the live USNO FAQ timed out during this drafting pass. No exact
-  historical equinox displacement is calculated from those rounded values.
-- **Gregorian rule and examples** (`new_rule`, `centuries`): years divisible by 4 are leap years except centuries
-  must also be divisible by 400. Therefore 1900 was not leap and 2000 was. The reform improves seasonal alignment
-  without making it perfect. [USNO, Leap Years](https://aa.usno.navy.mil/faq/leap_years).
-- **Church adoption, not civil adoption** (`armenian_calendar`): the official diocesan explanation supports 1923 for
-  the Armenian Church's adoption of the Gregorian calendar; it does not establish a precise decree day or Armenia's
-  civil-calendar transition. [UK and Ireland Diocese, Our Faith](https://www.armenianchurch.org.uk/our-faith).
-- **Jerusalem's exception** (`armenian_calendar`): the Jerusalem See retains the Julian calendar.
-  [Armenian Apostolic Church, Western European legation, church holidays](https://www.armenian-church.eu/en/holidays/).
-- **The combined feast and present conversion** (`christmas`): Etchmiadzin celebrates Holy Nativity and Theophany on
-  January 6. In the present calendar relationship, Jerusalem's January 6 Julian corresponds to January 19 Gregorian.
-  The 2026 Jerusalem itinerary distinguishes the eve and feast on January 18/19; only the feast day is voiced.
-  [Mother See, January 6, 2026](https://www.armenianchurch.org/en/news/patriarchal-divine-liturgy-on-the-occasion-of-the-feast-of-the-holy-nativity-and-theophany/12110),
-  [Eastern Diocese, 2026 Holy Land itinerary](https://armenianchurch.us/wp-content/uploads/2025/07/HL26_011526X_43749_Armenian-Church_Chevian_005-1.pdf).
-  «Հիմա» deliberately limits the correspondence; it is not permanently a 13-day difference.
-- **Scope exclusions:** no British riot story, no perfect-calendar claim, no December 25 explanation for Armenian
-  January 6, no precise 1923 decree date. Every voiced year is part of the calendar comparison itself; researchers
-  and publication years stay on source lines.
+- **NEW: numerical Julian drift** (`drift`): Julian average 365.25 days versus a modern approximate tropical
+  year of 365.2422 days. Their rounded difference, 0.0078 day, gives approximately 11 minutes 14 seconds/year
+  and one day in 128 years. Speech rounds to about 11 minutes; these are calculated comparisons, not recovered
+  historical measurements. [USNO, Leap Years](https://aa.usno.navy.mil/faq/leap_years).
+- **NEW: why the reform corrected ten days** (`drift`, including source line): the bull refers to about ten
+  days' displacement since the Council of Nicaea. This is not all accumulated Julian error since Caesar.
+  [Inter gravissimas](https://en.wikisource.org/wiki/Translation:Inter_gravissimas).
+- **Gregorian rule and century examples** (`new_rule`, `centuries`, `doubt`): divisible by 4, except century
+  years must also be divisible by 400; 1900 not leap, 2000 leap.
+  [USNO](https://aa.usno.navy.mil/faq/leap_years).
+- **NEW: approximate residual Gregorian excess** (`doubt`): 365.2425 versus 365.2422 days is calculated as about
+  26 seconds/year. It establishes improvement without perfection; no inevitable future correction date is
+  asserted. [USNO](https://aa.usno.navy.mil/faq/leap_years).
+- **Church adoption year** (`armenian_calendar`): 1923 for the Armenian Church, with no independently checked
+  decree day or civil transition claim.
+  [UK and Ireland Diocese, Our Faith](https://www.armenianchurch.org.uk/our-faith).
+- **Jerusalem exception** (`armenian_calendar`): Jerusalem retains the Julian calendar.
+  [Official Western European church calendar explanation](https://www.armenian-church.eu/en/holidays/).
+- **Combined feast and present conversion** (`christmas`): Holy Nativity and Theophany at Etchmiadzin on January
+  6; Jerusalem's Julian January 6 corresponds presently to Gregorian January 19. The 2026 itinerary distinguishes
+  eve and feast, January 18/19. [Mother See, January 6, 2026](https://www.armenianchurch.org/en/news/patriarchal-divine-liturgy-on-the-occasion-of-the-feast-of-the-holy-nativity-and-theophany/12110),
+  [Eastern Diocese, 2026 itinerary](https://armenianchurch.us/wp-content/uploads/2025/07/HL26_011526X_43749_Armenian-Church_Chevian_005-1.pdf).
+  The conversion is explicitly current, not a timeless thirteen-day rule.
+- **Scope:** no British riots, perfect-calendar claim or December 25 conversion story. Historical names and
+  publication years stay in `screen_small`; calendar years voiced here are the subject of the comparisons.
 
 ## Animation plan (showcase)
 
-- **One showcase, `calendar_jump`:** the first frame already contains the October 4/Thursday calendar tile and a
-  continuous clock. Lift off the ten intervening labels and expose October 15/Friday. Never accelerate the clock
-  by ten days. Keep the adjacent Thursday/Friday ribbon visible throughout the 4 s pause so the viewer can follow
-  the sequence. The diagram depicts a documented calendar transition, not an eyewitness scene.
-- **Other beats:** `hook` starts with lifted date labels; `doubt` separates the date strip from lived time;
-  `drift` compares the two sourced year lengths through a qualitative seasonal ribbon, without a fabricated dated
-  simulation. `new_rule` makes the 4/100/400 tests legible; `centuries` lets the viewer retrace 1900 and 2000 through
-  them during its 2 s pause. These are supporting diagrams, not a second showcase.
-- **Local extension:** church-calendar branches carry the 1923 adoption label and the Jerusalem exception. Align
-  Julian January 6 with Gregorian January 19 for the present relationship. Do not attach the 1923 label to a civil
-  calendar. The 2 s pause is for reading the two calendars together.
-- **Closing:** return to the still-running clock and torn calendar edge. The voice says «Ժամանակը չի ցատկում» on
-  that moving frame. No summary card. Total marked pauses: 10 s; longest: 4 s on the showcase.
-- All visual directions specify a relevant object in frame 0. No drawn historical characters, speculative ceremony,
-  invented exact clock readings, or unsourced adoption map. The final factual source line remains distinct from
-  the closing text.
+- **One showcase, `calendar_jump`:** frame 0 already contains the October 4/Thursday and October 15/Friday puzzle,
+  qualified as the initial adoption. Lift the ten intervening date labels while the weekday ribbon and clock
+  continue. In its **4 s** pause, the viewer follows the weekdays and counts the removed labels. Never fast-forward
+  the clock by ten days or invent an eyewitness scene.
+- **Cause and repair:** a seasonal ribbon and calendar ribbon gradually separate. Use about 11 minutes/year and
+  one day/128 years as an approximate scale, not an exact animation of dated equinoxes. Keep the ten-day reform
+  reference distinct. Build the 4/100/400 rule, then hold two unanswered year cards for the **3 s** choice pause;
+  only `doubt` reveals 1900 no / 2000 yes.
+- **One doubt:** show the remaining approximate 26 seconds/year against the earlier 11 minutes. It addresses
+  perfection of the repair, without replaying the calendar-jump explanation.
+- **Local extension:** branch the church calendar into Gregorian and Jerusalem Julian practice. The 1923 label
+  belongs to Church adoption. Align Jerusalem's January 6 Julian and January 19 Gregorian on the same day axis;
+  keep Etchmiadzin's Gregorian January 6 separate. The **3 s** pause lets the viewer read the aligned labels.
+- **Closing:** return to the moving clock. Voice says «Ժամանակը շարունակում է գնալ» on that same scene.
+  No summary card. **10 s total marked pauses**, longest 4 s. Every beat begins with its relevant object.
 
 ## Images
 
-- Optional document texture from the sheet: [File:Inter-grav.jpg](https://commons.wikimedia.org/wiki/File:Inter-grav.jpg),
-  first page of the bull, **public domain**. If used, caption it as the document, not a photograph of the date change.
-  The current animation can be built with calendar diagrams alone. No images downloaded; preserve the Commons
-  provenance and recheck attribution details when assets are fetched.
+Optional sheet asset: [File:Inter-grav.jpg](https://commons.wikimedia.org/wiki/File:Inter-grav.jpg), **public domain**.
+Identify it as the bull's first page, not a picture of the date change. Calendar diagrams suffice; no assets
+downloaded. Recheck the credit panel if fetched.
 
 ## Questions for Hayk
 
-- **S1, plain astronomical wording:** keep «եղանակների շրջանը», or introduce «արևադարձային տարի» once? The glossary
-  has no tropical-year entry. The intended meaning is the seasonal/tropical year, not an orbit measured relative
-  to distant stars. Current plain wording stays for review.
-- **S2, calendar terms:** approve «նահանջ տարի», «հուլյան օրացույց», «գրիգորյան օրացույց»? No corresponding entries
-  were found in the supplied math glossary. The closing personification «Օրացույցն է փորձում հասնել եղանակներին»
-  is also an owner wording choice, not a claimed language correction.
-- **S3, local extension:** keep the explicit 1923 adoption sentence and the full combined-feast name? The exact
-  ecclesiastical decree date remains unverified and is omitted from narration and visuals.
-
+- **S1, plain astronomical wording (still open):** keep «եղանակների շրջանը», or introduce «արևադարձային տարի»?
+  The glossary has no tropical-year entry. The intended meaning is the seasonal year, not a star-relative orbit.
+- **S2, calendar terms (still open):** approve «նահանջ տարի», «հուլյան օրացույց», «գրիգորյան օրացույց»?
+  The original closing personification «Օրացույցն է փորձում հասնել եղանակներին» is no longer used; no owner
+  decision on that wording is inferred.
+- **S3, local extension (still open):** keep the explicit 1923 adoption sentence and full combined-feast name?
+  Both remain. The precise ecclesiastical decree date is unverified and omitted.

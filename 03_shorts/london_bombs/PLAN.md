@@ -1,71 +1,81 @@
-# Short: London's V-1 impacts - chance can contain clusters - script and plan
+# Short: London V-1 impacts - three hits here, none there - script and plan
 
-Draft for Hayk's review, 2026-11-28. Thinking-error strand. Script source: `beats.hy.json`.
-The hook follows the fact-check correction: London was deliberately targeted. No voice or render made.
+Revised for Hayk's review, 2026-11-28. Script source: `beats.hy.json`. No voice or render made.
 
 ## The idea in one paragraph
 
-A cluster is compatible with a chance model; randomness does not mean evenly spaced dots. In a selected South
-London area, observed counts of V-1 impacts per equal square closely matched a fitted Poisson distribution. The
-showcase compares Clarke's complete frequency table with its predicted bars. The doubt beat limits the conclusion
-to this area and cell size. The single extension is a clearly hypothetical Yerevan dot map that makes the same
-comparison local without inventing Armenian incident data. Nothing claims that London itself was untargeted.
+A three-hit square and an empty-square category open a wartime puzzle: do clusters show that particular places
+were singled out? The voice identifies German V-1 flying bombs and the Second World War; attack years are on
+screen. Clarke's selected South London area contained 537 impacts across 576 equal squares. A 500-metre side
+becomes imaginable through a square in the viewer's Yerevan neighbourhood, without a local map or dataset.
+The showcase compares the complete observed table against a fitted Poisson model. The sole extension/doubt
+widens the scale: later London-wide work found a southward bias, while Clarke's selected-area counts closely
+matched the chance model. Clusters alone do not establish an extra cause.
 
 ## The script (Armenian)
 
 <!-- script:start -->
 
-10 beats, 1,523 characters (1,622 with numbers spelled out): ~108 s of speech, ~2:00 with pauses and the end tail, 9 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
+8 beats, 1,501 characters (1,616 with numbers spelled out): ~107 s of speech, ~1:59 with pauses and the end tail, 9 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
-**1. hook.** Պատահականն էլ է կուտակվում։
+**1. hook.** Մի քառակուսում՝ 3 ռումբ։ Մյուսում՝ ոչ մեկը։ Հատո՞ւկ էին նշան բռնում։
 
-**2. target.** Լոնդոնը ռմբակոծում էին դիտմամբ։ Հարցն ուրիշ էր՝ քաղաքի ներսում հարվածների կուտակումները պատահականությա՞ն արդյունք էին, թե՞ առանձին վայրերի հատուկ թիրախավորման նշան։ Այդ կուտակումների մասին պնդումներ կային։
+**2. target.** Երկրորդ համաշխարհային պատերազմի ժամանակ Լոնդոնին հարվածում էին գերմանական «ֆաու-1» թռչող ռումբերը։ Քաղաքը միտումնավոր էր ընտրված։ Լոնդոնցիները նկատում էին հարվածների կուտակումները։ Առանձին վայրե՞րն էին թիրախավորում, թե՞ այդ պատկերը կարող էր պատահական առաջանալ։
 
-**3. study.** Հարավային Լոնդոնում ընտրեցին 144 քառակուսի կիլոմետր տարածք և բաժանեցին 576 հավասար քառակուսու։ Դրանցում հաշվեցին 537 հարված։ Ամեն քառակուսու կողմը 500 մետր էր։
+**3. study.** Հարավային Լոնդոնում ընտրեցին 144 քառակուսի կիլոմետր տարածք և բաժանեցին 576 հավասար քառակուսու։ Դրանցում հաշվեցին 537 հարված։ Ամեն քառակուսու կողմը 500 մետր էր։ Երևանի քո թաղամասում պատկերացրու այդ չափի քառակուսի՝ նույնքան երկար ու լայն։
 
-**4. counts.** 229 քառակուսի դատարկ էր։ Իսկ 35 քառակուսուց յուրաքանչյուրում 3 հարված կար։ Նույն տվյալներում կային թե՛ դատարկ բջիջներ, թե՛ բազմակի հարվածներ ստացած բջիջներ։
+**4. counts.** 229 քառակուսի դատարկ էր։ Իսկ 35 քառակուսուց յուրաքանչյուրում 3 հարված կար։ Նայի՛ր այս երկու խմբին։ Քեզ համար ո՞րն է ավելի զարմանալի՝ դատարկ տեղե՞րը, թե՞ կրկնվող հարվածները։ *[pause 3 s]*
 
-**5. model.** Հաշվարկի համար վերցրին Պուասոնի բաշխումը։ Այս մոդելում հարվածներն անկախ են, իսկ միջին խտությունը նույնն է ամբողջ ընտրված տարածքում։ Պատահականն այստեղ չի նշանակում՝ կետերը հավասար հեռավորությամբ են։
+**5. model.** Հաշվարկի համար վերցրին Պուասոնի բաշխումը։ Այս մոդելում հարվածներն անկախ են, իսկ միջին խտությունը նույնն է ամբողջ ընտրված տարածքում։ Հաշվեցին՝ մոդելը քանի դատարկ քառակուսի է կանխատեսում, քանի քառակուսի՝ 1, 2 կամ ավելի հարվածով։ Պատահականը չի նշանակում՝ ամեն տեղ նույն քանակը։
 
-**6. showcase.** Նայիր սյուներին։ Իրական քանակների կողքին մոդելի կանխատեսած քանակներն են։ Դրանք շատ մոտ են։ Մոդելն էլ է կանխատեսում դատարկ բջիջներ և նույն բջիջն ընկած մի քանի հարված։ Համեմատի՛ր։ *[pause 5 s]*
+**6. showcase.** Նայի՛ր զույգ սյուներին։ Սպիտակները դիտված քանակներն են, նարնջագույնները՝ մոդելի կանխատեսումը։ Շատ մոտ են։ Մոդելն էլ է տալիս դատարկ տեղեր ու բազմակի հարվածներ։ Համեմատի՛ր հատկապես 0 և 3 հարվածի սյուները։ *[pause 6 s]*
 
-**7. doubt.** Ուրեմն ամբողջ Լոնդոնո՞ւմ ամեն հարված պատահական էր։ Այդպիսի բան այս ստուգումը չի ապացուցում։ Այն վերաբերում էր ընտրված տարածքին ու այս չափի բջիջներին։ Այդտեղ տվյալները լրացուցիչ կուտակումների վարկածը չէին հաստատում։
+**7. doubt.** Բայց սա ամբողջ Լոնդոնի պատկե՞րն է։ Ոչ։ Ավելի լայն ուսումնասիրությունը հարավում ավելի մեծ խտություն գտավ։ Մեր սյուներն ասում են՝ ընտրված տարածքում, այս չափի քառակուսիներով դիտվածը մոտ էր պատահական մոդելին։ Այստեղ լրացուցիչ կուտակումների նշան չգտան։
 
-**8. local.** Նույն միտքը փորձիր Երևանի քարտեզով։ Պատկերացրու՝ վրան պատահական նշումներ ես դնում։ Սա մտավոր փորձ է, ոչ քաղաքի մասին տվյալ։ Նշումների մի մասը կարող է իրար մոտ ընկնել՝ առանց հատուկ պատճառի։ *[pause 2 s]*
-
-**9. compare.** Ուրեմն հարցը միայն այն չէ՝ կուտակում կա՞։ Պետք է նաև հարցնել՝ այս պայմաններում պատահական բաշխումն ինչպիսի՞ կուտակումներ կտար։ Դրա հետ է պետք համեմատել տեսածդ։ *[pause 2 s]*
-
-**10. takeaway.** Կուտակումը դեռ հատուկ պատճառի ապացույց չէ։
+**8. takeaway.** Կուտակումը դեռ հատուկ պատճառի ապացույց չէ։
 
 <!-- script:end -->
 
-Armenian lint: **0 errors, 0 hints** on the final rerun. All `text`, `screen` and `screen_small` strings were
-extracted into `%TEMP%/ughegh_london_bombs_script_review.txt` outside the repository and checked with `--style`.
-Rule-backed fix: applied the initial `article-before-vowel` hint, «Պատահականը այստեղ» -> «Պատահականն այստեղ»
-(A1/A80 house style for new text). No hints retained. Manual polish followed the checklist; U1 is retained.
+CHECK_RECORD_PLACEHOLDER
 
-`plan_script.py london_bombs`: generated length line above, under the default ceiling.
-`validate_episode.py london_bombs --stage script`: **PASS**. The unchanged tool entry points ran through `runpy`
-with console-only logging and bytecode disabled, avoiding their default writes to repository-level `logs/`.
-Only files in the four authorized episode folders were written inside the repository.
+## Revision (2026-11-28)
+
+- **Missing when/what/war:** voice now says Second World War, German flying bombs and V-1 in Armenian letters.
+  `screen_small` gives **1944-1945**, following the source-line rule for dates. These are attack years, not
+  invented dates for Clarke's unspecified observation period.
+- **Missing human question:** hook juxtaposes three hits and none; setup explicitly asks whether particular
+  places were targeted. This uses the sourced targeting-versus-chance question. The colourful spy/protected-house
+  rumour is omitted because the sheet does not establish it securely.
+- **Forced Yerevan extension/double disclaimer:** remove the local dot-map beat and spoken data disclaimers.
+  Yerevan now helps picture a real 500-metre grid square, labelled as a size comparison on screen.
+- **Abstract hook/repetition:** use actual hit counts and remove the separate concluding comparison beat.
+  Eight beats retain the complete table. One doubt/extension adds the true wider-scale result and ends on the
+  measured local fit, without saying London was untargeted.
+- **Interaction/honesty/closing:** 3 s to choose a surprising category and 6 s to compare bars, 9 s total.
+  No invented coordinates or simulation posing as data. One voiced closing stays inside the chart.
+- **Questions:** former S1 abstract-hook choice is obsolete because the hook was withdrawn, not answered by Hayk.
+  S2 remains; S3 keeps the local-anchor decision for the integrated version. New S4 covers spoken V-1 spelling.
 
 ## Facts (checked)
 
-Fact-sheet basis: `_knowledge/short_videos/facts_codex_1_statistics_2026-11-28.md`, C2. All sheet-rated facts used
-are **high confidence**; no medium- or low-confidence claims are used. Clarke's original single page and its table
-were also read directly on the web on 2026-11-28.
+Basis: `_knowledge/short_videos/facts_codex_1_statistics_2026-11-28.md`, **C2**. Empirical facts used are **high
+confidence**. Attack context was checked in sheet-listed Evans/Delaney; Clarke's original page was reopened.
+Shaw/Shaw's abstract was available in search, but direct publisher open failed; no new full-article read is claimed.
 
-- **`target`:** London was deliberately targeted; the question concerns variation inside a selected area. Clarke
-  documents assertions that impacts clustered. The script does not assert that spies or specific protected buildings
-  caused civilian suspicions, nor assign a number of believers.
-  [Clarke, 1946, opening and study description](https://garcialab.berkeley.edu/courses/papers/Clarke1946.pdf).
-- **`study`:** selected area 144 square kilometres in South London, divided into 576 squares of 1/4 square kilometre;
-  537 impacts in the unspecified observation period. The 500 m side is the sheet's high-confidence calculation from
-  the square area, not 250 m. No exact boundaries, street names or attack dates are invented.
+- **NEW, high — `target`:** Germany's V-1 flying-bomb offensive against London took place in the Second World
+  War, **1944-1945**. London was deliberately targeted. Attack years do not date Clarke's precise study sample.
+  [Evans & Delaney, 2018, title, abstract and introduction](https://jhanley.biostat.mcgill.ca/bios601/Intensity-Rate/Evans2018AccuracyGeography.pdf).
+- **NEW explicit human framing, high — `target`:** apparent clusters prompted a targeting-versus-chance question.
+  Clarke documents assertions of clustering; the later paper explicitly frames the targeting question.
+  No prevalence count, individual quote or specific spy story.
+  [Clarke, opening](https://garcialab.berkeley.edu/courses/papers/Clarke1946.pdf);
+  [Shaw & Shaw, 2019, abstract](https://academic.oup.com/jrssig/article/16/5/12/7029379).
+- **High — `study`:** **144 square kilometres**, **576** squares of **1/4 square kilometre**, **537** impacts.
+  The **500 m** side is calculated from the area, not 250 m. The Yerevan sentence asks the viewer to imagine this
+  size, with no local observation, boundary or measurement.
   [Clarke, study description](https://garcialab.berkeley.edu/courses/papers/Clarke1946.pdf).
-- **`counts`, `showcase`:** the following is the complete reported table, with the original rounding. The 229 empty
-  squares and 35 squares with 3 hits come from it. The narration compares categories, never claims those squares
-  were geographically adjacent. [Clarke, table](https://garcialab.berkeley.edu/courses/papers/Clarke1946.pdf).
+- **High — `hook`, `counts`, `showcase`:** complete original table and rounding. Category examples do not
+  establish geographical adjacency. [Clarke, table](https://garcialab.berkeley.edu/courses/papers/Clarke1946.pdf).
 
   | Hits per square | Observed squares | Poisson-expected squares |
   |---|---:|---:|
@@ -77,51 +87,41 @@ were also read directly on the web on 2026-11-28.
   | 5 or more | 1 | 1.57 |
   | Total | 576 | 576.00 |
 
-- **`model`:** the Poisson comparison assumes independent impacts and a constant underlying mean density within
-  the selected area. Its fitted mean is 537/576, not an independently known attack rate. The manuscript explicitly
-  describes approximately constant underlying density; the voice's exact constancy describes the model, not a
-  proven property of all the historical impacts.
-  [Clarke, area selection and formula](https://garcialab.berkeley.edu/courses/papers/Clarke1946.pdf).
-- **`doubt`:** the fit did not support extra clustering at that scale; it does not prove an absence of targeting or
-  that the whole city was uniformly random. A later reanalysis qualifies the London-wide textbook retelling; its
-  southward-skew detail is not added to the narration.
-  [Clarke, conclusion](https://garcialab.berkeley.edu/courses/papers/Clarke1946.pdf);
-  [Shaw & Shaw, 2019, fact-sheet source for the wider limitation](https://academic.oup.com/jrssig/article/16/5/12/7029379).
-- **`local`, `compare`, `takeaway`:** the Yerevan map is an explicitly labelled thought experiment, not a dataset.
-  No local counts, measured rates, locations or real incidents are claimed. The city name was independently checked
-  against the [official Yerevan site](https://www.yerevan.am/en/). Applying the chance comparison is our explanation
-  of [Clarke's method](https://garcialab.berkeley.edu/courses/papers/Clarke1946.pdf), not a new local finding.
+- **High — `model`:** Poisson comparison assumes independent arrivals and constant mean density within the
+  chosen area; mean fitted as **537/576**. Model assumptions, not properties proved for every historical impact.
+  [Clarke, selection and formula](https://garcialab.berkeley.edu/courses/papers/Clarke1946.pdf).
+- **High — `doubt`:** the fit offered no support for extra clustering at this cell size in the selected area.
+  [Clarke, conclusion](https://garcialab.berkeley.edu/courses/papers/Clarke1946.pdf).
+- **NEW in the voice, high — `doubt`:** London-wide pattern was not uniformly random; it was skewed south.
+  This qualifies wider extrapolation without undoing the local fit. No new reanalysis count/effect size.
+  [Shaw & Shaw, 2019](https://academic.oup.com/jrssig/article/16/5/12/7029379).
+- **Editorial inference — `takeaway`:** a cluster alone does not establish a special cause; not a claim that
+  all clustering is meaningless. [Clarke](https://garcialab.berkeley.edu/courses/papers/Clarke1946.pdf).
 
-Excluded: the medium-confidence accuracy reconstruction, exact German aiming point, civilian spy stories and
-individual coordinates. No p-value is voiced or interpreted as a probability that randomness is true.
+Excluded: spies, protected buildings, exact study boundaries/dates, individual coordinates, accuracy figures,
+casualty counts and city-wide uniform randomness. No new Armenian factual source is needed for an invitation
+to imagine the stated square size in one's own neighbourhood.
 
 ## Animation plan (showcase)
 
-**Showcase: paired observed and expected histogram bars (`counts` through `showcase`).** Start with the observed
-categories, then overlay the expected bars from the table above. Both series use the same zero baseline and scale;
-label the axes as impacts per square and number of squares. Keep all categories visible, including 5 or more.
-Warm white is observed; orange outlines are the model. Show exact table values with Armenian decimal commas in the
-rendered graphic. No invented error bars, simulation totals or rounded replacements.
+**Showcase: complete observed/expected histogram (`counts` through `showcase`).** All six categories, including
+5 or more, share a baseline and scale. Warm white is observed; orange outlines are expected. Show exact source
+values with Armenian decimal commas; axes are hits per square and number of squares. No invented coordinates,
+error bars or simulation counts.
 
-The viewer compares empty squares and repeated-hit squares during a **5 s** silent hold, the longest pause.
-Do not use Clarke's counts to invent a geographic map of actual hits. Any grouped square tiles are labelled
-«տվյալների սխեմա» and represent frequency categories. Any spatial scatter has a persistent «մոդելավորում» label.
-The full original table remains available here for review before graphic production.
-
-- **`hook`:** a schematic scatter already contains empty patches and close dots in its first frame; model label
-  visible immediately.
-- **`target`:** a drawn V-1 silhouette and London label, tagged «նկարազարդում». No invented damage scene, people or
-  location. The city is visibly the target.
-- **`study`:** show the selected area as an unlocated schematic box; display 144 square kilometres, 576 squares,
-  537 impacts and a separate 500 m side bracket. Do not suggest that the exact study boundary is known.
-- **`model`, `doubt`:** put model assumptions beside the histogram, then contain the conclusion within its selected
-  area frame. No claim of randomness across the whole city.
-- **`local`:** schematic Yerevan card with no streets or actual incident positions; permanent «մտավոր փորձ» and
-  «մոդելավորում» labels. Hold **2 s** to inspect possible clumps.
-- **`compare`:** the model and hypothetical scatter share the frame from its first instant; **2 s** for comparison.
-  Marked silence totals **9 s**.
-- **`takeaway`:** end inside the scatter, voice saying the complete screen phrase, with no summary card.
-  Every beat starts with something it names already visible.
+- **Hook:** three-hit category tile and empty tile visible immediately. Separate category examples, not neighbouring
+  map locations. Short first sentence gives a concrete number; next clauses supply the puzzle.
+- **Context:** V-1 silhouette aimed at London, tagged `նկարազարդում`; source line gives 1944-1945. No fake damage
+  scene, spy or civilian dialogue.
+- **Grid/local anchor:** schematic study-area frame, 576 tiles and 500 m bracket. Yerevan is only a size comparison,
+  not a second city map; no local dots or spoken local-evidence disclaimer.
+- **Counts:** hold **3 s** to choose which category surprises the viewer.
+- **Model/showcase:** overlay expected bars on the same zero baseline. Hold the full comparison **6 s**, longest
+  pause, to inspect categories 0 and 3. Total marked silence **9 s**.
+- **One doubt/extension:** qualitative greater southern density in a separate labelled scheme, no invented
+  numerical gradient or boundaries. Return to Clarke's histogram and local conclusion.
+- **Closing:** stay on the chart and speak the screen line. No extra comparison or recap. Every beat starts
+  on the object its narration discusses.
 
 ## Images
 
@@ -132,10 +132,10 @@ record in the production credits. No new licence verification is claimed here be
 
 ## Questions for Hayk
 
-- **S1, hook:** keep «Պատահականն էլ է կուտակվում», or prefer «Պատահական հարվածներն էլ են կուտակվում»? The short
-  substantivized wording is left for native review, not treated as a linguistic error.
-- **S2, model wording:** is «միջին խտությունը» clear in speech, or would «հարվածների միջին խտությունը» help?
-  «Պուասոնի բաշխում» is the glossary's exact term.
-- **S3, local extension:** keep the explicitly hypothetical Yerevan map? No local evidence is available in the sheet;
-  exact London boundaries and individual coordinates remain unavailable and are deliberately absent.
-
+- **S2, model wording (still open):** is «միջին խտությունը» clear in speech, or would
+  «հարվածների միջին խտությունը» help? «Պուասոնի բաշխում» is the glossary's term.
+- **S3, local anchor (still open, revised implementation):** does a 500-metre square in
+  «Երևանի քո թաղամասում» make the London grid concrete enough? The standalone map was removed following
+  the editor's concern; no owner approval is inferred.
+- **S4, new spoken designation:** keep «ֆաու-1» for V-1? The source line keeps `V-1` and attack years.
+  This spelling is a wording question, not a glossary-backed decision.

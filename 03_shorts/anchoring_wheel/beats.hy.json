@@ -1,73 +1,66 @@
 [
   {
     "key": "hook",
-    "text": "Անիվը փոխեց գուշակությունները։",
-    "screen": "Անիվը փոխեց գուշակությունները",
-    "screen_small": "փորձի վերակազմություն",
-    "visual": "From frame 0, show a numbered wheel beside two blank group-estimate columns. Keep the experiment-reconstruction label visible on all wheel and participant scenes; do not animate one person's answer changing."
+    "text": "Անիվը փոխեց ՄԱԿ-ի մասին պատասխանները։",
+    "screen": "Անիվն ի՞նչ կապ ունի ՄԱԿ-ի հետ",
+    "screen_small": "Tversky & Kahneman, 1974 · փորձի վերակազմություն",
+    "visual": "From frame 0, a wheel sits beside the African-share-of-UN-members question and two group answer panels. Keep reconstruction tags on drawn experimental scenes. No single person changing an answer."
   },
   {
     "key": "question",
-    "text": "Փորձի հարցը սա էր՝ ՄԱԿ-ի անդամ երկրների քանի՞ տոկոսն են աֆրիկյան երկրները։ Նախքան պատասխանելը մասնակիցներն անիվի պտույտ էին տեսնում։ Անիվը երկրների մասին ոչինչ չէր հայտնում։",
+    "text": "Փորձի հարցը սա էր՝ ՄԱԿ-ի անդամ երկրների քանի՞ տոկոսն են աֆրիկյան երկրները։ Մասնակիցները պատասխանից առաջ անիվ էին պտտեցնում։ Անիվը երկրների մասին ոչինչ չէր հայտնում։",
     "screen": "ՄԱԿ-ի անդամների քանի՞ տոկոսն են աֆրիկյան երկրները",
     "screen_small": "Tversky & Kahneman, 1974 · վերակազմություն",
     "visual": "From frame 0, the historical percentage question is visible beside the wheel. Use generic country cards without a current membership count or map that could imply a current correct answer."
   },
   {
     "key": "wheel",
-    "text": "Անիվը համարակալված էր 0-ից 100։ Բայց այն այնպես էին սարքել, որ խմբից կախված՝ կանգ առներ 10-ի կամ 65-ի վրա։ Թիվը թվում էր պատահական, իսկ հետազոտողները նախապես որոշել էին այն։",
+    "text": "Անիվը համարակալված էր 0-ից 100, բայց սարքած էր՝ կանգ առնելու 10-ի կամ 65-ի վրա։ Մասնակիցները նախ ասում էին՝ փնտրած տոկոսն այդ թվից բա՞րձր է, թե՞ ցածր։ Հետո տալիս էին իրենց գնահատականը։ Հարցը նույնն էր, անիվի թիվը՝ տարբեր։",
     "screen": "10 կամ 65",
-    "screen_small": "Shleifer, 2012 · վերակազմություն",
-    "visual": "From frame 0, show the wheel on a 0-to-100 scale and a visible reconstruction tag. Split into the low-anchor and high-anchor experimental conditions; expose a schematic stop mechanism, not a claim about the historical apparatus's physical construction."
-  },
-  {
-    "key": "procedure",
-    "text": "Մարդիկ նախ ասում էին՝ իրենց փնտրած տոկոսը ցուցադրված թվից բա՞րձր է, թե՞ ցածր։ Հետո տալիս էին իրենց գնահատականը։ Հարցը նույնն էր, անիվի թիվը՝ տարբեր։",
-    "screen_small": "Tversky & Kahneman, 1974 · վերակազմություն",
-    "visual": "From frame 0, show the two condition cards with the same question. Under each, first show the higher-or-lower comparison and then a blank percentage response. No invented participants, response values or sample sizes appear."
+    "screen_small": "Tversky & Kahneman, 1974 · Shleifer, 2012 · վերակազմություն",
+    "visual": "From frame 0, show the 0-to-100 wheel split into 10 and 65 conditions. Higher/lower comparison precedes a blank estimate in each group. Any stopping mechanism is conceptual, not a recovered apparatus design. No invented participant counts or responses."
   },
   {
     "key": "showcase",
-    "text": "10 տեսած խմբի պատասխանների մեդիանը 25 տոկոս էր։ 65 տեսած խմբինը՝ 45 տոկոս։ Կողք կողքի նայիր՝ անիվի ավելի մեծ թվին հետևում էր նաև ավելի մեծ գնահատականը։",
+    "text": "10 տեսած խմբի պատասխանների մեդիանը 25 տոկոս էր։ 65 տեսած խմբինը՝ 45 տոկոս։ Մեդիանը պատասխանները փոքրից մեծ դասավորելիս կենտրոնը ցույց տվող թիվն է։ Համեմատի՛ր երկու զույգը՝ անիվի թիվն ու խմբի պատասխանը։",
     "screen": "Անիվ՝ 10 → մեդիան՝ 25% · անիվ՝ 65 → մեդիան՝ 45%",
     "screen_small": "Tversky & Kahneman, 1974 · խմբերի մեդիաններ",
     "visual": "From frame 0, the two wheel-condition cards are present. Reveal fixed group-median markers at 25% and 45% on identical zero-to-100 scales. Labels explicitly say group median; never draw individual distributions, error bars or before-and-after trajectories not reported in the sheet. Hold for the viewer's comparison.",
     "pause_after": 5
   },
   {
-    "key": "median",
-    "text": "Մեդիանը պատասխանները փոքրից մեծ դասավորելիս կենտրոնը ցույց տվող թիվն է։ Այսինքն՝ այստեղ համեմատում ենք խմբերը։ Չենք չափել, թե նույն մարդն անիվից առաջ ու հետո որքան փոխեց իր կարծիքը։",
-    "screen": "Խմբերի համեմատություն",
-    "screen_small": "Tversky & Kahneman, 1974",
-    "visual": "From frame 0, keep the two reported group-median markers and the group labels. Highlight the median labels without inventing response arrays. A crossed-out single-person before-and-after arrow clarifies what was not measured."
-  },
-  {
     "key": "anchor",
-    "text": "Սա խարսխման ազդեցությունն է։ Առաջին թիվը կարող է խարսխի պես պահել հետագա գնահատականդ իր մոտ, նույնիսկ երբ հարցի պատասխանի մասին տեղեկություն չի տալիս։",
+    "text": "Սա խարսխման ազդեցությունն է։ Առաջին թիվը կարող է խարսխի պես պահել հետագա գնահատականդ իր մոտ, նույնիսկ երբ պատասխանի մասին տեղեկություն չի տալիս։ Իսկ եթե գնահատականից շատ բան կախված լինի՞։",
     "screen": "Խարսխման ազդեցություն",
     "screen_small": "Tversky & Kahneman, 1974",
-    "visual": "From frame 0, show an anchor icon attached to the initial-number card, with the group-level estimate marker nearby. Keep this a conceptual metaphor, not an asserted neural mechanism or an inevitable individual response.",
-    "pause_after": 1
+    "visual": "From frame 0, attach an anchor icon to the initial-number card, then bring in a legal case folder as the extension. The anchor is a conceptual metaphor, not an asserted neural mechanism or inevitable response."
+  },
+  {
+    "key": "dice",
+    "text": "Մեկ այլ փորձի 52 սկսնակ իրավաբան զառեր էր գցում, հետո առաջարկում պատժաչափը։ Զառերը սարքած էին՝ գումարով տալու 3 կամ 9։ Այդ թիվը գրում էին որպես դատախազի պահանջ՝ պայմանական պատժի ամիսներով։ Հետո իրավաբանն իր որոշումն էր գրում։",
+    "screen": "Զառերի գումարը՝ 3 կամ 9 ամիս",
+    "screen_small": "Englich, Mussweiler & Strack, 2006 · փորձ 3 · պայմանական գործ · վերակազմություն",
+    "visual": "From frame 0, show two dice beside a hypothetical case folder, never an actual defendant or prison. Participants were junior legal professionals with early judicial experience, not veteran judges. Show totals 3 and 9 as prosecutor demands for months on probation. Keep the hypothetical-case and reconstruction tags."
+  },
+  {
+    "key": "dice_results",
+    "text": "3 ստացած խմբի առաջարկած պատժաչափը միջինում 5,28 ամիս էր։ 9 ստացած խմբինը՝ 7,81 ամիս։ Գործի նյութերը նույնն էին, զառերի թիվը՝ տարբեր։ Համեմատի՛ր՝ ավելի մեծ թվից հետո նաև ավելի երկար պատիժ էին առաջարկում։",
+    "screen": "3 → միջինը՝ 5,28 ամիս · 9 → միջինը՝ 7,81 ամիս",
+    "screen_small": "Englich et al., 2006 · փորձ 3 · պայմանական գործ · խմբերի միջիններ",
+    "visual": "From frame 0, show fixed group-mean bars at 5.28 and 7.81 months on a shared zero baseline beside the 3/9 dice conditions. These are means, distinct from wheel medians. Show months on probation, never real imprisonment. No individual before/after trajectory, invented raw data or extrapolated effect. Hold four seconds for comparison.",
+    "pause_after": 4
   },
   {
     "key": "doubt",
-    "text": "Բայց այս թվերից չես իմանա՝ կոնկրետ դու որքան կազդվես։ Դրանք չեն նշանակում, թե ամեն մարդ նույնքան փոխեց պատասխանը։ Չափվածը տարբեր թվեր տեսած խմբերի պատասխանների տարբերությունն է։",
-    "screen_small": "Tversky & Kahneman, 1974",
-    "visual": "From frame 0, the reported group results remain on screen beside an unfilled viewer-response card. Put no predicted value on that card; finish by emphasizing the measured comparison between groups."
-  },
-  {
-    "key": "local_price",
-    "text": "Հիմա պատկերացրու դրամով գնապիտակ։ Մինչ քո գնահատականը տալը, արդեն վաճառողի թիվն ես տեսել։ Սա առօրյա օրինակ է, ոչ Հայաստանում արված փորձի արդյունք։ Գնապիտակն էլ, ի տարբերություն անիվի, կարող է ապրանքի մասին տեղեկություն տալ։",
-    "screen": "Առօրյա օրինակ · գին՝ … դրամ",
-    "screen_small": "նկարազարդում",
-    "visual": "From frame 0, show an original dram-denominated price tag with an ellipsis instead of an invented amount, beside a blank personal estimate. Label this an everyday illustration. No Armenian experiment, measured price effect or completed sale is claimed.",
-    "pause_after": 2
+    "text": "Քեզ հետ էլ նույնը կլինի՞։ Այս փորձերը քո պատասխանը չեն կանխատեսում։ Գիտենք՝ տարբեր մեկնարկային թվեր տեսած խմբերը տարբեր գնահատականներ են տվել, նույնիսկ երբ առաջին թիվը հարցի հետ կապ չուներ։",
+    "screen_small": "Tversky & Kahneman, 1974 · Englich et al., 2006",
+    "visual": "From frame 0, retain both measured group comparisons beside a blank viewer-answer card. This is the single spoken limit on individual prediction. Finish on the observed group result, without a second median caveat beat."
   },
   {
     "key": "takeaway",
-    "text": "Թիվը գնահատելիս հարցրո՛ւ՝ առաջին թիվը որտեղի՞ց եկավ։",
+    "text": "Դրամով գին գնահատելիս էլ հարցրո՛ւ՝ առաջին թիվը որտեղի՞ց եկավ։",
     "screen": "Առաջին թիվը որտեղի՞ց եկավ",
-    "visual": "From frame 0, remain on the price tag and trace a line back to its source, with a small wheel icon recalling the original experiment. Say the closing screen phrase verbatim; no summary card.",
-    "pause_after": 1
+    "visual": "From frame 0, retain the initial-number source card and a wheel icon. A small unpriced dram tag connects the question to the viewer without a shop, invented amount, local price-effect claim or second price-story extension. Speak the closing screen phrase exactly. No recap card.",
+    "screen_small": "նկարազարդում"
   }
 ]

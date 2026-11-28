@@ -1,64 +1,66 @@
 [
   {
     "key": "hook",
-    "text": "Օրացույցից 10 ամսաթիվ ջնջեցին։ Բայց շաբաթվա օրերը շարքով շարունակվեցին։",
-    "screen": "10 ամսաթիվ՝ բաց թողնված",
-    "visual": "Frame 0 shows an October calendar with a strip of date labels lifting off it. This is a calendar diagram, with no invented sleeping historical characters.",
-    "pause_after": 1
+    "text": "Հոկտեմբերի 4-ից հետո՝ 15-ը։ Հինգշաբթիից հետո սովորական ուրբաթ էր։ Օրացույցից 10 ամսաթիվ էր անհետացել։",
+    "screen": "4 հոկտեմբերի → 15 հոկտեմբերի",
+    "screen_small": "USNO · Գրիգոր XIII, 1582 · նոր տոմարին առաջին անցման վայրերում",
+    "visual": "Frame 0 shows October 4 / Thursday beside October 15 / Friday on a continuous day ribbon. The source line immediately limits the claim to the initial Gregorian adopters. Calendar diagram, no historical characters or skipped lived time."
   },
   {
     "key": "calendar_jump",
-    "text": "1582 թվականին նոր օրացույցին անցած երկրներում հոկտեմբերի 4-ին հաջորդեց հոկտեմբերի 15-ը։ Հետևի՛ր նաև շաբաթվա օրերին՝ հինգշաբթիից հետո ուրբաթ է։ Ժամացույցը շարունակում է գնալ։",
-    "screen": "4 հոկտեմբերի → 15 հոկտեմբերի",
-    "screen_small": "USNO · Gregory XIII, 1582",
-    "visual": "Frame 0 already shows October 4 and Thursday beside a running clock. Showcase: peel away the ten intervening date labels, reveal October 15 and Friday, and keep the clock moving continuously. During the pause the viewer follows Thursday to Friday; do not fast-forward the clock or invent a measured clock time.",
+    "text": "Նոր տոմարին անցած երկրներում հոկտեմբերի 4-ի հաջորդ օրը գրեցին 15։ Հետևի՛ր ներքևի շարքին՝ շաբաթվա օրերն իրար են հաջորդում։ Փոխվել են ամսաթվերը, ժամացույցը շարունակում է գնալ։",
+    "screen": "Հինգշաբթի → ուրբաթ",
+    "screen_small": "USNO · Գրիգոր XIII, 1582",
+    "visual": "Showcase starts on the same calendar and running clock. Lift the ten intervening date labels, retaining adjacent Thursday and Friday on an uninterrupted day axis. During the 4 s pause the viewer traces the weekday ribbon and counts ten removed labels. No invented clock reading or fast-forward through ten days.",
     "pause_after": 4
   },
   {
-    "key": "doubt",
-    "text": "Բայց մարդիկ 10 օր պակա՞ս ապրեցին։ Ոչ։ Փոխվեցին ամսաթվերի անունները։ Ժամանակը չթռավ, և ամբողջ աշխարհը միաժամանակ չանցավ նոր օրացույցին։ Բաց էին թողել ամսաթվերը, իսկ շաբաթվա հերթականությունը շարունակվել էր։",
-    "visual": "Frame 0 separates the lifted date labels from the uninterrupted weekday ribbon. The labels disappear while Thursday and Friday remain adjacent; a neutral globe has no invented adoption map."
-  },
-  {
     "key": "drift",
-    "text": "Ինչո՞ւ էր պետք այդ ուղղումը։ Հին՝ հուլյան օրացույցի տարին միջինում 365,25 օր էր։ Իսկ եղանակների շրջանը դրանից մի քիչ կարճ է։ Տարբերությունը փոքր է, բայց ամեն տարի կուտակվում է։ Օրացույցը կամաց շեղվում էր եղանակներից։",
-    "screen": "365,25 օր / մոտ 365,2422 օր",
-    "screen_small": "USNO · Leap Years",
-    "visual": "Frame 0 shows a calendar ribbon next to a seasonal cycle. Their markers gradually separate. Keep the two verified year-length values on screen; the drift is qualitative, without a fabricated year counter or exact historical equinox simulation."
+    "text": "Ինչո՞ւ այդպես արեցին։ Հուլյան օրացույցի տարին եղանակների շրջանից տարեկան մոտ 11 րոպե երկար էր։ Մեկ տարում քիչ է թվում։ Բայց մոտ 128 տարում մի ամբողջ օր է կուտակվում։ Ուղղման պահին վերացնում էին մոտ 10 օրվա շեղում։",
+    "screen": "Մոտ 11 րոպե / տարի → մոտ 1 օր / 128 տարի",
+    "screen_small": "USNO · հաշվարկ՝ կլորացված տարվա երկարություններից · Գրիգոր XIII, 1582 · հենակետ՝ Նիկիայի ժողով",
+    "visual": "Frame 0 shows a calendar-year ribbon beside a seasonal cycle. Add approximately 11 minutes per year and one day per 128 years, derived from rounded modern year lengths. Label the reform's roughly ten-day correction separately as measured against its Nicaea reference. Do not multiply the modern rate from Caesar or pretend to simulate exact historical equinoxes."
   },
   {
     "key": "new_rule",
-    "text": "Նոր՝ գրիգորյան օրացույցը փոխեց նաև նահանջ տարվա կանոնը։ Տարին 4-ի բաժանվո՞ւմ է՝ սովորաբար նահանջ է։ Բայց 100-ի բաժանվող տարին նահանջ է միայն այն դեպքում, երբ բաժանվում է նաև 400-ի։",
+    "text": "Մի անգամ ամսաթվերը փոխելը բավարար չէր։ Նոր՝ գրիգորյան օրացույցը փոխեց նաև նահանջ տարվա կանոնը։ 4-ի բաժանվող տարին սովորաբար նահանջ է։ Բայց 100-ի բաժանվող տարին նահանջ է միայն այն դեպքում, երբ բաժանվում է նաև 400-ի։",
+    "screen": "4 · 100 · 400",
     "screen_small": "USNO · Leap Years",
-    "visual": "Frame 0 shows the leap-day tile beside a branching divisibility diagram. Reveal the 4, 100 and 400 tests in the order spoken; make the century exception visually explicit."
+    "visual": "Frame 0 shows a leap-day tile with the 4/100/400 branching tests. Reveal the century exception as spoken. This is the ongoing repair following the one-time calendar jump."
   },
   {
     "key": "centuries",
-    "text": "Փորձի՛ր՝ 1900-ը նահա՞նջ էր։ Իսկ 2000-ը նահա՞նջ էր։ 1900-ը՝ ոչ, 2000-ը՝ այո։ Այդպես օրացույցն ավելի մոտ է մնում եղանակների շրջանին։ Բայց սա էլ կատարյալ համընկնում չէ։",
-    "screen": "1900՝ ոչ · 2000՝ այո",
+    "text": "Փորձի՛ր այս երկուսը՝ 1900-ը և 2000-ը։ Ո՞րն է նահանջ։",
+    "screen": "1900 · 2000",
     "screen_small": "USNO · Leap Years",
-    "visual": "Frame 0 shows the two year cards with answers concealed. The pause follows the spoken answers so the viewer can trace each year back through the rule. A tiny qualitative gap remains between calendar and season markers; no exact future correction date.",
-    "pause_after": 2
+    "visual": "Frame 0 shows two year cards and the preceding rule. Keep answers hidden throughout the speech and 3 s choice pause. Reveal only at the start of the next beat.",
+    "pause_after": 3
+  },
+  {
+    "key": "doubt",
+    "text": "1900-ը՝ ոչ, 2000-ը՝ այո։ Ուրեմն օրացույցն արդեն կատարյա՞լ է։ Դեռ տարեկան մոտ 26 վայրկյանի տարբերություն կա։ Նախկին մոտ 11 րոպեի համեմատ շեղումը շատ ավելի դանդաղ է կուտակվում։",
+    "screen": "1900՝ ոչ · 2000՝ այո · մոտ 26 վայրկյան / տարի",
+    "screen_small": "USNO · մոտավոր համեմատություն՝ 365,2425 և 365,2422 օր",
+    "visual": "Frame 0 reveals the two answers and traces their routes through the rule. The single doubt beat compares approximate residual Gregorian drift with Julian drift. Keep the approximation visible; no inevitable future correction date."
   },
   {
     "key": "armenian_calendar",
-    "text": "Մեզ ծանոթ մի օրինակ էլ կա։ Հայ առաքելական եկեղեցին նոր օրացույցն ընդունել է 1923 թվականին։ Երուսաղեմի Հայոց պատրիարքությունը պահել է հուլյան օրացույցը։",
-    "screen_small": "Հայ առաքելական եկեղեցի · 1923 · Մեծ Բրիտանիայի թեմ / Արևմտյան Եվրոպայի պատվիրակություն",
-    "visual": "Frame 0 shows a church-calendar page and the Armenian Church label. Split it into the new-calendar branch and the Jerusalem Julian branch. The 1923 label belongs to church adoption, never to Armenia's civil calendar."
+    "text": "Նույն տարբերությունն այսօր էլ մեր տոների մեջ է երևում։ Հայ առաքելական եկեղեցին նոր տոմարն ընդունել է 1923-ին, իսկ Երուսաղեմի Հայոց պատրիարքությունը պահել է հուլյան օրացույցը։",
+    "screen_small": "Մեծ Բրիտանիայի թեմ · 1923 · Արևմտյան Եվրոպայի պատվիրակություն · Երուսաղեմի բացառություն",
+    "visual": "Frame 0 shows an Armenian church-calendar page branching to Gregorian practice and Jerusalem's Julian practice. The voiced year is the church transition itself, not Armenia's civil adoption."
   },
   {
     "key": "christmas",
-    "text": "Էջմիածնում Սուրբ Ծնունդն ու Աստվածահայտնությունը հունվարի 6-ին են։ Երուսաղեմում էլ տոնի օրը հին տոմարով հունվարի 6-ն է, որը մեր օրացույցով հիմա հունվարի 19-ն է։ Նույն ամսաթիվը տարբեր օրացույցներում տարբեր օրերի է հասնում։",
-    "screen": "Հունվարի 6՝ հին տոմարով / հունվարի 19՝ նոր տոմարով",
+    "text": "Էջմիածնում Սուրբ Ծնունդն ու Աստվածահայտնությունը հունվարի 6-ին են։ Երուսաղեմում էլ տոնի օրը հին տոմարով հունվարի 6-ն է։ Մեր օրացույցով հիմա դա հունվարի 19-ն է։ Երկու օրացույցները կողք կողքի կարդա՛։",
+    "screen": "Հին տոմարի հունվարի 6 = նոր տոմարի հունվարի 19",
     "screen_small": "Մայր Աթոռ, 2026 · ԱՄՆ Արևելյան թեմի ուխտագնացության ծրագիր, 2026",
-    "visual": "Frame 0 shows the Etchmiadzin January 6 feast page. Align Jerusalem's Julian January 6 with Gregorian January 19 on the same continuous-day axis. Display the source year to constrain the present conversion; do not connect the Armenian feast to December 25.",
-    "pause_after": 2
+    "visual": "Frame 0 shows the two Jerusalem calendar labels aligned on one continuous-day axis; Etchmiadzin's Gregorian January 6 remains separate. During the 3 s pause the viewer reads across the aligned January 6 Julian / January 19 Gregorian labels. This is the present conversion, not a permanent 13-day difference.",
+    "pause_after": 3
   },
   {
     "key": "closing",
-    "text": "Երբ ամսաթիվը փոխվում է, ժամանակը չի ցատկում։ Օրացույցն է փորձում հասնել եղանակներին։",
-    "screen": "Ժամանակը չի ցատկում",
-    "visual": "Frame 0 returns to the continuously moving clock beside the torn calendar edge. The spoken closing line appears on that moving scene, without a summary card.",
-    "pause_after": 1
+    "text": "Օրացույցն ուղղում ենք, որ եղանակներից հետ չմնա։ Ժամանակը շարունակում է գնալ։",
+    "screen": "Ժամանակը շարունակում է գնալ",
+    "visual": "Frame 0 returns to the continuously moving clock beside the corrected calendar ribbon. The voice says the closing screen line on the moving scene. No extra summary card."
   }
 ]

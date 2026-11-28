@@ -1,62 +1,60 @@
 [
   {
     "key": "hook",
-    "text": "Կոշիկը մոտ 5500 տարեկան է։ Նույնիսկ կաշվե կապիչներն են պահպանվել։",
-    "screen": "Մոտ 5500 տարվա կաշվե կոշիկ",
-    "screen_small": "Պինհասի և համահեղինակներ, 2010",
-    "visual": "Frame 0 shows the actual shoe photograph from the paper, with its surviving leather lacing visible. Push toward the lacing; keep the age explicitly approximate.",
-    "pause_after": 1
+    "text": "Գոմաղբի տակ՝ կաշվե կոշիկ։ Մոտ 5500 տարեկան, ու կապիչներն էլ են պահպանվել։",
+    "screen": "Մոտ 5500 տարեկան · կապիչներն էլ կան",
+    "screen_small": "Պինհասի և համահեղինակներ, 2010 · UCLA, 2010",
+    "visual": "Frame 0 shows the actual shoe photograph with surviving laces; a small deposit cross-section inset is explicitly tagged 'նկարազարդում'. The hook states the observed burial context, not that dung alone caused preservation."
   },
   {
     "key": "find",
-    "text": "Գտել են Հայաստանում՝ Վայոց ձորի Արենի-1 քարանձավում։ Սա մեզ հայտնի ամենահին պահպանված կաշվե կոշիկն է։ Ոչ թե ոտնամանի բեկոր, այլ ամբողջական կոշիկ՝ իր ձևով ու կապիչներով։",
-    "screen_small": "Հայտնաբերում՝ 2008 · Հայաստանի պատմության թանգարան",
-    "visual": "Frame 0 shows the verified Areni-1 cave entrance photo, then pairs it with the intact shoe photo. Use only the Vayots Dzor and Areni-1 location labels; do not invent an excavation reenactment."
+    "text": "Գտել են Վայոց ձորի Արենի-1 քարանձավում։ Սա մեզ հայտնի ամենահին պահպանված կաշվե կոշիկն է։ Ձևն էլ կա, կապիչներն էլ։ Կարող ես հետևել՝ ինչպես էին մի կտոր կաշվից կոշիկ ստանում։",
+    "screen_small": "Հայաստանի պատմության թանգարան · հայտնաբերում՝ 2008 · Պինհասի և համահեղինակներ, 2010",
+    "visual": "Frame 0 pairs the verified cave entrance with the actual shoe photo. The leather qualifier stays legible. Move toward the leather outline without staging a fictional excavation or wearer."
   },
   {
     "key": "construction",
-    "text": "Նայի՛ր կառուցվածքին։ Կաշվի ամբողջական մի կտոր է՝ ոտքի շուրջ հավաքված ու կաշվե կապիչներով ամրացված։ Սա աջ ոտքի կոշիկ է, ու դա էլ են պարզել պահպանված մաշվածքից։ Երկարությունը 24,5 սանտիմետր է՝ մոտավորապես այսօրվա եվրոպական 37 չափսը։ Փորձի՛ր աչքով հետևել՝ ինչպես է հարթ կտորը կոշիկ դառնում։",
-    "screen": "վերակազմություն · 24,5 սմ · մոտ 37 չափս",
+    "text": "Նայի՛ր անցքերին՝ հետևում 4 զույգ է, վերևում՝ 15։ Կապիչներն անցնում են դրանց միջով ու կաշին հավաքում ոտքի շուրջ։ Առանձին կոշտ ներբան չունի։ Սա աջ ոտքի կոշիկ է՝ մաշվածքն էլ է հուշել։ Երկարությունը 24,5 սանտիմետր է՝ մոտ այսօրվա եվրոպական 37 չափսը։ Աչքով անցի՛ր կապիչների ճանապարհով։",
+    "screen": "վերակազմություն · հետևում՝ 4 զույգ անցք · վերևում՝ 15 · 24,5 սմ · մոտ 37 չափս",
     "screen_small": "Պինհասի և համահեղինակներ, 2010",
-    "visual": "Frame 0 already shows the leather outline alongside the archaeological photograph and a reconstruction tag. Showcase: fold a schematic single-piece outline around a neutral foot form, then thread the lacing. Keep the verified 24.5 cm ruler; do not claim a recovered cutting pattern or add invented eyelet counts. Hold the completed form for the viewer to retrace the fold.",
+    "visual": "Showcase: frame 0 pairs the actual photo with a schematic single leather piece and neutral right-foot form. Follow the paper's four back eyelet pairs and fifteen top pairs while folding and threading; keep 'վերակազմություն' visible. No recovered exact cutting pattern, hide-species assertion or owner. During the longest 4 s pause the viewer traces the lacing. The one-piece wrap has no separately attached rigid sole.",
     "pause_after": 4
   },
   {
-    "key": "dating",
-    "text": "Տարիքն էլ միայն տեսքից չեն գուշակել։ Թվագրել են հենց կաշվի նմուշները։ Ստացվել է ժամանակային միջակայք, ոչ թե պատրաստման ճշգրիտ օր։ Դրա համար էլ ասում ենք՝ մոտ 5500 տարեկան։",
-    "screen": "Մ.թ.ա. 3627-3377 · կաշվի համակցված թվագրում",
-    "screen_small": "Պինհասի և համահեղինակներ, 2010 · աղյուսակ 2",
-    "visual": "Frame 0 shows a leather sample beside a dating-interval bar. Display only the combined calibrated leather interval, 3627-3377 BCE; never mix raw radiocarbon BP ages with calendar years or use the inconsistent grass interval."
+    "key": "dating_comparison",
+    "text": "Տարիքը հենց կաշվից են որոշել՝ 3 չափումով։ Էկրանին ստացված թվագրման միջակայքն է։ Հիմա համեմատի՛ր երկու գտածոները՝ Արենիի կոշիկն ավելի հին է, քան աջ կողմի ոտնամանը։",
+    "screen": "Արենիի կոշիկ՝ մ.թ.ա. 3627-3377 · Էցիի ոտնաման՝ ավելի ուշ",
+    "screen_small": "Պինհասի և համահեղինակներ, 2010 · աղյուսակ 2 և քննարկում · Էցի՝ մոտ մ.թ.ա. 3365-3118",
+    "visual": "Frame 0 shows the combined calibrated leather interval on the left; add a generic footwear silhouette on the right labelled 'Էցի · նկարազարդում', not a replica claimed to reproduce his actual shoe. Compare the non-overlapping sourced date ranges, with older on the left and newer on the right. Retain the paper's approximate Ötzi interval from the Discussion; its table differs by one year at the older endpoint. The name and dates stay on screen. During the 3 s pause the viewer reads the ordering.",
+    "pause_after": 3
   },
   {
     "key": "doubt",
-    "text": "Բայց ամենահին կաշվե կոշի՞կը նշանակում է առաջին ոտնամանը։ Ոչ։ Բուսական մանրաթելերից ավելի հին սանդալներ էլ են պահպանվել։ Այս գտածոն չի ասում, թե մարդիկ որտեղ են առաջին անգամ կոշիկ պատրաստել։ Հաստատ գիտենք՝ այս կաշվե կոշիկն է հասել մեզ։",
-    "screen": "նկարազարդում",
+    "text": "Բայց ամենահին կաշվե կոշի՞կն է առաջին ոտնամանը։ Բուսական մանրաթելերից ավելի հին սանդալներ էլ կան։ Այս գտածոյից կոշիկի գյուտի տեղը չենք իմանա։ Գիտենք՝ այս ամբողջական կաշվե կոշիկը պահպանվել է։",
+    "screen": "Ամենահին հայտնի պահպանված կաշվե կոշիկ",
     "screen_small": "Պինհասի և համահեղինակներ, 2010 · Guinness World Records",
-    "visual": "Frame 0 underlines the leather qualifier beneath the shoe photograph. Add a schematic fibre sandal marked 'նկարազարդում', with no invented design attribution, age or geographical claim. Return emphasis to the photographed leather object."
+    "visual": "Frame 0 underlines 'կաշվե' beside the actual shoe photo. Add a generic fibre-sandal silhouette with 'նկարազարդում', without an invented design, age or location. End on the actual intact shoe; this is the sole record-category doubt beat."
   },
   {
     "key": "preservation",
-    "text": "Իսկ ինչպե՞ս է կաշին այդքան երկար պահպանվել։ Հետազոտողները նշում են քարանձավի զով, չոր ու կայուն պայմանները։ Գտածոները նաև ծածկված էին ոչխարի գոմաղբի հաստ շերտով։ Հետազոտողների բացատրությամբ՝ այդ պայմաններն օգնել են, որ կոշիկը հասնի մեզ։",
-    "screen": "նկարազարդում",
-    "screen_small": "Կալիֆոռնիայի համալսարան, Լոս Անջելես · հետազոտողների հաղորդագրություն, 2010",
-    "visual": "Frame 0 shows an explicitly illustrative cave-deposit cross-section with the shoe beneath a dung layer. Add cool/dry symbols without temperatures, humidity values or a chemical tanning claim. Show the factors together; do not assign measured causal shares to them.",
-    "pause_after": 2
+    "text": "Ինչպե՞ս է փափուկ կաշին այդքան դիմացել։ Քարանձավը զով ու չոր էր, պայմանները՝ կայուն։ Գտածոները ծածկված էին ոչխարի գոմաղբի հաստ շերտով։ Հետազոտողների բացատրությամբ՝ այս պայմանները միասին օգնել են պահպանմանը։",
+    "screen": "նկարազարդում · զով, չոր, կայուն պայմաններ",
+    "screen_small": "UCLA · հետազոտողների հաղորդագրություն, 2010",
+    "visual": "Frame 0 shows a tagged illustrative deposit cross-section with the covering sheep-dung layer and cool/dry icons. Attribute the preservation explanation once in voice. No temperatures, causal percentages or chemical tanning mechanism."
   },
   {
     "key": "grass",
-    "text": "Կոշիկի ներսում խոտ էլ կար։ Գուցե տաք պահելու համար էր, գուցե՝ ձևը պահպանելու։ Նպատակը հաստատ չգիտենք։ Խոտի առկայությունը փաստ է, իսկ դրա նշանակությունը՝ հետազոտողների ենթադրությունը։",
-    "screen": "նկարազարդում · խոտը՝ փաստ, նպատակը՝ ենթադրություն",
-    "screen_small": "Պինհասի և համահեղինակներ, 2010 · Կալիֆոռնիայի համալսարան, Լոս Անջելես, 2010",
-    "visual": "Frame 0 shows a tagged illustrative cutaway with grass inside the shoe; retain 'նկարազարդում' on the image. Branch to insulation and shape-retention icons, both visibly marked as hypotheses. Do not depict an ancient wearer performing either action.",
-    "pause_after": 2
+    "text": "Ներսում խոտ էլ կար՝ գուցե տաք պահելու, գուցե կոշիկի ձևը պահպանելու համար։",
+    "screen": "նկարազարդում · խոտի հնարավոր նպատակները",
+    "screen_small": "Պինհասի և համահեղինակներ, 2010 · UCLA, 2010",
+    "visual": "Frame 0 shows the actual shoe photo beside a cutaway tagged 'նկարազարդում'. Two icons read 'տաք պահել՝ ենթադրություն' and 'ձևը պահել՝ ենթադրություն'. The single 'գուցե ... գուցե' is the only voiced qualification of function. During the 3 s pause the viewer matches each icon to its hypothesis. No ancient wearer action is staged.",
+    "pause_after": 3
   },
   {
     "key": "closing",
     "text": "Այս կոշիկը Հայաստանի պատմության թանգարանի հավաքածուում է։ Կոշիկը մնացել է, տիրոջը չգիտենք։",
     "screen": "Կոշիկը մնացել է, տիրոջը չգիտենք",
     "screen_small": "Հայաստանի պատմության թանգարան · հավաքածուի պաշտոնական կատալոգ",
-    "visual": "Frame 0 returns to the actual shoe photograph, with a collection caption rather than an invented museum display case. A blank owner label stays unanswered as the closing line is spoken; no summary card.",
-    "pause_after": 1
+    "visual": "Frame 0 returns to the real shoe photograph with museum collection credit. The voice says the screen line. Do not claim a particular gallery is open today or add a summary card."
   }
 ]

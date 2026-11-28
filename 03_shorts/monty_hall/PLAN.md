@@ -1,112 +1,116 @@
-# Short: Monty Hall - stick or switch? - script and plan
+# Short: Monty Hall - the right answer drew protest letters - script and plan
 
-Draft for Hayk's review, 2026-11-28. Thinking-error strand. Script source: `beats.hy.json`.
-The doors are a mathematical thought game, not a reconstruction of an actual broadcast. No voice or render made.
+Revised for Hayk's review, 2026-11-28. Script source: `beats.hy.json`. No voice or render made.
 
 ## The idea in one paragraph
 
-The viewer chooses whether to stay or switch before learning the answer. Under explicitly stated rules, switching
-wins with probability 2/3 and staying with 1/3: switching wins precisely when the first choice was wrong. The host
-knows the prize location, always reveals an unchosen goat and always offers a switch; when both goats are available,
-the choice between them is fair. The showcase enumerates the equally likely prize placements. The single extension
-changes the host into an uninformed random opener: conditional on a goat appearing, the chances become equal.
-The local anchor is a hypothetical prize in drams, with no invented amount or claim about an Armenian game show.
+A columnist's correct switching answer drew critical letters, including many from writers with scientific
+doctorates. The story leads straight into the viewer's choice. In the explicitly defined three-door game,
+switching doubles the winning probability because it succeeds whenever the first choice was wrong. The host
+knows, must reveal an unchosen goat, must offer a switch, and chooses fairly when either goat is available.
+The showcase enumerates all three prize placements. The single extension and doubt beat changes the host to
+an uninformed random opener: after a goat happens to appear, the remaining chances are equal. It ends by
+returning to the known rule that makes switching advantageous. The dram prize is the local game adaptation.
 
 ## The script (Armenian)
 
 <!-- script:start -->
 
-10 beats, 1,517 characters (1,581 with numbers spelled out): ~107 s of speech, ~1:59 with pauses and the end tail, 10 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
+9 beats, 1,512 characters (1,575 with numbers spelled out): ~106 s of speech, ~1:59 with pauses and the end tail, 10 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).
 
-**1. hook.** Կփոխե՞ս դուռը։
+**1. hook.** Ճիշտ պատասխանը բողոքի նամակներ բերեց։
 
-**2. game.** Պատկերացրու՝ խաղում ես դրամով մրցանակի համար։ Կա 3 դուռ։ Մրցանակը հավասար հավանականությամբ կարող է լինել դրանցից յուրաքանչյուրի հետևում։ Մյուս 2 դռների հետևում այծեր են։ Ընտրում ես դուռը, բայց դեռ չես բացում։
+**2. letters.** Մի սյունակագիր գրեց՝ 3 դռան խաղում ընտրությունդ փոխելն ավելի շահավետ է։ Բողոքող նամակագիրներից շատերը գիտական աստիճան ունեին։ Տե՛ս՝ դու ո՞ր պատասխանը կտաս։
 
-**3. host_rules.** Հաղորդավարը գիտի՝ որտեղ է մրցանակը։ Նա միշտ բացում է քո չընտրած դռներից այծով դուռ և միշտ առաջարկում է փոխել ընտրությունդ։ Եթե այծով 2 դուռ ունի ընտրելու, ընտրում է պատահական՝ հավասար հավանականությամբ։
+**3. game.** Պատկերացրու՝ խաղում ես դրամով մրցանակի համար։ Կա 3 դուռ։ Մրցանակը հավասար հավանականությամբ կարող է լինել դրանցից յուրաքանչյուրի հետևում։ Մյուս 2 դռների հետևում այծեր են։ Ընտրում ես դուռը, բայց դեռ չես բացում։
 
-**4. choose.** Դու ընտրեցիր 1-ին դուռը։ Հաղորդավարը բացեց 3-րդը՝ այծ։ Մնում են քո դուռն ու 2-րդը։ Կմնա՞ս քո ընտրածի հետ, թե՞ կփոխես։ Հիմա որոշի՛ր։ *[pause 5 s]*
+**4. host_rules.** Հաղորդավարը գիտի՝ որտեղ է մրցանակը։ Նա միշտ բացում է քո չընտրած դռներից այծով դուռ և միշտ առաջարկում է փոխել ընտրությունդ։ Եթե այծով 2 դուռ ունի ընտրելու, ընտրում է պատահական՝ հավասար հավանականությամբ։
 
-**5. answer.** Այս կանոններով փոխելիս շահելու հավանականությունը 2/3 է, մնալիս՝ 1/3։ Փոխելը կրկնապատկում է հնարավորությունդ։ Բայց ինչո՞ւ, եթե փակ դռները հիմա 2-ն են։ *[pause 1 s]*
+**5. choose.** Դու ընտրեցիր 1-ին դուռը։ Հաղորդավարը բացեց 3-րդը՝ այծ։ Մնում են քո դուռն ու 2-րդը։ Կմնա՞ս քո ընտրածի հետ, թե՞ կփոխես։ Հիմա որոշի՛ր։ *[pause 5 s]*
 
-**6. three_cases.** Նայիր բոլոր 3 հավասարահավանական դեպքերին։ Սկզբում միշտ ընտրում ես 1-ին դուռը։ Եթե մրցանակն այնտեղ է, փոխելիս պարտվում ես։ Եթե մրցանակը մյուս դռներից որևէ մեկի հետևում է, հաղորդավարը բացում է մնացած այծով դուռը։ Փոխելիս շահում ես։
+**6. three_cases.** Նայի՛ր բոլոր 3 հավասարահավանական դեպքերին։ Սկզբում միշտ ընտրում ես 1-ին դուռը։ Եթե մրցանակն այնտեղ է, փոխելիս պարտվում ես։ Եթե մրցանակը մյուս դռներից որևէ մեկի հետևում է, հաղորդավարը բացում է մնացած այծով դուռը։ Փոխելիս շահում ես։
 
-**7. count.** Այս 3 դեպքից 2-ում սկզբում սխալ դուռ էիր ընտրել, և փոխելը փրկում է ընտրությունդ։ Մնալը շահում է միայն այն դեպքում, երբ հենց սկզբից գտել էիր մրցանակը։ Հաշվի՛ր սլաքները։ *[pause 2.5 s]*
+**7. count.** 3 դեպքից 2-ում սկզբում սխալ դուռ էիր ընտրել, և փոխելը փրկում է ընտրությունդ։ Փոխելիս շահելու հավանականությունը 2/3 է, մնալիս՝ 1/3։ Հնարավորությունդ կրկնապատկվեց։ Հաշվի՛ր շահող սլաքները։ *[pause 3 s]*
 
-**8. doubt.** Բայց այծ տեսնելը մի՞շտ է փոխելու պատճառ։ Ոչ։ Պատասխանը կախված է բացելու կանոնից։ Մեր հաշվարկում հաղորդավարն իմանալով է բացում այծով դուռը։
+**8. doubt.** Բայց այծ տեսնելը մի՞շտ է փոխելու պատճառ։ Եթե հաղորդավարը մրցանակի տեղը չգիտի, քո չընտրած դռներից մեկը պատահական է բացում ու պատահմամբ այծ է ցույց տալիս, մնում է 1/2 ու 1/2։ Նույն այծը, ուրիշ կանոն։ Մեր խաղում փոխելն օգնում է, որովհետև հաղորդավարն իմանալով է բացում դուռը։ *[pause 2 s]*
 
-**9. random_host.** Իսկ եթե նա մրցանակի տեղը չգիտի, պատահական բացում է քո չընտրած դռներից մեկը, և պատահմամբ այծ է դուրս գալիս, արդեն հավանականությունները հավասար են՝ 1/2 ու 1/2։ Նույն տեսարանը, ուրիշ կանոն։ *[pause 1.5 s]*
-
-**10. takeaway.** Հաջորդ անգամ, երբ թվա՝ մնացել է 2 տարբերակ, ուրեմն հավասար են, հարցրո՛ւ՝ ինչպե՞ս բացվեց դուռը։
+**9. takeaway.** Հաջորդ անգամ, երբ թվա՝ մնացել է 2 տարբերակ, ուրեմն հավասար են, հարցրո՛ւ՝ ինչպե՞ս բացվեց դուռը։
 
 <!-- script:end -->
 
-Armenian lint: **0 errors, 0 hints**, initial and final runs. All `text`, `screen` and `screen_small` strings were
-extracted into `%TEMP%/ughegh_monty_hall_script_review.txt` outside the repository and checked with `--style`.
-No hints retained. Manual polish followed the checklist; U1 singular address is retained.
+CHECK_RECORD_PLACEHOLDER
 
-`plan_script.py monty_hall`: generated length line above, under the default ceiling.
-`validate_episode.py monty_hall --stage script`: **PASS**. The unchanged tool entry points ran through `runpy`
-with console-only logging and bytecode disabled, avoiding their default writes to repository-level `logs/`.
-Only files in the four authorized episode folders were written inside the repository.
+## Revision (2026-11-28)
+
+- **Missing human story:** replace the bare door-choice hook with protest letters following a correct answer;
+  add vos Savant's column and the scientific-degree signatories. Names and 1990/1991 dates are in `screen_small`.
+  The medium-confidence report becomes "many", with no exact letter/PhD total or invented quotation.
+- **Preserve the editor's positives:** retain the full host protocol, fair tie-break, three prize placements
+  and uninformed-host extension. The illustrated puzzle is not presented as actual television-show policy.
+- **Dry/repetitive exposition:** merge the separate answer into the count, and the former doubt/random-host
+  pair into one beat. Nine beats follow the story and calculation. The caveat is spoken once and ends on the
+  original informed-host result; reconstruction labels stay on screen.
+- **Hook, interaction, closing:** first sentence states a concrete consequence of the right answer; the viewer
+  chooses before the reveal, counts winning arrows and compares procedures during 10 s of action pauses.
+  One closing voices the screen question. The dram prize stays inside the game.
+- **Owner wording:** S1 and S2 remain open; neither was treated as answered or rewritten merely by ear.
 
 ## Facts (checked)
 
-Fact-sheet basis: `_knowledge/short_videos/facts_codex_1_statistics_2026-11-28.md`, C3. All sheet-rated facts used
-are **high confidence**; no medium- or low-confidence claims are used. Sources below attach to the current beats,
-not to unused anecdotes. Core mathematical results also checked directly in Rosenthal's manuscript on 2026-11-28.
+Basis: `_knowledge/short_videos/facts_codex_1_statistics_2026-11-28.md`, **C3**. Confidence is attached below.
+The letter report was reopened in this revision; no new inspection of an original Parade scan is claimed.
 
-- **`game`, `host_rules`, `choose`:** the standard problem has 3 doors, equally likely prize locations, a knowledgeable
-  host and an unchosen losing-door reveal followed by a switch offer. The narration explicitly makes both actions
-  compulsory. The fair tie-break is needed for the stated probabilities after a particular numbered door opens.
-  [Rosenthal, published 2008, manuscript pp. 1-4](https://probability.ca/jeff/writing/montyfall.pdf);
-  [Rosenhouse, standard formalization and host policy](https://api.pageplace.de/preview/DT0400.9780199709908_A35484108/preview-9780199709908_A35484108.pdf).
-- **`answer`, `three_cases`, `count`:** staying wins with probability 1/3, switching with 2/3. Switching succeeds
-  whenever the initial choice was wrong. Doubling is the ratio of these probabilities. The 3-row display enumerates
-  possible placements; it does not promise exactly 2 wins in every 3 real plays.
-  [Rosenthal, pp. 1-4](https://probability.ca/jeff/writing/montyfall.pdf).
-- **`doubt`, `random_host`:** when an uninformed host opens an unchosen door uniformly at random and it happens to
-  reveal a goat, each remaining door has conditional probability 1/2. Both the random procedure and the conditioning
-  event are voiced. This is a different protocol, not a retraction of the standard answer.
-  [Rosenthal, Monty Fall and its calculation](https://probability.ca/jeff/writing/montyfall.pdf).
-- **Local adaptation, explicitly hypothetical:** replace the original car with an unnumbered cash prize. Only the
-  prize icon changes; no probability or rule changes. The dram is Armenia's currency, independently checked against
-  the [Central Bank's banknotes page](https://www.cba.am/en/banknotes-in-circulation). This is not a documented local
-  contest, and no prize amount is introduced.
-- **Editorial inference, `takeaway`:** the revealing procedure matters to the inference. This is the lesson drawn
-  from the two verified protocols, not a claim that switching always helps.
-  [Rosenthal's comparison](https://probability.ca/jeff/writing/montyfall.pdf).
+- **NEW, high — `hook`, `letters`:** vos Savant's Parade column appeared on **9 September 1990** and answered
+  that switching is advantageous. Correct under this video's defined protocol; the original left parts implicit.
+  [Rosenhouse, pp. 36-37](https://faculty.winthrop.edu/abernathyk/Monty%20Hall%20Problem.pdf).
+- **NEW, medium — `hook`, `letters`:** critical letters followed; many bore PhD signatures. The **21 July 1991**
+  report gives approximate totals, not an audited census. Voice uses only "many" and "scientific degree", never
+  "exactly 1,000 mathematicians". Drawn envelopes encode no count.
+  [Tierney, pp. 1-2](https://academicweb.nd.edu/~rwilliam/stats1/appendices/Monty-NYTimes.pdf).
+- **High — `game`, `host_rules`, `choose`:** three equally likely prize locations; a knowledgeable host always
+  opens an unchosen goat and always offers a switch. Fair choice between available goats supports the usual
+  probabilities after a particular numbered door opens. Actual show policy could differ.
+  [Rosenthal, 2008, pp. 1-4](https://probability.ca/jeff/writing/montyfall.pdf);
+  [Rosenhouse, formalization](https://api.pageplace.de/preview/DT0400.9780199709908_A35484108/preview-9780199709908_A35484108.pdf).
+- **High — `three_cases`, `count`:** switching succeeds whenever the first choice was wrong: **2/3**, versus
+  **1/3** for staying, hence doubling. Rows enumerate possibilities, not a guarantee of two wins per three plays.
+  [Rosenthal](https://probability.ca/jeff/writing/montyfall.pdf).
+- **High — `doubt`:** an uninformed host chooses an unchosen door uniformly at random; conditional on a goat,
+  each remaining door has probability **1/2**. Procedure and conditioning are voiced.
+  [Rosenthal, Monty Fall](https://probability.ca/jeff/writing/montyfall.pdf).
+- **Local adaptation, not an empirical finding:** an unnumbered dram prize changes the icon, not probabilities.
+  No Armenian show, amount or study is asserted. Retained currency reference:
+  [Central Bank of Armenia](https://www.cba.am/en/banknotes-in-circulation).
+- **Editorial inference — `takeaway`:** revealing procedure matters, not a universal recommendation to switch.
+  [Rosenthal's two protocols](https://probability.ca/jeff/writing/montyfall.pdf).
 
-Excluded: letter totals, PhD signatures, the Erdős recollection, student switching rates and claims that the actual
-television show always used these rules. No fact depends on those medium-confidence anecdotes.
+Excluded: exact letter totals, Erdos recollection, student switching rates and actual-show generalizations.
+The PhD claim retains medium confidence despite the cautious quantifier.
 
 ## Animation plan (showcase)
 
-**Showcase: choose first, then see every starting possibility (`choose` through `count`).** Keep the warm-white
-doors on the series' near-black background, orange for the selected door and winning paths, red for losing paths.
-The thought-game label stays visible. Door 1 is selected, door 3 opens onto a goat and the viewer gets a **5 s**
-silent decision hold with no answer visible. This is the longest pause, inside the showcase. Only after it finishes
-do the 1/3 and 2/3 labels appear. Then show the complete case diagram:
+**Showcase: decide, enumerate, count (`choose` through `count`).** Three original doors remain visible from
+story into game. Use an unnumbered dram envelope. Keep the thought-game tag on game scenes and
+`վերակազմություն` on drawn column/letter scenes. No counterfeit scan, fabricated quote or counted envelope pile.
+
+Door 1 is selected; door 3 reveals a goat. Give **5 s** to choose, the longest pause, without answer/probabilities.
+Then enumerate:
 
 | Prize behind | Initial choice | Host reveals | Stay | Switch |
 |---|---|---|---|---|
-| Door 1 | Door 1 | Door 2 or 3, each equally likely | Win | Lose |
+| Door 1 | Door 1 | Door 2 or 3, equally likely | Win | Lose |
 | Door 2 | Door 1 | Door 3 | Lose | Win |
 | Door 3 | Door 1 | Door 2 | Lose | Win |
 
-The first row's two legal reveals are branches of the same prize placement, not extra equally weighted prize
-placements. Keep each row's total probability 1/3. At `count`, hold the complete diagram for **2.5 s**, letting the
-viewer count the winning paths. No invented simulated trial count, fluctuating win total or claim about a particular
-run of games. A **1 s** answer pause and **1.5 s** random-host pause bring marked silence to **10 s**.
+Each row has weight 1/3; the first row's reveal branches are not extra equal-weight placements. At `count`,
+introduce 1/3 and 2/3 and hold **3 s** for counting arrows. No invented simulation count.
 
-- **`hook`, `game`:** closed doors and an unnumbered dram prize envelope appear immediately; the first spoken
-  sentence is the puzzle. Reveal alternate hidden arrangements as possibilities, not actual prizes being moved.
-- **`host_rules`:** a private knowledge card and compulsory-reveal/offer arrows make the host's information visible.
-  Show the fair choice when either goat can legally be revealed.
-- **`doubt`, `random_host`:** reset to a visibly different host without the knowledge card. Show the uniformly random
-  unchosen-door openings, including prize-reveal paths; filter explicitly to goat-reveal paths before showing 1/2
-  and 1/2. Do not silently treat a knowing host as an uninformed one.
-- **`takeaway`:** close on the opening hand and knowledge card. The narration says the screen phrase. No summary
-  card. Every beat's first frame already contains an object named in that beat.
+- **Story:** column/envelopes beside doors from frame 0; names/dates on source line. No claim all critics were mathematicians.
+- **Rules:** knowledge card and compulsory reveal/offer arrows stay visible, with fair choice between two goats.
+- **Single extension/doubt:** distinguish the uninformed host; show uniformly random openings including prize
+  reveals, then explicitly retain goat reveals. Hold **2 s** to compare; finish on the original informed host.
+  The three action holds total **10 s**.
+- **Closing:** stay on the opening hand; voice says the screen question. No recap. Each beat starts on a named object.
 
 ## Images
 
@@ -115,8 +119,7 @@ drams, not an image of a numbered banknote. No downloaded assets or historical s
 
 ## Questions for Hayk
 
-- **S1, wording:** keep «փոխելը փրկում է ընտրությունդ», or prefer the more literal «փոխելիս շահում ես»? The draft
-  keeps the former; this is an owner wording choice, not a rule-based correction.
-- **S2, closing:** keep «ինչպե՞ս բացվեց դուռը», or make the host's action explicit with «հաղորդավարն ինչպե՞ս ընտրեց
-  բացվող դուռը»? The shorter question is currently voiced and shown.
-
+- **S1, wording (still open):** keep «փոխելը փրկում է ընտրությունդ», or prefer «փոխելիս շահում ես»? The first
+  remains in `count`; this is an owner choice, not an identified error.
+- **S2, closing (still open):** keep «ինչպե՞ս բացվեց դուռը», or make the host explicit with
+  «հաղորդավարն ինչպե՞ս ընտրեց բացվող դուռը»? The shorter wording remains voiced and shown.
