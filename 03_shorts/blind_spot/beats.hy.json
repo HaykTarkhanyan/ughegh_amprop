@@ -1,0 +1,67 @@
+[
+  {
+    "key": "hook",
+    "text": "Կարո՞ղ ես կորցնել այս կետը։",
+    "screen": "Կարո՞ղ ես կորցնել այս կետը",
+    "visual": "From frame 0, show a black dot on the left and a cross on the right on a light stationary field. Never erase the dot digitally. The hook text sits outside the horizontal test strip."
+  },
+  {
+    "key": "local_setup",
+    "text": "Երևանում ես, թե հեռու՝ փորձիր հենց հեռախոսիդ էկրանին։ Ձախում կետն է, աջում՝ խաչը։ Հեռախոսը պահի՛ր աչքերիդ բարձրությամբ՝ մոտավորապես պարզած ձեռքիդ հեռավորության վրա։",
+    "screen_small": "Փորձը՝ Exploratorium",
+    "visual": "From frame 0, keep the dot-left/cross-right test field stationary, with a small phone-at-eye-level diagram outside it. The local reference is the viewer's hypothetical setting, not a study in Yerevan. Keep the symbols well inside the usable width of a portrait phone."
+  },
+  {
+    "key": "showcase",
+    "text": "Փակի՛ր աջ աչքդ։ Ձախ աչքով նայի՛ր միայն խաչին։ Հեռախոսը դանդաղ մոտեցրո՛ւ դեմքիդ՝ հայացքդ խաչից չշեղելով։ Մի պահ կետը կարող է անհետանալ։ Կարող ես կանգնեցնել տեսանյութը և շարունակել փորձը։",
+    "screen": "Աջ աչքը՝ փակ · ձախով՝ խաչին",
+    "screen_small": "Փորձը՝ Exploratorium",
+    "visual": "From frame 0, show the exact same dot-left/cross-right layout. Keep the field, contrast, dot, cross, camera and text entirely stationary throughout the narration and 7-second silent hold. No countdown, pan, scaling, highlight pulse or captions may enter the test strip. The viewer moves the real phone, not an animated phone. Freezing the video must leave a usable test image.",
+    "pause_after": 7
+  },
+  {
+    "key": "notice",
+    "text": "Եթե կետը կորավ, մի՛ փնտրիր այն հայացքով։ Շարունակի՛ր նայել խաչին։ Էկրանի կետը չենք ջնջում։ Հեռավորությունը փոխելիս այն կարող է նորից երևալ։ Պետք եղած հեռավորությունը կախված է էկրանից, նշանների հեռավորությունից ու քեզնից։",
+    "screen_small": "Փորձը՝ Exploratorium",
+    "visual": "From frame 0, retain the identical physical test image, with any explanatory labels outside the strip. Never hide or fade the dot to mimic what the viewer might perceive. Do not prescribe one universal working distance."
+  },
+  {
+    "key": "anatomy",
+    "text": "Յուրաքանչյուր աչք կույր բիծ ունի։ Ցանցաթաղանթի այդ մասով տեսողական նյարդի թելերը դուրս են գալիս աչքից։ Այնտեղ լույսն ընկալող բջիջներ չկան։ Երբ կետի պատկերը հենց այդտեղ է ընկնում, այն չես տեսնում։",
+    "screen": "Կույր բիծ",
+    "screen_small": "Meermeier et al., 2023 · սխեմա",
+    "visual": "From frame 0, show an eye cross-section with the optic nerve exit already visible. Trace the dot's ray to the receptor-free optic disc while fixation is elsewhere. Distinguish the optic disc from the fovea and do not draw a literal empty hole in the eyeball."
+  },
+  {
+    "key": "filling",
+    "text": "Բայց սովորաբար այդ տեղում սև բիծ չես տեսնում։ Ուղեղը կարող է շրջապատի պատկերով լրացնել բացակայող մասը։ Եվ դա անում է նաև այն ժամանակ, երբ միայն 1 աչքով ես նայում։",
+    "screen_small": "He & Davis, 2001 · սխեմա",
+    "visual": "From frame 0, show the one-eye viewing condition beside a separate conceptual diagram of a plain surrounding field continuing across the blind spot. Label the diagram as a scheme; it is not a recording of the viewer's experience."
+  },
+  {
+    "key": "other_eye",
+    "text": "Երբ նայում ես 2 աչքով, մյուս աչքն էլ կարող է տեսնել այդ շրջանը։ Բայց մեր փորձի ժամանակ աջ աչքդ փակ էր։ Ուրեմն բացը չնկատելը միայն մյուս աչքի օգնությամբ չի բացատրվում։",
+    "screen_small": "Magnussen et al., 2007 · He & Davis, 2001 · սխեմա",
+    "visual": "From frame 0, show the two-eye view as a schematic pair of fields, then return to the already established closed-right-eye condition. Keep binocular coverage and monocular filling-in as distinct mechanisms."
+  },
+  {
+    "key": "line_test",
+    "text": "Հիմա կետի ու խաչի միջով գիծ անցկացնենք։ Կրկին աջ աչքդ փակի՛ր, ձախով նայի՛ր խաչին ու հեռավորությունը փոխի՛ր։ Երբ կետն անհետանա, գիծը կարող է շարունակական թվալ։",
+    "screen": "Կետը կորավ, գիծը շարունակվո՞ւմ է",
+    "screen_small": "Փորձը՝ Exploratorium",
+    "visual": "From frame 0, show the original dot-left/cross-right field with a straight line already running through both symbols and extending beyond them. This is the single extension to the showcase. Hold this complete image absolutely still during speech and pause; never erase a line segment or the dot digitally.",
+    "pause_after": 3
+  },
+  {
+    "key": "doubt",
+    "text": "Մի՞թե ուղեղը լրացնելիս պարզում է՝ այդ տեղում իրականում ինչ կա։ Ոչ։ Շրջապատից լրացնելը թաքնված առարկայի մանրամասները վերականգնել չէ։ Փորձը ցույց է տալիս, որ պատկերը կարող է ամբողջական թվալ՝ առանց այդ մասից լույսի ազդանշանի։",
+    "screen_small": "He & Davis, 2001 · Meermeier et al., 2023 · սխեմա",
+    "visual": "From frame 0, keep the complete test line visible beside a small separate conceptual panel contrasting missing retinal input with perceived continuity. Do not claim recovery of the hidden object's true details."
+  },
+  {
+    "key": "takeaway",
+    "text": "Տեսածդ նաև ուղեղիդ լրացրածն է։",
+    "screen": "Տեսածդ նաև ուղեղիդ լրացրածն է",
+    "visual": "From frame 0, return to the original dot-left/cross-right scene with both marks physically present and the closing text outside the test strip. Speak the screen line verbatim; finish in the scene with no summary card."
+  }
+]

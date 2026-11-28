@@ -1,0 +1,60 @@
+[
+  {
+    "key": "hook",
+    "text": "Ինչո՞ւ է ափսեդ պտտվում։ Պատկերացրո՛ւ՝ տոլմա ես տաքացնում միկրոալիքային վառարանում։ Պտույտը ճաշդ անտեսանելի ալիքների տարբեր մասերով է անցկացնում։",
+    "screen": "նկարազարդում · Ինչո՞ւ է ափսեդ պտտվում",
+    "screen_small": "Michael Vollmer, 2004",
+    "visual": "Frame 0 shows a drawn plate of tolma on a rotating microwave turntable, tagged 'նկարազարդում'. This is an imagined kitchen scene, not a recorded experiment. Reveal a faint field overlay without a measured temperature pattern."
+  },
+  {
+    "key": "field",
+    "text": "Ներսում միկրոալիքներ են՝ էլեկտրամագնիսական ալիքներ։ Դրանց էլեկտրական դաշտն անընդհատ փոխում է ուղղությունը։ Սովորական կենցաղային վառարանների հաճախությունը մոտ 2,45 գիգահերց է։",
+    "screen": "Մոտ 2,45 գիգահերց",
+    "screen_small": "Michael Vollmer, 2004 · CCOHS, 2024",
+    "visual": "Frame 0 shows electric-field arrows inside the cavity. Reverse them in an explicitly slowed schematic, not at an allegedly observable real rate. Keep the nominal 2.45 GHz value separate from the animation speed.",
+    "pause_after": 1
+  },
+  {
+    "key": "water",
+    "text": "Ճաշի ջրի մոլեկուլները դրան արձագանքում են։ Էլեկտրական լիցքը նրանց մեջ անհավասար է բաշխված, և դաշտը փորձում է դրանք շրջել իր ուղղությամբ։ Բայց հեղուկի մեջ մոլեկուլները մենակ չեն՝ հարևանների հետ փոխազդում են։",
+    "screen": "Պարզեցված պատկեր",
+    "screen_small": "Michael Vollmer, 2004 · Christopher S. Baird, 2014",
+    "visual": "Frame 0 shows a crowded schematic liquid with molecular dipoles and electric-field arrows. Mark opposite partial-charge ends without pretending each molecule is a free propeller. Neighbours interact and orientations lag behind the changing field."
+  },
+  {
+    "key": "heat",
+    "text": "Դաշտից ստացած էներգիայի մի մասը վերածվում է ջերմության։ Այդպես ճաշը տաքանում է։ Ջուրը մեծ դեր ունի, բայց միակ նյութը չէ, որ կարող է կլանել էներգիան։ Լուծված աղերի իոններն էլ կարող են մասնակցել տաքացմանը։",
+    "screen_small": "Michael Vollmer, 2004 · Christopher S. Baird, 2014",
+    "visual": "Frame 0 continues the interacting liquid diagram; energy arrows become a qualitative heat tint. Include dissolved-ion symbols beside water dipoles, without fabricated absorption percentages or counts."
+  },
+  {
+    "key": "hot_spots",
+    "text": "Հիմա նայի՛ր ամբողջ վառարանին։ Ալիքները մետաղական պատերից անդրադառնում ու իրար են գումարվում։ Տեղեր կան, որտեղ դաշտի տատանումն ուժեղ է, տեղեր՝ թույլ։ Դրա համար նույն ճաշի տարբեր մասերը կարող են տարբեր չափով տաքանալ։",
+    "screen": "Պարզեցված պատկեր · ուժեղ / թույլ դաշտ",
+    "screen_small": "Michael Vollmer, 2004",
+    "visual": "Frame 0 shows the metal cavity and opposed reflected-wave arrows. Showcase begins: build a simple standing-field section with strong and weak oscillation regions, then show an illustrative plate intersecting them. Both positive and negative antinode regions produce heating. No universal hot-spot spacing or invented temperature scale.",
+    "pause_after": 2
+  },
+  {
+    "key": "turntable",
+    "text": "Պտտվող ափսեն ճաշը տեղափոխում է այդ տարբեր տեղերով։ Հետևի՛ր տոլմայի մի կտորին՝ հիմա ուժեղ դաշտում է, հետո՝ ավելի թույլ։ Պտույտն օգնում է, որ ճաշի նույն մասը միշտ նույն տեղում չմնա։",
+    "screen": "Պարզեցված պատկեր · հետևի՛ր նշված կտորին",
+    "screen_small": "Michael Vollmer, 2004",
+    "visual": "Frame 0 retains the field map and highlights a tolma piece already on a non-central circular path. Continue the same showcase by rotating it through stronger and weaker regions. Use a schematic nonuniform field map and label it simplified; never imply every piece samples identical fields. Hold motion through the longest pause so the viewer tracks the marked piece.",
+    "pause_after": 4
+  },
+  {
+    "key": "doubt",
+    "text": "Ուրեմն պտտվելուց հետո ամեն տեղ նույնքան տա՞ք է։ Պարտադիր չէ։ Իրական վառարանի դաշտն ավելի բարդ է, և ճաշի ձևն ու բաղադրությունն էլ են ազդում։ Պտույտը մեղմում է անհավասար տաքացումը, բայց լիովին չի վերացնում։",
+    "screen_small": "Michael Vollmer, 2004",
+    "visual": "Frame 0 shows the rotating plate with a still-uneven qualitative heat tint. Dissolve the simple field map into a more complex schematic pattern, not simulated or measured data. Keep the claim limited to improved averaging.",
+    "pause_after": 2
+  },
+  {
+    "key": "closing",
+    "text": "Հաջորդ անգամ ափսեի պտույտին նայելիս հիշի՛ր՝ ճաշդ անցնում է անտեսանելի ալիքների միջով։",
+    "screen": "նկարազարդում · Ճաշդ անցնում է անտեսանելի ալիքների միջով",
+    "visual": "Frame 0 returns to the drawn tolma plate from the opening, retaining 'նկարազարդում'. Fade the field overlay while the plate continues turning and the narrator says the closing screen line; no summary card.",
+    "pause_after": 1
+  }
+]

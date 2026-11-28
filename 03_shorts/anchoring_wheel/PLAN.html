@@ -1,0 +1,70 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Short: Anchoring - a wheel moves the groups&#x27; guesses - script and plan</title><style>
+:root { color-scheme: light dark; --text: #1f2328; --muted: #59636e; --line: #d1d9e0; --soft: #f6f8fa; --link: #0033a0; }
+@media (prefers-color-scheme: dark) { :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --soft: #161b22; --link: #79a6ff; } }
+body { margin: 0 auto; max-width: 980px; padding: 24px 16px 64px; color: var(--text); background: Canvas;
+       font: 16px/1.6 system-ui, "Segoe UI", sans-serif; }
+a { color: var(--link); }
+nav { background: var(--soft); border: 1px solid var(--line); border-radius: 8px; padding: 10px 18px; margin: 16px 0 24px; }
+details { border-top: 1px solid var(--line); padding: 8px 0; }
+summary { cursor: pointer; font-size: 1.3em; font-weight: 650; padding: 4px 0; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .94em; }
+th, td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: var(--soft); }
+code { background: var(--soft); border-radius: 4px; padding: 1px 5px; font-size: .9em; }
+pre { background: var(--soft); border-radius: 6px; padding: 12px; overflow-x: auto; }
+pre code { padding: 0; }
+img { max-width: 100%; }
+</style></head><body><h1 id="short-anchoring---a-wheel-moves-the-groups-guesses---script-and-plan">Short: Anchoring - a wheel moves the groups' guesses - script and plan</h1>
+<p>Draft for Hayk's review, 2026-11-28. Thinking-error strand. Script source: <code>beats.hy.json</code>. The famous outcomes are group medians, not individual changes. No voice or render made.</p>
+<nav><strong>Contents</strong><ul><li><a href="#the-idea-in-one-paragraph">The idea in one paragraph</a></li><li><a href="#the-script-armenian">The script (Armenian)</a></li><li><a href="#facts-checked">Facts (checked)</a></li><li><a href="#animation-plan-showcase">Animation plan (showcase)</a></li><li><a href="#images">Images</a></li><li><a href="#questions-for-hayk">Questions for Hayk</a></li></ul></nav><details open id="the-idea-in-one-paragraph"><summary>The idea in one paragraph</summary>
+<p>An irrelevant starting number can pull subsequent numerical estimates toward it. Participants saw a wheel number, compared a historical UN-membership percentage with it, then estimated that percentage. The groups shown 10 and 65 had median estimates of 25% and 45%. The showcase puts these two reported group results on identical scales without inventing individual responses. The doubt beat limits the claim to the measured groups. The one extension is a dram-denominated price tag, explicitly an everyday illustration rather than an Armenian experiment; unlike the wheel, a price tag may contain relevant product information.</p>
+</details><details open id="the-script-armenian"><summary>The script (Armenian)</summary>
+<!-- script:start -->
+
+<p>10 beats, 1,458 characters (1,502 with numbers spelled out): ~102 s of speech, ~1:53 with pauses and the end tail, 9 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).</p>
+<p><strong>1. hook.</strong> Անիվը փոխեց գուշակությունները։</p>
+<p><strong>2. question.</strong> Փորձի հարցը սա էր՝ ՄԱԿ-ի անդամ երկրների քանի՞ տոկոսն են աֆրիկյան երկրները։ Նախքան պատասխանելը մասնակիցներն անիվի պտույտ էին տեսնում։ Անիվը երկրների մասին ոչինչ չէր հայտնում։</p>
+<p><strong>3. wheel.</strong> Անիվը համարակալված էր 0-ից 100։ Բայց այն այնպես էին սարքել, որ խմբից կախված՝ կանգ առներ 10-ի կամ 65-ի վրա։ Թիվը թվում էր պատահական, իսկ հետազոտողները նախապես որոշել էին այն։</p>
+<p><strong>4. procedure.</strong> Մարդիկ նախ ասում էին՝ իրենց փնտրած տոկոսը ցուցադրված թվից բա՞րձր է, թե՞ ցածր։ Հետո տալիս էին իրենց գնահատականը։ Հարցը նույնն էր, անիվի թիվը՝ տարբեր։</p>
+<p><strong>5. showcase.</strong> 10 տեսած խմբի պատասխանների մեդիանը 25 տոկոս էր։ 65 տեսած խմբինը՝ 45 տոկոս։ Կողք կողքի նայիր՝ անիվի ավելի մեծ թվին հետևում էր նաև ավելի մեծ գնահատականը։ <em>[pause 5 s]</em></p>
+<p><strong>6. median.</strong> Մեդիանը պատասխանները փոքրից մեծ դասավորելիս կենտրոնը ցույց տվող թիվն է։ Այսինքն՝ այստեղ համեմատում ենք խմբերը։ Չենք չափել, թե նույն մարդն անիվից առաջ ու հետո որքան փոխեց իր կարծիքը։</p>
+<p><strong>7. anchor.</strong> Սա խարսխման ազդեցությունն է։ Առաջին թիվը կարող է խարսխի պես պահել հետագա գնահատականդ իր մոտ, նույնիսկ երբ հարցի պատասխանի մասին տեղեկություն չի տալիս։ <em>[pause 1 s]</em></p>
+<p><strong>8. doubt.</strong> Բայց այս թվերից չես իմանա՝ կոնկրետ դու որքան կազդվես։ Դրանք չեն նշանակում, թե ամեն մարդ նույնքան փոխեց պատասխանը։ Չափվածը տարբեր թվեր տեսած խմբերի պատասխանների տարբերությունն է։</p>
+<p><strong>9. local_price.</strong> Հիմա պատկերացրու դրամով գնապիտակ։ Մինչ քո գնահատականը տալը, արդեն վաճառողի թիվն ես տեսել։ Սա առօրյա օրինակ է, ոչ Հայաստանում արված փորձի արդյունք։ Գնապիտակն էլ, ի տարբերություն անիվի, կարող է ապրանքի մասին տեղեկություն տալ։ <em>[pause 2 s]</em></p>
+<p><strong>10. takeaway.</strong> Թիվը գնահատելիս հարցրո՛ւ՝ առաջին թիվը որտեղի՞ց եկավ։ <em>[pause 1 s]</em></p>
+<!-- script:end -->
+
+<p>Armenian lint: <strong>0 errors, 0 hints</strong>, initial and final runs. All <code>text</code>, <code>screen</code> and <code>screen_small</code> strings were extracted into <code>%TEMP%/ughegh_anchoring_wheel_script_review.txt</code> outside the repository and checked with <code>--style</code>. No hints retained. Manual polish followed the checklist; U1 singular address is retained. «մեդիան» and «գնահատական» follow the glossary; the missing anchoring term is left as S1, not recorded as an owner decision.</p>
+<p><code>plan_script.py anchoring_wheel</code>: generated length line above, under the default ceiling. <code>validate_episode.py anchoring_wheel --stage script</code>: <strong>PASS</strong>. The unchanged tool entry points ran through <code>runpy</code> with console-only logging and bytecode disabled, avoiding their default writes to repository-level <code>logs/</code>. Only files in the four authorized episode folders were written inside the repository.</p>
+</details><details open id="facts-checked"><summary>Facts (checked)</summary>
+<p>Fact-sheet basis: <code>_knowledge/short_videos/facts_codex_2_mind_2026-11-28.md</code>, C4. All sheet-rated facts used are <strong>high confidence</strong>; no medium- or low-confidence claims are used. The 1974 paper's procedure and medians were also read directly on the web on 2026-11-28. No direct replication of the full wheel procedure is claimed.</p>
+<ul>
+<li><strong><code>question</code>, <code>procedure</code>:</strong> the task involved a wheel-generated number, a higher/lower comparison, then a percentage estimate. The intended denominator is all UN member countries: what percentage were African? The Armenian wording makes this explicit. It does not ask what percentage of African countries belonged to the UN. The question is historical; the video supplies no present-day membership count or correct percentage. <a href="https://pages.ucsd.edu/~mckenzie/TverskyKahneman1974Science.pdf">Tversky &amp; Kahneman, 1974, p. 1128</a>.</li>
+<li><strong><code>wheel</code>:</strong> the 0-100 wheel and conditions 10/65 are sheet-rated high. The deliberate stopping arrangement is documented in Shleifer's review of Kahneman's retrospective; the original short article gives less apparatus detail. This is a secondary procedural account, not a newly recovered lab protocol. The drawn stop mechanism is explanatory only. <a href="https://shleifer.scholars.harvard.edu/sites/g/files/omnuum10626/files/shleifer/files/kahneman_review_jel_final.pdf">Shleifer, 2012</a>; <a href="https://pages.ucsd.edu/~mckenzie/TverskyKahneman1974Science.pdf">original paper, p. 1128</a>.</li>
+<li><strong><code>showcase</code>, <code>median</code>, <code>doubt</code>:</strong> median estimates were 25% for the group given 10 and 45% for the group given 65. These are between-group results, not a 20-point change measured within every individual. No participant count, dispersion, individual trajectories or raw response distribution is provided or invented. <a href="https://pages.ucsd.edu/~mckenzie/TverskyKahneman1974Science.pdf">Tversky &amp; Kahneman, p. 1128</a>.</li>
+<li><strong><code>median</code>, explanatory definition:</strong> a median describes the centre of observations sorted by value. This plain wording does not substitute the arithmetic mean; for an even number of observations the conventional median averages the central pair. The narration does not introduce a numerical example. This definition was independently verified in the <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm">NIST handbook, Measures of Location</a>.</li>
+<li><strong><code>hook</code>, <code>anchor</code>:</strong> the original paper identifies anchoring as estimates biased toward initial values. The voice says it <strong>can</strong> influence later estimates, not that any number always controls every person. The anchor image is a metaphor, not a demonstrated mechanism in the brain. <a href="https://pages.ucsd.edu/~mckenzie/TverskyKahneman1974Science.pdf">Tversky &amp; Kahneman, p. 1128</a>.</li>
+<li><strong><code>local_price</code>:</strong> an original illustration, not a claim of a tested Armenian price effect. No amount, discount, effect size, actual purchase or domestic study is asserted. The caveat that prices can be informative follows the sheet's distinction between the irrelevant wheel and listing-price anchors. <a href="https://www.smallprojectsbureau.com/wp-content/uploads/2020/01/northcraft_neale.pdf">Northcraft &amp; Neale, 1987, house-information/listing-price task</a>. Only the currency identity is independently checked: <a href="https://www.cba.am/en/banknotes-in-circulation">Central Bank of Armenia, banknotes</a>.</li>
+<li><strong><code>takeaway</code>:</strong> asking where the first number came from is the video's practical reflection. It is not presented as an experimentally established cure for anchoring. <a href="https://pages.ucsd.edu/~mckenzie/TverskyKahneman1974Science.pdf">Conceptual basis: Tversky &amp; Kahneman</a>.</li>
+</ul>
+<p>Excluded: loaded-dice sentencing results, house-price outcome figures and Many Labs statistics. Many Labs used different anchoring tasks, not this wheel/UN procedure; it cannot fill the fact sheet's wheel-specific replication gap. The original report's limited methodological detail remains a limitation, not a reason to invent it.</p>
+</details><details open id="animation-plan-showcase"><summary>Animation plan (showcase)</summary>
+<p><strong>Showcase: two wheel conditions, two group medians (<code>wheel</code> through <code>median</code>).</strong> From the first wheel frame, keep «վերակազմություն» visible. Separate the 10 and 65 conditions, ask the same comparison question and then reveal the 25% and 45% median markers on identical 0-100 percentage scales. Call them <strong>group medians</strong> in the graphic as well as the voice. Do not slide one person's answer from low to high; do not create fake response dots, sample sizes, means or error bars. Keep the markers fixed during the <strong>5 s</strong> silent showcase hold so the viewer can compare the input/output pairs. The counts and values all come from the sheet; no simulation is needed.</p>
+<ul>
+<li><strong><code>hook</code>, <code>question</code>:</strong> wheel and empty group-result space already visible; the historical question has the correct UN-member denominator. No claim that the wheel informs the answer.</li>
+<li><strong><code>procedure</code>:</strong> higher/lower comparison precedes the estimate. The stop mechanism is a conceptual reconstruction with no assertion about the historical machinery's design.</li>
+<li><strong><code>median</code>, <code>anchor</code>:</strong> retain the reported group results, emphasize their group labels, then add the anchor metaphor. No invented ordered list of individual responses. A <strong>1 s</strong> pause lets the metaphor settle.</li>
+<li><strong><code>doubt</code>:</strong> an empty viewer-answer card appears beside the group markers, with no predicted individual effect. Finish on what was measured: a difference between groups exposed to different starting numbers.</li>
+<li><strong><code>local_price</code>:</strong> original price tag says «գին՝ … դրամ», explicitly an everyday illustration. Hold <strong>2 s</strong> for the viewer to consider their own estimate. The ellipsis avoids inventing a price or implying a measured effect.</li>
+<li><strong><code>takeaway</code>:</strong> stay on the tag and trace it to its source; voice says the closing screen phrase. <strong>1 s</strong> of silent pause here makes <strong>9 s</strong> total. No recap card. Every beat starts on an object or result it discusses.</li>
+</ul>
+</details><details open id="images"><summary>Images</summary>
+<p>None needed; the C4 sheet recommends original wheel and chart graphics. The dram price tag is drawn from scratch, with no store logo, amount or banknote. No assets downloaded.</p>
+</details><details open id="questions-for-hayk"><summary>Questions for Hayk</summary>
+<ul>
+<li><strong>S1, missing glossary term:</strong> «խարսխման ազդեցություն» for anchoring is not in the supplied glossary or owner answers. Keep it, or prefer «խարսխում»? The current term remains provisional in <code>anchor</code>.</li>
+<li><strong>S2, hook:</strong> «գուշակությունները» or «գնահատականները» for the hook? The former is currently used for the viewer's first encounter; the measured answers are called «գնահատական» in the explanation.</li>
+<li><strong>S3, median explanation:</strong> keep «կենտրոնը ցույց տվող թիվն է», or prefer a different spoken explanation of «մեդիան»? The term itself matches glossary row 616; the source uses medians, so it must not become «միջին».</li>
+</ul>
+</details></body></html>

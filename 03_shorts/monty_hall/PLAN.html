@@ -1,0 +1,100 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Short: Monty Hall - stick or switch? - script and plan</title><style>
+:root { color-scheme: light dark; --text: #1f2328; --muted: #59636e; --line: #d1d9e0; --soft: #f6f8fa; --link: #0033a0; }
+@media (prefers-color-scheme: dark) { :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --soft: #161b22; --link: #79a6ff; } }
+body { margin: 0 auto; max-width: 980px; padding: 24px 16px 64px; color: var(--text); background: Canvas;
+       font: 16px/1.6 system-ui, "Segoe UI", sans-serif; }
+a { color: var(--link); }
+nav { background: var(--soft); border: 1px solid var(--line); border-radius: 8px; padding: 10px 18px; margin: 16px 0 24px; }
+details { border-top: 1px solid var(--line); padding: 8px 0; }
+summary { cursor: pointer; font-size: 1.3em; font-weight: 650; padding: 4px 0; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .94em; }
+th, td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: var(--soft); }
+code { background: var(--soft); border-radius: 4px; padding: 1px 5px; font-size: .9em; }
+pre { background: var(--soft); border-radius: 6px; padding: 12px; overflow-x: auto; }
+pre code { padding: 0; }
+img { max-width: 100%; }
+</style></head><body><h1 id="short-monty-hall---stick-or-switch---script-and-plan">Short: Monty Hall - stick or switch? - script and plan</h1>
+<p>Draft for Hayk's review, 2026-11-28. Thinking-error strand. Script source: <code>beats.hy.json</code>. The doors are a mathematical thought game, not a reconstruction of an actual broadcast. No voice or render made.</p>
+<nav><strong>Contents</strong><ul><li><a href="#the-idea-in-one-paragraph">The idea in one paragraph</a></li><li><a href="#the-script-armenian">The script (Armenian)</a></li><li><a href="#facts-checked">Facts (checked)</a></li><li><a href="#animation-plan-showcase">Animation plan (showcase)</a></li><li><a href="#images">Images</a></li><li><a href="#questions-for-hayk">Questions for Hayk</a></li></ul></nav><details open id="the-idea-in-one-paragraph"><summary>The idea in one paragraph</summary>
+<p>The viewer chooses whether to stay or switch before learning the answer. Under explicitly stated rules, switching wins with probability 2/3 and staying with 1/3: switching wins precisely when the first choice was wrong. The host knows the prize location, always reveals an unchosen goat and always offers a switch; when both goats are available, the choice between them is fair. The showcase enumerates the equally likely prize placements. The single extension changes the host into an uninformed random opener: conditional on a goat appearing, the chances become equal. The local anchor is a hypothetical prize in drams, with no invented amount or claim about an Armenian game show.</p>
+</details><details open id="the-script-armenian"><summary>The script (Armenian)</summary>
+<!-- script:start -->
+
+<p>10 beats, 1,517 characters (1,581 with numbers spelled out): ~107 s of speech, ~1:59 with pauses and the end tail, 10 s of them marked silent pauses (a planning estimate for the TTS voice: whole voiced scripts came within 5%, single beats up to 26% off; a human reading can differ more; the timeline gives the real length).</p>
+<p><strong>1. hook.</strong> Կփոխե՞ս դուռը։</p>
+<p><strong>2. game.</strong> Պատկերացրու՝ խաղում ես դրամով մրցանակի համար։ Կա 3 դուռ։ Մրցանակը հավասար հավանականությամբ կարող է լինել դրանցից յուրաքանչյուրի հետևում։ Մյուս 2 դռների հետևում այծեր են։ Ընտրում ես դուռը, բայց դեռ չես բացում։</p>
+<p><strong>3. host_rules.</strong> Հաղորդավարը գիտի՝ որտեղ է մրցանակը։ Նա միշտ բացում է քո չընտրած դռներից այծով դուռ և միշտ առաջարկում է փոխել ընտրությունդ։ Եթե այծով 2 դուռ ունի ընտրելու, ընտրում է պատահական՝ հավասար հավանականությամբ։</p>
+<p><strong>4. choose.</strong> Դու ընտրեցիր 1-ին դուռը։ Հաղորդավարը բացեց 3-րդը՝ այծ։ Մնում են քո դուռն ու 2-րդը։ Կմնա՞ս քո ընտրածի հետ, թե՞ կփոխես։ Հիմա որոշի՛ր։ <em>[pause 5 s]</em></p>
+<p><strong>5. answer.</strong> Այս կանոններով փոխելիս շահելու հավանականությունը 2/3 է, մնալիս՝ 1/3։ Փոխելը կրկնապատկում է հնարավորությունդ։ Բայց ինչո՞ւ, եթե փակ դռները հիմա 2-ն են։ <em>[pause 1 s]</em></p>
+<p><strong>6. three_cases.</strong> Նայիր բոլոր 3 հավասարահավանական դեպքերին։ Սկզբում միշտ ընտրում ես 1-ին դուռը։ Եթե մրցանակն այնտեղ է, փոխելիս պարտվում ես։ Եթե մրցանակը մյուս դռներից որևէ մեկի հետևում է, հաղորդավարը բացում է մնացած այծով դուռը։ Փոխելիս շահում ես։</p>
+<p><strong>7. count.</strong> Այս 3 դեպքից 2-ում սկզբում սխալ դուռ էիր ընտրել, և փոխելը փրկում է ընտրությունդ։ Մնալը շահում է միայն այն դեպքում, երբ հենց սկզբից գտել էիր մրցանակը։ Հաշվի՛ր սլաքները։ <em>[pause 2.5 s]</em></p>
+<p><strong>8. doubt.</strong> Բայց այծ տեսնելը մի՞շտ է փոխելու պատճառ։ Ոչ։ Պատասխանը կախված է բացելու կանոնից։ Մեր հաշվարկում հաղորդավարն իմանալով է բացում այծով դուռը։</p>
+<p><strong>9. random_host.</strong> Իսկ եթե նա մրցանակի տեղը չգիտի, պատահական բացում է քո չընտրած դռներից մեկը, և պատահմամբ այծ է դուրս գալիս, արդեն հավանականությունները հավասար են՝ 1/2 ու 1/2։ Նույն տեսարանը, ուրիշ կանոն։ <em>[pause 1.5 s]</em></p>
+<p><strong>10. takeaway.</strong> Հաջորդ անգամ, երբ թվա՝ մնացել է 2 տարբերակ, ուրեմն հավասար են, հարցրո՛ւ՝ ինչպե՞ս բացվեց դուռը։</p>
+<!-- script:end -->
+
+<p>Armenian lint: <strong>0 errors, 0 hints</strong>, initial and final runs. All <code>text</code>, <code>screen</code> and <code>screen_small</code> strings were extracted into <code>%TEMP%/ughegh_monty_hall_script_review.txt</code> outside the repository and checked with <code>--style</code>. No hints retained. Manual polish followed the checklist; U1 singular address is retained.</p>
+<p><code>plan_script.py monty_hall</code>: generated length line above, under the default ceiling. <code>validate_episode.py monty_hall --stage script</code>: <strong>PASS</strong>. The unchanged tool entry points ran through <code>runpy</code> with console-only logging and bytecode disabled, avoiding their default writes to repository-level <code>logs/</code>. Only files in the four authorized episode folders were written inside the repository.</p>
+</details><details open id="facts-checked"><summary>Facts (checked)</summary>
+<p>Fact-sheet basis: <code>_knowledge/short_videos/facts_codex_1_statistics_2026-11-28.md</code>, C3. All sheet-rated facts used are <strong>high confidence</strong>; no medium- or low-confidence claims are used. Sources below attach to the current beats, not to unused anecdotes. Core mathematical results also checked directly in Rosenthal's manuscript on 2026-11-28.</p>
+<ul>
+<li><strong><code>game</code>, <code>host_rules</code>, <code>choose</code>:</strong> the standard problem has 3 doors, equally likely prize locations, a knowledgeable host and an unchosen losing-door reveal followed by a switch offer. The narration explicitly makes both actions compulsory. The fair tie-break is needed for the stated probabilities after a particular numbered door opens. <a href="https://probability.ca/jeff/writing/montyfall.pdf">Rosenthal, published 2008, manuscript pp. 1-4</a>; <a href="https://api.pageplace.de/preview/DT0400.9780199709908_A35484108/preview-9780199709908_A35484108.pdf">Rosenhouse, standard formalization and host policy</a>.</li>
+<li><strong><code>answer</code>, <code>three_cases</code>, <code>count</code>:</strong> staying wins with probability 1/3, switching with 2/3. Switching succeeds whenever the initial choice was wrong. Doubling is the ratio of these probabilities. The 3-row display enumerates possible placements; it does not promise exactly 2 wins in every 3 real plays. <a href="https://probability.ca/jeff/writing/montyfall.pdf">Rosenthal, pp. 1-4</a>.</li>
+<li><strong><code>doubt</code>, <code>random_host</code>:</strong> when an uninformed host opens an unchosen door uniformly at random and it happens to reveal a goat, each remaining door has conditional probability 1/2. Both the random procedure and the conditioning event are voiced. This is a different protocol, not a retraction of the standard answer. <a href="https://probability.ca/jeff/writing/montyfall.pdf">Rosenthal, Monty Fall and its calculation</a>.</li>
+<li><strong>Local adaptation, explicitly hypothetical:</strong> replace the original car with an unnumbered cash prize. Only the prize icon changes; no probability or rule changes. The dram is Armenia's currency, independently checked against the <a href="https://www.cba.am/en/banknotes-in-circulation">Central Bank's banknotes page</a>. This is not a documented local contest, and no prize amount is introduced.</li>
+<li><strong>Editorial inference, <code>takeaway</code>:</strong> the revealing procedure matters to the inference. This is the lesson drawn from the two verified protocols, not a claim that switching always helps. <a href="https://probability.ca/jeff/writing/montyfall.pdf">Rosenthal's comparison</a>.</li>
+</ul>
+<p>Excluded: letter totals, PhD signatures, the Erdős recollection, student switching rates and claims that the actual television show always used these rules. No fact depends on those medium-confidence anecdotes.</p>
+</details><details open id="animation-plan-showcase"><summary>Animation plan (showcase)</summary>
+<p><strong>Showcase: choose first, then see every starting possibility (<code>choose</code> through <code>count</code>).</strong> Keep the warm-white doors on the series' near-black background, orange for the selected door and winning paths, red for losing paths. The thought-game label stays visible. Door 1 is selected, door 3 opens onto a goat and the viewer gets a <strong>5 s</strong> silent decision hold with no answer visible. This is the longest pause, inside the showcase. Only after it finishes do the 1/3 and 2/3 labels appear. Then show the complete case diagram:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Prize behind</th>
+<th>Initial choice</th>
+<th>Host reveals</th>
+<th>Stay</th>
+<th>Switch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Door 1</td>
+<td>Door 1</td>
+<td>Door 2 or 3, each equally likely</td>
+<td>Win</td>
+<td>Lose</td>
+</tr>
+<tr>
+<td>Door 2</td>
+<td>Door 1</td>
+<td>Door 3</td>
+<td>Lose</td>
+<td>Win</td>
+</tr>
+<tr>
+<td>Door 3</td>
+<td>Door 1</td>
+<td>Door 2</td>
+<td>Lose</td>
+<td>Win</td>
+</tr>
+</tbody>
+</table></div>
+<p>The first row's two legal reveals are branches of the same prize placement, not extra equally weighted prize placements. Keep each row's total probability 1/3. At <code>count</code>, hold the complete diagram for <strong>2.5 s</strong>, letting the viewer count the winning paths. No invented simulated trial count, fluctuating win total or claim about a particular run of games. A <strong>1 s</strong> answer pause and <strong>1.5 s</strong> random-host pause bring marked silence to <strong>10 s</strong>.</p>
+<ul>
+<li><strong><code>hook</code>, <code>game</code>:</strong> closed doors and an unnumbered dram prize envelope appear immediately; the first spoken sentence is the puzzle. Reveal alternate hidden arrangements as possibilities, not actual prizes being moved.</li>
+<li><strong><code>host_rules</code>:</strong> a private knowledge card and compulsory-reveal/offer arrows make the host's information visible. Show the fair choice when either goat can legally be revealed.</li>
+<li><strong><code>doubt</code>, <code>random_host</code>:</strong> reset to a visibly different host without the knowledge card. Show the uniformly random unchosen-door openings, including prize-reveal paths; filter explicitly to goat-reveal paths before showing 1/2 and 1/2. Do not silently treat a knowing host as an uninformed one.</li>
+<li><strong><code>takeaway</code>:</strong> close on the opening hand and knowledge card. The narration says the screen phrase. No summary card. Every beat's first frame already contains an object named in that beat.</li>
+</ul>
+</details><details open id="images"><summary>Images</summary>
+<p>None needed; the C3 sheet recommends original doors, goats and prize icons. Use an original envelope marked in drams, not an image of a numbered banknote. No downloaded assets or historical show footage.</p>
+</details><details open id="questions-for-hayk"><summary>Questions for Hayk</summary>
+<ul>
+<li><strong>S1, wording:</strong> keep «փոխելը փրկում է ընտրությունդ», or prefer the more literal «փոխելիս շահում ես»? The draft keeps the former; this is an owner wording choice, not a rule-based correction.</li>
+<li><strong>S2, closing:</strong> keep «ինչպե՞ս բացվեց դուռը», or make the host's action explicit with «հաղորդավարն ինչպե՞ս ընտրեց բացվող դուռը»? The shorter question is currently voiced and shown.</li>
+</ul>
+</details></body></html>

@@ -1,0 +1,72 @@
+[
+  {
+    "key": "hook",
+    "text": "Պատահականն էլ է կուտակվում։",
+    "screen": "Պատահականն էլ է կուտակվում",
+    "screen_small": "մոդելավորում",
+    "visual": "From frame 0, show a schematic scatter with conspicuous nearby dots and empty patches. Keep a modelling label visible; these are not recovered London impact coordinates."
+  },
+  {
+    "key": "target",
+    "text": "Լոնդոնը ռմբակոծում էին դիտմամբ։ Հարցն ուրիշ էր՝ քաղաքի ներսում հարվածների կուտակումները պատահականությա՞ն արդյունք էին, թե՞ առանձին վայրերի հատուկ թիրախավորման նշան։ Այդ կուտակումների մասին պնդումներ կային։",
+    "screen_small": "R. D. Clarke, 1946 · նկարազարդում",
+    "visual": "From frame 0, show an abstract London city label under an incoming V-1 silhouette, with an illustration tag. Zoom toward an unlocated study-area box; do not invent neighbourhoods, impact locations, spies or protected buildings."
+  },
+  {
+    "key": "study",
+    "text": "Հարավային Լոնդոնում ընտրեցին 144 քառակուսի կիլոմետր տարածք և բաժանեցին 576 հավասար քառակուսու։ Դրանցում հաշվեցին 537 հարված։ Ամեն քառակուսու կողմը 500 մետր էր։",
+    "screen": "537 հարված · 576 քառակուսի",
+    "screen_small": "R. D. Clarke, 1946 · տվյալների սխեմա",
+    "visual": "From frame 0, the selected-area box becomes an abstract collection of equal tiles, explicitly a data schematic rather than a geographic map. Display the verified area, tile count and impact count; a separate dimension bracket shows the 500 m side."
+  },
+  {
+    "key": "counts",
+    "text": "229 քառակուսի դատարկ էր։ Իսկ 35 քառակուսուց յուրաքանչյուրում 3 հարված կար։ Նույն տվյալներում կային թե՛ դատարկ բջիջներ, թե՛ բազմակի հարվածներ ստացած բջիջներ։",
+    "screen": "229 դատարկ · 35-ը՝ 3 հարվածով",
+    "screen_small": "R. D. Clarke, 1946 · տվյալների սխեմա",
+    "visual": "From frame 0, show the empty-square category and the three-hit category side by side as grouped tiles. This is a comparison of counts, not evidence of geographical adjacency. Begin assembling all six observed histogram bars."
+  },
+  {
+    "key": "model",
+    "text": "Հաշվարկի համար վերցրին Պուասոնի բաշխումը։ Այս մոդելում հարվածներն անկախ են, իսկ միջին խտությունը նույնն է ամբողջ ընտրված տարածքում։ Պատահականն այստեղ չի նշանակում՝ կետերը հավասար հեռավորությամբ են։",
+    "screen": "Պուասոնի բաշխում",
+    "screen_small": "R. D. Clarke, 1946",
+    "visual": "From frame 0, show the observed histogram and a small independent-arrivals schematic. Introduce the fitted Poisson comparison; do not claim that the model's assumptions were proved for every real impact. No bomb-accuracy statistic is shown."
+  },
+  {
+    "key": "showcase",
+    "text": "Նայիր սյուներին։ Իրական քանակների կողքին մոդելի կանխատեսած քանակներն են։ Դրանք շատ մոտ են։ Մոդելն էլ է կանխատեսում դատարկ բջիջներ և նույն բջիջն ընկած մի քանի հարված։ Համեմատի՛ր։",
+    "screen": "Դիտվածը և մոդելի կանխատեսումը",
+    "screen_small": "R. D. Clarke, 1946",
+    "visual": "From frame 0, all six observed bars are visible. Overlay the expected bars from Clarke's exact table on the same zero baseline: categories 0,1,2,3,4,5+; observed 229,211,93,35,7,1; expected 226.74,211.39,98.54,30.62,7.14,1.57. Display Armenian decimal commas. Keep paired labels and category names stationary for comparison throughout the pause.",
+    "pause_after": 5
+  },
+  {
+    "key": "doubt",
+    "text": "Ուրեմն ամբողջ Լոնդոնո՞ւմ ամեն հարված պատահական էր։ Այդպիսի բան այս ստուգումը չի ապացուցում։ Այն վերաբերում էր ընտրված տարածքին ու այս չափի բջիջներին։ Այդտեղ տվյալները լրացուցիչ կուտակումների վարկածը չէին հաստատում։",
+    "screen_small": "R. D. Clarke, 1946",
+    "visual": "From frame 0, retain the histogram inside the study-area frame; outside the frame put question marks instead of invented data. Emphasize the selected area and cell size, then return to the supported local fit."
+  },
+  {
+    "key": "local",
+    "text": "Նույն միտքը փորձիր Երևանի քարտեզով։ Պատկերացրու՝ վրան պատահական նշումներ ես դնում։ Սա մտավոր փորձ է, ոչ քաղաքի մասին տվյալ։ Նշումների մի մասը կարող է իրար մոտ ընկնել՝ առանց հատուկ պատճառի։",
+    "screen": "Երևան · մտավոր փորձ",
+    "screen_small": "մոդելավորում · իրական դեպքերի տվյալներ չեն",
+    "visual": "From frame 0, show a schematic card labelled Yerevan, thought experiment and modelling. Add unlocated random dots with no street, neighbourhood, casualty or incident labels. Maintain the hypothetical label on every frame; never transform London observations into Yerevan observations.",
+    "pause_after": 2
+  },
+  {
+    "key": "compare",
+    "text": "Ուրեմն հարցը միայն այն չէ՝ կուտակում կա՞։ Պետք է նաև հարցնել՝ այս պայմաններում պատահական բաշխումն ինչպիսի՞ կուտակումներ կտար։ Դրա հետ է պետք համեմատել տեսածդ։",
+    "screen_small": "մոդելավորում",
+    "visual": "From frame 0, keep the hypothetical dot field beside the model's histogram, clearly separated from the historical data. Let the viewer compare clumps and empty patches with the model rather than judging the scatter by appearance alone.",
+    "pause_after": 2
+  },
+  {
+    "key": "takeaway",
+    "text": "Կուտակումը դեռ հատուկ պատճառի ապացույց չէ։",
+    "screen": "Կուտակումը դեռ հատուկ պատճառի ապացույց չէ",
+    "screen_small": "մոդելավորում",
+    "visual": "From frame 0, stay close on a clump in the hypothetical dot field with a small question mark beside it. Speak the closing screen line verbatim and finish on the same field, without a summary card."
+  }
+]

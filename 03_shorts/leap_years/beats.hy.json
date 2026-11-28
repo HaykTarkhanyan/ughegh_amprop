@@ -1,0 +1,64 @@
+[
+  {
+    "key": "hook",
+    "text": "Օրացույցից 10 ամսաթիվ ջնջեցին։ Բայց շաբաթվա օրերը շարքով շարունակվեցին։",
+    "screen": "10 ամսաթիվ՝ բաց թողնված",
+    "visual": "Frame 0 shows an October calendar with a strip of date labels lifting off it. This is a calendar diagram, with no invented sleeping historical characters.",
+    "pause_after": 1
+  },
+  {
+    "key": "calendar_jump",
+    "text": "1582 թվականին նոր օրացույցին անցած երկրներում հոկտեմբերի 4-ին հաջորդեց հոկտեմբերի 15-ը։ Հետևի՛ր նաև շաբաթվա օրերին՝ հինգշաբթիից հետո ուրբաթ է։ Ժամացույցը շարունակում է գնալ։",
+    "screen": "4 հոկտեմբերի → 15 հոկտեմբերի",
+    "screen_small": "USNO · Gregory XIII, 1582",
+    "visual": "Frame 0 already shows October 4 and Thursday beside a running clock. Showcase: peel away the ten intervening date labels, reveal October 15 and Friday, and keep the clock moving continuously. During the pause the viewer follows Thursday to Friday; do not fast-forward the clock or invent a measured clock time.",
+    "pause_after": 4
+  },
+  {
+    "key": "doubt",
+    "text": "Բայց մարդիկ 10 օր պակա՞ս ապրեցին։ Ոչ։ Փոխվեցին ամսաթվերի անունները։ Ժամանակը չթռավ, և ամբողջ աշխարհը միաժամանակ չանցավ նոր օրացույցին։ Բաց էին թողել ամսաթվերը, իսկ շաբաթվա հերթականությունը շարունակվել էր։",
+    "visual": "Frame 0 separates the lifted date labels from the uninterrupted weekday ribbon. The labels disappear while Thursday and Friday remain adjacent; a neutral globe has no invented adoption map."
+  },
+  {
+    "key": "drift",
+    "text": "Ինչո՞ւ էր պետք այդ ուղղումը։ Հին՝ հուլյան օրացույցի տարին միջինում 365,25 օր էր։ Իսկ եղանակների շրջանը դրանից մի քիչ կարճ է։ Տարբերությունը փոքր է, բայց ամեն տարի կուտակվում է։ Օրացույցը կամաց շեղվում էր եղանակներից։",
+    "screen": "365,25 օր / մոտ 365,2422 օր",
+    "screen_small": "USNO · Leap Years",
+    "visual": "Frame 0 shows a calendar ribbon next to a seasonal cycle. Their markers gradually separate. Keep the two verified year-length values on screen; the drift is qualitative, without a fabricated year counter or exact historical equinox simulation."
+  },
+  {
+    "key": "new_rule",
+    "text": "Նոր՝ գրիգորյան օրացույցը փոխեց նաև նահանջ տարվա կանոնը։ Տարին 4-ի բաժանվո՞ւմ է՝ սովորաբար նահանջ է։ Բայց 100-ի բաժանվող տարին նահանջ է միայն այն դեպքում, երբ բաժանվում է նաև 400-ի։",
+    "screen_small": "USNO · Leap Years",
+    "visual": "Frame 0 shows the leap-day tile beside a branching divisibility diagram. Reveal the 4, 100 and 400 tests in the order spoken; make the century exception visually explicit."
+  },
+  {
+    "key": "centuries",
+    "text": "Փորձի՛ր՝ 1900-ը նահա՞նջ էր։ Իսկ 2000-ը նահա՞նջ էր։ 1900-ը՝ ոչ, 2000-ը՝ այո։ Այդպես օրացույցն ավելի մոտ է մնում եղանակների շրջանին։ Բայց սա էլ կատարյալ համընկնում չէ։",
+    "screen": "1900՝ ոչ · 2000՝ այո",
+    "screen_small": "USNO · Leap Years",
+    "visual": "Frame 0 shows the two year cards with answers concealed. The pause follows the spoken answers so the viewer can trace each year back through the rule. A tiny qualitative gap remains between calendar and season markers; no exact future correction date.",
+    "pause_after": 2
+  },
+  {
+    "key": "armenian_calendar",
+    "text": "Մեզ ծանոթ մի օրինակ էլ կա։ Հայ առաքելական եկեղեցին նոր օրացույցն ընդունել է 1923 թվականին։ Երուսաղեմի Հայոց պատրիարքությունը պահել է հուլյան օրացույցը։",
+    "screen_small": "Հայ առաքելական եկեղեցի · 1923 · Մեծ Բրիտանիայի թեմ / Արևմտյան Եվրոպայի պատվիրակություն",
+    "visual": "Frame 0 shows a church-calendar page and the Armenian Church label. Split it into the new-calendar branch and the Jerusalem Julian branch. The 1923 label belongs to church adoption, never to Armenia's civil calendar."
+  },
+  {
+    "key": "christmas",
+    "text": "Էջմիածնում Սուրբ Ծնունդն ու Աստվածահայտնությունը հունվարի 6-ին են։ Երուսաղեմում էլ տոնի օրը հին տոմարով հունվարի 6-ն է, որը մեր օրացույցով հիմա հունվարի 19-ն է։ Նույն ամսաթիվը տարբեր օրացույցներում տարբեր օրերի է հասնում։",
+    "screen": "Հունվարի 6՝ հին տոմարով / հունվարի 19՝ նոր տոմարով",
+    "screen_small": "Մայր Աթոռ, 2026 · ԱՄՆ Արևելյան թեմի ուխտագնացության ծրագիր, 2026",
+    "visual": "Frame 0 shows the Etchmiadzin January 6 feast page. Align Jerusalem's Julian January 6 with Gregorian January 19 on the same continuous-day axis. Display the source year to constrain the present conversion; do not connect the Armenian feast to December 25.",
+    "pause_after": 2
+  },
+  {
+    "key": "closing",
+    "text": "Երբ ամսաթիվը փոխվում է, ժամանակը չի ցատկում։ Օրացույցն է փորձում հասնել եղանակներին։",
+    "screen": "Ժամանակը չի ցատկում",
+    "visual": "Frame 0 returns to the continuously moving clock beside the torn calendar edge. The spoken closing line appears on that moving scene, without a summary card.",
+    "pause_after": 1
+  }
+]

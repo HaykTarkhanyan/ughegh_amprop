@@ -1,0 +1,113 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Scripts, batch 1: eight drafts by Codex, with Claude&#x27;s review notes</title><style>
+:root { color-scheme: light dark; --text: #1f2328; --muted: #59636e; --line: #d1d9e0; --soft: #f6f8fa; --link: #0033a0; }
+@media (prefers-color-scheme: dark) { :root { --text: #e6edf3; --muted: #9198a1; --line: #3d444d; --soft: #161b22; --link: #79a6ff; } }
+body { margin: 0 auto; max-width: 980px; padding: 24px 16px 64px; color: var(--text); background: Canvas;
+       font: 16px/1.6 system-ui, "Segoe UI", sans-serif; }
+a { color: var(--link); }
+nav { background: var(--soft); border: 1px solid var(--line); border-radius: 8px; padding: 10px 18px; margin: 16px 0 24px; }
+details { border-top: 1px solid var(--line); padding: 8px 0; }
+summary { cursor: pointer; font-size: 1.3em; font-weight: 650; padding: 4px 0; }
+.table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .94em; }
+th, td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: var(--soft); }
+code { background: var(--soft); border-radius: 4px; padding: 1px 5px; font-size: .9em; }
+pre { background: var(--soft); border-radius: 6px; padding: 12px; overflow-x: auto; }
+pre code { padding: 0; }
+img { max-width: 100%; }
+</style></head><body><h1 id="scripts-batch-1-eight-drafts-by-codex-with-claudes-review-notes">Scripts, batch 1: eight drafts by Codex, with Claude's review notes</h1>
+<p>2026-11-28. Written by two Codex agents (gpt-6.1-sol, xhigh) from the fact sheets in <code>../_knowledge/short_videos/facts_codex_*_2026-11-28.md</code>, following <code>README.md</code>'s script rules. Not voiced, not animated. Each plan has the script, the facts with sources, the showcase plan and Codex's own questions (S1, S2, ...).</p>
+<nav><strong>Contents</strong><ul><li><a href="#the-eight">The eight</a></li><li><a href="#claudes-review-notes">Claude's review notes</a></li></ul></nav><details open id="the-eight"><summary>The eight</summary>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Hook (gloss)</th>
+<th>Beats</th>
+<th>Length (estimate)</th>
+<th>Lint</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="monty_hall/PLAN.html">monty_hall</a></td>
+<td>«Կփոխե՞ս դուռը։» (Would you switch doors?)</td>
+<td>10</td>
+<td>~1:59</td>
+<td>0 errors</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><a href="london_bombs/PLAN.html">london_bombs</a></td>
+<td>«Պատահականն էլ է կուտակվում։» (Chance clusters too.)</td>
+<td>10</td>
+<td>~2:00</td>
+<td>0 errors</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><a href="anchoring_wheel/PLAN.html">anchoring_wheel</a></td>
+<td>«Անիվը փոխեց գուշակությունները։» (The wheel changed the guesses.)</td>
+<td>10</td>
+<td>~1:53</td>
+<td>0 errors</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><a href="blind_spot/PLAN.html">blind_spot</a></td>
+<td>«Կարո՞ղ ես կորցնել այս կետը։» (Can you lose this dot?)</td>
+<td>10</td>
+<td>~1:58</td>
+<td>0 errors, 1 hint kept</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><a href="leap_years/PLAN.html">leap_years</a></td>
+<td>«Օրացույցից 10 ամսաթիվ ջնջեցին։» (10 dates were deleted.)</td>
+<td>9</td>
+<td>~1:59</td>
+<td>0 errors</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><a href="areni_shoe/PLAN.html">areni_shoe</a></td>
+<td>«Կոշիկը մոտ 5500 տարեկան է։» (The shoe is ~5,500 years old.)</td>
+<td>8</td>
+<td>~1:53</td>
+<td>0 errors</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><a href="microwave/PLAN.html">microwave</a></td>
+<td>«Ինչո՞ւ է ափսեդ պտտվում։» (Why does your plate turn?)</td>
+<td>8</td>
+<td>~1:51</td>
+<td>0 errors</td>
+<td>pass</td>
+</tr>
+<tr>
+<td><a href="gps_einstein/PLAN.html">gps_einstein</a></td>
+<td>«Տեղդ գտնում են ժամացույցով։» (They find you with a clock.)</td>
+<td>9</td>
+<td>~2:08</td>
+<td>0 errors</td>
+<td>pass</td>
+</tr>
+</tbody>
+</table></div>
+<p>Lint and the script check rerun by Claude, same results. Pauses 9-10 s in each.</p>
+</details><details open id="claudes-review-notes"><summary>Claude's review notes</summary>
+<p>Overall: the facts are careful and match the sheets; no flagged myth is repeated, the reworded hooks are respected, the London numbers match Clarke's table (229 empty squares, 35 with 3 hits). The weak side is the writing: dry, with the same caveat often said twice, honesty labels spoken aloud where an on-screen tag would do, and hooks that are abstract one-liners. Four scripts leave out the very thing that makes the topic catch people.</p>
+<ul>
+<li><strong>monty_hall:</strong> correct and well built (rules stated, three cases, the "host doesn't know" twist as the extension). Missing the human story: vos Savant's 1990 column and the letters telling her she was wrong (the sheet: "close to 1,000" carried PhD signatures, medium confidence, so say "many" rather than a number). It would make a far stronger hook than «Կփոխե՞ս դուռը։».</li>
+<li><strong>london_bombs:</strong> the voice never says when or what: no 1944, no V-1 flying bombs, no war. «Լոնդոնը ռմբակոծում էին դիտմամբ» lands without context. Londoners' suspicion of spies or aiming, the human side, is reduced to «Այդ կուտակումների մասին պնդումներ կային». The Yerevan beat is a thought experiment that states twice it is not data; it reads as a forced anchor (Codex's S3 asks the same).</li>
+<li><strong>anchoring_wheel:</strong> the "median" beat and the "doubt" beat say the same thing (groups compared, not individuals). No real-world anchoring with evidence, though the sheet has one (high confidence): 52 junior legal professionals rolled loaded dice showing 3 or 9 before giving a sentence. The drams beat is an invented example that spends a sentence saying it is invented.</li>
+<li><strong>blind_spot:</strong> the strongest of the eight: the viewer does the test on the phone, then the line test. The direction is right (right eye closed, left eye on the cross, dot on the left falls on the left eye's blind spot). Worth checking on a real phone once rendered: dot and cross about 5-6 cm apart should vanish at about 20 cm.</li>
+<li><strong>leap_years:</strong> solid, with a good Armenian anchor (1923, 6 / 19 January). The "doubt" beat repeats the hook and beat 2 almost word for word. The drift beat has no number ("the difference is small"); the sheet's rate (about 11 minutes a year, a day every ~128 years, high confidence) would make the 10 days feel earned.</li>
+<li><strong>areni_shoe:</strong> accurate (24.5 cm, about size 37, right foot, 3627-3377 BC, sheep dung, grass inside). Heavy hedging in voice and on screen at once («Խոտի առկայությունը փաստ է, իսկ դրա նշանակությունը՝ ...»). No comparison that makes 5,500 years feel big: the sheet supports "older than Ötzi's footwear" (high confidence) and advises against pyramid or Stonehenge comparisons.</li>
+<li><strong>microwave:</strong> correct and avoids the false "water resonance" story, but never debunks it, though the sheet flags it as a common myth. The best showcase in the sheet is missing: melting spots in chocolate half a wavelength apart (about 6 cm in theory; the sheet notes kitchen measurements are rough), which gives the wave a size the viewer can see. The tolma is a nice touch.</li>
+<li><strong>gps_einstein:</strong> the numbers are right (-7, +45, +38 microseconds a day) and the "10 km a day" myth is avoided, but the stakes are gone: the voice never says why 38 microseconds matter (light covers about 300 m in a microsecond). The "doubt" and "receiver" beats are hard to follow for a general viewer. The Armenia beat (the cadastre committee's reference network) is the weakest anchor of the batch.</li>
+</ul>
+<p>Terms for Hayk: «հաճախություն» (the style guide's glossary, statistics sense) vs «հաճախականություն» (the usual physics word for Hz) in microwave; «ջիփիէս» spelled for the voice in gps_einstein; «կույր բիծ» vs «կույր կետ» in blind_spot.</p>
+</details></body></html>
