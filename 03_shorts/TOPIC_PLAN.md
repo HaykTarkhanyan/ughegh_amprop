@@ -17,6 +17,13 @@ cobra effect, W3 seasons come from the tilt, W6 why you cannot tickle yourself (
 step for each: fact check, then script and plan. A broader picker with many more topics:
 `topic_picker_broad_picker.html`.
 
+From the broad picker (20 more, 2026-11-28; IDs from `topic_picker_broad.json`): B1 goosebumps, B2 wrinkled fingers,
+B4 time speeds up with age, S1 the dark night sky, P2 do mirrors flip left and right, P4 how a microwave heats, I1 GPS
+needs Einstein, I3 a torn QR code still works, I4 batteries in the cold, I6 noise-cancelling headphones, L1 why
+"mama" sounds alike, L4 right-to-left scripts, F3 honey never goes bad, A1 the Mona Lisa's theft, A3 earworms, A5 12
+notes in an octave, X2 folding paper, X4 six degrees of separation, K2 the Areni-1 shoe, K3 the Areni-1 winery.
+Total picked: 31. Round 2 picker: `topic_picker_round2_picker.html`.
+
 ## Chosen on 2026-11-28 (Q39, Q40)
 
 - **C1. The healthiest places are tiny, and so are the sickest** (thinking error). The lowest and highest cancer
